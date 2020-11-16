@@ -96,7 +96,7 @@ Feature init {
   #Substitute hah-ar -> JIMi1;
   Substitute tcheh-ar -> JIMi1 tdb;
   Substitute khah-ar -> JIMi1 sda;
-  #Substitute yehHamzaabove-ar -> BEi1 HAMZA_ABOVE;
+  Substitute yehHamzaabove-ar -> BEi1 HAMZA_ABOVE;
   #Substitute tehMarbutagoal-ar -> HAYCu1 tda;
 
   SuffixingSubstitute [
