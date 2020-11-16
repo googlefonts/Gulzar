@@ -38,9 +38,9 @@ Feature ccmp {
   Substitute zah-ar -> TOEu1 sda;
   Substitute ddal-ar -> DALu1 toeda;
   Substitute jim-ar -> JIMu1;
-  Substitute jeh-ar -> REu1 tda;
-  Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
-  Substitute alefMadda-ar -> ALIFu1 MADDA;
+  #Substitute jeh-ar -> REu1 tda;
+  #Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
+  #Substitute alefMadda-ar -> ALIFu1 MADDA;
 };
 
 # In the fina feature, we want to achieve three things:
@@ -63,7 +63,7 @@ Feature fina {
   # Now we fix up the JIM-likes.
   Substitute tcheh-ar -> JIMf1 tda; # XXX -> should be inside
   Substitute khah-ar -> JIMf1 sda;
-  Substitute hah-ar -> JIMf1;
+  #Substitute hah-ar -> JIMf1;
   Substitute JIMu1 -> JIMf1 sda; # XXX -> should be inside
 
   # Yeh hamza is different, because it can take CH_YE form but no dots.
@@ -93,11 +93,11 @@ Feature init {
   Substitute QAFu1 -> FEi1;
   Substitute JIMu1    -> JIMi1 sdb;
   Substitute HAYCu1    -> HAYCi1 haydb;
-  Substitute hah-ar -> JIMi1;
+  #Substitute hah-ar -> JIMi1;
   Substitute tcheh-ar -> JIMi1 tdb;
   Substitute khah-ar -> JIMi1 sda;
-  Substitute yehHamzaabove-ar -> BEi1 HAMZA_ABOVE;
-  Substitute tehMarbutagoal-ar -> HAYCu1 tda;
+  #Substitute yehHamzaabove-ar -> BEi1 HAMZA_ABOVE;
+  #Substitute tehMarbutagoal-ar -> HAYCu1 tda;
 
   SuffixingSubstitute [
     AINu1 BEu1 FEu1 GAFu1 HAYAu1 KAFu1 LAMu1 MIMu1 SADu1 SINu1 TOEu1 TEu1
@@ -123,16 +123,16 @@ Feature medi {
   Substitute tcheh-ar -> JIMm1 tdb;
   Substitute khah-ar  -> JIMm1 sda;
   Substitute CH_YEu1  -> BEm1 ddb;
-  Substitute hah-ar -> JIMm1;
+  #Substitute hah-ar -> JIMm1;
   Substitute HAYCu1   -> HAYCm1 haydb;
-  Substitute tehMarbutagoal-ar -> HAYCf1 dda;
+  #Substitute tehMarbutagoal-ar -> HAYCf1 dda;
   Substitute yehHamzaabove-ar -> BEm1 HAMZA_ABOVE;
 };
 
 Feature isol {
   Substitute yehHamzaabove-ar -> CH_YEu1 HAMZA_ABOVE;
-  Substitute tehMarbutagoal-ar -> HAYCu1 dda;
-  Substitute hah-ar -> JIMu1;
+  #Substitute tehMarbutagoal-ar -> HAYCu1 dda;
+  #Substitute hah-ar -> JIMu1;
 };
 
 # # Now things get interesting!
