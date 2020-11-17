@@ -41,11 +41,21 @@ for g in gsfont.glyphs:
   for a in l.anchors:
     if a.position.x == 0 and a.position.y == 0:
       print("Badly positioned anchor %s on glyph %s" % (a, g.name))
-  if g.name not in ["sda", "dda", "tda", "sdb", "ddb", "tdb", "sdb.yb", "ddb.yb", "tdb.yb"]:
-    if has_anchor("top", l.anchors) and g.name != "SHADDA":
-      print("%s should not have a top anchor" % g.name)
-    if has_anchor("bottom", l.anchors):
-      print("%s should not have a bottom anchor" % g.name)
+
+  if ".yb" in g.name:
+    for a in ["top", "_top", "_bottom"]:
+      if has_anchor(a, l.anchors):
+        print("Bari ye glyph %s should not have anchor %s!" % (g.name, a))
+    if not has_anchor("bottom", l.anchors) and "KASRA" not in g.name:
+      print("Bari ye glyph %s should have anchor %s!" % (g.name, "bottom"))
+
+    continue
+
+  # if g.name not in ["sda", "dda", "tda", "sdb", "ddb", "tdb", "sdb.yb", "ddb.yb", "tdb.yb"]:
+  #   if has_anchor("top", l.anchors) and g.name != "SHADDA":
+  #     print("%s should not have a top anchor" % g.name)
+  #   if has_anchor("bottom", l.anchors):
+  #     print("%s should not have a bottom anchor" % g.name)
 
   if not has_anchor("top", l.anchors) and g.name == "SHADDA":
     print("%s should have a top anchor" % g.name)
