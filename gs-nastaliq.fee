@@ -228,20 +228,26 @@ Feature mkmk {
   # dots are not cumulative if there is an above dot in the middle, and vice
   # versa.
   LoadPlugin qalamTools.SeparateConsecutive;
-  Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [tdb sdb ddb sdb.yb ddb.yb tdb.yb haydb haydb.yb ] 3 80;
-  } IgnoreBases UseMarkFilteringSet [ tdb sdb ddb tdb sda dda sdb.yb ddb.yb tdb.yb haydb.yb];
+  DefineClass @behs = /(JIM|BE|TE)[mi]\d+$/ & @reachable_glyphs;
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive [tda sda dda] 3 80;
-  } IgnoreBases UseMarkFilteringSet [ tdb sdb ddb tdb sda dda];
+    SeparateConsecutive @above_nuktas 5 100 -100;
+  } UseMarkFilteringSet @above_nuktas;
+
+  Routine SeparateConsecutiveBelowDots {
+    SeparateConsecutive [sdb ddb tdb] 5 100 100;
+  } UseMarkFilteringSet [sdb ddb tdb];
+
+  Routine SeparateConsecutiveYBDots {
+    SeparateConsecutive [sdb.yb ddb.yb tdb.yb] 5 100 -100;
+  } UseMarkFilteringSet [sdb.yb ddb.yb tdb.yb];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
   # also be separated.
 
-  Routine SeparateConsecutiveBariYeDots {
-    Position [sdb.yb ddb.yb] { KASRA.yb <-0 -250 0 0> };
-    Position tdb.yb { KASRA.yb <0 -360 0 0> };
-  } IgnoreBases UseMarkFilteringSet @nuktas_and_kasra;
+  #Routine SeparateConsecutiveBariYeDots {
+  #  Position [sdb.yb ddb.yb] { KASRA.yb <-0 -250 0 0> };
+  #  Position tdb.yb { KASRA.yb <0 -360 0 0> };
+  #} IgnoreBases UseMarkFilteringSet @nuktas_and_kasra;
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
   # add move space both to the dots and to the glyph itself so they
