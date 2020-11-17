@@ -80,7 +80,7 @@ Feature fina {
   SuffixingSubstitute [
     AINu1 ALIFu1 BARI_YEu1 BEu1 CH_YEu1 DALu1 FEu1 GAFu1 HAYAu1
     HAYCu1 KAFu1 LAMu1 MIMu1 NUNu1 QAFu1 REu1 SADu1 SINu1 TOEu1
-    VAOu1 TEu1
+    VAOu1 TEu1 LAM_ALIFu1
   ] -> f1;
 };
 
@@ -148,6 +148,12 @@ DefineClass @nuktas_and_kasra = [@nuktas KASRA KASRA.yb haydb haydb.yb];
 DefineClass @below_dots = [@below_nuktas KASRA KASRA.yb haydb haydb.yb];
 
 Feature rlig {
+  Routine LamAlef {
+    Substitute LAMi1 ALIFf1 -> LAM_ALIFu1;
+    Substitute LAMm1 ALIFf1 -> LAM_ALIFf1;
+  } IgnoreMarks;
+
+
   # The Glyphs file will contain a set of information about selecting
   # connecting glyphs (what the Qalmi patent calls the Generic Selection
   # Table). Code in the Makefile will extract this information from the
