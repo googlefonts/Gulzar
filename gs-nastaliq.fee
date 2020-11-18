@@ -32,7 +32,6 @@ Feature ccmp {
   Substitute feh-ar -> FEu1 sda;
   Substitute qaf-ar -> QAFu1 dda;
   Substitute peh-ar -> BEu1 tdb;
-  Substitute noon-ar -> NUNu1;
   Substitute rreh-ar -> REu1 toeda;
   Substitute tteh-ar -> BEu1 toeda;
   Substitute zah-ar -> TOEu1 sda;
@@ -55,16 +54,19 @@ Feature fina {
   Routine FinaSelection {
     Substitute [CH_YEu1 AINu1 FEu1 HAYAm1 JIMu1 tcheh-ar khah-ar] { REu1 }    -> REf2;
     Substitute JIMu1          { CH_YEu1 } -> CH_YEf2;
-    Substitute [CH_YEu1 BEu1] { NUNu1 }   -> NUNf2;
+    Substitute [CH_YEu1 BEu1] { NUNu1 } -> NUNf2;
+    Substitute [CH_YEu1 BEu1] { noon-ar } -> NUNf2 sdi;
     # We need the ignoremarks flag here because, after ccmp is done, there
     # may be some dots between e.g. BE and NUN.
   } IgnoreMarks;
 
   # Now we fix up the JIM-likes.
-  Substitute tcheh-ar -> JIMf1 tda; # XXX -> should be inside
+  Substitute tcheh-ar -> JIMf1 tdi;
   Substitute khah-ar -> JIMf1 sda;
   Substitute hah-ar -> JIMf1;
-  Substitute JIMu1 -> JIMf1 sda; # XXX -> should be inside
+  Substitute JIMu1 -> JIMf1 sdi;
+
+  Substitute noon-ar -> NUNf1 sdi;
 
   # Yeh hamza is different, because it can take CH_YE form but no dots.
   Substitute yehHamzaabove-ar -> CH_YEf1 HAMZA_ABOVE;
@@ -88,7 +90,8 @@ Feature fina {
 # take the forms of other rasm glyphs (e.g. QAF looks like a FE with no dot)
 # in initial position, so we turn them into that. Also fix up JIM again.
 Feature init {
-  Substitute NUNu1 -> BEi1 sda;
+  Substitute noon-ar -> BEi1 sda;
+  Substitute NUNu1 -> BEi1; # Noon ghunna has no dots
   Substitute CH_YEu1 -> BEi1 ddb;
   Substitute QAFu1 -> FEi1;
   Substitute JIMu1    -> JIMi1 sdb;
@@ -118,7 +121,8 @@ Feature medi {
   SuffixingSubstitute [DALu1 REu1] -> f1;
 
   Substitute QAFu1    -> FEm1;
-  Substitute NUNu1    -> BEm1 sda;
+  Substitute noon-ar  -> BEm1 sda;
+  Substitute NUNu1    -> BEm1; # Noon ghunna
   Substitute JIMu1    -> JIMm1 sdb;
   Substitute tcheh-ar -> JIMm1 tdb;
   Substitute khah-ar  -> JIMm1 sda;
@@ -133,6 +137,7 @@ Feature isol {
   Substitute yehHamzaabove-ar -> CH_YEu1 HAMZA_ABOVE;
   Substitute tehMarbutagoal-ar -> HAYCu1 dda;
   Substitute hah-ar -> JIMu1;
+  Substitute noon-ar -> NUNu1 sdi;
 };
 
 # # Now things get interesting!
@@ -190,9 +195,9 @@ Feature rlig {
 Feature mark {
   Routine DoMarkBase {
     Attach &top &_top bases;
+    Attach &centre &_centre bases;
     Attach &bottom &_bottom bases;
     Attach &comma &_comma bases;
-    Attach &inside &_inside bases;
   };
 };
 
