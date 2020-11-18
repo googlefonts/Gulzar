@@ -4,7 +4,7 @@ DisplayStrings = (
 "/JIMm8/TEmsd4",
 "/tdb.yb",
 "/sdi",
-"/AINm2/GAFm5"
+"/BEm1/tdb/SINi1/haydb/REf2/DALu1/SINf1/NUNf2"
 );
 customParameters = (
 {
@@ -625,7 +625,7 @@ unicode = 062E;
 {
 color = 1;
 glyphname = DALu1;
-lastChange = "2020-11-16 20:04:07 +0000";
+lastChange = "2020-11-18 15:48:27 +0000";
 layers = (
 {
 anchors = (
@@ -635,7 +635,7 @@ position = "{72, -200}";
 },
 {
 name = top;
-position = "{48, 515}";
+position = "{108, 515}";
 }
 );
 backgroundImage = {
@@ -733,7 +733,7 @@ unicode = FEAA;
 {
 color = 1;
 glyphname = "thal-ar";
-lastChange = "2020-11-16 17:16:46 +0000";
+lastChange = "2020-11-18 15:48:29 +0000";
 layers = (
 {
 components = (
@@ -742,7 +742,7 @@ name = DALu1;
 },
 {
 name = sda;
-transform = "{1, 0, 0, 1, -92, 372}";
+transform = "{1, 0, 0, 1, -32, 372}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -5846,13 +5846,17 @@ subCategory = Nonspacing;
 {
 color = 1;
 glyphname = haydb;
-lastChange = "2020-11-15 19:08:38 +0000";
+lastChange = "2020-11-18 16:13:53 +0000";
 layers = (
 {
 anchors = (
 {
 name = _comma;
 position = "{134, 61}";
+},
+{
+name = bottom;
+position = "{110, -309}";
 }
 );
 components = (

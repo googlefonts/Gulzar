@@ -37,9 +37,9 @@ Feature ccmp {
   Substitute zah-ar -> TOEu1 sda;
   Substitute ddal-ar -> DALu1 toeda;
   Substitute jim-ar -> JIMu1;
-  #Substitute jeh-ar -> REu1 tda;
-  #Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
-  #Substitute alefMadda-ar -> ALIFu1 MADDA;
+  Substitute jeh-ar -> REu1 tda;
+  Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
+  Substitute alefMadda-ar -> ALIFu1 MADDA;
 };
 
 # In the fina feature, we want to achieve three things:
@@ -52,7 +52,7 @@ Feature ccmp {
 Feature fina {
 
   Routine FinaSelection {
-    Substitute [CH_YEu1 AINu1 FEu1 HAYAm1 JIMu1 tcheh-ar khah-ar] { REu1 }    -> REf2;
+    Substitute [CH_YEu1 AINu1 FEu1 HAYAm1 JIMu1 tcheh-ar khah-ar SINu1] { REu1 }    -> REf2;
     Substitute JIMu1          { CH_YEu1 } -> CH_YEf2;
 
     # These are true in Qalmi but not in our design
@@ -254,6 +254,10 @@ Feature mkmk {
 
   # The one thing this *won't* fix is mixes of dots and kasras, so do that
   # by hand
+  # XXX rework.
+  # 1) Needs a head init/medi which is less wide (Arabic width) than the KASRA
+  # 2) Should only drop when the diacriticals would be positioned on a level
+  # XXX Also like to make this work for other above marks (XXmx DAMMA XXmx tdb XXmx MADD,...)
   Routine SeparateDotBaseKasra {
     Position { [KASRA haydb] <yPlacement=-200>} @medis [sdb ddb tdb];
   } UseMarkFilteringSet [sdb ddb tdb KASRA haydb];
@@ -328,4 +332,8 @@ Feature kern {
   Routine RaiseDotsAfterWideFinals {
     Position @WideFinals @inits { [ddb tdb] <yPlacement=+250> } ;
   } UseMarkFilteringSet [ddb tdb];
+
+  Routine KernBeHaya {
+    Position {space <xAdvance=-100> } /[BT]Ei/ /HAYA/;
+  } IgnoreMarks;
 };
