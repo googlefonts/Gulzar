@@ -1,5 +1,7 @@
 import fontFeatures
 from glyphtools import get_glyph_metrics
+from copy import copy
+
 
 GRAMMAR = """
 SeparateConsecutive_Args = glyphselector:nuktaset ws integer:maxlen ws integer:distance ws integer:drop -> (nuktaset, maxlen, distance, drop)
@@ -17,6 +19,9 @@ class SeparateConsecutive:
         if ".yb" in nuktaset[0]:
             risemax = 9999
         dot_carriers = parser.fontfeatures.namedClasses["behs"]
+        initial_glyphs = [g for g in dot_carriers if "i" in g]
+        non_initial_glyphs = [g for g in dot_carriers if "i" not in g]
+
         max_dotwidth = max(
             [
                 get_glyph_metrics(parser.font, g)["xMax"]
@@ -40,6 +45,17 @@ class SeparateConsecutive:
                 positions[j * 2 + 1].xPlacement = adjustment
                 if j % 2 == 1:
                     positions[j * 2 + 1].yPlacement -= drop
+
+            # Do this twice, for initials (which gain an advance) and noninitials
+            # (which don't)
+            input_[0] = non_initial_glyphs
+            rules.append(fontFeatures.Positioning(input_, positions))
+
+            input_ = copy(input_)
+            positions = copy(positions)
+            input_[0] = initial_glyphs
+            positions[0] = fontFeatures.ValueRecord(0, 0, 0, 0)
+            positions[0].xAdvance = i * distance
 
             rules.append(fontFeatures.Positioning(input_, positions))
 
