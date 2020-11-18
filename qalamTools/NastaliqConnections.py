@@ -26,8 +26,6 @@ class NastaliqConnections:
             reader = csv.DictReader(csvfile)
             for line in reader:
                 left_glyph = line["Left Glyph"]
-                if "GAF" in left_glyph:
-                    continue
                 if not left_glyph in parser.font.keys():
                     continue
                 remainder = list(line.items())[1:]
@@ -45,13 +43,14 @@ class NastaliqConnections:
                         rules[old][replacement] = []
                     rules[old][replacement].append(left_glyph)
                     if "KAF" in left_glyph:
-                        left_glyph[0] = "G"
-                        rules[old][replacement].append(left_glyph)
+                        left_glyph2 = "G" + left_glyph[1:]
+                        rules[old][replacement].append(left_glyph2)
 
         r = fontFeatures.Routine(name="connections", flags=0x8)
         for oldglyph in rules:
             for replacement in rules[oldglyph]:
                 context = rules[oldglyph][replacement]
+
                 reachable |= set(context)
                 reachable |= set([oldglyph, replacement])
                 r.addRule(
