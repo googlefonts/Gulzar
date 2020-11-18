@@ -4,7 +4,8 @@ DisplayStrings = (
 "/JIMm8/TEmsd4",
 "/tdb.yb",
 "/sdi",
-"/BEm1/tdb/SINi1/haydb/REf2/DALu1/SINf1/NUNf2"
+"/BEm1/tdb/SINi1/haydb/REf2/DALu1/SINf1/NUNf2",
+""
 );
 customParameters = (
 {
@@ -3721,6 +3722,44 @@ width = 277;
 note = DAMMA_TANWIN;
 category = Mark;
 subCategory = Nonspacing;
+},
+{
+color = 1;
+glyphname = LONG_A;
+lastChange = "2020-11-18 16:32:54 +0000";
+layers = (
+{
+anchors = (
+{
+name = _top;
+position = "{128, 174}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"140 261 OFFCURVE",
+"152 314 OFFCURVE",
+"152 373 CURVE SMOOTH",
+"152 442 LINE",
+"137 442 LINE",
+"132 436 OFFCURVE",
+"111 398 OFFCURVE",
+"113 357 CURVE SMOOTH",
+"117 255 LINE",
+"136 254 LINE"
+);
+}
+);
+width = 266;
+}
+);
+note = LONG_A;
+unicode = 0670;
+category = Mark;
+subCategory = Nonspace;
 },
 {
 color = 1;
@@ -23288,45 +23327,6 @@ width = 299;
 }
 );
 note = LEADER_DOT;
-},
-{
-color = 1;
-glyphname = LONG_A;
-lastChange = "2020-11-15 20:15:42 +0000";
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{0, 0}";
-},
-{
-name = top;
-position = "{0, 0}";
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"140 261 OFFCURVE",
-"152 314 OFFCURVE",
-"152 373 CURVE SMOOTH",
-"152 442 LINE",
-"137 442 LINE",
-"132 436 OFFCURVE",
-"111 398 OFFCURVE",
-"113 357 CURVE SMOOTH",
-"117 255 LINE",
-"136 254 LINE"
-);
-}
-);
-width = 266;
-}
-);
-note = LONG_A;
 },
 {
 color = 1;
@@ -81333,7 +81333,7 @@ TOEm = 1;
 {
 AINi = "2";
 AINm = "2";
-BEi = "10";
+BEi = 3;
 BEm = "2";
 FEi = "2";
 FEm = "2";
@@ -81653,7 +81653,7 @@ HAYAi = 1;
 HAYAm = 1;
 HAYCi = 1;
 HAYCm = 1;
-JIMi = 1;
+JIMi = 4;
 JIMm = 1;
 KAFi = 1;
 KAFm = 1;
