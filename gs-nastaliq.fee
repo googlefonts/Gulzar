@@ -54,8 +54,11 @@ Feature fina {
   Routine FinaSelection {
     Substitute [CH_YEu1 AINu1 FEu1 HAYAm1 JIMu1 tcheh-ar khah-ar] { REu1 }    -> REf2;
     Substitute JIMu1          { CH_YEu1 } -> CH_YEf2;
-    Substitute [CH_YEu1 BEu1] { NUNu1 } -> NUNf2;
-    Substitute [CH_YEu1 BEu1] { noon-ar } -> NUNf2 sdi;
+
+    # These are true in Qalmi but not in our design
+    #Substitute [CH_YEu1 BEu1] { NUNu1 } -> NUNf2;
+    #Substitute [CH_YEu1 BEu1] { noon-ar } -> NUNf2 sdi;
+
     # We need the ignoremarks flag here because, after ccmp is done, there
     # may be some dots between e.g. BE and NUN.
   } IgnoreMarks;
@@ -180,7 +183,7 @@ Feature rlig {
   # sense that we need to drop those nuktas to avoid collisions with the tail
   # of the character.)
   DefineClass @behs = /(JIM|BE)[mi]\d+$/ & @reachable_glyphs;
-  DefineClass @bariye = [BARI_YEf1 CH_YEf1 QAFf1 JIMf1];
+  DefineClass @bariye = [BARI_YEf1 CH_YEf1 QAFf1 JIMf1 AINf1];
 
   # This command evaluates all sequences of @behs followed by a @bariye and
   # replaces dots under the tail with "dropped" versions (alternate glyphs
@@ -241,24 +244,27 @@ Feature mkmk {
   LoadPlugin qalamTools.SeparateConsecutive;
   DefineClass @behs = /(JIM|BE|TE)[mi]\d+$/ & @reachable_glyphs;
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @above_nuktas 5 100 -100;
+    SeparateConsecutive @above_nuktas 5 150 -150;
   } UseMarkFilteringSet @above_nuktas;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb] 5 100 100;
+    SeparateConsecutive [sdb ddb tdb] 5 150 150;
   } UseMarkFilteringSet [sdb ddb tdb];
 
-  Routine SeparateConsecutiveYBDots {
-    SeparateConsecutive [sdb.yb ddb.yb tdb.yb] 5 100 -100;
-  } UseMarkFilteringSet [sdb.yb ddb.yb tdb.yb];
+
+  # The one thing this *won't* fix is mixes of dots and kasras, so do that
+  # by hand
+  Routine SeparateDotBaseKasra {
+    Position { [KASRA haydb] <yPlacement=-200>} @medis [sdb ddb tdb];
+  } UseMarkFilteringSet [sdb ddb tdb KASRA haydb];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
   # also be separated.
 
-  #Routine SeparateConsecutiveBariYeDots {
-  #  Position [sdb.yb ddb.yb] { KASRA.yb <-0 -250 0 0> };
-  #  Position tdb.yb { KASRA.yb <0 -360 0 0> };
-  #} IgnoreBases UseMarkFilteringSet @nuktas_and_kasra;
+  Routine SeparateConsecutiveYBDots {
+    SeparateConsecutive [sdb.yb ddb.yb tdb.yb] 5 150 -150;
+  } UseMarkFilteringSet [sdb.yb ddb.yb tdb.yb];
+
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
   # add move space both to the dots and to the glyph itself so they
@@ -296,10 +302,10 @@ Feature kern {
     Position { [tdb ddb] <yPlacement=-100> } VAOf1;
   } UseMarkFilteringSet /tdb|ddb$/;
 
-  # Routine DropJimYBDotsMore {
-  #   Position  /.yb$/ @medis { /.yb$/ <20 -150 0 0> } JIMf1;
-  #   Position { /.yb$/ <20 -100 0 0> } JIMf1;
-  # } UseMarkFilteringSet /.yb$/;
+  Routine DropJimYBDotsMore {
+    Position  /.yb$/ @medis { /.yb$/ <20 -150 0 0> } JIMf1;
+    Position { /.yb$/ <20 -100 0 0> } JIMf1;
+  } UseMarkFilteringSet /.yb$/;
 
   # Routine GiveDotsBeforeJimMoreSpace {
   #   Position { /(db|yb)$/ <100 0 0 0> } JIMf1;
@@ -316,4 +322,10 @@ Feature kern {
     # Routine ShiftYBNuktasBackwards {
     #   Position /.yb$/ <-100 0 0 0> /.yb$/ <-100 0 0 0>;
     # } IgnoreBases;
+
+  # Ugly manual things
+  DefineClass @WideFinals = @finas and (xMin < 50);
+  Routine RaiseDotsAfterWideFinals {
+    Position @WideFinals @inits { [ddb tdb] <yPlacement=+250> } ;
+  } UseMarkFilteringSet [ddb tdb];
 };

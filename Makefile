@@ -1,4 +1,4 @@
-GLYPHS_FILE=Qalmi_Borna_Latest.glyphs
+GLYPHS_FILE=Qalmi_Borna_Simon.glyphs
 PROJECT_NAME=gs-nastaliq
 FINAL_FONT=Qalmi_Borna-Regular.ttf
 export PYTHONPATH=.
