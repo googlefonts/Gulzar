@@ -1,0 +1,13 @@
+Include shared.fee;
+
+LoadPlugin BariYe;
+
+Feature kern {
+  # This plugin deals with the "short bari ye" problem where a short sequence
+  # ending in a bari ye is not long enough to clear the negative RSB of the
+  # bari ye tail, and so the tail pokes into the preceding word. (Happens with
+  # sequences like ابے) This rule works out the width of all possible sequences
+  # and adds a kern to the initial glyph to separate it from the end of the
+  # preceding word.
+  BYFixOverhang 10 @bariye;
+};

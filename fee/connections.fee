@@ -1,0 +1,18 @@
+Feature rlig {
+  Routine LamAlef {
+    Substitute LAMi1 ALIFf1 -> LAM_ALIFu1;
+    Substitute LAMm1 ALIFf1 -> LAM_ALIFf1;
+  } IgnoreMarks;
+
+  # The Glyphs file will contain a set of information about selecting
+  # connecting glyphs (what the Qalmi patent calls the Generic Selection
+  # Table). Code in the Makefile will extract this information from the
+  # Glyphs file and into a CSV file (rules.csv). The custom NastaliqConnections
+  # plugin reads this CSV file and creates a set of reverse chaining
+  # single substitution rules. It also defines the glyph class
+  # @reachable_glyphs, which contains all the glyphs which are actually
+  # *used* by the rules. (So if you create a JIMm12 but no connection
+  # rule ever substitutes it in, we don't need to care about it.)
+  LoadPlugin qalamTools.NastaliqConnections;
+  NastaliqConnections rules.csv;
+};

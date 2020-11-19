@@ -1,0 +1,22 @@
+Include anchors.fee;
+
+# The next three features are fairly standard anchor attachment rules.
+Feature mark {
+  Routine DoMarkBase {
+    Attach &top &_top bases;
+    Attach &centre &_centre bases;
+    Attach &bottom &_bottom bases;
+    Attach &comma &_comma bases;
+  };
+};
+
+Feature curs {
+  Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
+};
+
+Feature mkmk {
+  Routine DoMarkAttachment {
+    Attach &top &_top marks;
+    Attach &bottom &_bottom marks;
+  };
+};

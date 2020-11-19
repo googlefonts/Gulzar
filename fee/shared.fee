@@ -1,0 +1,34 @@
+# The anchors information is generated from the Glyphs source.
+# The script `dump-fee-anchors.py` loads the Glyphs file, and extracts
+# anchor information. Loading anchors.fee here just tells FEE about the
+# anchors, but does not do anything with them yet.
+Include anchors.fee;
+
+# The Glyphs file does not include any anchors for TE glyphs, because
+# these are purely components from their BE equivalents. We use a
+# custom plugin to copy the anchors from BE to TE.
+LoadPlugin qalamTools.CopyAnchors;
+CopyAnchors BE TE;
+CopyAnchors GAF KAF;
+CopyAnchors KAF GAF;
+
+# Define some classes we're going to need
+DefineClass @below_nuktas = /^.db(.yb)?$/;
+DefineClass @above_nuktas = /^.da$/;
+DefineClass @other_above_marks = [toeda MADDA DAMMA];
+DefineClass @all_above_marks = @above_nuktas | @other_above_marks;
+DefineClass @nuktas = @above_nuktas | @below_nuktas | /^.di$/; # di = JIM dots
+DefineClass @nuktas_and_kasra = [@nuktas KASRA KASRA.yb haydb haydb.yb];
+DefineClass @below_dots = [@below_nuktas KASRA KASRA.yb haydb haydb.yb];
+DefineClass @medis = /m\d+$/;
+DefineClass @inits = /i\d+$/;
+DefineClass @finas = /f\d+$/;
+
+# The two following glyph classes are badly named. Really, they're referring
+# to anything which *behaves* like a BE (in the sense that it can "carry" a
+# nukta below the rasm) or anything which *behaves* like a bari ye (in the
+# sense that we need to drop those nuktas to avoid collisions with the tail
+# of the character.)
+DefineClass @behs = /(JIM|BE)[mi]\d+$/;
+DefineClass @bariye = [BARI_YEf1 CH_YEf1 QAFf1 JIMf1 AINf1];
+

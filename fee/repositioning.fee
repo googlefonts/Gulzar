@@ -1,0 +1,108 @@
+Include shared.fee;
+
+# And now we do some more positioning. We put this in mkmk because we want
+# this to be processed at the end, after anchor positioning is done.
+Feature mkmk {
+
+  # Dots and marks on the letter preceding a swash kaf need to be dropped
+  # down to avoid collision. Dots get moved right slightly.
+  # XXX ideally tall kaf/gaf and short kaf/gaf should be treated differently.
+  DefineClass @kafgaf = /^(KAF|GAF)/;
+  Routine DropDotsOnTehGaf {
+    Position @above_nuktas <15 -60 0 0> @kafgaf;
+    Position @other_above_marks <15 -100 0 0> @kafgaf;
+  } UseMarkFilteringSet [@above_nuktas @other_above_marks];
+
+
+  # The SeparateConsecutive plugin performs the "knock-on" separation of
+  # dots according to the Qalmi patent. It looks for a sequence of consecutive
+  # dots up to a given length (3, in this case), and creates rules which
+  # *cumulatively* move them all horizontally: it moves the second dot across
+  # 70 units, the third dot 140 units, and so on. The mark filtering sets
+  # establish whether or not the dots really are cumulative. Two below
+  # dots are not cumulative if there is an above dot in the middle, and vice
+  # versa.
+  LoadPlugin qalamTools.SeparateConsecutive;
+  DefineClass @behs = /(JIM|BE|TE)[mi]\d+$/;
+  Routine SeparateConsecutiveAboveDots {
+    SeparateConsecutive @above_nuktas 5 150 -150;
+  } UseMarkFilteringSet @above_nuktas;
+
+  Routine SeparateConsecutiveBelowDots {
+    SeparateConsecutive [sdb ddb tdb] 5 150 150;
+  } UseMarkFilteringSet [sdb ddb tdb];
+
+
+  # The one thing this *won't* fix is mixes of dots and kasras, so do that
+  # by hand
+  # XXX rework.
+  # 1) Needs a head init/medi which is less wide (Arabic width) than the KASRA
+  # 2) Should only drop when the diacriticals would be positioned on a level
+  # XXX Also like to make this work for other above marks (XXmx DAMMA XXmx tdb XXmx MADD,...)
+
+  # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
+  # also be separated.
+  Routine SeparateConsecutiveYBDots {
+    SeparateConsecutive [sdb.yb ddb.yb tdb.yb] 5 150 -150;
+  } UseMarkFilteringSet [sdb.yb ddb.yb tdb.yb];
+
+
+  # If the dots "poke out" the end of a narrow init glyph, we need to
+  # add move space both to the dots and to the glyph itself so they
+  # don't collide with preceding glyphs.
+  DefineClass @overlapping_inits = @inits and (width < xMax(tdb));
+  Routine OpenSpaceAroundSmallBehs {
+    Position @overlapping_inits <xAdvance=150> @nuktas <xPlacement=50>;
+  };
+
+  Position /[mi]\d+$/ @all_above_marks DAMMA <yPlacement=150> @kafgaf;
+};
+
+Feature kern {
+  # Final glyphs, isolated glyphs, and space glyphs mark the end of a
+  # word. If one word ends and then there is a double-dotted sequence
+  # starting the next word, move the start of the word away from the
+  # end-of-word character, to stop the below-dots (which we have now
+  # cumulatively moved to the right) from clashing into the preceding word.
+  DefineClass @endofword = /[fu]\d+|space/;
+  Position @endofword { @inits <0 0 200 0> } @below_dots @medis @below_dots;
+
+  # Eat any spaces after mim isol
+  Position /MIMu\d+/ { space <xAdvance=-50> };
+
+  Routine GiveChYeDotsMoreSpace {
+    Position { /.yb|tdb|ddb$/ <100 0 0 0> } [CH_YEf1 NUNf1];
+  } UseMarkFilteringSet /.yb|tdb|ddb$/;
+
+  Routine DropKasraAfterDots {
+    Position { KASRA <yPlacement=-100> } /BE/ ddb;
+    Position { KASRA <yPlacement=-100> } /BE/ KASRA ddb;
+  }  UseMarkFilteringSet /KASRA|ddb$/;
+
+  Routine DropDotsBeforeVao {
+    Position { [tdb ddb] <yPlacement=-100> } VAOf1;
+  } UseMarkFilteringSet /tdb|ddb$/;
+
+  Routine DropJimYBDotsMore {
+    Position  /.yb$/ @medis { /.yb$/ <20 -150 0 0> } JIMf1;
+    Position { /.yb$/ <20 -100 0 0> } JIMf1;
+  } UseMarkFilteringSet /.yb$/;
+
+  # Routine GiveDotsBeforeJimMoreSpace {
+  #   Position { /(db|yb)$/ <100 0 0 0> } JIMf1;
+  # } UseMarkFilteringSet /(db|yb)$/;
+
+    # Routine ShiftYBNuktasBackwards {
+    #   Position /.yb$/ <-100 0 0 0> /.yb$/ <-100 0 0 0>;
+    # } IgnoreBases;
+
+  # Ugly manual things
+  DefineClass @WideFinals = @finas and (xMin < 50);
+  Routine RaiseDotsAfterWideFinals {
+    Position @WideFinals @inits { [ddb tdb] <yPlacement=+250> } ;
+  } UseMarkFilteringSet [ddb tdb];
+
+  Routine KernBeHaya {
+    Position {space <xAdvance=-100> } /[BT]Ei/ /HAYA/;
+  } IgnoreMarks;
+};
