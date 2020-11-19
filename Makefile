@@ -1,6 +1,6 @@
 GLYPHS_FILE=Qalmi_Borna_Simon.glyphs
 FINAL_FONT=Qalmi_Borna-Regular.ttf
-export PYTHONPATH=.
+export PYTHONPATH=.:/Users/simon/hacks/typography/fontFeatures
 export FONTTOOLS_DEBUG=1
 FEA_FILES=fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
 

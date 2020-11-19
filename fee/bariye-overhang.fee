@@ -9,5 +9,5 @@ Feature kern {
   # sequences like ابے) This rule works out the width of all possible sequences
   # and adds a kern to the initial glyph to separate it from the end of the
   # preceding word.
-  BYFixOverhang 10 @bariye;
+  BYFixOverhang -10 @bariye;
 };

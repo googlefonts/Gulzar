@@ -43,10 +43,10 @@ Feature fina {
     Substitute JIMu1          { CH_YEu1 } -> CH_YEf2;
 
     # These are true in Qalmi but not in our design
-    #Substitute [CH_YEu1 BEu1] { NUNu1 } -> NUNf2;
-    #Substitute [CH_YEu1 BEu1] { noon-ar } -> NUNf2 sdi;
+    #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] { NUNu1 } -> NUNf2;
+    #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] { noon-ar } -> NUNf2 sdi;
 
-    Substitute  [CH_YEu1 BEu1] { HAYCu1 } -> HAYCf2;
+    Substitute  [CH_YEu1 BEu1 noon-ar NUNu1 ] { HAYCu1 } -> HAYCf2;
 
     # We need the ignoremarks flag here because, after ccmp is done, there
     # may be some dots between e.g. BE and NUN.

@@ -31,5 +31,5 @@ DefineClass @isols = /u\d+$/;
 # sense that we need to drop those nuktas to avoid collisions with the tail
 # of the character.)
 DefineClass @behs = /(JIM|BE)[mi]\d+$/;
-DefineClass @bariye = [BARI_YEf1 CH_YEf1 QAFf1 JIMf1 AINf1];
+DefineClass @bariye = [BARI_YEf1 CH_YEf1 CH_YEf2 QAFf1 JIMf1 AINf1];
 

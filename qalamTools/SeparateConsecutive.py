@@ -59,7 +59,7 @@ class SeparateConsecutive:
             if do_initials:
                 inputs_positions[0] = (
                     initial_glyphs,
-                    fontFeatures.ValueRecord(0, 0, i * distance, 0),
+                    fontFeatures.ValueRecord(0, 0, (i - 1) * distance, 0),
                 )
             else:
                 inputs_positions[0] = (non_initial_glyphs, fontFeatures.ValueRecord(0))
@@ -75,9 +75,6 @@ class SeparateConsecutive:
                     for x in list(zip(range(i - 1), binary.format(j)))
                     if x[1] == "1"
                 ]
-                warnings.warn(
-                    "Length %i Position %i, marks at %s" % (i, j, marksequence)
-                )
                 rules.append(make_rule(i, False, marksequence))
                 rules.append(make_rule(i, True, marksequence))
 
