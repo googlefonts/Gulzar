@@ -1,7 +1,8 @@
 GLYPHS_FILE=Qalmi_Borna_Simon.glyphs
 FINAL_FONT=Qalmi_Borna-Regular.ttf
 export PYTHONPATH=.
-FEA_FILES=fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/repositioning.fea fea-bits/bariye-overhang.fea
+export FONTTOOLS_DEBUG=1
+FEA_FILES=fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
 
 .DELETE_ON_ERROR:
 
@@ -9,7 +10,6 @@ master_ttf/Qalmi_Borna-Regular.ttf: features.fea $(GLYPHS_FILE)
 	fontmake --master-dir . -g $(GLYPHS_FILE) -o ttf
 
 features.fea: $(FEA_FILES)
-	# python3 fixup-glyphs-file.py $(GLYPHS_FILE) features.fea
 	cat $^ > features.fea
 
 clean:
@@ -36,15 +36,16 @@ fea-bits/decomposition.fea: fee/decomposition.fee
 fea-bits/connections.fea: fee/connections.fee rules.csv
 	fee2fea -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/bariye-drop.fea: fee/bariye-drop.fee $(GLYPHS_FILE) fee/shared.fee
+fea-bits/anchor-attachment.fea: fee/anchor-attachment.fee anchors.fee fee/pre-mkmk-repositioning.fee
 	fee2fea -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/anchor-attachment.fea: fee/anchor-attachment.fee anchors.fee
+fea-bits/post-mkmk-repositioning.fea: fee/post-mkmk-repositioning.fee fee/shared.fee
 	fee2fea -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/repositioning.fea: fee/repositioning.fee fee/shared.fee
+# Technically these two should depend on the Glyphs file, but since the design
+# and width of glyphs is mostly fixed, I'm removing that dependency for now.
+fea-bits/bariye-drop.fea: fee/bariye-drop.fee fee/shared.fee
 	fee2fea -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/bariye-overhang.fea: fee/bariye-overhang.fee $(GLYPHS_FILE) fee/shared.fee
+fea-bits/bariye-overhang.fea: fee/bariye-overhang.fee fee/shared.fee
 	fee2fea -O0 $(GLYPHS_FILE) $< > $@
-

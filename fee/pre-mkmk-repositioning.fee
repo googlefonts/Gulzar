@@ -1,0 +1,9 @@
+Include shared.fee;
+
+Feature mkmk {
+  Routine LiftJimYBDotsMore {
+    Position  /.yb$/ @medis { /.yb$/ <20 +500 0 0> } [JIMf1 AINf1];
+    Position { /.yb$/ <20 +500 0 0> } /.yb$/ [JIMf1 AINf1];
+    Position { /.yb$/ <20 +500 0 0> } [JIMf1 AINf1];
+  } UseMarkFilteringSet /.yb$/;
+};

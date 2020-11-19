@@ -1,22 +1,22 @@
 import fontFeatures
 from glyphtools import get_glyph_metrics
-from copy import copy
+import warnings
 
 
 GRAMMAR = """
-SeparateConsecutive_Args = glyphselector:nuktaset ws integer:maxlen ws integer:distance ws integer:drop -> (nuktaset, maxlen, distance, drop)
+SeparateConsecutive_Args = glyphselector:marks ws integer:maxlen ws integer:distance ws integer:drop -> (marks, maxlen, distance, drop)
 """
 VERBS = ["SeparateConsecutive"]
 
 
 class SeparateConsecutive:
     @classmethod
-    def action(cls, parser, nuktaset, maxlen, distance, drop):
+    def action(cls, parser, marks, maxlen, distance, drop):
         if "behs" not in parser.fontfeatures.namedClasses:
             raise ValueError("Needs @behs class defined")
-        risemax = 200
-        nuktaset = nuktaset.resolve(parser.fontfeatures, parser.font)
-        if ".yb" in nuktaset[0]:
+        risemax = 400
+        marks = marks.resolve(parser.fontfeatures, parser.font)
+        if ".yb" in marks[0]:
             risemax = 9999
         dot_carriers = parser.fontfeatures.namedClasses["behs"]
         initial_glyphs = [g for g in dot_carriers if "i" in g]
@@ -26,37 +26,59 @@ class SeparateConsecutive:
             [
                 get_glyph_metrics(parser.font, g)["xMax"]
                 - get_glyph_metrics(parser.font, g)["xMin"]
-                for g in nuktaset
+                for g in marks
             ]
         )
-        # Filter glyphs with a certain amount of rise
+        # Filter glyphs
         dot_carriers = [
             g
             for g in dot_carriers
-            if get_glyph_metrics(parser.font, g)["rise"] < risemax and
-             get_glyph_metrics(parser.font, g)["width"] < max_dotwidth
+            if "m" not in g or get_glyph_metrics(parser.font, g)["width"] < max_dotwidth
         ]
         rules = []
-        for i in reversed(range(2, maxlen + 1)):
-            positions = [fontFeatures.ValueRecord(0, 0, 0, 0) for _ in range(i * 2)]
-            input_ = [dot_carriers, nuktaset] * i
+
+        def make_rule(i, do_initials, marks_at):
+            inputs_positions = []
             for j in range(0, i):
                 adjustment = (i - (j + 1)) * distance
-                positions[j * 2 + 1].xPlacement = adjustment
-                if j % 2 == 1:
-                    positions[j * 2 + 1].yPlacement -= drop
 
-            # Do this twice, for initials (which gain an advance) and noninitials
-            # (which don't)
-            input_[0] = non_initial_glyphs
-            rules.append(fontFeatures.Positioning(input_, positions))
+                inputs_positions.append((dot_carriers, fontFeatures.ValueRecord(0)))
+                if j % 2 == 0:
+                    yPlacement = -drop
+                else:
+                    yPlacement = 0
+                inputs_positions.append(
+                    (marks, fontFeatures.ValueRecord(adjustment, yPlacement, 0, 0))
+                )
 
-            input_ = copy(input_)
-            positions = copy(positions)
-            input_[0] = initial_glyphs
-            positions[0] = fontFeatures.ValueRecord(0, 0, 0, 0)
-            positions[0].xAdvance = i * distance
+                if j in marks_at:
+                    inputs_positions.append(
+                        (marks, fontFeatures.ValueRecord(0, 0, 0, 0))
+                    )
 
-            rules.append(fontFeatures.Positioning(input_, positions))
+            if do_initials:
+                inputs_positions[0] = (
+                    initial_glyphs,
+                    fontFeatures.ValueRecord(0, 0, i * distance, 0),
+                )
+            else:
+                inputs_positions[0] = (non_initial_glyphs, fontFeatures.ValueRecord(0))
+            return fontFeatures.Positioning(
+                [x[0] for x in inputs_positions], [x[1] for x in inputs_positions]
+            )
+
+        for i in reversed(range(2, maxlen + 1)):
+            for j in range(0, 2 ** (i - 1)):
+                binary = "{0:0%ib}" % (i - 1)
+                marksequence = [
+                    x[0]
+                    for x in list(zip(range(i - 1), binary.format(j)))
+                    if x[1] == "1"
+                ]
+                warnings.warn(
+                    "Length %i Position %i, marks at %s" % (i, j, marksequence)
+                )
+                rules.append(make_rule(i, False, marksequence))
+                rules.append(make_rule(i, True, marksequence))
 
         return rules

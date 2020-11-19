@@ -23,28 +23,20 @@ Feature mkmk {
   # dots are not cumulative if there is an above dot in the middle, and vice
   # versa.
   LoadPlugin qalamTools.SeparateConsecutive;
-  DefineClass @behs = /(JIM|BE|TE)[mi]\d+$/;
+  DefineClass @behs = /.*[mif]\d+$/; # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @above_nuktas 5 150 -150;
-  } UseMarkFilteringSet @above_nuktas;
+    SeparateConsecutive @all_above_marks 5 100 -50;
+  } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb] 5 150 150;
-  } UseMarkFilteringSet [sdb ddb tdb];
-
-
-  # The one thing this *won't* fix is mixes of dots and kasras, so do that
-  # by hand
-  # XXX rework.
-  # 1) Needs a head init/medi which is less wide (Arabic width) than the KASRA
-  # 2) Should only drop when the diacriticals would be positioned on a level
-  # XXX Also like to make this work for other above marks (XXmx DAMMA XXmx tdb XXmx MADD,...)
+    SeparateConsecutive [sdb ddb tdb haydb KASRA] 5 150 150;
+  } UseMarkFilteringSet [sdb ddb tdb haydb KASRA];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
   # also be separated.
   Routine SeparateConsecutiveYBDots {
-    SeparateConsecutive [sdb.yb ddb.yb tdb.yb] 5 150 -150;
-  } UseMarkFilteringSet [sdb.yb ddb.yb tdb.yb];
+    SeparateConsecutive /.yb$/ 5 150 -150;
+  } UseMarkFilteringSet /.yb$/;
 
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
@@ -74,29 +66,10 @@ Feature kern {
     Position { /.yb|tdb|ddb$/ <100 0 0 0> } [CH_YEf1 NUNf1];
   } UseMarkFilteringSet /.yb|tdb|ddb$/;
 
-  Routine DropKasraAfterDots {
-    Position { KASRA <yPlacement=-100> } /BE/ ddb;
-    Position { KASRA <yPlacement=-100> } /BE/ KASRA ddb;
-  }  UseMarkFilteringSet /KASRA|ddb$/;
-
   Routine DropDotsBeforeVao {
     Position { [tdb ddb] <yPlacement=-100> } VAOf1;
   } UseMarkFilteringSet /tdb|ddb$/;
 
-  Routine DropJimYBDotsMore {
-    Position  /.yb$/ @medis { /.yb$/ <20 -150 0 0> } JIMf1;
-    Position { /.yb$/ <20 -100 0 0> } JIMf1;
-  } UseMarkFilteringSet /.yb$/;
-
-  # Routine GiveDotsBeforeJimMoreSpace {
-  #   Position { /(db|yb)$/ <100 0 0 0> } JIMf1;
-  # } UseMarkFilteringSet /(db|yb)$/;
-
-    # Routine ShiftYBNuktasBackwards {
-    #   Position /.yb$/ <-100 0 0 0> /.yb$/ <-100 0 0 0>;
-    # } IgnoreBases;
-
-  # Ugly manual things
   DefineClass @WideFinals = @finas and (xMin < 50);
   Routine RaiseDotsAfterWideFinals {
     Position @WideFinals @inits { [ddb tdb] <yPlacement=+250> } ;
@@ -105,4 +78,18 @@ Feature kern {
   Routine KernBeHaya {
     Position {space <xAdvance=-100> } /[BT]Ei/ /HAYA/;
   } IgnoreMarks;
+
+  Routine GrossKasraAvoidanceThing {
+    Position [sdb.yb ddb.yb tdb.yb] { KASRA.yb <yPlacement=-200> } AINf1;
+    Position [sdb.yb ddb.yb tdb.yb] { KASRA.yb <yPlacement=-400> } JIMf1;
+  };
+
+  Routine TdbAinFinesse {
+    Position {tdb.yb <xPlacement=-30>} AINf1;
+  } UseMarkFilteringSet [tdb.yb];
+
+  DefineClass @NotTooHighStuff = (@finas|@isols) and (yMax < 600);
+  Routine AddSpaceAroundPointyDamma {
+    Position @NotTooHighStuff DAMMA {space <xAdvance=+50> };
+  };
 };

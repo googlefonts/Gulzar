@@ -46,6 +46,8 @@ Feature fina {
     #Substitute [CH_YEu1 BEu1] { NUNu1 } -> NUNf2;
     #Substitute [CH_YEu1 BEu1] { noon-ar } -> NUNf2 sdi;
 
+    Substitute  [CH_YEu1 BEu1] { HAYCu1 } -> HAYCf2;
+
     # We need the ignoremarks flag here because, after ccmp is done, there
     # may be some dots between e.g. BE and NUN.
   } IgnoreMarks;

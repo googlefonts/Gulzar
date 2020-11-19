@@ -5,7 +5,7 @@ Feature rlig {
   # replaces dots under the tail with "dropped" versions (alternate glyphs
   # with no anchor positioning).
   LoadPlugin BariYe;
-  BYMoveDots AlwaysDrop @below_nuktas;
+  BYMoveDots AlwaysDrop [@below_nuktas haydb haydb.yb];
   # Now do it again but this time drop kasras
-  BYMoveDots AlwaysDrop [KASRA KASRA.yb haydb haydb.yb];
+  BYMoveDots AlwaysDrop [KASRA KASRA.yb];
 };
