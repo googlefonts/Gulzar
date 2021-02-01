@@ -1,19 +1,22 @@
 GLYPHS_FILE=Qalmi_Borna_Simon.glyphs
-FINAL_FONT=Qalmi_Borna-Regular.ttf
+FINAL_FONT=master_ttf/GoogleSansNastaliq-Regular.ttf
 export PYTHONPATH=.:/Users/simon/hacks/typography/fontFeatures
-export FONTTOOLS_DEBUG=1
+export FONTTOOLS_LOOKUP_DEBUGGING=1
 FEA_FILES=fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
 
 .DELETE_ON_ERROR:
 
-master_ttf/Qalmi_Borna-Regular.ttf: features.fea $(GLYPHS_FILE)
-	fontmake --master-dir . -g $(GLYPHS_FILE) -o ttf
+$(FINAL_FONT): features.fea $(GLYPHS_FILE)
+	fontmake -f --master-dir . -g $(GLYPHS_FILE) -o ttf --output-path $(FINAL_FONT)
+
+fix: $(FINAL_FONT)
+	gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT)
 
 features.fea: $(FEA_FILES)
 	cat $^ > features.fea
 
 clean:
-	rm -f master_ttf/Qalmi_Borna-Regular.ttf features.fea anchors.fee rules.csv
+	rm -f $(FINAL_FONT) features.fea anchors.fee rules.csv fea-bits/*
 
 anchors.fee: $(GLYPHS_FILE)
 	python3 dump-fee-anchors.py $(GLYPHS_FILE) > anchors.fee
@@ -21,16 +24,16 @@ anchors.fee: $(GLYPHS_FILE)
 rules.csv: $(GLYPHS_FILE)
 	python3 dump-glyphs-rules.py $(GLYPHS_FILE) > rules.csv
 
-test: master_ttf/$(FINAL_FONT) regressions.txt
-	fontbakery check-profile -m FAIL -v ./gnipahs.py master_ttf/$(FINAL_FONT)
+test: $(FINAL_FONT) regressions.txt
+	fontbakery check-profile -m FAIL -v ./gnipahs.py $(FINAL_FONT)
 
-testproof: master_ttf/$(FINAL_FONT) regressions.txt
-	gnipahs master_ttf/$(FINAL_FONT) regressions.txt
+testproof: $(FINAL_FONT) regressions.txt
+	gnipahs $(FINAL_FONT) regressions.txt
 
-proof: master_ttf/$(FINAL_FONT) urdu-john.sil
+proof: $(FINAL_FONT) urdu-john.sil
 	sile urdu-john.sil
 
-fea-bits/decomposition.fea: fee/decomposition.fee
+fea-bits/decomposition.fea: fee/decomposition.fee anchors.fee
 	fee2fea -O0 $(GLYPHS_FILE) $< > $@
 
 fea-bits/connections.fea: fee/connections.fee rules.csv
