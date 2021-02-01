@@ -27,18 +27,18 @@ Feature mkmk {
   LoadPlugin qalamTools.SeparateConsecutive;
   DefineClass @behs = /.*[mif]\d+$/  and (width < 600); # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @all_above_marks 5 120 -130;
+    SeparateConsecutive @all_above_marks 5 120 65;
   } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb haydb KASRA ] 5 220 -75;
+    SeparateConsecutive [sdb ddb tdb haydb KASRA ] 5 220 45;
   } UseMarkFilteringSet [sdb ddb tdb haydb KASRA];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
   # also be separated.
   DefineClass @behs = /.*[mif]\d+$/;
   Routine SeparateConsecutiveYBDots {
-    SeparateConsecutive /.yb$/ 5 150 -150;
+    SeparateConsecutive /.yb$/ 5 150 75;
   } UseMarkFilteringSet /.yb$/;
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
@@ -51,9 +51,9 @@ Feature mkmk {
   } UseMarkFilteringSet @nuktas;
 
   Routine FixDamma {
-    Position /[mi]\d+$/ { DAMMA <yPlacement=-120 xPlacement=+100> } @shortkafgaf;
-    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> DAMMA <yPlacement=200> } /[KG]AF/;
-    Position { DAMMA <xPlacement=50> } /ALIFf|LAM[mf]/;
+    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-120 xPlacement=+100> } @shortkafgaf;
+    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> } /[KG]AF/;
+    Position { @all_above_marks <xPlacement=50> } /ALIFf|LAM[mf]/;
   } UseMarkFilteringSet @all_above_marks;
 };
 

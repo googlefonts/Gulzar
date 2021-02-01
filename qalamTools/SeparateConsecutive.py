@@ -30,11 +30,11 @@ class SeparateConsecutive:
             ]
         )
         # Filter glyphs
-        dot_carriers = [
-            g
-            for g in dot_carriers
-            if get_glyph_metrics(parser.font, g)["run"] < max_dotwidth
-        ]
+        # dot_carriers = [
+        #     g
+        #     for g in dot_carriers
+        #     if get_glyph_metrics(parser.font, g)["run"] < max_dotwidth
+        # ]
         rules = []
 
         def make_rule(i, do_initials, marks_at):
@@ -43,9 +43,12 @@ class SeparateConsecutive:
                 adjustment = (i - (j + 1)) * distance
 
                 inputs_positions.append((dot_carriers, fontFeatures.ValueRecord(0)))
-                yPlacement = int(drop // 2)
-                if j % 2 == 0:
-                    yPlacement = -int(drop // 2)
+                yPlacement = int(drop)
+                if j == i-1:
+                    yPlacement = 0
+                    adjustment = 0
+                elif (i-j+1) % 2 == 0:
+                    yPlacement = -int(drop)
                 inputs_positions.append(
                     (marks, fontFeatures.ValueRecord(adjustment, yPlacement, 0, 0))
                 )
