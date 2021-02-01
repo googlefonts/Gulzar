@@ -33,7 +33,7 @@ class SeparateConsecutive:
         dot_carriers = [
             g
             for g in dot_carriers
-            if "m" not in g or get_glyph_metrics(parser.font, g)["width"] < max_dotwidth
+            if get_glyph_metrics(parser.font, g)["run"] < max_dotwidth
         ]
         rules = []
 
@@ -43,10 +43,9 @@ class SeparateConsecutive:
                 adjustment = (i - (j + 1)) * distance
 
                 inputs_positions.append((dot_carriers, fontFeatures.ValueRecord(0)))
+                yPlacement = int(drop // 2)
                 if j % 2 == 0:
-                    yPlacement = -drop
-                else:
-                    yPlacement = 0
+                    yPlacement = -int(drop // 2)
                 inputs_positions.append(
                     (marks, fontFeatures.ValueRecord(adjustment, yPlacement, 0, 0))
                 )
