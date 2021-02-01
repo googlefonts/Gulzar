@@ -8,25 +8,34 @@
 # have different dot patterns based on their position. We will fix that
 # up in the relevant position-shaping feature.
 Feature ccmp {
-  Substitute BEu1 -> BEu1 sdb;
-  Substitute teh-ar -> TEu1 dda;
-  Substitute theh-ar -> TEu1 tda;
-  Substitute dad-ar -> SADu1 sda;
-  Substitute thal-ar -> DALu1 sda;
-  Substitute zain-ar -> REu1 sda;
-  Substitute sheen-ar -> SINu1 tda;
-  Substitute ghain-ar -> AINu1 sda;
-  Substitute feh-ar -> FEu1 sda;
-  Substitute qaf-ar -> QAFu1 dda;
-  Substitute peh-ar -> BEu1 tdb;
-  Substitute rreh-ar -> REu1 toeda;
-  Substitute tteh-ar -> BEu1 toeda;
-  Substitute zah-ar -> TOEu1 sda;
-  Substitute ddal-ar -> DALu1 toeda;
-  Substitute jim-ar -> JIMu1;
-  Substitute jeh-ar -> REu1 tda;
-  Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
-  Substitute alefMadda-ar -> ALIFu1 MADDA;
+  Routine ccmp1 {
+    Substitute BEu1 -> BEu1 sdb;
+    Substitute teh-ar -> TEu1 dda;
+    Substitute theh-ar -> TEu1 tda;
+    Substitute dad-ar -> SADu1 sda;
+    Substitute thal-ar -> DALu1 sda;
+    Substitute zain-ar -> REu1 sda;
+    Substitute sheen-ar -> SINu1 tda;
+    Substitute ghain-ar -> AINu1 sda;
+    Substitute feh-ar -> FEu1 sda;
+    Substitute qaf-ar -> QAFu1 dda;
+    Substitute peh-ar -> BEu1 tdb;
+    Substitute rreh-ar -> REu1 toeda;
+    Substitute tteh-ar -> BEu1 toeda;
+    Substitute zah-ar -> TOEu1 sda;
+    Substitute ddal-ar -> DALu1 toeda;
+    Substitute jim-ar -> JIMu1;
+    Substitute jeh-ar -> REu1 tda;
+    Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
+    Substitute alefMadda-ar -> ALIFu1 MADDA;
+    };
+
+  Routine MarkLigatures {
+    Substitute SHADDA DAMMA -> SHADDA_DAMMA;
+    Substitute SHADDA FATHA -> SHADDA_FATHA;
+    Substitute SHADDA KASRA -> SHADDA_KASRA;
+    Substitute SHADDA LONG_A -> SHADDA_LONG_A;
+  };
 };
 
 # In the fina feature, we want to achieve three things:
@@ -39,18 +48,21 @@ Feature ccmp {
 Feature fina {
 
   Routine FinaSelection {
-    Substitute [CH_YEu1 AINu1 FEu1 HAYAu1 JIMu1 tcheh-ar khah-ar SINu1] { REu1 }    -> REf2;
+    Substitute [CH_YEu1 AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] { REu1 }    -> REf2;
+    Substitute [HAYCu1 MIMu1 SADu1 SINu1 TOEu1] { REu1 }    -> REf3;
+
     Substitute JIMu1          { CH_YEu1 } -> CH_YEf2;
 
     # These are true in Qalmi but not in our design
     #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] { NUNu1 } -> NUNf2;
     #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] { noon-ar } -> NUNf2 sdi;
 
-    Substitute  [CH_YEu1 BEu1 noon-ar NUNu1 ] { HAYCu1 } -> HAYCf2;
+    # Substitute  [CH_YEu1 BEu1 noon-ar NUNu1 ] { HAYCu1 } -> HAYCf2;
 
     # We need the ignoremarks flag here because, after ccmp is done, there
     # may be some dots between e.g. BE and NUN.
   } IgnoreMarks;
+  Routine FinaJimlike {
 
   # Now we fix up the JIM-likes.
   Substitute tcheh-ar -> JIMf1 tdi;
@@ -65,23 +77,26 @@ Feature fina {
 
   # Teh Marbuta Goal
   Substitute tehMarbutagoal-ar -> HAYCf1 dda;
-
+  };
   # Because I'm lazy, SuffixingSubstitute is a custom plugin which creates
   # a substitution by filing off the last two characters of a glyph name and
   # appending the two characters on the right-side. i.e AINu1->f1 does
   # AINu1 -> AINf1
+  Routine SuffixingSubstitutes {
   LoadPlugin qalamTools.SuffixingSubstitute;
   SuffixingSubstitute [
     AINu1 ALIFu1 BARI_YEu1 BEu1 CH_YEu1 DALu1 FEu1 GAFu1 HAYAu1
     HAYCu1 KAFu1 LAMu1 MIMu1 NUNu1 QAFu1 REu1 SADu1 SINu1 TOEu1
     VAOu1 TEu1 LAM_ALIFu1
   ] -> f1;
+  };
 };
 
 # Nothing much special about the init feature, except that some glyphs
 # take the forms of other rasm glyphs (e.g. QAF looks like a FE with no dot)
 # in initial position, so we turn them into that. Also fix up JIM again.
 Feature init {
+  Routine init1 {
   Substitute noon-ar -> BEi1 sda;
   Substitute NUNu1 -> BEi1; # Noon ghunna has no dots
   Substitute CH_YEu1 -> BEi1 ddb;
@@ -97,6 +112,7 @@ Feature init {
   SuffixingSubstitute [
     AINu1 BEu1 FEu1 GAFu1 HAYAu1 KAFu1 LAMu1 MIMu1 SADu1 SINu1 TOEu1 TEu1
   ] -> i1;
+  };
 };
 
 # medi is similar, except that (1) the Qalmi patent says that a penultimate
@@ -107,6 +123,7 @@ Feature medi {
     Substitute [SINu1 SINi1 SINm1] { BEu1 } BEf1 -> BEm4;
   } IgnoreMarks;
 
+  Routine medi1 {
   SuffixingSubstitute [
     AINu1 BEu1 FEu1 GAFu1 HAYAu1 KAFu1 LAMu1 MIMu1 SADu1 SINu1 TOEu1 TEu1
   ] -> m1;
@@ -123,11 +140,14 @@ Feature medi {
   Substitute HAYCu1   -> HAYCm1 haydb;
   Substitute tehMarbutagoal-ar -> HAYCf1 dda;
   Substitute yehHamzaabove-ar -> BEm1 HAMZA_ABOVE;
+  };
 };
 
 Feature isol {
+Routine isol1 {
   Substitute yehHamzaabove-ar -> CH_YEu1 HAMZA_ABOVE;
   Substitute tehMarbutagoal-ar -> HAYCu1 dda;
   Substitute hah-ar -> JIMu1;
   Substitute noon-ar -> NUNu1 sdi;
+};
 };
