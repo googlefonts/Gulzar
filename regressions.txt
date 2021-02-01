@@ -115,8 +115,10 @@
 "محُبّت"
 "مُخالِف"
 (DotsAbove|DotsBelow){0,3} TrickyEndCharacters
+(NoDot Kasra|DotsBelow Kasra|DotsBelow){0,3} TrickyEndCharacters
 Isols DotsBelow{0,3}
 
+NoDot = م,ں,ل
 DotsBelow = ب,ی,پ,ج
 DotsAbove = ت,ن
 Kasra = 0650
