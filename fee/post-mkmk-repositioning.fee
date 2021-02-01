@@ -61,7 +61,10 @@ Feature kern {
   # Eat any spaces after isol
   Routine EatIsolSpace {
     Position /(MIM|DAL|RE)[uf]\d+/ { space <xAdvance=-50> };
-  };
+    Position /(MIM|DAL|RE)[uf]1/ { /[iu]\d+$/ <xAdvance=-200> } /m\d+$/;
+    Position /(MIM|DAL|RE)[uf]1/ { /[iu]\d+$/ <xAdvance=-150> };
+    Position /f1$/ { /[iu]\d+$/ <xAdvance=-50> };
+  } IgnoreMarks;
 
   Routine GiveChYeDotsMoreSpace {
     Position { [ddb.yb tdb.yb] <80 -100 0 0> } [CH_YEf1 CH_YEf2 NUNf1];
