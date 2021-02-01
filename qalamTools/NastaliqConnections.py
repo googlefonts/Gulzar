@@ -42,9 +42,9 @@ class NastaliqConnections:
                     if not replacement in rules[old]:
                         rules[old][replacement] = []
                     rules[old][replacement].append(left_glyph)
-                    if "KAF" in left_glyph:
-                        left_glyph2 = "G" + left_glyph[1:]
-                        rules[old][replacement].append(left_glyph2)
+                    #if "KAF" in left_glyph:
+                    #    left_glyph2 = "G" + left_glyph[1:]
+                    #    rules[old][replacement].append(left_glyph2)
 
         r = fontFeatures.Routine(name="connections", flags=0x8)
         for oldglyph in rules:
