@@ -1,9 +1,14 @@
 Include anchors.fee;
+LoadPlugin qalamTools.CopyAnchors;
+CopyAnchors SHADDA SHADDA_DAMMA;
+CopyAnchors SHADDA SHADDA_KASRA;
+CopyAnchors SHADDA SHADDA_FATHA;
+CopyAnchors SHADDA SHADDA_LONG_A;
 
 Feature mark {
   Routine DoMarkBase {
     Attach &top &_top bases;
-    Attach &centre &_centre bases;
+    Attach &inside &_inside bases;
     Attach &bottom &_bottom bases;
     Attach &comma &_comma bases;
   };
