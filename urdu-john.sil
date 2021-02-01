@@ -1,5 +1,5 @@
 \begin[papersize=a4,direction=RTL]{document}
-\define[command=leftfont]{\font[filename=master_ttf/Qalmi_Borna-Regular.ttf,direction=RTL,language=urd,size=17pt]\versefont{Borna}}
+\define[command=leftfont]{\font[filename=master_ttf/GoogleSansNastaliq-Regular.ttf,direction=RTL,language=urd,size=17pt]\versefont{Borna}}
 \define[command=rightfont]{\font[family=Noto Nastaliq Urdu,direction=RTL,language=urd,size=14pt]\versefont{Noto}}
 \define[command=versefont]{\font[family=Gentium Plus]{\process}}
 \define[command=left]{}
