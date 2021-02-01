@@ -4,6 +4,19 @@ Feature rlig {
     Substitute LAMm1 ALIFf1 -> LAM_ALIFf1;
   } IgnoreMarks;
 
+  # Override with other final forms
+
+  Routine MoreFinaSelection {
+    # These are for REf-group things which go to different final REs in their
+    # medial form to in their initial form.
+    Substitute FEm1 { REf1 } -> REf2;
+    Substitute /^[BT]Em/ { /REf\d+$/ } -> REf3;
+    Substitute GAFm1 { REf1 } -> REf4;
+  } IgnoreMarks;
+
+  Routine DivineName {
+    Substitute ALIFu1 LAMi1 LAMm1 HAYCf1 -> ALLAH;
+  } IgnoreMarks;
   # The Glyphs file will contain a set of information about selecting
   # connecting glyphs (what the Qalmi patent calls the Generic Selection
   # Table). Code in the Makefile will extract this information from the
