@@ -132,4 +132,8 @@ Feature kern {
   Routine BehJimFinesse {
     Position { /ddb|tdb/ <xPlacement=+20> } /JIMm/;
   } UseMarkFilteringSet /ddb|tdb/;
+
+  Routine HehAlifFix {
+    Position HAYCi3 { haydb <yPlacement=+165> } ALIFf1;
+  } UseMarkFilteringSet /haydb/;
 };
