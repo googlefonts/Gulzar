@@ -32,7 +32,7 @@ Feature mkmk {
   # also be separated.
   DefineClass @behs = /.*[mif]\d+$/;
   Routine SeparateConsecutiveYBDots {
-    SeparateConsecutive /.yb$/ 4 60 -125;
+    SeparateConsecutive /.yb$/ 4 80 -105;
   } UseMarkFilteringSet /.yb$/;
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
