@@ -105,11 +105,14 @@ def get_shaping_parameters(test, configuration):
 
 # This is a very generic "do something with shaping" test runner.
 # It'll be given concrete meaning later.
-def run_a_set_of_tests(ttFont, run_a_test, test_filter, generate_report):
+def run_a_set_of_tests(
+    ttFont, run_a_test, test_filter, generate_report, preparation=None
+):
     filename = Path(ttFont.reader.file.name)
     vharfbuzz = Vharfbuzz(filename)
     shaping_file_found = False
     ran_a_test = False
+    extra_data = None
     for shaping_file in shaping_basedir.glob("*.json"):
         shaping_file_found = True
         try:
@@ -124,6 +127,9 @@ def run_a_set_of_tests(ttFont, run_a_test, test_filter, generate_report):
         except KeyError:
             yield FAIL, (f"{shaping_file}: Must have an 'tests' key dict.")
             return
+
+        if preparation:
+            extra_data = preparation(ttFont, configuration)
 
         failed_tests = []
         for test in shaping_tests:
@@ -143,7 +149,9 @@ def run_a_set_of_tests(ttFont, run_a_test, test_filter, generate_report):
             if only_fonts and basename(filename) not in only_fonts:
                 continue
 
-            run_a_test(filename, vharfbuzz, test, configuration, failed_tests)
+            run_a_test(
+                filename, vharfbuzz, test, configuration, failed_tests, extra_data
+            )
             ran_a_test = True
 
         if ran_a_test:
@@ -173,7 +181,9 @@ def com_google_fonts_check_shaping_regression(ttFont):
     )
 
 
-def run_shaping_regression(filename, vharfbuzz, test, configuration, failed_tests):
+def run_shaping_regression(
+    filename, vharfbuzz, test, configuration, failed_tests, extra_data
+):
     shaping_text = test["input"]
     parameters = get_shaping_parameters(test, configuration)
     output_buf = vharfbuzz.shape(shaping_text, parameters)
@@ -227,7 +237,9 @@ def com_google_fonts_check_shaping_forbidden(ttFont):
     )
 
 
-def run_forbidden_glyph_test(filename, vharfbuzz, test, configuration, failed_tests):
+def run_forbidden_glyph_test(
+    filename, vharfbuzz, test, configuration, failed_tests, extra_data
+):
     is_stringbrewer = (
         get_from_test_with_default(test, configuration, "input_type", "string")
         == "pattern"
@@ -278,10 +290,27 @@ def com_google_fonts_check_shaping_collides(ttFont):
         lambda test, configuration: "collidoscope" in test
         or "collidoscope" in configuration,
         collides_glyph_test_results,
+        setup_glyph_collides,
     )
 
 
-def run_collides_glyph_test(filename, vharfbuzz, test, configuration, failed_tests):
+def setup_glyph_collides(ttFont, configuration):
+    filename = Path(ttFont.reader.file.name)
+    collidoscope_configuration = configuration.get("collidoscope")
+    if not collidoscope_configuration:
+        return {}
+    col = Collidoscope(
+        filename,
+        collidoscope_configuration,
+        direction=configuration.get("direction", "LTR"),
+    )
+    return {"collidoscope": col}
+
+
+def run_collides_glyph_test(
+    filename, vharfbuzz, test, configuration, failed_tests, extra_data
+):
+    col = extra_data["collidoscope"]
     is_stringbrewer = (
         get_from_test_with_default(test, configuration, "input_type", "string")
         == "pattern"
@@ -289,12 +318,6 @@ def run_collides_glyph_test(filename, vharfbuzz, test, configuration, failed_tes
     parameters = get_shaping_parameters(test, configuration)
     allowed_collisions = get_from_test_with_default(
         test, configuration, "allowedcollisions", []
-    )
-    collidoscope_configuration = test.get(
-        "collidoscope", configuration.get("collidoscope")
-    )
-    col = Collidoscope(
-        filename, collidoscope_configuration, direction=parameters["direction"] or "LTR"
     )
     if is_stringbrewer:
         sb = StringBrewer(
@@ -310,7 +333,7 @@ def run_collides_glyph_test(filename, vharfbuzz, test, configuration, failed_tes
         collisions = col.has_collisions(glyphs)
         bumps = [f"{c.glyph1}/{c.glyph2}" for c in collisions]
         bumps = [b for b in bumps if b not in allowed_collisions]
-        if collisions:
+        if bumps:
             draw = col.draw_overlaps(glyphs, collisions)
 
             failed_tests.append((shaping_text, bumps, draw, output_buf))
@@ -319,7 +342,7 @@ def run_collides_glyph_test(filename, vharfbuzz, test, configuration, failed_tes
 def collides_glyph_test_results(vharfbuzz, shaping_file, failed_tests):
     report_items = []
     seen_bumps = {}
-    msg = f"{shaping_file}: Collisions found while shaping"
+    msg = f"{shaping_file}: %i collisions found while shaping" % len(failed_tests)
     report_to_html(vharfbuzz, msg, type="header")
     for shaping_text, bumps, draw, buf in failed_tests:
         # Make HTML report here.
