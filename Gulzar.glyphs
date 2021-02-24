@@ -10,7 +10,7 @@ value = (
 );
 date = "2020-12-20 18:28:19 +0000";
 disablesNiceNames = 1;
-familyName = Qalmi_Borna;
+familyName = Gulzar;
 featurePrefixes = (
 {
 code = "include(features.fea);";
