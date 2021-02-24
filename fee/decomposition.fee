@@ -47,7 +47,7 @@ Feature ccmp {
 #     on in the previous feature.
 Feature fina {
   Routine yehfina {
-      Substitute yeh-ar -> CH_YEu1 tdb;
+      Substitute yeh-ar -> CH_YEu1 ddb;
   };
   Routine FinaSelection {
     Substitute [CH_YEu1 AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] { REu1 }    -> REf2;
