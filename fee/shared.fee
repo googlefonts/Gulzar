@@ -1,8 +1,4 @@
-# The anchors information is generated from the Glyphs source.
-# The script `dump-fee-anchors.py` loads the Glyphs file, and extracts
-# anchor information. Loading anchors.fee here just tells FEE about the
-# anchors, but does not do anything with them yet.
-Include anchors.fee;
+LoadAnchors;
 
 LoadPlugin qalamTools.CopyAnchors;
 CopyAnchors SHADDA SHADDA_DAMMA;
