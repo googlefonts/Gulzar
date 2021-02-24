@@ -63,7 +63,6 @@ Feature kern {
     Position /(MIM|DAL|RE)[uf]\d+/ { space <xAdvance=-50> };
     Position /(MIM|DAL|RE)[uf]1/ { /[iu]\d+$/ <xAdvance=-200> } /m\d+$/;
     Position /(MIM|DAL|RE)[uf]1/ { /[iu]\d+$/ <xAdvance=-150> };
-    Position /f1$/ { /[iu]\d+$/ <xAdvance=-50> };
   } IgnoreMarks;
 
   Routine GiveChYeDotsMoreSpace {
