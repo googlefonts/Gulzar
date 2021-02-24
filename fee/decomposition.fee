@@ -46,7 +46,9 @@ Feature ccmp {
 #  3) Fix up position-specific dots for JIM and its friends, which we punted
 #     on in the previous feature.
 Feature fina {
-
+  Routine yehfina {
+      Substitute yeh-ar -> CH_YEu1 tdb;
+  };
   Routine FinaSelection {
     Substitute [CH_YEu1 AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] { REu1 }    -> REf2;
     Substitute [HAYCu1 MIMu1 SADu1 SINu1 TOEu1] { REu1 }    -> REf3;
@@ -100,6 +102,7 @@ Feature init {
   Substitute noon-ar -> BEi1 sda;
   Substitute NUNu1 -> BEi1; # Noon ghunna has no dots
   Substitute CH_YEu1 -> BEi1 ddb;
+  Substitute yeh-ar -> BEi1 ddb;
   Substitute QAFu1 -> FEi1;
   Substitute JIMu1    -> JIMi1 sdb;
   Substitute HAYCu1    -> HAYCi1 haydb;
@@ -136,6 +139,7 @@ Feature medi {
   Substitute tcheh-ar -> JIMm1 tdb;
   Substitute khah-ar  -> JIMm1 sda;
   Substitute CH_YEu1  -> BEm1 ddb;
+  Substitute yeh-ar -> BEm1 ddb;
   Substitute hah-ar -> JIMm1;
   Substitute HAYCu1   -> HAYCm1 haydb;
   Substitute tehMarbutagoal-ar -> HAYCf1 dda;

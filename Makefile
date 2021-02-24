@@ -1,13 +1,16 @@
 GLYPHS_FILE=Qalmi_Borna_Simon.glyphs
 FINAL_FONT=master_ttf/BornaNastaliq-Regular.ttf
-export PYTHONPATH=.:/Users/simon/hacks/typography/fontFeatures
+export PYTHONPATH=.
 export FONTTOOLS_LOOKUP_DEBUGGING=1
 FEA_FILES=fea-bits/languagesystem.fea fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
 
 .DELETE_ON_ERROR:
 
 $(FINAL_FONT): features.fea $(GLYPHS_FILE)
-	fontmake -f --master-dir . -g $(GLYPHS_FILE) -o ttf --output-path $(FINAL_FONT)
+	fontmake -f --master-dir . -g $(GLYPHS_FILE) --no-production-names -o ttf --output-path $(FINAL_FONT)
+
+replace: features.fea
+	fonttools feaLib -o $(FINAL_FONT) features.fea $(FINAL_FONT)
 
 fix: $(FINAL_FONT)
 	gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT)
@@ -31,7 +34,7 @@ proof: $(FINAL_FONT) qa/urdu-john.sil
 	sile qa/urdu-john.sil
 
 fea-bits/languagesystem.fea:
-	echo "languagesystem DFLT dflt;" > $@
+	echo "languagesystem arab dflt;" > $@
 	echo "languagesystem arab URD;" >> $@
 
 fea-bits/decomposition.fea: fee/decomposition.fee

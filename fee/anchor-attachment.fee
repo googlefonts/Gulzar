@@ -1,4 +1,4 @@
-Include anchors.fee;
+LoadAnchors;
 LoadPlugin qalamTools.CopyAnchors;
 CopyAnchors SHADDA SHADDA_DAMMA;
 CopyAnchors SHADDA SHADDA_KASRA;

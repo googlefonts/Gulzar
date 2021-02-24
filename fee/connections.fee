@@ -26,10 +26,8 @@ Feature rlig {
   # @reachable_glyphs, which contains all the glyphs which are actually
   # *used* by the rules. (So if you create a JIMm12 but no connection
   # rule ever substitutes it in, we don't need to care about it.)
-  Routine NastaliqConnections {
-    LoadPlugin qalamTools.NastaliqConnections;
-    NastaliqConnections rules.csv;
-  };
+  LoadPlugin qalamTools.NastaliqConnections;
+  NastaliqConnections rules.csv;
 };
 
 Feature swsh {
