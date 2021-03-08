@@ -1,4 +1,4 @@
-name: Build font and mocks
+name: Build font and specimen
 
 on: [push]
 
@@ -33,9 +33,10 @@ jobs:
       run: |
         mkdir fea-bits master_ttf
         make
-        mv master_ttf/Gulzar-Regular.ttf .
     - name: Build specimen
       run: make specimen
+    - name: Rename font
+      run: mv master_ttf/Gulzar-Regular.ttf .
     - name: Archive artifacts
       uses: actions/upload-artifact@v2
       with:
