@@ -9,6 +9,7 @@ Feature mkmk {
   # XXX ideally tall kaf/gaf and short kaf/gaf should be treated differently.
   DefineClass @kafgaf = /^(KAF|GAF)/;
   DefineClass @shortkafgaf = @kafgaf and (yMax < 700);
+  DefineClass @narrowmedi = /.*m\d+$/  and (run < 250);
 
   # The SeparateConsecutive plugin performs the "knock-on" separation of
   # dots according to the Qalmi patent. It looks for a sequence of consecutive
@@ -46,12 +47,17 @@ Feature mkmk {
 
 
   Routine DropDotsOnTehGaf {
+    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } @narrowmedi @shortkafgaf;
     Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } @shortkafgaf;
     Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> } /[KG]AF/;
+    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> } @narrowmedi /[KG]AF/;
     Position { @all_above_marks <xPlacement=50> } /ALIFf|LAM[mf]/;
     Position { toeda <15 -90 0 0> } @kafgaf;
+    Position { toeda <15 -90 0 0> } @narrowmedi @kafgaf;
     Position { @above_nuktas <15 -60 0 0> } @kafgaf;
+    Position { @above_nuktas <15 -60 0 0> } @narrowmedi @kafgaf;
     Position { @other_above_marks <15 -100 0 0> } @kafgaf;
+    Position { @other_above_marks <15 -100 0 0> } @narrowmedi @kafgaf;
   } UseMarkFilteringSet @all_above_marks;
 };
 
@@ -59,9 +65,9 @@ Feature kern {
   # Eat any spaces after isol
   Routine EatIsolSpace {
     Position /(MIM|DAL|RE)[uf]\d+/ { space <xAdvance=-50> };
-    Position /(MIM|DAL|RE)[uf]1/ { /i\d+$/ <xAdvance=-200> } /m\d+$/;
-    Position /(MIM|DAL|RE)[uf]1/ { /i\d+$/ <xAdvance=-150> } /f\d+$/;
-    Position /(MIM|DAL|RE)[uf]1/ { /u\d+$/ <xAdvance=-150> } space;
+    Position /(MIM|DAL|RE)[uf]1/ { /i\d+$/ <xAdvance=-180> } /m\d+$/;
+    Position /(MIM|DAL|RE)[uf]1/ { /i\d+$/ <xAdvance=-130> } /f\d+$/;
+    Position /(MIM|DAL|RE)[uf]1/ { /u\d+$/ <xAdvance=-130> } space;
   } UseMarkFilteringSet @below_dots;
 
   Routine GiveChYeDotsMoreSpace {
