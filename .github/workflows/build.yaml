@@ -31,6 +31,7 @@ jobs:
         pip install babelfont fontmake
     - name: Build font
       run: |
+        mkdir fea-bits
         make
         mv master_ttf/Gulzar-Regular.ttf .
     - name: Build specimen
