@@ -21,6 +21,8 @@ features.fea: $(FEA_FILES)
 clean:
 	rm -f $(FINAL_FONT) features.fea rules.csv fea-bits/*
 
+specimen: specimen/specimen.pdf
+
 rules.csv: $(GLYPHS_FILE)
 	python3 dump-glyphs-rules.py $(GLYPHS_FILE) > rules.csv
 
@@ -32,6 +34,9 @@ testproof: $(FINAL_FONT) regressions.txt
 
 proof: $(FINAL_FONT) qa/urdu-john.sil
 	sile qa/urdu-john.sil
+
+specimen/specimen.pdf: $(FINAL_FONT)
+	cd specimen ; sile specimen.sil
 
 fea-bits/languagesystem.fea:
 	echo "languagesystem arab dflt;" > $@
