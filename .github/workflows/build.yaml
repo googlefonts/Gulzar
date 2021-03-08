@@ -1,0 +1,44 @@
+name: Build font and mocks
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install Linux dependencies
+      run: |
+        sudo apt-get install libcairo2-dev libfreetype6-dev
+        sudo add-apt-repository ppa:sile-typesetter/sile
+        sudo apt-get update
+        sudo apt-get install sile
+    - uses: actions/cache@v2
+      name: Cache Python dependencies
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install 'git+git://github.com/simoncozens/fontfeatures.git#egg=fontfeatures'
+        pip install babelfont fontmake
+    - name: Build font
+      run: |
+        make
+        mv master_ttf/Gulzar-Regular.ttf .
+    - name: Build specimen
+      run: make specimen
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: Gulzar
+        path: |
+          Gulzar-Regular.ttf
+          specimen/specimen.pdf
