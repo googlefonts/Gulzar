@@ -4,6 +4,13 @@ Include shared.fee;
 # this to be processed at the end, after anchor positioning is done.
 Feature mkmk {
 
+  Routine MoveFirstBariYeDotsAcross {
+    # Because of the way we've designed the bari ye with a very short top
+    # stroke, the first glyph next to a bari ye has a very long outstroke,
+    # which messes up the position of the dots.
+    Position { /.yb/ <xPlacement=+50>} /BARI_YEf/;
+  };
+
   # Dots and marks on the letter preceding a swash kaf need to be dropped
   # down to avoid collision. Dots get moved right slightly.
   # XXX ideally tall kaf/gaf and short kaf/gaf should be treated differently.
@@ -22,7 +29,7 @@ Feature mkmk {
   LoadPlugin qalamTools.SeparateConsecutive;
   DefineClass @behs = /.*[mif]\d+$/  and (run < 600); # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @all_above_marks 4 120 100;
+    SeparateConsecutive @all_above_marks 4 70 150;
   } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
@@ -33,7 +40,7 @@ Feature mkmk {
   # also be separated.
   DefineClass @behs = /.*[mif]\d+$/;
   Routine SeparateConsecutiveYBDots {
-    SeparateConsecutive /.yb$/ 4 80 -105;
+    SeparateConsecutive /.yb$/ 4 120 -105;
   } UseMarkFilteringSet /.yb$/;
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
@@ -47,8 +54,8 @@ Feature mkmk {
 
 
   Routine DropDotsOnTehGaf {
-    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } @narrowmedi @shortkafgaf;
-    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } @shortkafgaf;
+    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } @narrowmedi /[KG]AF/;
+    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } /[KG]AF/;
     Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> } /[KG]AF/;
     Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> } @narrowmedi /[KG]AF/;
     Position { @all_above_marks <xPlacement=50> } /ALIFf|LAM[mf]/;
