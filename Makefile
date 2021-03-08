@@ -1,5 +1,5 @@
-GLYPHS_FILE=Qalmi_Borna_Simon.glyphs
-FINAL_FONT=master_ttf/BornaNastaliq-Regular.ttf
+GLYPHS_FILE=Gulzar.glyphs
+FINAL_FONT=master_ttf/Gulzar-Regular.ttf
 export PYTHONPATH=.
 export FONTTOOLS_LOOKUP_DEBUGGING=1
 FEA_FILES=fea-bits/languagesystem.fea fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
