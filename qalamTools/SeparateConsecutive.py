@@ -47,8 +47,8 @@ class SeparateConsecutive:
                 if j == i-1:
                     yPlacement = 0
                     adjustment = 0
-                elif (i-j+1) % 2 == 0:
-                    yPlacement = -int(drop)
+                # elif (i-j+1) % 2 == 0:
+                    # yPlacement = -int(drop)
                 inputs_positions.append(
                     (marks, fontFeatures.ValueRecord(adjustment, yPlacement, 0, 0))
                 )

@@ -21,11 +21,11 @@ Feature mkmk {
   LoadPlugin qalamTools.SeparateConsecutive;
   DefineClass @behs = /.*[mif]\d+$/  and (run < 600); # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @all_above_marks 4 100 100;
+    SeparateConsecutive @all_above_marks 4 120 100;
   } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb haydb KASRA ] 4 120 125;
+    SeparateConsecutive [sdb ddb tdb haydb KASRA ] 4 125 125;
   } UseMarkFilteringSet [sdb ddb tdb haydb KASRA];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
