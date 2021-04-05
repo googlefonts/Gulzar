@@ -3,15 +3,21 @@ import csv
 import fontFeatures
 import warnings
 
+from fontFeatures.feeLib import FEEVerb
+
+PARSEOPTS = dict(use_helpers=True)
+
 GRAMMAR = """
-NastaliqConnections_Args = <(~';' anything)+>:filename -> (filename,)
+?start: action
+action: ESCAPED_STRING
 """
 VERBS = ["NastaliqConnections"]
 
 
-class NastaliqConnections:
-    @classmethod
-    def action(self, parser, filename):
+class NastaliqConnections(FEEVerb):
+    def action(self, args):
+        parser = self.parser
+        filename = args[0].value[1:-1]
         rules = {}
         reachable = set([])
         basedir = os.path.dirname(parser.current_file)

@@ -2,16 +2,22 @@ import fontFeatures
 from glyphtools import get_glyph_metrics
 import warnings
 
+from fontFeatures.feeLib import FEEVerb
+
+PARSEOPTS = dict(use_helpers=True)
 
 GRAMMAR = """
-SeparateConsecutive_Args = glyphselector:marks ws integer:maxlen ws integer:distance ws integer:drop -> (marks, maxlen, distance, drop)
+?start: action
+action: glyphselector integer_container integer_container integer_container
 """
+
 VERBS = ["SeparateConsecutive"]
 
 
-class SeparateConsecutive:
-    @classmethod
-    def action(cls, parser, marks, maxlen, distance, drop):
+class SeparateConsecutive(FEEVerb):
+    def action(self, args):
+        parser = self.parser
+        marks, maxlen, distance, drop = args
         if "behs" not in parser.fontfeatures.namedClasses:
             raise ValueError("Needs @behs class defined")
         risemax = 400
@@ -47,8 +53,8 @@ class SeparateConsecutive:
                 if j == i-1:
                     yPlacement = 0
                     adjustment = 0
-                # elif (i-j+1) % 2 == 0:
-                    # yPlacement = -int(drop)
+                elif (i-j+1) % 2 == 0:
+                    yPlacement = -int(drop)
                 inputs_positions.append(
                     (marks, fontFeatures.ValueRecord(adjustment, yPlacement, 0, 0))
                 )

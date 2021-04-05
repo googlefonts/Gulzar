@@ -1,18 +1,22 @@
 import fontFeatures
 import re
 
-GRAMMAR = """
-SuffixingSubstitute_Args = gsws+:l ws '->' ws? <(letter|digit)+>:suffix -> (l,suffix)
+from fontFeatures.feeLib import FEEVerb
 
-gsws = glyphselector:g ws? -> g
+PARSEOPTS = dict(use_helpers=True)
+
+GRAMMAR = """
+?start: action
+action: glyphselector+ "->" BARENAME
 """
 
-VERBS = ["SuffixingSubstitute", ""]
+VERBS = ["SuffixingSubstitute"]
 
-class SuffixingSubstitute:
-    @classmethod
-    def action(self, parser, l, suffix):
-        inputs  = [g.resolve(parser.fontfeatures, parser.font) for g in l]
+class SuffixingSubstitute(FEEVerb):
+    def action(self, args):
+        parser = self.parser
+        inputs  = [g.resolve(parser.fontfeatures, parser.font) for g in args[:-1]]
+        suffix  = args[-1]
         outputs = []
         for place in inputs:
             output = []

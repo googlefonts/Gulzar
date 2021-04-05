@@ -1,4 +1,4 @@
-Include shared.fee;
+Include "shared.fee";
 
 # And now we do some more positioning. We put this in mkmk because we want
 # this to be processed at the end, after anchor positioning is done.
@@ -8,15 +8,15 @@ Feature mkmk {
     # Because of the way we've designed the bari ye with a very short top
     # stroke, the first glyph next to a bari ye has a very long outstroke,
     # which messes up the position of the dots.
-    Position { /.yb/ <xPlacement=+50>} /BARI_YEf/;
+    Position ( /.yb/ <xPlacement=+50> ) /BARI_YEf/;
   };
 
   # Dots and marks on the letter preceding a swash kaf need to be dropped
   # down to avoid collision. Dots get moved right slightly.
   # XXX ideally tall kaf/gaf and short kaf/gaf should be treated differently.
   DefineClass @kafgaf = /^(KAF|GAF)/;
-  DefineClass @shortkafgaf = @kafgaf and (yMax < 700);
-  DefineClass @narrowmedi = /.*m\d+$/  and (run < 250);
+  DefineClass @shortkafgaf = @kafgaf & (yMax < 700);
+  DefineClass @narrowmedi = /.*m\d+$/  & (run < 250);
 
   # The SeparateConsecutive plugin performs the "knock-on" separation of
   # dots according to the Qalmi patent. It looks for a sequence of consecutive
@@ -27,7 +27,7 @@ Feature mkmk {
   # dots are not cumulative if there is an above dot in the middle, and vice
   # versa.
   LoadPlugin qalamTools.SeparateConsecutive;
-  DefineClass @behs = /.*[mif]\d+$/  and (run < 600); # any rasm can carry an accent
+  DefineClass @behs = /.*[mif]\d+$/  & (run < 600); # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
     SeparateConsecutive @all_above_marks 4 70 150;
   } UseMarkFilteringSet @all_above_marks;
@@ -46,113 +46,114 @@ Feature mkmk {
   # If the dots "poke out" the end of a narrow init glyph, we need to
   # add move space both to the dots and to the glyph itself so they
   # don't collide with preceding glyphs.
-  DefineClass @overlapping_inits = @inits and (width < xMax(tdb));
+  DefineClass @overlapping_inits = @inits & (width < 350); # xMax[tdb]
   Routine OpenSpaceAroundSmallBehs {
-    Position { @overlapping_inits <xAdvance=0> @nuktas <xPlacement=0> } BARI_YEf1; # Except here
-    Position { @overlapping_inits <xAdvance=200> @nuktas <xPlacement=50> } /.*[mif]\d+$/;
+    Position ( @overlapping_inits <xAdvance=0> @nuktas <xPlacement=0> )  BARI_YEf1; # Except here
+    Position ( @overlapping_inits <xAdvance=200> @nuktas <xPlacement=50> )  /.*[mif]\d+$/;
   } UseMarkFilteringSet @nuktas;
 
 
   Routine DropDotsOnTehGaf {
-    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } @narrowmedi /[KG]AF/;
-    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-90 xPlacement=+50> } /[KG]AF/;
-    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> } /[KG]AF/;
-    Position /[mi]\d+$/ { @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> } @narrowmedi /[KG]AF/;
-    Position { @all_above_marks <xPlacement=50> } /ALIFf|LAM[mf]/;
-    Position { toeda <15 -90 0 0> } @kafgaf;
-    Position { toeda <15 -90 0 0> } @narrowmedi @kafgaf;
-    Position { @above_nuktas <15 -60 0 0> } @kafgaf;
-    Position { @above_nuktas <15 -60 0 0> } @narrowmedi @kafgaf;
-    Position { @other_above_marks <15 -100 0 0> } @kafgaf;
-    Position { @other_above_marks <15 -100 0 0> } @narrowmedi @kafgaf;
+    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  @narrowmedi /[KG]AF/;
+    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  /[KG]AF/;
+    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> ) /[KG]AF/;
+    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> ) @narrowmedi /[KG]AF/;
+    Position ( @all_above_marks <xPlacement=50> )  /ALIFf|LAM[mf]/;
+    Position ( toeda <15 -90 0 0> )  @kafgaf;
+    Position ( toeda <15 -90 0 0> )  @narrowmedi @kafgaf;
+    Position ( @above_nuktas <15 -60 0 0> )  @kafgaf;
+    Position ( @above_nuktas <15 -60 0 0> )  @narrowmedi @kafgaf;
+    Position ( @other_above_marks <15 -100 0 0> )  @kafgaf;
+    Position ( @other_above_marks <15 -100 0 0> )  @narrowmedi @kafgaf;
   } UseMarkFilteringSet @all_above_marks;
 };
 
 Feature kern {
   # Eat any spaces after isol
   Routine EatIsolSpace {
-    Position /(MIM|DAL|RE)[uf]\d+/ { space <xAdvance=-50> };
-    Position /(MIM|DAL|RE)[uf]1/ { /i\d+$/ <xAdvance=-180> } /m\d+$/;
-    Position /(MIM|DAL|RE)[uf]1/ { /i\d+$/ <xAdvance=-130> } /f\d+$/;
-    Position /(MIM|DAL|RE)[uf]1/ { /u\d+$/ <xAdvance=-130> } space;
+    Position /(MIM|DAL|RE)[uf]\d+/ ( space <xAdvance=-50> );
+    Position /(MIM|DAL|RE)[uf]1/ ( /i\d+$/ <xAdvance=-180> ) /m\d+$/;
+    Position /(MIM|DAL|RE)[uf]1/ ( /i\d+$/ <xAdvance=-130> ) /f\d+$/;
+    Position /(MIM|DAL|RE)[uf]1/ ( /u\d+$/ <xAdvance=-130> ) space;
   } UseMarkFilteringSet @below_dots;
 
   Routine GiveChYeDotsMoreSpace {
-    Position { [ddb.yb tdb.yb] <80 -100 0 0> } [CH_YEf1 CH_YEf2 NUNf1];
-    Position { sdb.yb <75 0  0 0> } [CH_YEf1 CH_YEf2 NUNf1];
-    Position { haydb.yb <125 0  0 0> } [CH_YEf1 CH_YEf2 NUNf1];
-    Position { haydb.yb <125 0  0 0> } [CH_YEf1 CH_YEf2 NUNf1];
-    Position { /.yb|tdb|ddb$/ <20 0 0 0> } [CH_YEf1 CH_YEf2 NUNf1];
-    Position { /.yb|tdb|ddb$/ <20 0 0 0> } [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( [ddb.yb tdb.yb] <80 -100 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( sdb.yb <75 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
   } UseMarkFilteringSet /haydb.yb|sdb.yb|tdb|ddb/;
 
   Routine DropDotsBeforeVao {
-    Position { [tdb ddb] <yPlacement=-100> } VAOf1;
+    Position ( [tdb ddb] <yPlacement=-100> ) VAOf1;
   } UseMarkFilteringSet /tdb|ddb$/;
 
-  DefineClass @WideFinals = @finas and (xMin < 50);
+  DefineClass @WideFinals = @finas & (xMin < 50);
   Routine RaiseDotsAfterWideFinals {
-    Position @WideFinals @inits { [ddb tdb] <yPlacement=+150> } ;
+    Position @WideFinals @inits ( [ddb tdb] <yPlacement=+150> ) ;
   } UseMarkFilteringSet [ddb tdb];
 
   Routine KernBeHaya {
-    Position {space <xAdvance=-100> } /[BT]Ei/ /HAYA/;
+    Position (space <xAdvance=-100> ) /[BT]Ei/ /HAYA/;
   } IgnoreMarks;
 
   Routine GrossKasraAvoidanceThing {
-    Position [sdb.yb ddb.yb tdb.yb] { KASRA.yb <yPlacement=-200> } AINf1;
-    Position { KASRA.yb <yPlacement=+200> } AINf1;
-    Position [sdb.yb ddb.yb tdb.yb] { KASRA.yb <yPlacement=-400> } JIMf1;
+    Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-200> ) AINf1;
+    Position ( KASRA.yb <yPlacement=+200> ) AINf1;
+    Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
   };
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
   Routine HighTehFinesse {
-    Position @TallAndStraight /TEm/ { [tda dda] <xPlacement=-150> } @LowNotTeh;
-    Position @TallAndStraight /TEm/ { [tda dda] <xPlacement=-150> } /_YEf/;
-  #   Position @TallAndStraight @NarrowTeh { [tda dda] <yPlacement=150> } @NarrowTeh [tda dda];
-  #   Position @TallAndStraight @NarrowTeh { [tda dda] <yPlacement=300> };
+    Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) @LowNotTeh;
+    Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) /_YEf/;
+  #   Position @TallAndStraight @NarrowTeh ( [tda dda] <yPlacement=150> ) @NarrowTeh [tda dda];
+  #   Position @TallAndStraight @NarrowTeh ( [tda dda] <yPlacement=300> );
   }  UseMarkFilteringSet [dda tda];
 
   Routine TdbAinFinesse {
-    Position {tdb.yb <xPlacement=-30>} AINf1;
+    Position (tdb.yb <xPlacement=-30>) AINf1;
   } UseMarkFilteringSet [tdb.yb];
 
   Routine NunKafFinesse {
-    Position /BEi\d+$/ /[sdt]da/ <yPlacement=-50> @shortkafgaf;
+    Position /BEi\d+$/ ( /[sdt]da/ <yPlacement=-50> ) @shortkafgaf;
   };
-  DefineClass @NotTooHighStuff = (@finas|@isols) and (yMax < 600);
+
+  DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
   Routine AddSpaceAroundPointyDamma {
-    Position @NotTooHighStuff DAMMA {space <xAdvance=+50> };
+    Position @NotTooHighStuff DAMMA (space <xAdvance=+50> );
   };
 
   Routine InitChechFinesse {
-    Position /JIMi/ <xAdvance=+50> tdb <xPlacement=+50>;
+    Position ( /JIMi/ <xAdvance=+50> tdb <xPlacement=+50> );
   };
 
   Routine FeTeFinesse {
-    Position /FEi/ /TEm/ { dda <yPlacement=+50> } ;
-    Position /FEi/ dda /TEm/ { dda <yPlacement=+50> } ;
+    Position /FEi/ /TEm/ ( dda <yPlacement=+50> ) ;
+    Position /FEi/ dda /TEm/ ( dda <yPlacement=+50> ) ;
   } UseMarkFilteringSet [dda];
 
   Routine InitKasraYBFinesse { # رِیی
-    Position KASRA { @inits <xAdvance=+200> } /.yb/;
+    Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
   };
 
   Routine AddIsolDammaSpace {
-    Position [@isols @finas] DAMMA { @inits <xAdvance=+100> };
+    Position [@isols @finas] DAMMA ( @inits <xAdvance=+100> );
   } UseMarkFilteringSet [DAMMA];
 
   Routine ClearAlifMadda {
-    Position ALIFu1 MADDA { /i/ <xAdvance=+130> } @all_above_marks;
-    Position ALIFu1 MADDA { /i/ <xAdvance=+100> };
+    Position ALIFu1 MADDA ( /i/ <xAdvance=+130> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /i/ <xAdvance=+100> );
   };
 
   Routine BehJimFinesse {
-    Position { /ddb|tdb/ <xPlacement=+20> } /JIMm/;
+    Position ( /ddb|tdb/ <xPlacement=+20> ) /JIMm/;
   } UseMarkFilteringSet /ddb|tdb/;
 
   Routine HehAlifFix {
-    Position HAYCi3 { haydb <yPlacement=+165> } ALIFf1;
+    Position HAYCi3 ( haydb <yPlacement=+165> ) ALIFf1;
   } UseMarkFilteringSet /haydb/;
 };

@@ -50,16 +50,16 @@ Feature fina {
       Substitute yeh-ar -> CH_YEu1 ddb;
   };
   Routine FinaSelection {
-    Substitute [CH_YEu1 AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] { REu1 }    -> REf2;
-    Substitute [HAYCu1 MIMu1 SADu1 SINu1 TOEu1] { REu1 }    -> REf3;
+    Substitute [CH_YEu1 AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] ( REu1 )    -> REf2;
+    Substitute [HAYCu1 MIMu1 SADu1 SINu1 TOEu1] ( REu1 )    -> REf3;
 
-    Substitute JIMu1          { CH_YEu1 } -> CH_YEf2;
+    Substitute JIMu1          ( CH_YEu1 ) -> CH_YEf2;
 
     # These are true in Qalmi but not in our design
-    #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] { NUNu1 } -> NUNf2;
-    #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] { noon-ar } -> NUNf2 sdi;
+    #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] ( NUNu1 ) -> NUNf2;
+    #Substitute [CH_YEu1 BEu1 noon-ar NUNu1] ( noon-ar ) -> NUNf2 sdi;
 
-    # Substitute  [CH_YEu1 BEu1 noon-ar NUNu1 ] { HAYCu1 } -> HAYCf2;
+    # Substitute  [CH_YEu1 BEu1 noon-ar NUNu1 ] ( HAYCu1 ) -> HAYCf2;
 
     # We need the ignoremarks flag here because, after ccmp is done, there
     # may be some dots between e.g. BE and NUN.
@@ -123,7 +123,7 @@ Feature init {
 # final forms in medial position.
 Feature medi {
   Routine Exception1 {
-    Substitute [SINu1 SINi1 SINm1] { BEu1 } BEf1 -> BEm4;
+    Substitute [SINu1 SINi1 SINm1] ( BEu1 ) BEf1 -> BEm4;
   } IgnoreMarks;
 
   Routine medi1 {

@@ -9,9 +9,9 @@ Feature rlig {
   Routine MoreFinaSelection {
     # These are for REf-group things which go to different final REs in their
     # medial form to in their initial form.
-    Substitute [FEm1 BEi1 TEi1] { REf1 } -> REf2;
-    Substitute /^[BT]Em/ { /REf\d+$/ } -> REf3;
-    Substitute GAFm1 { REf1 } -> REf4;
+    Substitute [FEm1 BEi1 TEi1] ( REf1 ) -> REf2;
+    Substitute /^[BT]Em/ ( /REf\d$/ ) -> REf3;
+    Substitute GAFm1 ( REf1 ) -> REf4;
   } IgnoreMarks;
 
   Routine DivineName {
@@ -27,7 +27,7 @@ Feature rlig {
   # *used* by the rules. (So if you create a JIMm12 but no connection
   # rule ever substitutes it in, we don't need to care about it.)
   LoadPlugin qalamTools.NastaliqConnections;
-  NastaliqConnections rules.csv;
+  NastaliqConnections "rules.csv";
 };
 
 Feature swsh {
