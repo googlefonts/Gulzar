@@ -1,8 +1,8 @@
 GLYPHS_FILE=Gulzar.glyphs
 FINAL_FONT=master_ttf/Gulzar-Regular.ttf
-export PYTHONPATH=.
+export PYTHONPATH=.:/Users/simon/hacks/typography/fontFeatures/:/Users/simon/hacks/bezier-things/beziers.py:/Users/simon/hacks/typography/glyphtools/:
 export FONTTOOLS_LOOKUP_DEBUGGING=1
-FEA_FILES=fea-bits/languagesystem.fea fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
+FEA_FILES=fea-bits/languagesystem.fea fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/kerning.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
 
 .DELETE_ON_ERROR:
 
@@ -49,6 +49,9 @@ fea-bits/connections.fea: fee/connections.fee rules.csv
 	fee2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 fea-bits/anchor-attachment.fea: fee/anchor-attachment.fee fee/pre-mkmk-repositioning.fee
+	fee2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+
+fea-bits/kerning.fea: fee/kerning.fee fee/shared.fee
 	fee2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 fea-bits/post-mkmk-repositioning.fea: fee/post-mkmk-repositioning.fee fee/shared.fee
