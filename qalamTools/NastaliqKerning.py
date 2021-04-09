@@ -520,8 +520,10 @@ class NastaliqKerning(FEEVerb):
             if x in reachable_glyphs
         ]
         isols = self.parser.fontfeatures.namedClasses["isols"]
-        finas = self.parser.fontfeatures.namedClasses["finas"]
+        bariye = self.parser.fontfeatures.namedClasses["bariye"]
+        finas = [x for x in self.parser.fontfeatures.namedClasses["finas"] if x not in bariye]
         topmarks = self.parser.fontfeatures.namedClasses["all_above_marks"]
+        belowmarks = self.parser.fontfeatures.namedClasses["below_dots"]
         isols_finas = isols + [x for x in finas if right_joining(x)]
 
         binned_medis = bin_glyphs_by_metric(
@@ -548,7 +550,7 @@ class NastaliqKerning(FEEVerb):
                             self.parser.font,
                             initial,
                             end_of_previous_word,
-                            150,
+                            100,
                             (0, r),
                             (0, 0),
                             0.5,
@@ -565,38 +567,35 @@ class NastaliqKerning(FEEVerb):
 
             kerntable = compress(kerntable)
 
-            # Check if we have one already!
-            kernroutine = None
-            for value in kern_at_rise.values():
-                if hash(value._table) == hash(kerntable):
-                    kernroutine = value
-                    break
-            if not kernroutine:
-                kernroutine = fontFeatures.Routine(
-                    rules=[],
-                    name="kern_at_%i" % r,
-                    flags=0x10,
-                    markFilteringSet=topmarks,
-                )
-                for left, kerns in kerntable.items():
-                    for right, value in kerns.items():
-                        kernroutine.rules.append(
-                            fontFeatures.Positioning(
-                                [left, right],
-                                [
-                                    fontFeatures.ValueRecord(),
-                                    fontFeatures.ValueRecord(xAdvance=value),
-                                ],
-                            )
+            kernroutine = fontFeatures.Routine(
+                rules=[],
+                name="kern_at_%i" % r,
+                flags=0x10,
+                markFilteringSet=belowmarks,
+            )
+            for left, kerns in kerntable.items():
+                for right, value in kerns.items():
+                    # postcontext = []
+                    # if right in inits:
+                        # postcontext = [medis]
+                    kernroutine.rules.append(
+                        fontFeatures.Positioning(
+                            [left, right],
+                            [
+                                fontFeatures.ValueRecord(),
+                                fontFeatures.ValueRecord(xAdvance=value),
+                            ],
+                            # postcontext = postcontext
                         )
-                kernroutine = self.parser.fontfeatures.referenceRoutine(kernroutine)
-                kernroutine._table = kerntable
+                    )
+            kernroutine = self.parser.fontfeatures.referenceRoutine(kernroutine)
+            kernroutine._table = kerntable
             kern_at_rise[r] = kernroutine
             return kernroutine
 
         routines = []
         rises = []
-        for i in range(0, 5):
+        for i in range(5):
             postcontext_options = [binned_finas] + [binned_medis] * i
             target = [isols_finas, inits]
             all_options = product(*postcontext_options)
@@ -609,14 +608,13 @@ class NastaliqKerning(FEEVerb):
                 if not word_tail_rise in rises:
                     rises.append(word_tail_rise)
         warnings.warn("To do: %s" % list(sorted(rises)))
-
         # Precompute the kern tables
         # for rise in list(sorted(rises)):
         # generate_kern_table_for_rise(rise)
         for i in rises:
             generate_kern_table_for_rise(i)
 
-        for i in range(0, 5):
+        for i in range(5):
             postcontext_options = [binned_finas] + [binned_medis] * i
             target = [isols_finas, inits]
             all_options = product(*postcontext_options)
@@ -638,6 +636,7 @@ class NastaliqKerning(FEEVerb):
                         flags=0x08,
                     )
                 )
+        # also kern isols to isols
         return [fontFeatures.Routine(rules=routines, name="NastaliqKerning")]
 
     def determine_kern(
@@ -713,9 +712,9 @@ class NastaliqKerning(FEEVerb):
                 break
             iterations = iterations + 1
             kern = kern + (targetdistance - min_distance)
-
+        kern = kern -  metrics1["rsb"]
         if maxtuck:
-            kern = max(kern, -(metrics1["width"] * maxtuck))
+            kern = max(kern, -(metrics1["xMax"] * (1+maxtuck)) + metrics1["rsb"])
         else:
-            kern = max(kern, -(metrics1["width"]))
+            kern = max(kern, -(metrics1["xMax"]) + metrics1["rsb"])
         return int(kern)
