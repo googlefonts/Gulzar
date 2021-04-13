@@ -3,3 +3,4 @@ fontMake
 git+git://github.com/simoncozens/fontfeatures.git#egg=fontfeatures
 git+git://github.com/simoncozens/babelfont.git#egg=babelfont
 bidict
+tqdm
