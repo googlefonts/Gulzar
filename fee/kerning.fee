@@ -5,3 +5,7 @@ Include "shared.fee";
 Feature kern {
 	NastaliqKerning 150 50%;
 };
+
+Feature ss01 {
+	NastaliqKerning 150 50% spacekern;
+};
