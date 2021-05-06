@@ -8,6 +8,7 @@ FEA_FILES=fea-bits/languagesystem.fea fea-bits/decomposition.fea fea-bits/connec
 
 $(FINAL_FONT): features.fea $(GLYPHS_FILE)
 	fontmake -f --master-dir . -g $(GLYPHS_FILE) --no-production-names -o ttf --output-path $(FINAL_FONT)
+	fonttools feaLib -o $(FINAL_FONT) features.fea $(FINAL_FONT)
 
 replace: features.fea
 	fonttools feaLib -o $(FINAL_FONT) features.fea $(FINAL_FONT)
