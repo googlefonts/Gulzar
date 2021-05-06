@@ -49,9 +49,56 @@
 \vfill
 \hbox{}\par
 
+\script[src=packages/frametricks]
+\script[src=packages/linespacing]
+\makecolumns[columns=2]
+\begin{center}
+دیکھے گا جو تجھ رو کو سو حیران رہے گا\par
+وابستہ ترے مو کا پریشان رہے گا\par
+وعدہ تو کیا اس سے دم صبح کا لیکن \par
+اس دم تئیں مجھ میں بھی اگر جان رہے گا \par
+منعم نے بنا ظلم کی رکھ گھر تو بنایا \par
+پر آپ کوئی رات ہی مہمان رہے گا \par
+چھوٹوں کہیں ایذا سے لگا ایک ہی جلاد \par
+تا حشر مرے سر پہ یہ احسان رہے گا \par
+چمٹے رہیں گے دشت محبت میں سر و تیغ \par
+محشر تئیں خالی نہ یہ میدان رہے گا  \par
+جانے کا نہیں شور سخن کا مرے ہرگز \par
+تا حشر جہاں میں مرا دیوان رہے گا \par
+دل دینے کی ایسی حرکت ان نے نہیں کی \par
+جب تک جئے گا میرؔ پشیمان رہے گا 
+\end{center}
+\eject
+\begin{center}
+\par
+\thisframeLTR
 \set[parameter=shaper.variablespaces,value=true]
-\set[parameter=shaper.spacestretchfactor,reset=true]
+\set[parameter=shaper.spaceenlargementfactor,value=2]
+\set[parameter=shaper.spaceshrinkfactor,value=1]
+Whoever has gazed at your face even once will live in perpetual wonder,\par
+Whoever has become attached to your long hair will remain distracted, deranged, forever.\par
+\medskip
+True, I did make her a promise to return with the first breath of morning-\par
+well, if breath remains in my body too until that time.
+\medskip
+The rich man made a house on the foundation of tyranny\par
+but like a guest he won't stay there longer than a night or two.
+\medskip
+Executioner, please! Deliver just one blow and release me from all distress and pain.\par
+I will humbly acknowledge my debt to you until doomsday.
+\medskip
+Head and sword will cling to each other always in the vast arena of love.\par
+This battlefield won’t ever by empty until the crack of doom.
+\medskip
+The tumult raised by my poetry will never abate.\par
+My divan of poetry will abide in the world until the day of reckoning.
+\end{center}
+\vfill
+
+\set[parameter=shaper.variablespaces,value=true]
+\set[parameter=shaper.spaceenlargementfactor,reset=true]
 \set[parameter=shaper.spaceshrinkfactor,reset=true]
+\set[parameter=shaper.spacestretchfactor,reset=true]
 \set[parameter=typesetter.parfillskip,reset=true]
 \skip[height=150pt]
 \begin{center}
