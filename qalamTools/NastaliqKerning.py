@@ -21,8 +21,8 @@ spacekern: "spacekern"
 """
 VERBS = ["NastaliqKerning"]
 
-accuracy1 = 4
-rise_quantization = 150
+accuracy1 = 4 
+rise_quantization = 100
 kern_quantization = 20
 maximum_rise = 450
 
