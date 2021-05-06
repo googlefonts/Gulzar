@@ -1,7 +1,7 @@
 {
 .appVersion = "1300";
 DisplayStrings = (
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefighijkvlmnopqrstuvwxyz
+Hello
 );
 customParameters = (
 {
