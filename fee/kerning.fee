@@ -3,9 +3,9 @@ Include "shared.fee";
 
 
 Feature kern {
-	NastaliqKerning 100 60%;
+	NastaliqKerning 150 50%;
 };
 
 Feature ss01 {
-	NastaliqKerning 100 60% spacekern;
+	NastaliqKerning 150 50% spacekern;
 };
