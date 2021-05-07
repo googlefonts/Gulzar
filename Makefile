@@ -39,9 +39,8 @@ proof: $(FINAL_FONT) qa/urdu-john.sil
 specimen/specimen.pdf: $(FINAL_FONT) specimen/specimen.sil
 	cd specimen ; sile specimen.sil
 
-fea-bits/languagesystem.fea:
-	echo "languagesystem arab dflt;" > $@
-	echo "languagesystem arab URD;" >> $@
+fea-bits/languagesystem.fea: fee/languages.fee
+	fee2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 fea-bits/decomposition.fea: fee/decomposition.fee
 	fee2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@

@@ -21,9 +21,9 @@ jobs:
       name: Cache Python dependencies
       with:
         path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        key: ${{ runner.os }}-pip-v2-${{ hashFiles('**/requirements.txt') }}
         restore-keys: |
-          ${{ runner.os }}-pip-
+          ${{ runner.os }}-pip-v2-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
