@@ -30,6 +30,8 @@ bezier_cache = {}
 metrics_cache = {}
 distance_cache = {}
 
+spaceglyph = "space.urdu"
+
 reachable_glyphs = [
     "AINf1",
     "AINi1",
@@ -553,7 +555,7 @@ class NastaliqKerning(FEEVerb):
                 for end_of_previous_word in my_isols_finas:
                     kerntable[end_of_previous_word] = {}
                     for initial in sorted(inits):
-                        if initial == "space":
+                        if initial == spaceglyph:
                             continue
                         kern = self.determine_kern(
                             self.parser.font,
@@ -591,7 +593,7 @@ class NastaliqKerning(FEEVerb):
                     if right in inits:
                         precontext = [medis]
                     else:
-                        precontext = [ isols_finas+["space"] ]
+                        precontext = [ isols_finas+[spaceglyph] ]
                     postcontext = [medis+finas]
                     if not spacekern:
                         kernroutine.rules.append(
@@ -607,7 +609,7 @@ class NastaliqKerning(FEEVerb):
                         # Also add space kerning rule
                         kernroutine.rules.append(
                             fontFeatures.Positioning(
-                                [left, ["space"], right],
+                                [left, [spaceglyph], right],
                                 [
                                     fontFeatures.ValueRecord(),
                                     fontFeatures.ValueRecord(),
@@ -650,7 +652,7 @@ class NastaliqKerning(FEEVerb):
                 precontext = []
                 postcontext = [medis+finas]
                 if spacekern:
-                    targets = [lefts, ["space"], rights]
+                    targets = [lefts, [spaceglyph], rights]
                     lookups = [[kernroutine], None, None]
                 else:
                     targets = [lefts, rights]
@@ -672,7 +674,7 @@ class NastaliqKerning(FEEVerb):
         routines = []
         rises = []
         if spacekern:
-            target = [isols_finas, ["space"], inits]
+            target = [isols_finas, [spaceglyph], inits]
         else:
             target = [isols_finas, inits]
         for i in range(5):

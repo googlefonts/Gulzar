@@ -73,7 +73,7 @@
 \par
 \thisframeLTR
 \set[parameter=shaper.variablespaces,value=true]
-\set[parameter=shaper.spaceenlargementfactor,value=2]
+\set[parameter=shaper.spaceenlargementfactor,value=1]
 \set[parameter=shaper.spaceshrinkfactor,value=1]
 Whoever has gazed at your face even once will live in perpetual wonder,\par
 Whoever has become attached to your long hair will remain distracted, deranged, forever.\par
