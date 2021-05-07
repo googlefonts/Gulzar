@@ -1,0 +1,4 @@
+Feature ccmp {
+        Substitute space -> space.urdu <<arab/dflt arab/URD>>;
+        Substitute space -> space.latin <<latn/dflt>>;
+} ccmp;

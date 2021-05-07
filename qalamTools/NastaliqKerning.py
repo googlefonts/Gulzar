@@ -21,14 +21,16 @@ spacekern: "spacekern"
 """
 VERBS = ["NastaliqKerning"]
 
-accuracy1 = 4 
+accuracy1 = 4
 rise_quantization = 100
 kern_quantization = 20
-maximum_rise = 450
+maximum_rise = 400
 
 bezier_cache = {}
 metrics_cache = {}
 distance_cache = {}
+
+spaceglyph = "space.urdu"
 
 reachable_glyphs = [
     "AINf1",
@@ -543,18 +545,17 @@ class NastaliqKerning(FEEVerb):
 
         kern_at_rise = {}
 
-        def generate_kern_table_for_rise(r):
+        def generate_kern_table_for_rise(r, filt, name):
             r = quantize(r, rise_quantization)
-            if r in kern_at_rise:
-                return kern_at_rise[r]
             # warnings.warn("Computing table for rise %i" % r)
             # kerntable = Hashabledict({ ("ALIFf1",): {("ALIFf1",): -50 }})
             kerntable = {}
-            with tqdm.tqdm(total=len(inits) * len(isols_finas), miniters=30) as pbar:
-                for end_of_previous_word in isols_finas:
+            my_isols_finas = list(filter(filt, isols_finas))
+            with tqdm.tqdm(total=len(inits) * len(my_isols_finas), miniters=30) as pbar:
+                for end_of_previous_word in my_isols_finas:
                     kerntable[end_of_previous_word] = {}
                     for initial in sorted(inits):
-                        if initial == "space":
+                        if initial == spaceglyph:
                             continue
                         kern = self.determine_kern(
                             self.parser.font,
@@ -579,7 +580,7 @@ class NastaliqKerning(FEEVerb):
 
             kernroutine = fontFeatures.Routine(
                 rules=[],
-                name="kern_at_%i" % r,
+                name="kern_at_%i_%s" % (r,name),
             )
             if spacekern:
                 kernroutine.name = kernroutine.name+"_space"
@@ -592,7 +593,7 @@ class NastaliqKerning(FEEVerb):
                     if right in inits:
                         precontext = [medis]
                     else:
-                        precontext = [ isols_finas+["space"] ]
+                        precontext = [ isols_finas+[spaceglyph] ]
                     postcontext = [medis+finas]
                     if not spacekern:
                         kernroutine.rules.append(
@@ -608,7 +609,7 @@ class NastaliqKerning(FEEVerb):
                         # Also add space kerning rule
                         kernroutine.rules.append(
                             fontFeatures.Positioning(
-                                [left, ["space"], right],
+                                [left, [spaceglyph], right],
                                 [
                                     fontFeatures.ValueRecord(),
                                     fontFeatures.ValueRecord(),
@@ -619,8 +620,12 @@ class NastaliqKerning(FEEVerb):
 
             kernroutine = self.parser.fontfeatures.referenceRoutine(kernroutine)
             kernroutine._table = kerntable
+            return (kernroutine, kerntable)
 
 
+        def generate_dispatch_table_for_rise(r):
+            if r in kern_at_rise:
+                return kern_at_rise[r]
             dispatch_routine = fontFeatures.Routine(
                 rules=[],
                 name="kern_at_%i_dispatch" % r,
@@ -630,57 +635,46 @@ class NastaliqKerning(FEEVerb):
             dispatch_routine.flags=0x10
             dispatch_routine.markFilteringSet=belowmarks
 
-            # Dispatch rule 1
-            lefts =  list(chain(*kerntable.keys()))
-            rights = list(set(chain(*[r for r in kerns.keys() for kerns in kerntable.values()])))
-            rights = [r for r in rights if r not in isols]
-            # precontext = [medis]
-            precontext = []
-            postcontext = [medis+finas]
-            if spacekern:
-                targets = [lefts, ["space"], rights]
-                lookups = [[kernroutine], None, None]
-            else:
-                targets = [lefts, rights]
-                lookups = [[kernroutine], None]
+            sharding_table = [
+                (lambda name: "A" in name, "has_a"),
+                (lambda name: "A" not in name, "no_a"),
+            ]
 
-            if lefts:
-                dispatch_routine.rules.append(fontFeatures.Chaining(
-                    targets,
-                    precontext = precontext,
-                    postcontext = postcontext,
-                    lookups = lookups
-                ))
+            for filt,name in sharding_table:
+                kernroutine, kerntable = generate_kern_table_for_rise(r, filt,name)
+                lefts =  list(chain(*kerntable.keys()))
+                rights = []
+                for kerns in kerntable.values():
+                    rights.extend(kerns.keys())
+                rights = list(set(chain(*rights)))
+                rights = [r for r in rights if r not in isols]
+                # precontext = [medis]
+                precontext = []
+                postcontext = [medis+finas]
+                if spacekern:
+                    targets = [lefts, [spaceglyph], rights]
+                    lookups = [[kernroutine], None, None]
+                else:
+                    targets = [lefts, rights]
+                    lookups = [[kernroutine], None]
 
-            # Dispatch rule 2
-            rights = list(set(chain(*[r for r in kerns.keys() for kerns in kerntable.values()])))
-            lefts =  list(chain(*kerntable.keys()))
-            rights = [r for r in rights if r not in isols]
-            # precontext = [ isols_finas+["space"] ]
-            precontext = []
-            postcontext = [medis+finas]
-            if spacekern:
-                targets = [lefts, ["space"], rights]
-                lookups = [[kernroutine], None, None]
-            else:
-                targets = [lefts, rights]
-                lookups = [[kernroutine], None]
+                if lefts:
+                    dispatch_routine.rules.append(fontFeatures.Chaining(
+                        targets,
+                        precontext = precontext,
+                        postcontext = postcontext,
+                        lookups = lookups
+                    ))
 
-            if lefts:
-                dispatch_routine.rules.append(fontFeatures.Chaining(
-                    targets,
-                    precontext = precontext,
-                    postcontext = postcontext,
-                    lookups = lookups
-                ))
-            kern_at_rise[r] = dispatch_routine
+
             dispatch_routine = self.parser.fontfeatures.referenceRoutine(dispatch_routine)
+            kern_at_rise[r] = dispatch_routine
             return dispatch_routine
 
         routines = []
         rises = []
         if spacekern:
-            target = [isols_finas, ["space"], inits]
+            target = [isols_finas, [spaceglyph], inits]
         else:
             target = [isols_finas, inits]
         for i in range(5):
@@ -697,8 +691,8 @@ class NastaliqKerning(FEEVerb):
         warnings.warn("To do: %s" % list(sorted(rises)))
         # pool = Pool()
         # pool.map(generate_kern_table_for_rise, rises)
-        for i in rises:
-            generate_kern_table_for_rise(i)
+        # for i in rises:
+            # generate_dispatch_table_for_rise(i)
 
         for i in range(5):
             postcontext_options = [binned_finas] + [binned_medis] * i
@@ -714,7 +708,7 @@ class NastaliqKerning(FEEVerb):
                 # XXX Flags
                 postcontext = list(reversed([x[0] for x in postcontext_plus_rise]))
                 # add space kerning rule
-                lookups = [[generate_kern_table_for_rise(word_tail_rise)]] + [None] * (len(target)-1)
+                lookups = [[generate_dispatch_table_for_rise(word_tail_rise)]] + [None] * (len(target)-1)
                 routines.append(
                     fontFeatures.Chaining(
                         target,
@@ -723,7 +717,7 @@ class NastaliqKerning(FEEVerb):
                         flags=0x08,
                     )
                 )
-        # also kern isols to isols
+
         routine = fontFeatures.Routine(rules=routines, name="NastaliqKerning")
         if spacekern:
             routine.name = routine.name + "_space"
