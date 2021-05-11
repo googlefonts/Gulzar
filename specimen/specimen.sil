@@ -137,6 +137,9 @@ My divan of poetry will abide in the world until the day of reckoning.
 
 \hbox{}\par
 \thisframeLTR
+\set[parameter=shaper.spaceenlargementfactor,value=1]
+\set[parameter=shaper.spaceshrinkfactor,value=0.1]
+\set[parameter=shaper.spacestretchfactor,value=0.1]
 
 
 Mirza Asadullah Baig Khan (Urdu: مرزا اسد اللہ بیگ خان‎; 27 December 1797 – 15 February 1869),[1] also known by the pen names of Ghalib (Urdu: غالب‎, romanized: Ġālib, lit. 'dominant') and Asad (Urdu: اسد‎, romanized: Asad, lit. 'lion'), was an Indian poet.[2] His honorific was Dabir-ul-Mulk, Najm-ud-Daula. During his lifetime, the already declining Mughal empire was eclipsed and displaced by the Colonial British Raj and finally deposed following the defeat of the First Indian War of Independence (Sepoy Mutiny) of 1857; these are described through his work.
