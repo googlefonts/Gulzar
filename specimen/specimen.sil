@@ -136,7 +136,7 @@ My divan of poetry will abide in the world until the day of reckoning.
 \eject
 
 \hbox{}\par
-\thisframeLTR
+\thisframeLTR\bidi-on
 \set[parameter=shaper.spaceenlargementfactor,value=1]
 \set[parameter=shaper.spaceshrinkfactor,value=0.1]
 \set[parameter=shaper.spacestretchfactor,value=0.1]
@@ -164,6 +164,16 @@ Galib tüm bu süreçleri şiirlerine yansıtmıştır.[2] Galib daha sonra bir�
 Se il complesso delle sue opere in lingua urdu risultò, in quantità, minore rispetto a quella in lingua persiana, si può valutare spesso migliore dal punto di vista della qualità e della originalità.
 
 سید احمد خاں کے بڑے بھائی سید محمد خاں 31ذی الحجہ 1621ھ مطابق 31دسمبر، 1854ءکو دہلی میں فوت ہوئے تھے لہٰذا سید احمد خاں کے نام غالب کایہ فارسی خط 31دسمبر، 1854ء سے قبل لکھا گیا ہوگا۔ سید احمد خاں مرزا غالب سے غیر معمولی عقیدت رکھتے تھے۔ سید صاحب کی کتاب آثار الصنادید کے 7481ءکے پہلے ایڈیشن کے چوتھے باب میں ذکر بلبل نوایان سواد جنت آباد حضرت شاہ جہاں آباد کے عنوان کے تحت دہلی کے جن متعدد شاعروں کا حال ملتا ہے ان میں سر فہرست خاصی مدح و تعریف کے ساتھ غالب کے مفصل احوال اور ادبی آثار کو جگہ دی گئی ہے۔
+
+\bigskip
+
+% The quotation marks below are coming out wrong, but it's possible that SILE is
+% not correctly applying bidi mirroring.
+کوما، “سوالیا نشان” فجائیہ نشان! فل اسٹاپ۔ سوالیہ نشان؟ لاطینی سوالیہ نشان? اعداد 123456789 اردو میں۔
+
+\breakframevertical\thisframeLTR\hbox{}\bigskip
+
+A test of some Latin numbers (figures), and “punctuation”: 123,456,789. Is that right?!
 
 
 

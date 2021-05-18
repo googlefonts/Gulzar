@@ -137,8 +137,8 @@ Feature kern {
   } UseMarkFilteringSet [DAMMA];
 
   Routine ClearAlifMadda {
-    Position ALIFu1 MADDA ( /i/ <xAdvance=+130> ) @all_above_marks;
-    Position ALIFu1 MADDA ( /i/ <xAdvance=+100> );
+    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+130> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+100> );
   };
 
   Routine BehJimFinesse {
