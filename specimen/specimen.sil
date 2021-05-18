@@ -169,11 +169,11 @@ Se il complesso delle sue opere in lingua urdu risultò, in quantità, minore ri
 
 % The quotation marks below are coming out wrong, but it's possible that SILE is
 % not correctly applying bidi mirroring.
-کوما، “سوالیا نشان” فجائیہ نشان! فل اسٹاپ۔ سوالیہ نشان؟ لاطینی سوالیہ نشان? اعداد 123456789 اردو میں۔
+کوما، “سوالیا نشان” فجائیہ نشان! فل - اسٹاپ۔ سوالیہ نشان؟ لاطینی سوالیہ نشان? اعداد 123456789 اردو میں۔
 
 \breakframevertical\thisframeLTR\hbox{}\bigskip
 
-A test of some Latin numbers (figures), and “punctuation”: 123,456,789. Is that right?!
+A test of some Latin numbers (figures), and - “punctuation”: 123,456,789. Is that right?!
 
 
 
