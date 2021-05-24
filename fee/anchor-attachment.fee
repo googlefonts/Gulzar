@@ -5,6 +5,9 @@ CopyAnchors SHADDA SHADDA_KASRA;
 CopyAnchors SHADDA SHADDA_FATHA;
 CopyAnchors SHADDA SHADDA_LONG_A;
 
+LoadPlugin qalamTools.QuantizeAnchors;
+QuantizeAnchors 10;
+
 Feature mark {
   Routine DoMarkBase {
     Attach &top &_top bases;
@@ -19,6 +22,8 @@ Feature curs {
 };
 
 Include "fee/pre-mkmk-repositioning.fee";
+
+QuantizeAnchors 10;
 
 Feature mkmk {
   Routine DoMarkAttachment {
