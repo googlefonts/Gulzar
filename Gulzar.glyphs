@@ -20901,6 +20901,17 @@ width = 120;
 unicode = 0020;
 },
 {
+glyphname = nbspace;
+lastChange = "2021-06-04 20:57:54 +0000";
+layers = (
+{
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 120;
+}
+);
+unicode = 00A0;
+},
+{
 color = 3;
 glyphname = space.latin;
 lastChange = "2021-05-17 10:07:48 +0000";
