@@ -3,6 +3,7 @@ FINAL_FONT=master_ttf/Gulzar-Regular.ttf
 export PYTHONPATH=.:/Users/simon/hacks/typography/fontFeatures/:/Users/simon/hacks/bezier-things/beziers.py:/Users/simon/hacks/typography/glyphtools/:
 export FONTTOOLS_LOOKUP_DEBUGGING=1
 FEA_FILES=fea-bits/languagesystem.fea fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/kerning.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
+RELEASE_ARG=--dev
 
 .DELETE_ON_ERROR:
 
@@ -13,8 +14,10 @@ $(FINAL_FONT): features.fea $(GLYPHS_FILE)
 replace: features.fea
 	fonttools feaLib -o $(FINAL_FONT) features.fea $(FINAL_FONT)
 
-fix: $(FINAL_FONT)
+release: $(FINAL_FONT)
 	gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT)
+	font-v write --sha1 $(RELEASE_ARG) $(FINAL_FONT)
+	ttf-rename-glyphs $(FINAL_FONT) $(FINAL_FONT)
 
 features.fea: $(FEA_FILES)
 	cat $^ > features.fea
@@ -28,6 +31,9 @@ rules.csv: $(GLYPHS_FILE)
 	python3 dump-glyphs-rules.py $(GLYPHS_FILE) > rules.csv
 
 test: $(FINAL_FONT)
+	fontbakery check-googlefonts --html fontbakery-report.html $(FINAL_FONT)
+
+test-shaping: $(FINAL_FONT)
 	fontbakery check-profile qa/fontbakery-shaping.py $(FINAL_FONT)
 
 testproof: $(FINAL_FONT) regressions.txt
