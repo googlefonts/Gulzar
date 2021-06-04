@@ -53,20 +53,12 @@ ascender = 800;
 capHeight = 700;
 customParameters = (
 {
-name = autocursiveattachment_distbelow;
-value = 39.50107;
+name = winAscent;
+value = 1424;
 },
 {
-name = autocursiveattachment_distabove;
-value = 29.2279;
-},
-{
-name = autocursiveattachment_bottomTangent;
-value = 0.42339;
-},
-{
-name = autocursiveattachment_topTangent;
-value = 0.17411;
+name = winDescent;
+value = 1333;
 }
 );
 descender = -800;
