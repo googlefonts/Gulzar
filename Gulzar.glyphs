@@ -34,6 +34,10 @@ name = tnum;
 {
 code = "sub zero.osf by zero.lf;\012sub one.osf by one.lf;\012sub two.osf by two.lf;\012sub three.osf by three.lf;\012sub four.osf by four.lf;\012sub five.osf by five.lf;\012sub six.osf by six.lf;\012sub seven.osf by seven.lf;\012sub eight.osf by eight.lf;\012sub nine.osf by nine.lf;\012\012sub zero.tosf by zero.tf;\012sub one.tosf by one.tf;\012sub two.tosf by two.tf;\012sub three.tosf by three.tf;\012sub four.tosf by four.tf;\012sub five.tosf by five.tf;\012sub six.tosf by six.tf;\012sub seven.tosf by seven.tf;\012sub eight.tosf by eight.tf;\012sub nine.tosf by nine.tf;\012\012";
 name = lnum;
+},
+{
+code = "sub f b by f_b;\012sub f f b by f_f_b;\012sub f f by f_f;\012sub f h by f_h;\012sub f f h by f_f_h;\012sub f i by fi;\012sub f f i by f_f_i;\012sub f j by f_j;\012sub f f j by f_f_j;\012sub f k by f_k;\012sub f f k by f_f_k;\012sub f l by fl;\012sub f f l by f_f_l;";
+name = liga;
 }
 );
 fontMaster = (
@@ -2485,6 +2489,27 @@ width = 710;
 }
 );
 unicode = 01E6;
+},
+{
+color = 8;
+glyphname = Gdotabove;
+lastChange = "2021-06-03 13:54:42 +0000";
+layers = (
+{
+components = (
+{
+name = G;
+},
+{
+name = dotaccentcomb;
+transform = "{1, 0, 0, 1, 250, 200}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 710;
+}
+);
+unicode = 0120;
 },
 {
 color = 3;
@@ -8706,6 +8731,27 @@ width = 475;
 }
 );
 unicode = 01E7;
+},
+{
+color = 8;
+glyphname = gdotabove;
+lastChange = "2021-06-03 13:55:21 +0000";
+layers = (
+{
+components = (
+{
+name = g;
+},
+{
+name = dotaccentcomb;
+transform = "{1, 0, 0, 1, 81, 0}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 475;
+}
+);
+unicode = 0121;
 },
 {
 color = 3;
@@ -24046,8 +24092,8 @@ width = 471;
 unicode = 005E;
 },
 {
-glyphname = micro;
-lastChange = "2021-06-02 09:48:38 +0000";
+glyphname = micron;
+lastChange = "2021-06-04 09:41:15 +0000";
 layers = (
 {
 anchors = (
@@ -25532,6 +25578,58 @@ width = 4619;
 );
 note = uniFDFD;
 unicode = FDFD;
+},
+{
+color = 8;
+glyphname = lefthalfring;
+lastChange = "2021-06-03 14:06:50 +0000";
+layers = (
+{
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"184 464 LINE",
+"136 464 OFFCURVE",
+"98 487 OFFCURVE",
+"98 550 CURVE SMOOTH",
+"98 612 OFFCURVE",
+"136 633 OFFCURVE",
+"184 633 CURVE",
+"184 675 LINE",
+"100 675 OFFCURVE",
+"35 627 OFFCURVE",
+"35 549 CURVE SMOOTH",
+"35 470 OFFCURVE",
+"89 423 OFFCURVE",
+"184 423 CURVE"
+);
+}
+);
+width = 219;
+}
+);
+unicode = 02BF;
+},
+{
+color = 8;
+glyphname = righthalfring;
+lastChange = "2021-06-03 14:07:48 +0000";
+layers = (
+{
+components = (
+{
+alignment = -1;
+name = lefthalfring;
+transform = "{-1, 0, 0, -1, 219, 1098}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 219;
+}
+);
+unicode = 02BE;
 },
 {
 color = 1;
@@ -89834,100 +89932,6 @@ nodes = (
 width = 600;
 }
 );
-},
-{
-color = 8;
-glyphname = Gdotabove;
-lastChange = "2021-06-03 13:54:42 +0000";
-layers = (
-{
-components = (
-{
-name = G;
-},
-{
-name = dotaccentcomb;
-transform = "{1, 0, 0, 1, 250, 200}";
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 710;
-}
-);
-unicode = 0120;
-},
-{
-color = 8;
-glyphname = gdotabove;
-lastChange = "2021-06-03 13:55:21 +0000";
-layers = (
-{
-components = (
-{
-name = g;
-},
-{
-name = dotaccentcomb;
-transform = "{1, 0, 0, 1, 81, 0}";
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 475;
-}
-);
-unicode = 0121;
-},
-{
-color = 8;
-glyphname = lefthalfring;
-lastChange = "2021-06-03 14:06:50 +0000";
-layers = (
-{
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"184 464 LINE",
-"136 464 OFFCURVE",
-"98 487 OFFCURVE",
-"98 550 CURVE SMOOTH",
-"98 612 OFFCURVE",
-"136 633 OFFCURVE",
-"184 633 CURVE",
-"184 675 LINE",
-"100 675 OFFCURVE",
-"35 627 OFFCURVE",
-"35 549 CURVE SMOOTH",
-"35 470 OFFCURVE",
-"89 423 OFFCURVE",
-"184 423 CURVE"
-);
-}
-);
-width = 219;
-}
-);
-unicode = 02BF;
-},
-{
-color = 8;
-glyphname = righthalfring;
-lastChange = "2021-06-03 14:07:48 +0000";
-layers = (
-{
-components = (
-{
-alignment = -1;
-name = lefthalfring;
-transform = "{-1, 0, 0, -1, 219, 1098}";
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 219;
-}
-);
-unicode = 02BE;
 }
 );
 instances = (
