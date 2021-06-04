@@ -24712,6 +24712,21 @@ width = 640;
 unicode = 00A5;
 },
 {
+glyphname = divisionslash;
+layers = (
+{
+components = (
+{
+name = slash;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 395;
+}
+);
+unicode = 2215;
+},
+{
 glyphname = plus;
 lastChange = "2021-06-02 10:00:15 +0000";
 layers = (
