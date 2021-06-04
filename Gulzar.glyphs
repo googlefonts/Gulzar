@@ -88604,6 +88604,7 @@ width = 196;
 },
 {
 glyphname = graveaccent;
+lastChange = "2021-06-04 21:19:26 +0000";
 layers = (
 {
 components = (
@@ -88615,6 +88616,7 @@ layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 width = 313;
 }
 );
+unicode = 0060;
 },
 {
 color = 1;
