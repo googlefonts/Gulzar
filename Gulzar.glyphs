@@ -23077,7 +23077,7 @@ unicode = 00A2;
 },
 {
 glyphname = currency;
-lastChange = "2021-06-01 08:12:28 +0000";
+lastChange = "2021-06-04 09:11:07 +0000";
 layers = (
 {
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -23102,6 +23102,24 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"170 175 LINE",
+"140 206 LINE",
+"50 116 LINE",
+"80 85 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"170 381 LINE",
+"80 471 LINE",
+"50 440 LINE",
+"140 350 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
 "176 161 OFFCURVE",
 "136 213 OFFCURVE",
 "136 279 CURVE SMOOTH",
@@ -23119,35 +23137,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"315 381 LINE",
-"345 350 LINE",
 "435 440 LINE",
-"405 471 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"80 85 LINE",
-"170 175 LINE",
-"140 206 LINE",
-"50 116 LINE"
-);
-},
-{
-closed = 0;
-nodes = (
-"315 175 LINE",
-"405 85 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"140 350 LINE",
-"170 381 LINE",
-"80 471 LINE",
-"50 440 LINE"
+"405 471 LINE",
+"315 381 LINE",
+"345 350 LINE"
 );
 },
 {
@@ -23167,7 +23160,7 @@ unicode = 00A4;
 },
 {
 glyphname = dollar;
-lastChange = "2021-06-01 08:23:55 +0000";
+lastChange = "2021-06-04 09:10:45 +0000";
 layers = (
 {
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -23220,10 +23213,10 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"212 -123 LINE",
 "248 -123 LINE",
 "309 749 LINE",
-"273 749 LINE"
+"273 749 LINE",
+"212 -123 LINE"
 );
 }
 );
@@ -23234,7 +23227,7 @@ unicode = 0024;
 },
 {
 glyphname = euro;
-lastChange = "2021-06-01 08:24:25 +0000";
+lastChange = "2021-06-04 09:10:30 +0000";
 layers = (
 {
 anchors = (
@@ -23280,19 +23273,19 @@ nodes = (
 {
 closed = 1;
 nodes = (
-"38 360 LINE",
-"499 360 LINE",
-"510 404 LINE",
-"49 404 LINE"
+"471 252 LINE",
+"482 296 LINE",
+"21 296 LINE",
+"10 252 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"10 252 LINE",
-"471 252 LINE",
-"482 296 LINE",
-"21 296 LINE"
+"499 360 LINE",
+"510 404 LINE",
+"49 404 LINE",
+"38 360 LINE"
 );
 }
 );
@@ -23303,7 +23296,7 @@ unicode = 20AC;
 },
 {
 glyphname = sterling;
-lastChange = "2021-06-01 09:22:37 +0000";
+lastChange = "2021-06-04 09:10:18 +0000";
 layers = (
 {
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -23311,6 +23304,26 @@ paths = (
 {
 closed = 1;
 nodes = (
+"80 1 OFFCURVE",
+"126 21 OFFCURVE",
+"204 21 CURVE SMOOTH",
+"270 21 OFFCURVE",
+"333 -6 OFFCURVE",
+"398 -6 CURVE SMOOTH",
+"485 -6 OFFCURVE",
+"521 80 OFFCURVE",
+"521 162 CURVE",
+"492 162 LINE",
+"484 98 OFFCURVE",
+"456 79 OFFCURVE",
+"414 79 CURVE SMOOTH",
+"371 79 OFFCURVE",
+"335 106 OFFCURVE",
+"250 106 CURVE SMOOTH",
+"192 106 OFFCURVE",
+"143 73 OFFCURVE",
+"118 55 CURVE",
+"114 60 LINE",
 "198 133 OFFCURVE",
 "232 194 OFFCURVE",
 "232 276 CURVE SMOOTH",
@@ -23338,36 +23351,16 @@ nodes = (
 "132 179 OFFCURVE",
 "110 90 OFFCURVE",
 "32 19 CURVE",
-"48 -10 LINE",
-"80 1 OFFCURVE",
-"126 21 OFFCURVE",
-"204 21 CURVE SMOOTH",
-"270 21 OFFCURVE",
-"333 -6 OFFCURVE",
-"398 -6 CURVE SMOOTH",
-"485 -6 OFFCURVE",
-"521 80 OFFCURVE",
-"521 162 CURVE",
-"492 162 LINE",
-"484 98 OFFCURVE",
-"456 79 OFFCURVE",
-"414 79 CURVE SMOOTH",
-"371 79 OFFCURVE",
-"335 106 OFFCURVE",
-"250 106 CURVE SMOOTH",
-"192 106 OFFCURVE",
-"143 73 OFFCURVE",
-"118 55 CURVE",
-"114 60 LINE"
+"48 -10 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"20 307 LINE",
 "413 307 LINE",
 "424 354 LINE",
-"31 354 LINE"
+"31 354 LINE",
+"20 307 LINE"
 );
 }
 );
@@ -23378,7 +23371,7 @@ unicode = 00A3;
 },
 {
 glyphname = yen;
-lastChange = "2021-06-01 08:27:50 +0000";
+lastChange = "2021-06-04 09:10:15 +0000";
 layers = (
 {
 anchors = (
@@ -23424,6 +23417,33 @@ nodes = (
 {
 closed = 1;
 nodes = (
+"299 315 LINE",
+"310 359 LINE",
+"99 359 LINE",
+"88 315 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"549 199 LINE",
+"560 243 LINE",
+"99 243 LINE",
+"88 199 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"549 315 LINE",
+"560 359 LINE",
+"399 359 LINE",
+"388 315 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
 "563.613 591.94 LINE SMOOTH",
 "575 612 OFFCURVE",
 "577 614 OFFCURVE",
@@ -23435,33 +23455,6 @@ nodes = (
 "505 614 LINE",
 "313 234 LINE",
 "353.601 231.501 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"88 199 LINE",
-"549 199 LINE",
-"560 243 LINE",
-"99 243 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"88 315 LINE",
-"299 315 LINE",
-"310 359 LINE",
-"99 359 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"388 315 LINE",
-"549 315 LINE",
-"560 359 LINE",
-"399 359 LINE"
 );
 }
 );
