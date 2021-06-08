@@ -5,3 +5,21 @@ Feature ccmp {
         Substitute space -> space.latin <<latn/dflt>>;
         Substitute @latinpunct -> @latinpunct~latin.urdu <<arab/dflt arab/URD>>;
 } ccmp;
+
+Feature onum {
+        Routine onum { Substitute /.lf$/ -> /.lf$/~lf.osf; };
+};
+
+Feature tnum {
+        Routine tnum {
+                Substitute /.lf$/ -> /.lf$/~lf.tf;
+                Substitute /.osf$/ -> /.osf$/~osf.tosf;
+        };
+};
+
+Feature liga {
+Routine latin_liga {
+        Substitute f f [b h i j k l] -> [f_f_b f_f_h f_f_i f_f_j f_f_k f_f_l];
+        Substitute f [b f h i j k l] -> [f_b f_f f_h fi f_j f_k fl];
+        };
+};
