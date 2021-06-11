@@ -14,7 +14,7 @@ VERBS = ["CopyAnchors"]
 class CopyAnchors(FEEVerb):
     def action(self, args):
         fromprefix, toprefix = args
-        glyphs = self.parser.font.keys()
+        glyphs = self.parser.font.glyphs.keys()
         for g in glyphs:
             if g not in self.parser.fontfeatures.anchors: continue
             if g.startswith(fromprefix):

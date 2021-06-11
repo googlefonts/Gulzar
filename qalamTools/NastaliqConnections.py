@@ -32,7 +32,7 @@ class NastaliqConnections(FEEVerb):
             reader = csv.DictReader(csvfile)
             for line in reader:
                 left_glyph = line["Left Glyph"]
-                if not left_glyph in parser.font.keys():
+                if not left_glyph in parser.font.glyphs.keys():
                     continue
                 remainder = list(line.items())[1:]
                 for (g, v) in remainder:
@@ -40,7 +40,7 @@ class NastaliqConnections(FEEVerb):
                     if v == "1" or v == 1 or not v:
                         continue
                     replacement = g + str(v)
-                    if not replacement in parser.font.keys():
+                    if not replacement in parser.font.glyphs.keys():
                         warnings.warn(f"{left_glyph}->{old} goes to {replacement} which does not exist")
                         continue
                     if not old in rules:
