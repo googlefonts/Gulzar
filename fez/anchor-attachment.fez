@@ -21,7 +21,7 @@ Feature curs {
   Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
 };
 
-Include "fee/pre-mkmk-repositioning.fee";
+Include "fez/pre-mkmk-repositioning.fez";
 
 QuantizeAnchors 10;
 
