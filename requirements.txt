@@ -1,7 +1,8 @@
 glyphsLib
 fontMake
-git+git://github.com/simoncozens/fontfeatures.git#egg=fontfeatures
-git+git://github.com/simoncozens/babelfont.git#egg=babelfont
+glyphtools>=0.7.3
+git+git://github.com/simoncozens/fontfeatures.git@babelfont-3#egg=fontfeatures
+git+git://github.com/simoncozens/babelfont.git@nfsf#egg=babelfont
 bidict
 tqdm
 fontbakery
