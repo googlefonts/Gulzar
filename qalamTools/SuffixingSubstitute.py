@@ -1,7 +1,7 @@
 import fontFeatures
 import re
 
-from fontFeatures.feeLib import FEEVerb
+from fez import FEZVerb
 
 PARSEOPTS = dict(use_helpers=True)
 
@@ -12,7 +12,7 @@ action: glyphselector+ "->" BARENAME
 
 VERBS = ["SuffixingSubstitute"]
 
-class SuffixingSubstitute(FEEVerb):
+class SuffixingSubstitute(FEZVerb):
     def action(self, args):
         parser = self.parser
         inputs  = [g.resolve(parser.fontfeatures, parser.font) for g in args[:-1]]

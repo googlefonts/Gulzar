@@ -3,7 +3,7 @@ import csv
 import fontFeatures
 import warnings
 
-from fontFeatures.feeLib import FEEVerb
+from fez import FEZVerb
 
 PARSEOPTS = dict(use_helpers=True)
 
@@ -14,7 +14,7 @@ action: ESCAPED_STRING
 VERBS = ["NastaliqConnections"]
 
 
-class NastaliqConnections(FEEVerb):
+class NastaliqConnections(FEZVerb):
     def action(self, args):
         parser = self.parser
         filename = args[0].value[1:-1]

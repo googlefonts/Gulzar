@@ -1,6 +1,6 @@
 import fontFeatures
 import warnings
-from fontFeatures.feeLib import FEEVerb
+from fez import FEZVerb
 
 PARSEOPTS = dict(use_helpers=True)
 
@@ -11,7 +11,7 @@ action: BARENAME BARENAME
 VERBS = ["CopyAnchors"]
 
 
-class CopyAnchors(FEEVerb):
+class CopyAnchors(FEZVerb):
     def action(self, args):
         fromprefix, toprefix = args
         glyphs = self.parser.font.glyphs.keys()

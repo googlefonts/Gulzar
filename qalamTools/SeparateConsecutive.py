@@ -2,7 +2,7 @@ import fontFeatures
 from glyphtools import get_glyph_metrics
 import warnings
 
-from fontFeatures.feeLib import FEEVerb
+from fez import FEZVerb
 
 PARSEOPTS = dict(use_helpers=True)
 
@@ -14,7 +14,7 @@ action: glyphselector integer_container integer_container integer_container
 VERBS = ["SeparateConsecutive"]
 
 
-class SeparateConsecutive(FEEVerb):
+class SeparateConsecutive(FEZVerb):
     def action(self, args):
         parser = self.parser
         marks, maxlen, distance, drop = args

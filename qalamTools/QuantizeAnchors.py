@@ -1,5 +1,5 @@
 import math
-from fontFeatures.feeLib import FEEVerb
+from fez import FEZVerb
 
 PARSEOPTS = dict(use_helpers=True)
 
@@ -13,7 +13,7 @@ def quantize(number, degree):
     return degree * math.floor(number / degree)
 
 
-class QuantizeAnchors(FEEVerb):
+class QuantizeAnchors(FEZVerb):
     def action(self, args):
         amount = args[0]
         for anchorset in self.parser.fontfeatures.anchors.values():

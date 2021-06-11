@@ -6,7 +6,7 @@ import math
 import bidict
 import tqdm
 from functools import lru_cache
-from fontFeatures.feeLib import FEEVerb
+from fez import FEZVerb
 from beziers.path import BezierPath
 from beziers.point import Point
 import shelve
@@ -512,7 +512,7 @@ def right_joining(x):
     return False
 
 
-class NastaliqKerning(FEEVerb):
+class NastaliqKerning(FEZVerb):
     def action(self, args):
         distance_at_closest = args[0]
         maxtuck = args[0] / 100.0
