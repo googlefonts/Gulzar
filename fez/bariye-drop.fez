@@ -1,4 +1,4 @@
-Include "shared.fee";
+Include "shared.fez";
 
 Feature rlig {
   # This command evaluates all sequences of @behs followed by a @bariye and

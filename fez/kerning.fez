@@ -1,5 +1,5 @@
 LoadPlugin qalamTools.NastaliqKerning;
-Include "shared.fee";
+Include "shared.fez";
 
 
 Feature kern {

@@ -1,4 +1,4 @@
-Include "shared.fee";
+Include "shared.fez";
 
 Feature mkmk {
   Routine LiftJimYBDotsMore {

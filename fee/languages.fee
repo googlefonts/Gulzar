@@ -1,8 +1,0 @@
-Feature ccmp {
-        Substitute space -> space.urdu <<arab/dflt arab/URD>>;
-        Substitute space -> space.latin <<latn/dflt>>;
-        Substitute exclam.latin -> exclam <<arab/dflt arab/URD>>;
-        Substitute hyphen.latin -> hyphen <<arab/dflt arab/URD>>;
-        Substitute colon.latin -> colon <<arab/dflt arab/URD>>;
-        Substitute semicolon.latin -> semicolon <<arab/dflt arab/URD>>;
-} ccmp;

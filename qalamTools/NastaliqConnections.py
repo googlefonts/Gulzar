@@ -3,7 +3,7 @@ import csv
 import fontFeatures
 import warnings
 
-from fontFeatures.feeLib import FEEVerb
+from fez import FEZVerb
 
 PARSEOPTS = dict(use_helpers=True)
 
@@ -14,7 +14,7 @@ action: ESCAPED_STRING
 VERBS = ["NastaliqConnections"]
 
 
-class NastaliqConnections(FEEVerb):
+class NastaliqConnections(FEZVerb):
     def action(self, args):
         parser = self.parser
         filename = args[0].value[1:-1]
@@ -32,7 +32,7 @@ class NastaliqConnections(FEEVerb):
             reader = csv.DictReader(csvfile)
             for line in reader:
                 left_glyph = line["Left Glyph"]
-                if not left_glyph in parser.font.keys():
+                if not left_glyph in parser.font.glyphs.keys():
                     continue
                 remainder = list(line.items())[1:]
                 for (g, v) in remainder:
@@ -40,7 +40,7 @@ class NastaliqConnections(FEEVerb):
                     if v == "1" or v == 1 or not v:
                         continue
                     replacement = g + str(v)
-                    if not replacement in parser.font.keys():
+                    if not replacement in parser.font.glyphs.keys():
                         warnings.warn(f"{left_glyph}->{old} goes to {replacement} which does not exist")
                         continue
                     if not old in rules:

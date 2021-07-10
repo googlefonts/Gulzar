@@ -1,4 +1,4 @@
-Include "shared.fee";
+Include "shared.fez";
 
 # And now we do some more positioning. We put this in mkmk because we want
 # this to be processed at the end, after anchor positioning is done.
