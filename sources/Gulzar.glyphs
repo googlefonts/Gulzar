@@ -15,6 +15,10 @@ value = (
 );
 },
 {
+name = "Use Typo Metrics";
+value = 1;
+},
+{
 name = vendorID;
 value = GOOG;
 }
