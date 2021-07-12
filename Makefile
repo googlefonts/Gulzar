@@ -37,7 +37,7 @@ clean:
 specimen: specimen/specimen.pdf
 
 sources/build/rules.csv: $(GLYPHS_FILE)
-	python3 dump-glyphs-rules.py $(GLYPHS_FILE) > sources/build/rules.csv
+	python3 scripts/dump-glyphs-rules.py $(GLYPHS_FILE) > sources/build/rules.csv
 
 test: $(FINAL_FONT)
 	fontbakery check-googlefonts -l WARN --html fontbakery-report.html $(FINAL_FONT)
