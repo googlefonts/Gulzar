@@ -7,6 +7,7 @@ code = "A Aacute Acircumflex Adieresis Agrave Aring Atilde AE B C Ccedilla D Eth
 name = Uppercase;
 }
 );
+copyright = "Copyright 2021 The Gulzar Project Authors (http://github.com/googlefonts/gulzar/)";
 customParameters = (
 {
 name = glyphOrder;
@@ -24,6 +25,7 @@ value = GOOG;
 }
 );
 date = "2020-12-20 18:28:19 +0000";
+designer = "Borna Izadpanah, Alice Savoye";
 disablesNiceNames = 1;
 familyName = Gulzar;
 features = (
