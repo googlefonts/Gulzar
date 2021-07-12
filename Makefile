@@ -1,37 +1,46 @@
-GLYPHS_FILE=Gulzar.glyphs
-FINAL_FONT=master_ttf/Gulzar-Regular.ttf
-export PYTHONPATH=.:/Users/simon/hacks/fez/:/Users/simon/hacks/typography/fontFeatures/:/Users/simon/hacks/bezier-things/beziers.py:/Users/simon/hacks/typography/glyphtools/:
-export FONTTOOLS_LOOKUP_DEBUGGING=1
-FEA_FILES=fea-bits/languagesystem.fea fea-bits/decomposition.fea fea-bits/connections.fea fea-bits/bariye-drop.fea fea-bits/anchor-attachment.fea fea-bits/kerning.fea fea-bits/latin-kerning.fea fea-bits/post-mkmk-repositioning.fea fea-bits/bariye-overhang.fea
-RELEASE_ARG=--dev
+GLYPHS_FILE=sources/Gulzar.glyphs
+FINAL_FONT=fonts/ttf/Gulzar-Regular.ttf
+FEA_FILES=sources/build/fea/languagesystem.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/anchor-attachment.fea sources/build/fea/kerning.fea sources/build/fea/latin-kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
+RELEASE_ARG=
+export PYTHONPATH=.
 
 .DELETE_ON_ERROR:
 
-$(FINAL_FONT): features.fea $(GLYPHS_FILE)
-	fontmake -f --master-dir . -g $(GLYPHS_FILE) --no-production-names -o ttf --output-path $(FINAL_FONT)
-	fonttools feaLib -o $(FINAL_FONT) features.fea $(FINAL_FONT)
+$(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
+	. venv/bin/activate; fontmake -f --master-dir . -g $(GLYPHS_FILE) --no-production-names -o ttf --output-path $(FINAL_FONT)
+	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) sources/build/features.fea $(FINAL_FONT)
 
-replace: features.fea
-	fonttools feaLib -o $(FINAL_FONT) features.fea $(FINAL_FONT)
+venv: venv/touchfile
 
-release: $(FINAL_FONT)
-	gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT)
-	font-v write --sha1 $(RELEASE_ARG) $(FINAL_FONT)
-	ttf-rename-glyphs $(FINAL_FONT) $(FINAL_FONT)
+build.stamp: venv
+	. venv/bin/activate
 
-features.fea: $(FEA_FILES)
-	cat $^ > features.fea
+venv/touchfile: requirements.txt
+	test -d venv || python3 -m venv venv
+	. venv/bin/activate; pip install -Ur requirements.txt
+	touch venv/touchfile
+
+replace: venv sources/build/features.fea
+	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) sources/build/features.fea $(FINAL_FONT)
+
+release: venv $(FINAL_FONT)
+	. venv/bin/activate; gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT)
+	. venv/bin/activate; font-v write --sha1 $(RELEASE_ARG) $(FINAL_FONT)
+	. venv/bin/activate; ttf-rename-glyphs $(FINAL_FONT) $(FINAL_FONT)
+
+sources/build/features.fea: $(FEA_FILES)
+	cat $^ > sources/build/features.fea
 
 clean:
-	rm -f $(FINAL_FONT) features.fea rules.csv fea-bits/*
+	rm -f $(FINAL_FONT) sources/build/features.fea sources/build/rules.csv sources/build/fea/*
 
 specimen: specimen/specimen.pdf
 
-rules.csv: $(GLYPHS_FILE)
-	python3 dump-glyphs-rules.py $(GLYPHS_FILE) > rules.csv
+sources/build/rules.csv: $(GLYPHS_FILE)
+	python3 dump-glyphs-rules.py $(GLYPHS_FILE) > sources/build/rules.csv
 
 test: $(FINAL_FONT)
-	fontbakery check-googlefonts --html fontbakery-report.html $(FINAL_FONT)
+	fontbakery check-googlefonts -l WARN --html fontbakery-report.html $(FINAL_FONT)
 
 test-shaping: $(FINAL_FONT)
 	fontbakery check-profile qa/fontbakery-shaping.py $(FINAL_FONT)
@@ -45,31 +54,31 @@ proof: $(FINAL_FONT) qa/urdu-john.sil
 specimen/specimen.pdf: $(FINAL_FONT) specimen/specimen.sil
 	cd specimen ; sile specimen.sil
 
-fea-bits/languagesystem.fea: fez/languages.fez
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/languagesystem.fea: sources/build/fez/languages.fez venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/decomposition.fea: fez/decomposition.fez
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/decomposition.fea: sources/build/fez/decomposition.fez venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/connections.fea: fez/connections.fez rules.csv
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/connections.fea: sources/build/fez/connections.fez sources/build/rules.csv venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/anchor-attachment.fea: fez/anchor-attachment.fez fez/pre-mkmk-repositioning.fez
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez sources/build/fez/pre-mkmk-repositioning.fez venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/kerning.fea: fez/kerning.fez fez/shared.fez
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/latin-kerning.fea: fez/latin-kerning.fez $(GLYPHS_FILE)
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/latin-kerning.fea: sources/build/fez/latin-kerning.fez $(GLYPHS_FILE) venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/post-mkmk-repositioning.fea: fez/post-mkmk-repositioning.fez fez/shared.fez
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/post-mkmk-repositioning.fea: sources/build/fez/post-mkmk-repositioning.fez sources/build/fez/shared.fez venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 # Technically these two should depend on the Glyphs file, but since the design
 # and width of glyphs is mostly fixed, I'm removing that dependency for now.
-fea-bits/bariye-drop.fea: fez/bariye-drop.fez fez/shared.fez
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/bariye-drop.fea: sources/build/fez/bariye-drop.fez sources/build/fez/shared.fez venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-fea-bits/bariye-overhang.fea: fez/bariye-overhang.fez fez/shared.fez
-	fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+sources/build/fea/bariye-overhang.fea: sources/build/fez/bariye-overhang.fez sources/build/fez/shared.fez venv
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
