@@ -29263,7 +29263,7 @@ subCategory = Nonspacing;
 {
 color = 3;
 glyphname = dieresiscomb;
-lastChange = "2021-06-01 07:23:22 +0000";
+lastChange = "2021-07-12 10:32:09 +0000";
 layers = (
 {
 anchors = (
@@ -29373,11 +29373,13 @@ width = 422;
 }
 );
 unicode = 0308;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
 glyphname = dotaccentcomb;
-lastChange = "2021-05-17 13:02:55 +0000";
+lastChange = "2021-07-12 10:32:09 +0000";
 layers = (
 {
 anchors = (
@@ -29416,11 +29418,13 @@ width = 278;
 }
 );
 unicode = 0307;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
 glyphname = gravecomb;
-lastChange = "2021-05-18 12:43:19 +0000";
+lastChange = "2021-07-12 10:32:09 +0000";
 layers = (
 {
 anchors = (
@@ -29478,11 +29482,13 @@ width = 313;
 }
 );
 unicode = 0300;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
 glyphname = acutecomb;
-lastChange = "2021-05-18 12:43:15 +0000";
+lastChange = "2021-07-12 10:32:09 +0000";
 layers = (
 {
 anchors = (
@@ -29512,11 +29518,13 @@ width = 313;
 }
 );
 unicode = 0301;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
 glyphname = circumflexcomb;
-lastChange = "2021-05-17 13:21:43 +0000";
+lastChange = "2021-07-12 10:32:09 +0000";
 layers = (
 {
 anchors = (
@@ -29555,11 +29563,13 @@ width = 390;
 }
 );
 unicode = 0302;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
 glyphname = ringcomb;
-lastChange = "2021-05-17 13:03:07 +0000";
+lastChange = "2021-07-12 10:32:09 +0000";
 layers = (
 {
 anchors = (
@@ -29615,11 +29625,13 @@ width = 312;
 }
 );
 unicode = 030A;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
 glyphname = tildecomb;
-lastChange = "2021-06-01 07:24:46 +0000";
+lastChange = "2021-07-12 10:32:09 +0000";
 layers = (
 {
 anchors = (
@@ -29669,11 +29681,13 @@ width = 458;
 }
 );
 unicode = 0303;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
 glyphname = cedillacomb;
-lastChange = "2021-06-01 07:05:23 +0000";
+lastChange = "2021-07-12 10:31:57 +0000";
 layers = (
 {
 anchors = (
@@ -29718,6 +29732,8 @@ width = 322;
 }
 );
 unicode = 0327;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 glyphname = dieresis;
