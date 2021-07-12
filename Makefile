@@ -24,7 +24,8 @@ replace: venv sources/build/features.fea
 	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) sources/build/features.fea $(FINAL_FONT)
 
 release: venv $(FINAL_FONT)
-	. venv/bin/activate; gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT)
+	. venv/bin/activate; ttfautohint $(FINAL_FONT) $(FINAL_FONT).autohint
+	. venv/bin/activate; gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT).autohint
 	. venv/bin/activate; font-v write --sha1 $(RELEASE_ARG) $(FINAL_FONT)
 	. venv/bin/activate; ttf-rename-glyphs $(FINAL_FONT) $(FINAL_FONT)
 

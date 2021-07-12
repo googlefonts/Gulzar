@@ -27,6 +27,11 @@ name = "Disable Last Change";
 value = 1;
 },
 {
+name = fsType;
+value = (
+);
+},
+{
 name = vendorID;
 value = GOOG;
 },
