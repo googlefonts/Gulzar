@@ -30,12 +30,11 @@ jobs:
         pip install -r requirements.txt
     - name: Build font
       run: |
-        mkdir fea-bits master_ttf
         make
     - name: Build specimen
       run: make specimen
     - name: Rename font
-      run: mv master_ttf/Gulzar-Regular.ttf .
+      run: mv fonts/ttf/Gulzar-Regular.ttf .
     - name: Archive artifacts
       uses: actions/upload-artifact@v2
       with:
