@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/LAMm2"
-);
 classes = (
 {
 automatic = 1;
@@ -41997,11 +41994,11 @@ position = "{100, -266}";
 },
 {
 name = entry;
-position = "{211, 20}";
+position = "{254, 20}";
 },
 {
 name = exit;
-position = "{37, 0}";
+position = "{6, 3}";
 },
 {
 name = top;
@@ -52764,7 +52761,7 @@ position = "{250, -388}";
 },
 {
 name = entry;
-position = "{214, 296}";
+position = "{174, 276}";
 },
 {
 name = exit;
@@ -56270,7 +56267,7 @@ position = "{254, 20}";
 },
 {
 name = exit;
-position = "{-22, 27}";
+position = "{6, 3}";
 },
 {
 name = top;
@@ -59773,7 +59770,7 @@ width = 190;
 note = LAMi9;
 },
 {
-color = 1;
+color = 3;
 glyphname = LAMm1;
 layers = (
 {
@@ -59860,26 +59857,26 @@ width = 360;
 note = LAMm1;
 },
 {
-color = 1;
+color = 3;
 glyphname = LAMm10;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{152, -277}";
+position = "{402, -244}";
 },
 {
 name = entry;
-position = "{268, 12}";
+position = "{542, 20}";
 },
 {
 name = exit;
-position = "{42, -6}";
+position = "{85, -68}";
 },
 {
 name = top;
-position = "{187, 615}";
+position = "{447, 709}";
 }
 );
 hints = (
@@ -59920,547 +59917,57 @@ paths = (
 {
 closed = 1;
 nodes = (
-"81 -77 OFFCURVE",
-"126 32 OFFCURVE",
-"131 81 CURVE",
-"125 87 LINE",
-"129 11 OFFCURVE",
-"175 -59 OFFCURVE",
-"240 -59 CURVE SMOOTH",
-"291 -59 OFFCURVE",
-"331 76 OFFCURVE",
-"287 76 CURVE SMOOTH",
-"223 76 OFFCURVE",
-"186 126 OFFCURVE",
-"186 210 CURVE",
-"128 202 LINE",
-"126 149 LINE SMOOTH",
-"124 99 OFFCURVE",
-"90 58 OFFCURVE",
-"61 58 CURVE SMOOTH",
-"13 58 OFFCURVE",
-"-20 -77 OFFCURVE",
-"14 -77 CURVE SMOOTH"
+"169 -105 OFFCURVE",
+"396 -13 OFFCURVE",
+"420 84 CURVE",
+"411 93 LINE",
+"413 20 OFFCURVE",
+"457 -51 OFFCURVE",
+"514 -51 CURVE SMOOTH",
+"565 -51 OFFCURVE",
+"605 84 OFFCURVE",
+"561 84 CURVE SMOOTH",
+"484 84 OFFCURVE",
+"457 150 OFFCURVE",
+"459 238 CURVE",
+"399 249 LINE",
+"399 115 OFFCURVE",
+"410 23 OFFCURVE",
+"19 -59 CURVE",
+"-13 -73 OFFCURVE",
+"1 -105 OFFCURVE",
+"19 -105 CURVE"
 );
 },
 {
 closed = 1;
 nodes = (
-"177 140 LINE",
-"182 164 OFFCURVE",
-"186 189 OFFCURVE",
-"186 210 CURVE SMOOTH",
-"186 314 OFFCURVE",
-"193 454 OFFCURVE",
-"197 509 CURVE",
-"176 512 LINE",
-"148 413 LINE SMOOTH",
-"141 388 OFFCURVE",
-"125 342 OFFCURVE",
-"125 280 CURVE",
-"126 140 LINE"
+"450 140 LINE",
+"455 164 OFFCURVE",
+"459 189 OFFCURVE",
+"459 210 CURVE SMOOTH",
+"459 314 OFFCURVE",
+"466 544 OFFCURVE",
+"470 599 CURVE",
+"449 602 LINE",
+"421 503 LINE SMOOTH",
+"414 478 OFFCURVE",
+"398 432 OFFCURVE",
+"398 370 CURVE SMOOTH",
+"398 284 OFFCURVE",
+"400 239 OFFCURVE",
+"399 140 CURVE"
 );
 }
 );
-width = 306;
+width = 580;
 }
 );
 note = LAMm10;
 },
 {
-color = 1;
+color = 3;
 glyphname = LAMm11;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{273, -414}";
-},
-{
-name = entry;
-position = "{366, 2}";
-},
-{
-name = exit;
-position = "{144, 2}";
-},
-{
-name = top;
-position = "{258, 650}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-75, 565}";
-type = Stem;
-},
-{
-place = "{51, 55}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"388 -69 OFFCURVE",
-"429 66 OFFCURVE",
-"385 66 CURVE SMOOTH",
-"313 66 OFFCURVE",
-"285 124 OFFCURVE",
-"285 210 CURVE",
-"225 191 LINE",
-"225 79 OFFCURVE",
-"175 14 OFFCURVE",
-"111 14 CURVE SMOOTH",
-"90 14 OFFCURVE",
-"68 20 OFFCURVE",
-"41 52 CURVE",
-"0 -12 LINE",
-"14 -31 OFFCURVE",
-"44 -63 OFFCURVE",
-"96 -63 CURVE SMOOTH",
-"161 -63 OFFCURVE",
-"209 -4 OFFCURVE",
-"226 48 CURVE",
-"235 -24 OFFCURVE",
-"280 -69 OFFCURVE",
-"338 -69 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"276 140 LINE",
-"281 164 OFFCURVE",
-"285 189 OFFCURVE",
-"285 210 CURVE SMOOTH",
-"285 314 OFFCURVE",
-"292 454 OFFCURVE",
-"296 509 CURVE",
-"275 512 LINE",
-"247 413 LINE SMOOTH",
-"240 388 OFFCURVE",
-"224 342 OFFCURVE",
-"224 280 CURVE",
-"225 140 LINE"
-);
-}
-);
-width = 404;
-}
-);
-note = LAMm11;
-},
-{
-color = 1;
-glyphname = LAMm12;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{202, -337}";
-},
-{
-name = entry;
-position = "{259, 43}";
-},
-{
-name = exit;
-position = "{58, 0}";
-},
-{
-name = top;
-position = "{150, 656}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-82, 619}";
-type = Stem;
-},
-{
-place = "{54, 54}";
-type = Stem;
-},
-{
-place = "{111, 7}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-83, 667}";
-type = Stem;
-},
-{
-place = "{51, 58}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"49 -136 OFFCURVE",
-"113 -81 OFFCURVE",
-"83 -60 CURVE SMOOTH",
-"67 -49 OFFCURVE",
-"65 -40 OFFCURVE",
-"65 -33 CURVE SMOOTH",
-"65 6 OFFCURVE",
-"109 37 OFFCURVE",
-"138 104 CURVE",
-"118 103 LINE",
-"123 53 OFFCURVE",
-"160 -28 OFFCURVE",
-"231 -28 CURVE SMOOTH",
-"282 -28 OFFCURVE",
-"322 107 OFFCURVE",
-"278 107 CURVE SMOOTH",
-"208 107 OFFCURVE",
-"178 170 OFFCURVE",
-"178 230 CURVE",
-"118 217 LINE",
-"118 154 OFFCURVE",
-"111 125 OFFCURVE",
-"79 64 CURVE SMOOTH",
-"51 10 OFFCURVE",
-"-2 -49 OFFCURVE",
-"0 -131 CURVE"
-);
-},
-{
-closed = 1;
-nodes = (
-"169 160 LINE",
-"174 184 OFFCURVE",
-"178 209 OFFCURVE",
-"178 230 CURVE SMOOTH",
-"178 334 OFFCURVE",
-"185 474 OFFCURVE",
-"189 529 CURVE",
-"168 532 LINE",
-"140 433 LINE SMOOTH",
-"133 408 OFFCURVE",
-"117 362 OFFCURVE",
-"117 300 CURVE",
-"118 160 LINE"
-);
-}
-);
-width = 297;
-}
-);
-note = LAMm12;
-},
-{
-color = 1;
-glyphname = LAMm13;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{222, -370}";
-},
-{
-name = entry;
-position = "{319, -4}";
-},
-{
-name = exit;
-position = "{51, -19}";
-},
-{
-name = top;
-position = "{211, 595}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-75, 564}";
-type = Stem;
-},
-{
-place = "{63, 54}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-69, 662}";
-type = Stem;
-},
-{
-place = "{50, 59}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"342 -75 OFFCURVE",
-"382 60 OFFCURVE",
-"338 60 CURVE SMOOTH",
-"279 60 OFFCURVE",
-"236 102 OFFCURVE",
-"236 230 CURVE",
-"176 160 LINE",
-"176 94 OFFCURVE",
-"125 19 OFFCURVE",
-"63 19 CURVE SMOOTH",
-"24 19 OFFCURVE",
-"-19 -71 OFFCURVE",
-"10 -71 CURVE SMOOTH",
-"69 -71 OFFCURVE",
-"173 -15 OFFCURVE",
-"191 78 CURVE",
-"177 77 LINE",
-"180 -15 OFFCURVE",
-"234 -75 OFFCURVE",
-"291 -75 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"227 140 LINE",
-"232 164 OFFCURVE",
-"236 189 OFFCURVE",
-"236 210 CURVE SMOOTH",
-"236 314 OFFCURVE",
-"243 454 OFFCURVE",
-"247 509 CURVE",
-"226 512 LINE",
-"198 413 LINE SMOOTH",
-"191 388 OFFCURVE",
-"175 342 OFFCURVE",
-"175 280 CURVE",
-"176 140 LINE"
-);
-}
-);
-width = 357;
-}
-);
-note = LAMm13;
-},
-{
-color = 1;
-glyphname = LAMm14;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{307, -244}";
-},
-{
-name = entry;
-position = "{447, 20}";
-},
-{
-name = exit;
-position = "{51, 0}";
-},
-{
-name = top;
-position = "{352, 709}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"131 -20 OFFCURVE",
-"270 12 OFFCURVE",
-"319 65 CURVE",
-"330 3 OFFCURVE",
-"369 -51 OFFCURVE",
-"419 -51 CURVE SMOOTH",
-"470 -51 OFFCURVE",
-"510 84 OFFCURVE",
-"466 84 CURVE SMOOTH",
-"393 84 OFFCURVE",
-"366 143 OFFCURVE",
-"364 217 CURVE SMOOTH",
-"364 324 OFFCURVE",
-"371 545 OFFCURVE",
-"375 599 CURVE",
-"354 602 LINE",
-"326 503 LINE SMOOTH",
-"319 478 OFFCURVE",
-"303 425 OFFCURVE",
-"303 378 CURVE SMOOTH",
-"303 329 OFFCURVE",
-"304 291 OFFCURVE",
-"304 249 CURVE SMOOTH",
-"304 218 OFFCURVE",
-"304 184 OFFCURVE",
-"300 161 CURVE SMOOTH",
-"291 109 OFFCURVE",
-"270 99 OFFCURVE",
-"203 66 CURVE SMOOTH",
-"128 29 OFFCURVE",
-"33 -19 OFFCURVE",
-"0 -83 CURVE",
-"14 -96 LINE"
-);
-}
-);
-width = 485;
-}
-);
-note = LAMm1;
-},
-{
-color = 1;
-glyphname = LAMm16;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{296, -414}";
-},
-{
-name = entry;
-position = "{389, 2}";
-},
-{
-name = exit;
-position = "{240, -5}";
-},
-{
-name = top;
-position = "{281, 650}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-75, 565}";
-type = Stem;
-},
-{
-place = "{51, 55}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"411 -69 OFFCURVE",
-"452 66 OFFCURVE",
-"408 66 CURVE SMOOTH",
-"336 66 OFFCURVE",
-"308 124 OFFCURVE",
-"308 210 CURVE",
-"248 191 LINE",
-"248 85 OFFCURVE",
-"195 13 OFFCURVE",
-"114 13 CURVE SMOOTH",
-"98 13 OFFCURVE",
-"80 16 OFFCURVE",
-"61 22 CURVE",
-"0 -41 LINE",
-"32 -55 OFFCURVE",
-"63 -62 OFFCURVE",
-"93 -62 CURVE SMOOTH",
-"163 -62 OFFCURVE",
-"230 -23 OFFCURVE",
-"253 63 CURVE",
-"248 63 LINE",
-"252 -18 OFFCURVE",
-"299 -69 OFFCURVE",
-"361 -69 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"299 140 LINE",
-"304 164 OFFCURVE",
-"308 189 OFFCURVE",
-"308 210 CURVE SMOOTH",
-"308 314 OFFCURVE",
-"315 454 OFFCURVE",
-"319 509 CURVE",
-"298 512 LINE",
-"270 413 LINE SMOOTH",
-"263 388 OFFCURVE",
-"247 342 OFFCURVE",
-"247 280 CURVE SMOOTH",
-"248 140 LINE"
-);
-}
-);
-width = 427;
-}
-);
-note = LAMm11;
-},
-{
-color = 1;
-glyphname = LAMm17;
 layers = (
 {
 anchors = (
@@ -60484,11 +59991,11 @@ position = "{154, 720}";
 hints = (
 {
 horizontal = 1;
-place = "{-83, 667}";
+place = "{-75, 565}";
 type = Stem;
 },
 {
-place = "{51, 58}";
+place = "{51, 55}";
 type = Stem;
 },
 {
@@ -60554,10 +60061,399 @@ nodes = (
 width = 303;
 }
 );
-note = LAMm4;
+note = LAMm11;
 },
 {
-color = 1;
+color = 3;
+glyphname = LAMm12;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{144, -244}";
+},
+{
+name = entry;
+position = "{284, 32}";
+},
+{
+name = exit;
+position = "{36, -2}";
+},
+{
+name = top;
+position = "{189, 709}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-82, 619}";
+type = Stem;
+},
+{
+place = "{54, 54}";
+type = Stem;
+},
+{
+place = "{111, 7}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-83, 667}";
+type = Stem;
+},
+{
+place = "{51, 58}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-53, 662}";
+type = Stem;
+},
+{
+place = "{72, 57}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"59 -56 OFFCURVE",
+"140 0 OFFCURVE",
+"162 84 CURVE",
+"153 93 LINE",
+"155 20 OFFCURVE",
+"196 -39 OFFCURVE",
+"256 -39 CURVE SMOOTH",
+"307 -39 OFFCURVE",
+"347 96 OFFCURVE",
+"303 96 CURVE SMOOTH",
+"223 96 OFFCURVE",
+"199 150 OFFCURVE",
+"201 238 CURVE",
+"141 249 LINE",
+"141 131 OFFCURVE",
+"124 40 OFFCURVE",
+"1 14 CURVE",
+"0 -67 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"192 140 LINE",
+"197 164 OFFCURVE",
+"201 189 OFFCURVE",
+"201 210 CURVE SMOOTH",
+"201 314 OFFCURVE",
+"208 544 OFFCURVE",
+"212 599 CURVE",
+"191 602 LINE",
+"163 503 LINE SMOOTH",
+"156 478 OFFCURVE",
+"140 432 OFFCURVE",
+"140 370 CURVE SMOOTH",
+"140 284 OFFCURVE",
+"142 239 OFFCURVE",
+"141 140 CURVE"
+);
+}
+);
+width = 322;
+}
+);
+note = LAMm12;
+},
+{
+color = 3;
+glyphname = LAMm13;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{144, -244}";
+},
+{
+name = entry;
+position = "{284, 32}";
+},
+{
+name = exit;
+position = "{29, 4}";
+},
+{
+name = top;
+position = "{189, 709}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-75, 564}";
+type = Stem;
+},
+{
+place = "{63, 54}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-69, 662}";
+type = Stem;
+},
+{
+place = "{50, 59}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-53, 662}";
+type = Stem;
+},
+{
+place = "{72, 57}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"59 -56 OFFCURVE",
+"140 0 OFFCURVE",
+"162 84 CURVE",
+"153 93 LINE",
+"155 20 OFFCURVE",
+"196 -39 OFFCURVE",
+"256 -39 CURVE SMOOTH",
+"307 -39 OFFCURVE",
+"347 96 OFFCURVE",
+"303 96 CURVE SMOOTH",
+"223 96 OFFCURVE",
+"199 150 OFFCURVE",
+"201 238 CURVE",
+"141 249 LINE",
+"141 131 OFFCURVE",
+"127 84 OFFCURVE",
+"72 61 CURVE",
+"0 -67 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"192 140 LINE",
+"197 164 OFFCURVE",
+"201 189 OFFCURVE",
+"201 210 CURVE SMOOTH",
+"201 314 OFFCURVE",
+"208 544 OFFCURVE",
+"212 599 CURVE",
+"191 602 LINE",
+"163 503 LINE SMOOTH",
+"156 478 OFFCURVE",
+"140 432 OFFCURVE",
+"140 370 CURVE SMOOTH",
+"140 284 OFFCURVE",
+"142 239 OFFCURVE",
+"141 140 CURVE"
+);
+}
+);
+width = 322;
+}
+);
+note = LAMm13;
+},
+{
+color = 3;
+glyphname = LAMm14;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{144, -244}";
+},
+{
+name = entry;
+position = "{284, 32}";
+},
+{
+name = exit;
+position = "{29, 14}";
+},
+{
+name = top;
+position = "{189, 709}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-53, 662}";
+type = Stem;
+},
+{
+place = "{72, 57}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"78 -5 OFFCURVE",
+"140 0 OFFCURVE",
+"162 84 CURVE",
+"153 93 LINE",
+"155 20 OFFCURVE",
+"196 -39 OFFCURVE",
+"256 -39 CURVE SMOOTH",
+"307 -39 OFFCURVE",
+"347 96 OFFCURVE",
+"303 96 CURVE SMOOTH",
+"223 96 OFFCURVE",
+"199 150 OFFCURVE",
+"201 238 CURVE",
+"141 249 LINE",
+"141 131 OFFCURVE",
+"144 80 OFFCURVE",
+"56 53 CURVE",
+"19 -16 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"192 140 LINE",
+"197 164 OFFCURVE",
+"201 189 OFFCURVE",
+"201 210 CURVE SMOOTH",
+"201 314 OFFCURVE",
+"208 544 OFFCURVE",
+"212 599 CURVE",
+"191 602 LINE",
+"163 503 LINE SMOOTH",
+"156 478 OFFCURVE",
+"140 432 OFFCURVE",
+"140 370 CURVE SMOOTH",
+"140 284 OFFCURVE",
+"142 239 OFFCURVE",
+"141 140 CURVE"
+);
+}
+);
+width = 322;
+}
+);
+note = LAMm1;
+},
+{
+color = 3;
+glyphname = LAMm16;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{375, -146}";
+},
+{
+name = entry;
+position = "{515, 130}";
+},
+{
+name = exit;
+position = "{267, 96}";
+},
+{
+name = top;
+position = "{420, 807}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-75, 565}";
+type = Stem;
+},
+{
+place = "{51, 55}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-53, 662}";
+type = Stem;
+},
+{
+place = "{72, 57}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"310 49 OFFCURVE",
+"371 98 OFFCURVE",
+"393 182 CURVE",
+"384 191 LINE",
+"386 118 OFFCURVE",
+"427 59 OFFCURVE",
+"487 59 CURVE SMOOTH",
+"538 59 OFFCURVE",
+"578 194 OFFCURVE",
+"534 194 CURVE SMOOTH",
+"454 194 OFFCURVE",
+"430 248 OFFCURVE",
+"432 336 CURVE",
+"372 347 LINE",
+"372 229 OFFCURVE",
+"358 181 OFFCURVE",
+"271 146 CURVE",
+"231 31 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"423 238 LINE",
+"428 262 OFFCURVE",
+"432 287 OFFCURVE",
+"432 308 CURVE SMOOTH",
+"432 412 OFFCURVE",
+"439 642 OFFCURVE",
+"443 697 CURVE",
+"422 700 LINE",
+"394 601 LINE SMOOTH",
+"387 576 OFFCURVE",
+"371 530 OFFCURVE",
+"371 468 CURVE SMOOTH",
+"371 382 OFFCURVE",
+"373 337 OFFCURVE",
+"372 238 CURVE"
+);
+}
+);
+width = 322;
+}
+);
+note = LAMm11;
+},
+{
+color = 3;
 glyphname = LAMm2;
 layers = (
 {
@@ -60654,36 +60550,36 @@ width = 404;
 note = LAMm2;
 },
 {
-color = 1;
-glyphname = LAMm20;
+color = 3;
+glyphname = LAMm3;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{402, -244}";
+position = "{152, -277}";
 },
 {
 name = entry;
-position = "{542, 20}";
+position = "{273, 22}";
 },
 {
 name = exit;
-position = "{85, -68}";
+position = "{42, -5}";
 },
 {
 name = top;
-position = "{447, 709}";
+position = "{152, 700}";
 }
 );
 hints = (
 {
 horizontal = 1;
-place = "{-53, 662}";
+place = "{-69, 662}";
 type = Stem;
 },
 {
-place = "{72, 57}";
+place = "{50, 59}";
 type = Stem;
 },
 {
@@ -60701,57 +60597,339 @@ paths = (
 {
 closed = 1;
 nodes = (
-"169 -105 OFFCURVE",
-"396 -13 OFFCURVE",
-"420 84 CURVE",
-"411 93 LINE",
-"413 20 OFFCURVE",
-"457 -51 OFFCURVE",
-"514 -51 CURVE SMOOTH",
-"565 -51 OFFCURVE",
-"605 84 OFFCURVE",
-"561 84 CURVE SMOOTH",
-"484 84 OFFCURVE",
-"457 150 OFFCURVE",
-"459 238 CURVE",
-"399 249 LINE",
-"399 115 OFFCURVE",
-"410 23 OFFCURVE",
-"19 -59 CURVE",
-"-13 -73 OFFCURVE",
-"1 -105 OFFCURVE",
-"19 -105 CURVE"
+"75 -76 OFFCURVE",
+"111 0 OFFCURVE",
+"131 84 CURVE",
+"149 -2 OFFCURVE",
+"193 -49 OFFCURVE",
+"245 -49 CURVE SMOOTH",
+"295 -49 OFFCURVE",
+"337 86 OFFCURVE",
+"292 86 CURVE SMOOTH",
+"224 86 OFFCURVE",
+"186 135 OFFCURVE",
+"186 210 CURVE",
+"126 196 LINE",
+"126 139 OFFCURVE",
+"106 59 OFFCURVE",
+"61 59 CURVE SMOOTH",
+"13 59 OFFCURVE",
+"-20 -76 OFFCURVE",
+"14 -76 CURVE SMOOTH"
 );
 },
 {
 closed = 1;
 nodes = (
-"450 140 LINE",
-"455 164 OFFCURVE",
-"459 189 OFFCURVE",
-"459 210 CURVE SMOOTH",
-"459 314 OFFCURVE",
-"466 544 OFFCURVE",
-"470 599 CURVE",
-"449 602 LINE",
-"421 503 LINE SMOOTH",
-"414 478 OFFCURVE",
-"398 432 OFFCURVE",
-"398 370 CURVE SMOOTH",
-"398 284 OFFCURVE",
-"400 239 OFFCURVE",
-"399 140 CURVE"
+"177 140 LINE",
+"182 164 OFFCURVE",
+"186 189 OFFCURVE",
+"186 210 CURVE SMOOTH",
+"186 314 OFFCURVE",
+"193 544 OFFCURVE",
+"197 599 CURVE",
+"176 602 LINE",
+"148 503 LINE SMOOTH",
+"141 478 OFFCURVE",
+"125 432 OFFCURVE",
+"125 370 CURVE",
+"126 140 LINE"
 );
 }
 );
-width = 580;
+width = 311;
 }
 );
-note = LAMm1;
+note = LAMm3;
 },
 {
-color = 1;
-glyphname = LAMm21;
+color = 3;
+glyphname = LAMm4;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{296, -414}";
+},
+{
+name = entry;
+position = "{389, 2}";
+},
+{
+name = exit;
+position = "{240, -5}";
+},
+{
+name = top;
+position = "{281, 650}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-83, 667}";
+type = Stem;
+},
+{
+place = "{51, 58}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-53, 662}";
+type = Stem;
+},
+{
+place = "{72, 57}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"411 -69 OFFCURVE",
+"452 66 OFFCURVE",
+"408 66 CURVE SMOOTH",
+"336 66 OFFCURVE",
+"308 124 OFFCURVE",
+"308 210 CURVE",
+"248 191 LINE",
+"248 85 OFFCURVE",
+"195 13 OFFCURVE",
+"114 13 CURVE SMOOTH",
+"98 13 OFFCURVE",
+"80 16 OFFCURVE",
+"61 22 CURVE",
+"0 -41 LINE",
+"32 -55 OFFCURVE",
+"63 -62 OFFCURVE",
+"93 -62 CURVE SMOOTH",
+"163 -62 OFFCURVE",
+"230 -23 OFFCURVE",
+"253 63 CURVE",
+"248 63 LINE",
+"252 -18 OFFCURVE",
+"299 -69 OFFCURVE",
+"361 -69 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"299 140 LINE",
+"304 164 OFFCURVE",
+"308 189 OFFCURVE",
+"308 210 CURVE SMOOTH",
+"308 314 OFFCURVE",
+"315 454 OFFCURVE",
+"319 509 CURVE",
+"298 512 LINE",
+"270 413 LINE SMOOTH",
+"263 388 OFFCURVE",
+"247 342 OFFCURVE",
+"247 280 CURVE SMOOTH",
+"248 140 LINE"
+);
+}
+);
+width = 427;
+}
+);
+note = LAMm4;
+},
+{
+color = 3;
+glyphname = LAMm5;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{192, -337}";
+},
+{
+name = entry;
+position = "{241, 41}";
+},
+{
+name = exit;
+position = "{52, 0}";
+},
+{
+name = top;
+position = "{130, 720}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-11, 124}";
+type = Stem;
+},
+{
+place = "{113, 59}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"157 140 LINE",
+"162 164 OFFCURVE",
+"166 189 OFFCURVE",
+"166 210 CURVE SMOOTH",
+"166 314 OFFCURVE",
+"173 544 OFFCURVE",
+"177 599 CURVE",
+"156 602 LINE",
+"128 503 LINE SMOOTH",
+"121 478 OFFCURVE",
+"105 432 OFFCURVE",
+"105 370 CURVE",
+"106 140 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"45 -42 OFFCURVE",
+"108 53 OFFCURVE",
+"121 123 CURVE",
+"109 116 LINE",
+"123 21 OFFCURVE",
+"161 -30 OFFCURVE",
+"213 -30 CURVE SMOOTH",
+"264 -30 OFFCURVE",
+"304 105 OFFCURVE",
+"260 105 CURVE SMOOTH",
+"188 105 OFFCURVE",
+"166 164 OFFCURVE",
+"166 210 CURVE",
+"106 225 LINE",
+"106 208 OFFCURVE",
+"105 192 OFFCURVE",
+"104 182 CURVE SMOOTH",
+"101 143 OFFCURVE",
+"83 95 OFFCURVE",
+"63 55 CURVE SMOOTH",
+"47 23 OFFCURVE",
+"12 -44 OFFCURVE",
+"-1 -75 CURVE",
+"16 -85 LINE"
+);
+}
+);
+width = 279;
+}
+);
+note = LAMm5;
+},
+{
+color = 3;
+glyphname = LAMm7;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{307, -244}";
+},
+{
+name = entry;
+position = "{447, 20}";
+},
+{
+name = exit;
+position = "{60, 10}";
+},
+{
+name = top;
+position = "{352, 709}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-75, 636}";
+type = Stem;
+},
+{
+place = "{69, 56}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-69, 662}";
+type = Stem;
+},
+{
+place = "{50, 59}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-53, 662}";
+type = Stem;
+},
+{
+place = "{72, 57}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"131 -20 OFFCURVE",
+"270 12 OFFCURVE",
+"319 65 CURVE",
+"330 3 OFFCURVE",
+"369 -51 OFFCURVE",
+"419 -51 CURVE SMOOTH",
+"470 -51 OFFCURVE",
+"510 84 OFFCURVE",
+"466 84 CURVE SMOOTH",
+"393 84 OFFCURVE",
+"366 143 OFFCURVE",
+"364 217 CURVE SMOOTH",
+"364 324 OFFCURVE",
+"371 545 OFFCURVE",
+"375 599 CURVE",
+"354 602 LINE",
+"326 503 LINE SMOOTH",
+"319 478 OFFCURVE",
+"303 425 OFFCURVE",
+"303 378 CURVE SMOOTH",
+"303 329 OFFCURVE",
+"304 291 OFFCURVE",
+"304 249 CURVE SMOOTH",
+"304 218 OFFCURVE",
+"304 184 OFFCURVE",
+"300 161 CURVE SMOOTH",
+"291 109 OFFCURVE",
+"270 99 OFFCURVE",
+"203 66 CURVE SMOOTH",
+"128 29 OFFCURVE",
+"42 -6 OFFCURVE",
+"0 -83 CURVE",
+"14 -96 LINE"
+);
+}
+);
+width = 485;
+}
+);
+note = LAMm7;
+},
+{
+color = 3;
+glyphname = LAMm8;
 layers = (
 {
 anchors = (
@@ -60765,7 +60943,7 @@ position = "{478, 20}";
 },
 {
 name = exit;
-position = "{91, -68}";
+position = "{107, -71}";
 },
 {
 name = top;
@@ -60773,6 +60951,15 @@ position = "{383, 709}";
 }
 );
 hints = (
+{
+horizontal = 1;
+place = "{-51, 662}";
+type = Stem;
+},
+{
+place = "{72, 59}";
+type = Stem;
+},
 {
 horizontal = 1;
 place = "{-53, 662}";
@@ -60834,476 +61021,29 @@ nodes = (
 width = 516;
 }
 );
-note = LAMm1;
-},
-{
-color = 1;
-glyphname = LAMm3;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{206, -414}";
-},
-{
-name = entry;
-position = "{306, 1}";
-},
-{
-name = exit;
-position = "{106, 0}";
-},
-{
-name = top;
-position = "{182, 688}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-69, 662}";
-type = Stem;
-},
-{
-place = "{50, 59}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"329 -70 OFFCURVE",
-"369 65 OFFCURVE",
-"325 65 CURVE SMOOTH",
-"249 65 OFFCURVE",
-"220 145 OFFCURVE",
-"220 210 CURVE",
-"160 194 LINE",
-"160 106 OFFCURVE",
-"153 60 OFFCURVE",
-"67 20 CURVE SMOOTH",
-"52 13 LINE SMOOTH",
-"30 3 OFFCURVE",
-"7 -16 OFFCURVE",
-"0 -34 CURVE",
-"11 -45 OFFCURVE",
-"25 -50 OFFCURVE",
-"43 -50 CURVE SMOOTH",
-"94 -50 OFFCURVE",
-"149 0 OFFCURVE",
-"162 63 CURVE",
-"178 -23 OFFCURVE",
-"226 -70 OFFCURVE",
-"278 -70 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"211 140 LINE",
-"216 164 OFFCURVE",
-"220 189 OFFCURVE",
-"220 210 CURVE SMOOTH",
-"220 314 OFFCURVE",
-"227 544 OFFCURVE",
-"231 599 CURVE",
-"210 602 LINE",
-"182 503 LINE SMOOTH",
-"175 478 OFFCURVE",
-"159 432 OFFCURVE",
-"159 370 CURVE",
-"160 140 LINE"
-);
-}
-);
-width = 344;
-}
-);
-note = LAMm3;
-},
-{
-color = 1;
-glyphname = LAMm4;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{192, -337}";
-},
-{
-name = entry;
-position = "{241, 41}";
-},
-{
-name = exit;
-position = "{52, 0}";
-},
-{
-name = top;
-position = "{130, 720}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-83, 667}";
-type = Stem;
-},
-{
-place = "{51, 58}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"7 -106 LINE",
-"32 -53 OFFCURVE",
-"95 15 OFFCURVE",
-"112 98 CURVE",
-"128 15 OFFCURVE",
-"164 -30 OFFCURVE",
-"213 -30 CURVE SMOOTH",
-"264 -30 OFFCURVE",
-"304 105 OFFCURVE",
-"260 105 CURVE SMOOTH",
-"188 105 OFFCURVE",
-"166 164 OFFCURVE",
-"166 210 CURVE",
-"111 225 LINE",
-"111 208 OFFCURVE",
-"110 192 OFFCURVE",
-"109 182 CURVE SMOOTH",
-"106 143 OFFCURVE",
-"79 84 OFFCURVE",
-"63 55 CURVE SMOOTH",
-"42 17 OFFCURVE",
-"-2 -51 OFFCURVE",
-"0 -98 CURVE"
-);
-},
-{
-closed = 1;
-nodes = (
-"157 140 LINE",
-"162 164 OFFCURVE",
-"166 189 OFFCURVE",
-"166 210 CURVE SMOOTH",
-"166 314 OFFCURVE",
-"173 544 OFFCURVE",
-"177 599 CURVE",
-"156 602 LINE",
-"128 503 LINE SMOOTH",
-"121 478 OFFCURVE",
-"105 432 OFFCURVE",
-"105 370 CURVE",
-"106 140 LINE"
-);
-}
-);
-width = 279;
-}
-);
-note = LAMm4;
-},
-{
-color = 1;
-glyphname = LAMm5;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{344, -174}";
-},
-{
-name = entry;
-position = "{431, 190}";
-},
-{
-name = exit;
-position = "{174, 0}";
-},
-{
-name = top;
-position = "{336, 800}";
-}
-);
-components = (
-{
-name = LAMi5;
-transform = "{1, 0, 0, 1, 172, -5}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-11, 124}";
-type = Stem;
-},
-{
-place = "{113, 59}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"454 119 OFFCURVE",
-"494 254 OFFCURVE",
-"450 254 CURVE SMOOTH",
-"389 254 OFFCURVE",
-"346 268 OFFCURVE",
-"346 382 CURVE",
-"314 237 LINE",
-"319 173 OFFCURVE",
-"352 119 OFFCURVE",
-"403 119 CURVE SMOOTH"
-);
-}
-);
-width = 469;
-}
-);
-note = LAMm5;
-},
-{
-color = 1;
-glyphname = LAMm7;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{217, -370}";
-},
-{
-name = entry;
-position = "{306, 5}";
-},
-{
-name = exit;
-position = "{106, 0}";
-},
-{
-name = top;
-position = "{206, 619}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-75, 636}";
-type = Stem;
-},
-{
-place = "{69, 56}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-69, 662}";
-type = Stem;
-},
-{
-place = "{50, 59}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"329 -66 OFFCURVE",
-"369 69 OFFCURVE",
-"325 69 CURVE SMOOTH",
-"232 69 OFFCURVE",
-"231 165 OFFCURVE",
-"234 234 CURVE SMOOTH",
-"245 534 LINE",
-"220 537 LINE",
-"184 422 LINE SMOOTH",
-"171 380 OFFCURVE",
-"169 308 OFFCURVE",
-"165 195 CURVE SMOOTH",
-"160 44 OFFCURVE",
-"185 -66 OFFCURVE",
-"278 -66 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"92 -51 OFFCURVE",
-"170 12 OFFCURVE",
-"187 86 CURVE",
-"178 222 LINE",
-"177 105 OFFCURVE",
-"159 49 OFFCURVE",
-"57 14 CURVE SMOOTH",
-"22 2 OFFCURVE",
-"7 -19 OFFCURVE",
-"0 -31 CURVE",
-"12 -46 OFFCURVE",
-"26 -51 OFFCURVE",
-"50 -51 CURVE SMOOTH"
-);
-}
-);
-width = 344;
-}
-);
-note = LAMm7;
-},
-{
-color = 1;
-glyphname = LAMm8;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{206, -262}";
-},
-{
-name = entry;
-position = "{314, 39}";
-},
-{
-name = exit;
-position = "{114, 0}";
-},
-{
-name = top;
-position = "{195, 627}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{-51, 662}";
-type = Stem;
-},
-{
-place = "{72, 59}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{72, 57}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"90 -51 OFFCURVE",
-"162 -11 OFFCURVE",
-"195 68 CURVE",
-"181 119 LINE",
-"165 45 OFFCURVE",
-"92 34 OFFCURVE",
-"57 17 CURVE SMOOTH",
-"23 0 OFFCURVE",
-"7 -16 OFFCURVE",
-"0 -28 CURVE",
-"12 -45 OFFCURVE",
-"26 -51 OFFCURVE",
-"50 -51 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"337 -32 OFFCURVE",
-"377 103 OFFCURVE",
-"333 103 CURVE SMOOTH",
-"240 103 OFFCURVE",
-"239 209 OFFCURVE",
-"242 278 CURVE SMOOTH",
-"253 534 LINE",
-"228 537 LINE",
-"192 422 LINE SMOOTH",
-"179 380 OFFCURVE",
-"177 341 OFFCURVE",
-"173 228 CURVE SMOOTH",
-"168 89 OFFCURVE",
-"185 52 OFFCURVE",
-"201 23 CURVE SMOOTH",
-"218 -9 OFFCURVE",
-"246 -32 OFFCURVE",
-"286 -32 CURVE SMOOTH"
-);
-}
-);
-width = 352;
-}
-);
 note = LAMm8;
 },
 {
-color = 1;
+color = 3;
 glyphname = LAMm9;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{213, -266}";
+position = "{202, -337}";
 },
 {
 name = entry;
-position = "{313, 0}";
+position = "{259, 43}";
 },
 {
 name = exit;
-position = "{113, 0}";
+position = "{58, 0}";
 },
 {
 name = top;
-position = "{216, 615}";
+position = "{150, 656}";
 }
 );
 hints = (
@@ -61349,46 +61089,54 @@ paths = (
 {
 closed = 1;
 nodes = (
-"92 -50 OFFCURVE",
-"182 8 OFFCURVE",
-"194 91 CURVE",
-"172 200 LINE",
-"172 102 OFFCURVE",
-"167 57 OFFCURVE",
-"65 22 CURVE SMOOTH",
-"30 10 OFFCURVE",
-"7 -18 OFFCURVE",
-"0 -30 CURVE",
-"12 -45 OFFCURVE",
-"26 -50 OFFCURVE",
-"50 -50 CURVE SMOOTH"
+"49 -136 OFFCURVE",
+"113 -81 OFFCURVE",
+"83 -60 CURVE SMOOTH",
+"67 -49 OFFCURVE",
+"65 -40 OFFCURVE",
+"65 -33 CURVE SMOOTH",
+"65 6 OFFCURVE",
+"109 37 OFFCURVE",
+"138 104 CURVE",
+"118 103 LINE",
+"123 53 OFFCURVE",
+"160 -28 OFFCURVE",
+"231 -28 CURVE SMOOTH",
+"282 -28 OFFCURVE",
+"322 107 OFFCURVE",
+"278 107 CURVE SMOOTH",
+"208 107 OFFCURVE",
+"178 170 OFFCURVE",
+"178 230 CURVE",
+"118 217 LINE",
+"118 154 OFFCURVE",
+"111 125 OFFCURVE",
+"79 64 CURVE SMOOTH",
+"51 10 OFFCURVE",
+"-2 -49 OFFCURVE",
+"0 -131 CURVE"
 );
 },
 {
 closed = 1;
 nodes = (
-"336 -71 OFFCURVE",
-"376 64 OFFCURVE",
-"332 64 CURVE SMOOTH",
-"239 64 OFFCURVE",
-"238 170 OFFCURVE",
-"241 239 CURVE SMOOTH",
-"252 539 LINE",
-"227 542 LINE",
-"191 427 LINE SMOOTH",
-"178 385 OFFCURVE",
-"176 313 OFFCURVE",
-"172 200 CURVE SMOOTH",
-"167 61 OFFCURVE",
-"187 9 OFFCURVE",
-"203 -20 CURVE SMOOTH",
-"220 -52 OFFCURVE",
-"245 -71 OFFCURVE",
-"285 -71 CURVE SMOOTH"
+"169 160 LINE",
+"174 184 OFFCURVE",
+"178 209 OFFCURVE",
+"178 230 CURVE SMOOTH",
+"178 334 OFFCURVE",
+"185 474 OFFCURVE",
+"189 529 CURVE",
+"168 532 LINE",
+"140 433 LINE SMOOTH",
+"133 408 OFFCURVE",
+"117 362 OFFCURVE",
+"117 300 CURVE",
+"118 160 LINE"
 );
 }
 );
-width = 351;
+width = 297;
 }
 );
 note = LAMm9;
@@ -82898,45 +82646,36 @@ width = 345;
 note = JIMm8;
 },
 {
-color = 1;
-glyphname = LAMm32;
+color = 3;
+glyphname = LAMm6;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{152, -277}";
+position = "{192, -337}";
 },
 {
 name = entry;
-position = "{273, 22}";
+position = "{241, 41}";
 },
 {
 name = exit;
-position = "{42, -5}";
+position = "{79, 95}";
 },
 {
 name = top;
-position = "{152, 700}";
+position = "{130, 720}";
 }
 );
 hints = (
 {
 horizontal = 1;
-place = "{-77, 140}";
+place = "{-11, 124}";
 type = Stem;
 },
 {
-place = "{102, 59}";
-type = Stem;
-},
-{
-horizontal = 1;
-place = "{-53, 662}";
-type = Stem;
-},
-{
-place = "{121, 57}";
+place = "{113, 59}";
 type = Stem;
 }
 );
@@ -82945,50 +82684,140 @@ paths = (
 {
 closed = 1;
 nodes = (
-"75 -76 OFFCURVE",
-"111 0 OFFCURVE",
-"131 84 CURVE",
-"149 -2 OFFCURVE",
-"193 -49 OFFCURVE",
-"245 -49 CURVE SMOOTH",
-"295 -49 OFFCURVE",
-"337 86 OFFCURVE",
-"292 86 CURVE SMOOTH",
-"224 86 OFFCURVE",
-"186 135 OFFCURVE",
-"186 210 CURVE",
-"126 196 LINE",
-"126 139 OFFCURVE",
-"106 59 OFFCURVE",
-"61 59 CURVE SMOOTH",
-"13 59 OFFCURVE",
-"-20 -76 OFFCURVE",
-"14 -76 CURVE SMOOTH"
+"157 140 LINE",
+"162 164 OFFCURVE",
+"166 189 OFFCURVE",
+"166 210 CURVE SMOOTH",
+"166 314 OFFCURVE",
+"173 544 OFFCURVE",
+"177 599 CURVE",
+"156 602 LINE",
+"128 503 LINE SMOOTH",
+"121 478 OFFCURVE",
+"105 432 OFFCURVE",
+"105 370 CURVE",
+"106 140 LINE"
 );
 },
 {
 closed = 1;
 nodes = (
-"177 140 LINE",
-"182 164 OFFCURVE",
-"186 189 OFFCURVE",
-"186 210 CURVE SMOOTH",
-"186 314 OFFCURVE",
-"193 544 OFFCURVE",
-"197 599 CURVE",
-"176 602 LINE",
-"148 503 LINE SMOOTH",
-"141 478 OFFCURVE",
-"125 432 OFFCURVE",
-"125 370 CURVE",
-"126 140 LINE"
+"43 14 OFFCURVE",
+"108 53 OFFCURVE",
+"121 123 CURVE",
+"109 116 LINE",
+"123 21 OFFCURVE",
+"161 -30 OFFCURVE",
+"213 -30 CURVE SMOOTH",
+"264 -30 OFFCURVE",
+"304 105 OFFCURVE",
+"260 105 CURVE SMOOTH",
+"188 105 OFFCURVE",
+"166 164 OFFCURVE",
+"166 210 CURVE",
+"106 225 LINE",
+"106 208 OFFCURVE",
+"105 192 OFFCURVE",
+"104 182 CURVE SMOOTH",
+"101 143 OFFCURVE",
+"99 120 OFFCURVE",
+"76 83 CURVE SMOOTH",
+"60 57 OFFCURVE",
+"8 -14 OFFCURVE",
+"-5 -45 CURVE",
+"0 -79 LINE"
 );
 }
 );
-width = 311;
+width = 279;
 }
 );
-note = LAMm2;
+note = LAMm5;
+},
+{
+color = 3;
+glyphname = LAMm15;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{88, -244}";
+},
+{
+name = entry;
+position = "{228, 32}";
+},
+{
+name = exit;
+position = "{-57, 14}";
+},
+{
+name = top;
+position = "{133, 709}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-53, 662}";
+type = Stem;
+},
+{
+place = "{72, 57}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"70 -26 OFFCURVE",
+"107 20 OFFCURVE",
+"106 84 CURVE",
+"97 93 LINE",
+"99 20 OFFCURVE",
+"140 -39 OFFCURVE",
+"200 -39 CURVE SMOOTH",
+"251 -39 OFFCURVE",
+"291 96 OFFCURVE",
+"247 96 CURVE SMOOTH",
+"167 96 OFFCURVE",
+"143 150 OFFCURVE",
+"145 238 CURVE",
+"85 249 LINE",
+"85 131 OFFCURVE",
+"76 86 OFFCURVE",
+"1 66 CURVE",
+"11 -34 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"136 140 LINE",
+"141 164 OFFCURVE",
+"145 189 OFFCURVE",
+"145 210 CURVE SMOOTH",
+"145 314 OFFCURVE",
+"152 544 OFFCURVE",
+"156 599 CURVE",
+"135 602 LINE",
+"107 503 LINE SMOOTH",
+"100 478 OFFCURVE",
+"84 432 OFFCURVE",
+"84 370 CURVE SMOOTH",
+"84 284 OFFCURVE",
+"86 239 OFFCURVE",
+"85 140 CURVE"
+);
+}
+);
+width = 266;
+}
+);
+note = LAMm1;
 }
 );
 instances = (
@@ -84814,7 +84643,7 @@ JIMm = "2";
 KAFi = 1;
 KAFm = "2";
 LAMi = 1;
-LAMm = "13";
+LAMm = "2";
 "Left Glyph" = AINm8;
 MIMi = 1;
 MIMm = 1;
@@ -84846,7 +84675,7 @@ JIMm = "2";
 KAFi = 1;
 KAFm = "2";
 LAMi = 1;
-LAMm = 1;
+LAMm = "2";
 "Left Glyph" = AINm9;
 MIMi = 1;
 MIMm = 1;
@@ -84878,7 +84707,7 @@ JIMm = "2";
 KAFi = 1;
 KAFm = "2";
 LAMi = 1;
-LAMm = 1;
+LAMm = "2";
 "Left Glyph" = AINm10;
 MIMi = 1;
 MIMm = 1;
@@ -84910,7 +84739,7 @@ JIMm = "2";
 KAFi = 1;
 KAFm = "2";
 LAMi = 1;
-LAMm = 1;
+LAMm = "2";
 "Left Glyph" = AINm11;
 MIMi = 1;
 MIMm = 1;
@@ -84942,7 +84771,7 @@ JIMm = "2";
 KAFi = "14";
 KAFm = "2";
 LAMi = "12";
-LAMm = "11";
+LAMm = "2";
 "Left Glyph" = AINm12;
 MIMi = "12";
 MIMm = "14";
@@ -84974,7 +84803,7 @@ JIMm = "2";
 KAFi = "14";
 KAFm = "2";
 LAMi = "12";
-LAMm = "11";
+LAMm = "2";
 "Left Glyph" = AINm13;
 MIMi = "12";
 MIMm = "14";
@@ -85006,7 +84835,7 @@ JIMm = "2";
 KAFi = "14";
 KAFm = "2";
 LAMi = "12";
-LAMm = "11";
+LAMm = "2";
 "Left Glyph" = AINm14;
 MIMi = "12";
 MIMm = "14";
@@ -85038,7 +84867,7 @@ JIMm = "2";
 KAFi = 1;
 KAFm = "2";
 LAMi = 1;
-LAMm = 1;
+LAMm = "2";
 "Left Glyph" = AINm15;
 MIMi = 1;
 MIMm = 1;
@@ -85262,7 +85091,7 @@ JIMm = "1";
 KAFi = "8";
 KAFm = "1";
 LAMi = "2";
-LAMm = "2";
+LAMm = "1";
 "Left Glyph" = BEm4;
 MIMi = "3";
 MIMm = "5";
@@ -85294,7 +85123,7 @@ JIMm = "1";
 KAFi = "8";
 KAFm = "1";
 LAMi = "2";
-LAMm = "2";
+LAMm = "1";
 "Left Glyph" = TEm4;
 MIMi = "3";
 MIMm = "5";
@@ -85326,7 +85155,7 @@ JIMm = "1";
 KAFi = "8";
 KAFm = "1";
 LAMi = "2";
-LAMm = "2";
+LAMm = "1";
 "Left Glyph" = BEm5;
 MIMi = "3";
 MIMm = "5";
@@ -85358,7 +85187,7 @@ JIMm = "1";
 KAFi = "8";
 KAFm = "1";
 LAMi = "2";
-LAMm = "2";
+LAMm = "1";
 "Left Glyph" = TEm5;
 MIMi = "3";
 MIMm = "5";
@@ -85390,7 +85219,7 @@ JIMm = "1";
 KAFi = "8";
 KAFm = "1";
 LAMi = "2";
-LAMm = "2";
+LAMm = "1";
 "Left Glyph" = BEm6;
 MIMi = "3";
 MIMm = "5";
@@ -85422,7 +85251,7 @@ JIMm = "1";
 KAFi = "8";
 KAFm = "1";
 LAMi = "2";
-LAMm = "2";
+LAMm = "1";
 "Left Glyph" = TEm6;
 MIMi = "3";
 MIMm = "5";
@@ -86030,7 +85859,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm1;
 MIMi = "13";
 MIMm = "15";
@@ -86062,7 +85891,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm2;
 MIMi = "13";
 MIMm = "15";
@@ -86094,7 +85923,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm3;
 MIMi = "13";
 MIMm = "15";
@@ -86126,7 +85955,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm4;
 MIMi = "13";
 MIMm = "15";
@@ -86158,7 +85987,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm5;
 MIMi = "13";
 MIMm = "15";
@@ -86190,7 +86019,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm6;
 MIMi = "13";
 MIMm = "15";
@@ -86222,7 +86051,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm7;
 MIMi = "13";
 MIMm = "15";
@@ -86254,7 +86083,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm8;
 MIMi = "13";
 MIMm = "15";
@@ -86286,7 +86115,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm9;
 MIMi = "13";
 MIMm = "15";
@@ -86318,7 +86147,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm10;
 MIMi = "13";
 MIMm = "15";
@@ -86350,7 +86179,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm11;
 MIMi = "13";
 MIMm = "15";
@@ -86382,7 +86211,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm12;
 MIMi = "13";
 MIMm = "15";
@@ -86414,7 +86243,7 @@ JIMm = "4";
 KAFi = 1;
 KAFm = "4";
 LAMi = 1;
-LAMm = 1;
+LAMm = "4";
 "Left Glyph" = FEm13;
 MIMi = 1;
 MIMm = 1;
@@ -86446,7 +86275,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm14;
 MIMi = "13";
 MIMm = "15";
@@ -86478,7 +86307,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEm15;
 MIMi = "13";
 MIMm = "15";
@@ -86510,7 +86339,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm1;
 MIMi = "4";
 MIMm = "4";
@@ -86542,7 +86371,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm2;
 MIMi = "4";
 MIMm = "4";
@@ -86574,7 +86403,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm3;
 MIMi = "4";
 MIMm = "4";
@@ -86606,7 +86435,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm4;
 MIMi = "4";
 MIMm = "4";
@@ -86638,7 +86467,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm5;
 MIMi = "4";
 MIMm = "4";
@@ -86670,7 +86499,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm6;
 MIMi = "4";
 MIMm = "4";
@@ -86702,7 +86531,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm7;
 MIMi = "4";
 MIMm = "4";
@@ -86734,7 +86563,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm8;
 MIMi = "4";
 MIMm = "4";
@@ -86766,7 +86595,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm9;
 MIMi = "4";
 MIMm = "4";
@@ -86798,7 +86627,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm10;
 MIMi = "4";
 MIMm = "4";
@@ -86830,7 +86659,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm11;
 MIMi = "4";
 MIMm = "4";
@@ -86862,7 +86691,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm12;
 MIMi = "4";
 MIMm = "4";
@@ -86894,7 +86723,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm13;
 MIMi = "4";
 MIMm = "4";
@@ -86926,7 +86755,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm14;
 MIMi = "4";
 MIMm = "4";
@@ -86958,7 +86787,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAm15;
 MIMi = "4";
 MIMm = "4";
@@ -86990,7 +86819,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm1;
 MIMi = "4";
 MIMm = "4";
@@ -87022,7 +86851,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm2;
 MIMi = "4";
 MIMm = "4";
@@ -87054,7 +86883,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm3;
 MIMi = "4";
 MIMm = "4";
@@ -87086,7 +86915,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm4;
 MIMi = "4";
 MIMm = "4";
@@ -87118,7 +86947,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm5;
 MIMi = "4";
 MIMm = "4";
@@ -87150,7 +86979,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm6;
 MIMi = "4";
 MIMm = "4";
@@ -87182,7 +87011,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm7;
 MIMi = "4";
 MIMm = "4";
@@ -87214,7 +87043,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm8;
 MIMi = "4";
 MIMm = "4";
@@ -87246,7 +87075,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm9;
 MIMi = "4";
 MIMm = "4";
@@ -87278,7 +87107,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm10;
 MIMi = "4";
 MIMm = "4";
@@ -87310,7 +87139,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = 1;
-LAMm = 1;
+LAMm = "6";
 "Left Glyph" = HAYCm11;
 MIMi = 1;
 MIMm = 1;
@@ -87342,7 +87171,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = "4";
-LAMm = "4";
+LAMm = "6";
 "Left Glyph" = HAYCm12;
 MIMi = "4";
 MIMm = "4";
@@ -87374,7 +87203,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = 1;
-LAMm = 1;
+LAMm = "6";
 "Left Glyph" = HAYCm14;
 MIMi = 1;
 MIMm = 1;
@@ -87406,7 +87235,7 @@ JIMm = "6";
 KAFi = "6";
 KAFm = "6";
 LAMi = 1;
-LAMm = 1;
+LAMm = "6";
 "Left Glyph" = HAYCm15;
 MIMi = 1;
 MIMm = 1;
@@ -87438,7 +87267,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm1;
 MIMi = "2";
 MIMm = "2";
@@ -87470,7 +87299,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm2;
 MIMi = "2";
 MIMm = "2";
@@ -87502,7 +87331,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm3;
 MIMi = "2";
 MIMm = "2";
@@ -87534,7 +87363,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm4;
 MIMi = "2";
 MIMm = "2";
@@ -87566,7 +87395,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm5;
 MIMi = "2";
 MIMm = "2";
@@ -87598,7 +87427,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm6;
 MIMi = "2";
 MIMm = "2";
@@ -87630,7 +87459,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm7;
 MIMi = "2";
 MIMm = "2";
@@ -87662,7 +87491,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm8;
 MIMi = "2";
 MIMm = "2";
@@ -87677,24 +87506,24 @@ TOEm = "6";
 },
 {
 AINi = 1;
-AINm = 1;
+AINm = "7";
 BEi = 1;
-BEm = 1;
+BEm = "7";
 FEi = 1;
-FEm = 1;
+FEm = "7";
 GAFi = 1;
-GAFm = 1;
+GAFm = "7";
 HAYAi = 1;
-HAYAm = 1;
+HAYAm = "7";
 HAYCi = 1;
-HAYCm = 1;
+HAYCm = "7";
 Hei = 1;
 JIMi = 1;
-JIMm = 1;
+JIMm = "7";
 KAFi = 1;
-KAFm = 1;
+KAFm = "7";
 LAMi = 1;
-LAMm = 1;
+LAMm = "7";
 "Left Glyph" = JIMm9;
 MIMi = 1;
 MIMm = 1;
@@ -87726,7 +87555,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm10;
 MIMi = "2";
 MIMm = "2";
@@ -87758,7 +87587,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm11;
 MIMi = "2";
 MIMm = "2";
@@ -87790,7 +87619,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm12;
 MIMi = "2";
 MIMm = "2";
@@ -87822,7 +87651,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm13;
 MIMi = "2";
 MIMm = "2";
@@ -87854,7 +87683,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm14;
 MIMi = "2";
 MIMm = "2";
@@ -87886,7 +87715,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMm15;
 MIMi = "2";
 MIMm = "2";
@@ -87918,7 +87747,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = GAFm1;
 MIMi = "3";
 MIMm = "8";
@@ -87950,7 +87779,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = KAFm1;
 MIMi = "3";
 MIMm = "8";
@@ -87982,7 +87811,7 @@ JIMm = "3";
 KAFi = "21";
 KAFm = "3";
 LAMi = "21";
-LAMm = "21";
+LAMm = "3";
 "Left Glyph" = GAFm2;
 MIMi = "21";
 MIMm = "21";
@@ -88014,7 +87843,7 @@ JIMm = "3";
 KAFi = "21";
 KAFm = "3";
 LAMi = "21";
-LAMm = "21";
+LAMm = "3";
 "Left Glyph" = KAFm2;
 MIMi = "21";
 MIMm = "21";
@@ -88046,7 +87875,7 @@ JIMm = "8";
 KAFi = 1;
 KAFm = "8";
 LAMi = "10";
-LAMm = 1;
+LAMm = "8";
 "Left Glyph" = GAFm3;
 MIMi = 1;
 MIMm = 1;
@@ -88078,7 +87907,7 @@ JIMm = "8";
 KAFi = "1";
 KAFm = "8";
 LAMi = "10";
-LAMm = "1";
+LAMm = "8";
 "Left Glyph" = KAFm3;
 MIMi = "1";
 MIMm = "1";
@@ -88110,7 +87939,7 @@ JIMm = "3";
 KAFi = 1;
 KAFm = "3";
 LAMi = "10";
-LAMm = 1;
+LAMm = "3";
 "Left Glyph" = GAFm4;
 MIMi = 1;
 MIMm = 1;
@@ -88142,7 +87971,7 @@ JIMm = "3";
 KAFi = "1";
 KAFm = "3";
 LAMi = "10";
-LAMm = "1";
+LAMm = "3";
 "Left Glyph" = KAFm4;
 MIMi = "1";
 MIMm = "1";
@@ -88174,7 +88003,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = GAFm5;
 MIMi = "3";
 MIMm = "8";
@@ -88206,7 +88035,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = KAFm5;
 MIMi = "3";
 MIMm = "8";
@@ -88238,7 +88067,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = GAFm6;
 MIMi = "3";
 MIMm = "8";
@@ -88270,7 +88099,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = KAFm6;
 MIMi = "3";
 MIMm = "8";
@@ -88302,7 +88131,7 @@ JIMm = "3";
 KAFi = "12";
 KAFm = "3";
 LAMi = "14";
-LAMm = "13";
+LAMm = "3";
 "Left Glyph" = GAFm7;
 MIMi = 1;
 MIMm = 1;
@@ -88334,7 +88163,7 @@ JIMm = "3";
 KAFi = "12";
 KAFm = "3";
 LAMi = "14";
-LAMm = "13";
+LAMm = "3";
 "Left Glyph" = KAFm7;
 MIMi = "1";
 MIMm = "1";
@@ -88366,7 +88195,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = GAFm8;
 MIMi = "3";
 MIMm = "8";
@@ -88398,7 +88227,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = KAFm8;
 MIMi = "3";
 MIMm = "8";
@@ -88430,7 +88259,7 @@ JIMm = "3";
 KAFi = "12";
 KAFm = "3";
 LAMi = "14";
-LAMm = "13";
+LAMm = "3";
 "Left Glyph" = GAFm9;
 MIMi = 1;
 MIMm = 1;
@@ -88462,7 +88291,7 @@ JIMm = "3";
 KAFi = "12";
 KAFm = "3";
 LAMi = "14";
-LAMm = "13";
+LAMm = "3";
 "Left Glyph" = KAFm9;
 MIMi = "1";
 MIMm = "1";
@@ -88494,7 +88323,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = GAFm10;
 MIMi = "3";
 MIMm = "8";
@@ -88526,7 +88355,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = KAFm10;
 MIMi = "3";
 MIMm = "8";
@@ -88556,9 +88385,9 @@ Hei = "21";
 JIMi = "21";
 JIMm = "3";
 KAFi = "21";
-KAFm = "8";
+KAFm = "3";
 LAMi = "21";
-LAMm = "21";
+LAMm = "3";
 "Left Glyph" = GAFm11;
 MIMi = "21";
 MIMm = "21";
@@ -88588,9 +88417,9 @@ Hei = "21";
 JIMi = "21";
 JIMm = "3";
 KAFi = "21";
-KAFm = "8";
+KAFm = "3";
 LAMi = "21";
-LAMm = "21";
+LAMm = "3";
 "Left Glyph" = KAFm11;
 MIMi = "21";
 MIMm = "21";
@@ -88622,7 +88451,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = GAFm12;
 MIMi = "3";
 MIMm = "8";
@@ -88654,7 +88483,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = KAFm12;
 MIMi = "3";
 MIMm = "8";
@@ -88686,7 +88515,7 @@ JIMm = "3";
 KAFi = "1";
 KAFm = "3";
 LAMi = "10";
-LAMm = 1;
+LAMm = "3";
 "Left Glyph" = GAFm13;
 MIMi = 1;
 MIMm = 1;
@@ -88718,7 +88547,7 @@ JIMm = "3";
 KAFi = 1;
 KAFm = "3";
 LAMi = "10";
-LAMm = 1;
+LAMm = "3";
 "Left Glyph" = KAFm13;
 MIMi = 1;
 MIMm = 1;
@@ -88750,7 +88579,7 @@ JIMm = "3";
 KAFi = 1;
 KAFm = "3";
 LAMi = "10";
-LAMm = 1;
+LAMm = "3";
 "Left Glyph" = GAFm14;
 MIMi = 1;
 MIMm = 1;
@@ -88782,7 +88611,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = KAFm14;
 MIMi = "3";
 MIMm = "8";
@@ -88814,7 +88643,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = GAFm15;
 MIMi = "3";
 MIMm = "8";
@@ -88846,7 +88675,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = KAFm15;
 MIMi = "3";
 MIMm = "8";
@@ -88878,7 +88707,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = GAFm16;
 MIMi = "3";
 MIMm = "8";
@@ -88910,7 +88739,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = GAFm17;
 MIMi = "3";
 MIMm = "8";
@@ -88942,7 +88771,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "11";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = KAFm17;
 MIMi = "3";
 MIMm = "8";
@@ -88974,7 +88803,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "1";
 LAMi = "11";
-LAMm = "10";
+LAMm = "1";
 "Left Glyph" = KAFm18;
 MIMi = "3";
 MIMm = "8";
@@ -89006,7 +88835,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "1";
 LAMi = "11";
-LAMm = "10";
+LAMm = "1";
 "Left Glyph" = KAFm19;
 MIMi = "3";
 MIMm = "8";
@@ -89102,7 +88931,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm1;
 MIMi = "3";
 MIMm = "5";
@@ -89134,7 +88963,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm2;
 MIMi = "3";
 MIMm = "5";
@@ -89166,7 +88995,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm3;
 MIMi = "3";
 MIMm = "5";
@@ -89198,7 +89027,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm4;
 MIMi = "3";
 MIMm = "5";
@@ -89230,7 +89059,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm5;
 MIMi = "3";
 MIMm = "5";
@@ -89242,6 +89071,38 @@ TEi = "3";
 TEm = "3";
 TOEi = "3";
 TOEm = "3";
+},
+{
+AINi = 1;
+AINm = "3";
+BEi = 1;
+BEm = "3";
+FEi = 1;
+FEm = "3";
+GAFi = 1;
+GAFm = "3";
+HAYAi = 1;
+HAYAm = "3";
+HAYCi = 1;
+HAYCm = "3";
+Hei = 1;
+JIMi = 1;
+JIMm = "3";
+KAFi = 1;
+KAFm = "3";
+LAMi = 1;
+LAMm = "3";
+"Left Glyph" = LAMm6;
+MIMi = 1;
+MIMm = 1;
+SADi = 1;
+SADm = 1;
+SINi = 1;
+SINm = 1;
+TEi = 1;
+TEm = 1;
+TOEi = 1;
+TOEm = 1;
 },
 {
 AINi = "2";
@@ -89262,7 +89123,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm7;
 MIMi = "3";
 MIMm = "5";
@@ -89294,7 +89155,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm8;
 MIMi = "3";
 MIMm = "5";
@@ -89326,7 +89187,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm9;
 MIMi = "3";
 MIMm = "5";
@@ -89358,7 +89219,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm10;
 MIMi = "3";
 MIMm = "5";
@@ -89390,7 +89251,7 @@ JIMm = "3";
 KAFi = "3";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm11;
 MIMi = "3";
 MIMm = "5";
@@ -89422,7 +89283,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm12;
 MIMi = "3";
 MIMm = "5";
@@ -89454,7 +89315,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm13;
 MIMi = "3";
 MIMm = "5";
@@ -89486,7 +89347,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm14;
 MIMi = "3";
 MIMm = "5";
@@ -89518,7 +89379,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm16;
 MIMi = "3";
 MIMm = "5";
@@ -89550,7 +89411,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm17;
 MIMi = "3";
 MIMm = "5";
@@ -89582,7 +89443,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm20;
 MIMi = "3";
 MIMm = "5";
@@ -89614,7 +89475,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMm21;
 MIMi = "3";
 MIMm = "5";
@@ -89626,6 +89487,102 @@ TEi = "3";
 TEm = "3";
 TOEi = "3";
 TOEm = "3";
+},
+{
+AINi = 1;
+AINm = "3";
+BEi = 1;
+BEm = 1;
+FEi = 1;
+FEm = 1;
+GAFi = 1;
+GAFm = 1;
+HAYAi = 1;
+HAYAm = 1;
+HAYCi = 1;
+HAYCm = 1;
+Hei = 1;
+JIMi = 1;
+JIMm = 1;
+KAFi = 1;
+KAFm = 1;
+LAMi = 1;
+LAMm = 1;
+"Left Glyph" = LAMm32;
+MIMi = 1;
+MIMm = 1;
+SADi = 1;
+SADm = 1;
+SINi = 1;
+SINm = 1;
+TEi = 1;
+TEm = 1;
+TOEi = 1;
+TOEm = 1;
+},
+{
+AINi = 1;
+AINm = "14";
+BEi = 1;
+BEm = 1;
+FEi = 1;
+FEm = 1;
+GAFi = 1;
+GAFm = 1;
+HAYAi = 1;
+HAYAm = 1;
+HAYCi = 1;
+HAYCm = 1;
+Hei = 1;
+JIMi = 1;
+JIMm = 1;
+KAFi = 1;
+KAFm = 1;
+LAMi = 1;
+LAMm = 1;
+"Left Glyph" = LAMm34;
+MIMi = 1;
+MIMm = 1;
+SADi = 1;
+SADm = 1;
+SINi = 1;
+SINm = 1;
+TEi = 1;
+TEm = 1;
+TOEi = 1;
+TOEm = 1;
+},
+{
+AINi = 1;
+AINm = 1;
+BEi = 1;
+BEm = 1;
+FEi = 1;
+FEm = 1;
+GAFi = 1;
+GAFm = 1;
+HAYAi = 1;
+HAYAm = 1;
+HAYCi = 1;
+HAYCm = 1;
+Hei = 1;
+JIMi = 1;
+JIMm = 1;
+KAFi = 1;
+KAFm = 1;
+LAMi = 1;
+LAMm = 1;
+"Left Glyph" = LAMm35;
+MIMi = 1;
+MIMm = 1;
+SADi = 1;
+SADm = 1;
+SINi = 1;
+SINm = 1;
+TEi = 1;
+TEm = 1;
+TOEi = 1;
+TOEm = 1;
 },
 {
 AINi = "10";
@@ -89646,7 +89603,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm1;
 MIMi = "16";
 MIMm = "16";
@@ -89678,7 +89635,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm2;
 MIMi = "16";
 MIMm = "16";
@@ -89710,7 +89667,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm3;
 MIMi = "16";
 MIMm = "16";
@@ -89742,7 +89699,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm4;
 MIMi = "16";
 MIMm = "16";
@@ -89774,7 +89731,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm5;
 MIMi = "16";
 MIMm = "16";
@@ -89806,7 +89763,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm6;
 MIMi = "16";
 MIMm = "16";
@@ -89838,7 +89795,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm7;
 MIMi = "16";
 MIMm = "16";
@@ -89870,7 +89827,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm8;
 MIMi = "16";
 MIMm = "16";
@@ -89902,7 +89859,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm9;
 MIMi = "16";
 MIMm = "16";
@@ -89934,7 +89891,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm10;
 MIMi = "16";
 MIMm = "16";
@@ -89966,7 +89923,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm11;
 MIMi = "16";
 MIMm = "16";
@@ -89998,7 +89955,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm12;
 MIMi = "16";
 MIMm = "16";
@@ -90030,7 +89987,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm13;
 MIMi = "16";
 MIMm = "16";
@@ -90062,7 +90019,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm14;
 MIMi = "16";
 MIMm = "16";
@@ -90094,7 +90051,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm15;
 MIMi = "16";
 MIMm = "16";
@@ -90126,7 +90083,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm16;
 MIMi = "16";
 MIMm = "16";
@@ -90158,7 +90115,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm20;
 MIMi = "16";
 MIMm = "16";
@@ -90190,7 +90147,7 @@ JIMm = "9";
 KAFi = "16";
 KAFm = "9";
 LAMi = "13";
-LAMm = "12";
+LAMm = "9";
 "Left Glyph" = MIMm21;
 MIMi = "16";
 MIMm = "16";
@@ -90222,7 +90179,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm1;
 MIMi = "20";
 MIMm = "20";
@@ -90254,7 +90211,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm2;
 MIMi = "20";
 MIMm = "20";
@@ -90286,7 +90243,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm3;
 MIMi = "20";
 MIMm = "20";
@@ -90318,7 +90275,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm4;
 MIMi = "20";
 MIMm = "20";
@@ -90350,7 +90307,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm5;
 MIMi = "20";
 MIMm = "20";
@@ -90382,7 +90339,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm6;
 MIMi = "20";
 MIMm = "20";
@@ -90414,7 +90371,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm7;
 MIMi = "20";
 MIMm = "20";
@@ -90446,7 +90403,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm8;
 MIMi = "20";
 MIMm = "20";
@@ -90478,7 +90435,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm9;
 MIMi = "20";
 MIMm = "20";
@@ -90510,7 +90467,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm10;
 MIMi = "20";
 MIMm = "20";
@@ -90542,7 +90499,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm11;
 MIMi = "20";
 MIMm = "20";
@@ -90574,7 +90531,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm12;
 MIMi = "20";
 MIMm = "20";
@@ -90606,7 +90563,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm13;
 MIMi = "20";
 MIMm = "20";
@@ -90638,7 +90595,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm14;
 MIMi = "20";
 MIMm = "20";
@@ -90670,7 +90627,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm15;
 MIMi = "20";
 MIMm = "20";
@@ -90702,7 +90659,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm16;
 MIMi = "20";
 MIMm = "20";
@@ -90734,7 +90691,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm17;
 MIMi = "20";
 MIMm = "20";
@@ -90766,7 +90723,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm20;
 MIMi = "20";
 MIMm = "20";
@@ -90798,7 +90755,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADm21;
 MIMi = "20";
 MIMm = "20";
@@ -91278,7 +91235,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm1;
 MIMi = "20";
 MIMm = "20";
@@ -91310,7 +91267,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm2;
 MIMi = "20";
 MIMm = "20";
@@ -91342,7 +91299,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm3;
 MIMi = "20";
 MIMm = "20";
@@ -91374,7 +91331,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm4;
 MIMi = "20";
 MIMm = "20";
@@ -91406,7 +91363,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm5;
 MIMi = "20";
 MIMm = "20";
@@ -91438,7 +91395,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm6;
 MIMi = "20";
 MIMm = "20";
@@ -91470,7 +91427,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm7;
 MIMi = "20";
 MIMm = "20";
@@ -91502,7 +91459,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm8;
 MIMi = "20";
 MIMm = "20";
@@ -91534,7 +91491,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm9;
 MIMi = "20";
 MIMm = "20";
@@ -91566,7 +91523,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm10;
 MIMi = "20";
 MIMm = "20";
@@ -91598,7 +91555,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm11;
 MIMi = "20";
 MIMm = "20";
@@ -91630,7 +91587,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm12;
 MIMi = "20";
 MIMm = "20";
@@ -91662,7 +91619,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm13;
 MIMi = "20";
 MIMm = "20";
@@ -91694,7 +91651,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm14;
 MIMi = "20";
 MIMm = "20";
@@ -91726,7 +91683,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm15;
 MIMi = "20";
 MIMm = "20";
@@ -91758,7 +91715,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm16;
 MIMi = "20";
 MIMm = "20";
@@ -91790,7 +91747,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm17;
 MIMi = "20";
 MIMm = "20";
@@ -91822,7 +91779,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm20;
 MIMi = "20";
 MIMm = "20";
@@ -91854,7 +91811,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEm21;
 MIMi = "20";
 MIMm = "20";
@@ -91884,9 +91841,9 @@ Hei = "12";
 JIMi = "12";
 JIMm = "2";
 KAFi = "14";
-KAFm = "12";
+KAFm = "2";
 LAMi = "12";
-LAMm = "11";
+LAMm = "2";
 "Left Glyph" = AINf1;
 MIMi = "12";
 MIMm = "14";
@@ -91918,7 +91875,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = ALIFf1;
 MIMi = "3";
 MIMm = "5";
@@ -91950,7 +91907,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "4";
+LAMm = "3";
 "Left Glyph" = ALIFf2;
 MIMi = "3";
 MIMm = "5";
@@ -91982,7 +91939,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = BARI_YEf1;
 MIMi = "2";
 MIMm = "2";
@@ -92014,7 +91971,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = BARI_YEf2;
 MIMi = "2";
 MIMm = "2";
@@ -92046,7 +92003,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = BARI_YEf3;
 MIMi = "2";
 MIMm = "2";
@@ -92206,7 +92163,7 @@ JIMm = "11";
 KAFi = "17";
 KAFm = "11";
 LAMi = "17";
-LAMm = "17";
+LAMm = "11";
 "Left Glyph" = CH_YEf1;
 MIMi = "17";
 MIMm = "4";
@@ -92238,7 +92195,7 @@ JIMm = "11";
 KAFi = "17";
 KAFm = "11";
 LAMi = "17";
-LAMm = "17";
+LAMm = "11";
 "Left Glyph" = CH_YEf2;
 MIMi = "17";
 MIMm = 4;
@@ -92270,7 +92227,7 @@ JIMm = "3";
 KAFi = "8";
 KAFm = "17";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = DALf1;
 MIMi = "3";
 MIMm = "5";
@@ -92302,7 +92259,7 @@ JIMm = "4";
 KAFi = "15";
 KAFm = "4";
 LAMi = "16";
-LAMm = "16";
+LAMm = "4";
 "Left Glyph" = FEf1;
 MIMi = "13";
 MIMm = "15";
@@ -92334,7 +92291,7 @@ JIMm = "5";
 KAFi = "6";
 KAFm = "5";
 LAMi = "4";
-LAMm = "4";
+LAMm = "5";
 "Left Glyph" = HAYAf1;
 MIMi = "4";
 MIMm = "4";
@@ -92366,7 +92323,7 @@ JIMm = "3";
 KAFi = "10";
 KAFm = "17";
 LAMi = "2";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = HAYCf1;
 MIMi = "8";
 MIMm = "5";
@@ -92398,7 +92355,7 @@ JIMm = "3";
 KAFi = "10";
 KAFm = "17";
 LAMi = "2";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = HAYCf2;
 MIMi = "8";
 MIMm = "5";
@@ -92430,7 +92387,7 @@ JIMm = "3";
 KAFi = "10";
 KAFm = "17";
 LAMi = "2";
-LAMm = "10";
+LAMm = "3";
 "Left Glyph" = HAYCf3;
 MIMi = "8";
 MIMm = "3";
@@ -92462,7 +92419,7 @@ JIMm = "7";
 KAFi = "13";
 KAFm = "7";
 LAMi = "15";
-LAMm = "14";
+LAMm = "7";
 "Left Glyph" = JIMf1;
 MIMi = "2";
 MIMm = "2";
@@ -92494,7 +92451,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = GAFf1;
 MIMi = "3";
 MIMm = "8";
@@ -92526,7 +92483,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = KAFf1;
 MIMi = "3";
 MIMm = "8";
@@ -92558,7 +92515,7 @@ JIMm = "3";
 KAFi = 2;
 KAFm = "3";
 LAMi = 2;
-LAMm = 2;
+LAMm = "3";
 "Left Glyph" = LAM_ALIFf1;
 MIMi = 3;
 MIMm = 8;
@@ -92590,7 +92547,7 @@ JIMm = "3";
 KAFi = "2";
 KAFm = "3";
 LAMi = "2";
-LAMm = "2";
+LAMm = "3";
 "Left Glyph" = LAMf1;
 MIMi = "3";
 MIMm = "5";
@@ -92622,7 +92579,7 @@ JIMm = "9";
 KAFi = "17";
 KAFm = "9";
 LAMi = "13";
-LAMm = "17";
+LAMm = "9";
 "Left Glyph" = MIMf1;
 MIMi = "16";
 MIMm = "16";
@@ -92686,7 +92643,7 @@ JIMm = "12";
 KAFi = 1;
 KAFm = "12";
 LAMi = 1;
-LAMm = 1;
+LAMm = "12";
 "Left Glyph" = QAFf1;
 MIMi = 1;
 MIMm = 1;
@@ -92718,7 +92675,7 @@ JIMm = "13";
 KAFi = 1;
 KAFm = "13";
 LAMi = 1;
-LAMm = 1;
+LAMm = "13";
 "Left Glyph" = REf1;
 MIMi = 1;
 MIMm = 1;
@@ -92750,7 +92707,7 @@ JIMm = "15";
 KAFi = "1";
 KAFm = "14";
 LAMi = 1;
-LAMm = 1;
+LAMm = "14";
 "Left Glyph" = REf2;
 MIMi = 1;
 MIMm = 1;
@@ -92780,9 +92737,9 @@ Hei = 1;
 JIMi = 1;
 JIMm = "14";
 KAFi = 1;
-KAFm = "15";
+KAFm = "12";
 LAMi = 1;
-LAMm = 1;
+LAMm = "15";
 "Left Glyph" = REf3;
 MIMi = "7";
 MIMm = "9";
@@ -92814,7 +92771,7 @@ JIMm = "13";
 KAFi = 1;
 KAFm = "14";
 LAMi = 1;
-LAMm = 1;
+LAMm = "16";
 "Left Glyph" = REf4;
 MIMi = 1;
 MIMm = 1;
@@ -92846,7 +92803,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = SADf1;
 MIMi = "20";
 MIMm = "20";
@@ -92910,7 +92867,7 @@ JIMm = "10";
 KAFi = "20";
 KAFm = "10";
 LAMi = "20";
-LAMm = "20";
+LAMm = "10";
 "Left Glyph" = TOEf1;
 MIMi = "20";
 MIMm = "20";
@@ -92942,7 +92899,7 @@ JIMm = "12";
 KAFi = 1;
 KAFm = "12";
 LAMi = 1;
-LAMm = 1;
+LAMm = "12";
 "Left Glyph" = VAOf1;
 MIMi = 1;
 MIMm = 1;
