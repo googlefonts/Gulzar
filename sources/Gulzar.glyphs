@@ -38995,7 +38995,7 @@ width = 1947;
 note = GAFfs1;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi1;
 layers = (
 {
@@ -39023,20 +39023,20 @@ paths = (
 {
 closed = 1;
 nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
+"176 751 OFFCURVE",
+"188 758 OFFCURVE",
+"210 773 CURVE SMOOTH",
+"402 904 LINE SMOOTH",
+"423 919 OFFCURVE",
+"434 930 OFFCURVE",
+"446 951 CURVE SMOOTH",
+"464 982 LINE",
+"450 991 LINE",
+"223 837 LINE SMOOTH",
+"173 803 OFFCURVE",
+"154 766 OFFCURVE",
+"145 736 CURVE",
+"163 729 LINE"
 );
 }
 );
@@ -39046,22 +39046,22 @@ width = 276;
 note = GAFi1;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi10;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{137, -274}";
+position = "{386, -196}";
 },
 {
 name = exit;
-position = "{17, -4}";
+position = "{87, -69}";
 },
 {
 name = top;
-position = "{279, 905}";
+position = "{583, 831}";
 }
 );
 components = (
@@ -39074,49 +39074,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"245 741 OFFCURVE",
-"257 748 OFFCURVE",
-"279 763 CURVE SMOOTH",
-"471 894 LINE SMOOTH",
-"492 909 OFFCURVE",
-"503 920 OFFCURVE",
-"515 941 CURVE SMOOTH",
-"533 972 LINE",
-"519 981 LINE",
-"292 827 LINE SMOOTH",
-"242 793 OFFCURVE",
-"223 756 OFFCURVE",
-"214 726 CURVE",
-"232 719 LINE"
+"504 750 OFFCURVE",
+"516 757 OFFCURVE",
+"538 772 CURVE SMOOTH",
+"730 903 LINE SMOOTH",
+"751 918 OFFCURVE",
+"762 929 OFFCURVE",
+"774 950 CURVE SMOOTH",
+"792 981 LINE",
+"778 990 LINE",
+"551 836 LINE SMOOTH",
+"501 802 OFFCURVE",
+"482 765 OFFCURVE",
+"473 735 CURVE",
+"491 728 LINE"
 );
 }
 );
-width = 336;
+width = 906;
 }
 );
 note = GAFi10;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi11;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{142, -128}";
-},
-{
-name = entry;
-position = "{163, -35}";
+position = "{92, -268}";
 },
 {
 name = exit;
-position = "{95, 0}";
+position = "{42, -48}";
 },
 {
 name = top;
-position = "{152, 613}";
+position = "{237, 859}";
 }
 );
 components = (
@@ -39129,25 +39125,24 @@ paths = (
 {
 closed = 1;
 nodes = (
-"120 483 OFFCURVE",
-"126 493 OFFCURVE",
-"140 509 CURVE SMOOTH",
-"219 602 LINE SMOOTH",
-"244 631 OFFCURVE",
-"254 665 OFFCURVE",
-"259 687 CURVE",
-"247 693 LINE",
-"219 657 OFFCURVE",
-"171 602 OFFCURVE",
-"163 592 CURVE SMOOTH",
-"150 576 OFFCURVE",
-"104 532 OFFCURVE",
-"93 461 CURVE",
-"113 458 LINE"
+"199 750 OFFCURVE",
+"211 757 OFFCURVE",
+"233 772 CURVE SMOOTH",
+"425 903 LINE SMOOTH",
+"446 918 OFFCURVE",
+"457 929 OFFCURVE",
+"469 950 CURVE SMOOTH",
+"487 981 LINE",
+"473 990 LINE",
+"246 836 LINE SMOOTH",
+"196 802 OFFCURVE",
+"177 765 OFFCURVE",
+"168 735 CURVE",
+"186 728 LINE"
 );
 }
 );
-width = 342;
+width = 601;
 }
 );
 note = GAFi11;
@@ -39204,7 +39199,7 @@ width = 171;
 note = GAFi12;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi13;
 layers = (
 {
@@ -39310,31 +39305,24 @@ width = 276;
 note = KAFi4;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi14;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{56, -196}";
+position = "{164, -196}";
 },
 {
 name = exit;
-position = "{22, -27}";
+position = "{63, -31}";
 },
 {
 name = top;
-position = "{253, 831}";
+position = "{361, 831}";
 }
 );
-background = {
-components = (
-{
-name = GAFi1;
-}
-);
-};
 components = (
 {
 name = KAFi14;
@@ -39345,45 +39333,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
+"282 750 OFFCURVE",
+"294 757 OFFCURVE",
+"316 772 CURVE SMOOTH",
+"508 903 LINE SMOOTH",
+"529 918 OFFCURVE",
+"540 929 OFFCURVE",
+"552 950 CURVE SMOOTH",
+"570 981 LINE",
+"556 990 LINE",
+"329 836 LINE SMOOTH",
+"279 802 OFFCURVE",
+"260 765 OFFCURVE",
+"251 735 CURVE",
+"269 728 LINE"
 );
 }
 );
-width = 181;
+width = 684;
 }
 );
 note = KAFi1;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi15;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{56, -196}";
+position = "{86, -244}";
 },
 {
 name = exit;
-position = "{35, 0}";
+position = "{42, -4}";
 },
 {
 name = top;
-position = "{253, 906}";
+position = "{273, 883}";
 }
 );
 components = (
@@ -39396,78 +39384,60 @@ paths = (
 {
 closed = 1;
 nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
+"259 741 OFFCURVE",
+"271 748 OFFCURVE",
+"293 763 CURVE SMOOTH",
+"485 894 LINE SMOOTH",
+"506 909 OFFCURVE",
+"517 920 OFFCURVE",
+"529 941 CURVE SMOOTH",
+"547 972 LINE",
+"533 981 LINE",
+"306 827 LINE SMOOTH",
+"256 793 OFFCURVE",
+"237 756 OFFCURVE",
+"228 726 CURVE",
+"246 719 LINE"
 );
 }
 );
-width = 276;
+width = 661;
 }
 );
 note = KAFi1;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi16;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{15, -268}";
+position = "{286, -97}";
 },
 {
 name = exit;
-position = "{8, 0}";
+position = "{52, 0}";
 },
 {
 name = top;
-position = "{160, 859}";
+position = "{444, 800}";
 }
 );
 background = {
-paths = (
+anchors = (
 {
-closed = 1;
-nodes = (
-"-2 -23 LINE SMOOTH",
-"37 51 OFFCURVE",
-"66 112 OFFCURVE",
-"66 184 CURVE SMOOTH",
-"66 569 LINE",
-"51 541 LINE",
-"388 773 LINE SMOOTH",
-"441 810 OFFCURVE",
-"469 835 OFFCURVE",
-"492 879 CURVE SMOOTH",
-"524 941 LINE",
-"510 951 LINE",
-"211 742 LINE SMOOTH",
-"150 699 OFFCURVE",
-"91 660 OFFCURVE",
-"60 600 CURVE SMOOTH",
-"19 521 LINE SMOOTH",
-"-3 478 OFFCURVE",
-"-16 445 OFFCURVE",
-"-13 380 CURVE SMOOTH",
-"2 83 LINE SMOOTH",
-"4 51 OFFCURVE",
-"-42 -52 OFFCURVE",
-"-60 -99 CURVE",
-"-42 -100 LINE"
-);
+name = bottom;
+position = "{286, -97}";
+},
+{
+name = exit;
+position = "{52, 0}";
+},
+{
+name = top;
+position = "{444, 800}";
 }
 );
 };
@@ -39481,78 +39451,60 @@ paths = (
 {
 closed = 1;
 nodes = (
-"127 741 OFFCURVE",
-"139 748 OFFCURVE",
-"161 763 CURVE SMOOTH",
-"353 894 LINE SMOOTH",
-"374 909 OFFCURVE",
-"385 920 OFFCURVE",
-"397 941 CURVE SMOOTH",
-"415 972 LINE",
-"401 981 LINE",
-"174 827 LINE SMOOTH",
-"124 793 OFFCURVE",
-"105 756 OFFCURVE",
-"96 726 CURVE",
-"114 719 LINE"
+"445 750 OFFCURVE",
+"457 757 OFFCURVE",
+"479 772 CURVE SMOOTH",
+"671 903 LINE SMOOTH",
+"692 918 OFFCURVE",
+"703 929 OFFCURVE",
+"715 950 CURVE SMOOTH",
+"733 981 LINE",
+"719 990 LINE",
+"492 836 LINE SMOOTH",
+"442 802 OFFCURVE",
+"423 765 OFFCURVE",
+"414 735 CURVE",
+"432 728 LINE"
 );
 }
 );
-width = 224;
+width = 847;
 }
 );
 note = KAFi6;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi17;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{15, -268}";
+position = "{164, -196}";
 },
 {
 name = exit;
-position = "{-35, -48}";
+position = "{60, -26}";
 },
 {
 name = top;
-position = "{160, 859}";
+position = "{361, 831}";
 }
 );
 background = {
-paths = (
+anchors = (
 {
-closed = 1;
-nodes = (
-"-2 -23 LINE SMOOTH",
-"37 51 OFFCURVE",
-"66 112 OFFCURVE",
-"66 184 CURVE SMOOTH",
-"66 569 LINE",
-"51 541 LINE",
-"388 773 LINE SMOOTH",
-"441 810 OFFCURVE",
-"469 835 OFFCURVE",
-"492 879 CURVE SMOOTH",
-"524 941 LINE",
-"510 951 LINE",
-"211 742 LINE SMOOTH",
-"150 699 OFFCURVE",
-"91 660 OFFCURVE",
-"60 600 CURVE SMOOTH",
-"19 521 LINE SMOOTH",
-"-3 478 OFFCURVE",
-"-16 445 OFFCURVE",
-"-13 380 CURVE SMOOTH",
-"2 83 LINE SMOOTH",
-"4 51 OFFCURVE",
-"-42 -52 OFFCURVE",
-"-60 -99 CURVE",
-"-42 -100 LINE"
-);
+name = bottom;
+position = "{164, -196}";
+},
+{
+name = exit;
+position = "{60, -26}";
+},
+{
+name = top;
+position = "{361, 831}";
 }
 );
 };
@@ -39566,31 +39518,82 @@ paths = (
 {
 closed = 1;
 nodes = (
-"127 741 OFFCURVE",
-"139 748 OFFCURVE",
-"161 763 CURVE SMOOTH",
-"353 894 LINE SMOOTH",
-"374 909 OFFCURVE",
-"385 920 OFFCURVE",
-"397 941 CURVE SMOOTH",
-"415 972 LINE",
-"401 981 LINE",
-"174 827 LINE SMOOTH",
-"124 793 OFFCURVE",
-"105 756 OFFCURVE",
-"96 726 CURVE",
-"114 719 LINE"
+"282 750 OFFCURVE",
+"294 757 OFFCURVE",
+"316 772 CURVE SMOOTH",
+"508 903 LINE SMOOTH",
+"529 918 OFFCURVE",
+"540 929 OFFCURVE",
+"552 950 CURVE SMOOTH",
+"570 981 LINE",
+"556 990 LINE",
+"329 836 LINE SMOOTH",
+"279 802 OFFCURVE",
+"260 765 OFFCURVE",
+"251 735 CURVE",
+"269 728 LINE"
 );
 }
 );
-width = 224;
+width = 684;
 }
 );
 note = KAFi6;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi2;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{202, -196}";
+},
+{
+name = exit;
+position = "{168, -27}";
+},
+{
+name = top;
+position = "{399, 831}";
+}
+);
+components = (
+{
+name = KAFi2;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"320 750 OFFCURVE",
+"332 757 OFFCURVE",
+"354 772 CURVE SMOOTH",
+"546 903 LINE SMOOTH",
+"567 918 OFFCURVE",
+"578 929 OFFCURVE",
+"590 950 CURVE SMOOTH",
+"608 981 LINE",
+"594 990 LINE",
+"367 836 LINE SMOOTH",
+"317 802 OFFCURVE",
+"298 765 OFFCURVE",
+"289 735 CURVE",
+"307 728 LINE"
+);
+}
+);
+width = 722;
+}
+);
+note = GAFi2;
+},
+{
+color = 3;
+glyphname = GAFi3;
 layers = (
 {
 anchors = (
@@ -39613,174 +39616,6 @@ position = "{152, 613}";
 );
 components = (
 {
-name = KAFi2;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"120 483 OFFCURVE",
-"126 493 OFFCURVE",
-"140 509 CURVE SMOOTH",
-"219 602 LINE SMOOTH",
-"244 631 OFFCURVE",
-"254 665 OFFCURVE",
-"259 687 CURVE",
-"247 693 LINE",
-"219 657 OFFCURVE",
-"171 602 OFFCURVE",
-"163 592 CURVE SMOOTH",
-"150 576 OFFCURVE",
-"104 532 OFFCURVE",
-"93 461 CURVE",
-"113 458 LINE"
-);
-}
-);
-width = 342;
-}
-);
-note = GAFi2;
-},
-{
-color = 1;
-glyphname = GAFi20;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{70, -244}";
-},
-{
-name = exit;
-position = "{-243, -69}";
-},
-{
-name = top;
-position = "{209, 907}";
-}
-);
-background = {
-components = (
-{
-name = KAFi1;
-}
-);
-};
-components = (
-{
-name = KAFi20;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
-);
-}
-);
-width = 276;
-}
-);
-note = GAFi1;
-},
-{
-color = 1;
-glyphname = GAFi21;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{70, -244}";
-},
-{
-name = exit;
-position = "{-193, -69}";
-},
-{
-name = top;
-position = "{209, 907}";
-}
-);
-background = {
-components = (
-{
-name = KAFi1;
-}
-);
-};
-components = (
-{
-name = KAFi21;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
-);
-}
-);
-width = 276;
-}
-);
-note = GAFi1;
-},
-{
-color = 1;
-glyphname = GAFi3;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{70, -244}";
-},
-{
-name = exit;
-position = "{0, 0}";
-},
-{
-name = top;
-position = "{230, 904}";
-}
-);
-components = (
-{
 name = KAFi3;
 }
 );
@@ -39789,45 +39624,46 @@ paths = (
 {
 closed = 1;
 nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
+"117 467 OFFCURVE",
+"123 477 OFFCURVE",
+"137 493 CURVE SMOOTH",
+"216 586 LINE SMOOTH",
+"241 615 OFFCURVE",
+"251 649 OFFCURVE",
+"256 671 CURVE",
+"244 677 LINE",
+"216 641 OFFCURVE",
+"168 586 OFFCURVE",
+"160 576 CURVE SMOOTH",
+"147 560 OFFCURVE",
+"101 516 OFFCURVE",
+"90 445 CURVE",
+"110 442 LINE"
 );
 }
 );
-width = 276;
+width = 381;
 }
 );
 note = GAFi3;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi4;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{70, -244}";
+position = "{268, -196}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{247, 0}";
 },
 {
 name = top;
-position = "{239, 909}";
+position = "{465, 831}";
 }
 );
 components = (
@@ -39840,45 +39676,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
+"386 750 OFFCURVE",
+"398 757 OFFCURVE",
+"420 772 CURVE SMOOTH",
+"612 903 LINE SMOOTH",
+"633 918 OFFCURVE",
+"644 929 OFFCURVE",
+"656 950 CURVE SMOOTH",
+"674 981 LINE",
+"660 990 LINE",
+"433 836 LINE SMOOTH",
+"383 802 OFFCURVE",
+"364 765 OFFCURVE",
+"355 735 CURVE",
+"373 728 LINE"
 );
 }
 );
-width = 276;
+width = 788;
 }
 );
 note = GAFi4;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi5;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{70, -296}";
+position = "{77, -268}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{57, 0}";
 },
 {
 name = top;
-position = "{234, 918}";
+position = "{222, 859}";
 }
 );
 components = (
@@ -39891,45 +39727,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"176 741 OFFCURVE",
-"188 748 OFFCURVE",
-"210 763 CURVE SMOOTH",
-"402 894 LINE SMOOTH",
-"423 909 OFFCURVE",
-"434 920 OFFCURVE",
-"446 941 CURVE SMOOTH",
-"464 972 LINE",
-"450 981 LINE",
-"223 827 LINE SMOOTH",
-"173 793 OFFCURVE",
-"154 756 OFFCURVE",
-"145 726 CURVE",
-"163 719 LINE"
+"184 750 OFFCURVE",
+"196 757 OFFCURVE",
+"218 772 CURVE SMOOTH",
+"410 903 LINE SMOOTH",
+"431 918 OFFCURVE",
+"442 929 OFFCURVE",
+"454 950 CURVE SMOOTH",
+"472 981 LINE",
+"458 990 LINE",
+"231 836 LINE SMOOTH",
+"181 802 OFFCURVE",
+"162 765 OFFCURVE",
+"153 735 CURVE",
+"171 728 LINE"
 );
 }
 );
-width = 276;
+width = 586;
 }
 );
 note = GAFi5;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi6;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{185, -440}";
+position = "{77, -268}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{57, 0}";
 },
 {
 name = top;
-position = "{172, 941}";
+position = "{222, 859}";
 }
 );
 components = (
@@ -39942,45 +39778,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"127 741 OFFCURVE",
-"139 748 OFFCURVE",
-"161 763 CURVE SMOOTH",
-"353 894 LINE SMOOTH",
-"374 909 OFFCURVE",
-"385 920 OFFCURVE",
-"397 941 CURVE SMOOTH",
-"415 972 LINE",
-"401 981 LINE",
-"174 827 LINE SMOOTH",
-"124 793 OFFCURVE",
-"105 756 OFFCURVE",
-"96 726 CURVE",
-"114 719 LINE"
+"184 750 OFFCURVE",
+"196 757 OFFCURVE",
+"218 772 CURVE SMOOTH",
+"410 903 LINE SMOOTH",
+"431 918 OFFCURVE",
+"442 929 OFFCURVE",
+"454 950 CURVE SMOOTH",
+"472 981 LINE",
+"458 990 LINE",
+"231 836 LINE SMOOTH",
+"181 802 OFFCURVE",
+"162 765 OFFCURVE",
+"153 735 CURVE",
+"171 728 LINE"
 );
 }
 );
-width = 224;
+width = 586;
 }
 );
 note = GAFi6;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi7;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{177, -322}";
+position = "{286, -97}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{60, 10}";
 },
 {
 name = top;
-position = "{61, 639}";
+position = "{344, 770}";
 }
 );
 components = (
@@ -39993,45 +39829,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"33 462 OFFCURVE",
-"53 480 OFFCURVE",
-"70 491 CURVE SMOOTH",
-"158 547 LINE SMOOTH",
-"173 557 OFFCURVE",
-"179 567 OFFCURVE",
-"185 576 CURVE SMOOTH",
-"206 609 LINE",
-"196 617 LINE",
-"61 529 LINE SMOOTH",
-"34 511 OFFCURVE",
-"9 462 OFFCURVE",
-"7 450 CURVE",
-"20 443 LINE"
+"345 720 OFFCURVE",
+"357 727 OFFCURVE",
+"379 742 CURVE SMOOTH",
+"571 873 LINE SMOOTH",
+"592 888 OFFCURVE",
+"603 899 OFFCURVE",
+"615 920 CURVE SMOOTH",
+"633 951 LINE",
+"619 960 LINE",
+"392 806 LINE SMOOTH",
+"342 772 OFFCURVE",
+"323 735 OFFCURVE",
+"314 705 CURVE",
+"332 698 LINE"
 );
 }
 );
-width = 130;
+width = 747;
 }
 );
 note = GAFi7;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi8;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{103, -285}";
+position = "{341, -196}";
 },
 {
 name = exit;
-position = "{17, -4}";
+position = "{107, -72}";
 },
 {
 name = top;
-position = "{253, 954}";
+position = "{538, 831}";
 }
 );
 components = (
@@ -40044,45 +39880,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"215 741 OFFCURVE",
-"227 748 OFFCURVE",
-"249 763 CURVE SMOOTH",
-"441 894 LINE SMOOTH",
-"462 909 OFFCURVE",
-"473 920 OFFCURVE",
-"485 941 CURVE SMOOTH",
-"503 972 LINE",
-"489 981 LINE",
-"262 827 LINE SMOOTH",
-"212 793 OFFCURVE",
-"193 756 OFFCURVE",
-"184 726 CURVE",
-"202 719 LINE"
+"459 750 OFFCURVE",
+"471 757 OFFCURVE",
+"493 772 CURVE SMOOTH",
+"685 903 LINE SMOOTH",
+"706 918 OFFCURVE",
+"717 929 OFFCURVE",
+"729 950 CURVE SMOOTH",
+"747 981 LINE",
+"733 990 LINE",
+"506 836 LINE SMOOTH",
+"456 802 OFFCURVE",
+"437 765 OFFCURVE",
+"428 735 CURVE",
+"446 728 LINE"
 );
 }
 );
-width = 336;
+width = 861;
 }
 );
 note = GAFi8;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi9;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{103, -285}";
+position = "{64, -268}";
 },
 {
 name = exit;
-position = "{17, -4}";
+position = "{57, 0}";
 },
 {
 name = top;
-position = "{254, 907}";
+position = "{209, 859}";
 }
 );
 components = (
@@ -40095,24 +39931,24 @@ paths = (
 {
 closed = 1;
 nodes = (
-"216 741 OFFCURVE",
-"228 748 OFFCURVE",
-"250 763 CURVE SMOOTH",
-"442 894 LINE SMOOTH",
-"463 909 OFFCURVE",
-"474 920 OFFCURVE",
-"486 941 CURVE SMOOTH",
-"504 972 LINE",
-"490 981 LINE",
-"263 827 LINE SMOOTH",
-"213 793 OFFCURVE",
-"194 756 OFFCURVE",
-"185 726 CURVE",
-"203 719 LINE"
+"171 750 OFFCURVE",
+"183 757 OFFCURVE",
+"205 772 CURVE SMOOTH",
+"397 903 LINE SMOOTH",
+"418 918 OFFCURVE",
+"429 929 OFFCURVE",
+"441 950 CURVE SMOOTH",
+"459 981 LINE",
+"445 990 LINE",
+"218 836 LINE SMOOTH",
+"168 802 OFFCURVE",
+"149 765 OFFCURVE",
+"140 735 CURVE",
+"158 728 LINE"
 );
 }
 );
-width = 336;
+width = 573;
 }
 );
 note = GAFi9;
@@ -52163,7 +51999,7 @@ width = 1947;
 note = KAFfs1;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi1;
 layers = (
 {
@@ -52298,151 +52134,84 @@ width = 276;
 note = KAFi1;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi10;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{137, -274}";
+position = "{386, -196}";
 },
 {
 name = exit;
-position = "{17, -4}";
+position = "{87, -69}";
 },
 {
 name = top;
-position = "{325, 831}";
+position = "{583, 831}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"40 -75 OFFCURVE",
-"87 -29 OFFCURVE",
-"123 26 CURVE SMOOTH",
-"167 93 OFFCURVE",
-"178 181 OFFCURVE",
-"178 316 CURVE SMOOTH",
-"178 560 LINE",
-"163 532 LINE",
-"500 764 LINE SMOOTH",
-"553 801 OFFCURVE",
-"581 826 OFFCURVE",
-"604 870 CURVE SMOOTH",
-"636 932 LINE",
-"622 942 LINE",
-"323 733 LINE SMOOTH",
-"262 690 OFFCURVE",
-"203 651 OFFCURVE",
-"172 591 CURVE SMOOTH",
-"131 512 LINE SMOOTH",
-"109 469 OFFCURVE",
-"95 436 OFFCURVE",
-"99 371 CURVE SMOOTH",
-"116 85 LINE",
-"123 117 LINE",
-"108 79 OFFCURVE",
-"83 55 OFFCURVE",
-"39 55 CURVE SMOOTH",
-"15 55 OFFCURVE",
-"5 62 OFFCURVE",
-"-5 62 CURVE SMOOTH",
-"-57 62 OFFCURVE",
-"-72 13 OFFCURVE",
-"-72 -11 CURVE SMOOTH",
-"-72 -29 OFFCURVE",
-"-64 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"32 -75 OFFCURVE",
-"81 -46 OFFCURVE",
-"117 23 CURVE SMOOTH",
-"135 57 OFFCURVE",
-"152 103 OFFCURVE",
-"161 153 CURVE",
-"141 157 LINE",
-"121 101 OFFCURVE",
-"84 60 OFFCURVE",
-"36 60 CURVE SMOOTH",
-"-12 60 OFFCURVE",
-"-45 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"40 -75 OFFCURVE",
-"87 -29 OFFCURVE",
-"123 26 CURVE SMOOTH",
-"167 93 OFFCURVE",
-"178 181 OFFCURVE",
-"178 316 CURVE SMOOTH",
-"178 560 LINE",
-"163 532 LINE",
-"500 764 LINE SMOOTH",
-"553 801 OFFCURVE",
-"581 826 OFFCURVE",
-"604 870 CURVE SMOOTH",
-"636 932 LINE",
-"622 942 LINE",
-"323 733 LINE SMOOTH",
-"262 690 OFFCURVE",
-"203 651 OFFCURVE",
-"172 591 CURVE SMOOTH",
-"131 512 LINE SMOOTH",
-"109 469 OFFCURVE",
-"95 436 OFFCURVE",
-"99 371 CURVE SMOOTH",
-"116 85 LINE",
-"123 117 LINE",
-"108 79 OFFCURVE",
-"80 60 OFFCURVE",
-"36 60 CURVE SMOOTH",
-"-12 60 OFFCURVE",
-"-45 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH"
+"172 -106 OFFCURVE",
+"347 -32 OFFCURVE",
+"392 22 CURVE SMOOTH",
+"443 84 OFFCURVE",
+"448 190 OFFCURVE",
+"448 325 CURVE SMOOTH",
+"448 569 LINE",
+"433 541 LINE",
+"770 773 LINE SMOOTH",
+"823 810 OFFCURVE",
+"851 835 OFFCURVE",
+"874 879 CURVE SMOOTH",
+"906 941 LINE",
+"892 951 LINE",
+"593 742 LINE SMOOTH",
+"532 699 OFFCURVE",
+"473 660 OFFCURVE",
+"442 600 CURVE SMOOTH",
+"401 521 LINE SMOOTH",
+"379 478 OFFCURVE",
+"365 445 OFFCURVE",
+"369 380 CURVE SMOOTH",
+"386 74 LINE",
+"393 106 LINE",
+"356 32 OFFCURVE",
+"206 -25 OFFCURVE",
+"21 -60 CURVE",
+"-10 -72 OFFCURVE",
+"-3 -106 OFFCURVE",
+"21 -106 CURVE SMOOTH"
 );
 }
 );
-width = 336;
+width = 906;
 }
 );
 note = KAFi10;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi11;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{142, -128}";
-},
-{
-name = entry;
-position = "{163, -35}";
+position = "{92, -268}";
 },
 {
 name = exit;
-position = "{95, 0}";
+position = "{42, -48}";
 },
 {
 name = top;
-position = "{152, 613}";
+position = "{237, 859}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -52450,51 +52219,43 @@ paths = (
 {
 closed = 1;
 nodes = (
-"174 -71 OFFCURVE",
-"260 97 OFFCURVE",
-"260 229 CURVE SMOOTH",
-"260 292 OFFCURVE",
-"232 324 OFFCURVE",
-"174 324 CURVE SMOOTH",
-"150 324 OFFCURVE",
-"127 319 OFFCURVE",
-"102 309 CURVE",
-"106 289 LINE",
-"281 469 LINE SMOOTH",
-"330 520 OFFCURVE",
-"347 545 OFFCURVE",
-"365 608 CURVE SMOOTH",
-"381 663 LINE",
-"366 671 LINE",
-"102 373 LINE SMOOTH",
-"72 339 OFFCURVE",
-"37 298 OFFCURVE",
-"23 257 CURVE SMOOTH",
-"18 242 OFFCURVE",
-"6 209 OFFCURVE",
-"0 183 CURVE",
-"10 177 LINE",
-"101 219 OFFCURVE",
-"187 198 OFFCURVE",
-"220 138 CURVE",
-"241 163 LINE",
-"223 178 LINE",
-"221 123 OFFCURVE",
-"169 64 OFFCURVE",
-"114 64 CURVE SMOOTH",
-"66 64 OFFCURVE",
-"33 -71 OFFCURVE",
-"67 -71 CURVE SMOOTH"
+"55 -48 OFFCURVE",
+"94 -2 OFFCURVE",
+"110 34 CURVE SMOOTH",
+"137 95 OFFCURVE",
+"143 138 OFFCURVE",
+"143 184 CURVE SMOOTH",
+"143 569 LINE",
+"128 541 LINE",
+"465 773 LINE SMOOTH",
+"518 810 OFFCURVE",
+"546 835 OFFCURVE",
+"569 879 CURVE SMOOTH",
+"601 941 LINE",
+"587 951 LINE",
+"288 742 LINE SMOOTH",
+"227 699 OFFCURVE",
+"168 660 OFFCURVE",
+"137 600 CURVE SMOOTH",
+"96 521 LINE SMOOTH",
+"74 478 OFFCURVE",
+"61 445 OFFCURVE",
+"64 380 CURVE SMOOTH",
+"76 141 LINE SMOOTH",
+"81 50 OFFCURVE",
+"23 -24 OFFCURVE",
+"0 -101 CURVE",
+"42 -86 LINE"
 );
 }
 );
-width = 381;
+width = 601;
 }
 );
 note = KAFi11;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi12;
 layers = (
 {
@@ -52627,7 +52388,7 @@ width = 171;
 note = KAFi12;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi13;
 layers = (
 {
@@ -52737,130 +52498,85 @@ width = 276;
 note = KAFi4;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi14;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{56, -196}";
+position = "{164, -196}";
 },
 {
 name = exit;
-position = "{22, -27}";
+position = "{63, -31}";
 },
 {
 name = top;
-position = "{253, 831}";
+position = "{361, 831}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-87 -79 OFFCURVE",
-"15 -28 OFFCURVE",
-"67 31 CURVE SMOOTH",
-"125 98 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"57 63 LINE",
-"83 71 LINE",
-"88 109 LINE",
-"44 48 OFFCURVE",
-"-21 17 OFFCURVE",
-"-78 17 CURVE SMOOTH",
-"-90 17 OFFCURVE",
-"-102 19 OFFCURVE",
-"-113 22 CURVE",
-"-151 -36 LINE"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"-127 -45 OFFCURVE",
-"-105 -52 OFFCURVE",
-"-83 -52 CURVE SMOOTH",
-"-28 -52 OFFCURVE",
-"30 -11 OFFCURVE",
-"67 31 CURVE SMOOTH",
-"125 98 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"57 63 LINE",
-"83 71 LINE",
-"88 109 LINE",
-"53 59 OFFCURVE",
-"-4 18 OFFCURVE",
-"-62 18 CURVE SMOOTH",
-"-80 18 OFFCURVE",
-"-98 22 OFFCURVE",
-"-115 31 CURVE",
-"-146 -28 LINE"
+"85 -96 OFFCURVE",
+"151 -24 OFFCURVE",
+"181 22 CURVE SMOOTH",
+"220 81 OFFCURVE",
+"226 190 OFFCURVE",
+"226 325 CURVE SMOOTH",
+"226 569 LINE",
+"211 541 LINE",
+"548 773 LINE SMOOTH",
+"601 810 OFFCURVE",
+"629 835 OFFCURVE",
+"652 879 CURVE SMOOTH",
+"684 941 LINE",
+"670 951 LINE",
+"371 742 LINE SMOOTH",
+"310 699 OFFCURVE",
+"251 660 OFFCURVE",
+"220 600 CURVE SMOOTH",
+"179 521 LINE SMOOTH",
+"157 478 OFFCURVE",
+"143 445 OFFCURVE",
+"147 380 CURVE SMOOTH",
+"165 63 LINE",
+"191 71 LINE",
+"196 109 LINE",
+"161 59 OFFCURVE",
+"80 -6 OFFCURVE",
+"30 -6 CURVE SMOOTH",
+"4 -6 OFFCURVE",
+"-18 -96 OFFCURVE",
+"22 -96 CURVE SMOOTH"
 );
 }
 );
-width = 181;
+width = 684;
 }
 );
 note = KAFi1;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi15;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{56, -196}";
+position = "{86, -244}";
 },
 {
 name = exit;
-position = "{35, 0}";
+position = "{42, -4}";
 },
 {
 name = top;
-position = "{253, 831}";
+position = "{273, 883}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -52868,279 +52584,237 @@ paths = (
 {
 closed = 1;
 nodes = (
-"-23 -52 OFFCURVE",
-"27 -14 OFFCURVE",
-"67 31 CURVE SMOOTH",
-"125 98 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"57 63 LINE",
-"83 71 LINE",
-"88 109 LINE",
-"53 58 OFFCURVE",
-"1 23 OFFCURVE",
-"-65 23 CURVE SMOOTH",
-"-85 23 OFFCURVE",
-"-107 26 OFFCURVE",
-"-118 28 CURVE",
-"-212 -29 LINE",
-"-178 -45 OFFCURVE",
-"-143 -52 OFFCURVE",
-"-111 -52 CURVE SMOOTH"
+"192 93 OFFCURVE",
+"203 181 OFFCURVE",
+"203 316 CURVE SMOOTH",
+"203 560 LINE",
+"188 532 LINE",
+"525 764 LINE SMOOTH",
+"578 801 OFFCURVE",
+"606 826 OFFCURVE",
+"629 870 CURVE SMOOTH",
+"661 932 LINE",
+"647 942 LINE",
+"348 733 LINE SMOOTH",
+"287 690 OFFCURVE",
+"228 651 OFFCURVE",
+"197 591 CURVE SMOOTH",
+"156 512 LINE SMOOTH",
+"134 469 OFFCURVE",
+"120 436 OFFCURVE",
+"124 371 CURVE SMOOTH",
+"141 85 LINE",
+"148 117 LINE",
+"133 79 OFFCURVE",
+"105 60 OFFCURVE",
+"61 60 CURVE SMOOTH",
+"13 60 OFFCURVE",
+"-20 -75 OFFCURVE",
+"14 -75 CURVE SMOOTH",
+"65 -75 OFFCURVE",
+"112 -29 OFFCURVE",
+"148 26 CURVE SMOOTH"
 );
 }
 );
-width = 276;
+width = 661;
 }
 );
 note = KAFi1;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi16;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{15, -268}";
+position = "{286, -97}";
 },
 {
 name = exit;
-position = "{8, 0}";
+position = "{52, 0}";
 },
 {
 name = top;
-position = "{160, 859}";
+position = "{444, 800}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-2 -23 LINE SMOOTH",
-"37 51 OFFCURVE",
-"66 112 OFFCURVE",
-"66 184 CURVE SMOOTH",
-"66 569 LINE",
-"51 541 LINE",
-"388 773 LINE SMOOTH",
-"441 810 OFFCURVE",
-"469 835 OFFCURVE",
-"492 879 CURVE SMOOTH",
-"524 941 LINE",
-"510 951 LINE",
-"211 742 LINE SMOOTH",
-"150 699 OFFCURVE",
-"91 660 OFFCURVE",
-"60 600 CURVE SMOOTH",
-"19 521 LINE SMOOTH",
-"-3 478 OFFCURVE",
-"-16 445 OFFCURVE",
-"-13 380 CURVE SMOOTH",
-"2 83 LINE SMOOTH",
-"4 51 OFFCURVE",
-"-42 -52 OFFCURVE",
-"-60 -99 CURVE",
-"-42 -100 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"-12 -141 OFFCURVE",
-"72 -87 OFFCURVE",
-"39 -63 CURVE SMOOTH",
-"19 -51 OFFCURVE",
-"13 -40 OFFCURVE",
-"13 -27 CURVE SMOOTH",
-"13 2 OFFCURVE",
-"57 45 OFFCURVE",
-"60 166 CURVE SMOOTH",
-"68 505 LINE",
-"47 508 LINE",
-"14 409 LINE SMOOTH",
-"0 368 OFFCURVE",
-"-12 325 OFFCURVE",
-"-8 256 CURVE SMOOTH",
-"2 99 LINE SMOOTH",
-"8 0 OFFCURVE",
-"-62 -104 OFFCURVE",
-"-47 -128 CURVE"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"24 -53 OFFCURVE",
-"13 -44 OFFCURVE",
-"13 -27 CURVE SMOOTH",
-"13 6 OFFCURVE",
-"66 76 OFFCURVE",
-"66 184 CURVE SMOOTH",
-"66 569 LINE",
-"51 541 LINE",
-"388 773 LINE SMOOTH",
-"441 810 OFFCURVE",
-"469 835 OFFCURVE",
-"492 879 CURVE SMOOTH",
-"524 941 LINE",
-"510 951 LINE",
-"211 742 LINE SMOOTH",
-"150 699 OFFCURVE",
-"91 660 OFFCURVE",
-"60 600 CURVE SMOOTH",
-"19 521 LINE SMOOTH",
-"-3 478 OFFCURVE",
-"-16 445 OFFCURVE",
-"-13 380 CURVE SMOOTH",
-"2 83 LINE SMOOTH",
-"6 6 OFFCURVE",
-"-62 -104 OFFCURVE",
-"-47 -128 CURVE",
-"-12 -141 OFFCURVE",
-"73 -86 OFFCURVE",
-"39 -63 CURVE SMOOTH"
+"147 -11 OFFCURVE",
+"288 18 OFFCURVE",
+"333 72 CURVE SMOOTH",
+"379 128 OFFCURVE",
+"389 212 OFFCURVE",
+"389 325 CURVE SMOOTH",
+"389 569 LINE",
+"374 541 LINE",
+"711 773 LINE SMOOTH",
+"764 810 OFFCURVE",
+"792 835 OFFCURVE",
+"815 879 CURVE SMOOTH",
+"847 941 LINE",
+"833 951 LINE",
+"534 742 LINE SMOOTH",
+"473 699 OFFCURVE",
+"414 660 OFFCURVE",
+"383 600 CURVE SMOOTH",
+"342 521 LINE SMOOTH",
+"320 478 OFFCURVE",
+"306 445 OFFCURVE",
+"310 380 CURVE SMOOTH",
+"327 124 LINE",
+"334 156 LINE",
+"297 82 OFFCURVE",
+"60 25 OFFCURVE",
+"0 -83 CURVE",
+"14 -96 LINE"
 );
 }
 );
-width = 224;
+width = 847;
 }
 );
 note = KAFi6;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi17;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{15, -268}";
+position = "{164, -196}";
 },
 {
 name = exit;
-position = "{-35, -48}";
+position = "{60, -26}";
 },
 {
 name = top;
-position = "{160, 859}";
+position = "{361, 831}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-18 -50 OFFCURVE",
-"2 -27 OFFCURVE",
-"16 -3 CURVE SMOOTH",
-"46 49 OFFCURVE",
-"48 83 OFFCURVE",
-"48 254 CURVE SMOOTH",
-"48 375 OFFCURVE",
-"53 529 OFFCURVE",
-"67 558 CURVE",
-"41 543 LINE",
-"43 515 LINE",
-"56 543 OFFCURVE",
-"74 559 OFFCURVE",
-"108 582 CURVE SMOOTH",
-"403 786 LINE SMOOTH",
-"440 812 OFFCURVE",
-"455 822 OFFCURVE",
-"477 859 CURVE SMOOTH",
-"524 938 LINE",
-"509 949 LINE",
-"409 873 OFFCURVE",
-"303 801 OFFCURVE",
-"199 731 CURVE SMOOTH",
-"100 664 OFFCURVE",
-"59 610 OFFCURVE",
-"42 562 CURVE SMOOTH",
-"11 473 LINE SMOOTH",
-"-1 440 OFFCURVE",
-"-3 407 OFFCURVE",
-"-3 385 CURVE SMOOTH",
-"-3 280 OFFCURVE",
-"2 177 OFFCURVE",
-"2 119 CURVE SMOOTH",
-"2 62 OFFCURVE",
-"-6 37 OFFCURVE",
-"-14 14 CURVE SMOOTH",
-"-24 -14 OFFCURVE",
-"-32 -37 OFFCURVE",
-"-56 -93 CURVE",
-"-40 -96 LINE"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"-22 -48 OFFCURVE",
-"17 -2 OFFCURVE",
-"33 34 CURVE SMOOTH",
-"60 95 OFFCURVE",
-"66 138 OFFCURVE",
-"66 184 CURVE SMOOTH",
-"66 569 LINE",
-"51 541 LINE",
-"388 773 LINE SMOOTH",
-"441 810 OFFCURVE",
-"469 835 OFFCURVE",
-"492 879 CURVE SMOOTH",
-"524 941 LINE",
-"510 951 LINE",
-"211 742 LINE SMOOTH",
-"150 699 OFFCURVE",
-"91 660 OFFCURVE",
-"60 600 CURVE SMOOTH",
-"19 521 LINE SMOOTH",
-"-3 478 OFFCURVE",
-"-16 445 OFFCURVE",
-"-13 380 CURVE SMOOTH",
-"-1 141 LINE SMOOTH",
-"4 50 OFFCURVE",
-"-54 -24 OFFCURVE",
-"-77 -101 CURVE",
-"-35 -86 LINE"
+"104 -84 OFFCURVE",
+"152 -33 OFFCURVE",
+"181 14 CURVE SMOOTH",
+"217 73 OFFCURVE",
+"226 169 OFFCURVE",
+"226 325 CURVE SMOOTH",
+"226 569 LINE",
+"211 541 LINE",
+"548 773 LINE SMOOTH",
+"601 810 OFFCURVE",
+"629 835 OFFCURVE",
+"652 879 CURVE SMOOTH",
+"684 941 LINE",
+"670 951 LINE",
+"371 742 LINE SMOOTH",
+"310 699 OFFCURVE",
+"251 660 OFFCURVE",
+"220 600 CURVE SMOOTH",
+"179 521 LINE SMOOTH",
+"157 478 OFFCURVE",
+"143 445 OFFCURVE",
+"147 380 CURVE SMOOTH",
+"165 63 LINE",
+"191 71 LINE",
+"201 109 LINE",
+"166 59 OFFCURVE",
+"80 -6 OFFCURVE",
+"30 -6 CURVE SMOOTH",
+"4 -6 OFFCURVE",
+"-18 -102 OFFCURVE",
+"22 -96 CURVE SMOOTH"
 );
 }
 );
-width = 224;
+width = 684;
 }
 );
 note = KAFi6;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi2;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{202, -196}";
+},
+{
+name = exit;
+position = "{168, -27}";
+},
+{
+name = top;
+position = "{399, 831}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"118 -52 OFFCURVE",
+"176 -11 OFFCURVE",
+"213 31 CURVE SMOOTH",
+"271 98 OFFCURVE",
+"264 190 OFFCURVE",
+"264 325 CURVE SMOOTH",
+"264 569 LINE",
+"249 541 LINE",
+"586 773 LINE SMOOTH",
+"639 810 OFFCURVE",
+"667 835 OFFCURVE",
+"690 879 CURVE SMOOTH",
+"722 941 LINE",
+"708 951 LINE",
+"409 742 LINE SMOOTH",
+"348 699 OFFCURVE",
+"289 660 OFFCURVE",
+"258 600 CURVE SMOOTH",
+"217 521 LINE SMOOTH",
+"195 478 OFFCURVE",
+"181 445 OFFCURVE",
+"185 380 CURVE SMOOTH",
+"203 63 LINE",
+"229 71 LINE",
+"234 109 LINE",
+"199 59 OFFCURVE",
+"142 18 OFFCURVE",
+"84 18 CURVE SMOOTH",
+"66 18 OFFCURVE",
+"48 22 OFFCURVE",
+"31 31 CURVE",
+"0 -28 LINE",
+"19 -45 OFFCURVE",
+"41 -52 OFFCURVE",
+"63 -52 CURVE SMOOTH"
+);
+}
+);
+width = 722;
+}
+);
+note = KAFi2;
+},
+{
+color = 3;
+glyphname = KAFi3;
 layers = (
 {
 anchors = (
@@ -53207,1072 +52881,368 @@ nodes = (
 width = 381;
 }
 );
-note = KAFi2;
-},
-{
-color = 1;
-glyphname = KAFi20;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{56, -196}";
-},
-{
-name = exit;
-position = "{-243, -69}";
-},
-{
-name = top;
-position = "{253, 831}";
-}
-);
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-158 -106 OFFCURVE",
-"6 -35 OFFCURVE",
-"51 19 CURVE SMOOTH",
-"76 49 OFFCURVE",
-"96 111 OFFCURVE",
-"98 145 CURVE SMOOTH",
-"100 176 OFFCURVE",
-"102 217 OFFCURVE",
-"102 254 CURVE SMOOTH",
-"102 375 OFFCURVE",
-"107 529 OFFCURVE",
-"121 558 CURVE",
-"95 543 LINE",
-"97 515 LINE",
-"110 543 OFFCURVE",
-"128 559 OFFCURVE",
-"162 582 CURVE SMOOTH",
-"457 786 LINE SMOOTH",
-"494 812 OFFCURVE",
-"509 822 OFFCURVE",
-"531 859 CURVE SMOOTH",
-"578 938 LINE",
-"563 949 LINE",
-"463 873 OFFCURVE",
-"357 801 OFFCURVE",
-"253 731 CURVE SMOOTH",
-"154 664 OFFCURVE",
-"113 610 OFFCURVE",
-"96 562 CURVE SMOOTH",
-"65 473 LINE SMOOTH",
-"53 440 OFFCURVE",
-"51 407 OFFCURVE",
-"51 385 CURVE SMOOTH",
-"51 280 OFFCURVE",
-"50 173 OFFCURVE",
-"56 75 CURVE",
-"65 100 LINE",
-"38 43 OFFCURVE",
-"-77 -17 OFFCURVE",
-"-309 -60 CURVE",
-"-342 -77 OFFCURVE",
-"-330 -106 OFFCURVE",
-"-309 -106 CURVE"
-);
-}
-);
-};
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"-158 -106 OFFCURVE",
-"17 -32 OFFCURVE",
-"62 22 CURVE SMOOTH",
-"113 84 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"56 74 LINE",
-"63 106 LINE",
-"26 32 OFFCURVE",
-"-124 -25 OFFCURVE",
-"-309 -60 CURVE",
-"-340 -72 OFFCURVE",
-"-333 -106 OFFCURVE",
-"-309 -106 CURVE SMOOTH"
-);
-}
-);
-width = 276;
-}
-);
-note = KAFi1;
-},
-{
-color = 1;
-glyphname = KAFi21;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{56, -196}";
-},
-{
-name = exit;
-position = "{-193, -69}";
-},
-{
-name = top;
-position = "{253, 831}";
-}
-);
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-124 -108 OFFCURVE",
-"8 -33 OFFCURVE",
-"51 19 CURVE SMOOTH",
-"76 49 OFFCURVE",
-"96 111 OFFCURVE",
-"98 145 CURVE SMOOTH",
-"100 176 OFFCURVE",
-"102 217 OFFCURVE",
-"102 254 CURVE SMOOTH",
-"102 375 OFFCURVE",
-"107 529 OFFCURVE",
-"121 558 CURVE",
-"95 543 LINE",
-"97 515 LINE",
-"110 543 OFFCURVE",
-"128 559 OFFCURVE",
-"162 582 CURVE SMOOTH",
-"457 786 LINE SMOOTH",
-"494 812 OFFCURVE",
-"509 822 OFFCURVE",
-"531 859 CURVE SMOOTH",
-"578 938 LINE",
-"563 949 LINE",
-"463 873 OFFCURVE",
-"357 801 OFFCURVE",
-"253 731 CURVE SMOOTH",
-"154 664 OFFCURVE",
-"113 610 OFFCURVE",
-"96 562 CURVE SMOOTH",
-"65 473 LINE SMOOTH",
-"53 440 OFFCURVE",
-"51 407 OFFCURVE",
-"51 385 CURVE SMOOTH",
-"51 280 OFFCURVE",
-"50 173 OFFCURVE",
-"56 75 CURVE",
-"65 100 LINE",
-"42 43 OFFCURVE",
-"-81 -42 OFFCURVE",
-"-259 -60 CURVE",
-"-292 -78 OFFCURVE",
-"-284 -108 OFFCURVE",
-"-269 -108 CURVE"
-);
-}
-);
-};
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"-112 -108 OFFCURVE",
-"17 -32 OFFCURVE",
-"62 22 CURVE SMOOTH",
-"113 84 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"56 74 LINE",
-"63 106 LINE",
-"26 32 OFFCURVE",
-"-86 -40 OFFCURVE",
-"-259 -60 CURVE",
-"-290 -72 OFFCURVE",
-"-293 -108 OFFCURVE",
-"-269 -108 CURVE SMOOTH"
-);
-}
-);
-width = 276;
-}
-);
-note = KAFi1;
-},
-{
-color = 1;
-glyphname = KAFi3;
-layers = (
-{
-anchors = (
-{
-name = bottom;
-position = "{38, -166}";
-},
-{
-name = exit;
-position = "{0, 0}";
-},
-{
-name = top;
-position = "{189, 818}";
-}
-);
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-40 -50 OFFCURVE",
-"6 -36 OFFCURVE",
-"51 19 CURVE SMOOTH",
-"79 53 OFFCURVE",
-"96 111 OFFCURVE",
-"98 145 CURVE SMOOTH",
-"100 176 OFFCURVE",
-"102 217 OFFCURVE",
-"102 254 CURVE SMOOTH",
-"102 375 OFFCURVE",
-"107 529 OFFCURVE",
-"121 558 CURVE",
-"95 543 LINE",
-"97 515 LINE",
-"110 543 OFFCURVE",
-"128 559 OFFCURVE",
-"162 582 CURVE SMOOTH",
-"457 786 LINE SMOOTH",
-"494 812 OFFCURVE",
-"509 822 OFFCURVE",
-"531 859 CURVE SMOOTH",
-"578 938 LINE",
-"563 949 LINE",
-"463 873 OFFCURVE",
-"357 801 OFFCURVE",
-"253 731 CURVE SMOOTH",
-"154 664 OFFCURVE",
-"113 610 OFFCURVE",
-"96 562 CURVE SMOOTH",
-"65 473 LINE SMOOTH",
-"53 440 OFFCURVE",
-"51 407 OFFCURVE",
-"51 385 CURVE SMOOTH",
-"51 280 OFFCURVE",
-"50 173 OFFCURVE",
-"56 75 CURVE",
-"65 94 LINE",
-"38 42 OFFCURVE",
-"-32 28 OFFCURVE",
-"-54 20 CURVE SMOOTH",
-"-97 4 OFFCURVE",
-"-107 -16 OFFCURVE",
-"-114 -28 CURVE",
-"-102 -44 OFFCURVE",
-"-89 -50 OFFCURVE",
-"-66 -50 CURVE SMOOTH"
-);
-}
-);
-};
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"-34 -51 OFFCURVE",
-"17 -32 OFFCURVE",
-"62 22 CURVE SMOOTH",
-"113 84 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"56 74 LINE",
-"63 106 LINE",
-"35 50 OFFCURVE",
-"-31 37 OFFCURVE",
-"-52 29 CURVE SMOOTH",
-"-96 13 OFFCURVE",
-"-107 -16 OFFCURVE",
-"-114 -28 CURVE",
-"-102 -45 OFFCURVE",
-"-88 -51 OFFCURVE",
-"-64 -51 CURVE SMOOTH"
-);
-}
-);
-width = 276;
-}
-);
 note = KAFi3;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi4;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{15, -97}";
+position = "{268, -196}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{247, 0}";
 },
 {
 name = top;
-position = "{173, 800}";
+position = "{465, 831}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-37 -51 OFFCURVE",
-"-1 -34 OFFCURVE",
-"36 10 CURVE SMOOTH",
-"72 52 OFFCURVE",
-"88 111 OFFCURVE",
-"90 145 CURVE SMOOTH",
-"92 176 OFFCURVE",
-"94 217 OFFCURVE",
-"94 254 CURVE SMOOTH",
-"94 375 OFFCURVE",
-"99 529 OFFCURVE",
-"113 558 CURVE",
-"87 543 LINE",
-"89 515 LINE",
-"102 543 OFFCURVE",
-"120 559 OFFCURVE",
-"154 582 CURVE SMOOTH",
-"449 786 LINE SMOOTH",
-"486 812 OFFCURVE",
-"501 822 OFFCURVE",
-"523 859 CURVE SMOOTH",
-"570 938 LINE",
-"555 949 LINE",
-"455 873 OFFCURVE",
-"349 801 OFFCURVE",
-"245 731 CURVE SMOOTH",
-"146 664 OFFCURVE",
-"105 610 OFFCURVE",
-"88 562 CURVE SMOOTH",
-"57 473 LINE SMOOTH",
-"45 440 OFFCURVE",
-"43 407 OFFCURVE",
-"43 385 CURVE SMOOTH",
-"43 280 OFFCURVE",
-"42 173 OFFCURVE",
-"48 75 CURVE",
-"57 94 LINE",
-"21 38 OFFCURVE",
-"-20 31 OFFCURVE",
-"-46 18 CURVE SMOOTH",
-"-86 -1 OFFCURVE",
-"-98 -16 OFFCURVE",
-"-106 -33 CURVE",
-"-97 -44 OFFCURVE",
-"-82 -51 OFFCURVE",
-"-67 -51 CURVE SMOOTH"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"-34 -51 OFFCURVE",
-"17 -32 OFFCURVE",
-"62 22 CURVE SMOOTH",
-"113 84 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"56 74 LINE",
-"63 106 LINE",
-"35 50 OFFCURVE",
-"-31 37 OFFCURVE",
-"-52 29 CURVE SMOOTH",
-"-96 13 OFFCURVE",
-"-107 -16 OFFCURVE",
-"-114 -28 CURVE",
-"-102 -45 OFFCURVE",
-"-88 -51 OFFCURVE",
-"-64 -51 CURVE SMOOTH"
+"189 -52 OFFCURVE",
+"239 -14 OFFCURVE",
+"279 31 CURVE SMOOTH",
+"337 98 OFFCURVE",
+"330 190 OFFCURVE",
+"330 325 CURVE SMOOTH",
+"330 569 LINE",
+"315 541 LINE",
+"652 773 LINE SMOOTH",
+"705 810 OFFCURVE",
+"733 835 OFFCURVE",
+"756 879 CURVE SMOOTH",
+"788 941 LINE",
+"774 951 LINE",
+"475 742 LINE SMOOTH",
+"414 699 OFFCURVE",
+"355 660 OFFCURVE",
+"324 600 CURVE SMOOTH",
+"283 521 LINE SMOOTH",
+"261 478 OFFCURVE",
+"247 445 OFFCURVE",
+"251 380 CURVE SMOOTH",
+"269 63 LINE",
+"295 71 LINE",
+"300 109 LINE",
+"265 58 OFFCURVE",
+"213 23 OFFCURVE",
+"147 23 CURVE SMOOTH",
+"127 23 OFFCURVE",
+"105 26 OFFCURVE",
+"94 28 CURVE",
+"0 -29 LINE",
+"34 -45 OFFCURVE",
+"69 -52 OFFCURVE",
+"101 -52 CURVE SMOOTH"
 );
 }
 );
-width = 276;
+width = 788;
 }
 );
 note = KAFi4;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi5;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{41, -207}";
+position = "{77, -268}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{57, 0}";
 },
 {
 name = top;
-position = "{229, 833}";
+position = "{222, 859}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"457 873 OFFCURVE",
-"351 801 OFFCURVE",
-"247 731 CURVE SMOOTH",
-"148 664 OFFCURVE",
-"107 610 OFFCURVE",
-"90 562 CURVE SMOOTH",
-"59 473 LINE SMOOTH",
-"47 440 OFFCURVE",
-"45 407 OFFCURVE",
-"45 385 CURVE SMOOTH",
-"45 280 OFFCURVE",
-"44 173 OFFCURVE",
-"50 75 CURVE",
-"59 108 LINE",
-"32 43 OFFCURVE",
-"-25 29 OFFCURVE",
-"-46 19 CURVE SMOOTH",
-"-87 0 OFFCURVE",
-"-99 -20 OFFCURVE",
-"-106 -32 CURVE",
-"-97 -43 OFFCURVE",
-"-90 -50 OFFCURVE",
-"-66 -50 CURVE SMOOTH",
-"-36 -50 OFFCURVE",
-"4 -34 OFFCURVE",
-"45 20 CURVE SMOOTH",
-"68 51 OFFCURVE",
-"90 111 OFFCURVE",
-"92 145 CURVE SMOOTH",
-"94 176 OFFCURVE",
-"96 217 OFFCURVE",
-"96 254 CURVE SMOOTH",
-"96 375 OFFCURVE",
-"101 529 OFFCURVE",
-"115 558 CURVE",
-"89 543 LINE",
-"91 515 LINE",
-"104 543 OFFCURVE",
-"122 559 OFFCURVE",
-"156 582 CURVE SMOOTH",
-"451 786 LINE SMOOTH",
-"488 812 OFFCURVE",
-"503 822 OFFCURVE",
-"525 859 CURVE SMOOTH",
-"572 938 LINE",
-"557 949 LINE"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"113 84 OFFCURVE",
-"118 190 OFFCURVE",
-"118 325 CURVE SMOOTH",
-"118 569 LINE",
-"103 541 LINE",
-"440 773 LINE SMOOTH",
-"493 810 OFFCURVE",
-"521 835 OFFCURVE",
-"544 879 CURVE SMOOTH",
-"576 941 LINE",
-"562 951 LINE",
-"263 742 LINE SMOOTH",
-"202 699 OFFCURVE",
-"143 660 OFFCURVE",
-"112 600 CURVE SMOOTH",
-"71 521 LINE SMOOTH",
-"49 478 OFFCURVE",
-"35 445 OFFCURVE",
-"39 380 CURVE SMOOTH",
-"56 74 LINE",
-"63 106 LINE",
-"35 50 OFFCURVE",
-"-31 37 OFFCURVE",
-"-52 29 CURVE SMOOTH",
-"-96 13 OFFCURVE",
-"-107 -16 OFFCURVE",
-"-114 -28 CURVE",
-"-102 -45 OFFCURVE",
-"-88 -51 OFFCURVE",
-"-64 -51 CURVE SMOOTH",
-"-34 -51 OFFCURVE",
-"17 -32 OFFCURVE",
-"62 22 CURVE SMOOTH"
+"56 -19 LINE SMOOTH",
+"94 55 OFFCURVE",
+"128 112 OFFCURVE",
+"128 184 CURVE SMOOTH",
+"128 569 LINE",
+"113 541 LINE",
+"450 773 LINE SMOOTH",
+"503 810 OFFCURVE",
+"531 835 OFFCURVE",
+"554 879 CURVE SMOOTH",
+"586 941 LINE",
+"572 951 LINE",
+"273 742 LINE SMOOTH",
+"212 699 OFFCURVE",
+"153 660 OFFCURVE",
+"122 600 CURVE SMOOTH",
+"81 521 LINE SMOOTH",
+"59 478 OFFCURVE",
+"44 445 OFFCURVE",
+"49 380 CURVE SMOOTH",
+"69 130 LINE SMOOTH",
+"74 67 OFFCURVE",
+"18 -39 OFFCURVE",
+"0 -86 CURVE",
+"15 -100 LINE"
 );
 }
 );
-width = 276;
+width = 586;
 }
 );
 note = KAFi5;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi6;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{15, -268}";
+position = "{77, -268}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{57, 0}";
 },
 {
 name = top;
-position = "{160, 859}";
+position = "{222, 859}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-18 -50 OFFCURVE",
-"2 -27 OFFCURVE",
-"16 -3 CURVE SMOOTH",
-"46 49 OFFCURVE",
-"48 83 OFFCURVE",
-"48 254 CURVE SMOOTH",
-"48 375 OFFCURVE",
-"53 529 OFFCURVE",
-"67 558 CURVE",
-"41 543 LINE",
-"43 515 LINE",
-"56 543 OFFCURVE",
-"74 559 OFFCURVE",
-"108 582 CURVE SMOOTH",
-"403 786 LINE SMOOTH",
-"440 812 OFFCURVE",
-"455 822 OFFCURVE",
-"477 859 CURVE SMOOTH",
-"524 938 LINE",
-"509 949 LINE",
-"409 873 OFFCURVE",
-"303 801 OFFCURVE",
-"199 731 CURVE SMOOTH",
-"100 664 OFFCURVE",
-"59 610 OFFCURVE",
-"42 562 CURVE SMOOTH",
-"11 473 LINE SMOOTH",
-"-1 440 OFFCURVE",
-"-3 407 OFFCURVE",
-"-3 385 CURVE SMOOTH",
-"-3 280 OFFCURVE",
-"2 177 OFFCURVE",
-"2 119 CURVE SMOOTH",
-"2 62 OFFCURVE",
-"-6 37 OFFCURVE",
-"-14 14 CURVE SMOOTH",
-"-24 -14 OFFCURVE",
-"-32 -37 OFFCURVE",
-"-56 -93 CURVE",
-"-40 -96 LINE"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"-2 -23 LINE SMOOTH",
-"37 51 OFFCURVE",
-"66 112 OFFCURVE",
-"66 184 CURVE SMOOTH",
-"66 569 LINE",
-"51 541 LINE",
-"388 773 LINE SMOOTH",
-"441 810 OFFCURVE",
-"469 835 OFFCURVE",
-"492 879 CURVE SMOOTH",
-"524 941 LINE",
-"510 951 LINE",
-"211 742 LINE SMOOTH",
-"150 699 OFFCURVE",
-"91 660 OFFCURVE",
-"60 600 CURVE SMOOTH",
-"19 521 LINE SMOOTH",
-"-3 478 OFFCURVE",
-"-16 445 OFFCURVE",
-"-13 380 CURVE SMOOTH",
-"2 83 LINE SMOOTH",
-"4 51 OFFCURVE",
-"-42 -52 OFFCURVE",
-"-60 -99 CURVE",
-"-42 -100 LINE"
+"56 -19 LINE SMOOTH",
+"94 55 OFFCURVE",
+"128 112 OFFCURVE",
+"128 184 CURVE SMOOTH",
+"128 569 LINE",
+"113 541 LINE",
+"450 773 LINE SMOOTH",
+"503 810 OFFCURVE",
+"531 835 OFFCURVE",
+"554 879 CURVE SMOOTH",
+"586 941 LINE",
+"572 951 LINE",
+"273 742 LINE SMOOTH",
+"212 699 OFFCURVE",
+"153 660 OFFCURVE",
+"122 600 CURVE SMOOTH",
+"81 521 LINE SMOOTH",
+"59 478 OFFCURVE",
+"44 445 OFFCURVE",
+"49 380 CURVE SMOOTH",
+"69 130 LINE SMOOTH",
+"74 67 OFFCURVE",
+"18 -39 OFFCURVE",
+"0 -86 CURVE",
+"15 -100 LINE"
 );
 }
 );
-width = 224;
+width = 586;
 }
 );
 note = KAFi6;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi7;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{18, -213}";
+position = "{286, -97}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{60, 10}";
 },
 {
 name = top;
-position = "{62, 521}";
+position = "{344, 770}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-59 258 LINE",
-"-49 282 OFFCURVE",
-"-13 314 OFFCURVE",
-"10 329 CURVE SMOOTH",
-"225 473 LINE SMOOTH",
-"257 494 OFFCURVE",
-"285 514 OFFCURVE",
-"315 558 CURVE SMOOTH",
-"352 613 LINE",
-"339 622 LINE",
-"76 444 LINE SMOOTH",
-"33 415 OFFCURVE",
-"-8 376 OFFCURVE",
-"-36 343 CURVE SMOOTH",
-"-64 309 OFFCURVE",
-"-80 264 OFFCURVE",
-"-100 213 CURVE",
-"-86 196 LINE"
-);
-},
-{
-closed = 1;
-nodes = (
-"-18 -60 OFFCURVE",
-"1 -33 OFFCURVE",
-"17 -10 CURVE SMOOTH",
-"61 51 OFFCURVE",
-"70 107 OFFCURVE",
-"70 133 CURVE SMOOTH",
-"70 194 OFFCURVE",
-"18 243 OFFCURVE",
-"-58 274 CURVE",
-"-86 196 LINE",
-"-17 167 OFFCURVE",
-"13 133 OFFCURVE",
-"13 94 CURVE SMOOTH",
-"13 57 OFFCURVE",
-"-8 11 OFFCURVE",
-"-31 -25 CURVE SMOOTH",
-"-46 -48 OFFCURVE",
-"-48 -70 OFFCURVE",
-"-44 -83 CURVE"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"10 -33 OFFCURVE",
-"60 58 OFFCURVE",
-"60 149 CURVE SMOOTH",
-"60 212 OFFCURVE",
-"18 248 OFFCURVE",
-"-62 257 CURVE",
-"244 469 LINE SMOOTH",
-"298 506 OFFCURVE",
-"325 531 OFFCURVE",
-"348 575 CURVE SMOOTH",
-"380 637 LINE",
-"366 647 LINE",
-"67 438 LINE SMOOTH",
-"6 395 OFFCURVE",
-"-55 356 OFFCURVE",
-"-84 296 CURVE SMOOTH",
-"-126 208 LINE",
-"-114 171 LINE",
-"-47 161 OFFCURVE",
-"-3 146 OFFCURVE",
-"13 94 CURVE",
-"13 57 OFFCURVE",
-"-7 21 OFFCURVE",
-"-31 -15 CURVE SMOOTH",
-"-46 -38 OFFCURVE",
-"-48 -70 OFFCURVE",
-"-44 -83 CURVE"
+"105 -26 OFFCURVE",
+"198 1 OFFCURVE",
+"233 42 CURVE SMOOTH",
+"279 98 OFFCURVE",
+"289 182 OFFCURVE",
+"289 295 CURVE SMOOTH",
+"289 539 LINE",
+"274 511 LINE",
+"611 743 LINE SMOOTH",
+"664 780 OFFCURVE",
+"692 805 OFFCURVE",
+"715 849 CURVE SMOOTH",
+"747 911 LINE",
+"733 921 LINE",
+"434 712 LINE SMOOTH",
+"373 669 OFFCURVE",
+"314 630 OFFCURVE",
+"283 570 CURVE SMOOTH",
+"242 491 LINE SMOOTH",
+"220 448 OFFCURVE",
+"206 415 OFFCURVE",
+"210 350 CURVE SMOOTH",
+"227 94 LINE",
+"234 126 LINE",
+"208 61 OFFCURVE",
+"36 11 OFFCURVE",
+"0 -83 CURVE",
+"14 -96 LINE"
 );
 }
 );
-width = 130;
+width = 747;
 }
 );
 note = KAFi7;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi8;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{46, -189}";
+position = "{341, -196}";
 },
 {
 name = exit;
-position = "{17, -4}";
+position = "{107, -72}";
 },
 {
 name = top;
-position = "{196, 833}";
+position = "{538, 831}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"167 93 OFFCURVE",
-"178 181 OFFCURVE",
-"178 316 CURVE SMOOTH",
-"178 560 LINE",
-"163 532 LINE",
-"500 764 LINE SMOOTH",
-"553 801 OFFCURVE",
-"581 826 OFFCURVE",
-"604 870 CURVE SMOOTH",
-"636 932 LINE",
-"622 942 LINE",
-"323 733 LINE SMOOTH",
-"262 690 OFFCURVE",
-"203 651 OFFCURVE",
-"172 591 CURVE SMOOTH",
-"131 512 LINE SMOOTH",
-"109 469 OFFCURVE",
-"95 436 OFFCURVE",
-"99 371 CURVE SMOOTH",
-"116 85 LINE",
-"123 117 LINE",
-"108 79 OFFCURVE",
-"83 55 OFFCURVE",
-"39 55 CURVE SMOOTH",
-"15 55 OFFCURVE",
-"5 62 OFFCURVE",
-"-5 62 CURVE SMOOTH",
-"-57 62 OFFCURVE",
-"-72 13 OFFCURVE",
-"-72 -11 CURVE SMOOTH",
-"-72 -29 OFFCURVE",
-"-64 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH",
-"40 -75 OFFCURVE",
-"87 -29 OFFCURVE",
-"123 26 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"32 -75 OFFCURVE",
-"81 -46 OFFCURVE",
-"117 23 CURVE SMOOTH",
-"135 57 OFFCURVE",
-"152 103 OFFCURVE",
-"161 153 CURVE",
-"141 157 LINE",
-"121 101 OFFCURVE",
-"84 60 OFFCURVE",
-"36 60 CURVE SMOOTH",
-"-12 60 OFFCURVE",
-"-45 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"167 93 OFFCURVE",
-"178 181 OFFCURVE",
-"178 316 CURVE SMOOTH",
-"178 560 LINE",
-"163 532 LINE",
-"500 764 LINE SMOOTH",
-"553 801 OFFCURVE",
-"581 826 OFFCURVE",
-"604 870 CURVE SMOOTH",
-"636 932 LINE",
-"622 942 LINE",
-"323 733 LINE SMOOTH",
-"262 690 OFFCURVE",
-"203 651 OFFCURVE",
-"172 591 CURVE SMOOTH",
-"131 512 LINE SMOOTH",
-"109 469 OFFCURVE",
-"95 436 OFFCURVE",
-"99 371 CURVE SMOOTH",
-"116 85 LINE",
-"123 117 LINE",
-"108 79 OFFCURVE",
-"80 60 OFFCURVE",
-"36 60 CURVE SMOOTH",
-"-12 60 OFFCURVE",
-"-45 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH",
-"40 -75 OFFCURVE",
-"87 -29 OFFCURVE",
-"123 26 CURVE SMOOTH"
+"173 -108 OFFCURVE",
+"302 -32 OFFCURVE",
+"347 22 CURVE SMOOTH",
+"398 84 OFFCURVE",
+"403 190 OFFCURVE",
+"403 325 CURVE SMOOTH",
+"403 569 LINE",
+"388 541 LINE",
+"725 773 LINE SMOOTH",
+"778 810 OFFCURVE",
+"806 835 OFFCURVE",
+"829 879 CURVE SMOOTH",
+"861 941 LINE",
+"847 951 LINE",
+"548 742 LINE SMOOTH",
+"487 699 OFFCURVE",
+"428 660 OFFCURVE",
+"397 600 CURVE SMOOTH",
+"356 521 LINE SMOOTH",
+"334 478 OFFCURVE",
+"320 445 OFFCURVE",
+"324 380 CURVE SMOOTH",
+"341 74 LINE",
+"348 106 LINE",
+"311 32 OFFCURVE",
+"199 -40 OFFCURVE",
+"26 -60 CURVE",
+"-5 -72 OFFCURVE",
+"-8 -108 OFFCURVE",
+"16 -108 CURVE SMOOTH"
 );
 }
 );
-width = 336;
+width = 861;
 }
 );
 note = KAFi8;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFi9;
 layers = (
 {
 anchors = (
 {
 name = bottom;
-position = "{61, -244}";
+position = "{64, -268}";
 },
 {
 name = exit;
-position = "{17, -4}";
+position = "{57, 0}";
 },
 {
 name = top;
-position = "{248, 883}";
+position = "{209, 859}";
 }
 );
-background = {
-anchors = (
-{
-name = bottom;
-position = "{61, -244}";
-},
-{
-name = exit;
-position = "{17, -4}";
-},
-{
-name = top;
-position = "{248, 883}";
-}
-);
-paths = (
-{
-closed = 1;
-nodes = (
-"167 93 OFFCURVE",
-"178 181 OFFCURVE",
-"178 316 CURVE SMOOTH",
-"178 560 LINE",
-"163 532 LINE",
-"500 764 LINE SMOOTH",
-"553 801 OFFCURVE",
-"581 826 OFFCURVE",
-"604 870 CURVE SMOOTH",
-"636 932 LINE",
-"622 942 LINE",
-"323 733 LINE SMOOTH",
-"262 690 OFFCURVE",
-"203 651 OFFCURVE",
-"172 591 CURVE SMOOTH",
-"131 512 LINE SMOOTH",
-"109 469 OFFCURVE",
-"95 436 OFFCURVE",
-"99 371 CURVE SMOOTH",
-"116 85 LINE",
-"123 117 LINE",
-"108 79 OFFCURVE",
-"83 55 OFFCURVE",
-"39 55 CURVE SMOOTH",
-"15 55 OFFCURVE",
-"5 62 OFFCURVE",
-"-5 62 CURVE SMOOTH",
-"-57 62 OFFCURVE",
-"-72 13 OFFCURVE",
-"-72 -11 CURVE SMOOTH",
-"-72 -29 OFFCURVE",
-"-64 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH",
-"40 -75 OFFCURVE",
-"87 -29 OFFCURVE",
-"123 26 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"32 -75 OFFCURVE",
-"81 -46 OFFCURVE",
-"117 23 CURVE SMOOTH",
-"135 57 OFFCURVE",
-"152 103 OFFCURVE",
-"161 153 CURVE",
-"141 157 LINE",
-"121 101 OFFCURVE",
-"84 60 OFFCURVE",
-"36 60 CURVE SMOOTH",
-"-12 60 OFFCURVE",
-"-45 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"167 93 OFFCURVE",
-"178 181 OFFCURVE",
-"178 316 CURVE SMOOTH",
-"178 560 LINE",
-"163 532 LINE",
-"500 764 LINE SMOOTH",
-"553 801 OFFCURVE",
-"581 826 OFFCURVE",
-"604 870 CURVE SMOOTH",
-"636 932 LINE",
-"622 942 LINE",
-"323 733 LINE SMOOTH",
-"262 690 OFFCURVE",
-"203 651 OFFCURVE",
-"172 591 CURVE SMOOTH",
-"131 512 LINE SMOOTH",
-"109 469 OFFCURVE",
-"95 436 OFFCURVE",
-"99 371 CURVE SMOOTH",
-"116 85 LINE",
-"123 117 LINE",
-"108 79 OFFCURVE",
-"80 60 OFFCURVE",
-"36 60 CURVE SMOOTH",
-"-12 60 OFFCURVE",
-"-45 -75 OFFCURVE",
-"-11 -75 CURVE SMOOTH",
-"40 -75 OFFCURVE",
-"87 -29 OFFCURVE",
-"123 26 CURVE SMOOTH"
+"73 -53 OFFCURVE",
+"62 -44 OFFCURVE",
+"62 -27 CURVE SMOOTH",
+"62 6 OFFCURVE",
+"115 76 OFFCURVE",
+"115 184 CURVE SMOOTH",
+"115 569 LINE",
+"100 541 LINE",
+"437 773 LINE SMOOTH",
+"490 810 OFFCURVE",
+"518 835 OFFCURVE",
+"541 879 CURVE SMOOTH",
+"573 941 LINE",
+"559 951 LINE",
+"260 742 LINE SMOOTH",
+"199 699 OFFCURVE",
+"140 660 OFFCURVE",
+"109 600 CURVE SMOOTH",
+"68 521 LINE SMOOTH",
+"46 478 OFFCURVE",
+"33 445 OFFCURVE",
+"36 380 CURVE SMOOTH",
+"51 83 LINE SMOOTH",
+"55 6 OFFCURVE",
+"-13 -104 OFFCURVE",
+"2 -128 CURVE",
+"37 -141 OFFCURVE",
+"122 -86 OFFCURVE",
+"88 -63 CURVE SMOOTH"
 );
 }
 );
-width = 336;
+width = 573;
 }
 );
 note = KAFi9;
@@ -76001,6 +74971,230 @@ width = 193;
 }
 );
 note = LAMi14;
+},
+{
+color = 3;
+glyphname = KAFi18;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{161, -232}";
+},
+{
+name = exit;
+position = "{54, -8}";
+},
+{
+name = top;
+position = "{225, 500}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"180 -60 OFFCURVE",
+"246 74 OFFCURVE",
+"246 165 CURVE SMOOTH",
+"246 228 OFFCURVE",
+"204 264 OFFCURVE",
+"124 273 CURVE",
+"430 485 LINE SMOOTH",
+"484 522 OFFCURVE",
+"511 547 OFFCURVE",
+"534 591 CURVE SMOOTH",
+"566 653 LINE",
+"552 663 LINE",
+"253 454 LINE SMOOTH",
+"192 411 OFFCURVE",
+"131 372 OFFCURVE",
+"102 312 CURVE SMOOTH",
+"60 224 LINE",
+"72 187 LINE",
+"139 177 OFFCURVE",
+"183 162 OFFCURVE",
+"199 110 CURVE",
+"177 61 OFFCURVE",
+"116 30 OFFCURVE",
+"66 30 CURVE SMOOTH",
+"32 30 OFFCURVE",
+"-27 -60 OFFCURVE",
+"13 -60 CURVE SMOOTH"
+);
+}
+);
+width = 566;
+}
+);
+note = KAFi6;
+},
+{
+color = 3;
+glyphname = KAFi19;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{158, -196}";
+},
+{
+name = exit;
+position = "{54, -36}";
+},
+{
+name = top;
+position = "{355, 831}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"98 -84 OFFCURVE",
+"146 -33 OFFCURVE",
+"175 14 CURVE SMOOTH",
+"211 73 OFFCURVE",
+"220 169 OFFCURVE",
+"220 325 CURVE SMOOTH",
+"220 569 LINE",
+"205 541 LINE",
+"542 773 LINE SMOOTH",
+"595 810 OFFCURVE",
+"623 835 OFFCURVE",
+"646 879 CURVE SMOOTH",
+"678 941 LINE",
+"664 951 LINE",
+"365 742 LINE SMOOTH",
+"304 699 OFFCURVE",
+"245 660 OFFCURVE",
+"214 600 CURVE SMOOTH",
+"173 521 LINE SMOOTH",
+"151 478 OFFCURVE",
+"137 445 OFFCURVE",
+"141 380 CURVE SMOOTH",
+"159 63 LINE",
+"185 71 LINE",
+"185 94 LINE",
+"158 48 OFFCURVE",
+"87 25 OFFCURVE",
+"47 10 CURVE SMOOTH",
+"21 0 OFFCURVE",
+"-24 -102 OFFCURVE",
+"16 -96 CURVE SMOOTH"
+);
+}
+);
+width = 678;
+}
+);
+note = KAFi6;
+},
+{
+color = 3;
+glyphname = GAFi18;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{161, -232}";
+},
+{
+name = exit;
+position = "{54, -8}";
+},
+{
+name = top;
+position = "{225, 500}";
+}
+);
+components = (
+{
+name = KAFi18;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"230 497 OFFCURVE",
+"250 515 OFFCURVE",
+"267 526 CURVE SMOOTH",
+"355 582 LINE SMOOTH",
+"370 592 OFFCURVE",
+"376 602 OFFCURVE",
+"382 611 CURVE SMOOTH",
+"403 644 LINE",
+"393 652 LINE",
+"258 564 LINE SMOOTH",
+"231 546 OFFCURVE",
+"206 497 OFFCURVE",
+"204 485 CURVE",
+"217 478 LINE"
+);
+}
+);
+width = 566;
+}
+);
+note = KAFi6;
+},
+{
+color = 3;
+glyphname = GAFi19;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{158, -196}";
+},
+{
+name = exit;
+position = "{54, -36}";
+},
+{
+name = top;
+position = "{355, 831}";
+}
+);
+components = (
+{
+name = KAFi19;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"276 750 OFFCURVE",
+"288 757 OFFCURVE",
+"310 772 CURVE SMOOTH",
+"502 903 LINE SMOOTH",
+"523 918 OFFCURVE",
+"534 929 OFFCURVE",
+"546 950 CURVE SMOOTH",
+"564 981 LINE",
+"550 990 LINE",
+"323 836 LINE SMOOTH",
+"273 802 OFFCURVE",
+"254 765 OFFCURVE",
+"245 735 CURVE",
+"263 728 LINE"
+);
+}
+);
+width = 678;
+}
+);
+note = KAFi6;
 }
 );
 instances = (
@@ -77590,7 +76784,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77599,7 +76793,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77622,7 +76816,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77631,7 +76825,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77654,7 +76848,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77663,7 +76857,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77686,7 +76880,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77695,7 +76889,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77718,7 +76912,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77727,7 +76921,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77750,7 +76944,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77759,7 +76953,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77782,7 +76976,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = 1;
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77791,7 +76985,7 @@ HAYCm = "2";
 Hei = 1;
 JIMi = 1;
 JIMm = "2";
-KAFi = 1;
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77814,7 +77008,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = 1;
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77823,7 +77017,7 @@ HAYCm = "2";
 Hei = 1;
 JIMi = 1;
 JIMm = "2";
-KAFi = 1;
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77846,7 +77040,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = 1;
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77855,7 +77049,7 @@ HAYCm = "2";
 Hei = 1;
 JIMi = 1;
 JIMm = "2";
-KAFi = 1;
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77878,7 +77072,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = 1;
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77887,7 +77081,7 @@ HAYCm = "2";
 Hei = 1;
 JIMi = 1;
 JIMm = "2";
-KAFi = 1;
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77910,7 +77104,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = 1;
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77919,7 +77113,7 @@ HAYCm = "2";
 Hei = 1;
 JIMi = 1;
 JIMm = "2";
-KAFi = 1;
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77942,7 +77136,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77951,7 +77145,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -77974,7 +77168,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -77983,7 +77177,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -78006,7 +77200,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -78015,7 +77209,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -78038,7 +77232,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = 1;
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -78047,7 +77241,7 @@ HAYCm = "2";
 Hei = 1;
 JIMi = 1;
 JIMm = "2";
-KAFi = 1;
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -78262,7 +77456,7 @@ BEi = sd1;
 BEm = sd1;
 FEi = "1";
 FEm = "1";
-GAFi = "8";
+GAFi = "1";
 GAFm = "1";
 HAYAi = "1";
 HAYAm = "1";
@@ -78271,7 +77465,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "8";
+KAFi = "1";
 KAFm = "1";
 LAMi = "1";
 LAMm = "1";
@@ -78294,7 +77488,7 @@ BEi = sd1;
 BEm = sd1;
 FEi = "1";
 FEm = "1";
-GAFi = "8";
+GAFi = "1";
 GAFm = "1";
 HAYAi = "1";
 HAYAm = "1";
@@ -78303,7 +77497,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "8";
+KAFi = "1";
 KAFm = "1";
 LAMi = "1";
 LAMm = "1";
@@ -78326,7 +77520,7 @@ BEi = sd1;
 BEm = sd1;
 FEi = "1";
 FEm = "1";
-GAFi = "8";
+GAFi = "1";
 GAFm = "1";
 HAYAi = "1";
 HAYAm = "1";
@@ -78335,7 +77529,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "8";
+KAFi = "1";
 KAFm = "1";
 LAMi = "1";
 LAMm = "1";
@@ -78358,7 +77552,7 @@ BEi = sd1;
 BEm = sd1;
 FEi = "1";
 FEm = "1";
-GAFi = "8";
+GAFi = "1";
 GAFm = "1";
 HAYAi = "1";
 HAYAm = "1";
@@ -78367,7 +77561,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "8";
+KAFi = "1";
 KAFm = "1";
 LAMi = "1";
 LAMm = "1";
@@ -78390,7 +77584,7 @@ BEi = sd1;
 BEm = sd1;
 FEi = "1";
 FEm = "1";
-GAFi = "8";
+GAFi = "1";
 GAFm = "1";
 HAYAi = "1";
 HAYAm = "1";
@@ -78399,7 +77593,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "8";
+KAFi = "1";
 KAFm = "1";
 LAMi = "1";
 LAMm = "1";
@@ -78422,7 +77616,7 @@ BEi = sd1;
 BEm = sd1;
 FEi = "1";
 FEm = "1";
-GAFi = "8";
+GAFi = "1";
 GAFm = "1";
 HAYAi = "1";
 HAYAm = "1";
@@ -78431,7 +77625,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "8";
+KAFi = "1";
 KAFm = "1";
 LAMi = "1";
 LAMm = "1";
@@ -78966,7 +78160,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "15";
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -78975,7 +78169,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = 1;
+KAFi = "15";
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -78998,7 +78192,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "15";
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -79007,7 +78201,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = 1;
+KAFi = "15";
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -79030,7 +78224,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79039,7 +78233,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79062,7 +78256,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79071,7 +78265,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79094,7 +78288,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79103,7 +78297,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79126,7 +78320,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79135,7 +78329,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79158,7 +78352,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79167,7 +78361,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79190,7 +78384,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79199,7 +78393,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79222,7 +78416,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79231,7 +78425,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79254,7 +78448,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79263,7 +78457,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79286,7 +78480,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79295,7 +78489,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79318,7 +78512,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79327,7 +78521,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79350,7 +78544,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79359,7 +78553,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79382,7 +78576,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79391,7 +78585,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79414,7 +78608,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = 1;
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79423,7 +78617,7 @@ HAYCm = "4";
 Hei = 1;
 JIMi = 1;
 JIMm = "4";
-KAFi = 1;
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79446,7 +78640,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79455,7 +78649,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79478,7 +78672,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -79487,7 +78681,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -79510,7 +78704,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79519,7 +78713,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79542,7 +78736,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79551,7 +78745,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79574,7 +78768,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79583,7 +78777,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79606,7 +78800,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79615,7 +78809,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79638,7 +78832,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79647,7 +78841,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79670,7 +78864,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79679,7 +78873,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79702,7 +78896,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79711,7 +78905,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79734,7 +78928,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79743,7 +78937,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79766,7 +78960,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79775,7 +78969,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79798,7 +78992,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79807,7 +79001,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79830,7 +79024,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79839,7 +79033,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79862,7 +79056,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79871,7 +79065,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79894,7 +79088,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79903,7 +79097,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79926,7 +79120,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79935,7 +79129,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -79958,7 +79152,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -79967,7 +79161,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -80310,7 +79504,7 @@ BEi = "6";
 BEm = "6";
 FEi = "6";
 FEm = "6";
-GAFi = 1;
+GAFi = "6";
 GAFm = "6";
 HAYAi = 1;
 HAYAm = "6";
@@ -80374,7 +79568,7 @@ BEi = "6";
 BEm = "6";
 FEi = "6";
 FEm = "6";
-GAFi = 1;
+GAFi = "6";
 GAFm = "6";
 HAYAi = 1;
 HAYAm = "6";
@@ -80406,7 +79600,7 @@ BEi = "6";
 BEm = "6";
 FEi = "6";
 FEm = "6";
-GAFi = 1;
+GAFi = "6";
 GAFm = "6";
 HAYAi = 1;
 HAYAm = "6";
@@ -80438,7 +79632,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80447,7 +79641,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80470,7 +79664,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80479,7 +79673,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "5";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80502,7 +79696,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80511,7 +79705,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80534,7 +79728,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80543,7 +79737,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80566,7 +79760,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80575,7 +79769,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80598,7 +79792,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80607,7 +79801,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80630,7 +79824,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80639,7 +79833,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80662,7 +79856,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80671,7 +79865,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80694,7 +79888,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = 1;
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80703,7 +79897,7 @@ HAYCm = "7";
 Hei = 1;
 JIMi = 1;
 JIMm = "7";
-KAFi = 1;
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80726,7 +79920,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80735,7 +79929,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80758,7 +79952,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80767,7 +79961,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80790,7 +79984,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80799,7 +79993,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80822,7 +80016,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80831,7 +80025,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80854,7 +80048,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80863,7 +80057,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80886,7 +80080,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -80895,7 +80089,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -80918,7 +80112,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -80927,7 +80121,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -80950,7 +80144,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -80959,7 +80153,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -80982,7 +80176,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "21";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -80991,7 +80185,7 @@ HAYCm = "3";
 Hei = "21";
 JIMi = "21";
 JIMm = "3";
-KAFi = "21";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81014,7 +80208,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "21";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81023,7 +80217,7 @@ HAYCm = "3";
 Hei = "21";
 JIMi = "21";
 JIMm = "3";
-KAFi = "21";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81046,7 +80240,7 @@ BEi = "8";
 BEm = "8";
 FEi = "8";
 FEm = "8";
-GAFi = 1;
+GAFi = "8";
 GAFm = "8";
 HAYAi = "8";
 HAYAm = "8";
@@ -81055,7 +80249,7 @@ HAYCm = "8";
 Hei = 1;
 JIMi = "1";
 JIMm = "8";
-KAFi = 1;
+KAFi = "8";
 KAFm = "8";
 LAMi = "8";
 LAMm = "8";
@@ -81078,7 +80272,7 @@ BEi = "8";
 BEm = "8";
 FEi = "8";
 FEm = "8";
-GAFi = "1";
+GAFi = "8";
 GAFm = "8";
 HAYAi = "8";
 HAYAm = "8";
@@ -81087,7 +80281,7 @@ HAYCm = "8";
 Hei = 1;
 JIMi = "1";
 JIMm = "8";
-KAFi = "1";
+KAFi = "8";
 KAFm = "8";
 LAMi = "8";
 LAMm = "8";
@@ -81110,7 +80304,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81119,7 +80313,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = "1";
 JIMm = "3";
-KAFi = 1;
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81142,7 +80336,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "1";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81151,7 +80345,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = "1";
 JIMm = "3";
-KAFi = "1";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81174,7 +80368,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = 3;
@@ -81183,7 +80377,7 @@ HAYCm = 3;
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81206,7 +80400,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81215,7 +80409,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81238,7 +80432,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81247,7 +80441,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81270,7 +80464,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81279,7 +80473,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81302,7 +80496,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81311,7 +80505,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = "12";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81334,7 +80528,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "1";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81343,7 +80537,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = "1";
 JIMm = "3";
-KAFi = "12";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81366,7 +80560,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81375,7 +80569,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81398,7 +80592,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81407,7 +80601,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81430,7 +80624,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "1";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81439,7 +80633,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = "12";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81462,7 +80656,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "1";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81471,7 +80665,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = "1";
 JIMm = "3";
-KAFi = "12";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81494,7 +80688,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81503,7 +80697,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81526,7 +80720,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81535,7 +80729,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81558,7 +80752,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "21";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81567,7 +80761,7 @@ HAYCm = "3";
 Hei = "21";
 JIMi = "21";
 JIMm = "3";
-KAFi = "21";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81590,7 +80784,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "21";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81599,7 +80793,7 @@ HAYCm = "3";
 Hei = "21";
 JIMi = "21";
 JIMm = "3";
-KAFi = "21";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81622,7 +80816,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81631,7 +80825,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81654,7 +80848,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81663,7 +80857,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81686,7 +80880,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81695,7 +80889,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = "1";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81718,7 +80912,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81727,7 +80921,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = 1;
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81750,7 +80944,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81759,7 +80953,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = 1;
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81782,7 +80976,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81791,7 +80985,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81814,7 +81008,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81823,7 +81017,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81846,7 +81040,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81855,7 +81049,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81878,7 +81072,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81887,7 +81081,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81910,7 +81104,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81919,7 +81113,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81942,7 +81136,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -81951,7 +81145,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -81974,7 +81168,7 @@ BEi = sd2;
 BEm = "1";
 FEi = "1";
 FEm = "1";
-GAFi = "2";
+GAFi = "18";
 GAFm = "1";
 HAYAi = "3";
 HAYAm = "1";
@@ -81983,7 +81177,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "2";
+KAFi = "18";
 KAFm = "1";
 LAMi = "18";
 LAMm = "1";
@@ -82006,7 +81200,7 @@ BEi = sd2;
 BEm = "1";
 FEi = "1";
 FEm = "1";
-GAFi = "2";
+GAFi = "18";
 GAFm = "1";
 HAYAi = "3";
 HAYAm = "1";
@@ -82015,7 +81209,7 @@ HAYCm = "1";
 Hei = "2";
 JIMi = "3";
 JIMm = "1";
-KAFi = "2";
+KAFi = "18";
 KAFm = "1";
 LAMi = "18";
 LAMm = "1";
@@ -82038,7 +81232,7 @@ BEi = sd2;
 BEm = 1;
 FEi = 1;
 FEm = 1;
-GAFi = 1;
+GAFi = "18";
 GAFm = 1;
 HAYAi = 1;
 HAYAm = 1;
@@ -82070,7 +81264,7 @@ BEi = sd2;
 BEm = 1;
 FEi = 1;
 FEm = 1;
-GAFi = 1;
+GAFi = "18";
 GAFm = 1;
 HAYAi = 1;
 HAYAm = 1;
@@ -82079,7 +81273,7 @@ HAYCm = 1;
 Hei = 1;
 JIMi = 1;
 JIMm = 1;
-KAFi = 1;
+KAFi = "18";
 KAFm = 1;
 LAMi = "18";
 LAMm = 1;
@@ -82102,7 +81296,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82111,7 +81305,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82134,7 +81328,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82143,7 +81337,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82166,7 +81360,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82175,7 +81369,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82198,7 +81392,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82207,7 +81401,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82230,7 +81424,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82239,7 +81433,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82262,7 +81456,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "3";
 GAFm = "3";
 HAYAi = 1;
 HAYAm = "3";
@@ -82271,7 +81465,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = 1;
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82294,7 +81488,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82303,7 +81497,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82326,7 +81520,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82335,7 +81529,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82358,7 +81552,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82367,7 +81561,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82390,7 +81584,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82399,7 +81593,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82422,7 +81616,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82454,7 +81648,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82463,7 +81657,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82486,7 +81680,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82495,7 +81689,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82518,7 +81712,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82527,7 +81721,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82550,7 +81744,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 1;
+GAFi = "3";
 GAFm = "3";
 HAYAi = 1;
 HAYAm = "3";
@@ -82559,7 +81753,7 @@ HAYCm = "3";
 Hei = 1;
 JIMi = 1;
 JIMm = "3";
-KAFi = 1;
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82582,7 +81776,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -82591,7 +81785,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -82614,7 +81808,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82623,7 +81817,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82646,7 +81840,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82655,7 +81849,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82678,7 +81872,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82687,7 +81881,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82710,7 +81904,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82719,7 +81913,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82742,7 +81936,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82751,7 +81945,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82774,7 +81968,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82783,7 +81977,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82806,7 +82000,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82815,7 +82009,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82838,7 +82032,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82847,7 +82041,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82870,7 +82064,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82879,7 +82073,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82902,7 +82096,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82911,7 +82105,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82934,7 +82128,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82943,7 +82137,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82966,7 +82160,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -82975,7 +82169,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -82998,7 +82192,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -83007,7 +82201,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -83030,7 +82224,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -83039,7 +82233,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -83062,7 +82256,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "16";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -83071,7 +82265,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "17";
 JIMm = "9";
-KAFi = "16";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -83094,7 +82288,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = 1;
+GAFi = "9";
 GAFm = "9";
 HAYAi = 1;
 HAYAm = "9";
@@ -83103,7 +82297,7 @@ HAYCm = "9";
 Hei = 1;
 JIMi = 1;
 JIMm = "9";
-KAFi = 1;
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -83126,7 +82320,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83135,7 +82329,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83158,7 +82352,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83167,7 +82361,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83190,7 +82384,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83199,7 +82393,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83222,7 +82416,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83231,7 +82425,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83254,7 +82448,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83263,7 +82457,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83286,7 +82480,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83295,7 +82489,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83318,7 +82512,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83327,7 +82521,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83350,7 +82544,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83359,7 +82553,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83382,7 +82576,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83391,7 +82585,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83414,7 +82608,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83423,7 +82617,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83446,7 +82640,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83455,7 +82649,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83478,7 +82672,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83487,7 +82681,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83510,7 +82704,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83519,7 +82713,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83542,7 +82736,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83551,7 +82745,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83574,7 +82768,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83583,7 +82777,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -83606,7 +82800,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -83615,7 +82809,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84118,7 +83312,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84127,7 +83321,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84150,7 +83344,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84159,7 +83353,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84182,7 +83376,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84191,7 +83385,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84214,7 +83408,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84223,7 +83417,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84246,7 +83440,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84255,7 +83449,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84278,7 +83472,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84287,7 +83481,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84310,7 +83504,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84319,7 +83513,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84342,7 +83536,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84351,7 +83545,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84374,7 +83568,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84383,7 +83577,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84406,7 +83600,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84415,7 +83609,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84438,7 +83632,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84447,7 +83641,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84470,7 +83664,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84479,7 +83673,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84502,7 +83696,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84511,7 +83705,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84534,7 +83728,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84543,7 +83737,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84566,7 +83760,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84575,7 +83769,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84598,7 +83792,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -84607,7 +83801,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -84630,7 +83824,7 @@ BEi = "2";
 BEm = "2";
 FEi = "2";
 FEm = "2";
-GAFi = "14";
+GAFi = "2";
 GAFm = "2";
 HAYAi = "2";
 HAYAm = "2";
@@ -84639,7 +83833,7 @@ HAYCm = "2";
 Hei = "12";
 JIMi = "12";
 JIMm = "2";
-KAFi = "14";
+KAFi = "2";
 KAFm = "2";
 LAMi = "2";
 LAMm = "2";
@@ -84662,7 +83856,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -84671,7 +83865,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -84694,7 +83888,7 @@ BEi = "3";
 BEm = "3";
 FEi = "4";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -84703,7 +83897,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -84726,7 +83920,7 @@ BEi = "17";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "16";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -84735,7 +83929,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "16";
 KAFm = "7";
 LAMi = "15";
 LAMm = "7";
@@ -84758,7 +83952,7 @@ BEi = "17";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "16";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -84767,7 +83961,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "16";
 KAFm = "7";
 LAMi = "15";
 LAMm = "7";
@@ -84790,7 +83984,7 @@ BEi = "17";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "16";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -84799,7 +83993,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "16";
 KAFm = "7";
 LAMi = "15";
 LAMm = "7";
@@ -84950,7 +84144,7 @@ BEi = "11";
 BEm = "11";
 FEi = "11";
 FEm = "11";
-GAFi = "17";
+GAFi = "11";
 GAFm = "11";
 HAYAi = "11";
 HAYAm = "11";
@@ -84959,7 +84153,7 @@ HAYCm = "11";
 Hei = "15";
 JIMi = "18";
 JIMm = "11";
-KAFi = "17";
+KAFi = "11";
 KAFm = "11";
 LAMi = "11";
 LAMm = "11";
@@ -84982,7 +84176,7 @@ BEi = "11";
 BEm = "11";
 FEi = "11";
 FEm = "11";
-GAFi = "17";
+GAFi = "11";
 GAFm = "11";
 HAYAi = "11";
 HAYAm = "11";
@@ -84991,7 +84185,7 @@ HAYCm = "11";
 Hei = "15";
 JIMi = "18";
 JIMm = "11";
-KAFi = "17";
+KAFi = "11";
 KAFm = "11";
 LAMi = "11";
 LAMm = "11";
@@ -85023,7 +84217,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "8";
+KAFi = "15";
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -85046,7 +84240,7 @@ BEi = "4";
 BEm = "4";
 FEi = "4";
 FEm = "4";
-GAFi = "15";
+GAFi = "4";
 GAFm = "4";
 HAYAi = "4";
 HAYAm = "4";
@@ -85055,7 +84249,7 @@ HAYCm = "4";
 Hei = "13";
 JIMi = "14";
 JIMm = "4";
-KAFi = "15";
+KAFi = "4";
 KAFm = "4";
 LAMi = "4";
 LAMm = "4";
@@ -85078,7 +84272,7 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "6";
+GAFi = "5";
 GAFm = "5";
 HAYAi = "5";
 HAYAm = "5";
@@ -85087,7 +84281,7 @@ HAYCm = "5";
 Hei = "3";
 JIMi = "2";
 JIMm = "5";
-KAFi = "6";
+KAFi = "5";
 KAFm = "5";
 LAMi = "5";
 LAMm = "5";
@@ -85110,7 +84304,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "10";
+GAFi = "15";
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -85119,7 +84313,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "10";
+KAFi = "15";
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -85142,7 +84336,7 @@ BEi = 3;
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "10";
+GAFi = "15";
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -85151,7 +84345,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "10";
+KAFi = "15";
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -85174,7 +84368,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "10";
+GAFi = "15";
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -85183,7 +84377,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "10";
+KAFi = "15";
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -85206,7 +84400,7 @@ BEi = "7";
 BEm = "7";
 FEi = "7";
 FEm = "7";
-GAFi = "13";
+GAFi = "7";
 GAFm = "7";
 HAYAi = "7";
 HAYAm = "7";
@@ -85215,7 +84409,7 @@ HAYCm = "7";
 Hei = "4";
 JIMi = "4";
 JIMm = "7";
-KAFi = "13";
+KAFi = "7";
 KAFm = "7";
 LAMi = "7";
 LAMm = "7";
@@ -85238,7 +84432,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -85247,7 +84441,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -85270,7 +84464,7 @@ BEi = 3;
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -85279,7 +84473,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -85302,7 +84496,7 @@ BEi = 3;
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = 2;
+GAFi = "3";
 GAFm = "3";
 HAYAi = 3;
 HAYAm = 3;
@@ -85311,7 +84505,7 @@ HAYCm = 3;
 Hei = "2";
 JIMi = 3;
 JIMm = "3";
-KAFi = 2;
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -85334,7 +84528,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "2";
+GAFi = "3";
 GAFm = "3";
 HAYAi = "3";
 HAYAm = "3";
@@ -85343,7 +84537,7 @@ HAYCm = "3";
 Hei = "2";
 JIMi = "3";
 JIMm = "3";
-KAFi = "2";
+KAFi = "3";
 KAFm = "3";
 LAMi = "3";
 LAMm = "3";
@@ -85366,7 +84560,7 @@ BEi = "9";
 BEm = "9";
 FEi = "9";
 FEm = "9";
-GAFi = "17";
+GAFi = "9";
 GAFm = "9";
 HAYAi = "9";
 HAYAm = "9";
@@ -85375,7 +84569,7 @@ HAYCm = "9";
 Hei = "14";
 JIMi = "18";
 JIMm = "9";
-KAFi = "17";
+KAFi = "9";
 KAFm = "9";
 LAMi = "9";
 LAMm = "9";
@@ -85430,7 +84624,7 @@ BEi = "12";
 BEm = "12";
 FEi = "12";
 FEm = "12";
-GAFi = 1;
+GAFi = "14";
 GAFm = "12";
 HAYAi = "12";
 HAYAm = "12";
@@ -85439,7 +84633,7 @@ HAYCm = "12";
 Hei = 1;
 JIMi = 1;
 JIMm = "12";
-KAFi = 1;
+KAFi = "14";
 KAFm = "12";
 LAMi = "12";
 LAMm = "12";
@@ -85462,7 +84656,7 @@ BEi = "13";
 BEm = "13";
 FEi = "13";
 FEm = "13";
-GAFi = 1;
+GAFi = "17";
 GAFm = "13";
 HAYAi = "13";
 HAYAm = "13";
@@ -85471,7 +84665,7 @@ HAYCm = "12";
 Hei = 1;
 JIMi = "10";
 JIMm = "13";
-KAFi = 1;
+KAFi = "17";
 KAFm = "13";
 LAMi = "13";
 LAMm = "13";
@@ -85558,7 +84752,7 @@ BEi = "14";
 BEm = "12";
 FEi = "14";
 FEm = "12";
-GAFi = 1;
+GAFi = "19";
 GAFm = "14";
 HAYAi = "12";
 HAYAm = "12";
@@ -85567,7 +84761,7 @@ HAYCm = "12";
 Hei = 1;
 JIMi = "10";
 JIMm = "13";
-KAFi = 1;
+KAFi = "19";
 KAFm = "14";
 LAMi = "14";
 LAMm = "16";
@@ -85590,7 +84784,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -85599,7 +84793,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -85654,7 +84848,7 @@ BEi = "10";
 BEm = "10";
 FEi = "10";
 FEm = "10";
-GAFi = "20";
+GAFi = "10";
 GAFm = "10";
 HAYAi = "10";
 HAYAm = "10";
@@ -85663,7 +84857,7 @@ HAYCm = "10";
 Hei = "20";
 JIMi = "20";
 JIMm = "10";
-KAFi = "20";
+KAFi = "10";
 KAFm = "10";
 LAMi = "10";
 LAMm = "10";
@@ -85686,7 +84880,7 @@ BEi = "12";
 BEm = "12";
 FEi = "12";
 FEm = "12";
-GAFi = 1;
+GAFi = "14";
 GAFm = "12";
 HAYAi = "12";
 HAYAm = "12";
@@ -85695,7 +84889,7 @@ HAYCm = "12";
 Hei = 1;
 JIMi = "1";
 JIMm = "12";
-KAFi = 1;
+KAFi = "14";
 KAFm = "12";
 LAMi = "12";
 LAMm = "12";
