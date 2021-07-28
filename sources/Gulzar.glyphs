@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-""
-);
 classes = (
 {
 automatic = 1;
@@ -34694,7 +34691,7 @@ width = 473;
 note = BEm8;
 },
 {
-color = 1;
+color = 3;
 glyphname = BEus1;
 layers = (
 {
@@ -34796,7 +34793,7 @@ width = 925;
 note = BULLET;
 },
 {
-color = 1;
+color = 3;
 glyphname = CH_YEf1;
 layers = (
 {
@@ -34896,7 +34893,7 @@ width = 672;
 note = CH_YEf1;
 },
 {
-color = 1;
+color = 3;
 glyphname = CH_YEf2;
 layers = (
 {
@@ -35650,7 +35647,7 @@ width = 299;
 note = COLON;
 },
 {
-color = 1;
+color = 3;
 glyphname = DALf1;
 layers = (
 {
@@ -36258,7 +36255,7 @@ width = 499;
 note = EQUALS;
 },
 {
-color = 1;
+color = 3;
 glyphname = FEf1;
 layers = (
 {
@@ -36340,7 +36337,7 @@ width = 1005;
 note = FEf1;
 },
 {
-color = 1;
+color = 3;
 glyphname = FEfs1;
 layers = (
 {
@@ -38716,7 +38713,7 @@ width = 343;
 note = FEm9;
 },
 {
-color = 1;
+color = 3;
 glyphname = FEus1;
 layers = (
 {
@@ -38845,7 +38842,7 @@ width = 1806;
 note = FEus1;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFf1;
 layers = (
 {
@@ -38908,7 +38905,7 @@ width = 907;
 note = GAFf1;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFfs1;
 layers = (
 {
@@ -39151,7 +39148,7 @@ width = 601;
 note = GAFi11;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFi12;
 layers = (
 {
@@ -41163,7 +41160,7 @@ width = 786;
 note = GAFm9;
 },
 {
-color = 1;
+color = 3;
 glyphname = GAFus1;
 layers = (
 {
@@ -47145,7 +47142,7 @@ width = 266;
 note = INVERTED_V;
 },
 {
-color = 1;
+color = 3;
 glyphname = JIMf1;
 layers = (
 {
@@ -47286,7 +47283,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{202, -117}";
+position = "{252, -162}";
 },
 {
 name = exit;
@@ -47294,7 +47291,7 @@ position = "{55, 15}";
 },
 {
 name = top;
-position = "{186, 418}";
+position = "{186, 468}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -47354,7 +47351,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{468, -117}";
+position = "{468, -158}";
 },
 {
 name = exit;
@@ -47362,7 +47359,7 @@ position = "{92, -60}";
 },
 {
 name = top;
-position = "{462, 468}";
+position = "{462, 518}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -47422,7 +47419,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{284, -16}";
+position = "{292, -59}";
 },
 {
 name = exit;
@@ -47430,26 +47427,9 @@ position = "{44, 0}";
 },
 {
 name = top;
-position = "{279, 479}";
+position = "{279, 529}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"74 37 OFFCURVE",
-"136 76 OFFCURVE",
-"236 122 CURVE",
-"177 171 LINE",
-"77 104 OFFCURVE",
-"22 21 OFFCURVE",
-"0 -59 CURVE",
-"44 -38 LINE"
-);
-}
-);
-};
 hints = (
 {
 horizontal = 1;
@@ -47567,7 +47547,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{213, -117}";
+position = "{241, -135}";
 },
 {
 name = exit;
@@ -47575,7 +47555,7 @@ position = "{66, 24}";
 },
 {
 name = top;
-position = "{207, 478}";
+position = "{157, 478}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -47635,7 +47615,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{284, -185}";
+position = "{320, -220}";
 },
 {
 name = exit;
@@ -47643,7 +47623,7 @@ position = "{103, -18}";
 },
 {
 name = top;
-position = "{297, 335}";
+position = "{297, 392}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -47651,7 +47631,7 @@ paths = (
 {
 closed = 1;
 nodes = (
-"30 -95 OFFCURVE",
+"34 -95 OFFCURVE",
 "45 -101 OFFCURVE",
 "85 -92 CURVE SMOOTH",
 "145 -79 OFFCURVE",
@@ -47670,7 +47650,7 @@ nodes = (
 "85 -44 OFFCURVE",
 "32 -62 OFFCURVE",
 "0 -124 CURVE",
-"9 -134 LINE"
+"4 -124 LINE"
 );
 },
 {
@@ -47707,7 +47687,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{273, -185}";
+position = "{307, -218}";
 },
 {
 name = exit;
@@ -47715,7 +47695,7 @@ position = "{118, -30}";
 },
 {
 name = top;
-position = "{286, 335}";
+position = "{286, 392}";
 }
 );
 hints = (
@@ -47795,7 +47775,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{329, -128}";
+position = "{319, -156}";
 },
 {
 name = exit;
@@ -47803,7 +47783,7 @@ position = "{154, 4}";
 },
 {
 name = top;
-position = "{293, 398}";
+position = "{293, 448}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -47867,7 +47847,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{176, -141}";
+position = "{242, -90}";
 },
 {
 name = exit;
@@ -47875,7 +47855,7 @@ position = "{54, -7}";
 },
 {
 name = top;
-position = "{168, 356}";
+position = "{188, 426}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -47912,7 +47892,7 @@ nodes = (
 "86 -78 OFFCURVE",
 "140 -58 OFFCURVE",
 "196 -11 CURVE SMOOTH",
-"271 52 OFFCURVE",
+"270 52 OFFCURVE",
 "320 156 OFFCURVE",
 "328 173 CURVE",
 "288 165 LINE",
@@ -47938,7 +47918,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{373, -128}";
+position = "{373, -158}";
 },
 {
 name = exit;
@@ -47946,7 +47926,7 @@ position = "{233, 0}";
 },
 {
 name = top;
-position = "{337, 398}";
+position = "{337, 448}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -48010,7 +47990,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{251, -56}";
+position = "{268, -86}";
 },
 {
 name = exit;
@@ -48018,7 +47998,7 @@ position = "{50, 20}";
 },
 {
 name = top;
-position = "{246, 439}";
+position = "{246, 489}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -48077,7 +48057,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{216, -151}";
+position = "{277, -121}";
 },
 {
 name = exit;
@@ -48085,7 +48065,7 @@ position = "{104, 0}";
 },
 {
 name = top;
-position = "{189, 419}";
+position = "{139, 419}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -48143,7 +48123,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{381, -109}";
+position = "{269, -217}";
 },
 {
 name = exit;
@@ -48151,7 +48131,7 @@ position = "{60, -43}";
 },
 {
 name = top;
-position = "{269, 317}";
+position = "{269, 367}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -48219,7 +48199,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{409, -117}";
+position = "{422, -154}";
 },
 {
 name = exit;
@@ -48227,7 +48207,7 @@ position = "{109, -63}";
 },
 {
 name = top;
-position = "{393, 418}";
+position = "{393, 468}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -49538,7 +49518,7 @@ width = 566;
 note = JIMm8;
 },
 {
-color = 1;
+color = 3;
 glyphname = JIMu1;
 layers = (
 {
@@ -49657,7 +49637,7 @@ width = 812;
 note = JIMu1;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFf1;
 layers = (
 {
@@ -49830,7 +49810,7 @@ width = 866;
 note = KAFf1;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFfs1;
 layers = (
 {
@@ -53136,7 +53116,7 @@ width = 786;
 note = KAFm9;
 },
 {
-color = 1;
+color = 3;
 glyphname = KAFus1;
 layers = (
 {
@@ -53359,7 +53339,7 @@ width = 266;
 note = KASRA_TANWIN;
 },
 {
-color = 1;
+color = 3;
 glyphname = LAMf1;
 layers = (
 {
@@ -55775,7 +55755,7 @@ width = 299;
 note = LEADER_DOT;
 },
 {
-color = 1;
+color = 3;
 glyphname = MIMf1;
 layers = (
 {
@@ -58283,7 +58263,7 @@ width = 266;
 note = NUN_E_G_IND;
 },
 {
-color = 1;
+color = 3;
 glyphname = NUNf1;
 layers = (
 {
@@ -58827,7 +58807,7 @@ width = 507;
 note = POUND;
 },
 {
-color = 1;
+color = 3;
 glyphname = QAFf1;
 layers = (
 {
@@ -58939,7 +58919,7 @@ width = 912;
 note = QUOTATION_IND;
 },
 {
-color = 1;
+color = 3;
 glyphname = REf1;
 layers = (
 {
@@ -59029,7 +59009,7 @@ width = 417;
 note = REf1;
 },
 {
-color = 1;
+color = 3;
 glyphname = REf2;
 layers = (
 {
@@ -59131,7 +59111,7 @@ width = 388;
 note = REf2;
 },
 {
-color = 1;
+color = 3;
 glyphname = REf3;
 layers = (
 {
@@ -59199,7 +59179,7 @@ width = 418;
 note = REf3;
 },
 {
-color = 1;
+color = 3;
 glyphname = REf4;
 layers = (
 {
@@ -59314,7 +59294,7 @@ width = 417;
 note = REf4;
 },
 {
-color = 1;
+color = 3;
 glyphname = SADf1;
 layers = (
 {
@@ -61929,7 +61909,7 @@ width = 500;
 note = SEVEN;
 },
 {
-color = 1;
+color = 3;
 glyphname = SINf1;
 layers = (
 {
@@ -64194,7 +64174,7 @@ width = 663;
 note = SINm8;
 },
 {
-color = 1;
+color = 3;
 glyphname = SINus1;
 layers = (
 {
@@ -64740,7 +64720,7 @@ width = 572;
 );
 },
 {
-color = 1;
+color = 3;
 glyphname = TEf1;
 layers = (
 {
@@ -64769,7 +64749,7 @@ width = 1003;
 );
 },
 {
-color = 1;
+color = 3;
 glyphname = TEf2;
 layers = (
 {
@@ -64798,7 +64778,7 @@ width = 1001;
 );
 },
 {
-color = 1;
+color = 3;
 glyphname = TEfs1;
 layers = (
 {
@@ -64827,7 +64807,7 @@ width = 1973;
 );
 },
 {
-color = 1;
+color = 3;
 glyphname = TEfs2;
 layers = (
 {
@@ -65832,7 +65812,7 @@ width = 355;
 );
 },
 {
-color = 1;
+color = 3;
 glyphname = TEu1;
 layers = (
 {
@@ -65857,7 +65837,7 @@ width = 979;
 );
 },
 {
-color = 1;
+color = 3;
 glyphname = TEus1;
 layers = (
 {
@@ -65931,7 +65911,7 @@ width = 499;
 note = TIMES;
 },
 {
-color = 1;
+color = 3;
 glyphname = TOEf1;
 layers = (
 {
@@ -68034,7 +68014,7 @@ width = 445;
 note = TOEm9;
 },
 {
-color = 1;
+color = 3;
 glyphname = VAOf1;
 layers = (
 {
@@ -68103,7 +68083,7 @@ width = 266;
 note = YE_VOWEL;
 },
 {
-color = 1;
+color = 3;
 glyphname = ainhead;
 layers = (
 {
@@ -68221,7 +68201,7 @@ width = 600;
 );
 },
 {
-color = 1;
+color = 3;
 glyphname = newGlyph;
 layers = (
 {
@@ -73929,7 +73909,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{278, -99}";
+position = "{306, -91}";
 },
 {
 name = exit;
@@ -73937,7 +73917,7 @@ position = "{58, 0}";
 },
 {
 name = top;
-position = "{283, 441}";
+position = "{265, 459}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
