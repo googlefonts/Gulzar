@@ -40658,7 +40658,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{142, -128}";
+position = "{153, -128}";
 },
 {
 name = entry;
@@ -40670,13 +40670,12 @@ position = "{95, 0}";
 },
 {
 name = top;
-position = "{152, 613}";
+position = "{163, 613}";
 }
 );
 components = (
 {
 name = KAFm3;
-transform = "{1, 0, 0, 1, -11, 0}";
 }
 );
 hints = (
@@ -40704,21 +40703,21 @@ paths = (
 {
 closed = 1;
 nodes = (
-"116 467 OFFCURVE",
-"122 477 OFFCURVE",
-"136 493 CURVE SMOOTH",
-"215 586 LINE SMOOTH",
-"240 615 OFFCURVE",
-"250 649 OFFCURVE",
-"255 671 CURVE",
-"243 677 LINE",
-"215 641 OFFCURVE",
-"167 586 OFFCURVE",
-"159 576 CURVE SMOOTH",
-"146 560 OFFCURVE",
-"100 516 OFFCURVE",
-"89 445 CURVE",
-"109 442 LINE"
+"127 467 OFFCURVE",
+"133 477 OFFCURVE",
+"147 493 CURVE SMOOTH",
+"226 586 LINE SMOOTH",
+"251 615 OFFCURVE",
+"261 649 OFFCURVE",
+"266 671 CURVE",
+"254 677 LINE",
+"226 641 OFFCURVE",
+"178 586 OFFCURVE",
+"170 576 CURVE SMOOTH",
+"157 560 OFFCURVE",
+"111 516 OFFCURVE",
+"100 445 CURVE",
+"120 442 LINE"
 );
 }
 );
@@ -56094,80 +56093,37 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{66, -247}";
+position = "{150, -247}";
 },
 {
 name = exit;
-position = "{-34, -6}";
+position = "{50, -6}";
 },
 {
 name = top;
-position = "{62, 256}";
+position = "{146, 256}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"73 -76 OFFCURVE",
-"140 3 OFFCURVE",
-"140 60 CURVE SMOOTH",
-"140 85 OFFCURVE",
-"130 98 OFFCURVE",
-"103 116 CURVE SMOOTH",
-"77 134 OFFCURVE",
-"65 142 OFFCURVE",
-"61 161 CURVE",
-"46 163 LINE",
-"-14 63 LINE",
-"-58 54 OFFCURVE",
-"-72 23 OFFCURVE",
-"-72 -11 CURVE SMOOTH",
-"-72 -44 OFFCURVE",
-"-53 -76 OFFCURVE",
-"-3 -76 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"-19 -77 OFFCURVE",
-"30 -48 OFFCURVE",
-"66 21 CURVE SMOOTH",
-"84 55 OFFCURVE",
-"101 101 OFFCURVE",
-"110 151 CURVE",
-"90 155 LINE",
-"70 99 OFFCURVE",
-"33 58 OFFCURVE",
-"-15 58 CURVE SMOOTH",
-"-63 58 OFFCURVE",
-"-96 -77 OFFCURVE",
-"-62 -77 CURVE SMOOTH"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"24 -77 OFFCURVE",
-"78 -7 OFFCURVE",
-"96 63 CURVE SMOOTH",
-"107 106 OFFCURVE",
-"103 190 OFFCURVE",
-"17 163 CURVE",
-"-15 58 LINE",
-"-63 58 OFFCURVE",
-"-96 -77 OFFCURVE",
-"-62 -77 CURVE SMOOTH"
+"110 -77 OFFCURVE",
+"196 17 OFFCURVE",
+"196 96 CURVE SMOOTH",
+"196 150 OFFCURVE",
+"164 188 OFFCURVE",
+"84 183 CURVE",
+"53 43 LINE",
+"80 56 LINE",
+"14 67 OFFCURVE",
+"-28 -77 OFFCURVE",
+"22 -77 CURVE SMOOTH"
 );
 }
 );
-width = 150;
+width = 246;
 }
 );
 note = MIMi3;
@@ -69572,7 +69528,7 @@ position = "{554, 84}";
 },
 {
 name = exit;
-position = "{96, -28}";
+position = "{108, -30}";
 },
 {
 name = top;
@@ -81868,7 +81824,7 @@ TOEm = "1";
 AINi = 1;
 AINm = 1;
 BEi = 1;
-BEm = 1;
+BEm = sd1;
 FEi = 1;
 FEm = 1;
 GAFi = 1;
@@ -81900,7 +81856,7 @@ TOEm = 1;
 AINi = 1;
 AINm = 1;
 BEi = 1;
-BEm = 1;
+BEm = sd1;
 FEi = 1;
 FEm = 1;
 GAFi = 1;
@@ -81932,7 +81888,7 @@ TOEm = 1;
 AINi = 1;
 AINm = 1;
 BEi = 1;
-BEm = 1;
+BEm = sd1;
 FEi = 1;
 FEm = 1;
 GAFi = 1;
@@ -82860,7 +82816,7 @@ TOEm = 1;
 AINi = 1;
 AINm = 1;
 BEi = "1";
-BEm = sd1;
+BEm = "1";
 FEi = 1;
 FEm = 1;
 GAFi = 1;
@@ -82884,7 +82840,7 @@ SADm = 1;
 SINi = 1;
 SINm = 1;
 TEi = 1;
-TEm = sd1;
+TEm = "1";
 TOEi = "1";
 TOEm = 1;
 },
@@ -82892,7 +82848,7 @@ TOEm = 1;
 AINi = 1;
 AINm = 1;
 BEi = 1;
-BEm = sd1;
+BEm = "1";
 FEi = 1;
 FEm = 1;
 GAFi = 1;
@@ -82916,7 +82872,7 @@ SADm = 1;
 SINi = 1;
 SINm = 1;
 TEi = 1;
-TEm = sd1;
+TEm = "1";
 TOEi = 1;
 TOEm = 1;
 },
