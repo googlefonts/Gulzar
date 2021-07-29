@@ -57228,83 +57228,21 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{11, -322}";
+position = "{83, -322}";
 },
 {
 name = entry;
-position = "{38, 164}";
+position = "{110, 164}";
 },
 {
 name = exit;
-position = "{-30, 1}";
+position = "{42, 1}";
 },
 {
 name = top;
-position = "{0, 317}";
+position = "{72, 317}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"-12 -70 OFFCURVE",
-"36 -62 OFFCURVE",
-"93 -29 CURVE SMOOTH",
-"122 -12 OFFCURVE",
-"153 28 OFFCURVE",
-"153 45 CURVE SMOOTH",
-"153 65 OFFCURVE",
-"121 75 OFFCURVE",
-"81 93 CURVE SMOOTH",
-"78 94 OFFCURVE",
-"73 97 OFFCURVE",
-"67 100 CURVE SMOOTH",
-"57 106 OFFCURVE",
-"47 113 OFFCURVE",
-"47 120 CURVE SMOOTH",
-"47 134 OFFCURVE",
-"74 149 OFFCURVE",
-"74 194 CURVE",
-"20 166 OFFCURVE",
-"-10 90 OFFCURVE",
-"-12 56 CURVE",
-"-8 65 LINE",
-"-61 65 OFFCURVE",
-"-92 -70 OFFCURVE",
-"-58 -70 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"-228 -115 OFFCURVE",
-"-109 -36 OFFCURVE",
-"-18 -36 CURVE SMOOTH",
-"11 -36 OFFCURVE",
-"40 -50 OFFCURVE",
-"83 -77 CURVE",
-"106 -58 OFFCURVE",
-"142 -13 OFFCURVE",
-"142 22 CURVE SMOOTH",
-"142 56 OFFCURVE",
-"102 75 OFFCURVE",
-"67 100 CURVE SMOOTH",
-"43 117 OFFCURVE",
-"-5 106 OFFCURVE",
-"-23 33 CURVE",
-"-7 53 LINE",
-"-58 60 OFFCURVE",
-"-148 8 OFFCURVE",
-"-187 -21 CURVE SMOOTH",
-"-233 -55 OFFCURVE",
-"-270 -111 OFFCURVE",
-"-291 -150 CURVE",
-"-270 -146 LINE"
-);
-}
-);
-};
 hints = (
 {
 horizontal = 1;
@@ -57326,29 +57264,26 @@ paths = (
 {
 closed = 1;
 nodes = (
-"-12 -70 OFFCURVE",
-"38 -61 OFFCURVE",
-"93 -29 CURVE SMOOTH",
-"127 -9 OFFCURVE",
-"153 21 OFFCURVE",
-"153 45 CURVE SMOOTH",
-"153 61 OFFCURVE",
-"144 70 OFFCURVE",
-"106 84 CURVE SMOOTH",
-"91 89 OFFCURVE",
-"75 96 OFFCURVE",
-"64 102 CURVE SMOOTH",
-"25 121 OFFCURVE",
-"-12 83 OFFCURVE",
-"-23 33 CURVE",
-"-8 65 LINE",
-"-61 65 OFFCURVE",
-"-92 -70 OFFCURVE",
-"-58 -70 CURVE SMOOTH"
+"55 -74 OFFCURVE",
+"83 -78 OFFCURVE",
+"129 -43 CURVE SMOOTH",
+"158 -21 OFFCURVE",
+"194 13 OFFCURVE",
+"194 33 CURVE SMOOTH",
+"194 53 OFFCURVE",
+"180 73 OFFCURVE",
+"137 103 CURVE SMOOTH",
+"100 129 OFFCURVE",
+"60 83 OFFCURVE",
+"49 33 CURVE",
+"64 65 LINE",
+"11 65 OFFCURVE",
+"-21 -67 OFFCURVE",
+"13 -70 CURVE SMOOTH"
 );
 }
 );
-width = 200;
+width = 225;
 }
 );
 note = MIMm3;
