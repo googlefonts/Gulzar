@@ -42373,18 +42373,18 @@ paths = (
 {
 closed = 1;
 nodes = (
-"96 -58 OFFCURVE",
-"212 -38 OFFCURVE",
-"266 69 CURVE",
+"112 -53 OFFCURVE",
+"196 -38 OFFCURVE",
+"274 52 CURVE",
 "181 69 LINE",
-"129 27 OFFCURVE",
-"60 -4 OFFCURVE",
-"0 -35 CURVE",
-"37 -89 LINE"
+"113 27 OFFCURVE",
+"60 19 OFFCURVE",
+"0 -21 CURVE",
+"37 -84 LINE"
 );
 }
 );
-width = 500;
+width = 550;
 }
 );
 note = HAYAi4;
@@ -43231,7 +43231,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 500;
+width = 550;
 }
 );
 note = HAYAi4;
@@ -73934,6 +73934,76 @@ width = 468;
 }
 );
 note = JIMi8;
+},
+{
+color = 3;
+glyphname = MIMi14;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{267, -243}";
+},
+{
+name = exit;
+position = "{113, -30}";
+},
+{
+name = top;
+position = "{311, 276}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-21, 361}";
+type = Stem;
+},
+{
+place = "{-106, 406}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"43 -151 OFFCURVE",
+"62 -124 OFFCURVE",
+"127 -97 CURVE SMOOTH",
+"165 -82 OFFCURVE",
+"222 -68 OFFCURVE",
+"277 -54 CURVE SMOOTH",
+"310 -45 OFFCURVE",
+"353 4 OFFCURVE",
+"378 60 CURVE SMOOTH",
+"402 113 LINE SMOOTH",
+"413 136 OFFCURVE",
+"398 157 OFFCURVE",
+"376 165 CURVE SMOOTH",
+"321 186 LINE SMOOTH",
+"284 200 OFFCURVE",
+"254 203 OFFCURVE",
+"235 147 CURVE SMOOTH",
+"207 66 LINE",
+"257 39 LINE",
+"271 52 LINE",
+"209 43 OFFCURVE",
+"117 8 OFFCURVE",
+"88 -18 CURVE SMOOTH",
+"70 -35 OFFCURVE",
+"42 -73 OFFCURVE",
+"0 -158 CURVE",
+"12 -188 LINE"
+);
+}
+);
+width = 456;
+}
+);
+note = MIMi6;
 }
 );
 instances = (
