@@ -33501,7 +33501,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{269, -215}";
+position = "{353, -274}";
 },
 {
 name = exit;
@@ -33509,7 +33509,7 @@ position = "{60, -40}";
 },
 {
 name = top;
-position = "{307, 228}";
+position = "{314, 249}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -33517,30 +33517,33 @@ paths = (
 {
 closed = 1;
 nodes = (
-"45 -109 OFFCURVE",
-"67 -95 OFFCURVE",
-"100 -80 CURVE SMOOTH",
-"162 -52 OFFCURVE",
-"231 -37 OFFCURVE",
-"309 -1 CURVE",
-"341 14 OFFCURVE",
-"387 68 OFFCURVE",
-"402 120 CURVE",
-"392 125 LINE",
-"375 102 OFFCURVE",
-"331 83 OFFCURVE",
-"281 66 CURVE SMOOTH",
-"232 49 OFFCURVE",
-"177 31 OFFCURVE",
-"151 18 CURVE SMOOTH",
-"86 -13 OFFCURVE",
-"39 -52 OFFCURVE",
+"56 -103 OFFCURVE",
+"85 -84 OFFCURVE",
+"133 -59 CURVE SMOOTH",
+"159 -46 OFFCURVE",
+"192 -31 OFFCURVE",
+"229 -17 CURVE SMOOTH",
+"287 4 OFFCURVE",
+"353 29 OFFCURVE",
+"411 53 CURVE SMOOTH",
+"462 74 OFFCURVE",
+"489 126 OFFCURVE",
+"504 178 CURVE",
+"494 183 LINE",
+"477 160 OFFCURVE",
+"433 142 OFFCURVE",
+"383 124 CURVE SMOOTH",
+"314 99 OFFCURVE",
+"219 62 OFFCURVE",
+"184 44 CURVE SMOOTH",
+"96 0 OFFCURVE",
+"47 -47 OFFCURVE",
 "0 -133 CURVE",
 "11 -153 LINE"
 );
 }
 );
-width = 452;
+width = 554;
 }
 );
 note = BEi7;
@@ -44467,7 +44470,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{94, -274}";
+position = "{72, -290}";
 },
 {
 name = exit;
@@ -64933,7 +64936,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{269, -215}";
+position = "{353, -274}";
 },
 {
 name = exit;
@@ -64941,7 +64944,7 @@ position = "{60, -40}";
 },
 {
 name = top;
-position = "{307, 228}";
+position = "{314, 249}";
 }
 );
 components = (
@@ -64950,7 +64953,7 @@ name = BEi7;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 452;
+width = 554;
 }
 );
 },
@@ -73078,7 +73081,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{117, -258}";
+position = "{92, -266}";
 },
 {
 name = exit;
@@ -73346,7 +73349,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{117, -258}";
+position = "{85, -264}";
 },
 {
 name = exit;
