@@ -73349,10 +73349,6 @@ name = bottom;
 position = "{117, -258}";
 },
 {
-name = comma;
-position = "{107, 103}";
-},
-{
 name = exit;
 position = "{54, -6}";
 },
