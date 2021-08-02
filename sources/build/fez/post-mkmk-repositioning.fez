@@ -97,6 +97,10 @@ Feature kern {
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
   };
 
+  Routine FinalJimDropDots {
+    Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=-100> );
+  };
+
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
   Routine HighTehFinesse {

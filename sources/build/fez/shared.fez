@@ -24,6 +24,6 @@ DefineClass @isols = /[A-Z]+u\w*\d+$/;
 # nukta below the rasm) or anything which *behaves* like a bari ye (in the
 # sense that we need to drop those nuktas to avoid collisions with the tail
 # of the character.)
-DefineClass @behs = /(JIM|BE)[mi]\d+$/;
-DefineClass @bariye = [BARI_YEf1 CH_YEf1 CH_YEf2 JIMf1 AINf1];
+DefineClass @behs = /(JIM|BE)\w*[mi]\d+$/;
+DefineClass @bariye = [BARI_YEf1 CH_YEf1 CH_YEf2 AINf1];
 
