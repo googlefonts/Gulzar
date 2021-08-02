@@ -111,7 +111,7 @@ Feature kern {
   } UseMarkFilteringSet [tdb.yb];
 
   Routine NunKafFinesse {
-    Position /BEi\d+$/ ( /[sdt]da/ <yPlacement=-50> ) @shortkafgaf;
+    Position /BEi(sd)?\d+$/ ( /[sdt]da/ <yPlacement=-50> ) @shortkafgaf;
   };
 
   DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);

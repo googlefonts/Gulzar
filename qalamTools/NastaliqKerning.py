@@ -49,7 +49,6 @@ reachable_glyphs = [
     "AINm12",
     "AINm13",
     "AINm14",
-    "AINm18",
     "AINm19",
     "AINm2",
     "AINm20",
