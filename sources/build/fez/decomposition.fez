@@ -26,6 +26,7 @@ Feature ccmp {
     Substitute ddal-ar -> DALu1 toeda;
     Substitute jim-ar -> JIMu1;
     Substitute jeh-ar -> REu1 tda;
+    Substitute kaf-ar -> KAFu1;
     Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
     Substitute alefMadda-ar -> ALIFu1 MADDA;
     };
