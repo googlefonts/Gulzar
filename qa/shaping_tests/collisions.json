@@ -3,7 +3,8 @@
         "collidoscope": {
             "faraway": true,
             "marks": true,
-            "adjacentmarks": false
+            "adjacentmarks": false,
+            "bases": false
         },
         "defaults": {
             "allowedcollisions": [
