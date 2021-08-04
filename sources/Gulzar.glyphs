@@ -65097,7 +65097,7 @@ position = "{54, -14}";
 },
 {
 name = top;
-position = "{230, 327}";
+position = "{200, 327}";
 }
 );
 components = (
@@ -65130,7 +65130,7 @@ position = "{43, -12}";
 },
 {
 name = top;
-position = "{219, 327}";
+position = "{189, 327}";
 }
 );
 components = (
@@ -65185,7 +65185,7 @@ position = "{60, 5}";
 },
 {
 name = top;
-position = "{219, 327}";
+position = "{179, 327}";
 }
 );
 components = (
@@ -65240,7 +65240,7 @@ position = "{53, -21}";
 },
 {
 name = top;
-position = "{209, 327}";
+position = "{179, 327}";
 }
 );
 background = {
@@ -65360,7 +65360,7 @@ position = "{169, -9}";
 },
 {
 name = top;
-position = "{322, 277}";
+position = "{292, 277}";
 }
 );
 hints = (
@@ -65435,7 +65435,7 @@ position = "{42, -5}";
 },
 {
 name = top;
-position = "{178, 323}";
+position = "{148, 323}";
 }
 );
 components = (
@@ -65468,7 +65468,7 @@ position = "{240, 0}";
 },
 {
 name = top;
-position = "{359, 327}";
+position = "{329, 327}";
 }
 );
 hints = (
@@ -65679,7 +65679,7 @@ position = "{54, -9}";
 },
 {
 name = top;
-position = "{207, 359}";
+position = "{177, 359}";
 }
 );
 components = (
@@ -83823,7 +83823,7 @@ KAFm = "12";
 LAMi = "13";
 LAMm = "15";
 "Left Glyph" = REf3;
-MIMi = "13";
+MIMi = "14";
 MIMm = "15";
 SADi = "15";
 SADm = "15";
