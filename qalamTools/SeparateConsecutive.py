@@ -49,12 +49,12 @@ class SeparateConsecutive(FEZVerb):
                 adjustment = (i - (j + 1)) * distance
 
                 inputs_positions.append((dot_carriers, fontFeatures.ValueRecord(0)))
-                yPlacement = int(drop)
                 if j == i-1:
-                    yPlacement = 0
                     adjustment = 0
-                elif (i-j+1) % 2 == 0:
+                if (i-j+1) % 2 == 1:
                     yPlacement = -int(drop)
+                else:
+                    yPlacement = 0
                 inputs_positions.append(
                     (marks, fontFeatures.ValueRecord(adjustment, yPlacement, 0, 0))
                 )

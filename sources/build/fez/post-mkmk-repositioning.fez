@@ -4,13 +4,6 @@ Include "shared.fez";
 # this to be processed at the end, after anchor positioning is done.
 Feature mkmk {
 
-  Routine MoveFirstBariYeDotsAcross {
-    # Because of the way we've designed the bari ye with a very short top
-    # stroke, the first glyph next to a bari ye has a very long outstroke,
-    # which messes up the position of the dots.
-    Position ( /.yb/ <xPlacement=+50> ) /BARI_YEf/;
-  };
-
   # Dots and marks on the letter preceding a swash kaf need to be dropped
   # down to avoid collision. Dots get moved right slightly.
   # XXX ideally tall kaf/gaf and short kaf/gaf should be treated differently.
@@ -27,20 +20,25 @@ Feature mkmk {
   # dots are not cumulative if there is an above dot in the middle, and vice
   # versa.
   LoadPlugin qalamTools.SeparateConsecutive;
-  DefineClass @behs = /.*[mif]\d+$/  & (run < 600); # any rasm can carry an accent
+  DefineClass @behs = /.*[mif](sd)?\d+$/  & (run < 600); # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @all_above_marks 4 70 150;
+    SeparateConsecutive @all_above_marks 4 100 -50;
   } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb haydb KASRA ] 4 125 125;
-  } UseMarkFilteringSet [sdb ddb tdb haydb KASRA];
+    SeparateConsecutive [sdb ddb tdb tdi haydb KASRA ] 4 125 125;
+  } UseMarkFilteringSet [sdb ddb tdb tdi haydb KASRA];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
   # also be separated.
-  DefineClass @behs = /.*[mif]\d+$/;
+  DefineClass @behs = /.*[mif](sd)?\d+$/;
+
   Routine SeparateConsecutiveYBDots {
-    SeparateConsecutive /.yb$/ 4 120 -105;
+    # These numbers need to be small enough that reasonable cases work fine,
+    # (test case: پپپے) but also big enough to cope with the "worst case" of
+    # YB dots, which is probably stuff like پچے/چچے. Other nasty test cases
+    # are مبچے and, for extra bonus fun points, ہچے.
+    SeparateConsecutive /.yb$/ 4 120 255;
   } UseMarkFilteringSet /.yb$/;
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
@@ -97,6 +95,10 @@ Feature kern {
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
   };
 
+  Routine FinalJimDropDots {
+    Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=-100> );
+  };
+
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
   Routine HighTehFinesse {
@@ -110,9 +112,9 @@ Feature kern {
     Position (tdb.yb <xPlacement=-30>) AINf1;
   } UseMarkFilteringSet [tdb.yb];
 
-  Routine NunKafFinesse {
-    Position /BEi\d+$/ ( /[sdt]da/ <yPlacement=-50> ) @shortkafgaf;
-  };
+  Routine BehHayaFinesse {
+    Position /BE(sd)?i/ ([ddb tdb] <xPlacement=50>) /HAYAm/;
+  } UseMarkFilteringSet [ddb tdb];
 
   DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
   Routine AddSpaceAroundPointyDamma {

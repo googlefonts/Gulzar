@@ -10,7 +10,8 @@ Feature rlig {
     # These are for REf-group things which go to different final REs in their
     # medial form to in their initial form.
     #Substitute [FEm1 BEi1 TEi1] ( REf1 ) -> REf2;
-    Substitute /^[BT]Em/ ( /REf\d$/ ) -> REf3;
+    Substitute /^[BT]E(sd)?\d+m/ ( /REf\d$/ ) -> REf3;
+    Substitute /^HAYCm/ ( /REf\d$/ ) -> REf3;
     Substitute GAFm1 ( REf1 ) -> REf4;
   } IgnoreMarks;
 

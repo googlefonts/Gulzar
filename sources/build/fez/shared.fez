@@ -14,16 +14,16 @@ DefineClass @all_above_marks = @above_nuktas | @other_above_marks;
 DefineClass @nuktas = @above_nuktas | @below_nuktas | /^.di$/; # di = JIM dots
 DefineClass @nuktas_and_kasra = [@nuktas KASRA KASRA.yb haydb haydb.yb];
 DefineClass @below_dots = [@below_nuktas KASRA KASRA.yb haydb haydb.yb];
-DefineClass @medis = /m\d+$/;
-DefineClass @inits = /i\d+$/;
-DefineClass @finas = /f\d+$/;
-DefineClass @isols = /u\d+$/;
+DefineClass @medis = /m\w*\d+$/;
+DefineClass @inits = /i\w*\d+$/;
+DefineClass @finas = /f\w*\d+$/;
+DefineClass @isols = /[A-Z]+u\w*\d+$/;
 
 # The two following glyph classes are badly named. Really, they're referring
 # to anything which *behaves* like a BE (in the sense that it can "carry" a
 # nukta below the rasm) or anything which *behaves* like a bari ye (in the
 # sense that we need to drop those nuktas to avoid collisions with the tail
 # of the character.)
-DefineClass @behs = /(JIM|BE)[mi]\d+$/;
-DefineClass @bariye = [BARI_YEf1 CH_YEf1 CH_YEf2 JIMf1 AINf1];
+DefineClass @behs = /(JIM|BE)\w*[mi]\d+$/;
+DefineClass @bariye = [BARI_YEf1 CH_YEf1 CH_YEf2 AINf1];
 
