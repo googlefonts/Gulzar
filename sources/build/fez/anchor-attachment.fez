@@ -6,7 +6,6 @@ CopyAnchors SHADDA SHADDA_FATHA;
 CopyAnchors SHADDA SHADDA_LONG_A;
 
 LoadPlugin qalamTools.QuantizeAnchors;
-QuantizeAnchors 10;
 
 Feature mark {
   Routine DoMarkBase {
