@@ -74220,6 +74220,148 @@ width = 468;
 }
 );
 note = AINi1;
+},
+{
+color = 3;
+glyphname = JIMi15;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{254, -135}";
+},
+{
+name = exit;
+position = "{79, 24}";
+},
+{
+name = top;
+position = "{140, 478}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"305 161 OFFCURVE",
+"329 170 OFFCURVE",
+"356 201 CURVE SMOOTH",
+"397 248 LINE",
+"379 268 LINE",
+"358 254 OFFCURVE",
+"340 248 OFFCURVE",
+"323 248 CURVE SMOOTH",
+"261 248 OFFCURVE",
+"207 324 OFFCURVE",
+"139 324 CURVE SMOOTH",
+"96 324 OFFCURVE",
+"58 307 OFFCURVE",
+"0 202 CURVE",
+"23 185 LINE",
+"61 229 OFFCURVE",
+"74 237 OFFCURVE",
+"101 237 CURVE SMOOTH",
+"168 237 OFFCURVE",
+"223 161 OFFCURVE",
+"276 161 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"157 1 OFFCURVE",
+"206 51 OFFCURVE",
+"272 175 CURVE",
+"244 194 LINE",
+"189 103 OFFCURVE",
+"122 81 OFFCURVE",
+"84 66 CURVE SMOOTH",
+"71 61 OFFCURVE",
+"65 38 OFFCURVE",
+"65 15 CURVE SMOOTH",
+"65 -13 OFFCURVE",
+"75 -41 OFFCURVE",
+"97 -30 CURVE SMOOTH"
+);
+}
+);
+width = 447;
+}
+);
+note = JIMi12;
+},
+{
+color = 3;
+glyphname = JIMi16;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{254, -135}";
+},
+{
+name = exit;
+position = "{79, 24}";
+},
+{
+name = top;
+position = "{140, 478}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"305 170 OFFCURVE",
+"329 179 OFFCURVE",
+"356 210 CURVE SMOOTH",
+"397 257 LINE",
+"379 277 LINE",
+"358 263 OFFCURVE",
+"340 257 OFFCURVE",
+"323 257 CURVE SMOOTH",
+"261 257 OFFCURVE",
+"207 333 OFFCURVE",
+"139 333 CURVE SMOOTH",
+"96 333 OFFCURVE",
+"58 316 OFFCURVE",
+"0 211 CURVE",
+"23 194 LINE",
+"61 238 OFFCURVE",
+"74 246 OFFCURVE",
+"101 246 CURVE SMOOTH",
+"168 246 OFFCURVE",
+"223 170 OFFCURVE",
+"276 170 CURVE SMOOTH"
+);
+},
+{
+closed = 1;
+nodes = (
+"157 10 OFFCURVE",
+"206 60 OFFCURVE",
+"272 184 CURVE",
+"244 203 LINE",
+"189 112 OFFCURVE",
+"122 90 OFFCURVE",
+"84 75 CURVE SMOOTH",
+"71 70 OFFCURVE",
+"65 47 OFFCURVE",
+"65 24 CURVE SMOOTH",
+"65 -4 OFFCURVE",
+"75 -32 OFFCURVE",
+"97 -21 CURVE SMOOTH"
+);
+}
+);
+width = 447;
+}
+);
+note = JIMi12;
 }
 );
 instances = (
@@ -83752,7 +83894,7 @@ HAYAm = "13";
 HAYCi = "16";
 HAYCm = "12";
 Hei = "12";
-JIMi = "12";
+JIMi = "15";
 JIMm = "13";
 KAFi = "17";
 KAFm = "13";
@@ -83848,7 +83990,7 @@ HAYAm = "12";
 HAYCi = "16";
 HAYCm = "12";
 Hei = "12";
-JIMi = "12";
+JIMi = "16";
 JIMm = "13";
 KAFi = "19";
 KAFm = "14";
