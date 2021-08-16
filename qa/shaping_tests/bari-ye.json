@@ -5,6 +5,9 @@
       "bases": false,
       "marks": true,
       "adjacentmarks": false
+    },
+    "defaults": {
+      "allowedcollisions": ["haydb/HAYCi3", "haydb/HAYCi15"]
     }
   },
   "tests": [

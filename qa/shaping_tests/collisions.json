@@ -7,21 +7,7 @@
             "bases": false
         },
         "defaults": {
-            "allowedcollisions": [
-                "ALIFf1/BEi21",
-                "REf2/MIMi13",
-                "REf3/BEm14",
-                "ALIFf1/BEm21",
-                "haydb/HAYCi3",
-                "LAMm1/BEi21",
-                "ALIFf1/SINi21",
-                "LAMm17/BEi21",
-                "REf3/BEi14",
-                "LAMf1/TEm21",
-                "ALIFf1/LAMi21",
-                "LAMf1/BEi21",
-                "REf2/BEi13"
-            ]
+            "allowedcollisions": ["haydb/HAYCi3", "haydb/HAYCi15"]
         },
         "ingredients": {
             "NoDot": "[مںل]",
