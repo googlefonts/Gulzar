@@ -22,11 +22,11 @@ Feature mkmk {
   LoadPlugin qalamTools.SeparateConsecutive;
   DefineClass @behs = /.*[mif](sd)?\d+$/  & (run < 600); # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @all_above_marks 4 20 -300;
+    SeparateConsecutive @all_above_marks 4 60 -350;
   } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb tdi KASRA ] 4 0 400;
+    SeparateConsecutive [sdb ddb tdb tdi KASRA ] 4 30 400;
   } UseMarkFilteringSet [sdb ddb tdb tdi KASRA];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
@@ -37,8 +37,9 @@ Feature mkmk {
     # These numbers need to be small enough that reasonable cases work fine,
     # (test case: پپپے) but also big enough to cope with the "worst case" of
     # YB dots, which is probably stuff like پچے/چچے. Other nasty test cases
-    # are مبچے and, for extra bonus fun points, ہچے.
-    SeparateConsecutive /.yb$/ 4 120 255;
+    # are مبچے and, for extra bonus fun points, ہچے and  پچہلے.
+    # پپپے پچے چچے مبچے ہچے پچہلے
+    SeparateConsecutive /.yb$/ 4 80 350;
   } UseMarkFilteringSet /.yb$/;
 
   # If the dots "poke out" the end of a narrow init glyph, we need to
@@ -96,9 +97,9 @@ Feature kern {
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
   };
 
-  #Routine FinalJimDropDots {
-  #  Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=-100> );
-  #};
+  Routine FinalJimRaiseDots {
+    Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=150> );
+  };
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
