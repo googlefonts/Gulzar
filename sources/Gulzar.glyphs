@@ -65263,7 +65263,7 @@ position = "{163, -169}";
 },
 {
 name = entry;
-position = "{254, 83}";
+position = "{274, 83}";
 },
 {
 name = exit;
@@ -65271,16 +65271,65 @@ position = "{42, -5}";
 },
 {
 name = top;
-position = "{148, 323}";
+position = "{168, 323}";
 }
 );
-components = (
+hints = (
 {
-name = BEm3;
+horizontal = 1;
+place = "{-78, 140}";
+type = Stem;
+},
+{
+place = "{-73, 403}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{28, 91}";
+type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 278;
+paths = (
+{
+closed = 1;
+nodes = (
+"72 -76 OFFCURVE",
+"140 -31 OFFCURVE",
+"189 83 CURVE",
+"166 67 LINE",
+"178 53 OFFCURVE",
+"210 31 OFFCURVE",
+"243 31 CURVE SMOOTH",
+"280 31 OFFCURVE",
+"308 80 OFFCURVE",
+"308 105 CURVE SMOOTH",
+"308 115 OFFCURVE",
+"304 121 OFFCURVE",
+"296 121 CURVE SMOOTH",
+"262 121 OFFCURVE",
+"242 133 OFFCURVE",
+"227 144 CURVE SMOOTH",
+"220 149 OFFCURVE",
+"214 154 OFFCURVE",
+"209 154 CURVE SMOOTH",
+"202 154 OFFCURVE",
+"195 146 OFFCURVE",
+"186 131 CURVE SMOOTH",
+"166 100 OFFCURVE",
+"129 59 OFFCURVE",
+"61 59 CURVE SMOOTH",
+"27 59 OFFCURVE",
+"0 -10 OFFCURVE",
+"0 -49 CURVE SMOOTH",
+"0 -65 OFFCURVE",
+"4 -76 OFFCURVE",
+"14 -76 CURVE SMOOTH"
+);
+}
+);
+width = 308;
 }
 );
 },
