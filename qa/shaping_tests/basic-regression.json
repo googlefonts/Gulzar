@@ -14,6 +14,16 @@
       "input": "یر",
       "expectation": "REf1|ddb|BEi13",
       "note": "https://github.com/simoncozens/Gulzar/issues/12"
+    },
+    {
+      "input": "جر",
+      "expectation": "REf1|sdb|JIMi15",
+      "note": "https://github.com/simoncozens/Gulzar/issues/13"
+    },
+    {
+      "input": "عر",
+      "expectation": "REf3|AINi14",
+      "note": "https://github.com/simoncozens/Gulzar/issues/13"
     }
   ]
 }

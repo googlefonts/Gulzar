@@ -12,6 +12,8 @@ Feature rlig {
     Substitute /^[BT]E(sd)?m\d+/ ( /REf\d$/ ) -> REf3;
     Substitute /^HAYCm/ ( /REf\d$/ ) -> REf3;
     Substitute GAFm1 ( REf1 ) -> REf4;
+    Substitute AINi1 ( /REf\d$/ ) -> REf3;
+    Substitute JIMi1 ( /REf\d$/ ) -> REf1;
   } IgnoreMarks;
 
   Routine DivineName {
