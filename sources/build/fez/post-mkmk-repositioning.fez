@@ -48,6 +48,7 @@ Feature mkmk {
   DefineClass @overlapping_inits = @inits & (width < 350); # xMax[tdb]
   Routine OpenSpaceAroundSmallBehs {
     Position ( @overlapping_inits <xAdvance=0> @nuktas_and_kasra <xPlacement=0> )  BARI_YEf1; # Except here
+    Position ( @overlapping_inits <xAdvance=0> haydb <xPlacement=0> ) /.*[mif](sd)?\d+$/; # Or here
     Position ( @overlapping_inits <xAdvance=200> @nuktas_and_kasra <xPlacement=50> )  /.*[mif](sd)?\d+$/;
   } UseMarkFilteringSet @nuktas_and_kasra;
 
@@ -153,7 +154,4 @@ Feature kern {
     Position ( /ddb|tdb/ <xPlacement=+20> ) /JIMm/;
   } UseMarkFilteringSet /ddb|tdb/;
 
-  Routine HehAlifFix {
-    Position HAYCi3 ( haydb <yPlacement=+165> ) ALIFf1;
-  } UseMarkFilteringSet /haydb/;
 };

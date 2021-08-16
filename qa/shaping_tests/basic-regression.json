@@ -1,5 +1,9 @@
 {
-  "configuration": {},
+  "configuration": {
+    "defaults": {
+      "allowedcollisions": ["haydb/HAYCi3", "haydb/HAYCi15"]
+    }
+  },
   "tests": [
     {
       "input": "بیر",
@@ -24,6 +28,11 @@
       "input": "عر",
       "expectation": "REf3|AINi14",
       "note": "https://github.com/simoncozens/Gulzar/issues/13"
+    },
+    {
+      "input": "ہا",
+      "expectation": "ALIFf1=1+213|haydb=0@-79,101+0|HAYCi3=0@-42,67+173",
+      "note": "Don't break heh-alif when fixing short initial be-likes"
     }
   ]
 }
