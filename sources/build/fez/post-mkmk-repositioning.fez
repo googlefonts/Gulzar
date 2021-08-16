@@ -22,11 +22,11 @@ Feature mkmk {
   LoadPlugin qalamTools.SeparateConsecutive;
   DefineClass @behs = /.*[mif](sd)?\d+$/  & (run < 600); # any rasm can carry an accent
   Routine SeparateConsecutiveAboveDots {
-    SeparateConsecutive @all_above_marks 4 100 -50;
+    SeparateConsecutive @all_above_marks 4 20 -300;
   } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb tdi KASRA ] 4 125 125;
+    SeparateConsecutive [sdb ddb tdb tdi KASRA ] 4 0 400;
   } UseMarkFilteringSet [sdb ddb tdb tdi KASRA];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
@@ -96,18 +96,18 @@ Feature kern {
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
   };
 
-  Routine FinalJimDropDots {
-    Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=-100> );
-  };
+  #Routine FinalJimDropDots {
+  #  Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=-100> );
+  #};
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
-  Routine HighTehFinesse {
-    Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) @LowNotTeh;
-    Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) /_YEf/;
+  #Routine HighTehFinesse {
+  #  Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) @LowNotTeh;
+  #  Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) /_YEf/;
   #   Position @TallAndStraight @NarrowTeh ( [tda dda] <yPlacement=150> ) @NarrowTeh [tda dda];
   #   Position @TallAndStraight @NarrowTeh ( [tda dda] <yPlacement=300> );
-  }  UseMarkFilteringSet [dda tda];
+  #}  UseMarkFilteringSet [dda tda];
 
   Routine TdbAinFinesse {
     Position (tdb.yb <xPlacement=-30>) AINf1;
