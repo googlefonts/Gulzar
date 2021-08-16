@@ -9,7 +9,7 @@ Feature mkmk {
   # XXX ideally tall kaf/gaf and short kaf/gaf should be treated differently.
   DefineClass @kafgaf = /^(KAF|GAF)/;
   DefineClass @shortkafgaf = @kafgaf & (yMax < 700);
-  DefineClass @narrowmedi = /.*m\d+$/  & (run < 250);
+  DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
 
   # The SeparateConsecutive plugin performs the "knock-on" separation of
   # dots according to the Qalmi patent. It looks for a sequence of consecutive
@@ -26,7 +26,7 @@ Feature mkmk {
   } UseMarkFilteringSet @all_above_marks;
 
   Routine SeparateConsecutiveBelowDots {
-    SeparateConsecutive [sdb ddb tdb tdi KASRA ] 4 30 400;
+    SeparateConsecutive [sdb ddb tdb tdi KASRA ] 4 65 400;
   } UseMarkFilteringSet [sdb ddb tdb tdi KASRA];
 
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
@@ -48,23 +48,26 @@ Feature mkmk {
   DefineClass @overlapping_inits = @inits & (width < 350); # xMax[tdb]
   Routine OpenSpaceAroundSmallBehs {
     Position ( @overlapping_inits <xAdvance=0> @nuktas_and_kasra <xPlacement=0> )  BARI_YEf1; # Except here
-    Position ( @overlapping_inits <xAdvance=200> @nuktas_and_kasra <xPlacement=50> )  /.*[mif]\d+$/;
+    Position ( @overlapping_inits <xAdvance=200> @nuktas_and_kasra <xPlacement=50> )  /.*[mif](sd)?\d+$/;
   } UseMarkFilteringSet @nuktas_and_kasra;
 
 
-#  Routine DropDotsOnTehGaf {
-#    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  @narrowmedi /[KG]AF/;
+  Routine DropDotsOnTehGaf {
+    Position /[mi](sd)?\d+$/ [sda dda tda] /[mi]\d+$/ ( @all_above_marks <yPlacement=-250> )  @narrowmedi /[KG]AF/;
+    Position /[mi](sd)?\d+$/ [sda dda tda] /[mi]\d+$/ ( @all_above_marks <yPlacement=-250> ) /[KG]AF/;
+    Position /[mi](sd)?\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  @narrowmedi /[KG]AF/;
+    Position /[mi](sd)?\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  @narrowmedi /[KG]AF/;
 #    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  /[KG]AF/;
 #    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> ) /[KG]AF/;
 #    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> ) @narrowmedi /[KG]AF/;
 #    Position ( @all_above_marks <xPlacement=50> )  /ALIFf|LAM[mf]/;
-#    Position ( toeda <15 -90 0 0> )  @kafgaf;
-#    Position ( toeda <15 -90 0 0> )  @narrowmedi @kafgaf;
+     Position ( toeda <15 -90 0 0> )  @kafgaf;
+     Position ( toeda <15 -90 0 0> )  @narrowmedi @kafgaf;
 #    Position ( @above_nuktas <15 -60 0 0> )  @kafgaf;
 #    Position ( @above_nuktas <15 -60 0 0> )  @narrowmedi @kafgaf;
 #    Position ( @other_above_marks <15 -100 0 0> )  @kafgaf;
 #    Position ( @other_above_marks <15 -100 0 0> )  @narrowmedi @kafgaf;
-#  } UseMarkFilteringSet @all_above_marks;
+  } UseMarkFilteringSet @all_above_marks;
 
 };
 
@@ -75,7 +78,7 @@ Feature kern {
     Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb$/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
   } UseMarkFilteringSet /haydb.yb|sdb.yb|tdb|ddb/;
 
   Routine DropDotsBeforeVao {
@@ -103,12 +106,13 @@ Feature kern {
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
-  #Routine HighTehFinesse {
-  #  Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) @LowNotTeh;
-  #  Position @TallAndStraight /TEm/ ( [tda dda] <xPlacement=-150> ) /_YEf/;
-  #   Position @TallAndStraight @NarrowTeh ( [tda dda] <yPlacement=150> ) @NarrowTeh [tda dda];
-  #   Position @TallAndStraight @NarrowTeh ( [tda dda] <yPlacement=300> );
-  #}  UseMarkFilteringSet [dda tda];
+  DefineClass @NarrowTeh = /^TE[mf](sd)?\d+/ & (run < 300);
+  DefineClass @TallFinal = /LAM[mf]|[KG]AF[mf]|JIM[mf]|ALIFf1/;
+  Routine HighTehFinesse {
+    Position @TallAndStraight /TEm|JIMm/ ( [sda tda dda] <xPlacement=-50> );
+    Position @TallAndStraight /TEm|JIMm/ ( [sda tda dda] <xPlacement=-150> ) /_YEf/;
+    Position @NarrowTeh ( dda <xPlacement=50> ) @TallFinal ;
+  }  UseMarkFilteringSet [sda dda tda];
 
   Routine TdbAinFinesse {
     Position (tdb.yb <xPlacement=-30>) AINf1;
