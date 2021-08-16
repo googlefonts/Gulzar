@@ -51,7 +51,7 @@ Feature fina {
       Substitute yeh-ar -> CH_YEu1 ddb;
   };
   Routine FinaSelection {
-    Substitute [CH_YEu1 AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] ( REu1 )    -> REf2;
+    Substitute [AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] ( REu1 )    -> REf2;
     Substitute [HAYCu1 MIMu1 SADu1 SINu1 TOEu1] ( REu1 )    -> REf3;
 
     Substitute JIMu1          ( CH_YEu1 ) -> CH_YEf2;
