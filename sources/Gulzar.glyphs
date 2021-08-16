@@ -16632,7 +16632,7 @@ name = NUNu1;
 },
 {
 name = sdi;
-transform = "{1, 0, 0, 1, 275, 133}";
+transform = "{1, 0, 0, 1, 276, 153}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -16653,7 +16653,7 @@ position = "{259, -540}";
 },
 {
 name = inside;
-position = "{415, 123}";
+position = "{416, 143}";
 },
 {
 name = top;
@@ -29028,24 +29028,24 @@ paths = (
 {
 closed = 1;
 nodes = (
-"151 143 OFFCURVE",
-"160 144 OFFCURVE",
-"170 158 CURVE SMOOTH",
-"222 232 LINE SMOOTH",
-"235 250 OFFCURVE",
-"232 263 OFFCURVE",
-"211 267 CURVE SMOOTH",
-"165 276 OFFCURVE",
-"132 297 OFFCURVE",
-"120 333 CURVE",
-"114 333 LINE",
-"76 284 LINE SMOOTH",
-"66 272 OFFCURVE",
-"50 251 OFFCURVE",
-"50 227 CURVE SMOOTH",
-"50 198 OFFCURVE",
-"76 163 OFFCURVE",
-"130 149 CURVE SMOOTH"
+"152 138 OFFCURVE",
+"161 139 OFFCURVE",
+"172 154 CURVE SMOOTH",
+"226 232 LINE SMOOTH",
+"240 251 OFFCURVE",
+"237 264 OFFCURVE",
+"215 268 CURVE SMOOTH",
+"166 278 OFFCURVE",
+"132 300 OFFCURVE",
+"119 338 CURVE",
+"113 338 LINE",
+"73 286 LINE SMOOTH",
+"62 274 OFFCURVE",
+"46 252 OFFCURVE",
+"46 226 CURVE SMOOTH",
+"46 196 OFFCURVE",
+"73 159 OFFCURVE",
+"130 144 CURVE SMOOTH"
 );
 }
 );
@@ -57968,7 +57968,7 @@ position = "{766, 324}";
 },
 {
 name = inside;
-position = "{426, 117}";
+position = "{417, 143}";
 },
 {
 name = top;
