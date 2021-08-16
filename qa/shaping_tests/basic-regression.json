@@ -1,0 +1,19 @@
+{
+  "configuration": {},
+  "tests": [
+    {
+      "input": "بیر",
+      "expectation": "REf3|ddb|BEm15|sdb|BEi3",
+      "note": "https://github.com/simoncozens/Gulzar/issues/12"
+    },
+    {
+      "input": "بر",
+      "expectation": "REf1|sdb|BEi13"
+    },
+    {
+      "input": "یر",
+      "expectation": "REf1|ddb|BEi13",
+      "note": "https://github.com/simoncozens/Gulzar/issues/12"
+    }
+  ]
+}
