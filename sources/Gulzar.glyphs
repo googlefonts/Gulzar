@@ -1,5 +1,8 @@
 {
-.appVersion = "1352";
+.appVersion = "1342";
+DisplayStrings = (
+"/BEi9/JIMi9/MIMf1/LAMf1"
+);
 classes = (
 {
 automatic = 1;
@@ -33652,7 +33655,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{294, -112}";
+position = "{311, -294}";
 },
 {
 name = exit;
@@ -47663,7 +47666,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{230, -90}";
+position = "{261, -142}";
 },
 {
 name = exit;
@@ -73917,7 +73920,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{306, -91}";
+position = "{311, -299}";
 },
 {
 name = exit;
