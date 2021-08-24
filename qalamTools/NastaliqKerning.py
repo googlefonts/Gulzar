@@ -32,6 +32,96 @@ distance_cache = {}
 
 spaceglyph = "space.urdu"
 
+distance_cache = {}
+
+def determine_kern(
+    font,
+    glyph1,
+    glyph2,
+    targetdistance,
+    offset1=(0, 0),
+    offset2=(0, 0),
+    maxtuck=0.4,
+):
+    """Determine a kerning value required to set two glyphs at given ink-to-ink distance.
+
+    The value is bounded by the ``maxtuck`` parameter. For example, if
+    ``maxtuck`` is 0.20, the right glyph will not be placed any further
+    left than 80% of the width of left glyph, even if this places the
+    ink further than ``targetdistance`` units away.
+
+    Args:
+        font: a ``fontTools`` TTFont object or a ``glyphsLib`` GSFontMaster
+              object OR a ``babelfont`` Font object.
+        glyph1: name of the left glyph.
+        glyph2: name of the right glyph.
+        targetdistance: distance to set the glyphs apart.
+        offset1: offset (X-coordinate, Y-coordinate) to place left glyph.
+        offset2: offset (X-coordinate, Y-coordinate) to place right glyph.
+        maxtuck: maximum proportion of the left glyph's width to kern.
+
+    Returns: A kerning value, in units.
+    """
+    def cached_distance(p1, p2):
+        if (p1, p2) not in distance_cache:
+            distance_cache[(p1, p2)] = p1.distanceToPath(p2, samples=3)
+        return distance_cache[(p1, p2)]
+
+    paths1 = get_beziers(font, glyph1)
+    paths2 = get_beziers(font, glyph2)
+    metrics1 = get_glyph_metrics(font, glyph1)
+    metrics2 = get_glyph_metrics(font, glyph2)
+
+    offset1 = Point(*offset1)
+    offset2 = Point(offset2[0] + metrics1["width"], offset2[1])
+    kern = 0
+    last_best = None
+    
+    minimum_possible = -1000
+    full_width = metrics1["run"]
+    if maxtuck:
+        maximum_width = full_width * maxtuck
+        # print("Maximum distance into %s is %i" % (glyph1, maximum_width))
+        # print("Left edge of %s is %i" % (glyph2, metrics2["xMin"]))
+        minimum_possible = -metrics2["xMin"] - maximum_width
+        # print("Biggest kern is %i" % minimum_possible)
+
+    iterations = 0
+    while True:
+        # Compute min distance
+        min_distance = None
+        for p1 in paths1:
+            p1 = p1.clone().translate(offset1)
+            for p2 in paths2:
+                p2 = p2.clone().translate(Point(offset2.x + kern, offset2.y))
+                d = p1.distanceToPath(p2, samples=3)
+                #d = cached_distance(p1, p2)
+                #print("d was", d)
+                #print("offset1 was %s" % offset1)
+                #print("offset2 was %s" % offset2)
+                if not min_distance or d[0] < min_distance:
+                    min_distance = d[0]
+        if not last_best or min_distance < last_best:
+            last_best = min_distance
+        else:
+            break  # Nothing helped
+        if abs(min_distance - targetdistance) < 1 or iterations > 10:
+            break
+        iterations = iterations + 1
+        # print("Min distance between %s and %s at kern %i is %i" % (glyph1, glyph2, kern, min_distance))
+        kern = kern + (targetdistance - min_distance)
+        if kern < minimum_possible:
+            return minimum_possible
+#     kern = kern -  metrics1["rsb"]
+    if maxtuck:
+        kern = max(kern, -(metrics1["xMax"] * (1+maxtuck)) + metrics1["rsb"])
+    else:
+        kern = max(kern, -(metrics1["xMax"]) + metrics1["rsb"])
+    if metrics1["rsb"] < 0:
+        kern = kern -  metrics1["rsb"]
+    return int(kern)
+
+
 class Hashabledict(dict):
     def __hash__(self):
         return hash(frozenset(self))
@@ -117,7 +207,7 @@ class NastaliqKerning(FEZVerb):
                     for initial in sorted(inits):
                         if initial == spaceglyph:
                             continue
-                        kern = self.determine_kern(
+                        kern = self.determine_kern_cached(
                             self.parser.font,
                             initial,
                             end_of_previous_word,
@@ -285,78 +375,10 @@ class NastaliqKerning(FEZVerb):
         self.shelve.close()
         return [routine]
 
-    def determine_kern(
-        self,
-        font,
-        glyph1,
-        glyph2,
-        targetdistance,
-        offset1=(0, 0),
-        offset2=(0, 0),
-        maxtuck=0.4,
-    ):
-        """Determine a kerning value required to set two glyphs at given ink-to-ink distance.
-
-        The value is bounded by the ``maxtuck`` parameter. For example, if
-        ``maxtuck`` is 0.20, the right glyph will not be placed any further
-        left than 80% of the width of left glyph, even if this places the
-        ink further than ``targetdistance`` units away.
-
-        Args:
-            font: a ``fontTools`` TTFont object or a ``glyphsLib`` GSFontMaster
-                  object OR a ``babelfont`` Font object.
-            glyph1: name of the left glyph.
-            glyph2: name of the right glyph.
-            targetdistance: distance to set the glyphs apart.
-            offset1: offset (X-coordinate, Y-coordinate) to place left glyph.
-            offset2: offset (X-coordinate, Y-coordinate) to place right glyph.
-            maxtuck: maximum proportion of the left glyph's width to kern.
-
-        Returns: A kerning value, in units.
-        """
+    def determine_kern_cached(self, font, glyph1, glyph2, targetdistance, offset1=(0, 0), offset2=(0, 0), maxtuck=0.4):
         key = "/".join([glyph1, glyph2,str(offset1[1])])
         if key in self.shelve:
             return self.shelve[key]
-        def cached_distance(p1, p2):
-            if (p1, p2) not in distance_cache:
-                distance_cache[(p1, p2)] = p1.distanceToPath(p2, samples=3)
-            return distance_cache[(p1, p2)]
-
-        paths1 = get_beziers(font, glyph1)
-        paths2 = get_beziers(font, glyph2)
-        metrics1 = get_glyph_metrics(font, glyph1)
-        offset1 = Point(*offset1)
-        offset2 = Point(offset2[0] + metrics1["width"], offset2[1])
-        kern = 0
-        last_best = None
-
-        iterations = 0
-        while True:
-            # Compute min distance
-            min_distance = None
-            for p1 in paths1:
-                p1 = p1.clone().translate(offset1)
-                for p2 in paths2:
-                    p2 = p2.clone().translate(Point(offset2.x + kern, offset2.y))
-                    # d = p1.distanceToPath(p2, samples=3)
-                    d = cached_distance(p1, p2)
-                    if not min_distance or d[0] < min_distance:
-                        min_distance = d[0]
-            if not last_best or min_distance < last_best:
-                last_best = min_distance
-            else:
-                break  # Nothing helped
-            if abs(min_distance - targetdistance) < 10 or iterations > 10:
-                break
-            iterations = iterations + 1
-            kern = kern + (targetdistance - min_distance)
-        if maxtuck:
-            kern = max(kern, -(metrics1["xMax"] * (1+maxtuck)) + metrics1["rsb"])
-        else:
-            kern = max(kern, -(metrics1["xMax"]) + metrics1["rsb"])
-        # kern = max(kern, -metrics1["width"])
-        # warnings.warn("%s/%s @(%s,%s) = %s" %(glyph1, glyph2, offset1, offset2, kern))
-        if metrics1["rsb"] < 0:
-            kern = kern -  metrics1["rsb"]
-        self.shelve[key]=int(kern)
-        return int(kern)
+        result = determine_kern(font, glyph1, glyph2, targetdistance, offset1, offset2, maxtuck=0.4)
+        self.shelve[key] = result
+        return result
