@@ -1,5 +1,5 @@
 {
-.appVersion = "1352";
+.appVersion = "1342";
 classes = (
 {
 automatic = 1;
@@ -21968,6 +21968,7 @@ width = 299;
 }
 );
 note = COMMA;
+unicode = 060C;
 },
 {
 color = 3;
