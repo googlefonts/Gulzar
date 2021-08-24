@@ -25,6 +25,7 @@ accuracy1 = 3
 rise_quantization = 100
 kern_quantization = 50
 maximum_rise = 400
+maximum_word_length = 8
 
 bezier_cache = {}
 metrics_cache = {}
@@ -78,7 +79,8 @@ def determine_kern(
     last_best = None
     
     minimum_possible = -1000
-    full_width = min(metrics1["run"], 100)
+    full_width = max(metrics1["run"] - min(0, metrics1["rsb"]), 100)
+    # print("Full width of %s is %i" % (glyph1, full_width))
     if maxtuck:
         maximum_width = full_width * maxtuck
         # print("Maximum distance into %s is %i" % (glyph1, maximum_width))
@@ -328,7 +330,7 @@ class NastaliqKerning(FEZVerb):
             target = [isols_finas, [spaceglyph], inits]
         else:
             target = [isols_finas, inits]
-        for i in range(5):
+        for i in range(maximum_word_length):
             postcontext_options = [binned_finas] + [binned_medis] * i
             all_options = product(*postcontext_options)
             for postcontext_plus_rise in all_options:
