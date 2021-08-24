@@ -78,7 +78,7 @@ def determine_kern(
     last_best = None
     
     minimum_possible = -1000
-    full_width = metrics1["run"]
+    full_width = min(metrics1["run"], 100)
     if maxtuck:
         maximum_width = full_width * maxtuck
         # print("Maximum distance into %s is %i" % (glyph1, maximum_width))
