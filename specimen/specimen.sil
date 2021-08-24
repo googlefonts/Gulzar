@@ -96,9 +96,9 @@ My divan of poetry will abide in the world until the day of reckoning.
 \vfill
 
 \set[parameter=shaper.variablespaces,value=true]
-\set[parameter=shaper.spaceenlargementfactor,reset=true]
-\set[parameter=shaper.spaceshrinkfactor,reset=true]
-\set[parameter=shaper.spacestretchfactor,reset=true]
+\set[parameter=shaper.spaceenlargementfactor,value=1]
+\set[parameter=shaper.spaceshrinkfactor,value=0]
+\set[parameter=shaper.spacestretchfactor,value=0]
 \set[parameter=typesetter.parfillskip,reset=true]
 \hbox{}\par
 
