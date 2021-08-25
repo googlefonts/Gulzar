@@ -4,8 +4,7 @@ Include "shared.fez";
 DefineClass @bariye = /BARI_YE/;
 
 Feature kern {
-	NastaliqKerning 120 90%;
-	NastaliqKerning 120 90% spacekern;
+	NastaliqKerning 150 70% spacekern;
   DefineClass @narrowinit = @inits & (width < 200);
 
 	Routine FixOverzealousChYe {
