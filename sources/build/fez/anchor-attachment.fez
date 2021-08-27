@@ -6,18 +6,36 @@ CopyAnchors SHADDA SHADDA_FATHA;
 CopyAnchors SHADDA SHADDA_LONG_A;
 
 LoadPlugin qalamTools.QuantizeAnchors;
+LoadPlugin qalamTools.DotAvoidance;
+
+AddSpacedAnchors 250;
 
 Feature mark {
   Routine DoMarkBase {
     Attach &top &_top bases;
+    Attach &bottom.one &_bottom.one bases;
+    Attach &bottom.two &_bottom.two bases;
     Attach &inside &_inside bases;
     Attach &bottom &_bottom bases;
+    Attach &bottom.one &_bottom.one bases;
+    Attach &bottom.two &_bottom.two bases;
     Attach &comma &_comma bases;
   };
 };
 
 Feature curs {
   Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
+};
+
+
+Feature rlig {
+  Routine SeparateConsecutiveTop {
+    DetectAndSwap top;
+  } UseMarkFilteringSet [sda dda tda sda.one dda.one tda.one sda.two dda.two tda.two ];
+
+  Routine SeparateConsecutiveBottom {
+    DetectAndSwap bottom;
+  } UseMarkFilteringSet [haydb sdb ddb tdb sdb.one ddb.one tdb.one sdb.two ddb.two tdb.two ];
 };
 
 Include "sources/build/fez/pre-mkmk-repositioning.fez";
