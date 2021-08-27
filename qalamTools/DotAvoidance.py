@@ -10,7 +10,6 @@ from qalamTools.NastaliqConnections import load_rules
 from glyphtools import get_glyph_metrics
 import tqdm
 import logging
-# import matplotlib.pyplot as plt
 
 # logging.basicConfig(format='%(message)s')
 # logging.getLogger("fontFeatures.shaperLib").setLevel(logging.DEBUG)
@@ -62,7 +61,7 @@ class DetectAndSwap(FEZVerb):
         if anchor == "bottom":
             self.dots = ["haydb", "sdb", "sdb.one", "sdb.two", "ddb", "ddb.one", "ddb.two", "tdb", "tdb.one", "tdb.two"]
         else:
-            self.dots = ["sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"]
+            self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"]
 
         self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font)
         self.contexts = self.get_contexts()
@@ -70,14 +69,17 @@ class DetectAndSwap(FEZVerb):
         count = 0
         rules = set({})
         result = []
+        nc = self.parser.fontfeatures.namedClasses
+        self.parser.fontfeatures.namedClasses = {}
         for sequence in tqdm.tqdm(seq):
-            # print(sequence)
             if tuple(sequence) in rules:
                 continue
-            if self.collides(sequence):
+            print("# %s" % sequence)
+            collides = self.collides(sequence)
+            if collides:
                 mitigated = self.try_mitigate(sequence)
+                count += 1
                 if mitigated:
-                    count += 1
                     last_dot, orig_dot, newdot = mitigated
                     rules.add(tuple(sequence))
                     result.append(fontFeatures.Substitution(
@@ -87,7 +89,10 @@ class DetectAndSwap(FEZVerb):
                         postcontext=[[x] for x in sequence[last_dot+1:]],
                     ))
                 # else:
-                    # print("Nothing helped %s" % sequence)
+                #     warnings.warn("Nothing helped %s" % sequence)
+            # if count > 500:
+                # break
+        self.parser.fontfeatures.namedClasses = nc
         return result
 
     def collides(self, glyphs):
@@ -127,7 +132,9 @@ class DetectAndSwap(FEZVerb):
             return dot+".one"
 
 
-    def draw(self, positioned_glyphs):
+    def draw(self, glyphs):
+        positioned_glyphs = self.position_glyphs(glyphs)
+        import matplotlib.pyplot as plt
         fig, ax = plt.subplots()
         ax.set_aspect("equal")
         for g in positioned_glyphs:
@@ -151,7 +158,7 @@ class DetectAndSwap(FEZVerb):
     def get_contexts(self):
         rules = load_rules("rules.csv", self.parser.font.glyphs.keys(), full=True)
         # possible = set([])
-        # rasm_glyphs = set([])
+        self.rasm_glyphs = set([])
         possible_contexts = {}
 
         for old in rules:
@@ -159,29 +166,57 @@ class DetectAndSwap(FEZVerb):
                 for context in rules[old][new]:
                     # possible.add((new, context))
                     possible_contexts.setdefault(new,[]).append(context)
-                    # rasm_glyphs.add(new)
-                    # rasm_glyphs.add(context)
+                    self.rasm_glyphs.add(new)
+                    self.rasm_glyphs.add(context)
         return possible_contexts
 
     def generate_glyph_sequence(self, n):
-        dot_carriers = [x for x in self.parser.font.glyphs.keys() if re.match(r"^(BE|JIM)[mi]",x)]
-        te_fe = [x for x in self.parser.font.glyphs.keys() if re.match(r"^(SAD|VAO|TE|TOE|JIM)[mi]",x)]
-        hayc = [x for x in self.parser.font.glyphs.keys() if re.match(r"^(HAYC)[mi]",x)]
         thin = [x for x in self.parser.font.glyphs.keys() if get_glyph_metrics(self.parser.font,x)["run"] < max_run and re.search(r"m\d+$", x)]
-        usable = set(dot_carriers) | set(hayc) | set(thin)
+
+        sda = ["sda", "sda.one", "sda.two"]
+        dda = ["dda", "dda.one", "dda.two"]
+        tda = ["tda", "tda.one", "tda.two"]
+        sdb = ["sdb", "sdb.one", "sdb.two"]
+        ddb = ["ddb", "ddb.one", "ddb.two"]
+        tdb = ["tdb", "tdb.one", "tdb.two"]
+
+        dot_combinations = {
+            "HAYC": (tda, ["haydb"]),
+            "TE": (dda+tda, []),
+            "SAD": (sda, []),
+            "DAL": (sda+["toeda"], []),
+            "RE": (sda + tda + ["toeda"], []),
+            "AIN": (sda, []),
+            "FE": (sda+dda, []),
+            "QAF": (dda, []),
+            "BE": (sda+dda+tda+["toeda"], sdb+ddb+tdb),
+            "TOE": (sda, []),
+            "JIM": (sda, sdb+tdb)
+        }
+
         def dotsfor(t):
-            if "HAYC" in t and self.anchor == "bottom":
-                return ["haydb"]
-            else:
-                return self.dots[1:]
+            for k,v in dot_combinations.items():
+                if k in t:
+                    if self.anchor == "top":
+                        return v[0]
+                    else:
+                        return v[1]
+            return []
+
+        above_stems = [k for k,v in dot_combinations.items() if v[0]]
+        above_re = r"^(" + ("|".join(above_stems)) + r")[mi]"
+        below_stems = [k for k,v in dot_combinations.items() if v[1]]
+        below_re = r"^(" + ("|".join(below_stems)) + r")[mi]"
+        below_dots = [x for x in self.parser.font.glyphs.keys() if re.match(below_re,x)]
+        above_dots = [x for x in self.parser.font.glyphs.keys() if re.match(above_re,x)]
 
         # Do it by hand, it's easier to think about
         if self.anchor == "bottom":
-            starters = hayc + dot_carriers
+            starters = below_dots
         else:
-            starters = te_fe + dot_carriers
+            starters = above_dots
         sequences = []
-        for left in starters:
+        for left in list(set(starters) & set(self.rasm_glyphs)):
             for mid in list(set(self.contexts.get(left,[])) & set(thin)):
                 for right in list(set(self.contexts.get(mid,[])) & set(starters)):
                     for left_dot in dotsfor(left):
@@ -195,7 +230,7 @@ class DetectAndSwap(FEZVerb):
         # def seq(n, rightmost):
         #     if n == 1:
         #         for t in rightmost:
-        #             if t in dot_carriers:
+        #             if t in below_dots:
         #                 for dot in dotsfor(t):
         #                     yield [t] + [dot]
         #     else:
@@ -205,7 +240,7 @@ class DetectAndSwap(FEZVerb):
         #                 subseq = seq(n-1, self.contexts[t])
         #                 for post in subseq:
         #                     yield [t] + post
-        #                     if t in dot_carriers or t in hayc:
+        #                     if t in below_dots or t in hayc:
         #                         for dot in dotsfor(t):
         #                             yield [t] + [dot] + post
 

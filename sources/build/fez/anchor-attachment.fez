@@ -8,13 +8,13 @@ CopyAnchors SHADDA SHADDA_LONG_A;
 LoadPlugin qalamTools.QuantizeAnchors;
 LoadPlugin qalamTools.DotAvoidance;
 
-AddSpacedAnchors 250;
+AddSpacedAnchors 150;
 
 Feature mark {
   Routine DoMarkBase {
     Attach &top &_top bases;
-    Attach &bottom.one &_bottom.one bases;
-    Attach &bottom.two &_bottom.two bases;
+    Attach &top.one &_top.one bases;
+    Attach &top.two &_top.two bases;
     Attach &inside &_inside bases;
     Attach &bottom &_bottom bases;
     Attach &bottom.one &_bottom.one bases;
@@ -31,7 +31,7 @@ Feature curs {
 Feature rlig {
   Routine SeparateConsecutiveTop {
     DetectAndSwap top;
-  } UseMarkFilteringSet [sda dda tda sda.one dda.one tda.one sda.two dda.two tda.two ];
+  } UseMarkFilteringSet [toeda sda dda tda sda.one dda.one tda.one sda.two dda.two tda.two ];
 
   Routine SeparateConsecutiveBottom {
     DetectAndSwap bottom;
