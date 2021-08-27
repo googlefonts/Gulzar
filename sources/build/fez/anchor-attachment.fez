@@ -8,7 +8,7 @@ CopyAnchors SHADDA SHADDA_LONG_A;
 LoadPlugin qalamTools.QuantizeAnchors;
 LoadPlugin qalamTools.DotAvoidance;
 
-AddSpacedAnchors 150;
+AddSpacedAnchors 240;
 
 Feature mark {
   Routine DoMarkBase {

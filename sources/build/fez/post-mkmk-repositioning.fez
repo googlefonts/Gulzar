@@ -11,26 +11,6 @@ Feature mkmk {
   DefineClass @shortkafgaf = @kafgaf & (yMax < 700);
   DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
 
-  # The SeparateConsecutive plugin performs the "knock-on" separation of
-  # dots according to the Qalmi patent. It looks for a sequence of consecutive
-  # dots up to a given length (3, in this case), and creates rules which
-  # *cumulatively* move them all horizontally: it moves the second dot across
-  # 70 units, the third dot 140 units, and so on. The mark filtering sets
-  # establish whether or not the dots really are cumulative. Two below
-  # dots are not cumulative if there is an above dot in the middle, and vice
-  # versa.
-  LoadPlugin qalamTools.SeparateConsecutive;
-
-  # DefineClass @behs = /.*[mif](sd)?\d+$/  & (run < 600); # any rasm can carry an accent
-  # Routine SeparateConsecutiveAboveDots {
-  #   SeparateConsecutive @all_above_marks 4 60 -350;
-  # } UseMarkFilteringSet @all_above_marks;
-
-  # New dot separator does this
-  # Routine SeparateConsecutiveBelowDots {
-  #   SeparateConsecutive [sdb ddb tdb tdi KASRA ] 4 65 400;
-  # } UseMarkFilteringSet [sdb ddb tdb tdi KASRA];
-
   # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
   # also be separated.
   DefineClass @behs = /.*[mif](sd)?\d+$/;
@@ -52,6 +32,10 @@ Feature mkmk {
     Position ( @overlapping_inits <xAdvance=0> @nuktas_and_kasra <xPlacement=0> )  BARI_YEf1; # Except here
     Position ( @overlapping_inits <xAdvance=0> haydb <xPlacement=0> ) /.*[mif](sd)?\d+$/; # Or here
     Position ( @overlapping_inits <xAdvance=200> @nuktas_and_kasra <xPlacement=50> )  /.*[mif](sd)?\d+$/;
+
+    # RE->BE needs more space
+
+    Position /REf/ ( /BEi/ <xAdvance=200> @nuktas_and_kasra <xPlacement=50> );
   } UseMarkFilteringSet @nuktas_and_kasra;
 
 
@@ -112,7 +96,7 @@ Feature kern {
   DefineClass @NarrowTeh = /^TE[mf](sd)?\d+/ & (run < 300);
   DefineClass @TallFinal = /LAM[mf]|[KG]AF[mf]|JIM[mf]|ALIFf1/;
   Routine HighTehFinesse {
-    Position @TallAndStraight /TEm|JIMm/ ( [sda tda dda] <xPlacement=-50> );
+    # Position @TallAndStraight /TEm|JIMm/ ( [sda tda dda] <xPlacement=-50> );
     Position @TallAndStraight /TEm|JIMm/ ( [sda tda dda] <xPlacement=-150> ) /_YEf/;
     Position @NarrowTeh ( dda <xPlacement=50> ) @TallFinal ;
   }  UseMarkFilteringSet [sda dda tda];

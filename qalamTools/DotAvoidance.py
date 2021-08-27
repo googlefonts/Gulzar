@@ -74,7 +74,6 @@ class DetectAndSwap(FEZVerb):
         for sequence in tqdm.tqdm(seq):
             if tuple(sequence) in rules:
                 continue
-            print("# %s" % sequence)
             collides = self.collides(sequence)
             if collides:
                 mitigated = self.try_mitigate(sequence)
