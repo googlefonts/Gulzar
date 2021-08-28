@@ -8,7 +8,7 @@ export PYTHONPATH=.
 
 $(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
 	. venv/bin/activate; fontmake -f --master-dir . -g $(GLYPHS_FILE) --no-production-names -o ttf --output-path $(FINAL_FONT)
-	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) sources/build/features.fea $(FINAL_FONT)
+	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
 
 venv: venv/touchfile
 
@@ -21,7 +21,7 @@ venv/touchfile: requirements.txt
 	touch venv/touchfile
 
 replace: venv sources/build/features.fea
-	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) sources/build/features.fea $(FINAL_FONT)
+	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
 
 release: venv $(FINAL_FONT)
 	. venv/bin/activate; ttfautohint $(FINAL_FONT) $(FINAL_FONT).autohint
@@ -64,7 +64,7 @@ sources/build/fea/decomposition.fea: sources/build/fez/decomposition.fez venv
 sources/build/fea/connections.fea: sources/build/fez/connections.fez sources/build/rules.csv venv
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez sources/build/fez/pre-mkmk-repositioning.fez venv
+sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez sources/build/fez/pre-mkmk-repositioning.fez venv $(GLYPHS_FILE)
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv
