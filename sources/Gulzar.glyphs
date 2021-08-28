@@ -1,13 +1,7 @@
 {
-<<<<<<< HEAD
 .appVersion = "1352";
 DisplayStrings = (
 "/TEm3"
-=======
-.appVersion = "1342";
-DisplayStrings = (
-"/tdb/tdb.one/ddb.one/sda.one/sdb.one/dda/dda.one/tda/tda.one/TEi4/dda.two/ddb.two/sda.two/sdb.two/tdb.two"
->>>>>>> 1819e57ff19bb20acbeea82e71dd92f96de3992d
 );
 classes = (
 {
