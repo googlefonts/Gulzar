@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/TEm3"
+);
 classes = (
 {
 automatic = 1;
@@ -65249,7 +65252,7 @@ position = "{42, -5}";
 },
 {
 name = top;
-position = "{198, 323}";
+position = "{178, 323}";
 }
 );
 background = {
