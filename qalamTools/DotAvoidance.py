@@ -216,11 +216,11 @@ class DetectAndSwap(FEZVerb):
             starters = above_dots
         sequences = []
         for left in list(set(starters) & set(self.rasm_glyphs)):
-            for mid in list(set(self.contexts.get(left,[])) & set(thin)):
-                for right in list(set(self.contexts.get(mid,[])) & set(starters)):
-                    for left_dot in dotsfor(left):
-                        for right_dot in dotsfor(right):
-                            sequences.append([left, left_dot, mid, right, right_dot ])
+#            for mid in list(set(self.contexts.get(left,[])) & set(thin)):
+#                for right in list(set(self.contexts.get(mid,[])) & set(starters)):
+#                    for left_dot in dotsfor(left):
+#                        for right_dot in dotsfor(right):
+#                            sequences.append([left, left_dot, mid, right, right_dot ])
             for right in list(set(self.contexts.get(left,[])) & set(starters)):
                 for left_dot in dotsfor(left):
                     for right_dot in dotsfor(right):
