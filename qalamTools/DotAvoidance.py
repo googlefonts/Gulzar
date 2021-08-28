@@ -31,6 +31,8 @@ action: BARENAME
 
 VERBS = ["AddSpacedAnchors", "DetectAndSwap"]
 
+taskil_above = ["HAMZA_ABOVE", "DAMMA"]
+taskil_below = ["KASRA"]
 
 max_sequence_length = 3
 max_run = 200
@@ -59,10 +61,9 @@ class DetectAndSwap(FEZVerb):
         (anchor,) = args
         self.anchor = anchor
         if anchor == "bottom":
-            self.dots = ["haydb", "sdb", "sdb.one", "sdb.two", "ddb", "ddb.one", "ddb.two", "tdb", "tdb.one", "tdb.two"]
+            self.dots = ["haydb", "sdb", "sdb.one", "sdb.two", "ddb", "ddb.one", "ddb.two", "tdb", "tdb.one", "tdb.two"] + taskil_below
         else:
-            self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"]
-
+            self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"] + taskil_above
         self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
@@ -81,6 +82,9 @@ class DetectAndSwap(FEZVerb):
                 if mitigated:
                     last_dot, orig_dot, newdot = mitigated
                     rules.add(tuple(sequence))
+                    # XXX use chain instead of sub here to share routines
+                    # XXX this was a nice idea, but won't work because of
+                    # order of execution
                     result.append(fontFeatures.Substitution(
                         [[orig_dot]],
                         [[newdot]],
@@ -89,10 +93,20 @@ class DetectAndSwap(FEZVerb):
                     ))
                 # else:
                 #     warnings.warn("Nothing helped %s" % sequence)
-            # if count > 500:
-                # break
         self.parser.fontfeatures.namedClasses = nc
-        return result
+
+        # OK, we have a set of rules, which is nice. But they're massive and
+        # overflow. What we need to do is split them into a set of routines,
+        # one per target
+        results = { }
+        for rule in result:
+            target = rule.input[0][0]
+            results.setdefault(target, fontFeatures.Routine(
+                name="DotAvoidance_"+target,
+                flags=0x10,
+                markFilteringSet=self.dots
+            )).rules.append(rule)
+        return results.values()
 
     def collides(self, glyphs):
         pos = self.position_glyphs(glyphs)
@@ -171,7 +185,6 @@ class DetectAndSwap(FEZVerb):
 
     def generate_glyph_sequence(self, n):
         thin = [x for x in self.parser.font.glyphs.keys() if get_glyph_metrics(self.parser.font,x)["run"] < max_run and re.search(r"m\d+$", x)]
-
         sda = ["sda", "sda.one", "sda.two"]
         dda = ["dda", "dda.one", "dda.two"]
         tda = ["tda", "tda.one", "tda.two"]
@@ -197,9 +210,9 @@ class DetectAndSwap(FEZVerb):
             for k,v in dot_combinations.items():
                 if k in t:
                     if self.anchor == "top":
-                        return v[0]
+                        return v[0] + taskil_above
                     else:
-                        return v[1]
+                        return v[1] + taskil_below
             return []
 
         above_stems = [k for k,v in dot_combinations.items() if v[0]]

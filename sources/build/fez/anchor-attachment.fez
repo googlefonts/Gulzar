@@ -29,13 +29,8 @@ Feature curs {
 
 
 Feature rlig {
-  Routine SeparateConsecutiveTop {
-    DetectAndSwap top;
-  } UseMarkFilteringSet [toeda sda dda tda sda.one dda.one tda.one sda.two dda.two tda.two ];
-
-  Routine SeparateConsecutiveBottom {
     DetectAndSwap bottom;
-  } UseMarkFilteringSet [haydb sdb ddb tdb sdb.one ddb.one tdb.one sdb.two ddb.two tdb.two ];
+    DetectAndSwap top;
 };
 
 Include "sources/build/fez/pre-mkmk-repositioning.fez";

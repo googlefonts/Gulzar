@@ -1,4 +1,5 @@
 Include "shared.fez";
+LoadPlugin qalamTools.SeparateConsecutive;
 
 # And now we do some more positioning. We put this in mkmk because we want
 # this to be processed at the end, after anchor positioning is done.
@@ -38,23 +39,6 @@ Feature mkmk {
     Position /REf/ ( /BEi/ <xAdvance=200> @nuktas_and_kasra <xPlacement=50> );
   } UseMarkFilteringSet @nuktas_and_kasra;
 
-
-  Routine DropDotsOnTehGaf {
-    Position /[mi](sd)?\d+$/ [sda dda tda] /[mi]\d+$/ ( @all_above_marks <yPlacement=-250> )  @narrowmedi /[KG]AF/;
-    Position /[mi](sd)?\d+$/ [sda dda tda] /[mi]\d+$/ ( @all_above_marks <yPlacement=-250> ) /[KG]AF/;
-    Position /[mi](sd)?\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  @narrowmedi /[KG]AF/;
-    Position /[mi](sd)?\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  @narrowmedi /[KG]AF/;
-#    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-90 xPlacement=+50> )  /[KG]AF/;
-#    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> ) /[KG]AF/;
-#    Position /[mi]\d+$/ ( @all_above_marks <yPlacement=-50> @all_above_marks <yPlacement=200> ) @narrowmedi /[KG]AF/;
-#    Position ( @all_above_marks <xPlacement=50> )  /ALIFf|LAM[mf]/;
-     Position ( toeda <15 -90 0 0> )  @kafgaf;
-     Position ( toeda <15 -90 0 0> )  @narrowmedi @kafgaf;
-#    Position ( @above_nuktas <15 -60 0 0> )  @kafgaf;
-#    Position ( @above_nuktas <15 -60 0 0> )  @narrowmedi @kafgaf;
-#    Position ( @other_above_marks <15 -100 0 0> )  @kafgaf;
-#    Position ( @other_above_marks <15 -100 0 0> )  @narrowmedi @kafgaf;
-  } UseMarkFilteringSet @all_above_marks;
 
 };
 

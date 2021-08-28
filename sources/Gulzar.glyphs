@@ -1,7 +1,7 @@
 {
-.appVersion = "1352";
+.appVersion = "1342";
 DisplayStrings = (
-"/TEm3"
+"/FATHA/HAMZA_ABOVE/DAMMA/KASRA/toeda/toeda.one"
 );
 classes = (
 {
@@ -27939,6 +27939,292 @@ width = 292;
 }
 );
 note = toeda;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = DAMMA.one;
+layers = (
+{
+anchors = (
+{
+name = _top.one;
+position = "{182, 110}";
+},
+{
+name = top;
+position = "{170, 506}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"78 184 OFFCURVE",
+"141 212 OFFCURVE",
+"195 266 CURVE SMOOTH",
+"228 301 OFFCURVE",
+"246 343 OFFCURVE",
+"246 380 CURVE SMOOTH",
+"246 417 OFFCURVE",
+"227 436 OFFCURVE",
+"204 436 CURVE SMOOTH",
+"173 436 OFFCURVE",
+"146 398 OFFCURVE",
+"137 385 CURVE SMOOTH",
+"104 338 OFFCURVE",
+"102 286 OFFCURVE",
+"159 273 CURVE",
+"164 293 LINE",
+"118 251 OFFCURVE",
+"80 226 OFFCURVE",
+"4 193 CURVE",
+"9 165 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"163 322 OFFCURVE",
+"149 337 OFFCURVE",
+"149 354 CURVE SMOOTH",
+"149 375 OFFCURVE",
+"169 387 OFFCURVE",
+"183 387 CURVE SMOOTH",
+"199 387 OFFCURVE",
+"215 376 OFFCURVE",
+"215 355 CURVE SMOOTH",
+"215 336 OFFCURVE",
+"202 322 OFFCURVE",
+"183 322 CURVE SMOOTH"
+);
+}
+);
+width = 300;
+}
+);
+note = DAMMA;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = toeda.one;
+layers = (
+{
+anchors = (
+{
+name = _top.one;
+position = "{162, 37}";
+},
+{
+name = top;
+position = "{158, 464}";
+}
+);
+background = {
+paths = (
+{
+closed = 1;
+nodes = (
+"134 84 LINE SMOOTH",
+"205 91 OFFCURVE",
+"259 184 OFFCURVE",
+"259 256 CURVE SMOOTH",
+"259 273 OFFCURVE",
+"250 297 OFFCURVE",
+"223 297 CURVE SMOOTH",
+"196 297 OFFCURVE",
+"160 261 OFFCURVE",
+"125 205 CURVE SMOOTH",
+"68 112 LINE",
+"91 110 LINE",
+"130 166 LINE SMOOTH",
+"162 212 OFFCURVE",
+"181 235 OFFCURVE",
+"205 235 CURVE SMOOTH",
+"218 235 OFFCURVE",
+"228 229 OFFCURVE",
+"237 204 CURVE",
+"237 209 LINE",
+"229 189 OFFCURVE",
+"159 136 OFFCURVE",
+"38 93 CURVE",
+"41 75 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"150 227 LINE",
+"161 268 OFFCURVE",
+"165 291 OFFCURVE",
+"165 324 CURVE SMOOTH",
+"165 424 LINE",
+"153 424 LINE",
+"134 382 LINE SMOOTH",
+"121 352 OFFCURVE",
+"122 330 OFFCURVE",
+"124 300 CURVE SMOOTH",
+"128 237 LINE SMOOTH",
+"129 218 OFFCURVE",
+"128 209 OFFCURVE",
+"120 196 CURVE"
+);
+}
+);
+};
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"134 84 LINE SMOOTH",
+"200 90 OFFCURVE",
+"259 184 OFFCURVE",
+"259 249 CURVE SMOOTH",
+"259 273 OFFCURVE",
+"250 297 OFFCURVE",
+"223 297 CURVE SMOOTH",
+"194 297 OFFCURVE",
+"159 261 OFFCURVE",
+"125 205 CURVE SMOOTH",
+"58 96 LINE",
+"87 109 LINE",
+"126 165 LINE SMOOTH",
+"159 213 OFFCURVE",
+"181 235 OFFCURVE",
+"205 235 CURVE SMOOTH",
+"218 235 OFFCURVE",
+"234 225 OFFCURVE",
+"237 197 CURVE",
+"242 215 LINE",
+"228 188 OFFCURVE",
+"153 127 OFFCURVE",
+"28 95 CURVE",
+"31 75 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"150 227 LINE",
+"163 263 OFFCURVE",
+"165 291 OFFCURVE",
+"165 324 CURVE SMOOTH",
+"165 424 LINE",
+"153 424 LINE",
+"134 382 LINE SMOOTH",
+"121 352 OFFCURVE",
+"122 330 OFFCURVE",
+"124 300 CURVE SMOOTH",
+"128 237 LINE SMOOTH",
+"129 218 OFFCURVE",
+"128 209 OFFCURVE",
+"119 195 CURVE"
+);
+}
+);
+width = 292;
+}
+);
+note = toeda;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = FATHA.one;
+layers = (
+{
+anchors = (
+{
+name = _top.one;
+position = "{117, 0}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"194 205 LINE SMOOTH",
+"224 218 OFFCURVE",
+"237 230 OFFCURVE",
+"254 263 CURVE SMOOTH",
+"266 286 LINE",
+"258 295 LINE",
+"67 205 LINE SMOOTH",
+"30 188 OFFCURVE",
+"20 171 OFFCURVE",
+"2 137 CURVE",
+"10 128 LINE"
+);
+}
+);
+width = 266;
+}
+);
+note = FATHA;
+script = arabic;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = HAMZA_ABOVE.one;
+layers = (
+{
+anchors = (
+{
+name = _top.one;
+position = "{180, 190}";
+},
+{
+name = top;
+position = "{160, 413}";
+}
+);
+components = (
+{
+name = hamzada;
+transform = "{1, 0, 0, 1, 0, 43}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 320;
+}
+);
+note = HAMZA_ABOVE;
+script = arabic;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = KASRA.one;
+layers = (
+{
+anchors = (
+{
+name = _bottom.one;
+position = "{129, -141}";
+}
+);
+components = (
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 3, -387}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 266;
+}
+);
+note = KASRA;
+script = arabic;
 category = Mark;
 subCategory = Nonspacing;
 },
