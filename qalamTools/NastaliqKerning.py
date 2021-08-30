@@ -10,6 +10,8 @@ from fez import FEZVerb
 from beziers.path import BezierPath
 from beziers.point import Point
 import shelve
+import logging
+import re
 
 
 PARSEOPTS = dict(use_helpers=True)
@@ -21,11 +23,16 @@ spacekern: "spacekern"
 """
 VERBS = ["NastaliqKerning"]
 
+logging.basicConfig(format='%(message)s')
+logger = logging.getLogger("NastaliqKerning")
+# logger.setLevel(logging.WARN)
+
+# This only affects the accuracy of computing the rise?
 accuracy1 = 3
 rise_quantization = 100
 kern_quantization = 50
 maximum_rise = 400
-maximum_word_length = 6
+maximum_word_length = 4
 
 min_bubble = 200
 
@@ -36,6 +43,11 @@ distance_cache = {}
 spaceglyph = "space.urdu"
 
 distance_cache = {}
+
+def actually_joins(left, right):
+    if left.startswith("VAO") or left.startswith("RE") or left.startswith("DAL") or "ALIF" in left:
+        return False
+    return True
 
 def determine_kern(
     font,
@@ -82,9 +94,13 @@ def determine_kern(
     
     minimum_possible = -1000
     full_width = max(metrics1["run"] - min(0, metrics1["rsb"]), min_bubble)
+    logger.debug("Full width of %s is %i" % (glyph1, full_width))
     if maxtuck:
         maximum_width = full_width * maxtuck
+        logger.debug("Maximum distance into %s is %i" % (glyph1, maximum_width))
+        logger.debug("Left edge of %s is %i" % (glyph2, metrics2["xMin"]))
         minimum_possible = -metrics2["xMin"] - maximum_width
+        logger.debug("Biggest kern is %i" % minimum_possible)
 
     iterations = 0
     while True:
@@ -96,9 +112,9 @@ def determine_kern(
                 p2 = p2.clone().translate(Point(offset2.x + kern, offset2.y))
                 d = p1.distanceToPath(p2, samples=3)
                 #d = cached_distance(p1, p2)
-#                 warnings.warn("d was", d)
-                #warnings.warn("offset1 was %s" % offset1)
-                #warnings.warn("offset2 was %s" % offset2)
+#                 logger.debug("d was", d)
+                #logger.debug("offset1 was %s" % offset1)
+                #logger.debug("offset2 was %s" % offset2)
                 if not min_distance or d[0] < min_distance:
                     min_distance = d[0]
         if not last_best or min_distance < last_best:
@@ -118,6 +134,7 @@ def determine_kern(
         kern = max(kern, -(metrics1["xMax"]) + metrics1["rsb"])
     if metrics1["rsb"] < 0:
         kern = kern -  metrics1["rsb"]
+    logger.debug("%s/%s/%i = %i" % (glyph1, glyph2, offset2.y, kern))
     return int(kern)
 
 
@@ -153,6 +170,7 @@ class NastaliqKerning(FEZVerb):
         rules = load_rules("rules.csv", self.parser.font.glyphs.keys(), full=True)
         reachable_glyphs = set([])
 
+        # import IPython;IPython.embed()
         for old in rules:
             for new in rules[old]:
                 for context in rules[old][new]:
@@ -175,8 +193,6 @@ class NastaliqKerning(FEZVerb):
         belowmarks = self.parser.fontfeatures.namedClasses["below_dots"]
         topmarks = self.parser.fontfeatures.namedClasses["all_above_marks"]
         isols_finas = isols + finas
-        # isols_finas = ["REf1"]
-        # inits = ["AINi1"]
 
         binned_medis = bin_glyphs_by_metric(
             self.parser.font, medis, "rise", bincount=accuracy1
@@ -189,7 +205,7 @@ class NastaliqKerning(FEZVerb):
 
         def generate_kern_table_for_rise(r, filt, name, do_space_kern=False):
             r = quantize(r, rise_quantization)
-            # warnings.warn("Computing table for rise %i" % r)
+            # logger.warn("Computing table for rise %i" % r)
             # kerntable = Hashabledict({ ("ALIFf1",): {("ALIFf1",): -50 }})
             kerntable = {}
             my_isols_finas = list(filter(filt, isols_finas))
@@ -198,6 +214,8 @@ class NastaliqKerning(FEZVerb):
                     kerntable[end_of_previous_word] = {}
                     for initial in sorted(inits):
                         if initial == spaceglyph:
+                            continue
+                        if actually_joins(end_of_previous_word, initial) and not do_space_kern:
                             continue
                         kern = self.determine_kern_cached(
                             self.parser.font,
@@ -209,7 +227,7 @@ class NastaliqKerning(FEZVerb):
                             maxtuck,
                         )
                         if kern < -10:
-                            # warnings.warn("%s - %s @ %i : %i" % (initial, end_of_previous_word, r, kern))
+                            logger.debug("%s - %s @ %i : %i" % (initial, end_of_previous_word, r, kern))
                             kerntable[end_of_previous_word][initial] = quantize(kern, kern_quantization)
                         pbar.update(1)
 
@@ -226,6 +244,7 @@ class NastaliqKerning(FEZVerb):
             )
             if do_space_kern:
                 kernroutine.name = kernroutine.name+"_space"
+            #kernroutine.flags=0x8
             kernroutine.flags=0x10
             kernroutine.markFilteringSet=belowmarks
 
@@ -266,13 +285,12 @@ class NastaliqKerning(FEZVerb):
                 rules=[],
                 name="kern_at_%i_dispatch" % r,
             )
-            dispatch_routine.flags=0x10
-            dispatch_routine.markFilteringSet=belowmarks
+            dispatch_routine.flags=0x8
+            # dispatch_routine.markFilteringSet=belowmarks
 
             sharding_table = [
-                (lambda name: "IM" in name or "HA" in name, "has_im_or_ha"),
-                (lambda name: "u" in name and not ("IM" in name or "HA" in name), "has_u"),
-                (lambda name: "u" not in name and not ("IM" in name or "HA" in name), "remainder"),
+                (lambda name: re.match(r"^[A-K]", name), "atok"),
+                (lambda name: re.match(r"^[L-Z]", name), "ltoz"),
             ]
 
             for filt,name in sharding_table:
@@ -291,7 +309,7 @@ class NastaliqKerning(FEZVerb):
                 targets = [lefts, rights]
                 lookups = [[kernroutine], None]
 
-                if lefts:
+                if lefts and kernroutine.routine.rules:
                     dispatch_routine.rules.append(fontFeatures.Chaining(
                         targets,
                         precontext = precontext,
@@ -311,7 +329,7 @@ class NastaliqKerning(FEZVerb):
                 precontext = []
                 postcontext = [medis+finas]
 
-                if lefts:
+                if lefts and kernroutine.routine.rules:
                     targets = [lefts, [spaceglyph], rights]
                     lookups = [[kernroutine], None, None]
                     dispatch_routine.rules.append(fontFeatures.Chaining(
@@ -339,13 +357,16 @@ class NastaliqKerning(FEZVerb):
                     word_tail_rise = maximum_rise
                 if not word_tail_rise in rises:
                     rises.append(word_tail_rise)
-        warnings.warn("To do: %s" % list(sorted(rises)))
+        logger.warn("To do: %s" % list(sorted(rises)))
         # pool = Pool()
         # pool.map(generate_kern_table_for_rise, rises)
         # for i in rises:
             # generate_dispatch_table_for_rise(i)
 
-        for i in range(maximum_word_length):
+        routines = []
+        for i in range(maximum_word_length, -1, -1):
+            routine = fontFeatures.Routine(name="NastaliqKerning_"+str(i))
+            routines.append(routine)
             postcontext_options = [binned_finas] + [binned_medis] * i
             all_options = product(*postcontext_options)
             for postcontext_plus_rise in all_options:
@@ -354,15 +375,15 @@ class NastaliqKerning(FEZVerb):
                 )
                 if word_tail_rise > maximum_rise:
                     word_tail_rise = maximum_rise
-                # warnings.warn("Rise = %i" % word_tail_rise)
-                # warnings.warn("Combinations == %i" % (len(isols_finas) * len(inits)))
+                # logger.warn("Rise = %i" % word_tail_rise)
+                # logger.warn("Combinations == %i" % (len(isols_finas) * len(inits)))
                 # XXX Flags
                 postcontext = list(reversed([x[0] for x in postcontext_plus_rise]))
                 # add space kerning rule
 
                 target = [isols_finas, inits]
                 lookups = [[generate_dispatch_table_for_rise(word_tail_rise)]] + [None] * (len(target)-1)
-                routines.append(
+                routine.rules.append(
                     fontFeatures.Chaining(
                         target,
                         postcontext=postcontext,
@@ -372,7 +393,7 @@ class NastaliqKerning(FEZVerb):
                 )
                 target = [isols_finas, [spaceglyph], inits]
                 lookups = [[generate_dispatch_table_for_rise(word_tail_rise)]] + [None] * (len(target)-1)
-                routines.append(
+                routine.rules.append(
                     fontFeatures.Chaining(
                         target,
                         postcontext=postcontext,
@@ -382,11 +403,10 @@ class NastaliqKerning(FEZVerb):
                 )
 
 
-        routine = fontFeatures.Routine(rules=routines, name="NastaliqKerning")
         if spacekern:
             routine.name = routine.name + "_space"
         self.shelve.close()
-        return [routine]
+        return routines
 
     def determine_kern_cached(self, font, glyph1, glyph2, targetdistance, offset1=(0, 0), offset2=(0, 0), maxtuck=0.4):
         key = "/".join([glyph1, glyph2,str(offset1[1])])

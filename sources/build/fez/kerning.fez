@@ -6,7 +6,4 @@ DefineClass @bariye = /BARI_YE/;
 Feature kern {
 	NastaliqKerning 150 70% spacekern;
 
-	Routine FixOverzealousChYe {
-		Position (/(KAF|GAF)i/ <xAdvance=+100>) CH_YEf1;
-	} IgnoreMarks;
 };

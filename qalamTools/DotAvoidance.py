@@ -67,6 +67,16 @@ class DetectAndSwap(FEZVerb):
         self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
+        cycleroutine = fontFeatures.Routine(
+            name = "cycle_dots_"+self.anchor,
+        )
+        for dot in self.dots:
+            nextdot = self.cycle(dot)
+            if nextdot in self.parser.font.glyphs:
+                cycleroutine.rules.append(fontFeatures.Substitution(
+                    [[dot]], [[nextdot]]
+                ))
+
         count = 0
         rules = set({})
         result = []
@@ -85,9 +95,9 @@ class DetectAndSwap(FEZVerb):
                     # XXX use chain instead of sub here to share routines
                     # XXX this was a nice idea, but won't work because of
                     # order of execution
-                    result.append(fontFeatures.Substitution(
+                    result.append(fontFeatures.Chaining(
                         [[orig_dot]],
-                        [[newdot]],
+                        lookups=[[cycleroutine]],
                         precontext=[[x] for x in sequence[:last_dot]],
                         postcontext=[[x] for x in sequence[last_dot+1:]],
                     ))
@@ -216,9 +226,9 @@ class DetectAndSwap(FEZVerb):
             return []
 
         above_stems = [k for k,v in dot_combinations.items() if v[0]]
-        above_re = r"^(" + ("|".join(above_stems)) + r")[mi]"
+        above_re = r"^(" + ("|".join(above_stems)) + r")[mif]"
         below_stems = [k for k,v in dot_combinations.items() if v[1]]
-        below_re = r"^(" + ("|".join(below_stems)) + r")[mi]"
+        below_re = r"^(" + ("|".join(below_stems)) + r")[mif]"
         below_dots = [x for x in self.parser.font.glyphs.keys() if re.match(below_re,x)]
         above_dots = [x for x in self.parser.font.glyphs.keys() if re.match(above_re,x)]
 

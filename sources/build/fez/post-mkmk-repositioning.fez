@@ -52,27 +52,47 @@ Feature kern {
     Position ( /.yb|tdb|ddb$/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
   } UseMarkFilteringSet /haydb.yb|sdb.yb|tdb|ddb/;
 
-  Routine DropDotsBeforeVao {
-    Position ( [tdb ddb] <yPlacement=-100> ) VAOf1;
-  } UseMarkFilteringSet /tdb|ddb$/;
-
   DefineClass @WideFinals = @finas & (xMin < 50);
-  Routine RaiseDotsAfterWideFinals {
+
+  Routine Various1 {
+    # Drop Dots Before Vao
+    Position ( [tdb ddb] <yPlacement=-100> ) VAOf1;
+
+    # Raise dots after wide finals
     Position @WideFinals @inits ( [ddb tdb] <yPlacement=+150> ) ;
-  } UseMarkFilteringSet [ddb tdb];
+
+    # Finesse Beh Haya
+    Position /BE(sd)?i/ ([ddb tdb] <xPlacement=50>) /HAYAm/;
+
+    # Finesse Beh JIM
+    Position ( /ddb|tdb/ <xPlacement=+20> ) /JIMm/;
+  } UseMarkFilteringSet /tdb|ddb$/;
 
   Routine KernBeHaya {
     Position (space <xAdvance=-100> ) /[BT]Ei/ /HAYA/;
   } IgnoreMarks;
 
-  Routine GrossKasraAvoidanceThing {
+  DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
+
+  Routine Various2 {
+    # GrossKasraAvoidanceThing
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-200> ) AINf1;
     Position ( KASRA.yb <yPlacement=+200> ) AINf1;
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
-  };
 
-  Routine FinalJimRaiseDots {
+    # Raise dots on final JIM
     Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=150> );
+
+    # Add space around pointy damma
+    Position @NotTooHighStuff DAMMA (space <xAdvance=+50> );
+
+    # Finess Init kasra yeh barree e.g. رِیے
+    Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
+
+    # Clear Alif Madda
+    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+130> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+100> );
+
   };
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
@@ -80,23 +100,12 @@ Feature kern {
   DefineClass @NarrowTeh = /^TE[mf](sd)?\d+/ & (run < 300);
   DefineClass @TallFinal = /LAM[mf]|[KG]AF[mf]|JIM[mf]|ALIFf1/;
   Routine HighTehFinesse {
-    # Position @TallAndStraight /TEm|JIMm/ ( [sda tda dda] <xPlacement=-50> );
     Position @TallAndStraight /TEm|JIMm/ ( [sda tda dda] <xPlacement=-150> ) /_YEf/;
-    Position @NarrowTeh ( dda <xPlacement=50> ) @TallFinal ;
   }  UseMarkFilteringSet [sda dda tda];
 
   Routine TdbAinFinesse {
     Position (tdb.yb <xPlacement=-30>) AINf1;
   } UseMarkFilteringSet [tdb.yb];
-
-  Routine BehHayaFinesse {
-    Position /BE(sd)?i/ ([ddb tdb] <xPlacement=50>) /HAYAm/;
-  } UseMarkFilteringSet [ddb tdb];
-
-  DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
-  Routine AddSpaceAroundPointyDamma {
-    Position @NotTooHighStuff DAMMA (space <xAdvance=+50> );
-  };
 
   Routine InitChechFinesse {
     Position ( /JIMi/ <xAdvance=+50> tdb <xPlacement=+50> );
@@ -107,21 +116,9 @@ Feature kern {
     Position /FEi/ dda /TEm/ ( dda <yPlacement=+50> ) ;
   } UseMarkFilteringSet [dda];
 
-  Routine InitKasraYBFinesse { # رِیی
-    Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
-  };
 
   Routine AddIsolDammaSpace {
     Position [@isols @finas] DAMMA ( @inits <xAdvance=+100> );
   } UseMarkFilteringSet [DAMMA];
-
-  Routine ClearAlifMadda {
-    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+130> ) @all_above_marks;
-    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+100> );
-  };
-
-  Routine BehJimFinesse {
-    Position ( /ddb|tdb/ <xPlacement=+20> ) /JIMm/;
-  } UseMarkFilteringSet /ddb|tdb/;
 
 };
