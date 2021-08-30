@@ -92,15 +92,19 @@ class DetectAndSwap(FEZVerb):
                 if mitigated:
                     last_dot, orig_dot, newdot = mitigated
                     rules.add(tuple(sequence))
-                    # XXX use chain instead of sub here to share routines
-                    # XXX this was a nice idea, but won't work because of
-                    # order of execution
-                    result.append(fontFeatures.Chaining(
+                    result.append(fontFeatures.Substitution(
                         [[orig_dot]],
-                        lookups=[[cycleroutine]],
+                        [[newdot]],
                         precontext=[[x] for x in sequence[:last_dot]],
                         postcontext=[[x] for x in sequence[last_dot+1:]],
                     ))
+
+                    # result.append(fontFeatures.Chaining(
+                    #     [[orig_dot]],
+                    #     lookups=[[cycleroutine]],
+                    #     precontext=[[x] for x in sequence[:last_dot]],
+                    #     postcontext=[[x] for x in sequence[last_dot+1:]],
+                    # ))
                 # else:
                 #     warnings.warn("Nothing helped %s" % sequence)
         self.parser.fontfeatures.namedClasses = nc
@@ -224,6 +228,10 @@ class DetectAndSwap(FEZVerb):
                     else:
                         return v[1] + taskil_below
             return []
+            # if self.anchor == "top":
+            #     return taskil_above
+            # else:
+            #     return taskil_below
 
         above_stems = [k for k,v in dot_combinations.items() if v[0]]
         above_re = r"^(" + ("|".join(above_stems)) + r")[mif]"
@@ -249,26 +257,3 @@ class DetectAndSwap(FEZVerb):
                     for right_dot in dotsfor(right):
                         sequences.append([left, left_dot, right, right_dot ])
         return sequences
-        # def seq(n, rightmost):
-        #     if n == 1:
-        #         for t in rightmost:
-        #             if t in below_dots:
-        #                 for dot in dotsfor(t):
-        #                     yield [t] + [dot]
-        #     else:
-        #         for t in rightmost:
-        #             if t in self.contexts and t in usable:
-        # #                 print("Generating a subsequence for "+t,self.contexts[t])
-        #                 subseq = seq(n-1, self.contexts[t])
-        #                 for post in subseq:
-        #                     yield [t] + post
-        #                     if t in below_dots or t in hayc:
-        #                         for dot in dotsfor(t):
-        #                             yield [t] + [dot] + post
-
-        # def has_two_dots(glyph_string):
-        #     return len([g for g in glyph_string if g in self.dots ]) >1
-
-        # if self.anchor == "bottom":
-        #     return list(filter(has_two_dots,seq(n, hayc + dot_carriers)))
-        # return list(filter(has_two_dots,seq(n, dot_carriers)))

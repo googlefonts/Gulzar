@@ -1,7 +1,8 @@
 {
 .appVersion = "1342";
 DisplayStrings = (
-"/FATHA/HAMZA_ABOVE/DAMMA/KASRA/toeda/toeda.one"
+"/FATHA/HAMZA_ABOVE/DAMMA/KASRA/toeda/toeda.one",
+"/JIMm10"
 );
 classes = (
 {
@@ -35190,7 +35191,7 @@ position = "{107, -51}";
 },
 {
 name = top;
-position = "{322, 580}";
+position = "{417, 389}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -38167,7 +38168,7 @@ position = "{1005, 133}";
 },
 {
 name = top;
-position = "{851, 490}";
+position = "{831, 490}";
 }
 );
 components = (
@@ -40304,7 +40305,7 @@ position = "{60, -11}";
 },
 {
 name = top;
-position = "{316, 469}";
+position = "{286, 469}";
 }
 );
 components = (
@@ -48826,7 +48827,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{292, -59}";
+position = "{384, 10}";
 },
 {
 name = exit;
@@ -49750,7 +49751,7 @@ position = "{88, -50}";
 },
 {
 name = top;
-position = "{497, 500}";
+position = "{467, 494}";
 }
 );
 background = {
@@ -50187,7 +50188,7 @@ position = "{152, 95}";
 },
 {
 name = top;
-position = "{207, 582}";
+position = "{187, 582}";
 }
 );
 background = {
@@ -75508,7 +75509,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{311, -299}";
+position = "{371, -114}";
 },
 {
 name = exit;

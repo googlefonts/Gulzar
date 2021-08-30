@@ -73,6 +73,7 @@ Feature kern {
   } IgnoreMarks;
 
   DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
+  DefineClass @NarrowMedials = /[mf](sd)?\d+$/ & (run < 350);
 
   Routine Various2 {
     # GrossKasraAvoidanceThing
@@ -92,6 +93,11 @@ Feature kern {
     # Clear Alif Madda
     Position ALIFu1 MADDA ( /i\d/ <xAdvance=+130> ) @all_above_marks;
     Position ALIFu1 MADDA ( /i\d/ <xAdvance=+100> );
+
+    # Dots under kaf
+    Position ([toeda tda] <yPlacement=-50>) /KAF|GAF/;
+    Position ([toeda tda] <yPlacement=-100>) @NarrowMedials /KAF|GAF/;
+    Position ([sda dda] <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
 
   };
 
