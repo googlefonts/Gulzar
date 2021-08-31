@@ -70,7 +70,7 @@ sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/latin-kerning.fea: sources/build/fez/latin-kerning.fez $(GLYPHS_FILE) venv
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
