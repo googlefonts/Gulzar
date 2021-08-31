@@ -139,7 +139,6 @@ def determine_kern_old(
 
 try:
     from kurbopy import BezPath, TranslateScale, Point, Vec2
-    from DEDDD import DeliberatelyFail
     glyphcache = {}
 
     def get_beziers_new(font, glyph):
@@ -225,19 +224,6 @@ def quantize(number, degree):
     return degree * math.floor(number / degree)
 
 
-def compress(d):
-    newkerns = bidict.bidict({})
-    for right, value in d.items():
-        if value in newkerns.inverse:
-            cur_tuple = newkerns.inverse[value]
-            new_tuple = cur_tuple + tuple([right])
-            del newkerns[cur_tuple]
-            newkerns[new_tuple] = value
-        else:
-            newkerns[tuple([right])] = value
-    return Hashabledict(newkerns)
-
-
 class NastaliqKerning(FEZVerb):
     def action(self, args):
         distance_at_closest = args[0]
@@ -269,7 +255,6 @@ class NastaliqKerning(FEZVerb):
         bariye = self.parser.fontfeatures.namedClasses["bariye"]
         finas = [x for x in self.parser.fontfeatures.namedClasses["finas"] if x not in bariye]
         belowmarks = self.parser.fontfeatures.namedClasses["below_dots"]
-        topmarks = self.parser.fontfeatures.namedClasses["all_above_marks"]
         isols_finas = isols + finas
 
         binned_medis = bin_glyphs_by_metric(
@@ -281,20 +266,15 @@ class NastaliqKerning(FEZVerb):
 
         kern_at_rise = {}
 
-        def generate_kern_table_for_rise(r, filt, name, do_space_kern=False):
+        def generate_kern_table_for_rise(r):
+            if r in kern_at_rise:
+                return kern_at_rise[r]
             r = quantize(r, rise_quantization)
-            # logger.warn("Computing table for rise %i" % r)
-            # kerntable = Hashabledict({ ("ALIFf1",): {("ALIFf1",): -50 }})
             kerntable = {}
-            my_isols_finas = list(filter(filt, isols_finas))
-            with tqdm.tqdm(total=len(inits) * len(my_isols_finas), miniters=30) as pbar:
-                for end_of_previous_word in my_isols_finas:
+            with tqdm.tqdm(total=len(inits) * len(isols_finas), miniters=30) as pbar:
+                for end_of_previous_word in isols_finas:
                     kerntable[end_of_previous_word] = {}
                     for initial in sorted(inits):
-                        if initial == spaceglyph:
-                            continue
-                        if actually_joins(end_of_previous_word, initial) and not do_space_kern:
-                            continue
                         kern = self.determine_kern_cached(
                             self.parser.font,
                             initial,
@@ -309,119 +289,29 @@ class NastaliqKerning(FEZVerb):
                             kerntable[end_of_previous_word][initial] = quantize(kern, kern_quantization)
                         pbar.update(1)
 
-                    # Compress right side to groups
-                    kerntable[end_of_previous_word] = compress(
-                        kerntable[end_of_previous_word]
-                    )
-
-            kerntable = compress(kerntable)
-
             kernroutine = fontFeatures.Routine(
                 rules=[],
-                name="kern_at_%i_%s" % (r,name),
+                name="kern_at_%i" % r,
             )
-            if do_space_kern:
-                kernroutine.name = kernroutine.name+"_space"
             #kernroutine.flags=0x8
-            kernroutine.flags=0x10
+            kernroutine.flags=0x10 | 0x04
             kernroutine.markFilteringSet=belowmarks
 
             for left, kerns in kerntable.items():
                 for right, value in kerns.items():
-                    if not do_space_kern:
-                        kernroutine.rules.append(
-                            fontFeatures.Positioning(
-                                [left, right],
-                                [
-                                    fontFeatures.ValueRecord(),
-                                    fontFeatures.ValueRecord(xAdvance=value),
-                                ],
-                            )
+                    kernroutine.rules.append(
+                        fontFeatures.Positioning(
+                            [ [left], [right] ],
+                            [
+                                fontFeatures.ValueRecord(),
+                                fontFeatures.ValueRecord(xAdvance=value),
+                            ],
                         )
-                    else: 
-                        # Also add space kerning rule
-                        kernroutine.rules.append(
-                            fontFeatures.Positioning(
-                                [left, [spaceglyph], right],
-                                [
-                                    fontFeatures.ValueRecord(),
-                                    fontFeatures.ValueRecord(),
-                                    fontFeatures.ValueRecord(xAdvance=value),
-                                ],
-                            )
-                        )
-
+                    )
             kernroutine = self.parser.fontfeatures.referenceRoutine(kernroutine)
             kernroutine._table = kerntable
-            return (kernroutine, kerntable)
-
-
-        def generate_dispatch_table_for_rise(r):
-            if r in kern_at_rise:
-                return kern_at_rise[r]
-            dispatch_routine = fontFeatures.Routine(
-                rules=[],
-                name="kern_at_%i_dispatch" % r,
-            )
-            # For now
-            dispatch_routine.flags=0x10
-            dispatch_routine.markFilteringSet=belowmarks
-
-            sharding_table = [
-                (lambda name: re.match(r"^[A-K]", name), "atok"),
-                (lambda name: re.match(r"^[L-Z]", name), "ltoz"),
-            ]
-
-            for filt,name in sharding_table:
-
-                # First, no space
-                kernroutine, kerntable = generate_kern_table_for_rise(r, filt,name, do_space_kern=False)
-                lefts =  list(chain(*kerntable.keys()))
-                rights = []
-                for kerns in kerntable.values():
-                    rights.extend(kerns.keys())
-                rights = list(set(chain(*rights)))
-                rights = [r for r in rights if r not in isols]
-                # precontext = [medis]
-                precontext = []
-                postcontext = [medis+finas]
-                targets = [lefts, rights]
-                lookups = [[kernroutine], None]
-
-                if lefts and kernroutine.routine.rules:
-                    dispatch_routine.rules.append(fontFeatures.Chaining(
-                        targets,
-                        precontext = precontext,
-                        postcontext = postcontext,
-                        lookups = lookups
-                    ))
-
-                # Next, with space
-                kernroutine, kerntable = generate_kern_table_for_rise(r, filt,name, do_space_kern=True)
-                lefts =  list(chain(*kerntable.keys()))
-                rights = []
-                for kerns in kerntable.values():
-                    rights.extend(kerns.keys())
-                rights = list(set(chain(*rights)))
-                rights = [r for r in rights if r not in isols]
-                # precontext = [medis]
-                precontext = []
-                postcontext = [medis+finas]
-
-                if lefts and kernroutine.routine.rules:
-                    targets = [lefts, [spaceglyph], rights]
-                    lookups = [[kernroutine], None, None]
-                    dispatch_routine.rules.append(fontFeatures.Chaining(
-                        targets,
-                        precontext = precontext,
-                        postcontext = postcontext,
-                        lookups = lookups
-                    ))
-
-
-            dispatch_routine = self.parser.fontfeatures.referenceRoutine(dispatch_routine)
-            kern_at_rise[r] = dispatch_routine
-            return dispatch_routine
+            kern_at_rise[r] = kernroutine
+            return kernroutine
 
         routines = []
         rises = []
@@ -437,15 +327,12 @@ class NastaliqKerning(FEZVerb):
                 if not word_tail_rise in rises:
                     rises.append(word_tail_rise)
         logger.warn("To do: %s" % list(sorted(rises)))
-        # pool = Pool()
-        # pool.map(generate_kern_table_for_rise, rises)
-        # for i in rises:
-            # generate_dispatch_table_for_rise(i)
 
         routines = []
+        routine = fontFeatures.Routine(name="NastaliqKerning")
+        routines.append(routine)
+
         for i in range(maximum_word_length, -1, -1):
-            routine = fontFeatures.Routine(name="NastaliqKerning_"+str(i))
-            routines.append(routine)
             postcontext_options = [binned_finas] + [binned_medis] * i
             all_options = product(*postcontext_options)
             for postcontext_plus_rise in all_options:
@@ -454,36 +341,20 @@ class NastaliqKerning(FEZVerb):
                 )
                 if word_tail_rise > maximum_rise:
                     word_tail_rise = maximum_rise
-                # logger.warn("Rise = %i" % word_tail_rise)
-                # logger.warn("Combinations == %i" % (len(isols_finas) * len(inits)))
-                # XXX Flags
                 postcontext = list(reversed([x[0] for x in postcontext_plus_rise]))
-                # add space kerning rule
 
                 target = [isols_finas, inits]
-                lookups = [[generate_dispatch_table_for_rise(word_tail_rise)]] + [None] * (len(target)-1)
+                lookups = [[generate_kern_table_for_rise(word_tail_rise)]] + [None] * (len(target)-1)
                 routine.rules.append(
                     fontFeatures.Chaining(
                         target,
                         postcontext=postcontext,
                         lookups=lookups,
-                        flags=0x08,
-                    )
-                )
-                target = [isols_finas, [spaceglyph], inits]
-                lookups = [[generate_dispatch_table_for_rise(word_tail_rise)]] + [None] * (len(target)-1)
-                routine.rules.append(
-                    fontFeatures.Chaining(
-                        target,
-                        postcontext=postcontext,
-                        lookups=lookups,
-                        flags=0x08,
+                        flags=0x08 | 0x04,
                     )
                 )
 
 
-        if spacekern:
-            routine.name = routine.name + "_space"
         self.shelve.close()
         return routines
 

@@ -3,6 +3,10 @@ Include "shared.fez";
 
 DefineClass @bariye = /BARI_YE/;
 
+LoadPlugin FontEngineering;
+SetCategory space.urdu ligature;
+
+
 Feature kern {
 	NastaliqKerning 180 60% spacekern;
 
