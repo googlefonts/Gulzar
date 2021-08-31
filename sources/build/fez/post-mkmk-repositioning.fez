@@ -32,7 +32,7 @@ Feature mkmk {
   Routine OpenSpaceAroundSmallBehs {
     Position ( @overlapping_inits <xAdvance=0> @nuktas_and_kasra <xPlacement=0> )  BARI_YEf1; # Except here
     Position ( @overlapping_inits <xAdvance=0> haydb <xPlacement=0> ) /.*[mif](sd)?\d+$/; # Or here
-    Position ( @overlapping_inits <xAdvance=200> @nuktas_and_kasra <xPlacement=50> )  /.*[mif](sd)?\d+$/;
+    Position ( @overlapping_inits <xAdvance=200> @nuktas_and_kasra <xPlacement=50> )  /.*f?\d+$/;
 
     # RE->BE needs more space
 

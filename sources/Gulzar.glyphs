@@ -2,7 +2,8 @@
 .appVersion = "1342";
 DisplayStrings = (
 "/FATHA/HAMZA_ABOVE/DAMMA/KASRA/toeda/toeda.one",
-"/JIMm10"
+"/JIMm10",
+"/BEmsd1"
 );
 classes = (
 {
@@ -71397,7 +71398,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{239, -277}";
+position = "{219, -217}";
 },
 {
 name = entry;

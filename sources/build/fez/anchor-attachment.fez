@@ -7,8 +7,18 @@ CopyAnchors SHADDA SHADDA_LONG_A;
 
 LoadPlugin qalamTools.QuantizeAnchors;
 LoadPlugin qalamTools.DotAvoidance;
+LoadPlugin qalamTools.NastaliqKerning;
 
 AddSpacedAnchors 240;
+
+Include "shared.fez";
+
+
+Feature curs {
+  Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
+};
+
+QuantizeAnchors 10;
 
 Feature mark {
   Routine DoMarkBase {
@@ -23,19 +33,31 @@ Feature mark {
   };
 };
 
-Feature curs {
-  Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
+Routine DropOne {
+  Substitute [sdb ddb tdb] -> $1.one;
 };
 
+Routine OpenSpaceBeforeKern {
+  Position (@inits <xAdvance=+200>);
+};
+
+Routine AntiKern1 {
+  Chain (/.*[fu]\d+/ /(BE|JIM)i/ [sdb ddb tdb] ^DropOne);
+} IgnoreLigatures;
+
+Routine AntiKern2 {
+  Chain (@bariye @inits ^OpenSpaceBeforeKern);
+  Chain (/.*[fu]\d+/ /(BE|JIM)i/ ^OpenSpaceBeforeKern [sdb ddb tdb]);
+} IgnoreLigatures;
 
 Feature rlig {
-    DetectAndSwap bottom;
-    DetectAndSwap top;
+  AtHeight 0-200 AntiKern1;
+  AtHeight 300-600 AntiKern2;
+  DetectAndSwap bottom;
+  DetectAndSwap top;
 };
 
 Include "sources/build/fez/pre-mkmk-repositioning.fez";
-
-QuantizeAnchors 10;
 
 Feature mkmk {
   Routine DoMarkAttachment {

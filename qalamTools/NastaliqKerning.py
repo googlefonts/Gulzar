@@ -209,6 +209,7 @@ class AtHeight(FEZVerb):
         )
 
         self.kern_at_rise = {}
+        seen = {}
 
         routine = fontFeatures.Routine(name="At_%s_%s_%s" % (height_lower, height_upper, target_routine.name))
         routine.flags = 0x04 | 0x08
@@ -221,14 +222,16 @@ class AtHeight(FEZVerb):
                     sum([x[1] for x in postcontext_plus_rise]), rise_quantization
                 )
                 postcontext = list(reversed([x[0] for x in postcontext_plus_rise]))
-                if not (word_tail_rise >= height_lower and word_tail_rise <= height_upper):
-                    warnings.warn("Skipping rise %i for %s" % (word_tail_rise, postcontext))
-                    continue
                 if word_tail_rise >= maximum_rise:
                     word_tail_rise = maximum_rise
                     if i == maximum_word_length:
                         # Drop the fina
                         postcontext.pop()
+                if str(postcontext) in seen:
+                    continue
+                seen[str(postcontext)] = True
+                if not (word_tail_rise >= height_lower and word_tail_rise <= height_upper):
+                    continue
 
                 target = [self.isols_finas, self.inits]
                 lookups = [[target_routine]] + [None] * (len(target)-1)

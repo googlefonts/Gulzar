@@ -8,6 +8,6 @@ SetCategory space.urdu ligature;
 
 
 Feature kern {
-	NastaliqKerning 180 60% spacekern;
+	NastaliqKerning 150 70%;
 
 };

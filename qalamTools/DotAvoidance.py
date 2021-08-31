@@ -92,19 +92,19 @@ class DetectAndSwap(FEZVerb):
                 if mitigated:
                     last_dot, orig_dot, newdot = mitigated
                     rules.add(tuple(sequence))
-                    result.append(fontFeatures.Substitution(
-                        [[orig_dot]],
-                        [[newdot]],
-                        precontext=[[x] for x in sequence[:last_dot]],
-                        postcontext=[[x] for x in sequence[last_dot+1:]],
-                    ))
-
-                    # result.append(fontFeatures.Chaining(
+                    # result.append(fontFeatures.Substitution(
                     #     [[orig_dot]],
-                    #     lookups=[[cycleroutine]],
+                    #     [[newdot]],
                     #     precontext=[[x] for x in sequence[:last_dot]],
                     #     postcontext=[[x] for x in sequence[last_dot+1:]],
                     # ))
+
+                    result.append(fontFeatures.Chaining(
+                        [[orig_dot]],
+                        lookups=[[cycleroutine]],
+                        precontext=[[x] for x in sequence[:last_dot]],
+                        postcontext=[[x] for x in sequence[last_dot+1:]],
+                    ))
                 # else:
                 #     warnings.warn("Nothing helped %s" % sequence)
         self.parser.fontfeatures.namedClasses = nc
@@ -112,6 +112,7 @@ class DetectAndSwap(FEZVerb):
         # OK, we have a set of rules, which is nice. But they're massive and
         # overflow. What we need to do is split them into a set of routines,
         # one per target
+
         results = { }
         for rule in result:
             target = rule.input[0][0]
@@ -120,6 +121,8 @@ class DetectAndSwap(FEZVerb):
                 flags=0x10,
                 markFilteringSet=self.dots
             )).rules.append(rule)
+
+
         return results.values()
 
     def collides(self, glyphs):
@@ -128,10 +131,12 @@ class DetectAndSwap(FEZVerb):
             if pos[ix]["category"] != "mark":
                 continue
             gb1 = pos[ix]["glyphbounds"]
+            gb1.addMargin(10)
             for jx in range(ix+1, len(pos)):
                 if pos[jx]["category"] != "mark":
                     continue
                 gb2 = pos[jx]["glyphbounds"]
+                gb2.addMargin(10)
                 if gb1.overlaps(gb2):
                     return True
         return False
@@ -224,9 +229,9 @@ class DetectAndSwap(FEZVerb):
             for k,v in dot_combinations.items():
                 if k in t:
                     if self.anchor == "top":
-                        return v[0] + taskil_above
+                        return v[0]# + taskil_above
                     else:
-                        return v[1] + taskil_below
+                        return v[1] #+ taskil_below
             return []
             # if self.anchor == "top":
             #     return taskil_above

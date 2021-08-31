@@ -5,7 +5,7 @@ RELEASE_ARG=
 
 export FONTTOOLS_LOOKUP_DEBUGGING=1
 export PYTHONPATH=.:/Users/simon/others-repos/fontTools/lib/
-
+export FONTTOOLS_GPOS_COMPACT_MODE=9
 .DELETE_ON_ERROR:
 
 $(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
