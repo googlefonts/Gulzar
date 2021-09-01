@@ -11,6 +11,7 @@ from glyphtools import get_glyph_metrics
 import tqdm
 import logging
 
+
 # logging.basicConfig(format='%(message)s')
 # logging.getLogger("fontFeatures.shaperLib").setLevel(logging.DEBUG)
 
@@ -36,6 +37,7 @@ taskil_below = ["KASRA"]
 
 max_sequence_length = 3
 max_run = 200
+margin = 20
 
 
 class AddSpacedAnchors(FEZVerb):
@@ -54,6 +56,11 @@ class AddSpacedAnchors(FEZVerb):
                 bottomx, bottomy = this_anchors["bottom"]
                 this_anchors["bottom.one"] = bottomx, bottomy - spacing
                 this_anchors["bottom.two"] = bottomx, bottomy - spacing * 2
+            if "comma" in this_anchors:
+                commax, commay = this_anchors["comma"]
+                this_anchors["comma.one"] = commax, commay - spacing
+                this_anchors["comma.two"] = commax, commay - spacing * 2
+
         return []
 
 class DetectAndSwap(FEZVerb):
@@ -82,6 +89,7 @@ class DetectAndSwap(FEZVerb):
         result = []
         nc = self.parser.fontfeatures.namedClasses
         self.parser.fontfeatures.namedClasses = {}
+
         for sequence in tqdm.tqdm(seq):
             if tuple(sequence) in rules:
                 continue
@@ -127,16 +135,18 @@ class DetectAndSwap(FEZVerb):
 
     def collides(self, glyphs):
         pos = self.position_glyphs(glyphs)
+        if any([g["name"] == "toeda" for g in pos]):
+            return self.c.has_collisions(pos)
         for ix in range(len(pos)):
             if pos[ix]["category"] != "mark":
                 continue
             gb1 = pos[ix]["glyphbounds"]
-            gb1.addMargin(10)
+            gb1.addMargin(margin)
             for jx in range(ix+1, len(pos)):
                 if pos[jx]["category"] != "mark":
                     continue
                 gb2 = pos[jx]["glyphbounds"]
-                gb2.addMargin(10)
+                gb2.addMargin(margin)
                 if gb1.overlaps(gb2):
                     return True
         return False
@@ -229,14 +239,13 @@ class DetectAndSwap(FEZVerb):
             for k,v in dot_combinations.items():
                 if k in t:
                     if self.anchor == "top":
-                        return v[0]# + taskil_above
+                        return v[0] + taskil_above
                     else:
-                        return v[1] #+ taskil_below
-            return []
-            # if self.anchor == "top":
-            #     return taskil_above
-            # else:
-            #     return taskil_below
+                        return v[1] + taskil_below
+            if self.anchor == "top":
+                return taskil_above
+            else:
+                return taskil_below
 
         above_stems = [k for k,v in dot_combinations.items() if v[0]]
         above_re = r"^(" + ("|".join(above_stems)) + r")[mif]"
@@ -250,6 +259,7 @@ class DetectAndSwap(FEZVerb):
             starters = below_dots
         else:
             starters = above_dots
+
         sequences = []
         for left in list(set(starters) & set(self.rasm_glyphs)):
 #            for mid in list(set(self.contexts.get(left,[])) & set(thin)):
@@ -257,7 +267,7 @@ class DetectAndSwap(FEZVerb):
 #                    for left_dot in dotsfor(left):
 #                        for right_dot in dotsfor(right):
 #                            sequences.append([left, left_dot, mid, right, right_dot ])
-            for right in list(set(self.contexts.get(left,[])) & set(starters)):
+            for right in list(set(self.contexts.get(left,[])) & set(self.rasm_glyphs)):
                 for left_dot in dotsfor(left):
                     for right_dot in dotsfor(right):
                         sequences.append([left, left_dot, right, right_dot ])
