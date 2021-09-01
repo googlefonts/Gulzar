@@ -196,10 +196,9 @@ class AtHeight(FEZVerb):
         self.inits = self.parser.fontfeatures.namedClasses["inits"]
         medis = self.parser.fontfeatures.namedClasses["medis"]
         isols = self.parser.fontfeatures.namedClasses["isols"]
-        bariye = self.parser.fontfeatures.namedClasses["bariye"]
-        finas = [x for x in self.parser.fontfeatures.namedClasses["finas"] if x not in bariye]
+        finas = self.parser.fontfeatures.namedClasses["finas"]
         
-        self.isols_finas = isols + finas + bariye
+        self.isols_finas = isols + finas
 
         binned_medis = bin_glyphs_by_metric(
             self.parser.font, medis, "rise", bincount=accuracy1
@@ -224,12 +223,12 @@ class AtHeight(FEZVerb):
                 postcontext = list(reversed([x[0] for x in postcontext_plus_rise]))
                 if word_tail_rise >= maximum_rise:
                     word_tail_rise = maximum_rise
-                    if i == maximum_word_length:
-                        # Drop the fina
-                        postcontext.pop()
-                if str(postcontext) in seen:
-                    continue
-                seen[str(postcontext)] = True
+                #     if i == maximum_word_length:
+                #         # Drop the fina
+                #         postcontext.pop()
+                # if str(postcontext) in seen:
+                #     continue
+                # seen[str(postcontext)] = True
                 if not (word_tail_rise >= height_lower and word_tail_rise <= height_upper):
                     continue
 

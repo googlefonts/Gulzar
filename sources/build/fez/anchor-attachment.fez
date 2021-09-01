@@ -9,7 +9,7 @@ LoadPlugin qalamTools.QuantizeAnchors;
 LoadPlugin qalamTools.DotAvoidance;
 LoadPlugin qalamTools.NastaliqKerning;
 
-AddSpacedAnchors 240;
+AddSpacedAnchors 220;
 
 Include "shared.fez";
 
@@ -30,31 +30,40 @@ Feature mark {
     Attach &bottom.one &_bottom.one bases;
     Attach &bottom.two &_bottom.two bases;
     Attach &comma &_comma bases;
+    Attach &comma.one &_comma.one bases;
   };
 };
 
-Routine DropOne {
-  Substitute [sdb ddb tdb] -> $1.one;
-};
+Routine DropOne {Substitute [sdb ddb tdb haydb] -> $1.one; };
+Routine DropTwo {Substitute [sdb ddb tdb] -> $1.two; };
 
+# Positioning rules happen *after* dot avoidance, so need to match .one and .two forms
 Routine OpenSpaceBeforeKern {
-  Position (@inits <xAdvance=+200>);
+  Position (@inits <xAdvance=+200>) /sdb|ddb/;
+  Position (@inits <xAdvance=+300>) /tdb|haydb/;
 };
 
-Routine AntiKern1 {
-  Chain (/.*[fu]\d+/ /(BE|JIM)i/ [sdb ddb tdb] ^DropOne);
-} IgnoreLigatures;
+Routine AntiKern1sub {
+  Chain (/((CH_YE|AIN)[fu]\d+)|REf3|NUN|SIN/ /(BE|JIM)i/ [sdb ddb tdb haydb] ^DropTwo);
+  Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /(BE|JIM)i/ [sdb ddb tdb haydb] ^DropOne);
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb];
+
+
+Routine AntiKern1pos {
+  Chain (/(MIM)[fu]\d+/ /(BE|JIM)i/ ^OpenSpaceBeforeKern  [sdb ddb tdb haydb]);
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb];
 
 Routine AntiKern2 {
   Chain (@bariye @inits ^OpenSpaceBeforeKern);
-  Chain (/.*[fu]\d+/ /(BE|JIM)i/ ^OpenSpaceBeforeKern [sdb ddb tdb]);
-} IgnoreLigatures;
+  Chain (/.*[fu]\d+/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
+} IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
 Feature rlig {
-  AtHeight 0-200 AntiKern1;
-  AtHeight 300-600 AntiKern2;
-  DetectAndSwap bottom;
   DetectAndSwap top;
+  DetectAndSwap bottom;
+  AtHeight 0-400 AntiKern1sub;
+  AtHeight 0-400 AntiKern1pos;
+  AtHeight 300-600 AntiKern2;
 };
 
 Include "sources/build/fez/pre-mkmk-repositioning.fez";

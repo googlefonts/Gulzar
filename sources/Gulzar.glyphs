@@ -3,7 +3,8 @@
 DisplayStrings = (
 "/FATHA/HAMZA_ABOVE/DAMMA/KASRA/toeda/toeda.one",
 "/JIMm10",
-"/BEmsd1"
+"/haydb.one/haydb",
+"/toeda/toeda.two"
 );
 classes = (
 {
@@ -28138,6 +28139,131 @@ subCategory = Nonspacing;
 },
 {
 color = 3;
+glyphname = toeda.two;
+layers = (
+{
+anchors = (
+{
+name = _top.two;
+position = "{162, 37}";
+},
+{
+name = top;
+position = "{158, 464}";
+}
+);
+background = {
+paths = (
+{
+closed = 1;
+nodes = (
+"134 84 LINE SMOOTH",
+"205 91 OFFCURVE",
+"259 184 OFFCURVE",
+"259 256 CURVE SMOOTH",
+"259 273 OFFCURVE",
+"250 297 OFFCURVE",
+"223 297 CURVE SMOOTH",
+"196 297 OFFCURVE",
+"160 261 OFFCURVE",
+"125 205 CURVE SMOOTH",
+"68 112 LINE",
+"91 110 LINE",
+"130 166 LINE SMOOTH",
+"162 212 OFFCURVE",
+"181 235 OFFCURVE",
+"205 235 CURVE SMOOTH",
+"218 235 OFFCURVE",
+"228 229 OFFCURVE",
+"237 204 CURVE",
+"237 209 LINE",
+"229 189 OFFCURVE",
+"159 136 OFFCURVE",
+"38 93 CURVE",
+"41 75 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"150 227 LINE",
+"161 268 OFFCURVE",
+"165 291 OFFCURVE",
+"165 324 CURVE SMOOTH",
+"165 424 LINE",
+"153 424 LINE",
+"134 382 LINE SMOOTH",
+"121 352 OFFCURVE",
+"122 330 OFFCURVE",
+"124 300 CURVE SMOOTH",
+"128 237 LINE SMOOTH",
+"129 218 OFFCURVE",
+"128 209 OFFCURVE",
+"120 196 CURVE"
+);
+}
+);
+};
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"134 84 LINE SMOOTH",
+"200 90 OFFCURVE",
+"259 184 OFFCURVE",
+"259 249 CURVE SMOOTH",
+"259 273 OFFCURVE",
+"250 297 OFFCURVE",
+"223 297 CURVE SMOOTH",
+"194 297 OFFCURVE",
+"159 261 OFFCURVE",
+"125 205 CURVE SMOOTH",
+"58 96 LINE",
+"87 109 LINE",
+"126 165 LINE SMOOTH",
+"159 213 OFFCURVE",
+"181 235 OFFCURVE",
+"205 235 CURVE SMOOTH",
+"218 235 OFFCURVE",
+"234 225 OFFCURVE",
+"237 197 CURVE",
+"242 215 LINE",
+"228 188 OFFCURVE",
+"153 127 OFFCURVE",
+"28 95 CURVE",
+"31 75 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"150 227 LINE",
+"163 263 OFFCURVE",
+"165 291 OFFCURVE",
+"165 324 CURVE SMOOTH",
+"165 424 LINE",
+"153 424 LINE",
+"134 382 LINE SMOOTH",
+"121 352 OFFCURVE",
+"122 330 OFFCURVE",
+"124 300 CURVE SMOOTH",
+"128 237 LINE SMOOTH",
+"129 218 OFFCURVE",
+"128 209 OFFCURVE",
+"119 195 CURVE"
+);
+}
+);
+width = 292;
+}
+);
+note = toeda;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
 glyphname = FATHA.one;
 layers = (
 {
@@ -29553,6 +29679,35 @@ layers = (
 anchors = (
 {
 name = _comma;
+position = "{134, 61}";
+},
+{
+name = bottom;
+position = "{110, -409}";
+}
+);
+components = (
+{
+name = haydb.yb;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 233;
+}
+);
+note = haydb;
+script = arabic;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = haydb.one;
+layers = (
+{
+anchors = (
+{
+name = _comma.one;
 position = "{134, 61}";
 },
 {
@@ -34651,7 +34806,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{248, -221}";
+position = "{159, -221}";
 },
 {
 name = exit;
@@ -39964,7 +40119,7 @@ position = "{42, -10}";
 },
 {
 name = top;
-position = "{239, 457}";
+position = "{219, 477}";
 }
 );
 components = (
@@ -49752,7 +49907,7 @@ position = "{88, -50}";
 },
 {
 name = top;
-position = "{467, 494}";
+position = "{417, 500}";
 }
 );
 background = {
@@ -75805,7 +75960,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{254, -135}";
+position = "{234, -135}";
 },
 {
 name = exit;

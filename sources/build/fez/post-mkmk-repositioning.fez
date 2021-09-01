@@ -25,20 +25,6 @@ Feature mkmk {
     SeparateConsecutive /.yb$/ 4 80 350;
   } UseMarkFilteringSet /.yb$/;
 
-  # If the dots "poke out" the end of a narrow init glyph, we need to
-  # add move space both to the dots and to the glyph itself so they
-  # don't collide with preceding glyphs.
-  DefineClass @overlapping_inits = @inits & (width < 350); # xMax[tdb]
-  Routine OpenSpaceAroundSmallBehs {
-    Position ( @overlapping_inits <xAdvance=0> @nuktas_and_kasra <xPlacement=0> )  BARI_YEf1; # Except here
-    Position ( @overlapping_inits <xAdvance=0> haydb <xPlacement=0> ) /.*[mif](sd)?\d+$/; # Or here
-    Position ( @overlapping_inits <xAdvance=200> @nuktas_and_kasra <xPlacement=50> )  /.*f?\d+$/;
-
-    # RE->BE needs more space
-
-    Position /REf/ ( /BEi/ <xAdvance=200> @nuktas_and_kasra <xPlacement=50> );
-  } UseMarkFilteringSet @nuktas_and_kasra;
-
 
 };
 
@@ -49,7 +35,7 @@ Feature kern {
     Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( /.yb|tdb|ddb$/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    # Position ( /.yb|tdb|ddb$/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
   } UseMarkFilteringSet /haydb.yb|sdb.yb|tdb|ddb/;
 
   DefineClass @WideFinals = @finas & (xMin < 50);
