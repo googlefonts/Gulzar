@@ -1,9 +1,11 @@
 GLYPHS_FILE=sources/Gulzar.glyphs
 FINAL_FONT=fonts/ttf/Gulzar-Regular.ttf
-FEA_FILES=sources/build/fea/languagesystem.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/anchor-attachment.fea sources/build/fea/kerning.fea sources/build/fea/latin-kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
+FEA_FILES=sources/build/fea/languagesystem.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/anchor-attachment.fea sources/build/fea/latin-kerning.fea sources/build/fea/kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
 RELEASE_ARG=
-export PYTHONPATH=.
 
+export FONTTOOLS_LOOKUP_DEBUGGING=1
+export PYTHONPATH=.:/Users/simon/others-repos/fontTools/lib/
+export FONTTOOLS_GPOS_COMPACT_MODE=9
 .DELETE_ON_ERROR:
 
 $(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
@@ -68,7 +70,7 @@ sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/latin-kerning.fea: sources/build/fez/latin-kerning.fez $(GLYPHS_FILE) venv
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@

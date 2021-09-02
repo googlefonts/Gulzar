@@ -7,8 +7,18 @@ CopyAnchors SHADDA SHADDA_LONG_A;
 
 LoadPlugin qalamTools.QuantizeAnchors;
 LoadPlugin qalamTools.DotAvoidance;
+LoadPlugin qalamTools.NastaliqKerning;
 
-AddSpacedAnchors 240;
+AddSpacedAnchors 220;
+
+Include "shared.fez";
+
+
+Feature curs {
+  Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
+};
+
+QuantizeAnchors 10;
 
 Feature mark {
   Routine DoMarkBase {
@@ -20,27 +30,43 @@ Feature mark {
     Attach &bottom.one &_bottom.one bases;
     Attach &bottom.two &_bottom.two bases;
     Attach &comma &_comma bases;
+    Attach &comma.one &_comma.one bases;
   };
 };
 
-Feature curs {
-  Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
+Routine DropOne {Substitute [sdb ddb tdb haydb] -> $1.one; };
+Routine DropTwo {Substitute [sdb ddb tdb] -> $1.two; };
+
+# Positioning rules happen *after* dot avoidance, so need to match .one and .two forms
+Routine OpenSpaceBeforeKern {
+  Position (@inits <xAdvance=+200>) /sdb|ddb/;
+  Position (@inits <xAdvance=+300>) /tdb|haydb/;
 };
 
+Routine AntiKern1sub {
+  Chain (/((CH_YE|AIN)[fu]\d+)|REf3|NUN|SIN/ /(BE|JIM)i/ [sdb ddb tdb haydb] ^DropTwo);
+  Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /(BE|JIM)i/ [sdb ddb tdb haydb] ^DropOne);
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb];
+
+
+Routine AntiKern1pos {
+  Chain (/(MIM)[fu]\d+/ /(BE|JIM)i/ ^OpenSpaceBeforeKern  [sdb ddb tdb haydb]);
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb];
+
+Routine AntiKern2 {
+  Chain (@bariye @inits ^OpenSpaceBeforeKern);
+  Chain (/.*[fu]\d+/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
+} IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
 Feature rlig {
-  Routine SeparateConsecutiveTop {
-    DetectAndSwap top;
-  } UseMarkFilteringSet [toeda sda dda tda sda.one dda.one tda.one sda.two dda.two tda.two ];
-
-  Routine SeparateConsecutiveBottom {
-    DetectAndSwap bottom;
-  } UseMarkFilteringSet [haydb sdb ddb tdb sdb.one ddb.one tdb.one sdb.two ddb.two tdb.two ];
+  DetectAndSwap top;
+  DetectAndSwap bottom;
+  AtHeight 0-400 AntiKern1sub;
+  AtHeight 0-400 AntiKern1pos;
+  AtHeight 300-600 AntiKern2;
 };
 
 Include "sources/build/fez/pre-mkmk-repositioning.fez";
-
-QuantizeAnchors 10;
 
 Feature mkmk {
   Routine DoMarkAttachment {

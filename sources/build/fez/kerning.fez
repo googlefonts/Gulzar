@@ -3,11 +3,13 @@ Include "shared.fez";
 
 DefineClass @bariye = /BARI_YE/;
 
-Feature kern {
-	NastaliqKerning 150 70% spacekern;
-  DefineClass @narrowinit = @inits & (width < 200);
+LoadPlugin FontEngineering;
+SetCategory space.urdu ligature;
 
-	Routine FixOverzealousChYe {
-		Position (@narrowinit <xAdvance=+100>) CH_YEf1;
+
+Feature kern {
+	NastaliqKerning 150 70%;
+	Routine FixShortKern {
+		Position (/[KG]AFi|LAMi|BEi|FEi/ <xAdvance=+150>) /CH_YEf/;
 	} IgnoreMarks;
 };

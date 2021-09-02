@@ -11,6 +11,7 @@ from glyphtools import get_glyph_metrics
 import tqdm
 import logging
 
+
 # logging.basicConfig(format='%(message)s')
 # logging.getLogger("fontFeatures.shaperLib").setLevel(logging.DEBUG)
 
@@ -31,9 +32,12 @@ action: BARENAME
 
 VERBS = ["AddSpacedAnchors", "DetectAndSwap"]
 
+taskil_above = ["HAMZA_ABOVE", "DAMMA"]
+taskil_below = ["KASRA"]
 
 max_sequence_length = 3
 max_run = 200
+margin = 20
 
 
 class AddSpacedAnchors(FEZVerb):
@@ -52,6 +56,11 @@ class AddSpacedAnchors(FEZVerb):
                 bottomx, bottomy = this_anchors["bottom"]
                 this_anchors["bottom.one"] = bottomx, bottomy - spacing
                 this_anchors["bottom.two"] = bottomx, bottomy - spacing * 2
+            if "comma" in this_anchors:
+                commax, commay = this_anchors["comma"]
+                this_anchors["comma.one"] = commax, commay - spacing
+                this_anchors["comma.two"] = commax, commay - spacing * 2
+
         return []
 
 class DetectAndSwap(FEZVerb):
@@ -59,18 +68,28 @@ class DetectAndSwap(FEZVerb):
         (anchor,) = args
         self.anchor = anchor
         if anchor == "bottom":
-            self.dots = ["haydb", "sdb", "sdb.one", "sdb.two", "ddb", "ddb.one", "ddb.two", "tdb", "tdb.one", "tdb.two"]
+            self.dots = ["haydb", "sdb", "sdb.one", "sdb.two", "ddb", "ddb.one", "ddb.two", "tdb", "tdb.one", "tdb.two"] + taskil_below
         else:
-            self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"]
-
+            self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"] + taskil_above
         self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
+        cycleroutine = fontFeatures.Routine(
+            name = "cycle_dots_"+self.anchor,
+        )
+        for dot in self.dots:
+            nextdot = self.cycle(dot)
+            if nextdot in self.parser.font.glyphs:
+                cycleroutine.rules.append(fontFeatures.Substitution(
+                    [[dot]], [[nextdot]]
+                ))
+
         count = 0
         rules = set({})
         result = []
         nc = self.parser.fontfeatures.namedClasses
         self.parser.fontfeatures.namedClasses = {}
+
         for sequence in tqdm.tqdm(seq):
             if tuple(sequence) in rules:
                 continue
@@ -81,29 +100,53 @@ class DetectAndSwap(FEZVerb):
                 if mitigated:
                     last_dot, orig_dot, newdot = mitigated
                     rules.add(tuple(sequence))
-                    result.append(fontFeatures.Substitution(
+                    # result.append(fontFeatures.Substitution(
+                    #     [[orig_dot]],
+                    #     [[newdot]],
+                    #     precontext=[[x] for x in sequence[:last_dot]],
+                    #     postcontext=[[x] for x in sequence[last_dot+1:]],
+                    # ))
+
+                    result.append(fontFeatures.Chaining(
                         [[orig_dot]],
-                        [[newdot]],
+                        lookups=[[cycleroutine]],
                         precontext=[[x] for x in sequence[:last_dot]],
                         postcontext=[[x] for x in sequence[last_dot+1:]],
                     ))
                 # else:
                 #     warnings.warn("Nothing helped %s" % sequence)
-            # if count > 500:
-                # break
         self.parser.fontfeatures.namedClasses = nc
-        return result
+
+        # OK, we have a set of rules, which is nice. But they're massive and
+        # overflow. What we need to do is split them into a set of routines,
+        # one per target
+
+        results = { }
+        for rule in result:
+            target = rule.input[0][0]
+            results.setdefault(target, fontFeatures.Routine(
+                name="DotAvoidance_"+target,
+                flags=0x10,
+                markFilteringSet=self.dots
+            )).rules.append(rule)
+
+
+        return results.values()
 
     def collides(self, glyphs):
         pos = self.position_glyphs(glyphs)
+        if any([g["name"] == "toeda" for g in pos]):
+            return self.c.has_collisions(pos)
         for ix in range(len(pos)):
             if pos[ix]["category"] != "mark":
                 continue
             gb1 = pos[ix]["glyphbounds"]
+            gb1.addMargin(margin)
             for jx in range(ix+1, len(pos)):
                 if pos[jx]["category"] != "mark":
                     continue
                 gb2 = pos[jx]["glyphbounds"]
+                gb2.addMargin(margin)
                 if gb1.overlaps(gb2):
                     return True
         return False
@@ -171,7 +214,6 @@ class DetectAndSwap(FEZVerb):
 
     def generate_glyph_sequence(self, n):
         thin = [x for x in self.parser.font.glyphs.keys() if get_glyph_metrics(self.parser.font,x)["run"] < max_run and re.search(r"m\d+$", x)]
-
         sda = ["sda", "sda.one", "sda.two"]
         dda = ["dda", "dda.one", "dda.two"]
         tda = ["tda", "tda.one", "tda.two"]
@@ -197,15 +239,18 @@ class DetectAndSwap(FEZVerb):
             for k,v in dot_combinations.items():
                 if k in t:
                     if self.anchor == "top":
-                        return v[0]
+                        return v[0] + taskil_above
                     else:
-                        return v[1]
-            return []
+                        return v[1] + taskil_below
+            if self.anchor == "top":
+                return taskil_above
+            else:
+                return taskil_below
 
         above_stems = [k for k,v in dot_combinations.items() if v[0]]
-        above_re = r"^(" + ("|".join(above_stems)) + r")[mi]"
+        above_re = r"^(" + ("|".join(above_stems)) + r")[mif]"
         below_stems = [k for k,v in dot_combinations.items() if v[1]]
-        below_re = r"^(" + ("|".join(below_stems)) + r")[mi]"
+        below_re = r"^(" + ("|".join(below_stems)) + r")[mif]"
         below_dots = [x for x in self.parser.font.glyphs.keys() if re.match(below_re,x)]
         above_dots = [x for x in self.parser.font.glyphs.keys() if re.match(above_re,x)]
 
@@ -214,38 +259,16 @@ class DetectAndSwap(FEZVerb):
             starters = below_dots
         else:
             starters = above_dots
+
         sequences = []
         for left in list(set(starters) & set(self.rasm_glyphs)):
-            for mid in list(set(self.contexts.get(left,[])) & set(thin)):
-                for right in list(set(self.contexts.get(mid,[])) & set(starters)):
-                    for left_dot in dotsfor(left):
-                        for right_dot in dotsfor(right):
-                            sequences.append([left, left_dot, mid, right, right_dot ])
-            for right in list(set(self.contexts.get(left,[])) & set(starters)):
+#            for mid in list(set(self.contexts.get(left,[])) & set(thin)):
+#                for right in list(set(self.contexts.get(mid,[])) & set(starters)):
+#                    for left_dot in dotsfor(left):
+#                        for right_dot in dotsfor(right):
+#                            sequences.append([left, left_dot, mid, right, right_dot ])
+            for right in list(set(self.contexts.get(left,[])) & set(self.rasm_glyphs)):
                 for left_dot in dotsfor(left):
                     for right_dot in dotsfor(right):
                         sequences.append([left, left_dot, right, right_dot ])
         return sequences
-        # def seq(n, rightmost):
-        #     if n == 1:
-        #         for t in rightmost:
-        #             if t in below_dots:
-        #                 for dot in dotsfor(t):
-        #                     yield [t] + [dot]
-        #     else:
-        #         for t in rightmost:
-        #             if t in self.contexts and t in usable:
-        # #                 print("Generating a subsequence for "+t,self.contexts[t])
-        #                 subseq = seq(n-1, self.contexts[t])
-        #                 for post in subseq:
-        #                     yield [t] + post
-        #                     if t in below_dots or t in hayc:
-        #                         for dot in dotsfor(t):
-        #                             yield [t] + [dot] + post
-
-        # def has_two_dots(glyph_string):
-        #     return len([g for g in glyph_string if g in self.dots ]) >1
-
-        # if self.anchor == "bottom":
-        #     return list(filter(has_two_dots,seq(n, hayc + dot_carriers)))
-        # return list(filter(has_two_dots,seq(n, dot_carriers)))
