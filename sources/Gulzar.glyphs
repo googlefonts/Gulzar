@@ -1,9 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/MIMm1/MIMm10/MIMm11/MIMm12/MIMm13/MIMm14/MIMm15/MIMm2/MIMm3/MIMm4/MIMm5/MIMm6/MIMm7/MIMm8/MIMm9/MIMm18",
-"/HAMZA_ABOVE.one/HAMZA_ABOVE/HAMZA_BELOW/hamzada"
-);
 classes = (
 {
 automatic = 1;
@@ -79321,7 +79317,7 @@ KAFm = "17";
 LAMi = "3";
 LAMm = "3";
 "Left Glyph" = TEmsd1;
-MIMi = "15";
+MIMi = "3";
 MIMm = "18";
 SADi = "3";
 SADm = "3";
@@ -79353,7 +79349,7 @@ KAFm = "17";
 LAMi = "3";
 LAMm = "3";
 "Left Glyph" = BEmsd1;
-MIMi = "15";
+MIMi = "3";
 MIMm = "18";
 SADi = "3";
 SADm = "3";
