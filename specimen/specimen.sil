@@ -141,7 +141,7 @@ My divan of poetry will abide in the world until the day of reckoning.
 \eject
 
 \hbox{}\par
-\thisframeLTR\bidi-on
+\thisframeRTL\bidi-on
 \set[parameter=shaper.spaceenlargementfactor,value=1]
 \set[parameter=shaper.spaceshrinkfactor,value=0.1]
 \set[parameter=shaper.spacestretchfactor,value=0.1]
