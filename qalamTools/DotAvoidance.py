@@ -37,7 +37,7 @@ taskil_below = ["KASRA"]
 
 max_sequence_length = 3
 max_run = 200
-margin = 20
+margin = 0
 
 
 class AddSpacedAnchors(FEZVerb):
@@ -135,8 +135,9 @@ class DetectAndSwap(FEZVerb):
 
     def collides(self, glyphs):
         pos = self.position_glyphs(glyphs)
-        if any([g["name"] == "toeda" for g in pos]):
+        if any(["toeda" in g["name"] or "HAMZA_ABOVE" in g["name"] for g in pos]):
             return self.c.has_collisions(pos)
+
         for ix in range(len(pos)):
             if pos[ix]["category"] != "mark":
                 continue
