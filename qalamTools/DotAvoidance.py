@@ -74,21 +74,40 @@ class DetectAndSwap(FEZVerb):
         self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
-        cycleroutine = fontFeatures.Routine(
-            name = "cycle_dots_"+self.anchor,
+        drop_one = fontFeatures.Routine(
+            name = "cycle_dots_1_"+self.anchor,
         )
+        drop_two = fontFeatures.Routine(
+            name = "cycle_dots_2_"+self.anchor,
+        )
+        drop_three = fontFeatures.Routine(
+            name = "cycle_dots_3_"+self.anchor,
+        )
+
         for dot in self.dots:
             nextdot = self.cycle(dot)
             if nextdot in self.parser.font.glyphs:
-                cycleroutine.rules.append(fontFeatures.Substitution(
+                drop_one.rules.append(fontFeatures.Substitution(
                     [[dot]], [[nextdot]]
                 ))
+                nextdot = self.cycle(nextdot)
+                if nextdot in self.parser.font.glyphs:
+                    drop_two.rules.append(fontFeatures.Substitution(
+                        [[dot]], [[nextdot]]
+                    ))
+                    nextdot = self.cycle(nextdot)
+                    if nextdot in self.parser.font.glyphs:
+                        drop_three.rules.append(fontFeatures.Substitution(
+                            [[dot]], [[nextdot]]
+                        ))
 
         count = 0
         rules = set({})
         result = []
         nc = self.parser.fontfeatures.namedClasses
         self.parser.fontfeatures.namedClasses = {}
+
+        # import IPython;IPython.embed()
 
         for sequence in tqdm.tqdm(seq):
             if tuple(sequence) in rules:
@@ -98,18 +117,16 @@ class DetectAndSwap(FEZVerb):
                 mitigated = self.try_mitigate(sequence)
                 count += 1
                 if mitigated:
-                    last_dot, orig_dot, newdot = mitigated
+                    last_dot, orig_dot, newdot, times = mitigated
+                    goto = drop_one
+                    if times == 2:
+                        goto = drop_two
+                    if times == 3:
+                        goto = drop_three
                     rules.add(tuple(sequence))
-                    # result.append(fontFeatures.Substitution(
-                    #     [[orig_dot]],
-                    #     [[newdot]],
-                    #     precontext=[[x] for x in sequence[:last_dot]],
-                    #     postcontext=[[x] for x in sequence[last_dot+1:]],
-                    # ))
-
                     result.append(fontFeatures.Chaining(
                         [[orig_dot]],
-                        lookups=[[cycleroutine]],
+                        lookups=[[goto]],
                         precontext=[[x] for x in sequence[:last_dot]],
                         postcontext=[[x] for x in sequence[last_dot+1:]],
                     ))
@@ -135,40 +152,44 @@ class DetectAndSwap(FEZVerb):
 
     def collides(self, glyphs):
         pos = self.position_glyphs(glyphs)
-        if any(["toeda" in g["name"] or "HAMZA_ABOVE" in g["name"] for g in pos]):
-            return self.c.has_collisions(pos)
+        pos = [x for x in pos if x["category"] == "mark"]
+        # if any(["toeda" in g["name"] or "HAMZA_ABOVE" in g["name"] for g in pos]):
 
-        for ix in range(len(pos)):
-            if pos[ix]["category"] != "mark":
-                continue
-            gb1 = pos[ix]["glyphbounds"]
-            gb1.addMargin(margin)
-            for jx in range(ix+1, len(pos)):
-                if pos[jx]["category"] != "mark":
-                    continue
-                gb2 = pos[jx]["glyphbounds"]
-                gb2.addMargin(margin)
-                if gb1.overlaps(gb2):
-                    return True
-        return False
+        return self.c.has_collisions(pos)
+
+        # for ix in range(len(pos)):
+        #     if pos[ix]["category"] != "mark":
+        #         continue
+        #     gb1 = pos[ix]["glyphbounds"]
+        #     gb1.addMargin(margin)
+        #     for jx in range(ix+1, len(pos)):
+        #         if pos[jx]["category"] != "mark":
+        #             continue
+        #         gb2 = pos[jx]["glyphbounds"]
+        #         gb2.addMargin(margin)
+        #         if gb1.overlaps(gb2):
+        #             return True
+        # return False
 
     def try_mitigate(self, glyphs):
         newglyphs = list(glyphs)
         last_dot = len(glyphs) - 1 - ([x in self.dots for x in glyphs])[::-1].index(True)
         # last_dot = [x in self.dots for x in glyphs].index(True)
         orig_dot = glyphs[last_dot]
-        while True:
+        for times in range(1, 4):
             newdot = self.cycle(newglyphs[last_dot])
+            if newdot == orig_dot:
+                return
             if not newdot or newdot not in self.parser.font.glyphs:
                 return
             newglyphs[last_dot] = newdot
             # Check it again
             if not self.collides(newglyphs):
-                return last_dot, orig_dot, newdot
+                return last_dot, orig_dot, newdot, times
 
     def cycle(self, dot):
         if dot.endswith(".two"):
-            return
+            return dot[:-4]
         if dot.endswith(".one"):
             return dot[:-4] + ".two"
         else:
@@ -178,11 +199,15 @@ class DetectAndSwap(FEZVerb):
     def draw(self, glyphs):
         positioned_glyphs = self.position_glyphs(glyphs)
         import matplotlib.pyplot as plt
+        from beziers.path.geometricshapes import Rectangle
         fig, ax = plt.subplots()
         ax.set_aspect("equal")
         for g in positioned_glyphs:
             for p_ in g["paths"]:
                 p_.plot(ax, drawNodes=True,fill=True)
+            for pb in g["pathbounds"]:
+                rect = Rectangle(pb.width, pb.height, pb.centroid)
+                rect.plot(ax, drawNodes=False,fill=False)
         plt.show()
 
     def position_glyphs(self, glyphs):

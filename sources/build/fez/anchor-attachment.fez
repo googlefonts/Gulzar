@@ -39,31 +39,68 @@ Routine DropTwo {Substitute [sdb ddb tdb] -> $1.two; };
 
 # Positioning rules happen *after* dot avoidance, so need to match .one and .two forms
 Routine OpenSpaceBeforeKern {
-  Position (@inits <xAdvance=+200>) /sdb|ddb/;
   Position (@inits <xAdvance=+300>) /tdb|haydb/;
+  Position (@inits <xAdvance=+200>) /sdb|ddb/;
+  Position toeda (@inits <xAdvance=+200>);
 };
 
+Routine OpenSmallSpaceBeforeKern {
+  Position (@inits <xAdvance=+150>);
+};
+
+Routine DoNothing {
+  Substitute JIMi1 -> JIMi1;
+};
+
+DefineClass @bigbowlfina = /(AIN|CH_YE|JIM|LAM|NUN|QAF|SAD|SAD)[fu]/;
+
+Routine AntiKern0sub {
+  Substitute JIMi1 -> JIMi1;
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb];
+
 Routine AntiKern1sub {
-  Chain (/((CH_YE|AIN)[fu]\d+)|REf3|NUN|SIN/ /(BE|JIM)i/ [sdb ddb tdb haydb] ^DropTwo);
-  Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /(BE|JIM)i/ [sdb ddb tdb haydb] ^DropOne);
-} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb];
+  Chain (/NUN|SIN|LAM/ [sdb ddb tdb haydb] /(JIM)i/ ^DoNothing [sdb ddb tdb haydb]); # Do not drop here, space instead
+  Chain (/NUN|SIN|LAM/ /(JIM)i/ ^DoNothing [sdb ddb tdb haydb]); # Do not drop here, space instead
+  Chain (/(NUN|SIN|LAM)[fu]/ /BEi/ ^DoNothing sdb); # Do not drop here, it's fine
+
+  # Unfortunate double drop...
+  Chain /BEi/ ddb.one (REf1 /BEi/ ddb ^DropTwo);
+
+  Chain (/((CH_YE|AIN)[fu]\d+)|REf3|NUN|SIN|LAM/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropTwo);
+  Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropOne);
+
+  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropOne);
+
+
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb];
 
 
 Routine AntiKern1pos {
-  Chain (/(MIM)[fu]\d+/ /(BE|JIM)i/ ^OpenSpaceBeforeKern  [sdb ddb tdb haydb]);
-} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb];
+  Chain (/.*[fu]\d+/ toeda @inits ^OpenSpaceBeforeKern);
+  Chain (/NUN|SIN/ /(JIM|BE|TE)i/ ^OpenSpaceBeforeKern [sdb ddb tdb haydb]);
+  Chain (/(MIM)[fu]\d+/ /(BE|TE|JIM)i/ ^OpenSpaceBeforeKern  [sdb ddb tdb haydb]);
+  Chain (/.*[fu]\d+/ /BEi/ ^OpenSpaceBeforeKern [sdb ddb tdb haydb] /JIMf/);
+  Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /HAYCi3$/ ^OpenSmallSpaceBeforeKern);
+  Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$/ ^OpenSpaceBeforeKern);
+  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern [sdb ddb ddb.one tdb haydb]);
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb toeda];
 
 Routine AntiKern2 {
   Chain (@bariye @inits ^OpenSpaceBeforeKern);
-  Chain (/.*[fu]\d+/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
+  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb/);
+  Chain (/ALIF[fu]/ /(BE|JIM|HAYC)i/ ^OpenSmallSpaceBeforeKern /ddb|tdb/);
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
 Feature rlig {
+  AtHeight 0-200 AntiKern0sub;
+  AtHeight 200-700 AntiKern1sub;
+  AtHeight 0-400 AntiKern1pos;
+  AtHeight 400-600 AntiKern2;
   DetectAndSwap top;
   DetectAndSwap bottom;
-  AtHeight 0-400 AntiKern1sub;
-  AtHeight 0-400 AntiKern1pos;
-  AtHeight 300-600 AntiKern2;
+  Routine OtherFixes {
+    Substitute FEi3 (dda) ALIFf1 -> dda.one;
+  };
 };
 
 Include "sources/build/fez/pre-mkmk-repositioning.fez";
