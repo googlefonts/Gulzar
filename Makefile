@@ -9,7 +9,7 @@ export FONTTOOLS_GPOS_COMPACT_MODE=9
 .DELETE_ON_ERROR:
 
 $(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
-	. venv/bin/activate; fontmake -f --master-dir . -g $(GLYPHS_FILE) --no-production-names -o ttf --output-path $(FINAL_FONT)
+	. venv/bin/activate; fontmake -f --master-dir . -g $(GLYPHS_FILE) --filter DecomposeTransformedComponentsFilter --no-production-names -o ttf --output-path $(FINAL_FONT)
 	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
 
 venv: venv/touchfile
@@ -43,7 +43,7 @@ sources/build/rules.csv: $(GLYPHS_FILE)
 	python3 scripts/dump-glyphs-rules.py $(GLYPHS_FILE) > sources/build/rules.csv
 
 test: $(FINAL_FONT)
-	fontbakery check-googlefonts -l WARN --html fontbakery-report.html $(FINAL_FONT)
+	fontbakery check-googlefonts -l WARN --html fontbakery-report.html --ghmarkdown fontbakery-report.md $(FINAL_FONT)
 
 test-shaping: $(FINAL_FONT)
 	fontbakery check-profile qa/fontbakery-shaping.py $(FINAL_FONT)

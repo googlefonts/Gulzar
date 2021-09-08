@@ -9,3 +9,4 @@ tqdm
 fontbakery
 font-v
 collidoscope>=0.2.0
+gftools
