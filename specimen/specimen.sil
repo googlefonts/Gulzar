@@ -109,7 +109,7 @@ My divan of poetry will abide in the world until the day of reckoning.
 \begin{center}
  \par
 
-\script[src=packages/colorwords]
+%\script[src=packages/colorwords]
 
 \font[size=18pt]{خط نستعلیق}
 \end{center}
