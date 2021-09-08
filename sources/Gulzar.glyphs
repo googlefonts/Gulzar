@@ -14942,7 +14942,7 @@ name = ALIFu1;
 },
 {
 name = HAMZA_BELOW;
-transform = "{1, 0, 0, 1, -55, -73}";
+transform = "{1, 0, 0, 1, 106, -73}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -28644,21 +28644,21 @@ layers = (
 anchors = (
 {
 name = _bottom;
-position = "{160, 77}";
+position = "{-1, 77}";
 },
 {
 name = bottom;
-position = "{160, -127}";
+position = "{-1, -127}";
 }
 );
 components = (
 {
 name = hamzada;
-transform = "{1, 0, 0, 1, 0, -300}";
+transform = "{1, 0, 0, 1, -161, -300}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 320;
+width = 0;
 }
 );
 note = HAMZA_BELOW;
