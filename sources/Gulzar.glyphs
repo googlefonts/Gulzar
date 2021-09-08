@@ -5,7 +5,6 @@ DisplayStrings = (
 "/JIMm10",
 "/haydb.one/haydb",
 "/toeda/toeda.two",
-"/space.urdu",
 "/GAFi3"
 );
 classes = (
@@ -30576,7 +30575,7 @@ layers = (
 {
 anchors = (
 {
-name = _top.one;
+name = _top.two;
 position = "{229, 38}";
 },
 {
@@ -69976,6 +69975,7 @@ width = 314;
 },
 {
 color = 3;
+export = 0;
 glyphname = "re-dad";
 layers = (
 {
@@ -70082,6 +70082,7 @@ note = ABR_TWO;
 },
 {
 color = 3;
+export = 0;
 glyphname = "re-jim";
 layers = (
 {
@@ -70165,6 +70166,7 @@ note = return;
 },
 {
 color = 3;
+export = 0;
 glyphname = "small-four";
 layers = (
 {
@@ -70246,6 +70248,7 @@ note = ABR_THREE;
 },
 {
 color = 3;
+export = 0;
 glyphname = "small-sad";
 layers = (
 {
