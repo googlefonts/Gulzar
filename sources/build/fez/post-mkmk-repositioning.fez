@@ -31,7 +31,7 @@ Feature mkmk {
 Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position ( [ddb.yb tdb.yb] <80 -100 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( sdb.yb <75 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( sdb.yb <105 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
