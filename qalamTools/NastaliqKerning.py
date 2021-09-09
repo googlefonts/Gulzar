@@ -145,6 +145,7 @@ class NastaliqKerning(FEZVerb):
         r = quantize(r, rise_quantization)
         kerntable = {}
         belowmarks = self.parser.fontfeatures.namedClasses["below_dots"]
+        abovemarks = self.parser.fontfeatures.namedClasses["all_above_marks"]
         print("Generating table for rise %s" %r, file=sys.stderr)
         if r > 0:
             ends = self.inits
@@ -175,8 +176,8 @@ class NastaliqKerning(FEZVerb):
             name="kern_at_%i" % r,
         )
         #kernroutine.flags=0x8
-        kernroutine.flags=0x8 | 0x04
-        # kernroutine.markFilteringSet=belowmarks
+        kernroutine.flags=0x10 | 0x04
+        kernroutine.markFilteringSet=abovemarks
 
         for left, kerns in kerntable.items():
             for right, value in kerns.items():
