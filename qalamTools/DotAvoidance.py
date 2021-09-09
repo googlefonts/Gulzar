@@ -10,6 +10,7 @@ from qalamTools.NastaliqConnections import load_rules
 from glyphtools import get_glyph_metrics
 import tqdm
 import logging
+import shelve
 
 
 # logging.basicConfig(format='%(message)s')
@@ -71,7 +72,8 @@ class DetectAndSwap(FEZVerb):
             self.dots = ["haydb", "sdb", "sdb.one", "sdb.two", "ddb", "ddb.one", "ddb.two", "tdb", "tdb.one", "tdb.two"] + taskil_below
         else:
             self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"] + taskil_above
-        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font)
+        self.shelve = shelve.open("collisioncache.db")
+        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.1)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
         drop_one = fontFeatures.Routine(
@@ -151,11 +153,13 @@ class DetectAndSwap(FEZVerb):
         return results.values()
 
     def collides(self, glyphs):
-        pos = self.position_glyphs(glyphs)
-        pos = [x for x in pos if x["category"] == "mark"]
-        # if any(["toeda" in g["name"] or "HAMZA_ABOVE" in g["name"] for g in pos]):
-
-        return self.c.has_collisions(pos)
+        key = "/".join(glyphs)
+        if key not in self.shelve:
+            pos = self.position_glyphs(glyphs)
+            pos = [x for x in pos if x["category"] == "mark"]
+            # if any(["toeda" in g["name"] or "HAMZA_ABOVE" in g["name"] for g in pos]):
+            self.shelve[key] = self.c.has_collisions(pos)
+        return self.shelve[key]
 
         # for ix in range(len(pos)):
         #     if pos[ix]["category"] != "mark":
