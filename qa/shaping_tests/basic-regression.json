@@ -55,6 +55,20 @@
       "input": "ریر",
       "expectation": "REf1|ddb.one|BEi13|REu1",
       "note": "But sdb needs to drop here!"
+    },
+    {
+      "input": "میر پشیمل",
+      "expectation": "LAMf1|MIMm18|ddb|BEm9|tda|SINm1|tdb|BEi1|space.urdu|REf3|ddb|BEm15|MIMi15",
+      "note": "No need to drop tdb"
+    },
+    {
+      "input": "رچینی",
+      "expectation": "CH_YEf1|sda|BEm11|ddb.one|BEmsd1|tdb.two|JIMi3|REu1",
+      "note": "Need double drop"
+    },
+    {
+      "input": "سرپہ",
+      "expectation": "HAYCf1|tdb.one|BEi3|REf3|SINi15"
     }
   ]
 }
