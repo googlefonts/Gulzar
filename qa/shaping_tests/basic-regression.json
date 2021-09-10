@@ -44,7 +44,7 @@
     },
     {
       "input": "فدیم",
-      "expectation": "MIMf1|ddb.one|BEi9|DALf1|sda|FEi3"
+      "expectation": "MIMf1|ddb.two|BEi9|DALf1|sda|FEi3"
     },
     {
       "input": "رباں",
@@ -63,12 +63,45 @@
     },
     {
       "input": "رچینی",
-      "expectation": "CH_YEf1|sda|BEm11|ddb.one|BEmsd1|tdb.two|JIMi3|REu1",
+      "expectation": "CH_YEf1|sda|BEm11|ddb|BEmsd1|tdb.two|JIMi3|REu1",
       "note": "Need double drop"
     },
     {
       "input": "سرپہ",
       "expectation": "HAYCf1|tdb.one|BEi3|REf3|SINi15"
+    },
+    {
+      "input": "ندبجن",
+      "expectation": "sdi|NUNf1|sdb.one|JIMm1|sdb.two|BEi7|DALf1|sda|BEi3"
+    },
+    {
+      "input": "پرچا",
+      "expectation": "ALIFf1|tdb.one|JIMi3|REf1|tdb|BEi13",
+      "note": "Drop one at 0"
+    },
+    {
+      "input": "پرچھا",
+      "expectation": "ALIFf1|HAYAm3|tdb.two|JIMi5|REf1|tdb|BEi13"
+    },
+    {
+      "input": "سربر",
+      "expectation": "REf1|sdb.two|BEi13|REf3|SINi15"
+    },
+    {
+      "input": "سرپر",
+      "expectation": "REf1|tdb.two|BEi13|REf3|SINi15"
+    },
+    {
+      "input": "و چھیا",
+      "expectation": "ALIFf1|ddb|BEm3|HAYAm1|tdb.two|JIMi5|space.urdu|VAOu1"
+    },
+    {
+      "input": "و جھی",
+      "expectation": "CH_YEf1|HAYAm11|sdb.two|JIMi5|space.urdu|VAOu1"
+    },
+    {
+      "input": "سر جہا",
+      "expectation": "ALIFf1|haydb|HAYCm3|sdb|JIMi6|space.urdu|REf3|SINi15"
     }
   ]
 }
