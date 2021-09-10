@@ -6,7 +6,7 @@
 \end{pagetemplate}
 \script[src=packages/linespacing]
 \set[parameter=linespacing.method,value=fixed]
-\set[parameter=linespacing.fixed.baselinedistance,value=26pt]
+\set[parameter=linespacing.fixed.baselinedistance,value=29pt]
 \font[filename=../fonts/ttf/Gulzar-Regular.ttf,size=14pt, features=+ss01]
 \begin{center}
 \font[size=90pt]{گُلزار}

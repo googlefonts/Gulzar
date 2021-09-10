@@ -61,7 +61,9 @@ DefineClass @bigbowlfina = /(AIN|CH_YE|JIM|LAM|NUN|QAF|SAD|SIN)[fu]/;
 
 Routine AntiKern0sub {
   Chain (REf3 /JIMi/ sdb ^DoNothing);
+  Chain (REf3 /BEi/ [sdb ddb tdb] ^DropTwo);
   Chain (/(RE|VAO|DAL)[fu]/ /BEi|JIMi/ [sdb ddb tdb] ^DropOne);
+  Chain (REf3 /BEi|JIMi/ /BEm/ [sdb ddb tdb] ^DropOne);
 } IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb];
 
 Routine AntiKern200sub {
@@ -130,7 +132,7 @@ Routine AntiKern200pos {
 Routine AntiKern400pos {
   Chain (@bariye @inits ^OpenSpaceBeforeKern);
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
-  Chain (/ALIF[fu]/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /ddb|tdb|sdb/);
+  Chain (/ALIF[fu]|HAYCu/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /ddb|tdb|sdb/);
   Chain ([@isols @finas] /BEi|JIMi/ ^OpenSpaceBeforeKern [tdb.one tdb.two sdb.two ddb.two] ^DropATinyBitMore);
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
@@ -144,6 +146,7 @@ Feature rlig {
   DetectAndSwap top;
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
+    Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
   };
 };
 
