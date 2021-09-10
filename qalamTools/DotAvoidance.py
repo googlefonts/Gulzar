@@ -140,6 +140,13 @@ class DetectAndSwap(FEZVerb):
         # overflow. What we need to do is split them into a set of routines,
         # one per target
 
+        # XXX No we don't. The problem is that if we split them into one per
+        # target, the rules don't "cascade"; each target gets one pass over
+        # the glyphstream in order. So a target in a later substitution won't
+        # cause another substitution if that happens to be "earlier".
+
+        # So we need a dispatch routine.
+
         results = { }
         for rule in result:
             target = rule.input[0][0]
@@ -150,7 +157,16 @@ class DetectAndSwap(FEZVerb):
             )).rules.append(rule)
 
 
-        return results.values()
+        dispatch = fontFeatures.Routine(
+                name="DotAvoidance_dispatch_"+self.anchor
+        )
+        for k,v in results.items():
+            dispatch.rules.append(fontFeatures.Chaining(
+                [[k]],
+                lookups=[[v]]
+            ))
+
+        return [dispatch]
 
     def collides(self, glyphs):
         key = "/".join(glyphs)
