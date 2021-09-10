@@ -279,7 +279,10 @@ class DetectAndSwap(FEZVerb):
             "QAF": (dda, []),
             "BE": (sda+dda+tda+["toeda"], sdb+ddb+tdb),
             "TOE": (sda, []),
-            "JIM": (sda, sdb+tdb)
+            "JIM": (sda, sdb+tdb),
+            "MIM": ([],[]),
+            "KAF": ([],[]),
+            "GAF": ([],[]),
         }
 
         def dotsfor(t):
@@ -294,18 +297,9 @@ class DetectAndSwap(FEZVerb):
             else:
                 return taskil_below
 
-        above_stems = [k for k,v in dot_combinations.items() if v[0]]
-        above_re = r"^(" + ("|".join(above_stems)) + r")[mif]"
-        below_stems = [k for k,v in dot_combinations.items() if v[1]]
-        below_re = r"^(" + ("|".join(below_stems)) + r")[mif]"
-        below_dots = [x for x in self.parser.font.glyphs.keys() if re.match(below_re,x)]
-        above_dots = [x for x in self.parser.font.glyphs.keys() if re.match(above_re,x)]
-
-        # Do it by hand, it's easier to think about
-        if self.anchor == "bottom":
-            starters = below_dots
-        else:
-            starters = above_dots
+        stems = dot_combinations.keys()
+        stem_re = r"^(" + ("|".join(stems)) + r")[mif]"
+        starters = [x for x in self.parser.font.glyphs.keys() if re.match(stem_re,x)]
 
         sequences = []
         for left in list(set(starters) & set(self.rasm_glyphs)):
