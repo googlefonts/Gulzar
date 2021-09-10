@@ -8,5 +8,5 @@ bidict
 tqdm
 fontbakery
 font-v
-collidoscope>=0.2.0
+collidoscope>=0.3.0
 gftools
