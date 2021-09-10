@@ -50,7 +50,7 @@ Routine OpenSmallSpaceBeforeKern {
 
 
 Routine DropATinyBitMore {
-  Position ([tdb.one tdb.two sdb.two ddb.two] <yPlacement=-60>);
+  Position ([tdb.one ddb.one tdb.two sdb.two ddb.two] <yPlacement=-80>);
 };
 
 Routine DoNothing {
@@ -76,8 +76,13 @@ Routine AntiKern200sub {
   Chain (/((CH_YE|AIN|JIM)[fu]\d+)|NUN|SIN|LAM|REf3/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropTwo);
   Chain ([REu1 REf1 REf3] /JIMi/ tdb ^DropTwo);
 
+  Chain (/(BE)[fu]\d+/ BEi6 [sdb ddb ddb.one tdb haydb] ^DropTwo);
+  Chain (/(BE)[fu]\d+/ [sdb ddb ddb.one tdb haydb] BEi6 [sdb ddb ddb.one tdb haydb] ^DropTwo);
+
   Chain (/(RE|VAO|HAYC|DAL|BARI_YE|BE|TE)[fu]\d+/ /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
   Chain (/(BE)[fu]\d+/ [sdb ddb ddb.one tdb haydb] /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
+
+  Chain (/(KAF|GAF)[fu]\d+/ /(JIMi|HAYCi|BEi)$/ [sdb ddb ddb.one tdb haydb] ^DropOne);
 
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropOne);
 
@@ -110,7 +115,7 @@ Routine AntiKern400sub {
 
 
 Routine AntiKern200pos {
-  Chain (REf3 /(BE|JIM|HAYC)i/ [sdb.two ddb.two tdb.two] ^DropATinyBitMore);
+  Chain (/REf/ /(BE|JIM|HAYC)i/ [sdb.two ddb.one ddb.two tdb.two] ^DropATinyBitMore);
   Chain (/.*[fu]\d+/ toeda @inits ^OpenSpaceBeforeKern);
   Chain (/(MIM)[fu]\d+|BEf1|NUN|SIN/ /(JIM|BE|TE)i/ ^OpenSpaceBeforeKern [sdb ddb tdb haydb]);
   Chain (/.*[fu]\d+/ /BEi/ ^OpenSpaceBeforeKern [sdb ddb tdb haydb] /JIMf/);
@@ -120,11 +125,11 @@ Routine AntiKern200pos {
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern [sdb ddb ddb.one tdb haydb]);
   Chain (/ALIF[fu]/ /(BE|JIM|HAYC)i/ ^OpenSmallSpaceBeforeKern /ddb|tdb/);
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ [sdb.two ddb.two tdb.two] ^DropATinyBitMore);
-} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb toeda sdb.two ddb.two tdb.two];
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb toeda ddb.one sdb.two ddb.two tdb.two];
 
 Routine AntiKern400pos {
   Chain (@bariye @inits ^OpenSpaceBeforeKern);
-  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb/);
+  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
   Chain (/ALIF[fu]/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /ddb|tdb|sdb/);
   Chain ([@isols @finas] /BEi|JIMi/ ^OpenSpaceBeforeKern [tdb.one tdb.two sdb.two ddb.two] ^DropATinyBitMore);
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;

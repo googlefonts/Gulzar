@@ -73,7 +73,7 @@ class DetectAndSwap(FEZVerb):
         else:
             self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"] + taskil_above
         self.shelve = shelve.open("collisioncache.db")
-        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.1)
+        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.12)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
         drop_one = fontFeatures.Routine(

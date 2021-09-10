@@ -1,11 +1,8 @@
 {
 .appVersion = "1342";
 DisplayStrings = (
-"/FATHA/HAMZA_ABOVE/DAMMA/KASRA/toeda/toeda.one",
-"/JIMm10",
-"/haydb.one/haydb",
-"/toeda/toeda.two",
-"/KASRA.one/ALIFu1/HAMZAu1/KAFm3"
+"/TOEm1/LAMm1",
+"/KAFi1/ALIFu1"
 );
 classes = (
 {
@@ -14879,7 +14876,7 @@ position = "{105, -26}";
 },
 {
 name = top;
-position = "{142, 683}";
+position = "{142, 653}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14923,7 +14920,7 @@ name = ALIFu1;
 },
 {
 name = HAMZA_ABOVE;
-transform = "{1, 0, 0, 1, -38, 493}";
+transform = "{1, 0, 0, 1, -38, 463}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14963,7 +14960,7 @@ name = ALIFu1;
 },
 {
 name = MADDA;
-transform = "{1, 0, 0, 1, -41, 530}";
+transform = "{1, 0, 0, 1, -41, 500}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -33833,7 +33830,7 @@ position = "{213, 62}";
 },
 {
 name = top;
-position = "{121, 812}";
+position = "{121, 770}";
 }
 );
 background = {
@@ -39244,7 +39241,7 @@ position = "{42, -7}";
 },
 {
 name = top;
-position = "{141, 512}";
+position = "{174, 509}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -69041,7 +69038,7 @@ position = "{54, -6}";
 },
 {
 name = top;
-position = "{424, 524}";
+position = "{424, 632}";
 }
 );
 components = (
@@ -69259,7 +69256,7 @@ position = "{138, 11}";
 },
 {
 name = top;
-position = "{539, 591}";
+position = "{522, 685}";
 }
 );
 components = (

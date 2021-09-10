@@ -81,7 +81,8 @@ Feature kern {
     Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
 
     # Clear Alif Madda
-    Position ALIFu1 MADDA ( /[ui]\d/ <xAdvance=+130> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui]\d/ <xAdvance=+160> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui]\d/ <xAdvance=+160> ) @below_dots @all_above_marks;
     Position ALIFu1 MADDA ( /[ui]\d/ <xAdvance=+100> );
 
     # Clear Alif Nun KL
@@ -97,7 +98,7 @@ Feature kern {
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
 
     # Just fiddling now
-    Position (/BEi/ <xAdvance=+50>) tda parenright.latin;
+    Position  parenright.latin (/BEi/ <xAdvance=+70>) tdb;
 
   };
 
