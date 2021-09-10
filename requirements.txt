@@ -1,6 +1,7 @@
+git+git://github.com/simoncozens/fontTools.git@fix-contextual-overflow#egg=fonttools
 glyphsLib
 kurbopy
-fontMake
+fontmake
 git+git://github.com/simoncozens/fez.git#egg=fez-language
 git+git://github.com/simoncozens/fontfeatures.git#egg=fontfeatures
 youseedee
