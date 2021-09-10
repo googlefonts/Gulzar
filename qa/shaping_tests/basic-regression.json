@@ -114,6 +114,22 @@
     {
       "input": "وپہر",
       "expectation": "REf3|haydb|HAYCm15|tdb.one|BEi6|VAOu1"
+    },
+    {
+      "input": "پ پہلو",
+      "expectation": "VAOf1|LAMm12|haydb|HAYCm3|tdb.one|BEi6|space.urdu|tdb|BEu1"
+    },
+    {
+      "input": "کو بھی",
+      "expectation": "CH_YEf1|HAYAm11|sdb|BEi5|space.urdu|VAOf1|KAFi14"
+    },
+    {
+      "input": "ر پھر",
+      "expectation": "REf2|HAYAm14|tdb.two|BEi5|space.urdu|REu1"
+    },
+    {
+      "input": "یک جھر",
+      "expectation": "REf2|HAYAm14|sdb.two|JIMi5|space.urdu|KAFf1|ddb|BEi3"
     }
   ]
 }
