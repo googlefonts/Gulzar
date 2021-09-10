@@ -128,7 +128,7 @@ class DetectAndSwap(FEZVerb):
                     rules.add(tuple(sequence))
                     result.append(fontFeatures.Chaining(
                         [[orig_dot]],
-                        lookups=[[goto]],
+                        lookups=[[self.parser.fontfeatures.referenceRoutine(goto)]],
                         precontext=[[x] for x in sequence[:last_dot]],
                         postcontext=[[x] for x in sequence[last_dot+1:]],
                     ))
