@@ -77,13 +77,14 @@ Feature kern {
     Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
 
     # Clear Alif Madda
-    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+130> ) @all_above_marks;
-    Position ALIFu1 MADDA ( /i\d/ <xAdvance=+100> );
+    Position ALIFu1 MADDA ( /[ui]\d/ <xAdvance=+130> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui]\d/ <xAdvance=+100> );
 
     # Dots under kaf
     Position ([toeda tda DAMMA] <yPlacement=-50>) /KAF|GAF/;
     Position ([toeda tda DAMMA] <yPlacement=-130>) @NarrowMedials /KAF|GAF/;
     Position ([sda dda] <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
+    Position /FE[im]/ ([sda dda] <yPlacement=-90>) /KAF|GAF/;
 
     # Lam Khah
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);

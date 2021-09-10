@@ -102,6 +102,18 @@
     {
       "input": "سر جہا",
       "expectation": "ALIFf1|haydb|HAYCm3|sdb|JIMi6|space.urdu|REf3|SINi15"
+    },
+    {
+      "input": "مر جسا",
+      "expectation": "ALIFf1|SINm3|sdb|JIMi1|space.urdu|REf3|MIMi14"
+    },
+    {
+      "input": "یک جھر",
+      "expectation": "REf2|HAYAm14|sdb.one|JIMi5|space.urdu|KAFf1|ddb|BEi3"
+    },
+    {
+      "input": "وپہر",
+      "expectation": "REf3|haydb|HAYCm15|tdb.one|BEi6|VAOu1"
     }
   ]
 }
