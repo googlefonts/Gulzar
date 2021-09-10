@@ -5,7 +5,7 @@ DisplayStrings = (
 "/JIMm10",
 "/haydb.one/haydb",
 "/toeda/toeda.two",
-"/BEi5"
+"/KASRA.one/KASRA.two"
 );
 classes = (
 {
@@ -14875,7 +14875,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{105, 4}";
+position = "{105, -26}";
 },
 {
 name = top;
@@ -14943,7 +14943,7 @@ name = ALIFu1;
 },
 {
 name = HAMZA_BELOW;
-transform = "{1, 0, 0, 1, 106, -73}";
+transform = "{1, 0, 0, 1, 106, -103}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -29055,6 +29055,32 @@ width = 266;
 );
 note = KASRA;
 unicode = 0650;
+script = arabic;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = KASRA.two;
+layers = (
+{
+anchors = (
+{
+name = _bottom.two;
+position = "{129, -141}";
+}
+);
+components = (
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 3, -387}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 266;
+}
+);
+note = KASRA;
 script = arabic;
 category = Mark;
 subCategory = Nonspacing;
