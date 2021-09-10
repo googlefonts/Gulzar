@@ -8,4 +8,9 @@ Feature rlig {
   BYMoveDots AlwaysDrop [@below_nuktas haydb haydb.yb];
   # Now do it again but this time drop kasras
   BYMoveDots AlwaysDrop [KASRA KASRA.yb];
+
+  Routine ManualDrop {
+    Substitute (tdb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> tdb.yb;
+    Substitute (ddb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> ddb.yb;
+  } UseMarkFilteringSet [tdb ddb];
 };

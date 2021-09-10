@@ -81,9 +81,12 @@ Feature kern {
     Position ALIFu1 MADDA ( /i\d/ <xAdvance=+100> );
 
     # Dots under kaf
-    Position ([toeda tda] <yPlacement=-50>) /KAF|GAF/;
-    Position ([toeda tda] <yPlacement=-100>) @NarrowMedials /KAF|GAF/;
+    Position ([toeda tda DAMMA] <yPlacement=-50>) /KAF|GAF/;
+    Position ([toeda tda DAMMA] <yPlacement=-130>) @NarrowMedials /KAF|GAF/;
     Position ([sda dda] <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
+
+    # Lam Khah
+    Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
 
   };
 
