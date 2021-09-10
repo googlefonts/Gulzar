@@ -174,7 +174,7 @@ class DetectAndSwap(FEZVerb):
             pos = self.position_glyphs(glyphs)
             pos = [x for x in pos if x["category"] == "mark"]
             # if any(["toeda" in g["name"] or "HAMZA_ABOVE" in g["name"] for g in pos]):
-            self.shelve[key] = self.c.has_collisions(pos)
+            self.shelve[key] = bool(self.c.has_collisions(pos))
         return self.shelve[key]
 
         # for ix in range(len(pos)):
@@ -283,6 +283,7 @@ class DetectAndSwap(FEZVerb):
             "MIM": ([],[]),
             "KAF": ([],[]),
             "GAF": ([],[]),
+            "LAM": ([],[]),
         }
 
         def dotsfor(t):
