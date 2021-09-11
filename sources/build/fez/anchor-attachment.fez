@@ -142,11 +142,13 @@ Feature rlig {
   AtHeight 400-700 AntiKern400sub;
   AtHeight 0-400 AntiKern200pos;
   AtHeight 400-600 AntiKern400pos;
+  DetectAndSwap top reverse;
   DetectAndSwap bottom;
   DetectAndSwap top;
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
+    Substitute /FEi/ dda /FEm/ (sda) -> sda.two;
   };
 };
 
