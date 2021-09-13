@@ -46272,7 +46272,7 @@ position = "{72, -290}";
 },
 {
 name = comma;
-position = "{97, 95}";
+position = "{97, -45}";
 },
 {
 name = exit;
@@ -74951,7 +74951,7 @@ position = "{92, -266}";
 },
 {
 name = comma;
-position = "{117, 115}";
+position = "{117, -25}";
 },
 {
 name = exit;
@@ -75195,7 +75195,7 @@ position = "{85, -264}";
 },
 {
 name = comma;
-position = "{117, 115}";
+position = "{117, -25}";
 },
 {
 name = exit;
