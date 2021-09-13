@@ -10,14 +10,17 @@ SetCategory space.urdu ligature;
 Feature kern {
 	NastaliqKerning 100 70%;
 
+	# Split into two to allow for the first to be class-based
 	Routine FixShortKern {
 		Position /(MIM|RE|VAO)[uf]/ (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+450>) /[sdt]db/ /CH_YEf|JIMf|AINf|MIMf/;
 		Position /(MIM|RE|VAO)[uf]/ (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/;
 		Position (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+200>) /[sdt]db/ /CH_YEf|JIMf|AINf|MIMf/;
+	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
+	Routine FixShortKern2 {
 		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+100>) /CH_YEf|JIM[fm]|AINf|MIMf/;
 		Position /(DAL|RE|VAO|ALIF)[uf]/ (/[KG]AFi|LAMi/ <xAdvance=+300>) /JIMm/ /[sdt]db/;
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
-	Routine FixShortKern2 {
+	Routine FixShortKern3 {
 		Position /ALIF/ (/TEi/ <xAdvance=+100>) /dda/;
 	} IgnoreLigatures UseMarkFilteringSet /dda/;
 };
