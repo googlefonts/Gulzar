@@ -9,11 +9,14 @@ Feature rlig {
   Routine MoreFinaSelection {
     # These are for REf-group things which go to different final REs in their
     # medial form to in their initial form.
-    Substitute /^[BT]E(sd)?m\d+/ ( /REf\d$/ ) -> REf3;
-    Substitute /^HAYCm/ ( /REf\d$/ ) -> REf3;
+    Substitute [BEm1 TEm1] ( REf1 ) -> REf3;
+    Substitute HAYCm1 ( REf1 ) -> REf3;
     Substitute GAFm1 ( REf1 ) -> REf4;
-    Substitute AINi1 ( /REf\d$/ ) -> REf3;
-    Substitute JIMi1 ( /REf\d$/ ) -> REf1;
+    Substitute AINi1 ( REf1 ) -> REf3;
+    Substitute JIMi1 ( REf1 ) -> REf1;
+    Substitute JIMm1 ( REf1 ) -> REf2;
+    Substitute [BEi1 TEi1] ( BEf1 ) -> BEf2;
+    Substitute [BEi1 TEi1] ( TEf1 ) -> BEf2;
   } IgnoreMarks;
 
   Routine DivineName {
