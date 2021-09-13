@@ -24,9 +24,19 @@ Feature mkmk {
     # پپپے پچے چچے مبچے ہچے پچہلے
     SeparateConsecutive /.yb$/ 4 80 350;
   } UseMarkFilteringSet /.yb$/;
-
-
 };
+
+LoadPlugin qalamTools.YBFix;
+LoadPlugin qalamTools.QuantizeAnchors;
+LoadAnchors;
+QuantizeAnchors 5;
+
+Feature mkmk {
+  Routine FixYBPositions {
+    FixYBPositions;
+  };
+};
+
 
 Feature kern {
   Routine GiveChYeDotsMoreSpace {
@@ -70,7 +80,7 @@ Feature kern {
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
 
     # Raise dots on final JIM
-    Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi ddi sdi] <yPlacement=150> );
+    Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi sdi] <yPlacement=150> );
 
     # Add space around pointy damma
     Position @NotTooHighStuff DAMMA (space <xAdvance=+50> );
