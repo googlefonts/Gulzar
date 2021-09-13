@@ -74,9 +74,6 @@ class DetectAndSwap(FEZVerb):
         else:
             self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"] + taskil_above
 
-        if self.reverse:
-            self.dots = [x for x in self.dots if ".two" not in x]
-
 
         self.shelve = shelve.open("collisioncache.db")
         self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.1)
@@ -235,12 +232,6 @@ class DetectAndSwap(FEZVerb):
                 return move_position, orig_dot, newdot, times
 
     def cycle(self, dot):
-        if self.reverse:
-            if dot.endswith(".one"):
-                return dot[:-4]
-            else:
-                return dot+".one"
-
         if dot.endswith(".two"):
             return dot[:-4]
         if dot.endswith(".one"):
@@ -364,3 +355,4 @@ class DetectAndSwap(FEZVerb):
                     for right_dot in dotsfor(right):
                         sequences.append([left, left_dot, right, right_dot ])
         return sequences
+
