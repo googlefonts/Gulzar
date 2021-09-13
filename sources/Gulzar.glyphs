@@ -1,8 +1,7 @@
 {
-.appVersion = "1342";
+.appVersion = "1352";
 DisplayStrings = (
-"/TOEm1/LAMm1",
-"/KAFi1/ALIFu1"
+"/AINm8"
 );
 classes = (
 {
@@ -40418,7 +40417,7 @@ paths = (
 {
 closed = 1;
 nodes = (
-"81 -81 OFFCURVE",
+"55 -81 OFFCURVE",
 "180 -47 OFFCURVE",
 "252 64 CURVE",
 "208 92 LINE",
@@ -40427,7 +40426,7 @@ nodes = (
 "61 54 CURVE SMOOTH",
 "13 54 OFFCURVE",
 "-20 -81 OFFCURVE",
-"14 -81 CURVE SMOOTH"
+"13 -81 CURVE SMOOTH"
 );
 }
 );
@@ -55318,9 +55317,9 @@ nodes = (
 "714 417 OFFCURVE",
 "716 496 CURVE",
 "676 349 LINE",
-"682 281 OFFCURVE",
-"698 186 OFFCURVE",
-"770 186 CURVE SMOOTH"
+"676 248 OFFCURVE",
+"708 186 OFFCURVE",
+"769 186 CURVE SMOOTH"
 );
 }
 );
