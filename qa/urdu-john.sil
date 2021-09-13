@@ -1,6 +1,6 @@
 \begin[papersize=a4,direction=RTL]{document}
-\define[command=leftfont]{\font[filename=fonts/ttf/Gulzar-Regular.ttf,direction=RTL,language=urd,size=17pt]\versefont{Borna}}
-\define[command=rightfont]{\font[family=Noto Nastaliq Urdu,direction=RTL,language=urd,size=14pt]\versefont{Noto}}
+\define[command=leftfont]{\font[filename=fonts/ttf/Gulzar-Regular.ttf,direction=RTL,language=urd,size=15pt]\versefont{B}}
+\define[command=rightfont]{\font[family=Noto Nastaliq Urdu,direction=RTL,language=urd,size=14pt]\versefont{N}}
 \define[command=versefont]{\font[family=Gentium Plus]{\process}}
 \define[command=left]{}
 \script[src=packages/color]
