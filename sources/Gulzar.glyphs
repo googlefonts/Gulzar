@@ -2,6 +2,8 @@
 .appVersion = "1342";
 DisplayStrings = (
 "/TOEm1/LAMm1",
+"/haydb.yb",
+"/sdb.yb/BARI_YEf1",
 "/haydb.yb"
 );
 classes = (
@@ -27975,6 +27977,17 @@ width = 322;
 unicode = 00B8;
 },
 {
+glyphname = nullMark;
+layers = (
+{
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
 color = 3;
 glyphname = toeda;
 layers = (
@@ -28539,6 +28552,36 @@ subCategory = Nonspacing;
 {
 color = 3;
 glyphname = KASRA.yb;
+layers = (
+{
+anchors = (
+{
+name = _bottom;
+position = "{0, -141}";
+},
+{
+name = _ybbottom;
+position = "{8, -267}";
+}
+);
+components = (
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, -147, -797}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+note = KASRA;
+script = arabic;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = KASRA.yb.attached;
 layers = (
 {
 anchors = (
@@ -29803,6 +29846,10 @@ layers = (
 {
 anchors = (
 {
+name = _ybbottom;
+position = "{0, 121}";
+},
+{
 name = bottom.yb;
 position = "{1, -430}";
 }
@@ -29996,6 +30043,10 @@ glyphname = haydb.yb;
 layers = (
 {
 anchors = (
+{
+name = _ybbottom;
+position = "{0, 173}";
+},
 {
 name = bottom.yb;
 position = "{0, -461}";
@@ -30359,6 +30410,10 @@ glyphname = sdb.yb;
 layers = (
 {
 anchors = (
+{
+name = _ybbottom;
+position = "{0, 104}";
+},
 {
 name = bottom.yb;
 position = "{0, -420}";
@@ -31281,6 +31336,10 @@ glyphname = tdb.yb;
 layers = (
 {
 anchors = (
+{
+name = _ybbottom;
+position = "{0, 85}";
+},
 {
 name = bottom.yb;
 position = "{18, -552}";
@@ -34168,16 +34227,44 @@ layers = (
 {
 anchors = (
 {
-name = bottom;
-position = "{17, 0}";
-},
-{
 name = entry;
 position = "{150, 271}";
 },
 {
+name = fourslot.four;
+position = "{927, -242}";
+},
+{
+name = fourslot.one;
+position = "{144, -60}";
+},
+{
+name = fourslot.three;
+position = "{654, -60}";
+},
+{
+name = fourslot.two;
+position = "{412, -270}";
+},
+{
+name = oneslot;
+position = "{530, -60}";
+},
+{
+name = oneslot.low;
+position = "{531, -333}";
+},
+{
 name = top;
 position = "{61, 369}";
+},
+{
+name = twoslot.one;
+position = "{295, -60}";
+},
+{
+name = twoslot.two;
+position = "{741, -60}";
 }
 );
 hints = (

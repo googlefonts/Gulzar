@@ -1,4 +1,6 @@
 Include "shared.fez";
+LoadPlugin Delete;
+LoadAnchors;
 
 Feature rlig {
   # This command evaluates all sequences of @behs followed by a @bariye and
@@ -14,3 +16,72 @@ Feature rlig {
     Substitute (ddb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> ddb.yb;
   } UseMarkFilteringSet [tdb ddb];
 };
+
+DefineClass @inits_medis = @inits | @medis;
+
+Routine AddSdb {Substitute @inits_medis -> $1 sdb.yb; };
+Routine AddDdb {Substitute @inits_medis -> $1 ddb.yb; };
+Routine AddTdb {Substitute @inits_medis -> $1 tdb.yb; };
+Routine AddHaydb {Substitute @inits_medis -> $1 haydb.yb; };
+
+Routine AddSdbAttachedKasra {Substitute @inits_medis -> $1 sdb.yb KASRA.yb.attached; };
+Routine AddDdbAttachedKasra {Substitute @inits_medis -> $1 ddb.yb KASRA.yb.attached; };
+Routine AddTdbAttachedKasra {Substitute @inits_medis -> $1 tdb.yb KASRA.yb.attached; };
+Routine AddHaydbAttachedKasra {Substitute @inits_medis -> $1 haydb.yb KASRA.yb.attached; };
+
+Routine AddKasra {Substitute @inits_medis -> $1 KASRA.yb; };
+
+DefineClass @base_ybs = [sdb.yb ddb.yb tdb.yb KASRA.yb haydb.yb KASRA.yb.attached];
+
+Routine RemoveMark {Substitute @base_ybs -> nullMark; };
+
+Routine Bubble {
+  Chain (sdb.yb ^RemoveMark @inits_medis ^AddSdb);
+  Chain (sdb.yb ^RemoveMark KASRA.yb ^RemoveMark @inits_medis ^AddSdbAttachedKasra);
+  Chain (ddb.yb ^RemoveMark @inits_medis ^AddDdb);
+  Chain (ddb.yb ^RemoveMark KASRA.yb ^RemoveMark @inits_medis ^AddDdbAttachedKasra);
+  Chain (tdb.yb ^RemoveMark @inits_medis ^AddTdb);
+  Chain (tdb.yb ^RemoveMark KASRA.yb ^RemoveMark @inits_medis ^AddTdbAttachedKasra);
+  Chain (haydb.yb ^RemoveMark @inits_medis ^AddHaydb);
+  Chain (haydb.yb ^RemoveMark KASRA.yb ^RemoveMark @inits_medis ^AddHaydbAttachedKasra);
+  Chain (KASRA.yb ^RemoveMark @inits_medis ^AddKasra);
+} UseMarkFilteringSet @base_ybs;
+
+Routine AddBYBefore {Substitute @base_ybs -> BARI_YEf1 $1; };
+Routine RemoveBY { Substitute @base_ybs BARI_YEf1 -> $1; };
+
+Feature rlig {
+  Routine Bubble1 { Chain (@base_ybs ^Bubble); };
+  Delete nullMark;
+  Routine Bubble2 { Chain (@base_ybs ^Bubble); };
+  Delete nullMark;
+  Routine Bubble3 { Chain (@base_ybs ^Bubble); };
+  Delete nullMark;
+  Routine Bubble4 { Chain (@base_ybs ^Bubble); };
+  Delete nullMark;
+
+  Routine SwapEm {
+    Chain (@base_ybs ^AddBYBefore @base_ybs @base_ybs @base_ybs BARI_YEf1 ^RemoveBY);
+    Chain (@base_ybs ^AddBYBefore @base_ybs @base_ybs BARI_YEf1 ^RemoveBY);
+    Chain (@base_ybs ^AddBYBefore @base_ybs BARI_YEf1 ^RemoveBY);
+    Chain (@base_ybs ^AddBYBefore BARI_YEf1 ^RemoveBY);
+  } UseMarkFilteringSet @base_ybs;
+};
+
+Routine AttachCenter { Attach &oneslot &_ybbottom bases; };
+Routine AttachCenterLow { Attach &oneslot.low &_ybbottom bases; };
+Routine AttachLeft { Attach &twoslot.one &_ybbottom bases; };
+Routine AttachRight { Attach &twoslot.two &_ybbottom bases; };
+Routine AttachOneOfFour { Attach &fourslot.one &_ybbottom bases; };
+Routine AttachTwoOfFour { Attach &fourslot.two &_ybbottom bases; };
+Routine AttachThreeOfFour { Attach &fourslot.three &_ybbottom bases; };
+Routine AttachFourOfFour { Attach &fourslot.four &_ybbottom bases; };
+
+Feature mkmk {
+  Routine CountEm {
+    Chain  BARI_YEf1 (@base_ybs ^AttachFourOfFour @base_ybs ^AttachThreeOfFour @base_ybs ^AttachTwoOfFour @base_ybs ^AttachOneOfFour);
+    Chain  BARI_YEf1 (@base_ybs ^AttachRight @base_ybs ^AttachCenterLow @base_ybs ^AttachLeft);
+    Chain  BARI_YEf1 (@base_ybs ^AttachRight @base_ybs ^AttachLeft);
+    Chain  BARI_YEf1 (@base_ybs ^AttachCenter);
+  } UseMarkFilteringSet [sdb.yb ddb.yb tdb.yb KASRA.yb haydb.yb];
+} rlig;
