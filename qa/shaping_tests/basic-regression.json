@@ -44,7 +44,7 @@
     },
     {
       "input": "فدیم",
-      "expectation": "MIMf1|ddb.two|BEi9|DALf1|sda|FEi3"
+      "expectation": "MIMf1|ddb.one|BEi9|DALf1|sda|FEi3"
     },
     {
       "input": "رباں",
@@ -117,7 +117,7 @@
     },
     {
       "input": "پ پہلو",
-      "expectation": "VAOf1|LAMm12|haydb|HAYCm3|tdb.one|BEi6|space.urdu|tdb|BEu1"
+      "expectation": "VAOf1|LAMm12|haydb|HAYCm3|tdb.two|BEi6|space.urdu|tdb|BEu1"
     },
     {
       "input": "کو بھی",
