@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/AINm8"
-);
 classes = (
 {
 automatic = 1;
@@ -85429,7 +85426,7 @@ TOEm = 1;
 {
 AINi = 1;
 AINm = 1;
-BEi = "1";
+BEi = sd2;
 BEm = "1";
 FEi = 1;
 FEm = 1;
@@ -85453,7 +85450,7 @@ SADi = 1;
 SADm = 1;
 SINi = 1;
 SINm = 1;
-TEi = 1;
+TEi = sd2;
 TEm = "1";
 TOEi = "1";
 TOEm = 1;
@@ -85461,7 +85458,7 @@ TOEm = 1;
 {
 AINi = 1;
 AINm = 1;
-BEi = 1;
+BEi = sd2;
 BEm = "1";
 FEi = 1;
 FEm = 1;
@@ -85485,7 +85482,7 @@ SADi = 1;
 SADm = 1;
 SINi = 1;
 SINm = 1;
-TEi = 1;
+TEi = sd2;
 TEm = "1";
 TOEi = 1;
 TOEm = 1;
