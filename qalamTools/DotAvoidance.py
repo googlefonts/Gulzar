@@ -33,7 +33,7 @@ action: BARENAME BARENAME?
 
 VERBS = ["AddSpacedAnchors", "DetectAndSwap"]
 
-taskil_above = ["HAMZA_ABOVE", "DAMMA"]
+taskil_above = ["DAMMA"]
 taskil_below = ["KASRA"]
 
 max_sequence_length = 3
@@ -72,11 +72,11 @@ class DetectAndSwap(FEZVerb):
         if self.anchor == "bottom":
             self.dots = ["haydb", "sdb", "sdb.one", "sdb.two", "ddb", "ddb.one", "ddb.two", "tdb", "tdb.one", "tdb.two"] + taskil_below
         else:
-            self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two"] + taskil_above
+            self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two", "HAMZA_ABOVE"] + taskil_above
 
 
         self.shelve = shelve.open("collisioncache.db")
-        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.1)
+        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.12)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
         drop_one = fontFeatures.Routine(
@@ -301,17 +301,18 @@ class DetectAndSwap(FEZVerb):
 
         dot_combinations = {
             "HAYC": ([], ["haydb"]),
+            "HAYA": (["HAMZA_ABOVE"],[]),
             "SIN": (tda, []),
             "TE": (dda+tda, []),
             "SAD": (sda, []),
             "DAL": (sda+["toeda"], []),
-            "RE": (sda + tda + ["toeda"], []),
+            "RE": (sda + tda + ["toeda", "HAMZA_ABOVE"], []),
             "AIN": (sda, []),
             "FE": (sda+dda, []),
             "QAF": (dda, []),
-            "BE": (sda+dda+tda+["toeda"], sdb+ddb+tdb),
+            "BE": (sda+dda+tda+["toeda", "HAMZA_ABOVE"], sdb+ddb+tdb),
             "TOE": (sda, []),
-            "JIM": (sda, sdb+tdb),
+            "JIM": (sda+["HAMZA_ABOVE"], sdb+tdb),
             "MIM": ([],[]),
             "KAF": ([],[]),
             "GAF": ([],[]),
