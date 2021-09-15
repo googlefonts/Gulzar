@@ -59,7 +59,7 @@ class DetectAndSwapYB(FEZVerb):
             x for x in medis_inits if not ("JIM" in x or "BE" in x or "HAYC" in x)
         ]
         binned_glyphs = (
-            bin_glyphs_by_metric(self.parser.font, self.dot_carriers, "run", 60)
+            bin_glyphs_by_metric(self.parser.font, self.dot_carriers, "run", 50)
             + bin_glyphs_by_metric(self.parser.font, self.haydb_carriers, "run", 15)
             + bin_glyphs_by_metric(self.parser.font, self.kasra_carriers, "run", 15)
         )

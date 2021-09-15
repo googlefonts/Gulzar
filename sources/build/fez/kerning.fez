@@ -17,8 +17,10 @@ Feature kern {
 		Position (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+200>) /[sdt]db/ /CH_YEf|JIMf|AINf|MIMf/;
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
 	Routine FixShortKern2 {
+		Position /ALIF/ (/BEi/ <xAdvance=+150>) /ddb|tdb/;
 		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+100>) /CH_YEf|JIM[fm]|AINf|MIMf/;
-		Position /(DAL|RE|VAO|ALIF)[uf]/ (/[KG]AFi|LAMi/ <xAdvance=+300>) /JIMm/ /[sdt]db/;
+		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+60>);
+		Position /(DAL|RE|VAO|ALIF)[uf]/ (/[KG]AFi|LAMi/ <xAdvance=+300>) /(JIM|BE)m/ /[sdt]db/;
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
 	Routine FixShortKern3 {
 		Position /ALIF/ (/TEi/ <xAdvance=+100>) /dda/;

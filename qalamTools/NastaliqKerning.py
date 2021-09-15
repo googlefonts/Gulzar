@@ -108,7 +108,12 @@ class NastaliqKerning(FEZVerb):
                         # Drop the fina
                         postcontext.pop()
 
+
                 target = [self.isols_finas]
+                if word_tail_rise >= 400 and i > 4:
+                   # HACK
+                   postcontext[-1] = postcontext[-1] + ["BARI_YEf1"]
+
                 lookups = [[self.generate_kern_table_for_rise(word_tail_rise)]]
                 routine.rules.append(
                     fontFeatures.Chaining(

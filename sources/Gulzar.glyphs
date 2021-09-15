@@ -5,9 +5,10 @@ DisplayStrings = (
 "",
 "/space/KASRA.yb/space/space/ddb.yb/space/space/haydb.yb/space/space/sdb.yb/space/space/tdb.yb/space/space/space",
 "/tdb.yb/KASRA.yb/BARI_YEf1",
-"/sdb.yb/space/space/space/ddb.yb/space/HAYCi3/space/space/tdb.yb",
+"/sdb.yb/space/space/space/ddb.yb/space/VAOu1/endOfBariYe/endOfBariYe/VAOu1/VAOf1/space/space/tdb.yb",
 "/KASRA.yb.collides",
-"/KASRA.yb.attached"
+"/KASRA.yb.attached",
+"/REu1"
 );
 classes = (
 {
@@ -15199,7 +15200,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{203, -200}";
+position = "{203, -120}";
 },
 {
 name = top;
@@ -15372,7 +15373,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{230, -192}";
+position = "{230, -122}";
 },
 {
 name = top;
@@ -27980,6 +27981,17 @@ width = 322;
 unicode = 00B8;
 },
 {
+glyphname = endOfBariYe;
+layers = (
+{
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 600;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
 color = 3;
 glyphname = toeda;
 layers = (
@@ -29203,45 +29215,45 @@ paths = (
 {
 closed = 1;
 nodes = (
-"114 213 OFFCURVE",
-"135 241 OFFCURVE",
-"143 255 CURVE",
-"128 255 LINE",
-"134 237 OFFCURVE",
-"148 224 OFFCURVE",
-"168 224 CURVE SMOOTH",
-"198 224 OFFCURVE",
-"232 262 OFFCURVE",
-"232 328 CURVE SMOOTH",
-"232 346 OFFCURVE",
-"228 374 OFFCURVE",
-"224 402 CURVE",
-"211 402 LINE",
-"194 362 LINE",
-"207 283 LINE",
-"210 306 LINE",
-"198 283 OFFCURVE",
-"159 277 OFFCURVE",
-"146 303 CURVE",
-"153 289 LINE",
-"157 382 LINE",
-"138 382 LINE",
-"124 357 LINE",
-"134 276 LINE",
-"139 298 LINE",
-"115 270 OFFCURVE",
-"73 274 OFFCURVE",
-"73 308 CURVE SMOOTH",
-"73 325 OFFCURVE",
-"80 343 OFFCURVE",
-"89 366 CURVE",
-"68 374 LINE",
-"59 354 OFFCURVE",
-"41 313 OFFCURVE",
-"41 272 CURVE SMOOTH",
-"41 239 OFFCURVE",
-"54 213 OFFCURVE",
-"84 213 CURVE SMOOTH"
+"64 223 OFFCURVE",
+"85 251 OFFCURVE",
+"93 265 CURVE",
+"78 265 LINE",
+"84 247 OFFCURVE",
+"98 234 OFFCURVE",
+"118 234 CURVE SMOOTH",
+"148 234 OFFCURVE",
+"182 272 OFFCURVE",
+"182 338 CURVE SMOOTH",
+"182 356 OFFCURVE",
+"178 384 OFFCURVE",
+"174 412 CURVE",
+"161 412 LINE",
+"144 372 LINE",
+"157 293 LINE",
+"160 316 LINE",
+"148 293 OFFCURVE",
+"109 287 OFFCURVE",
+"96 313 CURVE",
+"103 299 LINE",
+"107 392 LINE",
+"88 392 LINE",
+"74 367 LINE",
+"84 286 LINE",
+"89 308 LINE",
+"65 280 OFFCURVE",
+"23 284 OFFCURVE",
+"23 318 CURVE SMOOTH",
+"23 335 OFFCURVE",
+"30 353 OFFCURVE",
+"39 376 CURVE",
+"18 384 LINE",
+"9 364 OFFCURVE",
+"-9 323 OFFCURVE",
+"-9 282 CURVE SMOOTH",
+"-9 249 OFFCURVE",
+"4 223 OFFCURVE",
+"34 223 CURVE SMOOTH"
 );
 }
 );
@@ -36414,7 +36426,7 @@ position = "{42, -5}";
 },
 {
 name = top;
-position = "{178, 323}";
+position = "{178, 291}";
 }
 );
 background = {
@@ -49659,7 +49671,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{261, -142}";
+position = "{271, -132}";
 },
 {
 name = exit;

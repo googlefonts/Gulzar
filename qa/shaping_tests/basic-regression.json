@@ -20,18 +20,8 @@
       "note": "https://github.com/simoncozens/Gulzar/issues/12"
     },
     {
-      "input": "جر",
-      "expectation": "REf1|sdb|JIMi15",
-      "note": "https://github.com/simoncozens/Gulzar/issues/13"
-    },
-    {
-      "input": "عر",
-      "expectation": "REf3|AINi14",
-      "note": "https://github.com/simoncozens/Gulzar/issues/13"
-    },
-    {
       "input": "ہا",
-      "expectation": "ALIFf1=1+213|haydb=0@-82,97+0|HAYCi3=0@-42,67+173",
+      "expectation": "ALIFf1=1+213|haydb=0@-12,67+0|HAYCi3=0@-42,67+173",
       "note": "Don't break heh-alif when fixing short initial be-likes"
     },
     {
@@ -44,7 +34,7 @@
     },
     {
       "input": "فدیم",
-      "expectation": "MIMf1|ddb.one|BEi9|DALf1|sda|FEi3"
+      "expectation": "MIMf1|ddb.two|BEi9|DALf1|sda|FEi3"
     },
     {
       "input": "رباں",
@@ -63,7 +53,7 @@
     },
     {
       "input": "رچینی",
-      "expectation": "CH_YEf1|sda|BEm11|ddb|BEmsd1|tdb.two|JIMi3|REu1",
+      "expectation": "CH_YEf1|sda|BEm11|ddb.one|BEmsd1|tdb.one|JIMi3|REu1",
       "note": "Need double drop"
     },
     {

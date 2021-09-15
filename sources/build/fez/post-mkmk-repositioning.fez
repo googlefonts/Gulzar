@@ -18,6 +18,19 @@ Feature mkmk {
 
 };
 
+
+Routine FinaJimTopRight {
+  Position ([sdb.two ddb.two tdb.two] <yPlacement=-700>);
+  Position ([sdb.one ddb.one tdb.one] <yPlacement=-600>);
+  Position ([haydb.one haydb.two] <yPlacement=-300>);
+  Position ([sdb ddb tdb] <xPlacement=+120 yPlacement=+120>);
+  Position ([haydb] <xPlacement=+80 yPlacement=+80>);
+};
+
+Routine FinaJimDownABit {
+  Position (/sdi|tdi/ <yPlacement=-80>);
+};
+
 Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position ( [ddb.yb tdb.yb] <80 -100 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
@@ -52,7 +65,28 @@ Feature kern {
   } IgnoreMarks;
 
   DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
-  DefineClass @NarrowMedials = /[mf](sd)?\d+$/ & (run < 350);
+  DefineClass @NarrowMedials = /[mf](sd)?\d+$/ & (run < 400);
+
+  Routine FinaJimFixes {
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+
+    # Put AIN here too since it's basically the same
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials  AINf1);
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight AINf1);
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight AINf1);
+
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials AINf1);
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight  AINf1);
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight AINf1);
+
+
+  } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
 
   Routine Various2 {
     # GrossKasraAvoidanceThing
@@ -60,13 +94,8 @@ Feature kern {
     Position ( KASRA.yb <yPlacement=+200> ) AINf1;
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-400> ) JIMf1;
 
-    # Raise dots on final JIM
-    Position /[mi]\d+$/ [sdb ddb tdb] JIMf1 ([tdi sdi] <yPlacement=150> );
-
     # Add space around pointy damma
     Position @NotTooHighStuff DAMMA (space <xAdvance=+50> );
-
-    # Drop haydb JIMf1
 
     # Finess Init kasra yeh barree e.g. رِیے
     Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
@@ -79,21 +108,33 @@ Feature kern {
     # Clear Alif Nun KL
     Position /ALIF[uf]1/ (BEi8 <xAdvance=+50>) /sda|dda/ KAFm3;
 
-    # Dots under kaf
-    Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /KAF|GAF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-130>) @NarrowMedials /KAF|GAF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-130>) @NarrowMedials @all_above_marks /KAF|GAF/;
-    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
-    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials @all_above_marks /KAF|GAF/;
-    Position /FE[im]/ (/sda|dda/ <yPlacement=-100>) /KAF|GAF/;
-
     # Lam Khah
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
 
     # Just fiddling now
-    Position  parenright.latin (/BEi/ <xAdvance=+70>) [dda tdb];
+    Position  parenright.latin (/[BT]Ei/ <xAdvance=+70>) [dda tdb];
 
   };
+
+  Routine DotsUnderGaf {
+    Position (/\.one$/ <yPlacement=-220>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position /\.one$/ @NarrowMedials (@all_above_marks <yPlacement=-40>) /KAF|GAF/;
+    Position (/\.one$/ <yPlacement=-220>) @all_above_marks /KAF|GAF/;
+
+    Position /LAM/ (/DAMMA/ <yPlacement=+150>) /KAF|GAF/;
+    Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials /KAF|GAF/;
+    Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials @all_above_marks /KAF|GAF/;
+
+    Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials @all_above_marks /KAF|GAF/;
+
+    Position (/sda|dda/ <yPlacement=-80>) @NarrowMedials /KAF|GAF/;
+    Position (/sda|dda/ <yPlacement=-80>) @NarrowMedials @all_above_marks /KAF|GAF/;
+
+    Position /sda|dda/ @NarrowMedials (@all_above_marks <yPlacement=-20>) /KAF|GAF/;
+    Position /FE[im]/ (/sda|dda/ <yPlacement=-100>) /KAF|GAF/;
+    } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda/;
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;

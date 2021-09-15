@@ -35,6 +35,8 @@ Feature rlig {
     Substitute BEisd1 sdb.yb BEm7 (sdb.yb) BARI_YEf1 -> sdb.yb.collides;
     Substitute BEisd1 sdb.yb BEm7 (sdb.yb) BARI_YEf1 -> sdb.yb.collides;
   } UseMarkFilteringSet @base_ybs;
+
+  Substitute BARI_YEf1 -> endOfBariYe $1;
 };
 
 # But first let's place them under their base glyphs
@@ -61,21 +63,21 @@ Routine FixFourYBs {
 
 
 Routine FixThreeYBs {
-  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-160>  @colliding_ybs <xPlacement=-300>);
-  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-160>  sdb.yb <xPlacement=-250>);
-  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-160>  @unattached_ybs <xPlacement=-300>);
-  Position (@unattached_ybs <xPlacement=40> @unattached_ybs <xPlacement=25>  @colliding_ybs <xPlacement=-150>);
+  Position (@unattached_ybs <xPlacement=60> @colliding_ybs <xPlacement=-150>  @colliding_ybs <xPlacement=-355>);
+  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  sdb.yb <xPlacement=-265>);
+  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  @unattached_ybs <xPlacement=-355>);
+  Position (@unattached_ybs <xPlacement=30> @unattached_ybs <xPlacement=15>  @colliding_ybs <xPlacement=-170>);
 } IgnoreBases UseMarkFilteringSet @unattached_ybs;
 
 Routine FixTwoYBs {
-  Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-150>);
-  Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-150>);
+  Position (@unattached_ybs <xPlacement=70> @colliding_ybs <xPlacement=-180>);
 } IgnoreBases UseMarkFilteringSet @unattached_ybs;
 
 Feature mark {
   Routine CountYBMarksAndDispatch {
-    Chain (@unattached_ybs ^FixFourYBs @medis @unattached_ybs @medis @unattached_ybs @medis @unattached_ybs BARI_YEf1);
-    Chain (@unattached_ybs ^FixThreeYBs @medis @unattached_ybs @medis @unattached_ybs BARI_YEf1);
-    Chain (@unattached_ybs ^FixTwoYBs @medis @unattached_ybs BARI_YEf1);
-  } UseMarkFilteringSet @unattached_ybs;
+    Chain (@unattached_ybs ^FixFourYBs @unattached_ybs @unattached_ybs @unattached_ybs endOfBariYe);
+    Chain (@unattached_ybs ^FixThreeYBs @unattached_ybs @unattached_ybs endOfBariYe);
+    Chain (@unattached_ybs ^FixTwoYBs @unattached_ybs endOfBariYe);
+    Chain (@unattached_ybs ^FixTwoYBs @unattached_ybs endOfBariYe);
+  } IgnoreBases UseMarkFilteringSet [@unattached_ybs endOfBariYe];
 };

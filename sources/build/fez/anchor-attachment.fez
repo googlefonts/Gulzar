@@ -58,6 +58,10 @@ Routine DoNothing {
   Substitute JIMi1 -> JIMi1;
 };
 
+Routine DoNothingPos {
+  Position (haydb.yb <xPlacement=0>);
+};
+
 DefineClass @bigbowlfina = /(AIN|CH_YE|JIM|LAM|NUN|QAF|SAD|SIN)[fu]/;
 
 Routine AntiKern0sub {
@@ -83,6 +87,7 @@ Routine AntiKern100sub {
   Chain (/(BE)[fu]\d+/ [sdb ddb ddb.one tdb haydb] BEi6 [sdb ddb ddb.one tdb haydb] ^DropTwo);
 
   Chain (/(BE)[fu]\d+/ [sdb ddb ddb.one tdb haydb] /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
+  Chain (/(HAYC|BARI_YE)[fu]\d+/ /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [ddb ddb.one tdb haydb] ^DropOne);
 
   Chain (/(KAF|GAF)[fu]\d+/ /(JIMi|HAYCi|BEi)$/ [sdb ddb ddb.one tdb haydb] ^DropOne);
 
@@ -103,10 +108,13 @@ Routine AntiKern200sub {
   Chain (/((CH_YE|AIN|JIM)[fu]\d+)|NUN|SIN|LAM|REf3/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropTwo);
   Chain ([REf1 REf3] /JIMi/ tdb ^DropTwo);
 
+  Chain (REf3 /BEi/ /BEm/ [sdb ddb ddb.one tdb haydb] ^DropOne);
+  Chain (REf3 /BEi/ [sdb ddb ddb.one tdb haydb] ^DropTwo /BEm/ [sdb ddb ddb.one tdb haydb] ^DropOne);
+
   Chain (/(BE)[fu]\d+/ BEi6 [sdb ddb ddb.one tdb haydb] ^DropTwo);
   Chain (/(BE)[fu]\d+/ [sdb ddb ddb.one tdb haydb] BEi6 [sdb ddb ddb.one tdb haydb] ^DropTwo);
 
-  Chain (/(RE|VAO|HAYC|DAL|BARI_YE|BE|TE)[fu]\d+/ /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
+  Chain (/(RE|VAO|HAYC|HAYA|DAL|BARI_YE|BE|TE)[fu]\d+/ /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
   Chain (/(BE)[fu]\d+/ [sdb ddb ddb.one tdb haydb] /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
 
   Chain (/(KAF|GAF)[fu]\d+/ /(JIMi|HAYCi|BEi)$/ [sdb ddb ddb.one tdb haydb] ^DropOne);
@@ -126,10 +134,11 @@ Routine AntiKern400sub {
   Chain /BEi/ ddb.one (REf1 /BEi/ ddb ^DropTwo);
 
   Chain (/(RE|VAO|DAL|(CH_YE|AIN)[fu]\d+)|NUN|SIN|LAM/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropTwo /JIM|BE|HAYC/ [sdb ddb tdb haydb] ^DropOne);
+  Chain (/(RE|VAO|DAL|(CH_YE|AIN)[fu]\d+)|NUN|SIN|LAM/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropOne /HAYAm/);
   Chain (/(RE|VAO|DAL|(CH_YE|AIN)[fu]\d+)|NUN|SIN|LAM/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropTwo);
   Chain (/HAYCu\d+/ /(BEi|JIMi|HAYCi)/ [ddb ddb.one tdb haydb] ^DropTwo);
-  Chain (/(HAYC|BARI_YE)[fu]\d+/ /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [ddb ddb.one tdb haydb] ^DropOne);
-  
+  Chain (/HAYCf/ /JIMi/ [ddb ddb.one tdb] ^DropTwo);
+  Chain (/(HAYC|BARI_YE)[fu]\d+/ /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [ddb ddb.one tdb haydb] ^DropTwo);
 
   Chain (/(KAF|GAF)[fu]\d+/ JIMi5 [sdb ddb ddb.one tdb haydb] ^DropTwo);
   Chain (/(KAF|GAF)[fu]\d+/ /(JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
@@ -139,9 +148,10 @@ Routine AntiKern400sub {
 
 } IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb];
 
-
-
 Routine AntiKern200pos {
+  Chain (/[fu]\d+/ /HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$/ ^DoNothingPos) /haydb/ BARI_YEf1;
+  Chain (/[fu]\d+/ /HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$/ ^DoNothingPos) BARI_YEf1;
+
   Chain (/REf/ /(BE|JIM|HAYC)i/ [sdb.two ddb.one ddb.two tdb.two] ^DropATinyBitMore);
   Chain (/.*[fu]\d+/ toeda @inits ^OpenSpaceBeforeKern);
   Chain (/(MIM)[fu]\d+|BEf1|NUN|SIN/ /(JIM|BE|TE)i/ ^OpenSpaceBeforeKern [sdb ddb tdb haydb]);
@@ -149,28 +159,34 @@ Routine AntiKern200pos {
   Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /(HAYCi3|BEi5)$/ ^OpenSmallSpaceBeforeKern);
 
   Chain (/(RE|VAO|HAYC|DAL|BARI_YE|MIM)[fu]\d+/ /HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$/ ^OpenSpaceBeforeKern);
-  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern [sdb ddb ddb.one tdb haydb]);
+  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
   Chain (/ALIF[fu]/ /(BE|JIM|HAYC)i/ ^OpenSmallSpaceBeforeKern /ddb|tdb/);
+  Chain (/[DAL|RE]f/ FEi3 ^OpenSmallSpaceBeforeKern /BE/ /ddb|tdb/);
+  Chain (/CH_YE[fu]/ /JIMi/ ^OpenSmallSpaceBeforeKern);
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ [sdb.two ddb.two tdb.two] ^DropATinyBitMore);
-} IgnoreLigatures UseMarkFilteringSet [sdb ddb tdb haydb toeda ddb.one sdb.two ddb.two tdb.two];
+  Chain (REf3 /BEi/ ^OpenSmallSpaceBeforeKern [sdb ddb ddb.one tdb haydb] /BEm/ [sdb ddb ddb.one tdb haydb] );
+  Chain (REf3 /BEi/ ^OpenSmallSpaceBeforeKern /BEm/ [sdb ddb ddb.one tdb haydb] );
+
+} IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda/;
 
 Routine AntiKern400pos {
   Chain (@bariye @inits ^OpenSpaceBeforeKern);
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
   Chain (/ALIF[fu]|HAYCu/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /ddb|tdb|sdb/);
+  Chain (/VAO[uf]|REu|KAF[fu]|GAF[fu]/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /ddb|tdb|sdb/ ^DropATinyBitMore);
   Chain ([@isols @finas] /BEi|JIMi/ [tdb.one tdb.two sdb.two ddb.two] ^DropATinyBitMore);
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
 Feature rlig {
-  DetectAndSwap top reverse;
-  DetectAndSwap bottom;
-  DetectAndSwap top;
   AtHeight 0-100 AntiKern0sub;
   AtHeight 100-200 AntiKern100sub;
   AtHeight 200-400 AntiKern200sub;
-  AtHeight 400-700 AntiKern400sub;
+  AtHeight 400-600 AntiKern400sub;
   AtHeight 0-400 AntiKern200pos;
   AtHeight 400-600 AntiKern400pos;
+  DetectAndSwap top reverse;
+  DetectAndSwap bottom;
+  DetectAndSwap top;
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
