@@ -5,7 +5,7 @@ DisplayStrings = (
 "",
 "/space/KASRA.yb/space/space/ddb.yb/space/space/haydb.yb/space/space/sdb.yb/space/space/tdb.yb/space/space/space",
 "/tdb.yb/KASRA.yb/BARI_YEf1",
-"/sdb.yb/space/space/space/ddb.yb/space/space/space/tdb.yb",
+"/sdb.yb/space/space/space/ddb.yb/space/HAYCi3/space/space/tdb.yb",
 "/KASRA.yb.collides",
 "/KASRA.yb.attached"
 );
@@ -30041,7 +30041,7 @@ layers = (
 anchors = (
 {
 name = _comma;
-position = "{134, 61}";
+position = "{61, 0}";
 },
 {
 name = bottom;
@@ -46447,7 +46447,7 @@ position = "{72, -290}";
 },
 {
 name = comma;
-position = "{97, -45}";
+position = "{97, 8}";
 },
 {
 name = exit;

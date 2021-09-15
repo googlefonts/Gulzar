@@ -65,7 +65,7 @@ class NastaliqKerning(FEZVerb):
 
         self.inits = self.parser.fontfeatures.namedClasses["inits"]
         medis = self.parser.fontfeatures.namedClasses["medis"]
-        self.isols = self.parser.fontfeatures.namedClasses["isols"]
+        self.isols = [x for x in self.parser.fontfeatures.namedClasses["isols"] if "BARI_YE" not in x]
         bariye = self.parser.fontfeatures.namedClasses["bariye"]
         finas = [x for x in self.parser.fontfeatures.namedClasses["finas"] if x not in bariye]
         # self.isols_finas = ["DALf1", "REu1", "ALIFu1"]
