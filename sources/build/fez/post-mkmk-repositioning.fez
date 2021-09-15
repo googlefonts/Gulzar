@@ -38,7 +38,7 @@ Feature kern {
     Position ( /haydb/ <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( /.yb|tdb|ddb$/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
