@@ -47,12 +47,6 @@ Feature kern {
   DefineClass @WideFinals = @finas & (xMin < 50);
 
   Routine Various1 {
-    # Drop Dots Before Vao
-    Position ( [tdb ddb] <yPlacement=-100> ) VAOf1;
-
-    # Raise dots after wide finals
-    Position @WideFinals @inits ( [ddb tdb] <yPlacement=+150> ) ;
-
     # Finesse Beh Haya
     Position /BE(sd)?i/ ([ddb tdb] <xPlacement=50>) /HAYAm/;
 

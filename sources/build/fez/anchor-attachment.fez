@@ -66,6 +66,7 @@ DefineClass @bigbowlfina = /(AIN|CH_YE|JIM|LAM|NUN|QAF|SAD|SIN)[fu]/;
 
 Routine AntiKern0sub {
   Chain (REf3 /JIMi/ sdb ^DoNothing);
+  Chain (REf1 BEi10 ^DoNothing);
   Chain (REf3 BEi3 [sdb ddb tdb] ^DropOne); # سرپہ
   Chain (REf3 /BEi/ [sdb ddb tdb] ^DropTwo);
   Chain (/(RE|VAO|DAL)f|VAOu/ /BEi|JIMi/ [sdb ddb tdb] ^DropOne);
@@ -80,7 +81,6 @@ Routine AntiKern100sub {
 
   # Unfortunate double drop...
   Chain /BEi/ ddb.one (REf1 /BEi/ ddb ^DropTwo);
-
   Chain (/((CH_YE|AIN|JIM)[fu]\d+)|NUN|SIN|LAM/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropTwo);
 
   Chain (/(BE)[fu]\d+/ BEi6 [sdb ddb ddb.one tdb haydb] ^DropTwo);
@@ -88,12 +88,7 @@ Routine AntiKern100sub {
 
   Chain (/(BE)[fu]\d+/ [sdb ddb ddb.one tdb haydb] /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [sdb ddb ddb.one tdb haydb] ^DropOne);
   Chain (/(HAYC|BARI_YE)[fu]\d+/ /(BEi|JIMi|HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$)/ [ddb ddb.one tdb haydb] ^DropOne);
-
   Chain (/(KAF|GAF)[fu]\d+/ /(JIMi|HAYCi|BEi)$/ [sdb ddb ddb.one tdb haydb] ^DropOne);
-
-  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropOne);
-
-
 } IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb];
 
 Routine AntiKern200sub {
@@ -129,6 +124,7 @@ Routine AntiKern400sub {
   Chain (/NUN|SIN|LAM/ /(JIM)i/ ^DoNothing [sdb ddb tdb haydb]); # Do not drop here, space instead
   Chain (/(NUN|SIN|LAM)[fu]/ /BEi/ ^DoNothing sdb); # Do not drop here, it's fine
   Chain (/REf3/ /BEi/ ^DoNothing [sdb ddb tdb]); # May need height correction...
+  Chain (/REf1/ /BEi/ ^DoNothing [sdb ddb tdb]); # May need height correction...
 
   # Unfortunate double drop...
   Chain /BEi/ ddb.one (REf1 /BEi/ ddb ^DropTwo);
@@ -159,7 +155,7 @@ Routine AntiKern200pos {
   Chain (/(RE|VAO|HAYC|DAL|BARI_YE)[fu]\d+/ /(HAYCi3|BEi5)$/ ^OpenSmallSpaceBeforeKern);
 
   Chain (/(RE|VAO|HAYC|DAL|BARI_YE|MIM)[fu]\d+/ /HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$/ ^OpenSpaceBeforeKern);
-  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
+  Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSmallSpaceBeforeKern /sdb|ddb|tdb|haydb/);
   Chain (/ALIF[fu]/ /(BE|JIM|HAYC)i/ ^OpenSmallSpaceBeforeKern /ddb|tdb/);
   Chain (/[DAL|RE]f/ FEi3 ^OpenSmallSpaceBeforeKern /BE/ /ddb|tdb/);
   Chain (/CH_YE[fu]/ /JIMi/ ^OpenSmallSpaceBeforeKern);
