@@ -1,4 +1,4 @@
-git+git://github.com/simoncozens/fontTools.git@fix-contextual-overflow#egg=fonttools
+git+git://github.com/fonttools/fonttools.git#egg=fonttools
 glyphsLib
 kurbopy
 fontmake
