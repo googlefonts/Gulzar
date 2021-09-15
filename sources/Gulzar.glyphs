@@ -2,7 +2,12 @@
 .appVersion = "1342";
 DisplayStrings = (
 "/TOEm1/LAMm1",
-"/haydb.yb"
+"",
+"/space/KASRA.yb/space/space/ddb.yb/space/space/haydb.yb/space/space/sdb.yb/space/space/tdb.yb/space/space/space",
+"/tdb.yb/KASRA.yb/BARI_YEf1",
+"/sdb.yb/space/space/space/ddb.yb/space/space/space/tdb.yb",
+"/KASRA.yb.collides",
+"/KASRA.yb.attached"
 );
 classes = (
 {
@@ -28167,6 +28172,108 @@ category = Mark;
 subCategory = Nonspacing;
 },
 {
+glyphname = KASRA.yb.attached;
+layers = (
+{
+anchors = (
+{
+name = _bottom.yb;
+position = "{0, -43}";
+}
+);
+components = (
+{
+name = KASRA.yb;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+glyphname = KASRA.yb.collides;
+layers = (
+{
+components = (
+{
+name = KASRA.yb;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+glyphname = ddb.yb.collides;
+layers = (
+{
+components = (
+{
+name = ddb.yb;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+glyphname = haydb.yb.collides;
+layers = (
+{
+components = (
+{
+name = haydb.yb;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+glyphname = sdb.yb.collides;
+layers = (
+{
+components = (
+{
+name = sdb.yb;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+glyphname = tdb.yb.collides;
+layers = (
+{
+components = (
+{
+name = tdb.yb;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
 color = 3;
 glyphname = toeda.one;
 layers = (
@@ -28541,16 +28648,10 @@ color = 3;
 glyphname = KASRA.yb;
 layers = (
 {
-anchors = (
-{
-name = _bottom.yb;
-position = "{0, -539}";
-}
-);
 components = (
 {
 name = FATHA;
-transform = "{1, 0, 0, 1, -147, -797}";
+transform = "{1, 0, 0, 1, -147, -301}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -29812,36 +29913,36 @@ paths = (
 {
 closed = 1;
 nodes = (
-"107 -144 OFFCURVE",
-"75 -124 OFFCURVE",
-"64 -89 CURVE",
-"58 -89 LINE",
-"-9 -179 LINE",
-"-53 -173 OFFCURVE",
-"-90 -149 OFFCURVE",
-"-101 -113 CURVE",
-"-107 -113 LINE",
-"-143 -160 LINE SMOOTH",
-"-152 -172 OFFCURVE",
-"-168 -192 OFFCURVE",
-"-168 -214 CURVE SMOOTH",
-"-168 -242 OFFCURVE",
-"-143 -275 OFFCURVE",
-"-92 -289 CURVE SMOOTH",
-"-72 -294 OFFCURVE",
-"-62 -293 OFFCURVE",
-"-53 -280 CURVE SMOOTH",
-"-6 -213 LINE",
-"6 -231 OFFCURVE",
-"31 -253 OFFCURVE",
-"73 -265 CURVE SMOOTH",
-"93 -270 OFFCURVE",
-"103 -269 OFFCURVE",
-"112 -256 CURVE SMOOTH",
-"161 -186 LINE SMOOTH",
-"173 -169 OFFCURVE",
-"171 -156 OFFCURVE",
-"151 -152 CURVE SMOOTH"
+"107 -229 OFFCURVE",
+"75 -209 OFFCURVE",
+"64 -174 CURVE",
+"58 -174 LINE",
+"-9 -264 LINE",
+"-53 -258 OFFCURVE",
+"-90 -234 OFFCURVE",
+"-101 -198 CURVE",
+"-107 -198 LINE",
+"-143 -245 LINE SMOOTH",
+"-152 -257 OFFCURVE",
+"-168 -277 OFFCURVE",
+"-168 -299 CURVE SMOOTH",
+"-168 -327 OFFCURVE",
+"-143 -360 OFFCURVE",
+"-92 -374 CURVE SMOOTH",
+"-72 -379 OFFCURVE",
+"-62 -378 OFFCURVE",
+"-53 -365 CURVE SMOOTH",
+"-6 -298 LINE",
+"6 -316 OFFCURVE",
+"31 -338 OFFCURVE",
+"73 -350 CURVE SMOOTH",
+"93 -355 OFFCURVE",
+"103 -354 OFFCURVE",
+"112 -341 CURVE SMOOTH",
+"161 -271 LINE SMOOTH",
+"173 -254 OFFCURVE",
+"171 -241 OFFCURVE",
+"151 -237 CURVE SMOOTH"
 );
 }
 );
@@ -30361,13 +30462,18 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{0, -420}";
+position = "{0, -485}";
 }
 );
 components = (
 {
 name = sda;
-transform = "{1, 0, 0, 1, -140, -456}";
+transform = "{1, 0, 0, 1, -140, -521}";
+}
+);
+guideLines = (
+{
+position = "{11, -174}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31283,7 +31389,7 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{18, -552}";
+position = "{18, -630}";
 }
 );
 background = {
@@ -31346,7 +31452,12 @@ nodes = (
 components = (
 {
 name = tdb;
-transform = "{1, 0, 0, 1, -218, -203}";
+transform = "{1, 0, 0, 1, -218, -281}";
+}
+);
+guideLines = (
+{
+position = "{-96, -174}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -73942,11 +74053,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{197, -278}";
+position = "{197, -272}";
 },
 {
 name = exit;
-position = "{54, -6}";
+position = "{54, 0}";
 },
 {
 name = top;

@@ -16,39 +16,20 @@ Feature mkmk {
   # also be separated.
   DefineClass @behs = /.*[mif](sd)?\d+$/;
 
-  Routine SeparateConsecutiveYBDots {
-    # These numbers need to be small enough that reasonable cases work fine,
-    # (test case: پپپے) but also big enough to cope with the "worst case" of
-    # YB dots, which is probably stuff like پچے/چچے. Other nasty test cases
-    # are مبچے and, for extra bonus fun points, ہچے and  پچہلے.
-    # پپپے پچے چچے مبچے ہچے پچہلے
-    SeparateConsecutive /.yb$/ 4 80 350;
-  } UseMarkFilteringSet /.yb$/;
 };
-
-LoadPlugin qalamTools.YBFix;
-LoadPlugin qalamTools.QuantizeAnchors;
-LoadAnchors;
-QuantizeAnchors 5;
-
-Feature mkmk {
-  Routine FixYBPositions {
-    FixYBPositions;
-  };
-};
-
 
 Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position ( [ddb.yb tdb.yb] <80 -100 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <105 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( haydb.yb <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /haydb/ <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /haydb/ <125 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    # Position ( /.yb|tdb|ddb$/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( haydb.yb <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
-    Position ( haydb.yb <xPlacement=50 yPlacement=-25> ) JIMf1;
-  } UseMarkFilteringSet /haydb.yb|sdb.yb|tdb|ddb/;
+    Position ( /.yb|tdb|ddb$/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /haydb/ <60 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
+    Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
+  } UseMarkFilteringSet /haydb|sdb.yb|tdb|ddb|haydb/;
 
   DefineClass @WideFinals = @finas & (xMin < 50);
 
@@ -99,10 +80,12 @@ Feature kern {
     Position /ALIF[uf]1/ (BEi8 <xAdvance=+50>) /sda|dda/ KAFm3;
 
     # Dots under kaf
-    Position ([toeda tda DAMMA] <yPlacement=-50>) /KAF|GAF/;
-    Position ([toeda tda DAMMA] <yPlacement=-130>) @NarrowMedials /KAF|GAF/;
-    Position ([sda dda] <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
-    Position /FE[im]/ ([sda dda] <yPlacement=-100>) /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-130>) @NarrowMedials /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-130>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
+    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position /FE[im]/ (/sda|dda/ <yPlacement=-100>) /KAF|GAF/;
 
     # Lam Khah
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);

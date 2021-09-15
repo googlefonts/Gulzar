@@ -9,7 +9,7 @@ LoadPlugin qalamTools.QuantizeAnchors;
 LoadPlugin qalamTools.DotAvoidance;
 LoadPlugin qalamTools.NastaliqKerning;
 
-AddSpacedAnchors 140;
+AddSpacedAnchors 220;
 
 Include "shared.fez";
 
@@ -50,7 +50,8 @@ Routine OpenSmallSpaceBeforeKern {
 
 
 Routine DropATinyBitMore {
-  Position ([tdb.one ddb.one tdb.two sdb.two ddb.two] <yPlacement=-120>);
+  Position ([tdb.one ddb.one] <yPlacement=-120>);
+  Position ([tdb.two sdb.two ddb.two] <yPlacement=-180>);
 };
 
 Routine DoNothing {
@@ -61,6 +62,7 @@ DefineClass @bigbowlfina = /(AIN|CH_YE|JIM|LAM|NUN|QAF|SAD|SIN)[fu]/;
 
 Routine AntiKern0sub {
   Chain (REf3 /JIMi/ sdb ^DoNothing);
+  Chain (REf3 BEi3 [sdb ddb tdb] ^DropOne); # سرپہ
   Chain (REf3 /BEi/ [sdb ddb tdb] ^DropTwo);
   Chain (/(RE|VAO|DAL)f|VAOu/ /BEi|JIMi/ [sdb ddb tdb] ^DropOne);
   Chain (REf3 /BEi|JIMi/ /BEm/ [sdb ddb tdb] ^DropOne);
@@ -156,20 +158,19 @@ Routine AntiKern400pos {
   Chain (@bariye @inits ^OpenSpaceBeforeKern);
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /sdb|ddb|tdb|haydb/);
   Chain (/ALIF[fu]|HAYCu/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /ddb|tdb|sdb/);
-  Chain ([@isols @finas] /BEi|JIMi/ ^OpenSpaceBeforeKern [tdb.one tdb.two sdb.two ddb.two] ^DropATinyBitMore);
+  Chain ([@isols @finas] /BEi|JIMi/ [tdb.one tdb.two sdb.two ddb.two] ^DropATinyBitMore);
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
 Feature rlig {
+  DetectAndSwap top reverse;
+  DetectAndSwap bottom;
+  DetectAndSwap top;
   AtHeight 0-100 AntiKern0sub;
   AtHeight 100-200 AntiKern100sub;
   AtHeight 200-400 AntiKern200sub;
   AtHeight 400-700 AntiKern400sub;
   AtHeight 0-400 AntiKern200pos;
   AtHeight 400-600 AntiKern400pos;
-  DetectAndSwap top reverse;
-  DetectAndSwap bottom reverse;
-  DetectAndSwap bottom;
-  DetectAndSwap top;
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
