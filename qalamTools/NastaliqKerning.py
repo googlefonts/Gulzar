@@ -233,8 +233,8 @@ class AtHeight(FEZVerb):
                     sum([x[1] for x in postcontext_plus_rise]), rise_quantization
                 )
                 postcontext = list(reversed([x[0] for x in postcontext_plus_rise]))
-                if word_tail_rise >= maximum_rise:
-                    word_tail_rise = maximum_rise
+                #if word_tail_rise >= maximum_rise:
+                #    word_tail_rise = maximum_rise
                 #     if i == maximum_word_length:
                 #         # Drop the fina
                 #         postcontext.pop()

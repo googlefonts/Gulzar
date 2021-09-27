@@ -24,6 +24,8 @@ Feature kern {
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
 	Routine FixShortKern3 {
 		Position /ALIF/ (/TEi/ <xAdvance=+100>) /dda/;
+		Position /REf3/ (/TEi/ <xAdvance=+100>);
+		Position /REu1|VAOf1|VAOu1/ (/BEi3|BEisd1/ <xAdvance=+100>);
 	} IgnoreLigatures UseMarkFilteringSet /dda/;
 	Routine FixLongKern {
 		Position REf3 (/[KG]AFi/ <xAdvance=-120>);

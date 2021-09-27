@@ -157,7 +157,6 @@ def run_a_set_of_tests(
         if ran_a_test:
             if not failed_tests:
                 yield PASS, f"{shaping_file}: No regression detected"
-                return
             else:
                 yield from generate_report(vharfbuzz, shaping_file, failed_tests)
 
