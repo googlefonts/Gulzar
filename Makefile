@@ -66,10 +66,10 @@ sources/build/fea/decomposition.fea: sources/build/fez/decomposition.fez venv
 sources/build/fea/connections.fea: sources/build/fez/connections.fez sources/build/rules.csv venv
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez sources/build/fez/pre-mkmk-repositioning.fez venv $(GLYPHS_FILE)
+sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez sources/build/fez/pre-mkmk-repositioning.fez venv $(GLYPHS_FILE)  qalamTools/DotAvoidance.py
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv
+sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv qalamTools/NastaliqKerning.py
 	. venv/bin/activate; fez2fea -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/latin-kerning.fea: sources/build/fez/latin-kerning.fez $(GLYPHS_FILE) venv
@@ -80,7 +80,7 @@ sources/build/fea/post-mkmk-repositioning.fea: sources/build/fez/post-mkmk-repos
 
 # Technically these two should depend on the Glyphs file, but since the design
 # and width of glyphs is mostly fixed, I'm removing that dependency for now.
-sources/build/fea/bariye-drop.fea: sources/build/fez/bariye-drop.fez sources/build/fez/shared.fez venv
+sources/build/fea/bariye-drop.fea: sources/build/fez/bariye-drop.fez sources/build/fez/shared.fez venv qalamTools/YBFix.py
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/bariye-overhang.fea: sources/build/fez/bariye-overhang.fez sources/build/fez/shared.fez venv
