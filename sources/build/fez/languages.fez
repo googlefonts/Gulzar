@@ -1,5 +1,5 @@
-DefineClass @latinpunct = [ exclam.latin hyphen.latin colon.latin semicolon.latin quotedblleft.latin quotedblright.latin parenleft.latin parenright.latin percent.latin dollar.latin degree.latin divide.latin];
-DefineClass @urdupunct = [ exclam.urdu hyphen.urdu colon.urdu semicolon.urdu quotedblleft.urdu quotedblright.urdu parenleft.urdu parenright.urdu percent.urdu dollar.urdu degree.urdu divide.urdu];
+DefineClass @latinpunct = [ exclam.latin hyphen.latin colon.latin semicolon.latin quotedblleft.latin quotedblright.latin parenleft.latin parenright.latin percent.latin dollar.latin degree.latin divide.latin equal.latin plus.latin];
+DefineClass @urdupunct = [ exclam.urdu hyphen.urdu colon.urdu semicolon.urdu quotedblleft.urdu quotedblright.urdu parenleft.urdu parenright.urdu percent.urdu dollar.urdu degree.urdu divide.urdu equal.urdu plus.urdu];
 
 Feature ccmp {
         Substitute space -> space.urdu <<arab/dflt arab/URD>>;
