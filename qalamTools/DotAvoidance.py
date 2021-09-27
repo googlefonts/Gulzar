@@ -45,7 +45,7 @@ class AddSpacedAnchors(FEZVerb):
     def action(self, args):
         (spacing,) = args
         anchors = self.parser.fontfeatures.anchors
-        glyphs = self.parser.font.glyphs.keys()
+        glyphs = self.parser.font.exportedGlyphs()
         for g in glyphs:
             if g not in anchors: continue
             this_anchors = anchors[g]
@@ -268,7 +268,7 @@ class DetectAndSwap(FEZVerb):
         return glyphs
 
     def get_contexts(self):
-        rules = load_rules("rules.csv", self.parser.font.glyphs.keys(), full=True)
+        rules = load_rules("rules.csv", self.parser.font.exportedGlyphs(), full=True)
         # possible = set([])
         self.rasm_glyphs = set([])
         possible_contexts = {}
@@ -283,7 +283,7 @@ class DetectAndSwap(FEZVerb):
         return possible_contexts
 
     def generate_glyph_sequence(self, n):
-        thin = [x for x in self.parser.font.glyphs.keys() if get_glyph_metrics(self.parser.font,x)["run"] < max_run and re.search(r"m\d+$", x)]
+        thin = [x for x in self.parser.font.exportedGlyphs() if get_glyph_metrics(self.parser.font,x)["run"] < max_run and re.search(r"m\d+$", x)]
         if self.reverse:
             sda = ["sda"]
             dda = ["dda"]
@@ -342,7 +342,7 @@ class DetectAndSwap(FEZVerb):
 
         stems = dot_combinations.keys()
         stem_re = r"^(" + ("|".join(stems)) + r")[mif]"
-        starters = [x for x in self.parser.font.glyphs.keys() if re.match(stem_re,x)]
+        starters = [x for x in self.parser.font.exportedGlyphs() if re.match(stem_re,x)]
 
         sequences = []
         for left in list(set(starters) & set(self.rasm_glyphs)):

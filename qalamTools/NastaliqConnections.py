@@ -59,7 +59,7 @@ class NastaliqConnections(FEZVerb):
             if not os.path.exists(trypath):
                 raise ValueError("Couldn't find connections file %s" % trypath)
 
-        rules = load_rules(trypath, parser.font.glyphs.keys())
+        rules = load_rules(trypath, parser.font.exportedGlyphs())
 
         r = fontFeatures.Routine(name="connections", flags=0x8)
         for oldglyph in rules:

@@ -40,5 +40,6 @@ Feature swsh {
   LoadPlugin qalamTools.SuffixingSubstitute;
   Routine Swash {
     SuffixingSubstitute [BEf1 TEf1 GAFf1 KAFf1 FEf1] -> fs1;
+    SuffixingSubstitute [BEu1 TEu1 GAFu1 KAFu1 FEu1 SINu1] -> us1;
   };
 };
