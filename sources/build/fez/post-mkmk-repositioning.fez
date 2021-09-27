@@ -33,7 +33,7 @@ Routine FinaJimDownABit {
 
 Feature kern {
   Routine GiveChYeDotsMoreSpace {
-    Position ( [ddb.yb tdb.yb] <80 -100 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( [ddb.yb tdb.yb] <200 -150 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <205 0  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
@@ -107,6 +107,11 @@ Feature kern {
     # Just fiddling now
     Position  parenright.latin (/[BT]Ei/ <xAdvance=+70>) [dda tdb];
 
+    # چنا 
+    Position JIMi1 [tdb sdb tda] /BEm|TEm/ ([sda dda tda] <yPlacement=+100>);
+
+    # عزت 
+    Position REf2 (sda <yPlacement=+200>) /[BT]E[iu]/;
   };
 
   Routine DotsUnderGaf {
@@ -122,11 +127,12 @@ Feature kern {
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials /KAF|GAF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials @all_above_marks /KAF|GAF/;
 
-    Position (/sda|dda/ <yPlacement=-80>) @NarrowMedials /KAF|GAF/;
-    Position (/sda|dda/ <yPlacement=-80>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
+    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials @all_above_marks /KAF|GAF/;
 
     Position /sda|dda/ @NarrowMedials (@all_above_marks <yPlacement=-20>) /KAF|GAF/;
-    Position /FE[im]/ (/sda|dda/ <yPlacement=-100>) /KAF|GAF/;
+    # Let's clear it
+    Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /KAF|GAF/;
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda/;
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
@@ -157,6 +163,7 @@ Feature kern {
 
   Routine MoreKerningFixes {
     Position REf3 (BEi11 <xAdvance=+150>);
+    Position REf2 (TEi12 <xAdvance=+100>); # Particular nasty case: 
     Position /ALIF/ (MIMi7 <xAdvance=+150>);
-  } UseMarkFilteringSet /\.yb/;
+  } IgnoreLigatures UseMarkFilteringSet /\.yb/;
 };

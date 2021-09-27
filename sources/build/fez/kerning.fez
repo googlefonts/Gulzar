@@ -13,7 +13,8 @@ Feature kern {
 	# Split into two to allow for the first to be class-based
 	Routine FixShortKern {
 		Position /(MIM|RE|VAO)[uf]/ (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+450>) /[sdt]db/ /CH_YEf|JIMf|AINf|MIMf/;
-		Position /(MIM|RE|VAO)[uf]/ (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/;
+		Position /(MIM|RE|VAO|DAL)[uf]/ (/LAMi/ <xAdvance=+700>) /CH_YEf|JIMf|AINf|MIMf/;
+		Position /(MIM|RE|VAO|DAL)[uf]/ (/[KG]AFi|TEi|BEi|FEi/ <xAdvance=+550>) /CH_YEf|JIMf|AINf|MIMf/;
 		Position (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+200>) /[sdt]db/ /CH_YEf|JIMf|AINf|MIMf/;
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
 	Routine FixShortKern2 {
@@ -24,4 +25,7 @@ Feature kern {
 	Routine FixShortKern3 {
 		Position /ALIF/ (/TEi/ <xAdvance=+100>) /dda/;
 	} IgnoreLigatures UseMarkFilteringSet /dda/;
+	Routine FixLongKern {
+		Position REf3 (/[KG]AFi/ <xAdvance=-120>);
+	};
 };

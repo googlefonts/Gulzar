@@ -50,8 +50,8 @@ Routine OpenSmallSpaceBeforeKern {
 
 
 Routine DropATinyBitMore {
-  Position ([tdb.one ddb.one] <yPlacement=-120>);
-  Position ([tdb.two sdb.two ddb.two] <yPlacement=-180>);
+  Position ([tdb.one ddb.one] <yPlacement=-150>);
+  Position ([tdb.two sdb.two ddb.two] <yPlacement=-220>);
 };
 
 Routine DoNothing {
@@ -80,6 +80,8 @@ Routine AntiKern100sub {
   Chain (REf3 /JIMi/ sdb ^DoNothing);
   Chain ([REf2 REf3] BEi3 [sdb ddb tdb] ^DropOne); # سرپہ
 
+  Chain (REu1 /BEi|JIMi/ [sdb ddb tdb] ^DropOne); # ورپہر / رچہر
+
   Chain (REf1 /JIMi/ [sdb ddb tdb] ^DropOne);
 
   #  ہر چیز
@@ -102,6 +104,8 @@ Routine AntiKern200sub {
 
   Chain (/((CH_YE|AIN|JIM)[fu]\d+)|NUN|SIN|LAM|REf3/ /(BE|JIM|HAYC)i/ [sdb ddb ddb.one tdb haydb] ^DropTwo);
   Chain ([REf1 REf3] /JIMi/ tdb ^DropTwo);
+
+  Chain ([REf2] /JIMi|BEi/ [sdb ddb tdb] ^DropTwo); # جھر پو
 
   Chain (REf3 /BEi/ /BEm/ [sdb ddb ddb.one tdb haydb] ^DropOne);
   Chain (REf3 /BEi/ [sdb ddb ddb.one tdb haydb] ^DropTwo /BEm/ [sdb ddb ddb.one tdb haydb] ^DropOne);
@@ -186,7 +190,10 @@ Routine AntiKern200pos {
   Chain (/[fu]\d+/ /HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$/ ^DoNothingPos) /haydb/ BARI_YEf1;
   Chain (/[fu]\d+/ /HAYCi(1|2|4|5|6|7|8|9|10|11|12|13|14)$/ ^DoNothingPos) BARI_YEf1;
 
-  Chain (/REf/ /(BE|JIM|HAYC)i/ [sdb.two ddb.one ddb.two tdb.two] ^DropATinyBitMore);
+  # متجرپھ
+  Chain (/REf2/ BEi12 [sdb.two ddb.one ddb.two tdb.two] ^DoNothingPos);
+  Chain (/REf2/ /(BE|JIM|HAYC)i/ [sdb.two ddb.one ddb.two tdb.two] ^DropATinyBitMore);
+
   Chain (/.*[fu]\d+/ toeda @inits ^OpenSpaceBeforeKern);
   Chain (/(MIM)[fu]\d+|BEf1|NUN|SIN/ /(JIM|BE|TE)i/ ^OpenSpaceBeforeKern [sdb ddb tdb haydb]);
   Chain (/.*[fu]\d+/ /BEi/ ^OpenSpaceBeforeKern [sdb ddb tdb haydb] /JIMf/);
@@ -210,6 +217,9 @@ Routine AntiKern400pos {
   Chain ([@isols @finas] HAYCi9 ^OpenSpaceBeforeKern);
   Chain (@bigbowlfina /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern);
   Chain (/HAYCu/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern);
+  
+  Chain (REf3 /(BE|JIM)i/ ^OpenSmallSpaceBeforeKern); # طریقو
+
   # Needed for e.g. وپھی
   Chain (/VAO[uf]|REu/ /(BE|JIM|HAYC)i/ ^OpenSpaceBeforeKern /ddb|tdb|sdb/ ^DropATinyBitMore);
   Chain ([@isols @finas] /BEi|JIMi/ [tdb.one tdb.two sdb.two ddb.two] ^DropATinyBitMore);
