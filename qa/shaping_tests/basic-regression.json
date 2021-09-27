@@ -53,8 +53,7 @@
     },
     {
       "input": "رچینی",
-      "expectation": "CH_YEf1|sda|BEm11|ddb.one|BEmsd1|tdb.one|JIMi3|REu1",
-      "note": "Need double drop"
+      "expectation": "CH_YEf1=4+441|sda=3@60,476+0|BEm11=3@-40,286+300|ddb.one=2@-44,-166+0|BEmsd1=2@-54,394+263|tdb=1@68,175+0|JIMi3=1@-42,395+365|REu1=0+394"
     },
     {
       "input": "سرپہ",
@@ -71,7 +70,7 @@
     },
     {
       "input": "پرچھا",
-      "expectation": "ALIFf1|HAYAm3|tdb.two|JIMi5|REf1|tdb|BEi13"
+      "expectation": "ALIFf1|HAYAm3|tdb.one|JIMi5|REf1|tdb|BEi13"
     },
     {
       "input": "سربر",
@@ -83,11 +82,11 @@
     },
     {
       "input": "و چھیا",
-      "expectation": "ALIFf1|ddb|BEm3|HAYAm1|tdb.two|JIMi5|space.urdu|VAOu1"
+      "expectation": "ALIFf1=5+213|ddb=4@-82,-223+0|BEm3=4@-42,67+212|HAYAm1=3@-55,138+341|tdb=2@128,229+0|JIMi5=2@-52,449+362|space.urdu=1+150|VAOu1=0+386"
     },
     {
       "input": "و جھی",
-      "expectation": "CH_YEf1|HAYAm11|sdb.two|JIMi5|space.urdu|VAOu1"
+      "expectation": "CH_YEf1=4+441|HAYAm11=3@-44,302+389|sdb=2@148,440+0|JIMi5=2@-52,680+212|space.urdu=1+150|VAOu1=0+386"
     },
     {
       "input": "سر جہا",
@@ -99,7 +98,7 @@
     },
     {
       "input": "یک جھر",
-      "expectation": "REf2|HAYAm14|sdb.one|JIMi5|space.urdu|KAFf1|ddb|BEi3"
+      "expectation": "REf2=5+340|HAYAm14=4@-42,232+358|sdb.two=3@148,-346+0|JIMi5=3@-52,514+32|space.urdu=2+150|KAFf1=1+886|ddb=0@-142,-288+0|BEi3=0@-42,72+194"
     },
     {
       "input": "وپہر",
@@ -111,7 +110,7 @@
     },
     {
       "input": "کو بھی",
-      "expectation": "CH_YEf1|HAYAm11|sdb|BEi5|space.urdu|VAOf1|KAFi14"
+      "expectation": "CH_YEf1=5+441|HAYAm11=4@-44,302+389|sdb.one=3@151,253+0|BEi5=3@-49,713+191|space.urdu=2+150|VAOf1=1+328|KAFi14=0@-63,297+271"
     },
     {
       "input": "ر پھر",
@@ -120,6 +119,50 @@
     {
       "input": "یک جھر",
       "expectation": "REf2|HAYAm14|sdb.two|JIMi5|space.urdu|KAFf1|ddb|BEi3"
+    },
+    {
+      "input": "وہم",
+      "expectation": "MIMf1=2+411|haydb=1@182,215+0|HAYCi9=1@-58,495+305|VAOu1=0+386"
+    },
+    {
+      "input": "اہم",
+      "expectation": "MIMf1=2+411|haydb=1@182,215+0|HAYCi9=1@-58,495+465|ALIFu1=0+228"
+    },
+    {
+      "input": "پریھا",
+      "expectation": "ALIFf1|HAYAm3|ddb.two|BEi5|REf1|tdb|BEi13"
+    },
+    {
+      "input": "ہر چیز",
+      "expectation": "sda=5@-50,30+0|REf3=5+320|ddb=4@-96,-220+0|BEm15=4@-216,10+186|tdb.two=3@24,-650+0|JIMi17=3@-16,190+81|space.urdu=2+150|REf3=1+320|haydb=0@87,126+0|HAYCi13=0@-143,6+323"
+    },
+    {
+      "input": "ل بن",
+      "expectation": "sdi=3@270,150+0|NUNf1=3+766|sdb=2@-4,-56+0|BEisd2=2@-54,324+185|space.urdu=1+150|LAMu1=0+783"
+    },
+    {
+      "input": "مربی",
+      "expectation": "CH_YEf1=3+441|sdb.yb=2@315,0+0|BEi11=2@-20,349+599|REf3=1+320|MIMi14=0@-113,205+343"
+    },
+    {
+      "input": "رپھر",
+      "expectation": "REf2=3+340|HAYAm14=2@-42,232+358|tdb.two=1@81,-293+0|BEi5=1@-49,547+11|REu1=0+394"
+    },
+    {
+      "input": "سرپھر",
+      "expectation": "REf2=4+340|HAYAm14=3@-42,232+358|tdb=2@131,327+0|BEi5=2@-49,547+361|REf3=1+320|SINi15=0@-213,11+425"
+    },
+    {
+      "input": "جر یا",
+      "expectation": "ALIFf1=4+213|ddb.one=3@-142,-638+0|BEi3=3@-42,62+14|space.urdu=2+150|REf2=1+340|sdb=0@42,-86+0|JIMi14=0@-118,234+436"
+    },
+    {
+      "input": "مر یا",
+      "expectation": "ALIFf1=4+213|ddb.one=3@-142,-638+0|BEi3=3@-42,62+4|space.urdu=2+150|REf3=1+320|MIMi14=0@-113,205+343"
+    },
+    {
+      "input": "وپھی",
+      "expectation": "CH_YEf1=3+441|HAYAm11=2@-44,302+389|tdb.two=1@81,-127+0|BEi5=1@-49,713+-9|VAOu1=0+386"
     }
   ]
 }

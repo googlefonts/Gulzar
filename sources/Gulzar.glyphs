@@ -1,14 +1,13 @@
 {
-.appVersion = "1342";
+.appVersion = "1352";
 DisplayStrings = (
 "/TOEm1/LAMm1",
-"",
 "/space/KASRA.yb/space/space/ddb.yb/space/space/haydb.yb/space/space/sdb.yb/space/space/tdb.yb/space/space/space",
 "/tdb.yb/KASRA.yb/BARI_YEf1",
 "/sdb.yb/space/space/space/ddb.yb/space/VAOu1/endOfBariYe/endOfBariYe/VAOu1/VAOf1/space/space/tdb.yb",
 "/KASRA.yb.collides",
 "/KASRA.yb.attached",
-"/REu1"
+"/HAYCi9"
 );
 classes = (
 {
@@ -75263,11 +75262,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{254, -284}";
+position = "{254, -484}";
 },
 {
 name = comma;
-position = "{300, 0}";
+position = "{300, -280}";
 },
 {
 name = exit;
