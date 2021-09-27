@@ -18,7 +18,7 @@ VERBS = ["FixYBPositions", "DetectAndSwapYB"]
 
 class FixYBPositions(FEZVerb):
     def action(self, args):
-        glyphs = self.parser.font.glyphs.keys()
+        glyphs = self.parser.font.exportedGlyphs()
         ybs = [x for x in glyphs if ".yb" in x]
         rules = []
         for g in glyphs:
@@ -41,7 +41,7 @@ class FixYBPositions(FEZVerb):
 
 class DetectAndSwapYB(FEZVerb):
     def action(self, args):
-        glyphs = self.parser.font.glyphs.keys()
+        glyphs = self.parser.font.exportedGlyphs()
         self.contexts = self.get_contexts()
         self.shelve = shelve.open("ybcollisioncache.db")
         self.c = Collidoscope(
@@ -214,7 +214,7 @@ class DetectAndSwapYB(FEZVerb):
     def get_contexts(self):
         from qalamTools.NastaliqConnections import load_rules
 
-        rules = load_rules("rules.csv", self.parser.font.glyphs.keys(), full=True)
+        rules = load_rules("rules.csv", self.parser.font.exportedGlyphs(), full=True)
         # possible = set([])
         self.rasm_glyphs = set([])
         possible_contexts = {}

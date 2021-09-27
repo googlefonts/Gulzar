@@ -25,6 +25,8 @@ def load_rules(trypath, glyphlist, full=False):
             remainder = list(line.items())[1:]
             for (g, v) in remainder:
                 old = g + "1"
+                if old not in glyphlist:
+                    continue
                 if not full and (v == "1" or v == 1 or not v):
                     continue
                 replacement = g + str(v)
@@ -63,6 +65,8 @@ class NastaliqConnections(FEZVerb):
 
         r = fontFeatures.Routine(name="connections", flags=0x8)
         for oldglyph in rules:
+            if oldglyph not in parser.font.exportedGlyphs():
+                continue
             for replacement in rules[oldglyph]:
                 context = rules[oldglyph][replacement]
 

@@ -48501,6 +48501,7 @@ width = 415;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei12;
 layers = (
 {
@@ -48596,6 +48597,7 @@ width = 479;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei13;
 layers = (
 {
@@ -48653,6 +48655,7 @@ width = 479;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei14;
 layers = (
 {
@@ -48808,6 +48811,7 @@ width = 415;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei2;
 layers = (
 {
@@ -48909,6 +48913,7 @@ width = 569;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei3;
 layers = (
 {
@@ -49006,6 +49011,7 @@ width = 472;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei4;
 layers = (
 {
@@ -49107,6 +49113,7 @@ width = 625;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei5;
 layers = (
 {
@@ -49202,6 +49209,7 @@ width = 467;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei9;
 layers = (
 {
@@ -75483,6 +75491,7 @@ note = HAYCi4;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei6;
 layers = (
 {
@@ -75578,6 +75587,7 @@ width = 476;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei7;
 layers = (
 {
@@ -75679,6 +75689,7 @@ width = 552;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei8;
 layers = (
 {
@@ -75779,6 +75790,7 @@ width = 605;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei10;
 layers = (
 {
@@ -75879,6 +75891,7 @@ width = 731;
 },
 {
 color = 3;
+export = 0;
 glyphname = Hei11;
 layers = (
 {
