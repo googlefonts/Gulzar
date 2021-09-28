@@ -1,15 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/TOEm1/LAMm1",
-"/space/KASRA.yb/space/space/ddb.yb/space/space/haydb.yb/space/space/sdb.yb/space/space/tdb.yb/space/space/space",
-"/tdb.yb/KASRA.yb/BARI_YEf1",
-"/sdb.yb/space/space/space/ddb.yb/space/VAOu1/endOfBariYe/endOfBariYe/VAOu1/VAOf1/space/space/tdb.yb",
-"/KASRA.yb.collides",
-"/KASRA.yb.attached",
-"",
-"/DAMMA",
-"/alefMadda-ar"
+"/SINm1/SINm12/SINm13/SINm14/SINm15/SINm2/SINm3/SINm4/SINm5/SINm6/SINm7/SINm8/SINm9/SINm10/SINm11"
 );
 classes = (
 {
@@ -65041,7 +65033,7 @@ position = "{291, -225}";
 },
 {
 name = entry;
-position = "{552, 164}";
+position = "{552, 144}";
 },
 {
 name = exit;
@@ -65083,16 +65075,16 @@ paths = (
 {
 closed = 1;
 nodes = (
-"561 112 OFFCURVE",
-"595 202 OFFCURVE",
-"564 202 CURVE SMOOTH",
-"529 202 OFFCURVE",
-"504 206 OFFCURVE",
-"494 238 CURVE",
-"462 132 LINE",
-"475 115 OFFCURVE",
-"497 112 OFFCURVE",
-"511 112 CURVE SMOOTH"
+"561 92 OFFCURVE",
+"595 182 OFFCURVE",
+"564 182 CURVE SMOOTH",
+"529 182 OFFCURVE",
+"504 186 OFFCURVE",
+"494 218 CURVE",
+"462 112 LINE",
+"475 95 OFFCURVE",
+"497 92 OFFCURVE",
+"511 92 CURVE SMOOTH"
 );
 }
 );
