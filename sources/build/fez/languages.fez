@@ -1,10 +1,11 @@
-DefineClass @latinpunct = [ exclam.latin hyphen.latin colon.latin semicolon.latin quotedblleft.latin quotedblright.latin parenleft.latin parenright.latin percent.latin dollar.latin degree.latin divide.latin equal.latin plus.latin];
-DefineClass @urdupunct = [ exclam.urdu hyphen.urdu colon.urdu semicolon.urdu quotedblleft.urdu quotedblright.urdu parenleft.urdu parenright.urdu percent.urdu dollar.urdu degree.urdu divide.urdu equal.urdu plus.urdu];
+DefineClass @latinpunct = [ exclam.latin hyphen.latin colon.latin semicolon.latin quotedblleft.latin quotedblright.latin parenleft.latin parenright.latin percent.latin dollar.latin degree.latin divide.latin equal.latin plus.latin asterisk.latin quoteleft.latin quoteright.latin endash.latin sterling.latin multiply.latin];
+DefineClass @urdupunct = [ exclam.urdu hyphen.urdu colon.urdu semicolon.urdu quotedblleft.urdu quotedblright.urdu parenleft.urdu parenright.urdu percent.urdu dollar.urdu degree.urdu divide.urdu equal.urdu plus.urdu asterisk.urdu quoteleft.urdu quoteright.urdu endash.urdu sterling.urdu multiply.urdu];
 
 Feature ccmp {
         Substitute space -> space.urdu <<arab/dflt arab/URD>>;
         Substitute space -> space.latin <<latn/dflt>>;
         Substitute @latinpunct -> @urdupunct <<arab/dflt arab/URD>>;
+        Substitute [zero-ar two-ar three-ar four-ar five-ar] -> [ZERO.urdu TWO.urdu THREE.urdu FOUR.urdu FIVE.urdu] <<arab/URD>>;
 } ccmp;
 
 Feature onum {

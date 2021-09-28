@@ -33,9 +33,13 @@ Feature ccmp {
 
   Routine MarkLigatures {
     Substitute SHADDA DAMMA -> SHADDA_DAMMA;
+    Substitute SHADDA DAMMA -> SHADDA_DAMMA;
     Substitute SHADDA FATHA -> SHADDA_FATHA;
-    Substitute SHADDA KASRA -> SHADDA_KASRA;
     Substitute SHADDA LONG_A -> SHADDA_LONG_A;
+    Substitute HAMZA_ABOVE DAMMA -> HAMZA_DAMMA;
+    Substitute HAMZA_ABOVE sukun-ar -> SUKUN_HAMZA;
+    Substitute HAMZA_ABOVE FATHA -> HAMZA_FATHA;
+    Substitute HAMZA_BELOW KASRA -> HAMZA_KASRA;
   };
 };
 
