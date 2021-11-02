@@ -209,7 +209,7 @@ class AtHeight(FEZVerb):
         medis = self.parser.fontfeatures.namedClasses["medis"]
         isols = self.parser.fontfeatures.namedClasses["isols"]
         finas = self.parser.fontfeatures.namedClasses["finas"]
-        
+
         self.isols_finas = isols + finas
 
         binned_medis = bin_glyphs_by_metric(

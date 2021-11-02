@@ -10,25 +10,37 @@ SetCategory space.urdu ligature;
 Feature kern {
 	NastaliqKerning 100 70%;
 
-	# Split into two to allow for the first to be class-based
 	Routine FixShortKern {
-		Position /(MIM|RE|VAO)[uf]/ (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+450>) /[sdt]db/ /CH_YEf|JIMf|AINf|MIMf/;
-		Position /(MIM|RE|VAO|DAL)[uf]/ (/LAMi/ <xAdvance=+700>) /CH_YEf|JIMf|AINf|MIMf/;
-		Position /(MIM|RE|VAO|DAL)[uf]/ (/[KG]AFi|TEi|BEi|FEi/ <xAdvance=+550>) /CH_YEf|JIMf|AINf|MIMf/;
-		Position (/[KG]AFi|LAMi|TEi|BEi|FEi/ <xAdvance=+200>) /[sdt]db/ /CH_YEf|JIMf|AINf|MIMf/;
-	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
+		Position REf3 ([BEi11 TEi11] <xAdvance=+400>) /CH_YEf|JIMf|AINf|MIMf/; # مربی
+		Position /(MIM|RE|VAO)[uf]/ ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # مربی
+		Position /(CH_YE)[uf]/ ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # یی پی
+
+		Position @vao_like    (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  سوئچ
+		Position @mim_like    (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  سم ئچ
+		Position @bigbowlfina (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  سن ئچ
+		Position @dal_like    (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  ریخ
+
+	} IgnoreLigatures IgnoreMarks;
+
 	Routine FixShortKern2 {
 		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+100>) /CH_YEf|JIM[fm]|AINf|MIMf/;
-		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+200>) /ddb/;
+		Position /ALIF/ (/BEi1|BEisd1/ <xAdvance=+200>) /[sdt]db/;
 		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+60>);
 		Position /(DAL|RE|VAO|ALIF)[uf]/ (/[KG]AFi|LAMi/ <xAdvance=+300>) /(JIM|BE)m/ /[sdt]db/;
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
+
 	Routine FixShortKern3 {
-		Position /ALIF/ (/TEi/ <xAdvance=+100>) /dda/;
+		Position /ALIF/ (/HAYCi/ <xAdvance=+100>) /haydb/;
 		Position /REf3/ (/TEi/ <xAdvance=+100>);
-		Position /REu1|VAOf1|VAOu1/ (/BEi3|BEisd1/ <xAdvance=+100>);
-	} IgnoreLigatures UseMarkFilteringSet /dda/;
-	Routine FixLongKern {
+	} IgnoreLigatures UseMarkFilteringSet /dda|sdb|haydb/;
+
+	Routine OtherKerningFixes {
 		Position REf3 (/[KG]AFi/ <xAdvance=-120>);
-	};
+		Position @vao_like (space.urdu <xAdvance=50>) /AINi/;
+		Position @bigbowlfina (space.urdu <xAdvance=100>) /JIMi/ /[sdt]db/;
+		Position @bigbowlfina (space.urdu <xAdvance=100>) /AINi/;
+		Position [REf2 REf3] (space.urdu <xAdvance=50>) /JIMi/;
+		Position /NUN[uf]/ (space.urdu <xAdvance=100>) /HAYCi/;
+		Position [REf2 REf3] (ALIFu1 <xAdvance=200>) [BEi11 TEi11];
+	} UseMarkFilteringSet /[sdt]db/;
 };

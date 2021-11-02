@@ -1,0 +1,80 @@
+Include "shared.fez";
+LoadPlugin qalamTools.YBFix;
+LoadPlugin qalamTools.QuantizeAnchors;
+LoadAnchors;
+
+Feature rlig {
+  Routine ManualDrop {
+    Substitute /(JIM)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
+    Substitute /(BE)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
+
+    Substitute (tdb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> tdb.yb;
+    Substitute (ddb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> ddb.yb;
+  } UseMarkFilteringSet [sdb tdb ddb];
+};
+
+DefineClass @base_ybs = /\.yb$/;
+DefineClass @unattached_ybs = /\.yb(.collides)?$/;
+DefineClass @colliding_ybs = /\.yb.collides$/;
+
+Feature rlig {
+  Routine RenameAttachedKasras {
+    Substitute @base_ybs (KASRA.yb) -> KASRA.yb.attached;
+  } UseMarkFilteringSet @base_ybs;
+
+  # This will mark the dots which collide. Next we'll resolve them.
+  DetectAndSwapYB;
+
+  # I don't know why this collision isn't automatically detected.
+  Routine ManualFixupBBY {
+    Substitute BEisd1 sdb.yb BEm7 (sdb.yb) -> sdb.yb.collides;
+    Substitute HAYCm7 haydb.yb JIMm7 (sdb.yb) -> sdb.yb.collides;
+  } UseMarkFilteringSet @base_ybs;
+
+  Routine MarkEndOfBY {
+    Substitute BARI_YEf1 -> endOfBariYe $1;
+    };
+};
+
+# But first let's place them under their base glyphs
+QuantizeAnchors 5;
+ 
+Feature mark {
+  Routine FixYBPositions {
+    FixYBPositions;
+  };
+};
+
+Routine FixFourYBs {
+  Position (@unattached_ybs <xPlacement=100> @colliding_ybs <xPlacement=-50>  @colliding_ybs <xPlacement=-200> @colliding_ybs <xPlacement=-300>);
+  Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-110>  @colliding_ybs <xPlacement=-185> @unattached_ybs <xPlacement=-275>);
+  Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-75>  @unattached_ybs <xPlacement=-155> @colliding_ybs <xPlacement=-275>);
+  Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-50>  @unattached_ybs <xPlacement=-125> @unattached_ybs <xPlacement=-250>);
+
+
+  Position (@unattached_ybs <xPlacement=0> @unattached_ybs <xPlacement=-12>  @colliding_ybs <xPlacement=-125> @colliding_ybs <xPlacement=-250>);
+  Position (@unattached_ybs <xPlacement=0> @unattached_ybs <xPlacement=-12>  @colliding_ybs <xPlacement=-125> @unattached_ybs <xPlacement=-150>);
+
+  Position (@unattached_ybs <xPlacement=0> @unattached_ybs <xPlacement=-12>  @unattached_ybs <xPlacement=-25> @colliding_ybs <xPlacement=-125>);
+} IgnoreBases UseMarkFilteringSet @unattached_ybs;
+
+
+Routine FixThreeYBs {
+  Position (@unattached_ybs <xPlacement=60> @colliding_ybs <xPlacement=-150>  @colliding_ybs <xPlacement=-355>);
+  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  sdb.yb <xPlacement=-265>);
+  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  @unattached_ybs <xPlacement=-355>);
+  Position (@unattached_ybs <xPlacement=30> @unattached_ybs <xPlacement=15>  @colliding_ybs <xPlacement=-170>);
+} IgnoreBases UseMarkFilteringSet @unattached_ybs;
+
+Routine FixTwoYBs {
+  Position (@unattached_ybs <xPlacement=70> @colliding_ybs <xPlacement=-180>);
+} IgnoreBases UseMarkFilteringSet @unattached_ybs;
+
+Feature mark {
+  Routine CountYBMarksAndDispatch {
+    Chain (@unattached_ybs ^FixFourYBs @unattached_ybs @unattached_ybs @unattached_ybs endOfBariYe);
+    Chain (@unattached_ybs ^FixThreeYBs @unattached_ybs @unattached_ybs endOfBariYe);
+    Chain (@unattached_ybs ^FixTwoYBs @unattached_ybs endOfBariYe);
+    Chain (@unattached_ybs ^FixTwoYBs @unattached_ybs endOfBariYe);
+  } IgnoreBases UseMarkFilteringSet [@unattached_ybs endOfBariYe];
+};

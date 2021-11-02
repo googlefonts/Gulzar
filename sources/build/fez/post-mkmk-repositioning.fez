@@ -58,6 +58,7 @@ Feature kern {
 
   DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
   DefineClass @NarrowMedials = /[mf](sd)?\d+$/ & (run < 400);
+  DefineClass @NarrowInits = /i(sd)?\d+$/ & (run < 400);
 
   Routine FinaJimFixes {
     Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
@@ -104,7 +105,7 @@ Feature kern {
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
 
     # Just fiddling now
-    Position  parenright.latin (/[BT]Ei/ <xAdvance=+70>) [dda tdb];
+    Position  [parenright.latin parenright.urdu] (/[BT]Ei/ <xAdvance=+70>) [dda tdb];
 
     # چنا 
     Position JIMi1 [tdb sdb tda] /BEm|TEm/ ([sda dda tda] <yPlacement=+100>);
@@ -125,6 +126,7 @@ Feature kern {
     Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /KAF|GAF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials /KAF|GAF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowInits @all_above_marks /KAF|GAF/;
 
     Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
     Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials @all_above_marks /KAF|GAF/;
@@ -161,7 +163,6 @@ Feature kern {
   } UseMarkFilteringSet [DAMMA];
 
   Routine MoreKerningFixes {
-    Position REf3 (BEi11 <xAdvance=+150>);
     Position REf2 (TEi12 <xAdvance=+100>); # Particular nasty case: 
     Position /ALIF/ (MIMi7 <xAdvance=+150>);
   } IgnoreLigatures UseMarkFilteringSet /\.yb/;

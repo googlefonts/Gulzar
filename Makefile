@@ -1,16 +1,16 @@
 GLYPHS_FILE=sources/Gulzar.glyphs
 FINAL_FONT=fonts/ttf/Gulzar-Regular.ttf
-FEA_FILES=sources/build/fea/languagesystem.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/anchor-attachment.fea sources/build/fea/latin-kerning.fea sources/build/fea/kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
+FEA_FILES=sources/build/fea/languagesystem.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/bariye-drop2.fea sources/build/fea/anchor-attachment.fea sources/build/fea/latin-kerning.fea sources/build/fea/kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
 RELEASE_ARG=
 
 export FONTTOOLS_LOOKUP_DEBUGGING=1
-export PYTHONPATH=.:/Users/simon/others-repos/fontTools/lib/
+export PYTHONPATH=.
 export FONTTOOLS_GPOS_COMPACT_MODE=9
 .DELETE_ON_ERROR:
 
 $(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
 	. venv/bin/activate; fontmake -f --master-dir . -g $(GLYPHS_FILE) --filter DecomposeTransformedComponentsFilter --no-production-names -o ttf --output-path $(FINAL_FONT)
-	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
+	pypy3 -m fontTools.feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
 
 venv: venv/touchfile
 
@@ -66,10 +66,10 @@ sources/build/fea/decomposition.fea: sources/build/fez/decomposition.fez venv
 sources/build/fea/connections.fea: sources/build/fez/connections.fez sources/build/rules.csv venv
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez sources/build/fez/pre-mkmk-repositioning.fez venv $(GLYPHS_FILE)  qalamTools/DotAvoidance.py
+sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez sources/build/fez/pre-mkmk-repositioning.fez venv $(GLYPHS_FILE)  qalamTools/DotAvoidance.py sources/build/fez/dot-avoidance.fez
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
-sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv qalamTools/NastaliqKerning.py
+sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv qalamTools/NastaliqKerning.py $(GLYPHS_FILE)
 	. venv/bin/activate; fez2fea -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/latin-kerning.fea: sources/build/fez/latin-kerning.fez $(GLYPHS_FILE) venv
@@ -81,6 +81,9 @@ sources/build/fea/post-mkmk-repositioning.fea: sources/build/fez/post-mkmk-repos
 # Technically these two should depend on the Glyphs file, but since the design
 # and width of glyphs is mostly fixed, I'm removing that dependency for now.
 sources/build/fea/bariye-drop.fea: sources/build/fez/bariye-drop.fez sources/build/fez/shared.fez venv qalamTools/YBFix.py
+	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+
+sources/build/fea/bariye-drop2.fea: sources/build/fez/bariye-drop2.fez sources/build/fez/shared.fez venv qalamTools/YBFix.py
 	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/bariye-overhang.fea: sources/build/fez/bariye-overhang.fez sources/build/fez/shared.fez venv

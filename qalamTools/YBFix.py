@@ -113,7 +113,7 @@ class DetectAndSwapYB(FEZVerb):
         )
         r = fontFeatures.Routine(name="DotAvoidance_YB", rules=result, flags=0x10)
         r.markFilteringSet = self.ybs
-        return r
+        return [r]
 
     def any_possible_sequence(self, seq):
         rights, rdot, lefts, ldot = seq

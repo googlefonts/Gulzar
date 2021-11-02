@@ -1,7 +1,16 @@
 {
-.appVersion = "1352";
+.appVersion = "3072";
 DisplayStrings = (
-"/SINm1/SINm12/SINm13/SINm14/SINm15/SINm2/SINm3/SINm4/SINm5/SINm6/SINm7/SINm8/SINm9/SINm10/SINm11"
+"/TOEm1/LAMm1",
+"/space/KASRA.yb/space/space/ddb.yb/space/space/haydb.yb/space/space/sdb.yb/space/space/tdb.yb/space/space/space",
+"/tdb.yb/KASRA.yb/BARI_YEf1",
+"/sdb.yb/space/space/space/ddb.yb/space/VAOu1/endOfBariYe/endOfBariYe/VAOu1/VAOf1/space/space/tdb.yb",
+"/KASRA.yb.collides",
+"/KASRA.yb.attached",
+"",
+"/DAMMA",
+"/alefMadda-ar",
+"/HAYCm7"
 );
 classes = (
 {
@@ -48381,7 +48390,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{365, -659}";
+position = "{334, -372}";
 },
 {
 name = comma;

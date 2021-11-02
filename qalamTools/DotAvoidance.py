@@ -161,10 +161,10 @@ class DetectAndSwap(FEZVerb):
         # So we need a dispatch routine.
 
         if self.reverse:
-            return fontFeatures.Routine(
+            return [fontFeatures.Routine(
                 name="DotAvoidance_reverse_"+self.anchor,
                 rules = result
-            )
+            )]
         results = { }
 
         for rule in result:

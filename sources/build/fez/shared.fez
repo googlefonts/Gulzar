@@ -19,11 +19,24 @@ DefineClass @inits = /i\w*\d+$/;
 DefineClass @finas = /f\w*\d+$/;
 DefineClass @isols = /[A-Z]+u\w*\d+$/;
 
+
+DefineClass @bigbowlfina = /(AIN|CH_YE|JIM|LAM|NUN|QAF|SAD|SIN)[fu]/;
+DefineClass @BEi = /BEi/;
+DefineClass @JIMi = /JIMi/;
+DefineClass @DOTi = /BEi|JIMi|HAYCi/;
+DefineClass @DOTm = /BEm|JIMm|HAYCm/;
+DefineClass @dal_like = [REu1 DALf1 DALu1 REf1 REf4];
+DefineClass @vao_like = [VAOf1 VAOu1 HAYCu1 HAYAf1];
+DefineClass @kaf_like = /(KAF|GAF)[uf]|BEu|BEf/;
+DefineClass @mim_like = /MIM[uf]/;
+DefineClass @alif_like = /ALIF[fu]/;
+
+
 # The two following glyph classes are badly named. Really, they're referring
 # to anything which *behaves* like a BE (in the sense that it can "carry" a
 # nukta below the rasm) or anything which *behaves* like a bari ye (in the
 # sense that we need to drop those nuktas to avoid collisions with the tail
 # of the character.)
 DefineClass @behs = /(JIM|BE|CH_YE)[mi]\w*\d+$/;
-DefineClass @bariye = [BARI_YEf1 CH_YEf1 CH_YEf2];
+DefineClass @bariye = [BARI_YEf1];
 
