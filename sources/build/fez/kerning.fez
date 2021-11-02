@@ -12,13 +12,17 @@ Feature kern {
 
 	Routine FixShortKern {
 		Position REf3 ([BEi11 TEi11] <xAdvance=+400>) /CH_YEf|JIMf|AINf|MIMf/; # مربی
-		Position /(MIM|RE|VAO)[uf]/ ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # مربی
+		
+		Position @dal_like ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # دبی
+		Position @vao_like ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # وبی
+		Position @mim_like ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # م بی
+
 		Position /(CH_YE)[uf]/ ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # یی پی
 
-		Position @vao_like    (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  سوئچ
-		Position @mim_like    (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  سم ئچ
-		Position @bigbowlfina (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  سن ئچ
-		Position @dal_like    (/[BT]Ei/ <xAdvance=+300>) /JIMf/; #  ریخ
+		Position @vao_like    (/[BTF]Ei/ <xAdvance=+300>) /JIMf|AINf/; #  سوئچ
+		Position @mim_like    (/[BTF]Ei/ <xAdvance=+300>) /JIMf|AINf/; #  سم ئچ
+		Position @bigbowlfina (/[BTF]Ei/ <xAdvance=+300>) /JIMf|AINf/; #  سن ئچ
+		Position @dal_like    (/[BTF]Ei/ <xAdvance=+300>) /JIMf|AINf/; #  ریخ
 
 	} IgnoreLigatures IgnoreMarks;
 
