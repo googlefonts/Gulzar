@@ -49,9 +49,8 @@ Routine AtHeight0sub {
 
 
 Routine AtHeight100sub {
-  Chain (REf2                 @BEi      @dots        ^DropOne); # جر یا
-  Chain (REf3                 @JIMi     @dots        ^DropTwo); # ہر چیز / ہر چیز
-  Chain (REf3                 @BEi      @dots        ^DropOne); # سرپہ
+  Chain ([REf2 REf3]          @BEi      @dots        ^DropOne); # جر یا / سرپہ
+  Chain ([REf2 REf3]          @JIMi     @dots        ^DropTwo); # ہر چیز / ہر چیز
 
   Chain (@dal_like            BEi3      @dots        ^DoNothing); # ربا
   Chain (@dal_like            @DOTi     @dots        ^DropOne); # پرچا
@@ -65,11 +64,13 @@ Routine AtHeight100sub {
 
 Routine AtHeight200sub {
   Chain (@dal_like            HAYCi3    @dots        ^DoNothing); # رہیں
+  Chain (@vao_like            BEi6      @dots        ^DropTwo); #  کر یہُو
   Chain (@dal_like            @DOTi     @dots        ^DropOne); # دچھ
   Chain (@dal_like    /FEi/   /(BE|JIM)m/ @dots        ^DropOne); # رفین
   Chain (@dal_like    @BEi    /(BE|JIM)m/ @dots        ^DropOne); # رنیست
 
   Chain (@vao_like            BEisd1    @dots        ^DoNothing); # وپید
+  Chain (@vao_like            BEi6      @dots        ^DropTwo); # کر یہُو
   Chain (@vao_like            @BEi      @dots        ^DropOne); # ھو یں
   Chain (@vao_like            @JIMi     @dots        ^DropOne); # ھو چں
   Chain (@vao_like            HAYCi11   @dots        ^DropOne); # ساتھ ہی
@@ -86,6 +87,8 @@ Routine AtHeight200sub {
 
   Chain (HAYCf1               @DOTi     @dots        ^DropOne); # یہ بہت
 
+  Chain (BEf1 @dots           BEi6     @dots        ^DropOne); # جب یہُو
+
   Chain (@kaf_like            @JIMi     @dots        ^DropOne); # یپ چل
   Chain (@kaf_like @dots      @JIMi     @dots        ^DropOne); # یپ چل
 
@@ -100,7 +103,8 @@ Routine AtHeight400sub {
   Chain (@dal_like            @DOTi     @dots ^DropTwo @DOTm @dots ^DropOne); # رچینی
   Chain (@dal_like            @DOTi     @dots        ^DropTwo); # پریھا / پرچھا / رچینی
 
-  Chain (@vao_like            @DOTi     @dots        ^DropOne); # ویکیپیڈ
+  Chain (@vao_like            @BEi     @dots        ^DropOne); # ویکیپیڈ but not کو ہَیکل
+  Chain (@vao_like            @JIMi     @dots        ^DropOne); # ویکیپیڈ
 
   Chain (HAYCf1               @DOTi     @dots        ^DropTwo); # ہمیشہ چلتی
 
@@ -118,6 +122,10 @@ Routine AtHeight500sub {
   Chain (@dal_like            BEi13     @dots            ^DropOne); # پریھا
 
   # Decisions, decisions...
+  Chain (@dal_like            BEi2      @dots            ^DropOne);   # ریعقُو
+  Chain (@dal_like            JIMi9     @dots            ^DropTwo);   # ر چمکتا
+  Chain (@dal_like            BEi3      @dots            ^DropTwo);   # دیکھتا
+  Chain (@dal_like            BEisd1    @dots            ^DropOne);   # Similar shape to دیکھتا
   Chain (@dal_like            BEi5      @dots            ^DoNothing);   # ر پھر
   Chain (@dal_like            BEi6      @dots            ^DoNothing);   # کو پہنچ
   # Chain (@dal_like            BEi5      @dots            ^DropTwo); # رپھر
@@ -126,7 +134,7 @@ Routine AtHeight500sub {
 
   Chain (HAYCf1               BEi5      @dots            ^DropTwo); # قہ پھیلا
   Chain (HAYCf1               BEisd1    @dots            ^DropTwo); # سلہ پیکٹس
-  Chain (HAYCf1               @BEi      @dots            ^DropOne); # لہ پیکٹس
+  Chain (HAYCf1               @DOTi      @dots            ^DropOne); # لہ پیکٹس / کہ ہمیشہ
 
   Chain (@kaf_like            @DOTi     @dots            ^DropTwo); # تک پہنل
 
@@ -139,7 +147,7 @@ Routine AtHeight600sub {
   Chain (@vao_like            @DOTi     [ddb tdb]        ^DropTwo);   # لو چھیا / و چھیا / but not و جھی
   Chain (@vao_like            @DOTi     @DOTm @dots  ^DropOne);       # کمیونیکیشن
 
-  Chain (@dal_like            BEi9      @dots            ^DropOne);   # ریم
+  Chain (@dal_like            BEi9      @dots            ^DropTwo);   # ریم / دیمس
   Chain (@dal_like            BEi13     @dots            ^DropOne);   # پریھا
 
   # Decisions, decisions...
@@ -150,7 +158,6 @@ Routine AtHeight600sub {
   Chain (@dal_like            @DOTi     @dots            ^DoNothing); # ندبجن (space instead)
 
 } IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb];
-
 
 # Rules which use kerning instead of dropping
 
@@ -164,6 +171,7 @@ Routine AtHeight200pos {
   Chain (@kaf_like           @DOTi   ^OpenSmallSpaceBeforeKern); # پ چل
 
   Chain (@dal_like           BEi3    ^OpenSmallSpaceBeforeKern   /(BE|JIM)m/ @dots); # ر نیس
+  Chain (@dal_like           BEi6    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # کر یہُو
   Chain (@dal_like           HAYCi3  ^OpenSmallSpaceBeforeKern); # رہیں
 
   Chain (@mim_like           BEi12   ^OpenSpaceBeforeKern);
@@ -188,6 +196,7 @@ Routine AtHeight400pos {
   Chain (@dal_like           /HAYCi/ ^OpenSpaceBeforeKern);       #  رہنما
 
   Chain (@vao_like           BEi6    ^OpenSmallSpaceBeforeKern);  #  کو پہن
+  Chain (@vao_like           /HAYCi/ ^OpenSpaceBeforeKern);       # کو ہَیکل
 
   Chain (@alif_like          JIMi5   ^OpenSmallSpaceBeforeKern @dots);  # اچھا
 
@@ -213,9 +222,10 @@ Routine AtHeight600pos {
 
   Chain (@bigbowlfina        @DOTi   ^OpenSpaceBeforeKern);       # ی چھو
 
-  Chain (@alif_like          @BEi   ^OpenSmallSpaceBeforeKern @dots);  # ایپلیکیشنز
+  Chain (@alif_like          @BEi    ^OpenSmallSpaceBeforeKern @dots);  # ایپلیکیشنز
+  Chain (@alif_like          @JIMi   ^OpenSpaceBeforeKern @dots);  # اچھّی
 
-  Chain (@kaf_like            JIMi5     @dots            ^TopRight); # یک چھر, getting fancy
+  Chain (@kaf_like            JIMi5     @dots            ^TopRight); # ید چھر, getting fancy
   Chain (@kaf_like @dots      JIMi5     @dots            ^TopRight); # 
 
   Chain (@dal_like           BEi5    ^OpenSpaceBeforeKern);       # ر پھر
@@ -230,6 +240,7 @@ Routine AtHeight600pos {
   Chain (@vao_like           HAYCi9  ^OpenSpaceBeforeKern);       # وہم
   Chain (@vao_like           JIMi5   ^OpenSpaceBeforeKern) tdb;   # وچھی
   Chain (@vao_like           JIMi5   ^OpenSmallSpaceBeforeKern);  # و جھی
+  Chain (@vao_like           /MIMi/  ^OpenSmallSpaceBeforeKern);  # جومُجھ
   Chain (@vao_like           BEi6    ^OpenSmallSpaceBeforeKern);  # کو پہنچ
   Chain (@vao_like           BEi5                                 /sdb|ddb|tdb|haydb/ ^DropATinyBitMore); # وپھی
   Chain (@vao_like           BEi7                                 /sdb|ddb|tdb|haydb/ ^DropATinyBitMore); # ویجٹس
@@ -238,9 +249,11 @@ Routine AtHeight600pos {
 
   Chain (@kaf_like           BEi6    ^Tighten);                   # تک پہنچن
   Chain (@kaf_like           JIMi5  /sdb|ddb|tdb|haydb/ ^DropATinyBitMore); # ک چھو
+  Chain (HAYCf1              /HAYCi/ ^OpenSpaceBeforeKern);       # گ ہم
 
   Chain (HAYCf1              BEi5    ^OpenSmallSpaceBeforeKern @dots); # قہ پھیلا
   Chain (HAYCf1              JIMi5   @dots            ^Raise);     # صفحہ چھو
+  Chain (HAYCf1              HAYCi3  haydb            ^DoNothingPos); # 
 
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
