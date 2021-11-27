@@ -1,9 +1,12 @@
 {
 .appVersion = "1352";
+<<<<<<< Updated upstream
 DisplayStrings = (
 "/HAYCi1/HAYCi10/HAYCi12/HAYCi13/HAYCi14/HAYCi2/HAYCi3/HAYCi4/HAYCi5/HAYCi6/HAYCi7/HAYCi15/HAYCi8/HAYCi9/HAYCi11/HAYCi16",
 "/comma.urdu"
 );
+=======
+>>>>>>> Stashed changes
 classes = (
 {
 automatic = 1;
@@ -18300,7 +18303,7 @@ nodes = (
 "1591 -492 OFFCURVE",
 "1564 -520 CURVE",
 "1503 -557 OFFCURVE",
-"1352 -608 OFFCURVE",
+"1382 -608 OFFCURVE",
 "1266 -608 CURVE SMOOTH",
 "1192 -608 OFFCURVE",
 "1132 -582 OFFCURVE",
