@@ -1,16 +1,8 @@
 {
-.appVersion = "3072";
+.appVersion = "1352";
 DisplayStrings = (
-"/TOEm1/LAMm1",
-"/space/KASRA.yb/space/space/ddb.yb/space/space/haydb.yb/space/space/sdb.yb/space/space/tdb.yb/space/space/space",
-"/tdb.yb/KASRA.yb/BARI_YEf1",
-"/sdb.yb/space/space/space/ddb.yb/space/VAOu1/endOfBariYe/endOfBariYe/VAOu1/VAOf1/space/space/tdb.yb",
-"/KASRA.yb.collides",
-"/KASRA.yb.attached",
-"",
-"/DAMMA",
-"/alefMadda-ar",
-"/HAYCm7"
+"/HAYCi1/HAYCi10/HAYCi12/HAYCi13/HAYCi14/HAYCi2/HAYCi3/HAYCi4/HAYCi5/HAYCi6/HAYCi7/HAYCi15/HAYCi8/HAYCi9/HAYCi11/HAYCi16",
+"/comma.urdu"
 );
 classes = (
 {
@@ -22104,12 +22096,8 @@ layers = (
 {
 anchors = (
 {
-name = bottom;
-position = "{0, 0}";
-},
-{
-name = top;
-position = "{0, 0}";
+name = _comma;
+position = "{200, 425}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -47334,7 +47322,7 @@ position = "{72, -290}";
 },
 {
 name = comma;
-position = "{97, 8}";
+position = "{97, -41}";
 },
 {
 name = exit;
