@@ -1,12 +1,9 @@
 {
 .appVersion = "1352";
-<<<<<<< Updated upstream
 DisplayStrings = (
 "/HAYCi1/HAYCi10/HAYCi12/HAYCi13/HAYCi14/HAYCi2/HAYCi3/HAYCi4/HAYCi5/HAYCi6/HAYCi7/HAYCi15/HAYCi8/HAYCi9/HAYCi11/HAYCi16",
 "/comma.urdu"
 );
-=======
->>>>>>> Stashed changes
 classes = (
 {
 automatic = 1;
