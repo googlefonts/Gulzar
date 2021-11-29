@@ -33,13 +33,13 @@ Routine Raise    { Position ([sdb tdb ddb] <yPlacement=+100>); };
 Routine TopRight {Position ([sdb tdb ddb] <yPlacement=+250 xPlacement=+150>); };
 
 Routine DropATinyBitMore {
-  Position ([tdb.one ddb.one] <yPlacement=-150>);
+  Position ([tdb.one ddb.one tdb.yb sdb.yb ddb.yb] <yPlacement=-150>);
   Position ([tdb.two sdb.two ddb.two] <yPlacement=-220>);
 };
 
 Routine DropALotMore {
-  Position ([tdb.one ddb.one] <yPlacement=-200>);
-  Position ([tdb.two sdb.two ddb.two] <yPlacement=-270>);
+  Position ([tdb.one ddb.one tdb.yb sdb.yb ddb.yb] <yPlacement=-200>);
+  Position ([tdb.two sdb.two] <yPlacement=-270>);
 };
 
 
@@ -188,6 +188,7 @@ Routine AtHeight200pos {
   Chain ([REf2 REf3]         BEi3    /sdb|ddb|tdb|haydb|toeda/ ^DoNothingPos); # مر یا
   Chain ([REf2 REf3]         BEisd2  /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # تحریریں
   Chain ([REf2 REf3]         @BEi    ^OpenSmallSpaceBeforeKern    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore @DOTm @dots); # تحریریں
+  Chain ([REf2 REf3]         BEi11  ^OpenTinySpaceBeforeKern /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # عربی
   Chain ([REf2 REf3]         @BEi    ^OpenTinySpaceBeforeKern); # تحریریں !
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda/;
 

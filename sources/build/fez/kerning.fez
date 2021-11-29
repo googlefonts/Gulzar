@@ -11,13 +11,13 @@ Feature kern {
 	NastaliqKerning 100 70%;
 
 	Routine FixShortKern {
-		Position REf3 ([BEi11 TEi11] <xAdvance=+400>) /CH_YEf|JIMf|AINf|MIMf/; # مربی
+		Position [REf2 REf3] ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+400>); # مربی / عربی
 		
-		Position @dal_like ([BEi11 TEi11] <xAdvance=+200>) /CH_YEf|JIMf|AINf|MIMf/; # دبی
-		Position @vao_like ([BEi11 TEi11] <xAdvance=+200>) /CH_YEf|JIMf|AINf|MIMf/; # وبی
-		Position @mim_like ([BEi11 TEi11] <xAdvance=+200>) /CH_YEf|JIMf|AINf|MIMf/; # م بی
+		Position @dal_like ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
+		Position @vao_like ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # وبی
+		Position @mim_like ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # م بی
 
-		Position /(CH_YE)[uf]/ ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # یی پی
+		Position /(CH_YE)[uf]/ ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
 
 		Position @vao_like    (/[BTF]Ei/ <xAdvance=+300>) /JIMf|AINf/; #  سوئچ
 		Position @mim_like    (/[BTF]Ei/ <xAdvance=+300>) /JIMf|AINf/; #  سم ئچ
