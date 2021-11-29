@@ -1,9 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/HAYCi1/HAYCi10/HAYCi12/HAYCi13/HAYCi14/HAYCi2/HAYCi3/HAYCi4/HAYCi5/HAYCi6/HAYCi7/HAYCi15/HAYCi8/HAYCi9/HAYCi11/HAYCi16",
-"/comma.urdu"
-);
 classes = (
 {
 automatic = 1;
@@ -74114,46 +74110,13 @@ position = "{197, -272}";
 },
 {
 name = exit;
-position = "{54, 0}";
+position = "{54, -6}";
 },
 {
 name = top;
 position = "{149, 276}";
 }
 );
-background = {
-anchors = (
-{
-name = bottom;
-position = "{145, -230}";
-},
-{
-name = exit;
-position = "{54, -6}";
-},
-{
-name = top;
-position = "{167, 326}";
-}
-);
-paths = (
-{
-closed = 1;
-nodes = (
-"94 -58 OFFCURVE",
-"166 9 OFFCURVE",
-"166 124 CURVE",
-"149 126 LINE",
-"130 56 OFFCURVE",
-"94 32 OFFCURVE",
-"66 32 CURVE SMOOTH",
-"32 32 OFFCURVE",
-"-27 -58 OFFCURVE",
-"13 -58 CURVE SMOOTH"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
