@@ -53,17 +53,17 @@ Routine OpenSpaceBeforeKern {
   Position (@inits <xAdvance=+300>) /tdb|haydb/;
   Position (@inits <xAdvance=+200>) /sdb|ddb/;
   Position toeda (@inits <xAdvance=+200>);
-};
+} UseMarkFilteringSet /db/;
 
 Routine OpenSmallSpaceBeforeKern {
   Position (/JIMi/ <xAdvance=+250>) /tdb/;
-  Position (@inits <xAdvance=+160>) /db|[mf]\d+/;
-};
+  Position (@inits <xAdvance=+160>) /db|[mf](sd)?\d+/;
+} UseMarkFilteringSet /db/;
 
 Routine OpenTinySpaceBeforeKern {
   Position (/JIMi/ <xAdvance=+150>) /tdb/;
-  Position (@inits <xAdvance=+100>) /db|[mf]\d+/;
-};
+  Position (@inits <xAdvance=+100>) /db|[mf](sd)?\d+/;
+}  UseMarkFilteringSet /db/;
 
 Routine DoNothing    {Substitute JIMi1 -> JIMi1; };
 Routine DoNothingPos {Position (haydb.yb <xPlacement=0>); };
@@ -189,6 +189,7 @@ Routine AtHeight500sub {
 Routine AtHeight600sub {
   Chain (@vao_like            JIMi5     @dots            ^DoNothing); # وچھی
   Chain (@vao_like            BEi6      @dots            ^DoNothing); # کو پہنچ
+  Chain (@vao_like            JIMi9     @dots            ^DropTwo);   #  وجمھ
   Chain (@vao_like            @DOTi     [ddb tdb]        ^DropTwo);   # لو چھیا / و چھیا / but not و جھی
   Chain (@vao_like            @DOTi     @DOTm @dots  ^DropOne);       # کمیونیکیشن
 
@@ -206,7 +207,6 @@ Routine AtHeight600sub {
 
 # Rules which use kerning instead of dropping
 
-
 Routine AtHeight200pos {
   #Chain (@bigbowlfina        [BEisd1 BEisd2] ^OpenSpaceBeforeKern);
   Chain (@bigbowlfina        @BEi   ^OpenSpaceBeforeKern); # عمل پو
@@ -214,8 +214,11 @@ Routine AtHeight200pos {
   Chain (@bigbowlfina        /HAYCi/   ^OpenSmallSpaceBeforeKern); # ن ہو
 
   Chain (@kaf_like           @DOTi   ^OpenSmallSpaceBeforeKern); # پ چل
+  Chain (@kaf_like toeda     @DOTi   ^OpenSmallSpaceBeforeKern); # پ چل
+  Chain (@kaf_like @dots     @DOTi   ^OpenSmallSpaceBeforeKern); # پ چل
 
-  Chain (@dal_like           BEi3    ^OpenSmallSpaceBeforeKern   /(BE|JIM)m/ @dots); # ر نیس
+  Chain @dots (@dal_like @BEi ^OpenSmallSpaceBeforeKern /sdb|ddb/); # پذیر
+  Chain (@dal_like           [BEi3 TEi3] ^OpenSmallSpaceBeforeKern   /(BE|JIM)m/ @dots); # ر نیس / رتیں
   Chain (@dal_like           BEi6    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # کر یہُو
   Chain (@dal_like           HAYCi3  ^OpenSmallSpaceBeforeKern); # رہیں?
 
@@ -249,11 +252,16 @@ Routine AtHeight400pos {
 
   Chain (@alif_like          JIMi5   ^OpenSmallSpaceBeforeKern @dots);  # اچھا
 
+  Chain (@kaf_like           JIMi3   ^OpenSmallSpaceBeforeKern @dots);  # لت جیسی
+
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb/;
 
 Routine AtHeight500pos {
   Chain (@bigbowlfina        @DOTi   ^OpenSmallSpaceBeforeKern);  # کی پیچید
   Chain (@dal_like           JIMi5   ^OpenSpaceBeforeKern);       # رجھر
+  
+  # XXX prefer to raise dots
+  Chain (@dal_like           BEi1    ^OpenSpaceBeforeKern);   # ریسپشن
 
   Chain (@kaf_like           @BEi    ^OpenSpaceBeforeKern @dots);       # تک پہنچنے
 

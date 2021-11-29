@@ -116,6 +116,14 @@ Feature kern {
 
     # ہا
     Position (haydb <yPlacement=+50>) ALIFf1;
+
+    #  پڑتا
+    Position REf1 toeda (@inits <xAdvance=+200>);
+    Position REf1 sda (@inits <xAdvance=+75>);
+
+    Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
+
+    Position @alif_like (/TEi/ <xAdvance=+75>);
   };
 
   Routine DotsUnderGaf {
