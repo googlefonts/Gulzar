@@ -15,7 +15,7 @@ def quantize(number, degree):
 
 class QuantizeAnchors(FEZVerb):
     def action(self, args):
-        amount = args[0]
+        amount = args[0].resolve_as_integer()
         for anchorset in self.parser.fontfeatures.anchors.values():
             for anchorname, pos in anchorset.items():
                 anchorset[anchorname] = (quantize(pos[0], amount), quantize(pos[1], amount))

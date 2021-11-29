@@ -44,6 +44,7 @@ margin = 0
 class AddSpacedAnchors(FEZVerb):
     def action(self, args):
         (spacing,) = args
+        spacing = spacing.resolve_as_integer()
         anchors = self.parser.fontfeatures.anchors
         glyphs = self.parser.font.exportedGlyphs()
         for g in glyphs:

@@ -57,8 +57,8 @@ def quantize(number, degree):
 
 class NastaliqKerning(FEZVerb):
     def action(self, args):
-        self.distance_at_closest = args[0]
-        self.maxtuck = args[1] / 100.0
+        self.distance_at_closest = args[0].resolve_as_integer()
+        self.maxtuck = args[1].resolve_as_integer() / 100.0
         self.shelve = shelve.open("kerncache.db")
         from qalamTools.NastaliqConnections import load_rules
         rules = load_rules("rules.csv", self.parser.font.exportedGlyphs(), full=True)
@@ -204,6 +204,8 @@ class NastaliqKerning(FEZVerb):
 class AtHeight(FEZVerb):
     def action(self, args):
         (height_lower, height_upper, target_routine) = args
+        height_lower = height_lower.resolve_as_integer();
+        height_upper = height_upper.resolve_as_integer();
         target_routine = self.parser.fontfeatures.routineNamed(target_routine)
         self.inits = self.parser.fontfeatures.namedClasses["inits"]
         medis = self.parser.fontfeatures.namedClasses["medis"]
