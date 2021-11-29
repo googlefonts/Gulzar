@@ -113,6 +113,9 @@ Feature kern {
 
     # عزت 
     Position REf2 (sda <yPlacement=+200>) /[BT]E[iu]/;
+
+    # ہا
+    Position (haydb <yPlacement=+50>) ALIFf1;
   };
 
   Routine DotsUnderGaf {

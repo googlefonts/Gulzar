@@ -34,7 +34,7 @@ If you find a colliding sequence between two "words" (i.e. final glyph -> initia
 * Create a debug build of the font; the `Makefile` by default turns on `FONTTOOLS_LOOKUP_DEBUGGING=1` which creates a `Debg` table in the final font. This is stripped when building the release version.
 * Strip the sequence down to the smallest possible string which collides. Paste that string into [Crowbar](http://www.corvelsoftware.co.uk/crowbar/) with the debug build of the font.
 * Look down the list of trigged lookups to determine the sequence height. The list will include lookup names like `At_600_800_AtHeight600sub` and `At_600_800_AtHeight600pos` - this tells you the height-specific lookup routines you need to modify to mitigate the collision.
-* Find those lookups in `dot-avoidance.fez`.
+* Find those lookups in `anchor-attachment.fez`.
 * Decide how you want to mitigate the collision. You can either:
     *  drop the dot one position (call `DropOne` in the `sub` lookup)
     *  drop it two positions (`DropTwo` in `sub`)
