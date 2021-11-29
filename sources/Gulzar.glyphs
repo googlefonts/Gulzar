@@ -1,5 +1,8 @@
 {
-.appVersion = "1352";
+.appVersion = "3091";
+DisplayStrings = (
+"/REf2"
+);
 classes = (
 {
 automatic = 1;
@@ -1215,9 +1218,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = D;
 },
 {
+alignment = -1;
 name = macron;
 transform = "{1, 0, 0, 1, 80, -800}";
 }
@@ -2698,9 +2703,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = H;
 },
 {
+alignment = -1;
 name = breve;
 transform = "{1, 0, 0, 1, 189, -742}";
 }
@@ -3177,9 +3184,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = K;
 },
 {
+alignment = -1;
 name = macron;
 transform = "{1, 0, 0, 1, 110, -800}";
 }
@@ -5068,9 +5077,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = T;
 },
 {
+alignment = -1;
 name = macron;
 transform = "{1, 0, 0, 1, 83, -800}";
 }
@@ -7594,9 +7605,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = d;
 },
 {
+alignment = -1;
 name = macron;
 transform = "{1, 0, 0, 1, 60, -800}";
 }
@@ -9006,9 +9019,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = h;
 },
 {
+alignment = -1;
 name = breve;
 transform = "{1, 0, 0, 1, 85, -742}";
 }
@@ -9748,9 +9763,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = k;
 },
 {
+alignment = -1;
 name = macron;
 transform = "{1, 0, 0, 1, 30, -800}";
 }
@@ -11939,9 +11956,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = t;
 },
 {
+alignment = -1;
 name = macron;
 transform = "{1, 0, 0, 1, -50, -800}";
 }
@@ -29436,6 +29455,10 @@ glyphname = toeda;
 layers = (
 {
 anchors = (
+{
+name = _toeda;
+position = "{161, 37}";
+},
 {
 name = _top;
 position = "{162, 37}";
@@ -60935,6 +60958,10 @@ name = entry;
 position = "{340, 204}";
 },
 {
+name = toeda;
+position = "{262, 350}";
+},
+{
 name = top;
 position = "{95, 207}";
 }
@@ -61001,6 +61028,10 @@ position = "{151, -374}";
 {
 name = entry;
 position = "{320, 175}";
+},
+{
+name = toeda;
+position = "{262, 350}";
 },
 {
 name = top;
