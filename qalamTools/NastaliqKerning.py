@@ -181,7 +181,7 @@ class NastaliqKerning(FEZVerb):
             name="kern_at_%i" % r,
         )
         #kernroutine.flags=0x8
-        kernroutine.flags=0x10 | 0x04
+        kernroutine.flags=0x08 | 0x04
         kernroutine.markFilteringSet=abovemarks
 
         for left, kerns in kerntable.items():

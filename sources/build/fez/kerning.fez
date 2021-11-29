@@ -13,9 +13,9 @@ Feature kern {
 	Routine FixShortKern {
 		Position REf3 ([BEi11 TEi11] <xAdvance=+400>) /CH_YEf|JIMf|AINf|MIMf/; # مربی
 		
-		Position @dal_like ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # دبی
-		Position @vao_like ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # وبی
-		Position @mim_like ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # م بی
+		Position @dal_like ([BEi11 TEi11] <xAdvance=+200>) /CH_YEf|JIMf|AINf|MIMf/; # دبی
+		Position @vao_like ([BEi11 TEi11] <xAdvance=+200>) /CH_YEf|JIMf|AINf|MIMf/; # وبی
+		Position @mim_like ([BEi11 TEi11] <xAdvance=+200>) /CH_YEf|JIMf|AINf|MIMf/; # م بی
 
 		Position /(CH_YE)[uf]/ ([BEi11 TEi11] <xAdvance=+300>) /CH_YEf|JIMf|AINf|MIMf/; # یی پی
 
@@ -28,8 +28,8 @@ Feature kern {
 
 	Routine FixShortKern2 {
 		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+100>) /CH_YEf|JIM[fm]|AINf|MIMf/;
-		Position /ALIF/ (/BEi1|BEisd1/ <xAdvance=+200>) /[sdt]db/;
-		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+60>);
+		Position /ALIF/ (/BEi1$|BEisd1$/ <xAdvance=+75>) /[sdt]db/;
+		# Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+60>);
 		Position /(DAL|RE|VAO|ALIF)[uf]/ (/[KG]AFi|LAMi/ <xAdvance=+300>) /(JIM|BE)m/ /[sdt]db/;
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
 

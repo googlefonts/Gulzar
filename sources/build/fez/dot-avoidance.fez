@@ -6,7 +6,7 @@ Routine DropOne {
 
 Routine DropTwo {
   Substitute [sdb ddb tdb] -> $1.two;
-  Substitute [sdb.yb ddb.yb tdb.yb ] -> $1~yb.two;
+  # Substitute [sdb.yb ddb.yb tdb.yb ] -> $1~yb.two;
 };
 
 # Positioning rules happen *after* dot avoidance, so need to match .one and .two forms
@@ -19,6 +19,11 @@ Routine OpenSpaceBeforeKern {
 Routine OpenSmallSpaceBeforeKern {
   Position (/JIMi/ <xAdvance=+250>) /tdb/;
   Position (@inits <xAdvance=+160>) /sdb|ddb|haydb|tdb/;
+};
+
+Routine OpenTinySpaceBeforeKern {
+  Position (/JIMi/ <xAdvance=+150>) /tdb/;
+  Position (@inits <xAdvance=+100>) /sdb|ddb|haydb|tdb/;
 };
 
 Routine DoNothing    {Substitute JIMi1 -> JIMi1; };
@@ -53,7 +58,8 @@ Routine AtHeight100sub {
   Chain ([REf2 REf3]          @JIMi     @dots        ^DropTwo); # ہر چیز / ہر چیز
 
   Chain (@dal_like            BEi3      @dots        ^DoNothing); # ربا
-  Chain (@dal_like            @DOTi     @dots        ^DropOne); # پرچا
+  Chain (@dal_like            @BEi      @dots        ^DropOne); # پرچا
+  Chain (@dal_like            @JIMi     @dots        ^DropOne); # پرچا
 
   Chain (@vao_like            @DOTi     @dots        ^DropOne); # وپہر
   Chain (HAYCf1               @DOTi     @dots        ^DropOne); # ہہ چہر
@@ -172,7 +178,7 @@ Routine AtHeight200pos {
 
   Chain (@dal_like           BEi3    ^OpenSmallSpaceBeforeKern   /(BE|JIM)m/ @dots); # ر نیس
   Chain (@dal_like           BEi6    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # کر یہُو
-  Chain (@dal_like           HAYCi3  ^OpenSmallSpaceBeforeKern); # رہیں
+  Chain (@dal_like           HAYCi3  ^OpenSmallSpaceBeforeKern); # رہیں?
 
   Chain (@mim_like           BEi12   ^OpenSpaceBeforeKern);
   Chain (@mim_like           @DOTi   ^OpenSpaceBeforeKern);
@@ -181,7 +187,8 @@ Routine AtHeight200pos {
   Chain ([REf2 REf3]         BEi12   /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # جھر پو
   Chain ([REf2 REf3]         BEi3    /sdb|ddb|tdb|haydb|toeda/ ^DoNothingPos); # مر یا
   Chain ([REf2 REf3]         BEisd2  /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # تحریریں
-  Chain ([REf2 REf3]         @BEi    ^OpenSmallSpaceBeforeKern    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # تحریریں
+  Chain ([REf2 REf3]         @BEi    ^OpenSmallSpaceBeforeKern    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore @DOTm @dots); # تحریریں
+  Chain ([REf2 REf3]         @BEi    ^OpenTinySpaceBeforeKern); # تحریریں !
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda/;
 
 Routine AtHeight400pos {
@@ -193,7 +200,7 @@ Routine AtHeight400pos {
 
   Chain (@dal_like            BEisd1 ^OpenSpaceBeforeKern @dots ^Raise @DOTm /.yb$/ ); # قریبی
   Chain (@dal_like           BEi3    ^OpenSmallSpaceBeforeKern); # ربلتی  ر بلتی 
-  Chain (@dal_like           /HAYCi/ ^OpenSpaceBeforeKern);       #  رہنما
+  Chain (@dal_like           /HAYCi/ ^OpenSmallSpaceBeforeKern);       #  رہنما
 
   Chain (@vao_like           BEi6    ^OpenSmallSpaceBeforeKern);  #  کو پہن
   Chain (@vao_like           /HAYCi/ ^OpenSpaceBeforeKern);       # کو ہَیکل
@@ -264,7 +271,7 @@ Feature rlig {
   AtHeight 400-499 AtHeight400sub;
   AtHeight 500-599 AtHeight500sub;
   AtHeight 600-800 AtHeight600sub;
-  AtHeight 0-399 AtHeight200pos;
+  AtHeight 200-399 AtHeight200pos;
   AtHeight 400-499 AtHeight400pos;
   AtHeight 500-599 AtHeight500pos;
   AtHeight 600-800 AtHeight600pos;

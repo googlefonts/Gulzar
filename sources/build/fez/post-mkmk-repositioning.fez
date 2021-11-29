@@ -94,9 +94,10 @@ Feature kern {
     Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
 
     # Clear Alif Madda
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+160> ) @all_above_marks;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+160> ) @below_dots @all_above_marks;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> );
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) HAMZA_ABOVE;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @below_dots @all_above_marks;
+    # Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> );
 
     # Clear Alif Nun KL
     Position /ALIF[uf]1/ (BEi8 <xAdvance=+50>) /sda|dda/ KAFm3;
