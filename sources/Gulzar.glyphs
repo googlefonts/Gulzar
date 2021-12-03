@@ -1,7 +1,8 @@
 {
 .appVersion = "3091";
 DisplayStrings = (
-"/REf2"
+"/REf2",
+"/JIMi1"
 );
 classes = (
 {
@@ -36452,7 +36453,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{248, -221}";
+position = "{148, -221}";
 },
 {
 name = exit;
@@ -49890,7 +49891,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{252, -162}";
+position = "{222, -162}";
 },
 {
 name = exit;
