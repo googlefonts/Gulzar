@@ -72,6 +72,7 @@ class NastaliqKerning(FEZVerb):
         # self.isols = ["ALIFu1"]
         # finas = ["ALIFf1"]
         # self.inits = ["BEi3"]
+        blockers = ["AINf1", "JIMf1"]
         self.isols_finas = self.isols + finas
 
 
@@ -113,6 +114,10 @@ class NastaliqKerning(FEZVerb):
                 if word_tail_rise >= 400 and i > 4:
                    # HACK
                    postcontext[-1] = postcontext[-1] + ["BARI_YEf1"]
+
+                if i <= 2 and word_tail_rise <= 400:
+                    # ANOTHER HACK
+                    postcontext[-1] = list(set(postcontext[-1]) - set(blockers))
 
                 lookups = [[self.generate_kern_table_for_rise(word_tail_rise)]]
                 routine.rules.append(
