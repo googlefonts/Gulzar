@@ -47,7 +47,7 @@ test: $(FINAL_FONT)
 	fontbakery check-googlefonts -l WARN --html fontbakery-report.html --ghmarkdown fontbakery-report.md $(FINAL_FONT)
 
 test-shaping: $(FINAL_FONT)
-	fontbakery check-profile qa/fontbakery-shaping.py $(FINAL_FONT)
+	. venv/bin/activate; fontbakery check-profile --html report.html --config fontbakery.yml --ghmarkdown report.md fontbakery.profiles.shaping $(FINAL_FONT)
 
 testproof: $(FINAL_FONT) regressions.txt
 	gnipahs $(FINAL_FONT) regressions.txt
