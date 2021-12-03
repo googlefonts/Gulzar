@@ -12,6 +12,7 @@ Feature kern {
 
 	Routine FixShortKern {
 		Position [REf2 REf3] ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+400>); # مربی / عربی
+		Position @alif_like ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+50>); # ابی
 		
 		Position @dal_like ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
 		Position @vao_like ([BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # وبی
@@ -41,9 +42,9 @@ Feature kern {
 	Routine OtherKerningFixes {
 		Position REf3 (/[KG]AFi/ <xAdvance=-120>);
 		Position @vao_like (space.urdu <xAdvance=50>) /AINi/;
-		Position @bigbowlfina (space.urdu <xAdvance=100>) /JIMi/ /[sdt]db/;
+		Position @bigbowlfina (space.urdu <xAdvance=150>) /JIMi/ /[sdt]db/;
 		Position @bigbowlfina (space.urdu <xAdvance=100>) /AINi/;
-		Position [REf2 REf3] (space.urdu <xAdvance=50>) /JIMi/;
+		Position [REf2 REf3] (space.urdu <xAdvance=150>) /JIMi/;
 		Position /NUN[uf]/ (space.urdu <xAdvance=100>) /HAYCi/;
 		Position [REf2 REf3] (ALIFu1 <xAdvance=200>) [BEi11 TEi11];
 	} UseMarkFilteringSet /[sdt]db/;

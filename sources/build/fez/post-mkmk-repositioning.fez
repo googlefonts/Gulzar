@@ -33,6 +33,8 @@ Routine FinaJimDownABit {
 
 Feature kern {
   Routine GiveChYeDotsMoreSpace {
+    Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
+
     Position ( [ddb.yb tdb.yb] <200 -200 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
@@ -94,7 +96,7 @@ Feature kern {
     Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
 
     # Clear Alif Madda
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) HAMZA_ABOVE;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) HAMZA_ABOVE;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @below_dots @all_above_marks;
     # Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> );
@@ -109,7 +111,8 @@ Feature kern {
     Position  [parenright.latin parenright.urdu] (/[BT]Ei/ <xAdvance=+70>) [dda tdb];
 
     # چنا 
-    Position JIMi1 [tdb sdb tda] /BEm|TEm/ ([sda dda tda] <yPlacement=+100>);
+    Position JIMi1 @nuktas /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
+    Position JIMi1 /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
 
     # عزت 
     Position REf2 (sda <yPlacement=+200>) /[BT]E[iu]/;
@@ -121,7 +124,8 @@ Feature kern {
     Position REf1 toeda (@inits <xAdvance=+200>);
     Position REf1 sda (@inits <xAdvance=+75>);
 
-    Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
+    Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like @BEi] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
+    Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
     Position @alif_like (/TEi/ <xAdvance=+75>);
   };
@@ -178,4 +182,8 @@ Feature kern {
     Position REf2 (TEi12 <xAdvance=+100>); # Particular nasty case: 
     Position /ALIF/ (MIMi7 <xAdvance=+150>);
   } IgnoreLigatures UseMarkFilteringSet /\.yb/;
+
+  Routine AvoidZahIsol {
+    Position [REf2 REf3] [sda tda toeda] (@isols <xAdvance=+50>);
+  };
 };

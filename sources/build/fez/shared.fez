@@ -11,9 +11,9 @@ DefineClass @below_nuktas = /^[sdt]db(\.yb)?$/;
 DefineClass @above_nuktas = /^[sdt]da$/;
 DefineClass @other_above_marks = [toeda DAMMA SHADDA HAMZA_ABOVE FATHA];
 DefineClass @all_above_marks = @above_nuktas | @other_above_marks;
-DefineClass @nuktas = @above_nuktas | @below_nuktas | /^.di$/; # di = JIM dots
+DefineClass @nuktas = @above_nuktas | @below_nuktas | /^.di$/ | /d[ab]\.(one|two)/; # di = JIM dots
 DefineClass @nuktas_and_kasra = [@nuktas KASRA KASRA.yb haydb haydb.yb];
-DefineClass @below_dots = [@below_nuktas KASRA KASRA.yb haydb haydb.yb];
+DefineClass @below_dots = [@below_nuktas KASRA KASRA.yb haydb haydb.yb /db\.(one|two)/ ];
 DefineClass @medis = /m\w*\d+$/;
 DefineClass @inits = /i\w*\d+$/;
 DefineClass @finas = /f\w*\d+$/;
