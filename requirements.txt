@@ -1,4 +1,4 @@
-git+git://github.com/fonttools/fonttools.git#egg=fonttools
+fonttools>=4.28.2
 glyphsLib
 kurbopy
 fontmake
