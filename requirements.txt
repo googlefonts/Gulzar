@@ -2,8 +2,7 @@ git+git://github.com/fonttools/fonttools.git#egg=fonttools
 glyphsLib
 kurbopy
 fontmake
-git+git://github.com/simoncozens/fez.git#egg=fez-language
-git+git://github.com/simoncozens/fontfeatures.git#egg=fontfeatures
+fez-language==1.3.0
 youseedee
 bidict
 tqdm
