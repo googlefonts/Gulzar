@@ -21,6 +21,7 @@ class FixYBPositions(FEZVerb):
         glyphs = self.parser.font.exportedGlyphs()
         ybs = [x for x in glyphs if ".yb" in x]
         rules = []
+        positions = {}
         for g in glyphs:
             if not re.search(r"[A-Z]+[mi]", g):
                 continue
@@ -29,11 +30,13 @@ class FixYBPositions(FEZVerb):
             if "bottom" not in self.parser.fontfeatures.anchors[g]:
                 continue
             anchor = self.parser.fontfeatures.anchors[g]["bottom"]
+            positions.setdefault(anchor[0], []).append(g)
+        for placement, glyphs in positions.items():
             rules.append(
                 fontFeatures.Positioning(
                     [ybs],
-                    [fontFeatures.ValueRecord(xPlacement=anchor[0])],
-                    precontext=[[g]],
+                    [fontFeatures.ValueRecord(xPlacement=placement)],
+                    precontext=[glyphs],
                 )
             )
         return rules
