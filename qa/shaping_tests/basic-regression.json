@@ -3,11 +3,21 @@
     "collidoscope": {
       "faraway": true,
       "marks": true,
-      "adjacentmarks": false,
-      "bases": false
+      "adjacentmarks": false
     },
     "defaults": {
-      "allowedcollisions": ["haydb/HAYCi3", "haydb/HAYCi15"]
+      "allowedcollisions": [
+        "haydb/HAYCi3",
+        "haydb/HAYCi15",
+        "REf2/BEi2",
+        "REf1/TEi4",
+        "LAMf1/BEm8",
+        "REf2/MIMi2",
+        "LAMf1/TEi8",
+        "LAMf1/BEi8",
+        "LAMf1/JIMi8",
+        "REf1/AINm4"
+      ]
     }
   },
   "tests": [
@@ -60,7 +70,7 @@
     },
     {
       "input": "رچینی",
-      "expectation": "CH_YEf1=4+441|sda=3@60,476+0|BEm11=3@-40,286+300|ddb.one=2@-44,-166+0|BEmsd1=2@-54,394+263|tdb.two=1@18,-265+0|JIMi3=1@-42,395+15|REu1=0+394"
+      "expectation": "CH_YEf1=4+441|sda=3@60,476+0|BEm11=3@-40,286+300|ddb=2@-24,54+0|BEmsd1=2@-54,394+263|tdb.two=1@18,-265+0|JIMi3=1@-42,395+15|REu1=0+394"
     },
     {
       "input": "سرپہ",
@@ -146,7 +156,7 @@
     },
     {
       "input": "مربی",
-      "expectation": "CH_YEf1=3+441|sdb.yb=2@315,-200+0|BEi11=2@-20,349+505|REf3=1+320|MIMi14=0@-113,205+343"
+      "expectation": "CH_YEf1=3+441|sdb.yb=2@315,-200+0|BEi11=2@-20,349+516|REf3=1+320|MIMi14=0@-113,205+343"
     },
     {
       "input": "رپھر",
@@ -178,7 +188,7 @@
     },
     {
       "input": "یی پی",
-      "expectation": "CH_YEf1=4+441|tdb.yb=3@310,-200+0|BEi11=3@-20,349+595|space.urdu=2+150|CH_YEf1=1+441|ddb.yb=0@310,-200+0|BEi11=0@-20,349+175"
+      "expectation": "CH_YEf1=4+441|tdb.yb=3@310,-200+0|BEi11=3@-20,349+606|space.urdu=2+150|CH_YEf1=1+441|ddb.yb=0@310,-200+0|BEi11=0@-20,349+186"
     },
     {
       "input": "ورپہر",
@@ -202,7 +212,7 @@
     },
     {
       "input": "متجرپھ",
-      "expectation": "HAYAf1=5+415|tdb.two=4@1,-569+0|BEi5=4@-49,341+221|REf2=3+340|sdb=2@-122,-251+0|JIMm15=2@-152,109+20|dda=1@60,632+0|TEm7=1@-60,532+365|MIMi1=0@-55,533+403"
+      "expectation": "HAYAf1=5+415|tdb.two=4@1,-569+0|BEi5=4@-49,341+161|REf2=3+340|sdb=2@-122,-251+0|JIMm15=2@-152,109+20|dda=1@60,632+0|TEm7=1@-60,532+365|MIMi1=0@-55,533+403"
     },
     {
       "input": "طریقو",
@@ -214,7 +224,7 @@
     },
     {
       "input": "عزت",
-      "expectation": "dda=2@230,180+0|TEu1=2+759|sda=1@-40,250+0|REf2=1+340|AINi15=0@21,224+425"
+      "expectation": "dda=2@230,180+0|TEu1=2+809|sda=1@-40,250+0|REf2=1+340|AINi15=0@21,224+425"
     },
     {
       "input": "تحریریں",
@@ -238,7 +248,7 @@
     },
     {
       "input": "مرتبہ",
-      "expectation": "HAYCf1=4+339|sdb=3@-22,-195+0|BEm3=3@-42,75+212|dda=2@-134,304+0|TEisd1=2@-54,164+95|REf3=1+320|MIMi14=0@-113,205+343"
+      "expectation": "HAYCf1=4+339|sdb=3@-22,-195+0|BEm3=3@-42,75+212|dda=2@-134,304+0|TEisd1=2@-54,164+195|REf3=1+320|MIMi14=0@-113,205+343"
     },
     {
       "input": "دیتی",
@@ -278,7 +288,7 @@
     },
     {
       "input": "ریخ",
-      "expectation": "sda=2@150,650+0|JIMf1=2+223|ddb=1@90,308+0|BEi7=1@-60,708+544|REu1=0+394"
+      "expectation": "sda=2@150,650+0|JIMf1=2+223|ddb=1@90,308+0|BEi7=1@-60,708+555|REu1=0+394"
     },
     {
       "input": "کی جمع",
@@ -286,7 +296,7 @@
     },
     {
       "input": "ی پر",
-      "expectation": "REf1=3+357|tdb=2@-89,-38+0|BEi13=2@-29,272+337|space.urdu=1+150|CH_YEu1=0+717",
+      "expectation": "REf1=3+357|tdb=2@-89,-38+0|BEi13=2@-29,272+137|space.urdu=1+150|CH_YEu1=0+717",
       "note": "No cleverness"
     },
     {
@@ -309,8 +319,7 @@
     },
     {
       "input": "وچی",
-      "note": "Don't use YB here, kern",
-      "expectation": "CH_YEf1|tdb.two|JIMi11|VAOu1"
+      "expectation": "CH_YEf1|tdb.yb|JIMi11|VAOu1"
     },
     {
       "input": "ایا",
@@ -318,7 +327,7 @@
     },
     {
       "input": "کوبی",
-      "expectation": "CH_YEf1=3+441|sdb.yb=2@315,-50+0|BEi11=2@-20,349+215|VAOf1=1+328|KAFi14=0@-63,297+271"
+      "expectation": "CH_YEf1=3+441|sdb.yb=2@315,-50+0|BEi11=2@-20,349+176|VAOf1=1+328|KAFi14=0@-63,297+271"
     },
     {
       "input": "ایک",
@@ -392,9 +401,6 @@
     },
     {
       "input": "کو ہَیکل"
-    },
-    {
-      "input": "نِیکُدِیمُس"
     },
     {
       "input": "ھر چا"
@@ -486,7 +492,7 @@
     },
     {
       "input": "قوتو",
-      "expectation": "VAOf1=3+328|dda=2@-200,615+0|TEi12=2@-20,235+37|VAOf1=1+328|dda=0@-130,635+0|FEi12=0@-40,235+221"
+      "expectation": "VAOf1=3+328|dda=2@-150,615+0|TEi12=2@-20,235+87|VAOf1=1+328|dda=0@-130,635+0|FEi12=0@-40,235+221"
     },
     {
       "input": "کو جستی",
@@ -566,7 +572,21 @@
     },
     {
       "input": "ز پہچا"
+    },
+    {
+      "input": "ایڈیشن"
+    },
+    {
+      "input": "ندگی"
+    },
+    {
+      "input": "نلایتی"
+    },
+    {
+      "input": "ایڈیشن"
+    },
+    {
+      "input": "ترقی"
     }
-
   ]
 }

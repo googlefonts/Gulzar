@@ -21,10 +21,10 @@ DefineClass @isols = /[A-Z]+u\w*\d+$/;
 
 
 DefineClass @bigbowlfina = /(AIN|CH_YE|JIM|LAM|NUN|QAF|SAD|SIN)[fu]/;
-DefineClass @BEi = /BEi/;
+DefineClass @BEi = /[BT]Ei/;
 DefineClass @JIMi = /JIMi/;
-DefineClass @DOTi = /BEi|JIMi|HAYCi/;
-DefineClass @DOTm = /BEm|JIMm|HAYCm/;
+DefineClass @DOTi = /[BT]Ei|JIMi|HAYCi/;
+DefineClass @DOTm = /[BT]Em|JIMm|HAYCm/;
 DefineClass @dal_like = [REu1 DALf1 DALu1 REf1 REf4];
 DefineClass @vao_like = [VAOf1 VAOu1 HAYCu1 HAYAf1];
 DefineClass @kaf_like = /(KAF|GAF)[uf]|BEu|BEf|TEf/;

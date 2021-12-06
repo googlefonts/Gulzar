@@ -126,7 +126,9 @@ Feature kern {
     Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials /KAF|GAF/;
     Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials @all_above_marks /KAF|GAF/;
 
-    Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /KAF|GAF/;
+    Position (dda <yPlacement=+100>) /[GK]AFm[37]/; # تکل
+    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) /[GK]AFm[37]/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /[KG]AF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials /KAF|GAF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials @all_above_marks /KAF|GAF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowInits @all_above_marks /KAF|GAF/;

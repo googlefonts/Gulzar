@@ -115,9 +115,9 @@ class NastaliqKerning(FEZVerb):
                    # HACK
                    postcontext[-1] = postcontext[-1] + ["BARI_YEf1"]
 
-                if i <= 2:
-                    # ANOTHER HACK
-                    postcontext[-1] = list(set(postcontext[-1]) - set(blockers))
+                if len(postcontext) < 2:
+                   # ANOTHER HACK
+                   postcontext[-1] = list(set(postcontext[-1]) - set(blockers))
 
                 lookups = [[self.generate_kern_table_for_rise(word_tail_rise)]]
                 routine.rules.append(
