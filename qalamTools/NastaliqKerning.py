@@ -115,7 +115,7 @@ class NastaliqKerning(FEZVerb):
                    # HACK
                    postcontext[-1] = postcontext[-1] + ["BARI_YEf1"]
 
-                if i <= 2 and word_tail_rise <= 400:
+                if i <= 2:
                     # ANOTHER HACK
                     postcontext[-1] = list(set(postcontext[-1]) - set(blockers))
 
