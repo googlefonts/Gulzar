@@ -111,6 +111,7 @@ Routine AtHeight100sub {
 
   Chain (@vao_like            BEi3      @dots        ^DoNothing); # ہ پا
   Chain (@vao_like            @DOTi     @dots        ^DropOne); # وپہر
+  Chain (HAYCf1               BEi3      @dots        ^DoNothing); # ہہ پا
   Chain (HAYCf1               @DOTi     @dots        ^DropOne); # ہہ چہر
 
   Chain (@kaf_like            @DOTi     @dots        ^DropOne); # یپ چل
@@ -249,9 +250,9 @@ Routine AtHeight200pos {
   Chain (@bigbowlfina        /HAYCi/   ^OpenSmallSpaceBeforeKern); # ن ہو
   Chain (@bigbowlfina dda    /HAYCi/   ^OpenSmallSpaceBeforeKern); # ن ہو
 
-  Chain (@kaf_like           @DOTi   ^OpenSmallSpaceBeforeKern [ddb tdb]); # پ چل
-  Chain (@kaf_like toeda     @DOTi   ^OpenSmallSpaceBeforeKern [ddb tdb]); # پ چل
-  Chain (@kaf_like @dots     @DOTi   ^OpenSmallSpaceBeforeKern [ddb tdb]); # پ چل
+  Chain (@kaf_like           @DOTi   ^OpenSmallSpaceBeforeKern [ddb tdb haydb]); # پ چل
+  Chain (@kaf_like toeda     @DOTi   ^OpenSmallSpaceBeforeKern [ddb tdb haydb]); # پ چل
+  Chain (@kaf_like @dots     @DOTi   ^OpenSmallSpaceBeforeKern [ddb tdb haydb]); # پ چل
 
   Chain @dots (@dal_like @BEi ^OpenSmallSpaceBeforeKern /sdb|ddb/); # پذیر
   Chain (@dal_like           [BEi3 TEi3] ^OpenSmallSpaceBeforeKern   /(BE|JIM)m/ @dots); # ر نیس / رتیں

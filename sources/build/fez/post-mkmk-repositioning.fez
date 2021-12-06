@@ -84,6 +84,7 @@ Feature kern {
 
     # Clear Alif Madda
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) HAMZA_ABOVE;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) tda;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @below_dots @all_above_marks;
     # Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> );
@@ -129,9 +130,9 @@ Feature kern {
     Position (dda <yPlacement=+100>) /[GK]AFm[37]/; # تکل
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) /[GK]AFm[37]/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /[KG]AF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials /KAF|GAF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowMedials @all_above_marks /KAF|GAF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) @NarrowInits @all_above_marks /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowMedials /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowInits @all_above_marks /KAF|GAF/;
 
     Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
     Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials @all_above_marks /KAF|GAF/;
