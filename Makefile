@@ -44,7 +44,7 @@ sources/build/rules.csv: $(GLYPHS_FILE)
 	python3 scripts/dump-glyphs-rules.py $(GLYPHS_FILE) > sources/build/rules.csv
 
 test: $(FINAL_FONT)
-	fontbakery check-googlefonts -l WARN --html fontbakery-report.html --ghmarkdown fontbakery-report.md $(FINAL_FONT)
+	. venv/bin/activate; fontbakery check-googlefonts -l WARN --html fontbakery-report.html --ghmarkdown fontbakery-report.md $(FINAL_FONT)
 
 test-shaping: $(FINAL_FONT)
 	. venv/bin/activate; fontbakery check-profile --html report.html --config fontbakery.yml --ghmarkdown report.md fontbakery.profiles.shaping $(FINAL_FONT)
