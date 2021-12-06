@@ -272,7 +272,7 @@ Routine AtHeight200pos {
   Chain ([REf2 REf3]         BEi3    /sdb|ddb|tdb|haydb|toeda/ ^DoNothingPos); # مر یا
   Chain ([REf2 REf3]         BEisd1  ^OpenTinySpaceBeforeKern); # پھر پیا
   Chain ([REf2 REf3]         BEisd2  /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # تحریریں
-  Chain ([REf2 REf3]         @DOTi @DOTm @dots      ^OpenSpaceBeforeKern); # نٹرنیٹ
+  Chain ([REf2 REf3]         @DOTi ^OpenTinySpaceBeforeKern @DOTm @dots      ); # نٹرنیٹ
   Chain ([REf2 REf3]         @BEi    ^OpenSmallSpaceBeforeKern    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore @DOTm @dots); # تحریریں
 
   Chain ([REf2 REf3]         @BEi    ^OpenTinySpaceBeforeKern /\.yb/ ^DropATinyBitMore); # تحریریں ! / متجرپھ
@@ -390,6 +390,9 @@ Feature rlig {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
     Substitute /FEi/ dda /FEm/ (sda) -> sda.two;
+  };
+  Routine OtherFixes2 {
+    Chain ([REf1 REf2 REf3] [tda sda toeda] @isols ^OpenSmallSpaceBeforeKern);
   };
 };
 
