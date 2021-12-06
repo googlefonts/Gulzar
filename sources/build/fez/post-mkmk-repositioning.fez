@@ -3,21 +3,8 @@ LoadPlugin qalamTools.SeparateConsecutive;
 
 # And now we do some more positioning. We put this in mkmk because we want
 # this to be processed at the end, after anchor positioning is done.
-Feature mkmk {
 
-  # Dots and marks on the letter preceding a swash kaf need to be dropped
-  # down to avoid collision. Dots get moved right slightly.
-  # XXX ideally tall kaf/gaf and short kaf/gaf should be treated differently.
-  DefineClass @kafgaf = /^(KAF|GAF)/;
-  DefineClass @shortkafgaf = @kafgaf & (yMax < 700);
-  DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
-
-  # Dots in a bari ye sequence, created by the BYMoveDots rule above, should
-  # also be separated.
-  DefineClass @behs = /.*[mif](sd)?\d+$/;
-
-};
-
+DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
 
 Routine FinaJimTopRight {
   Position ([sdb.two ddb.two tdb.two] <yPlacement=-700>);
@@ -121,8 +108,8 @@ Feature kern {
     Position (haydb <yPlacement=+50>) ALIFf1;
 
     #  پڑتا
-    Position REf1 toeda (@inits <xAdvance=+200>);
-    Position REf1 sda (@inits <xAdvance=+75>);
+    Position REf1 toeda ([@inits @isols] <xAdvance=+200>);
+    Position REf1 sda ([@inits @isols] <xAdvance=+75>);
 
     Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like @BEi] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
@@ -164,15 +151,12 @@ Feature kern {
     Position (tdb.yb <xPlacement=-30>) AINf1;
   } UseMarkFilteringSet [tdb.yb];
 
-  Routine InitChechFinesse {
-    Position ( /JIMi/ <xAdvance=+50> tdb <xPlacement=+50> );
-  };
-
   Routine FeTeFinesse {
     Position /FEi/ /TEm/ ( dda <yPlacement=+50> ) ;
     Position /FEi/ dda /TEm/ ( dda <yPlacement=+50> ) ;
+    # قوتو
+    Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
   } UseMarkFilteringSet [dda];
-
 
   Routine AddIsolDammaSpace {
     Position [@isols @finas] DAMMA ( @inits <xAdvance=+100> );
@@ -183,7 +167,10 @@ Feature kern {
     Position /ALIF/ (MIMi7 <xAdvance=+150>);
   } IgnoreLigatures UseMarkFilteringSet /\.yb/;
 
-  Routine AvoidZahIsol {
+  Routine Various3 {
+    # InitChechFinesse
+    Position ( /JIMi/ <xAdvance=+50> tdb <xPlacement=+50> );
+    # AvoidZahIsol
     Position [REf2 REf3] [sda tda toeda] (@isols <xAdvance=+50>);
   };
 };

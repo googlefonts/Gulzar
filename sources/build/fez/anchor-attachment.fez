@@ -72,6 +72,7 @@ Routine Tighten  { Position (@inits <xAdvance=-150>); };
 Routine Raise    { Position ([sdb tdb ddb] <yPlacement=+100>); };
 Routine TopRight {Position ([sdb tdb ddb] <yPlacement=+250 xPlacement=+150>); };
 Routine BottomLeft {Position ([sdb tdb ddb] <yPlacement=-250 xPlacement=-150>); };
+Routine LeftABit {Position ([sdb tdb ddb] <xPlacement=-100>); };
 
 Routine DropATinyBitMore {
   Position ([tdb.one ddb.one tdb.yb sdb.yb ddb.yb] <yPlacement=-150>);
@@ -259,7 +260,9 @@ Routine AtHeight200pos {
   Chain ([REf2 REf3]         @BEi    ^OpenSmallSpaceBeforeKern    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore @DOTm @dots); # تحریریں
   Chain ([REf2 REf3]         BEi11  ^OpenTinySpaceBeforeKern /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # عربی
   Chain ([REf2 REf3]         @BEi    ^OpenTinySpaceBeforeKern /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # تحریریں ! / متجرپھ
-} IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda/;
+
+  Chain (@alif_like          @BEi    ^OpenTinySpaceBeforeKern dda);
+} IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda|dda/;
 
 Routine AtHeight400pos {
   Chain (@bigbowlfina        @DOTi   ^OpenSmallSpaceBeforeKern);  # کی پیما / کی پیمائ
@@ -295,6 +298,8 @@ Routine AtHeight500pos {
 
   Chain (@mim_like           @DOTi   ^OpenSmallSpaceBeforeKern);
 
+  Chain (@vao_like           @JIMi   ^OpenSmallSpaceBeforeKern @dots @DOTm @dots);
+  Chain (@vao_like           @JIMi   ^OpenSmallSpaceBeforeKern @dots ^LeftABit); # کوجسیی
   Chain (@vao_like           BEi5    ^OpenSmallSpaceBeforeKern);
 
   Chain (HAYCf1              BEi7    ^OpenSmallSpaceBeforeKern  @dots ^TopRight); # یہ بجشا
@@ -324,7 +329,9 @@ Routine AtHeight600pos {
 
   Chain (@mim_like           @DOTi   ^OpenSmallSpaceBeforeKern);  # م ہم
 
-  Chain (@vao_like           BEi5 @dots ^BottomLeft); # ہ بھی
+  # For soe reason I put open small space here?
+  Chain (@vao_like           BEi5 [sda dda] ^BottomLeft); # ہ بھی
+
   Chain (@vao_like           [BEisd1 BEi7]  [ddb.two tdb.two] ^DropATinyBitMore); # ویجٹس
   Chain (@vao_like           [BEisd1 BEi7]  ^OpenSmallSpaceBeforeKern); # کمیونیکیشن / ہ بجی
   Chain (@vao_like           HAYCi9  ^OpenSpaceBeforeKern);       # وہم

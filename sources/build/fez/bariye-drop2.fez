@@ -37,7 +37,7 @@ Feature rlig {
 };
 
 # But first let's place them under their base glyphs
-QuantizeAnchors 5;
+QuantizeAnchors 10;
  
 Feature mark {
   Routine FixYBPositions {

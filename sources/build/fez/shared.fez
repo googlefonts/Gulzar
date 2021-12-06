@@ -29,7 +29,7 @@ DefineClass @dal_like = [REu1 DALf1 DALu1 REf1 REf4];
 DefineClass @vao_like = [VAOf1 VAOu1 HAYCu1 HAYAf1];
 DefineClass @kaf_like = /(KAF|GAF)[uf]|BEu|BEf|TEf/;
 DefineClass @mim_like = /MIM[uf]/;
-DefineClass @alif_like = /ALIF[fu]/;
+DefineClass @alif_like = /ALIF[fu]|TOE[fu]/;
 
 
 # The two following glyph classes are badly named. Really, they're referring
