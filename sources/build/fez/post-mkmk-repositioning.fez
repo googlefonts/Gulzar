@@ -139,7 +139,8 @@ Feature kern {
     Position /sda|dda/ @NarrowMedials (@all_above_marks <yPlacement=-20>) /KAF|GAF/;
     # Let's clear it
     Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /KAF|GAF/;
-    } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda/;
+    Position MADDA (/KAF|GAF/ <xAdvance=+70>);
+    } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
