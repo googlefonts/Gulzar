@@ -65,8 +65,8 @@ class NastaliqKerning(FEZVerb):
 
         self.inits = self.parser.fontfeatures.namedClasses["inits"]
         medis = self.parser.fontfeatures.namedClasses["medis"]
-        self.isols = [x for x in self.parser.fontfeatures.namedClasses["isols"] if "BARI_YE" not in x]
         bariye = self.parser.fontfeatures.namedClasses["bariye"]
+        self.isols = [x for x in self.parser.fontfeatures.namedClasses["isols"] if x not in bariye]
         finas = [x for x in self.parser.fontfeatures.namedClasses["finas"] if x not in bariye]
         # self.isols_finas = ["DALf1", "REu1", "ALIFu1"]
         # self.isols = ["ALIFu1"]
@@ -111,15 +111,13 @@ class NastaliqKerning(FEZVerb):
 
 
                 target = [self.isols_finas]
-                if word_tail_rise >= 400 and i > 4:
-                   # HACK
-                   postcontext[-1] = postcontext[-1] + ["BARI_YEf1"]
-
-                if len(postcontext) < 2:
-                   # ANOTHER HACK
-                   postcontext[-1] = list(set(postcontext[-1]) - set(blockers))
-
                 lookups = [[self.generate_kern_table_for_rise(word_tail_rise)]]
+                do_blockers = False
+
+                if blockers in postcontext[-1]:
+                   postcontext[-1] = list(set(postcontext[-1]) - set(blockers))
+                   do_blockers = True
+
                 routine.rules.append(
                     fontFeatures.Chaining(
                         target,
@@ -127,6 +125,29 @@ class NastaliqKerning(FEZVerb):
                         lookups=lookups,
                     )
                 )
+
+                if i > 2 and do_blockers:
+                    postcontext[-1] = blockers
+                    routine.rules.append(
+                        fontFeatures.Chaining(
+                            target,
+                            postcontext=[self.inits] + postcontext,
+                            lookups=lookups,
+                        )
+                    )
+
+                if word_tail_rise >= 400 and i > 4:
+                    # HACK
+                    # This has to be done separately to make the classes work
+                    postcontext[-1] = ["BARI_YEf1"]
+                    routine.rules.append(
+                        fontFeatures.Chaining(
+                            target,
+                            postcontext=[self.inits] + postcontext,
+                            lookups=lookups,
+                        )
+                    )
+
 
         target = [self.isols_finas]
         lookups = [[self.generate_kern_table_for_rise(0)]]
