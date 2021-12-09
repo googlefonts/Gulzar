@@ -11,7 +11,7 @@ export FONTTOOLS_GPOS_COMPACT_MODE=9
 
 $(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
 	. venv/bin/activate; fontmake -f --master-dir . -g $(GLYPHS_FILE) --filter DecomposeTransformedComponentsFilter --no-production-names -o ttf --output-path $(FINAL_FONT)
-	$(PYTHON) -m fontTools.feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
+	. venv/bin/activate; $(PYTHON) -m fontTools.feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
 
 venv: venv/touchfile
 
