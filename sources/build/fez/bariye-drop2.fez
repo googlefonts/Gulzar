@@ -4,13 +4,15 @@ LoadPlugin qalamTools.QuantizeAnchors;
 LoadAnchors;
 
 Feature rlig {
-  Routine ManualDrop {
-    Substitute /(JIM)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
-    Substitute /(BE)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
+  Routine ManualDrop1 {
+    Substitute /(JIM)[mi]|(BE)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
 
     Substitute (tdb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> tdb.yb;
     Substitute (ddb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> ddb.yb;
   } UseMarkFilteringSet [sdb tdb ddb];
+  Routine ManualDrop2 {
+    Substitute /(JIM|BE)[mi]/ (KASRA) /CH_YEf/ -> KASRA.yb;
+  } UseMarkFilteringSet KASRA;
 };
 
 DefineClass @base_ybs = /\.yb$/;

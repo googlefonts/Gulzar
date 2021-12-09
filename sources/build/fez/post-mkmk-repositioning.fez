@@ -84,10 +84,10 @@ Feature kern {
 
     # Clear Alif Madda
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) HAMZA_ABOVE;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) tda;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @all_above_marks;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @below_dots @all_above_marks;
-    # Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> );
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) [dda tda];
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) @below_dots @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> );
 
     # Clear Alif Nun KL
     Position /ALIF[uf]1/ (BEi8 <xAdvance=+50>) /sda|dda/ KAFm3;
@@ -127,19 +127,21 @@ Feature kern {
     Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials /KAF|GAF/;
     Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials @all_above_marks /KAF|GAF/;
 
-    Position (dda <yPlacement=+100>) /[GK]AFm[37]/; # تکل
+    Position TEi8 (dda <yPlacement=+100>) /[GK]AFm[37]/; # تکل
+    Position TEm8 (dda <yPlacement=-100>) /[GK]AFm[37]/; # تکل
+    Position (/toeda|tda/ <yPlacement=-50> DAMMA <yPlacement=+200>) /[GK]AF/; # شُک
     Position (/toeda|tda|DAMMA/ <yPlacement=-135>) /[GK]AFm[37]/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-50>) /[KG]AF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowMedials /KAF|GAF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowMedials @all_above_marks /KAF|GAF/;
     Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowInits @all_above_marks /KAF|GAF/;
+    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) /[KG]AF/;
 
     Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
     Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials @all_above_marks /KAF|GAF/;
 
     Position /sda|dda/ @NarrowMedials (@all_above_marks <yPlacement=-20>) /KAF|GAF/;
     # Let's clear it
-    Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /KAF|GAF/;
+    Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m13/;
     Position MADDA (/KAF|GAF/ <xAdvance=+70>);
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
 

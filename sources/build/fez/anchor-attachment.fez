@@ -55,11 +55,16 @@ Routine OpenSpaceBeforeKern {
   Position toeda (@inits <xAdvance=+200>);
 } IgnoreLigatures UseMarkFilteringSet /db|toeda/;
 
+Routine OpenBigSpaceBeforeKern {
+  Position toeda (@inits <xAdvance=+300>);
+} IgnoreLigatures;
+
 Routine OpenSmallSpaceBeforeKern {
   Position (/JIMi/ <xAdvance=+250>) /tdb/;
-  Position (@inits <xAdvance=+160>) /db|[mf](sd)?\d+/;
-  Position toeda (@inits <xAdvance=+150>);
-} IgnoreLigatures UseMarkFilteringSet /db|toeda/;
+  Position ([@inits @isols] <xAdvance=+160>) /db|da|[mf](sd)?\d+/;
+  Position DAMMA ([@inits @isols] <xAdvance=+250>);
+  Position @all_above_marks ([@inits @isols] <xAdvance=+160>);
+} IgnoreLigatures UseMarkFilteringSet @all_above_marks;
 
 Routine OpenTinySpaceBeforeKern {
   Position (/JIMi/ <xAdvance=+150>) /tdb/;
@@ -84,8 +89,8 @@ Routine DropALotMore {
   Position ([tdb.two sdb.two] <yPlacement=-270>);
 };
 
-Routine ClearRehDots {
-  Chain ([REf1 REf2 REf3] [tda sda toeda] @inits ^OpenSmallSpaceBeforeKern);
+Routine ClearUpperDots {
+  Chain ([@isols @finas] [tda sda toeda] @inits ^OpenSmallSpaceBeforeKern);
 } IgnoreLigatures;
 
 
@@ -210,6 +215,7 @@ Routine AtHeight500sub {
 
 Routine AtHeight600sub {
   Chain (@vao_like            JIMi5     @dots            ^DoNothing); # وچھی
+  Chain (@vao_like toeda      @DOTi     @dots            ^DoNothing); # ڈیمو
   Chain (@vao_like            BEi6      @dots            ^DoNothing); # کو پہنچ
   Chain (@vao_like            JIMi9     @dots            ^DropTwo);   #  وجمھ
   Chain (@vao_like            @DOTi     [ddb tdb]        ^DropTwo);   # لو چھیا / و چھیا / but not و جھی
@@ -230,13 +236,13 @@ Routine AtHeight600sub {
 
   Chain (@dal_like            @DOTi     @dots            ^DoNothing); # ندبجن (space instead)
 
-} IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb];
+} IgnoreLigatures UseMarkFilteringSet [sdb ddb ddb.one tdb haydb toeda];
 
 # Rules which use kerning instead of dropping
 Routine AtHeight0pos {
   Chain (@bigbowlfina        [BEisd1 BEisd2]   ^OpenSpaceBeforeKern [ddb tdb]); # ان پٹ
   Chain (@bigbowlfina        @BEi   ^OpenSmallSpaceBeforeKern [ddb tdb]); # کی پا
-  Chain ([REf1 REf2 REf3] ^ClearRehDots); # یکنز شا
+  Chain ([REf1 REf2 REf3 DALu1 DALf1] ^ClearUpperDots); # یکنز شا
 } IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda/;
 
 Routine AtHeight200pos {
@@ -258,7 +264,7 @@ Routine AtHeight200pos {
   Chain (@dal_like           [BEi3 TEi3] ^OpenSmallSpaceBeforeKern   /(BE|JIM)m/ @dots); # ر نیس / رتیں
   Chain (@dal_like           BEi6    /sdb|ddb|tdb|haydb|toeda/ ^DropATinyBitMore); # کر یہُو
   Chain (@dal_like           HAYCi3  ^OpenSmallSpaceBeforeKern); # رہیں?
-  Chain (@dal_like  toeda    @inits  ^OpenSmallSpaceBeforeKern); # یڈشیٹ / یڈیو
+  Chain (@dal_like  [sda toeda]    @inits  ^OpenSmallSpaceBeforeKern); # یڈشیٹ / یڈیو / فزیکل
 
 
   Chain (@mim_like           BEi12   ^OpenSpaceBeforeKern);
@@ -280,7 +286,7 @@ Routine AtHeight200pos {
 
   Chain (@alif_like          @BEi    ^OpenTinySpaceBeforeKern dda);
   Chain [REf2 REf2] (@alif_like @BEi  [sdb.yb ddb.yb tdb.yb] ^DropATinyBitMore); # خرابی
-} IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda|dda/;
+} IgnoreLigatures UseMarkFilteringSet /sdb|ddb|tdb|haydb|toeda|dda|sda/;
 
 Routine AtHeight400pos {
   Chain (@bigbowlfina        @DOTi   ^OpenSmallSpaceBeforeKern);  # کی پیما / کی پیمائ
@@ -342,6 +348,7 @@ Routine AtHeight600pos {
   Chain (@kaf_like            @BEi    ^OpenSmallSpaceBeforeKern tdb); # یٹ پیکج
   Chain (@kaf_like [@dots toeda] @BEi    ^OpenSmallSpaceBeforeKern tdb);
 
+  Chain (@dal_like toeda     @inits ^OpenBigSpaceBeforeKern); # ڈیمو
   Chain (@dal_like           BEi5    ^OpenSpaceBeforeKern);       # ر پھر
   Chain (@dal_like           BEi7    ^OpenSpaceBeforeKern);       # ریخی
   Chain (@dal_like           BEi9    ^DoNothingPos);              # فدیم
@@ -354,6 +361,7 @@ Routine AtHeight600pos {
   # For soe reason I put open small space here?
   Chain (@vao_like           BEi5 [sdb ddb] ^BottomLeft); # ہ بھی
 
+  Chain (@vao_like toeda     @inits ^OpenBigSpaceBeforeKern); # ڈیمو
   Chain (@vao_like           [BEisd1]  [ddb.two tdb.two] ^DropATinyBitMore); # ویجٹس
   Chain (@vao_like           [BEisd1]  ^OpenSmallSpaceBeforeKern); # کمیونیکیشن / ہ بجی
   Chain (@vao_like           HAYCi9  ^OpenSpaceBeforeKern);       # وہم
@@ -392,7 +400,7 @@ Feature rlig {
     Substitute /FEi/ dda /FEm/ (sda) -> sda.two;
   };
   Routine OtherFixes2 {
-    Chain ([REf1 REf2 REf3] [tda sda toeda] @isols ^OpenSmallSpaceBeforeKern);
+    Chain ([REf1 REf2 REf3] @all_above_marks @isols ^OpenSmallSpaceBeforeKern);
   };
 };
 

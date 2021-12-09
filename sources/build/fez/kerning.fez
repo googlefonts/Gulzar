@@ -26,7 +26,7 @@ Feature kern {
 
 	Routine FixShortKern2 {
 		Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+100>) /CH_YEf|JIM[fm]|AINf|MIMf/;
-		Position /ALIF/ (/BEi1$|BEisd1$/ <xAdvance=+75>) /[sdt]db/;
+		Position /ALIF/ (/BEi1$|BEisd1$/ <xAdvance=+120>) /[sdt]db/;
 		# Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+60>);
 		Position /(DAL|RE|VAO|ALIF)[uf]/ (/[KG]AFi|LAMi/ <xAdvance=+300>) /(JIM|BE)m/ /[sdt]db/;
 	} IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
