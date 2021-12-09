@@ -114,7 +114,7 @@ class NastaliqKerning(FEZVerb):
                 lookups = [[self.generate_kern_table_for_rise(word_tail_rise)]]
                 do_blockers = False
 
-                if blockers in postcontext[-1]:
+                if any(blocker in postcontext[-1] for blocker in blockers):
                    postcontext[-1] = list(set(postcontext[-1]) - set(blockers))
                    do_blockers = True
 
@@ -126,7 +126,7 @@ class NastaliqKerning(FEZVerb):
                     )
                 )
 
-                if i > 2 and do_blockers:
+                if len(postcontext) > 1 and do_blockers:
                     postcontext[-1] = blockers
                     routine.rules.append(
                         fontFeatures.Chaining(
