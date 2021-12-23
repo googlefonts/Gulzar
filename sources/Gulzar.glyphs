@@ -17171,11 +17171,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{343, -128}";
+position = "{343, 0}";
 },
 {
 name = top;
-position = "{385, 500}";
+position = "{395, 401}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
