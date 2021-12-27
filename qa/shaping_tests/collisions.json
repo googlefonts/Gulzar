@@ -17,7 +17,7 @@
             "TrickyEndCharacters": "[یےج]",
             "Isols": "[رواہ]",
             "RightJoiners": "[رواد]",
-            "Consonants": "[قوعرتےئیہپلکجھگفدسازشچطبنم]",
+            "Consonants": "[قعریہلکجھدسازچطبم]",
             "MaybeSpace": "[\\x20]?"
         }
     },

@@ -18,6 +18,15 @@ Routine FinaJimDownABit {
   Position (/sdi|tdi/ <yPlacement=-80>);
 };
 
+Routine FinaQafDownABit {
+  Position ([tdb] <yPlacement=-180>);
+  Position ([sdb ddb] <yPlacement=-120>);
+};
+
+Routine FinaQafUpLeft {
+  Position ([tdb] <xPlacement=-120 yPlacement=+80>);
+};
+
 Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
@@ -58,14 +67,14 @@ Feature kern {
     Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
     Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
 
-    # Put AIN here too since it's basically the same
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials  AINf1);
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight AINf1);
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight AINf1);
+    # Put AIN/QAF here too since it's basically the same
+    #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials AINf1);
+    #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight AINf1);
+    #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight AINf1);
+    
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaQafDownABit QAFf1);
 
-    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials AINf1);
-    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight  AINf1);
-    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight AINf1);
+    Chain /(JIM|BE)[mi]/ (/tdb/ ^FinaQafUpLeft AINf1);
 
 
   } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
