@@ -79599,6 +79599,159 @@ width = 467;
 }
 );
 note = MIMi1;
+},
+{
+color = 3;
+glyphname = FEm17;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{97, -24}";
+},
+{
+name = entry;
+position = "{135, 152}";
+},
+{
+name = exit;
+position = "{112, 150}";
+},
+{
+name = top;
+position = "{177, 396}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-51, 91}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{242, 98}";
+type = Stem;
+},
+{
+place = "{44, 49}";
+type = Stem;
+},
+{
+place = "{239, 53}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{8, 89}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-52, 91}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{259, 106}";
+type = Stem;
+},
+{
+place = "{46, 52}";
+type = Stem;
+},
+{
+place = "{248, 56}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{14, 92}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{3, 79}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{228, 106}";
+type = Stem;
+},
+{
+place = "{63, 48}";
+type = Stem;
+},
+{
+place = "{264, 57}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-78, 142}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"111 80 OFFCURVE",
+"175 122 OFFCURVE",
+"212 191 CURVE SMOOTH",
+"228 221 OFFCURVE",
+"244 270 OFFCURVE",
+"244 315 CURVE SMOOTH",
+"244 364 OFFCURVE",
+"218 396 OFFCURVE",
+"177 396 CURVE SMOOTH",
+"131 396 OFFCURVE",
+"70 356 OFFCURVE",
+"30 276 CURVE SMOOTH",
+"10 236 OFFCURVE",
+"0 201 OFFCURVE",
+"0 171 CURVE SMOOTH",
+"0 126 OFFCURVE",
+"23 94 OFFCURVE",
+"70 80 CURVE"
+);
+},
+{
+closed = 1;
+nodes = (
+"33 8 OFFCURVE",
+"113 74 OFFCURVE",
+"167 131 CURVE",
+"111 149 LINE",
+"10 81 LINE",
+"16 8 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"82 158 OFFCURVE",
+"39 181 OFFCURVE",
+"30 222 CURVE",
+"51 264 OFFCURVE",
+"99 290 OFFCURVE",
+"135 290 CURVE SMOOTH",
+"166 290 OFFCURVE",
+"192 255 OFFCURVE",
+"189 210 CURVE",
+"178 188 OFFCURVE",
+"152 166 OFFCURVE",
+"116 153 CURVE"
+);
+}
+);
+width = 244;
+}
+);
+note = FEm11;
 }
 );
 instances = (
@@ -90243,7 +90396,7 @@ AINm = "1";
 BEi = "16";
 BEm = "1";
 FEi = "16";
-FEm = "2";
+FEm = "17";
 GAFi = "17";
 GAFm = "16";
 HAYAi = "1";
