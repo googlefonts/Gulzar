@@ -35808,7 +35808,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{270, 150}";
+position = "{285, 184}";
 },
 {
 name = exit;
@@ -35816,7 +35816,7 @@ position = "{0, 8}";
 },
 {
 name = top;
-position = "{320, 324}";
+position = "{232, 265}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -35825,13 +35825,13 @@ paths = (
 closed = 1;
 nodes = (
 "82 119 OFFCURVE",
-"169 197 OFFCURVE",
-"285 224 CURVE",
-"301 248 OFFCURVE",
-"322 283 OFFCURVE",
-"331 316 CURVE",
-"320 324 LINE",
-"175 297 OFFCURVE",
+"169 157 OFFCURVE",
+"285 184 CURVE",
+"301 208 OFFCURVE",
+"322 243 OFFCURVE",
+"331 276 CURVE",
+"320 284 LINE",
+"175 257 OFFCURVE",
 "55 156 OFFCURVE",
 "0 8 CURVE",
 "18 0 LINE"
@@ -47336,8 +47336,16 @@ layers = (
 {
 anchors = (
 {
+name = bottom;
+position = "{191, 0}";
+},
+{
 name = exit;
 position = "{105, 135}";
+},
+{
+name = top;
+position = "{196, 332}";
 }
 );
 background = {
