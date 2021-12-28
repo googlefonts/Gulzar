@@ -1,5 +1,8 @@
 {
-.appVersion = "1352";
+.appVersion = "3106";
+DisplayStrings = (
+"/KASRA.yb.attached/KASRA.yb.collides/ddb.yb.collides/haydb.yb.collides/sdb.yb.collides/tdb.yb.collides/KASRA.yb/ddb.yb/haydb.yb/sdb.yb/tdb.yb/BARI_YEf1"
+);
 classes = (
 {
 automatic = 1;
@@ -31191,12 +31194,13 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{219, -56}";
+position = "{219, -356}";
 }
 );
 components = (
 {
 name = ddb;
+transform = "{1, 0, 0, 1, 0, -300}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31523,13 +31527,14 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{134, 0}";
+position = "{134, -300}";
 }
 );
 components = (
 {
-alignment = 1;
+alignment = -1;
 name = sda;
+transform = "{1, 0, 0, 1, 0, -300}";
 }
 );
 guideLines = (
@@ -31864,13 +31869,14 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{239, 0}";
+position = "{239, -400}";
 }
 );
 components = (
 {
-alignment = 1;
+alignment = -1;
 name = tdb;
+transform = "{1, 0, 0, 1, 0, -400}";
 }
 );
 guideLines = (
