@@ -47748,8 +47748,11 @@ paths = (
 {
 closed = 1;
 nodes = (
-"184 27 OFFCURVE",
-"250 96 OFFCURVE",
+"155 14 OFFCURVE",
+"189 41 OFFCURVE",
+"223 81 CURVE SMOOTH",
+"252 115 OFFCURVE",
+"281 159 OFFCURVE",
 "308 214 CURVE",
 "303 228 LINE",
 "211 231 OFFCURVE",
@@ -47762,8 +47765,11 @@ nodes = (
 "161 163 OFFCURVE",
 "241 160 CURVE",
 "250 203 LINE",
-"222 130 OFFCURVE",
-"154 113 OFFCURVE",
+"238 171 OFFCURVE",
+"218 150 OFFCURVE",
+"196 135 CURVE SMOOTH",
+"167 115 OFFCURVE",
+"135 105 OFFCURVE",
 "110 95 CURVE",
 "121 0 LINE"
 );
@@ -57047,7 +57053,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{137, -76}";
+position = "{118, -76}";
 },
 {
 name = entry;
@@ -57142,11 +57148,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{257, -52}";
+position = "{269, -21}";
 },
 {
 name = entry;
-position = "{259, 52}";
+position = "{268, 58}";
 },
 {
 name = exit;
@@ -57154,7 +57160,7 @@ position = "{55, 135}";
 },
 {
 name = top;
-position = "{467, 429}";
+position = "{476, 434}";
 }
 );
 components = (
@@ -57202,19 +57208,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{459, -71}";
+position = "{428, -27}";
 },
 {
 name = entry;
-position = "{461, 33}";
+position = "{421, 70}";
 },
 {
 name = exit;
-position = "{90, 87}";
+position = "{71, 73}";
 },
 {
 name = top;
-position = "{669, 410}";
+position = "{629, 446}";
 }
 );
 components = (
@@ -57257,7 +57263,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{278, -63}";
+position = "{294, -27}";
 },
 {
 name = entry;
@@ -57426,11 +57432,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{475, 17}";
+position = "{487, 56}";
 },
 {
 name = entry;
-position = "{476, 71}";
+position = "{486, 116}";
 },
 {
 name = exit;
@@ -57438,7 +57444,7 @@ position = "{4, 0}";
 },
 {
 name = top;
-position = "{684, 447}";
+position = "{694, 492}";
 }
 );
 components = (
