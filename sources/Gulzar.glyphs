@@ -56113,11 +56113,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{272, -532}";
+position = "{281, -442}";
 },
 {
 name = entry;
-position = "{698, 375}";
+position = "{707, 375}";
 },
 {
 name = inside;
@@ -56128,6 +56128,46 @@ name = top;
 position = "{386, 515}";
 }
 );
+background = {
+paths = (
+{
+closed = 1;
+nodes = (
+"423 -442 OFFCURVE",
+"537 -352 OFFCURVE",
+"608 -233 CURVE SMOOTH",
+"695 -89 OFFCURVE",
+"727 81 OFFCURVE",
+"725 287 CURVE",
+"725 327 OFFCURVE",
+"716 361 OFFCURVE",
+"698 375 CURVE",
+"681 375 OFFCURVE",
+"670 358 OFFCURVE",
+"670 333 CURVE SMOOTH",
+"670 309 OFFCURVE",
+"677 260 OFFCURVE",
+"677 163 CURVE SMOOTH",
+"677 -71 OFFCURVE",
+"561 -290 OFFCURVE",
+"316 -290 CURVE SMOOTH",
+"179 -290 OFFCURVE",
+"103 -215 OFFCURVE",
+"103 -93 CURVE SMOOTH",
+"103 22 OFFCURVE",
+"144 119 OFFCURVE",
+"187 222 CURVE",
+"159 235 LINE",
+"97 110 OFFCURVE",
+"50 -32 OFFCURVE",
+"50 -162 CURVE SMOOTH",
+"50 -321 OFFCURVE",
+"128 -442 OFFCURVE",
+"281 -442 CURVE SMOOTH"
+);
+}
+);
+};
 hints = (
 {
 horizontal = 1;
@@ -56144,6 +56184,86 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"423 -442 OFFCURVE",
+"537 -352 OFFCURVE",
+"608 -233 CURVE SMOOTH",
+"695 -89 OFFCURVE",
+"734 80 OFFCURVE",
+"734 287 CURVE",
+"734 336 OFFCURVE",
+"716 361 OFFCURVE",
+"707 375 CURVE",
+"692 375 OFFCURVE",
+"682 354 OFFCURVE",
+"682 332 CURVE SMOOTH",
+"682 316 OFFCURVE",
+"687 289 OFFCURVE",
+"687 239 CURVE SMOOTH",
+"687 133 OFFCURVE",
+"671 25 OFFCURVE",
+"635 -63 CURVE SMOOTH",
+"572 -218 OFFCURVE",
+"460 -290 OFFCURVE",
+"316 -290 CURVE SMOOTH",
+"179 -290 OFFCURVE",
+"103 -215 OFFCURVE",
+"103 -93 CURVE SMOOTH",
+"103 22 OFFCURVE",
+"144 119 OFFCURVE",
+"187 222 CURVE",
+"159 235 LINE",
+"97 110 OFFCURVE",
+"50 -32 OFFCURVE",
+"50 -162 CURVE SMOOTH",
+"50 -321 OFFCURVE",
+"128 -442 OFFCURVE",
+"281 -442 CURVE SMOOTH"
+);
+}
+);
+width = 734;
+},
+{
+anchors = (
+{
+name = bottom;
+position = "{272, -532}";
+},
+{
+name = entry;
+position = "{698, 375}";
+},
+{
+name = inside;
+position = "{417, 143}";
+},
+{
+name = top;
+position = "{386, 515}";
+}
+);
+associatedMasterId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+hints = (
+{
+horizontal = 1;
+place = "{-290, 139}";
+type = Stem;
+},
+{
+place = "{25, 52}";
+type = Stem;
+},
+{
+place = "{511, 48}";
+type = Stem;
+}
+);
+layerId = "034F07A5-61BC-468C-BF42-5BB88DD34F46";
+name = "Dec 28 21, 16:28";
 paths = (
 {
 closed = 1;
