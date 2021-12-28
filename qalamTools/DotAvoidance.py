@@ -76,7 +76,7 @@ class DetectAndSwap(FEZVerb):
             self.dots = ["toeda", "sda", "sda.one", "sda.two", "dda", "dda.one", "dda.two", "tda", "tda.one", "tda.two", "HAMZA_ABOVE"] + taskil_above
 
 
-        self.shelve = shelve.open("collisioncache.db", flag='r')
+        self.shelve = shelve.open("collisioncache.db")
         self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.12)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
@@ -160,6 +160,7 @@ class DetectAndSwap(FEZVerb):
         # cause another substitution if that happens to be "earlier".
 
         # So we need a dispatch routine.
+        self.shelve.close()
 
         if self.reverse:
             return [fontFeatures.Routine(

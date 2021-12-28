@@ -17,7 +17,7 @@ glyphcache = {}
 def get_beziers_new(font, glyph):
     if glyph in glyphcache:
         return glyphcache[glyph]
-    glyphset = {k: font.default_master.get_glyph_layer(k) for k in font.exportedGlyphs()}
+    glyphset = {k: font.default_master.get_glyph_layer(k) for k in font.glyphs.keys()}
     layer = font.default_master.get_glyph_layer(glyph)
     rv = BezPath.fromDrawable(layer, glyphset)
     glyphcache[glyph] = rv

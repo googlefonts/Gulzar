@@ -11,7 +11,7 @@ Feature rlig {
     # medial form to in their initial form.
     Substitute [BEm1 TEm1] ( REf1 ) -> REf3;
     Substitute HAYCm1 ( REf1 ) -> REf3;
-    Substitute GAFm1 ( REf1 ) -> REf4;
+    #Substitute GAFm1 ( REf1 ) -> REf4;
     Substitute AINi1 ( REf1 ) -> REf3;
     Substitute JIMi1 ( REf1 ) -> REf1;
     Substitute JIMm1 ( REf1 ) -> REf2;

@@ -101,6 +101,8 @@ class NastaliqKerning(FEZVerb):
                 word_tail_rise = quantize(
                     sum([x[1] for x in postcontext_plus_rise]), rise_quantization
                 )
+                if word_tail_rise < 0:
+                    continue
                 postcontext = list(reversed([x[0] for x in postcontext_plus_rise]))
                 # warnings.warn("%s - %i" % (postcontext, word_tail_rise))
                 if word_tail_rise >= maximum_rise:
