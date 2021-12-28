@@ -21846,7 +21846,7 @@ layers = (
 anchors = (
 {
 name = _comma;
-position = "{200, 425}";
+position = "{200, 373}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31216,7 +31216,7 @@ layers = (
 anchors = (
 {
 name = _comma;
-position = "{120, 0}";
+position = "{152, 95}";
 },
 {
 name = bottom;
@@ -31226,11 +31226,11 @@ position = "{120, -409}";
 components = (
 {
 name = haydb.yb;
-transform = "{1, 0, 0, 1, 99, 0}";
+transform = "{1, 0, 0, 1, -1, 0}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 240;
+width = 239;
 }
 );
 note = haydb;
@@ -31246,7 +31246,7 @@ layers = (
 anchors = (
 {
 name = _comma.one;
-position = "{120, 61}";
+position = "{146, 61}";
 },
 {
 name = bottom;
@@ -31256,7 +31256,6 @@ position = "{120, -409}";
 components = (
 {
 name = haydb.yb;
-transform = "{1, 0, 0, 1, 99, 0}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
