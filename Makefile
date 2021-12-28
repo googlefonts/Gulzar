@@ -6,7 +6,7 @@ PYTHON=python3
 
 export FONTTOOLS_LOOKUP_DEBUGGING=1
 export PYTHONPATH=.
-export FONTTOOLS_GPOS_COMPACT_MODE=9
+#export FONTTOOLS_GPOS_COMPACT_MODE=9
 .DELETE_ON_ERROR:
 
 $(FINAL_FONT): venv sources/build/features.fea $(GLYPHS_FILE)
@@ -27,10 +27,10 @@ replace: venv sources/build/features.fea
 	. venv/bin/activate; fonttools feaLib -o $(FINAL_FONT) -v -v sources/build/features.fea $(FINAL_FONT)
 
 release: venv $(FINAL_FONT)
+	hb-subset --unicodes='*' --glyph-names $(FINAL_FONT) --layout-features="*"  -o $(FINALFONT)
 	. venv/bin/activate; ttfautohint $(FINAL_FONT) $(FINAL_FONT).autohint
 	. venv/bin/activate; gftools-fix-font.py --include-source-fixes -o $(FINAL_FONT) $(FINAL_FONT).autohint
 	. venv/bin/activate; font-v write --sha1 $(RELEASE_ARG) $(FINAL_FONT)
-	. venv/bin/activate; ttf-rename-glyphs $(FINAL_FONT) $(FINAL_FONT)
 
 sources/build/features.fea: $(FEA_FILES)
 	cat $^ > sources/build/features.fea

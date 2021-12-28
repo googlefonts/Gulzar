@@ -11,15 +11,21 @@
         },
         "ingredients": {
             "NoDot": "[مںل]",
-            "DotsBelow": "[بیپج]",
+            "DotsBelow": "[بیپجچہ]",
             "DotsAbove": "[تن]",
             "Kasra": "[u0650]",
             "TrickyEndCharacters": "[یےج]",
-            "Isols": "[رواہ]"
+            "Isols": "[رواہ]",
+            "RightJoiners": "[رواد]",
+            "Consonants": "[قعریہلکجھدسازچطبم]",
+            "MaybeSpace": "[\\x20]?"
         }
     },
     "tests": [
-        { "input": "یگی" },
+        {
+            "input_type": "pattern",
+            "input": "Isols MaybeSpace DotsBelow Consonants"
+        },
         { "input": "ئِیں" },
         { "input": "سبے" },
         { "input": "منمشتعلعشقعلیمچکنم" },
