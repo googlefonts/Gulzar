@@ -1,4 +1,5 @@
 from glyphtools import get_beziers, get_glyph_metrics
+from glyphtools.babelfont import get_glyph
 from beziers.point import Point
 from beziers.line import Line
 from itertools import product
@@ -6,6 +7,7 @@ import logging
 
 logger = logging.getLogger("NastaliqKerning")
 
+#logging.basicConfig(level=logging.DEBUG)
 bezier_cache = {}
 metrics_cache = {}
 min_bubble = 0
@@ -96,6 +98,13 @@ def determine_kern(
     # Note that this is *not* in logical order
     metrics1 = get_glyph_metrics(font, left_glyph)
     metrics2 = get_glyph_metrics(font, right_glyph)
+
+    # Get exit anchor
+    lglyph = get_glyph(font, left_glyph)
+    lexit = [a.y for a in lglyph.anchors if a.name == "exit"]
+    lexit.append(0)
+    height -= lexit[0]
+    logger.debug("Height without rise is %i" % (height))
 
     kern = 0
     last_best = None
@@ -198,9 +207,10 @@ class TestSelf:
 
     def test_ir_ir(self):
         import pytest
-        sequence = ["REf1", "BEi13", "REf1"]
-        self.assert_height(sequence, 250, 300)
-        distance, debuginfo = path_distance(self.font, sequence[1], sequence[0], 0, 264)
+        sequence = ["REf1", "BEi16", "REf1"]
+        self.assert_height(sequence, 400, 450)
+        height = height_of_init(self.font, sequence[1:])
+        distance, debuginfo = path_distance(self.font, sequence[1], sequence[0], 0, height)
         assert distance == pytest.approx(387, 1)
         self.assert_kern_within(sequence, 264, -100, -50)
 
