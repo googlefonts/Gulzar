@@ -23,21 +23,21 @@
   "tests": [
     {
       "input": "بیر",
-      "expectation": "REf3|ddb.one|BEm15|sdb|BEi3",
+      "expectation": "REf3|ddb.one|BEm16|sdb|BEi3",
       "note": "https://github.com/simoncozens/Gulzar/issues/12"
     },
     {
       "input": "بر",
-      "expectation": "REf1|sdb|BEi13"
+      "expectation": "REf1|sdb|BEi16"
     },
     {
       "input": "یر",
-      "expectation": "REf1|ddb|BEi13",
+      "expectation": "REf1|ddb|BEi16",
       "note": "https://github.com/simoncozens/Gulzar/issues/12"
     },
     {
       "input": "ہا",
-      "expectation": "ALIFf1=1+213|haydb=0@-12,67+0|HAYCi3=0@-42,67+173",
+      "expectation": "ALIFf1=1+222|haydb=0@-119,20+0|HAYCi3=0@-49,1+154",
       "note": "Don't break heh-alif when fixing short initial be-likes"
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "input": "رہتا",
-      "expectation": "ALIFf1|dda|TEm3|haydb.one|HAYCi1|REu1"
+      "expectation": "ALIFf1|dda|TEm3|haydb.one|HAYCi2|REu1"
     },
     {
       "input": "فدیم",
@@ -78,7 +78,7 @@
     },
     {
       "input": "ندبجن",
-      "expectation": "sdi=4@270,150+0|NUNf1=4+766|sdb=3@66,58+0|JIMm1=3@-54,328+128|sdb=2@150,316+0|BEi7=2@-60,696+244|DALf1=1+387|sda=0@-12,230+0|BEi3=0@-42,70+194"
+      "expectation": "sdi=4@270,150+0|NUNf1=4+707|sdb=3@56,82+0|JIMm14=3@-4,372+83|sdb=2@303,408+0|BEi7=2@-7,608+287|DALf1=1+449|sda=0@-59,370+0|BEi3=0@-49,0+155"
     },
     {
       "input": "پرچا",
@@ -131,7 +131,7 @@
     },
     {
       "input": "پ پہلو",
-      "expectation": "VAOf1=5+328|LAMm12=4@-36,268+248|haydb=3@92,76+0|HAYCm3=3@-18,306+317|tdb=2@-42,198+0|BEi6=2@-52,398+178|space.urdu=1+150|tdb=0@240,-220+0|BEu1=0+979"
+      "expectation": "VAOf1=5+288|LAMm15=4@-1,243+292|haydb.one=3@0,-70+0|HAYCm3=3@-50,190+173|tdb=2@80,30+0|BEi6=2@0,190+326|space.urdu=1+150|tdb=0@280,-390+0|BEu1=0+979"
     },
     {
       "input": "کو بھی",
@@ -144,11 +144,11 @@
     },
     {
       "input": "وہم",
-      "expectation": "MIMf1=2+411|haydb=1@182,215+0|HAYCi9=1@-58,495+305|VAOu1=0+386"
+      "expectation": "MIMf1=2+364|haydb=1@130,396+0|HAYCi9=1@0,366+418|VAOu1=0+368"
     },
     {
       "input": "اہم",
-      "expectation": "MIMf1=2+411|haydb=1@182,215+0|HAYCi9=1@-58,495+405|ALIFu1=0+228"
+      "expectation": "MIMf1=2+364|haydb=1@130,396+0|HAYCi9=1@0,366+498|ALIFu1=0+235"
     },
     {
       "input": "پریھا",
@@ -160,7 +160,7 @@
     },
     {
       "input": "ہرچیز",
-      "expectation": "sda=4@-50,30+0|REf3=4+320|ddb=3@-96,-220+0|BEm15=3@-216,10+186|tdb.two=2@24,-470+0|JIMi17=2@-16,190+241|REf3=1+320|haydb=0@87,126+0|HAYCi13=0@-143,6+323"
+      "expectation": "sda=4@270,600+0|REf3=4+609|ddb=3@-266,-149+0|BEm16=3@-356,31+67|tdb.two=2@-125,-692+0|JIMi3=2@-105,238+50|REf3=1+609|haydb=0@-153,167+0|HAYCi17=0@-73,257+146"
     },
     {
       "input": "ل بن",
@@ -176,7 +176,7 @@
     },
     {
       "input": "سرپھر",
-      "expectation": "REf2=4+340|HAYAm14=3@-42,232+358|tdb=2@51,297+0|BEi5=2@-49,547+361|REf3=1+320|SINi15=0@-213,11+425"
+      "expectation": "REf2=4+407|HAYAm16=3@-5,205+275|tdb=2@120,259+0|BEi5=2@0,469+61|REf3=1+609|SINi19=0@-318,78+281"
     },
     {
       "input": "جر یا",
@@ -196,7 +196,7 @@
     },
     {
       "input": "چنا",
-      "expectation": "ALIFf1=2+213|sda=1@-2,307+0|BEm3=1@-42,67+212|tdb=0@5,-115+0|JIMi1=0@-55,135+489"
+      "expectation": "ALIFf1=2+222|sda=1@-74,420+0|BEm3=1@-54,0+142|tdb=0@-13,-265+0|JIMi2=0@-33,125+496"
     },
     {
       "input": "یی پی",
@@ -204,11 +204,11 @@
     },
     {
       "input": "ورپہر",
-      "expectation": "REf3=4+320|haydb=3@14,-154+0|HAYCm15=3@-16,-4+245|tdb.one=2@-42,-259+0|BEi6=2@-52,161+48|REu1=1+284|VAOu1=0+386"
+      "expectation": "REf3=4+609|haydb.one=3@-190,-177+0|HAYCm16=3@-120,83+-15|tdb.one=2@80,-547+0|BEi6=2@0,83+16|REu1=1+314|VAOu1=0+368"
     },
     {
       "input": "رچہر",
-      "expectation": "REf3=3+320|haydb=2@14,-154+0|HAYCm15=2@-16,-4+245|tdb.one=1@-44,-269+0|JIMi6=1@-104,161+63|REu1=0+394"
+      "expectation": "REf3=3+609|haydb=2@-200,13+0|HAYCm16=2@-120,83+-15|tdb.one=1@20,-457+0|JIMi6=1@0,83+48|REu1=0+394"
     },
     {
       "input": "جھر پو",
@@ -221,11 +221,11 @@
     },
     {
       "input": "فکر",
-      "expectation": "REf1=2+357|KAFm13=1@-15,252+248|sda=0@-2,1009+0|FEi3=0@-42,279+235"
+      "expectation": "REf1=2+539|KAFm16=1@-141,293+142|sda=0@-69,983+0|FEi3=0@-49,293+216"
     },
     {
       "input": "متجرپھ",
-      "expectation": "HAYAf1=5+415|tdb.two=4@1,-569+0|BEi5=4@-49,341+61|REf2=3+340|sdb=2@-122,-251+0|JIMm15=2@-152,109+20|dda=1@60,632+0|TEm7=1@-60,532+365|MIMi1=0@-55,533+403"
+      "expectation": "HAYAf1=5+445|tdb.two=4@70,-700+0|BEi5=4@0,270+61|REf2=3+407|sdb=2@-33,-152+0|JIMm17=2@-103,148+-8|dda=1@43,903+0|TEm7=1@-7,433+324|MIMi2=0@-29,626+411"
     },
     {
       "input": "طریقو",
