@@ -1,7 +1,7 @@
 {
 .appVersion = "3106";
 DisplayStrings = (
-"/BEi14/NUNf1"
+"/BEi14/NUNf1/BEi14/NUNf1"
 );
 classes = (
 {
@@ -48099,7 +48099,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{257, 75}";
+position = "{307, 35}";
 },
 {
 name = exit;
