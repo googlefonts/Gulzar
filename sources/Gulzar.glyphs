@@ -1,9 +1,5 @@
 {
-.appVersion = "3106";
-DisplayStrings = (
-"/tdb/HAYAf1",
-"/tdb"
-);
+.appVersion = "1352";
 classes = (
 {
 automatic = 1;
@@ -56728,46 +56724,6 @@ name = top;
 position = "{386, 615}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"423 -442 OFFCURVE",
-"537 -352 OFFCURVE",
-"608 -233 CURVE SMOOTH",
-"695 -89 OFFCURVE",
-"727 81 OFFCURVE",
-"725 287 CURVE",
-"725 327 OFFCURVE",
-"716 361 OFFCURVE",
-"698 375 CURVE",
-"681 375 OFFCURVE",
-"670 358 OFFCURVE",
-"670 333 CURVE SMOOTH",
-"670 309 OFFCURVE",
-"677 260 OFFCURVE",
-"677 163 CURVE SMOOTH",
-"677 -71 OFFCURVE",
-"561 -290 OFFCURVE",
-"316 -290 CURVE SMOOTH",
-"179 -290 OFFCURVE",
-"103 -215 OFFCURVE",
-"103 -93 CURVE SMOOTH",
-"103 22 OFFCURVE",
-"144 119 OFFCURVE",
-"187 222 CURVE",
-"159 235 LINE",
-"97 110 OFFCURVE",
-"50 -32 OFFCURVE",
-"50 -162 CURVE SMOOTH",
-"50 -321 OFFCURVE",
-"128 -442 OFFCURVE",
-"281 -442 CURVE SMOOTH"
-);
-}
-);
-};
 hints = (
 {
 horizontal = 1;
@@ -57167,15 +57123,15 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{281, -441}";
+position = "{281, -341}";
 },
 {
 name = entry;
-position = "{824, 305}";
+position = "{824, 405}";
 },
 {
 name = top;
-position = "{984, 664}";
+position = "{984, 764}";
 }
 );
 components = (
