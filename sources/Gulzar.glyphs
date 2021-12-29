@@ -1,5 +1,9 @@
 {
-.appVersion = "1352";
+.appVersion = "3106";
+DisplayStrings = (
+"/tdb/HAYAf1",
+"/tdb"
+);
 classes = (
 {
 automatic = 1;
@@ -15029,7 +15033,7 @@ name = BEu1;
 },
 {
 name = tdb;
-transform = "{1, 0, 0, 1, 271, -478}";
+transform = "{1, 0, 0, 1, 271, -398}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31617,6 +31621,7 @@ position = "{219, -56}";
 components = (
 {
 name = ddb;
+transform = "{1, 0, 0, 1, 0, -300}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31947,8 +31952,9 @@ position = "{134, 0}";
 );
 components = (
 {
-alignment = 1;
+alignment = -1;
 name = sda;
+transform = "{1, 0, 0, 1, 0, -300}";
 }
 );
 guideLines = (
@@ -32141,7 +32147,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
-position = "{219, 478}";
+position = "{219, 398}";
 },
 {
 name = bottom;
@@ -32288,8 +32294,9 @@ position = "{239, 0}";
 );
 components = (
 {
-alignment = 1;
+alignment = -1;
 name = tdb;
+transform = "{1, 0, 0, 1, 0, -400}";
 }
 );
 guideLines = (
@@ -35656,7 +35663,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{110, -10}";
+position = "{150, -10}";
 },
 {
 name = exit;
@@ -36208,7 +36215,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{279, 262}";
+position = "{299, 232}";
 },
 {
 name = exit;
@@ -49177,7 +49184,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{258, 129}";
+position = "{348, 109}";
 },
 {
 name = entry;
@@ -61942,7 +61949,7 @@ position = "{1, 7}";
 },
 {
 name = top;
-position = "{147, 288}";
+position = "{127, 288}";
 }
 );
 components = (
@@ -70136,7 +70143,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{128, -48}";
+position = "{198, -118}";
 },
 {
 name = entry;
