@@ -98,6 +98,8 @@ Feature kern {
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) @below_dots @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> );
 
+    # Heh Alif
+    Position HAYCi3 (haydb <yPlacement=+159>) ALIFf1;
     # Clear Alif Nun KL
     Position /ALIF[uf]1/ (BEi8 <xAdvance=+50>) /sda|dda/ KAFm3;
 
