@@ -35537,7 +35537,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{70, -147}";
+position = "{90, -147}";
 },
 {
 name = exit;
@@ -35849,7 +35849,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{97, -135}";
+position = "{118, -135}";
 },
 {
 name = exit;
@@ -35860,28 +35860,6 @@ name = top;
 position = "{134, 87}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"45 -135 OFFCURVE",
-"94 -106 OFFCURVE",
-"130 -37 CURVE SMOOTH",
-"148 -3 OFFCURVE",
-"165 43 OFFCURVE",
-"174 93 CURVE",
-"154 97 LINE",
-"134 41 OFFCURVE",
-"97 0 OFFCURVE",
-"49 0 CURVE",
-"14 -15 OFFCURVE",
-"-7 -115 OFFCURVE",
-"2 -135 CURVE"
-);
-}
-);
-};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
@@ -35993,15 +35971,15 @@ paths = (
 {
 closed = 1;
 nodes = (
-"82 111 OFFCURVE",
-"169 149 OFFCURVE",
+"99 111 OFFCURVE",
+"179 151 OFFCURVE",
 "285 176 CURVE",
 "301 200 OFFCURVE",
 "322 235 OFFCURVE",
 "331 268 CURVE",
 "320 276 LINE",
 "175 249 OFFCURVE",
-"55 148 OFFCURVE",
+"45 120 OFFCURVE",
 "0 0 CURVE",
 "18 -8 LINE"
 );
@@ -36510,7 +36488,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{185, 100}";
+position = "{185, 0}";
 },
 {
 name = entry;
@@ -36582,7 +36560,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{235, 194}";
+position = "{235, 94}";
 },
 {
 name = entry;
@@ -36651,7 +36629,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{300, 169}";
+position = "{300, 69}";
 },
 {
 name = entry;
@@ -60680,7 +60658,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{163, -127}";
+position = "{196, -127}";
 },
 {
 name = exit;
@@ -60688,7 +60666,7 @@ position = "{36, 0}";
 },
 {
 name = top;
-position = "{268, 307}";
+position = "{258, 307}";
 }
 );
 components = (
@@ -60709,7 +60687,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{173, -101}";
+position = "{216, -101}";
 },
 {
 name = exit;
@@ -60807,7 +60785,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{88, -129}";
+position = "{165, -129}";
 },
 {
 name = exit;
@@ -60866,7 +60844,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{97, -135}";
+position = "{137, -135}";
 },
 {
 name = exit;
@@ -60874,7 +60852,7 @@ position = "{49, 0}";
 },
 {
 name = top;
-position = "{154, 97}";
+position = "{134, 87}";
 }
 );
 components = (
@@ -60895,7 +60873,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{245, -112}";
+position = "{280, -112}";
 },
 {
 name = exit;
@@ -60903,7 +60881,7 @@ position = "{78, 0}";
 },
 {
 name = top;
-position = "{328, 321}";
+position = "{318, 321}";
 }
 );
 components = (
@@ -60924,7 +60902,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{270, 142}";
+position = "{243, 142}";
 },
 {
 name = exit;
@@ -60932,7 +60910,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{320, 316}";
+position = "{223, 276}";
 }
 );
 components = (
@@ -60982,7 +60960,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{459, 154}";
+position = "{424, 146}";
 },
 {
 name = exit;
@@ -60990,7 +60968,7 @@ position = "{7, 0}";
 },
 {
 name = top;
-position = "{431, 354}";
+position = "{390, 354}";
 }
 );
 components = (
@@ -61011,7 +60989,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{264, 0}";
+position = "{320, 0}";
 },
 {
 name = exit;
@@ -61019,7 +60997,7 @@ position = "{6, 0}";
 },
 {
 name = top;
-position = "{367, 446}";
+position = "{357, 446}";
 }
 );
 components = (
@@ -61040,7 +61018,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{211, 177}";
+position = "{234, 165}";
 },
 {
 name = exit;
@@ -61157,7 +61135,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{242, 75}";
+position = "{242, -25}";
 },
 {
 name = entry;
@@ -61388,7 +61366,7 @@ position = "{164, -79}";
 },
 {
 name = entry;
-position = "{196, 94}";
+position = "{206, 94}";
 },
 {
 name = exit;
@@ -61396,12 +61374,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{164, 111}";
-}
-);
-components = (
-{
-name = BEm3;
+position = "{144, 111}";
 }
 );
 hints = (
@@ -61418,10 +61391,50 @@ type = Stem;
 horizontal = 1;
 place = "{28, 91}";
 type = Stem;
+},
+{
+horizontal = 1;
+place = "{-78, 140}";
+type = Stem;
+},
+{
+place = "{-73, 403}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{28, 91}";
+type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 197;
+paths = (
+{
+closed = 1;
+nodes = (
+"52 -135 OFFCURVE",
+"97 -106 OFFCURVE",
+"133 -64 CURVE SMOOTH",
+"159 -35 OFFCURVE",
+"181 0 OFFCURVE",
+"197 37 CURVE",
+"205 56 OFFCURVE",
+"208 75 OFFCURVE",
+"206 94 CURVE",
+"191 94 LINE",
+"175 69 OFFCURVE",
+"157 47 OFFCURVE",
+"137 31 CURVE SMOOTH",
+"113 11 OFFCURVE",
+"86 0 OFFCURVE",
+"54 0 CURVE",
+"10 -23 OFFCURVE",
+"-11 -111 OFFCURVE",
+"5 -135 CURVE"
+);
+}
+);
+width = 207;
 }
 );
 },
@@ -61486,7 +61499,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{185, 100}";
+position = "{185, 0}";
 },
 {
 name = entry;
@@ -61519,7 +61532,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{235, 194}";
+position = "{235, 94}";
 },
 {
 name = entry;
@@ -61552,7 +61565,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{300, 169}";
+position = "{300, 69}";
 },
 {
 name = entry;
@@ -61618,7 +61631,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{147, -102}";
+position = "{195, -102}";
 },
 {
 name = entry;
@@ -65491,7 +65504,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{147, -102}";
+position = "{205, -102}";
 },
 {
 name = entry;
@@ -65621,7 +65634,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{208, 109}";
+position = "{208, 9}";
 },
 {
 name = entry;
@@ -65768,7 +65781,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{242, 75}";
+position = "{242, -25}";
 },
 {
 name = entry;
@@ -65849,7 +65862,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{208, 109}";
+position = "{208, 9}";
 },
 {
 name = entry;
@@ -66905,7 +66918,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{123, -90}";
+position = "{140, -90}";
 },
 {
 name = exit;
@@ -66955,7 +66968,7 @@ position = "{48, 0}";
 },
 {
 name = top;
-position = "{183, 91}";
+position = "{173, 71}";
 }
 );
 background = {
@@ -67098,15 +67111,15 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{90, -138}";
+position = "{172, -138}";
 },
 {
 name = exit;
-position = "{32, 0}";
+position = "{48, 0}";
 },
 {
 name = top;
-position = "{157, 71}";
+position = "{173, 71}";
 }
 );
 components = (
@@ -67127,7 +67140,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{123, -90}";
+position = "{136, -90}";
 },
 {
 name = exit;
@@ -67164,7 +67177,7 @@ position = "{4, 0}";
 },
 {
 name = top;
-position = "{436, 495}";
+position = "{426, 495}";
 }
 );
 components = (
@@ -67193,7 +67206,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{353, 458}";
+position = "{343, 458}";
 }
 );
 components = (
@@ -69420,7 +69433,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{160, -122}";
+position = "{203, -122}";
 },
 {
 name = entry;
@@ -71042,19 +71055,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{186, -89}";
+position = "{283, -89}";
 },
 {
 name = entry;
-position = "{280, 177}";
+position = "{377, 177}";
 },
 {
 name = exit;
-position = "{5, 0}";
+position = "{102, 0}";
 },
 {
 name = top;
-position = "{222, 274}";
+position = "{319, 274}";
 }
 );
 components = (
@@ -72131,7 +72144,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{188, -129}";
+position = "{165, -129}";
 },
 {
 name = exit;
@@ -72187,7 +72200,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{70, -147}";
+position = "{90, -147}";
 },
 {
 name = exit;
@@ -73451,7 +73464,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{160, -122}";
+position = "{204, -122}";
 },
 {
 name = entry;
@@ -75379,7 +75392,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{110, -88}";
+position = "{129, -73}";
 },
 {
 name = exit;
@@ -78236,7 +78249,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{93, -120}";
+position = "{140, -114}";
 },
 {
 name = exit;
@@ -78244,13 +78257,14 @@ position = "{33, 0}";
 },
 {
 name = top;
-position = "{193, 281}";
+position = "{183, 281}";
 }
 );
 background = {
-components = (
+anchors = (
 {
-name = BEi2;
+name = bottom;
+position = "{140, -114}";
 }
 );
 };
