@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/TEm1/TEm12/TEm13/TEm15/TEm2/TEm3/TEm4/TEm5/TEm6/TEm7/TEm8/TEmsd1/TEm9/TEm10/TEm11/TEm14/TEm16/TEmsd2"
-);
 classes = (
 {
 automatic = 1;
@@ -15168,7 +15165,7 @@ name = JIMu1;
 },
 {
 name = sda;
-transform = "{1, 0, 0, 1, 138, 950}";
+transform = "{1, 0, 0, 1, 143, 795}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -34995,7 +34992,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{437, 0}";
+position = "{467, 0}";
 },
 {
 name = entry;
@@ -35041,7 +35038,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{380, 1}";
+position = "{452, 0}";
 },
 {
 name = entry;
@@ -35049,7 +35046,7 @@ position = "{929, 270}";
 },
 {
 name = top;
-position = "{422, 294}";
+position = "{452, 294}";
 }
 );
 background = {
@@ -36226,7 +36223,7 @@ position = "{36, -1}";
 },
 {
 name = top;
-position = "{222, 127}";
+position = "{192, 127}";
 }
 );
 hints = (
@@ -36373,7 +36370,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{164, 111}";
+position = "{134, 111}";
 }
 );
 hints = (
@@ -36444,7 +36441,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{308, 183}";
+position = "{278, 183}";
 }
 );
 hints = (
@@ -36517,7 +36514,7 @@ position = "{1, 0}";
 },
 {
 name = top;
-position = "{181, 251}";
+position = "{151, 251}";
 }
 );
 hints = (
@@ -36589,7 +36586,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{245, 364}";
+position = "{215, 364}";
 }
 );
 hints = (
@@ -36658,7 +36655,7 @@ position = "{7, 0}";
 },
 {
 name = top;
-position = "{297, 319}";
+position = "{267, 319}";
 }
 );
 hints = (
@@ -47018,7 +47015,7 @@ position = "{410, 119}";
 },
 {
 name = top;
-position = "{298, 644}";
+position = "{306, 744}";
 }
 );
 hints = (
@@ -49135,7 +49132,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{296, -441}";
+position = "{296, -341}";
 },
 {
 name = inside;
@@ -49143,7 +49140,7 @@ position = "{420, 129}";
 },
 {
 name = top;
-position = "{283, 800}";
+position = "{288, 645}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -58340,43 +58337,6 @@ name = top;
 position = "{841, 552}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"780 289 OFFCURVE",
-"827 321 OFFCURVE",
-"850 372 CURVE",
-"827 363 LINE",
-"847 350 OFFCURVE",
-"865 344 OFFCURVE",
-"882 344 CURVE SMOOTH",
-"941 344 OFFCURVE",
-"974 416 OFFCURVE",
-"983 499 CURVE",
-"966 496 LINE",
-"949 448 OFFCURVE",
-"921 424 OFFCURVE",
-"897 424 CURVE SMOOTH",
-"878 424 OFFCURVE",
-"869 433 OFFCURVE",
-"860 452 CURVE",
-"841 452 LINE",
-"828 407 OFFCURVE",
-"792 375 OFFCURVE",
-"757 375 CURVE SMOOTH",
-"738 375 OFFCURVE",
-"720 383 OFFCURVE",
-"705 401 CURVE",
-"647 334 LINE",
-"672 303 OFFCURVE",
-"706 289 OFFCURVE",
-"735 289 CURVE SMOOTH"
-);
-}
-);
-};
 hints = (
 {
 horizontal = 1;
@@ -58419,8 +58379,11 @@ nodes = (
 "725 192 OFFCURVE",
 "725 403 CURVE",
 "705 384 LINE",
-"775 361 OFFCURVE",
-"835 423 OFFCURVE",
+"715 381 OFFCURVE",
+"726 379 OFFCURVE",
+"736 379 CURVE SMOOTH",
+"792 379 OFFCURVE",
+"837 429 OFFCURVE",
 "850 462 CURVE",
 "827 453 LINE",
 "846 439 OFFCURVE",
@@ -60557,7 +60520,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{437, 0}";
+position = "{467, 0}";
 },
 {
 name = entry;
@@ -60565,7 +60528,7 @@ position = "{898, 279}";
 },
 {
 name = top;
-position = "{467, 325}";
+position = "{467, 252}";
 }
 );
 components = (
@@ -60587,7 +60550,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{380, 1}";
+position = "{452, 0}";
 },
 {
 name = entry;
@@ -60595,7 +60558,7 @@ position = "{929, 270}";
 },
 {
 name = top;
-position = "{422, 294}";
+position = "{452, 294}";
 }
 );
 components = (
@@ -61076,7 +61039,7 @@ position = "{36, -1}";
 },
 {
 name = top;
-position = "{222, 127}";
+position = "{192, 127}";
 }
 );
 components = (
@@ -61109,7 +61072,7 @@ position = "{16, 0}";
 },
 {
 name = top;
-position = "{240, 121}";
+position = "{210, 121}";
 }
 );
 components = (
@@ -61164,7 +61127,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{239, 261}";
+position = "{209, 261}";
 }
 );
 components = (
@@ -61238,7 +61201,7 @@ position = "{11, 0}";
 },
 {
 name = top;
-position = "{164, 148}";
+position = "{134, 148}";
 }
 );
 components = (
@@ -61302,7 +61265,7 @@ position = "{32, 0}";
 },
 {
 name = top;
-position = "{217, 113}";
+position = "{187, 113}";
 }
 );
 hints = (
@@ -61475,7 +61438,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{308, 183}";
+position = "{278, 183}";
 }
 );
 components = (
@@ -61528,7 +61491,7 @@ position = "{1, 0}";
 },
 {
 name = top;
-position = "{181, 251}";
+position = "{151, 251}";
 }
 );
 components = (
@@ -61561,7 +61524,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{245, 364}";
+position = "{215, 364}";
 }
 );
 components = (
@@ -61594,7 +61557,7 @@ position = "{7, 0}";
 },
 {
 name = top;
-position = "{297, 319}";
+position = "{267, 319}";
 }
 );
 components = (
@@ -61681,11 +61644,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{440, -116}";
+position = "{490, 0}";
 },
 {
 name = top;
-position = "{451, 319}";
+position = "{490, 237}";
 }
 );
 components = (
@@ -65457,7 +65420,7 @@ position = "{11, 0}";
 },
 {
 name = top;
-position = "{164, 148}";
+position = "{134, 148}";
 }
 );
 hints = (
@@ -65663,7 +65626,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{212, 277}";
+position = "{182, 277}";
 }
 );
 hints = (
@@ -65734,7 +65697,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{449, 366}";
+position = "{419, 366}";
 }
 );
 hints = (
@@ -65810,7 +65773,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{239, 261}";
+position = "{209, 261}";
 }
 );
 hints = (
@@ -65891,7 +65854,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{212, 277}";
+position = "{182, 277}";
 }
 );
 components = (
@@ -65924,7 +65887,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{449, 366}";
+position = "{419, 366}";
 }
 );
 components = (
@@ -65957,7 +65920,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{300, 282}";
+position = "{270, 282}";
 }
 );
 components = (
@@ -68512,7 +68475,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{361, 307}";
+position = "{331, 307}";
 }
 );
 hints = (
@@ -69293,7 +69256,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{300, 282}";
+position = "{270, 282}";
 }
 );
 hints = (
@@ -73317,7 +73280,7 @@ position = "{16, 0}";
 },
 {
 name = top;
-position = "{240, 121}";
+position = "{210, 121}";
 }
 );
 background = {
@@ -73417,7 +73380,7 @@ position = "{32, 0}";
 },
 {
 name = top;
-position = "{209, 111}";
+position = "{179, 111}";
 }
 );
 hints = (
@@ -77607,7 +77570,7 @@ position = "{33, 0}";
 },
 {
 name = top;
-position = "{201, 130}";
+position = "{171, 130}";
 }
 );
 hints = (
