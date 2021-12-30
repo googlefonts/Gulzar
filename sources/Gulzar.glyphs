@@ -16803,6 +16803,20 @@ color = 3;
 glyphname = "waw-ar.fina";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+position = "{152, -59}";
+},
+{
+name = entry;
+position = "{288, 306}";
+},
+{
+name = top;
+position = "{227, 427}";
+}
+);
 components = (
 {
 name = VAOf1;
@@ -63562,7 +63576,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{137, -233}";
+position = "{152, -59}";
 },
 {
 name = entry;
@@ -63570,7 +63584,7 @@ position = "{288, 306}";
 },
 {
 name = top;
-position = "{205, 502}";
+position = "{227, 427}";
 }
 );
 components = (
