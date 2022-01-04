@@ -37,7 +37,7 @@
     },
     {
       "input": "ہا",
-      "expectation": "ALIFf1=1+222|haydb=0@-119,40+0|HAYCi3=0@-49,1+154",
+      "expectation": "ALIFf1=1+222|haydb=0@-119,104+0|HAYCi3=0@-49,135+154",
       "note": "Don't break heh-alif when fixing short initial be-likes"
     },
     {
@@ -51,7 +51,7 @@
     {
       "input": "فدیم",
       "note": "Height: 500",
-      "expectation": "MIMf1|ddb.two|BEi9|DALf1|sda|FEi3"
+      "expectation": "MIMf1|ddb.one|BEi9|DALf1|sda|FEi3"
     },
     {
       "input": "رباں",
@@ -60,8 +60,7 @@
     },
     {
       "input": "ریر",
-      "expectation": "REf1|ddb.one|BEi13|REu1",
-      "note": "But sdb needs to drop here!"
+      "expectation": "REf1|ddb.one|BEi16|REu1"
     },
     {
       "input": "میر پشیمل",
@@ -74,20 +73,19 @@
     },
     {
       "input": "سرپہ",
-      "expectation": "HAYCf1|tdb.one|BEi3|REf3|SINi15"
+      "expectation": "HAYCf1|tdb.one|BEi3|REf3|SINi19"
     },
     {
       "input": "ندبجن",
-      "expectation": "sdi=4@270,150+0|NUNf1=4+707|sdb=3@56,82+0|JIMm14=3@-4,372+83|sdb=2@303,408+0|BEi7=2@-7,608+287|DALf1=1+449|sda=0@-59,370+0|BEi3=0@-49,0+155"
+      "expectation": "sdi=4@270,150+0|NUNf1=4+707|sdb=3@56,85+0|JIMm14=3@-4,475+83|sdb=2@303,408+0|BEi7=2@-7,608+247|DALf1=1+449|sda=0@-59,365+0|BEi3=0@-49,135+155"
     },
     {
       "input": "پرچا",
-      "expectation": "ALIFf1|tdb.one|JIMi3|REf1|tdb|BEi13",
-      "note": "Drop one at 0"
+      "expectation": "ALIFf1|tdb|JIMi3|REf1|tdb|BEi16"
     },
     {
       "input": "پرچھا",
-      "expectation": "ALIFf1=4+213|HAYAm3=3@-42,67+317|tdb.two=2@78,-293+0|JIMi5=2@-52,367+82|REf1=1+357|tdb=0@-89,-38+0|BEi13=0@-29,272+197"
+      "expectation": "ALIFf1=4+222|HAYAm3=3@-52,135+275|tdb.one=2@87,-527+0|JIMi5=2@-3,313+94|REf1=1+539|tdb=0@-240,-147+0|BEi16=0@-100,433+60"
     },
     {
       "input": "سربر",
@@ -99,11 +97,11 @@
     },
     {
       "input": "و چھیا",
-      "expectation": "ALIFf1=5+213|ddb=4@-82,-223+0|BEm3=4@-42,67+212|HAYAm1=3@-55,138+341|tdb=2@28,229+0|JIMi5=2@-52,449+222|space.urdu=1+150|VAOu1=0+386"
+      "expectation": "ALIFf1=5+222|ddb=4@-114,-285+0|BEm3=4@-54,135+142|HAYAm2=3@-34,229+356|tdb=2@137,-16+0|JIMi5=2@-3,394+424|space.urdu=1+150|VAOu1=0+368"
     },
     {
       "input": "وچھیا",
-      "expectation": "ALIFf1=4+213|ddb=3@-82,-223+0|BEm3=3@-42,67+212|HAYAm1=2@-55,138+341|tdb.two=1@78,-211+0|JIMi5=1@-52,449+12|VAOu1=0+386"
+      "expectation": "ALIFf1=4+222|ddb=3@-114,-285+0|BEm3=3@-54,135+142|HAYAm2=2@-34,229+356|tdb.one=1@87,-446+0|JIMi5=1@-3,394+224|VAOu1=0+368"
     },
     {
       "input": "و جھی",
@@ -115,23 +113,27 @@
     },
     {
       "input": "سر جہا",
-      "expectation": "ALIFf1|haydb|HAYCm3|sdb|JIMi6|space.urdu|REf3|SINi15"
+      "expectation": "ALIFf1|haydb|HAYCm3|sdb|JIMi6|space.urdu|REf3|SINi19"
     },
     {
       "input": "مر جسا",
-      "expectation": "ALIFf1|SINm3|sdb|JIMi1|space.urdu|REf3|MIMi14"
+      "expectation": "ALIFf1|SINm3|sdb|JIMi24|space.urdu|REf3|MIMi19"
+    },
+    {
+      "input": "مرجسا",
+      "expectation": "ALIFf1=4+222|SINm3=3@-55,135+419|sdb.two=2@7,-573+0|JIMi24=2@-33,327+208|REf3=1+469|MIMi19=0@-111,358+119"
     },
     {
       "input": "یک جھر",
-      "expectation": "REf2=5+340|HAYAm14=4@-42,232+358|sdb=3@298,524+0|JIMi5=3@-52,514+32|space.urdu=2+150|KAFf1=1+886|ddb=0@-142,-288+0|BEi3=0@-42,72+194"
+      "expectation": "REf2=5+267|HAYAm16=4@-5,300+275|sdb=3@157,147+0|JIMi5=3@-3,477+244|space.urdu=2+150|KAFf1=1+905|ddb=0@-169,-315+0|BEi3=0@-49,135+155"
     },
     {
       "input": "وپہر",
-      "expectation": "REf3|haydb|HAYCm15|tdb.one|BEi6|VAOu1"
+      "expectation": "REf3=3+469|haydb=2@-200,8+0|HAYCm16=2@-120,358+-15|tdb.one=1@80,-399+0|BEi6=1@0,91+256|VAOu1=0+368"
     },
     {
       "input": "پ پہلو",
-      "expectation": "VAOf1=5+288|LAMm15=4@-1,243+292|haydb=3@-10,120+0|HAYCm3=3@-50,190+173|tdb=2@80,-10+0|BEi6=2@0,190+326|space.urdu=1+150|tdb=0@280,-430+0|BEu1=0+979"
+      "expectation": "VAOf1=5+288|LAMm15=4@-1,306+292|haydb=3@-10,118+0|HAYCm3=3@-50,378+173|tdb=2@80,-12+0|BEi6=2@0,198+326|space.urdu=1+150|tdb=0@280,-430+0|BEu1=0+979"
     },
     {
       "input": "کو بھی",
@@ -139,36 +141,35 @@
     },
     {
       "input": "ر پھر",
-      "expectation": "REf2=4+407|HAYAm16=3@-5,205+275|tdb=2@120,219+0|BEi5=2@0,469+311|space.urdu=1+150|REu1=0+394",
-      "note": "I decided against cleverness here"
+      "expectation": "REf2=4+267|HAYAm16=3@-5,300+275|tdb=2@120,217+0|BEi5=2@0,477+311|space.urdu=1+150|REu1=0+394"
     },
     {
       "input": "وہم",
-      "expectation": "MIMf1=2+364|haydb=1@130,396+0|HAYCi9=1@0,366+418|VAOu1=0+368"
+      "expectation": "MIMf1=2+364|haydb=1@130,397+0|HAYCi9=1@0,367+358|VAOu1=0+368"
     },
     {
       "input": "اہم",
-      "expectation": "MIMf1=2+364|haydb=1@130,396+0|HAYCi9=1@0,366+498|ALIFu1=0+235"
+      "expectation": "MIMf1=2+364|haydb=1@130,397+0|HAYCi9=1@0,367+488|ALIFu1=0+235"
     },
     {
       "input": "پریھا",
-      "expectation": "ALIFf1|HAYAm3|ddb.two|BEi5|REf1|tdb|BEi13"
+      "expectation": "ALIFf1|HAYAm3|ddb.two|BEi5|REf1|tdb|BEi16"
     },
     {
       "input": "ہر چیز",
-      "expectation": "sda=5@-50,30+0|REf3=5+320|ddb=4@-96,-220+0|BEm15=4@-216,10+186|tdb=3@74,-30+0|JIMi17=3@-16,190+291|space.urdu=2+300|REf3=1+320|haydb=0@87,126+0|HAYCi13=0@-143,6+323"
+      "expectation": "sda=5@130,600+0|REf3=5+469|ddb.one=4@-266,-382+0|BEm16=4@-356,358+67|tdb=3@-75,-197+0|JIMi3=3@-105,373+140|space.urdu=2+300|REf3=1+469|haydb=0@-153,168+0|HAYCi17=0@-73,358+146"
     },
     {
       "input": "ہرچیز",
-      "expectation": "sda=4@270,600+0|REf3=4+609|ddb=3@-266,-149+0|BEm16=3@-356,31+67|tdb.two=2@-125,-692+0|JIMi3=2@-105,238+50|REf3=1+609|haydb=0@-153,167+0|HAYCi17=0@-73,257+146"
+      "expectation": "sda=4@130,600+0|REf3=4+469|ddb=3@-266,-142+0|BEm16=3@-356,358+67|tdb.one=2@-125,-627+0|JIMi3=2@-105,373+90|REf3=1+469|haydb=0@-153,168+0|HAYCi17=0@-73,358+146"
     },
     {
       "input": "ل بن",
-      "expectation": "sdi=3@270,150+0|NUNf1=3+766|sdb=2@-4,-50+0|BEisd2=2@-54,330+185|space.urdu=1+150|LAMu1=0+783"
+      "expectation": "sdi=3@270,150+0|NUNf1=3+707|sdb=2@36,-5+0|BEi14=2@-4,475+207|space.urdu=1+150|LAMu1=0+783"
     },
     {
       "input": "مربی",
-      "expectation": "CH_YEf1=3+441|sdb.yb=2@315,-200+0|BEi11=2@-20,349+516|REf3=1+320|MIMi14=0@-113,205+343"
+      "expectation": "CH_YEf1=3+409|sdb.yb=2@190,-120+0|BEi13=2@0,267+419|REf3=1+469|MIMi19=0@-111,358+119"
     },
     {
       "input": "رپھر",
@@ -176,15 +177,15 @@
     },
     {
       "input": "سرپھر",
-      "expectation": "REf2=4+407|HAYAm16=3@-5,205+275|tdb=2@120,259+0|BEi5=2@0,469+61|REf3=1+609|SINi19=0@-318,78+281"
+      "expectation": "REf2=4+267|HAYAm16=3@-5,300+275|tdb=2@120,217+0|BEi5=2@0,477+361|REf3=1+469|SINi19=0@-318,358+281"
     },
     {
       "input": "جر یا",
-      "expectation": "ALIFf1=4+213|ddb=3@-142,-298+0|BEi3=3@-42,62+264|space.urdu=2+150|REf2=1+340|sdb=0@42,-86+0|JIMi14=0@-118,234+436"
+      "expectation": "ALIFf1=4+222|ddb=3@-169,-315+0|BEi3=3@-49,135+245|space.urdu=2+150|REf2=1+267|sdb=0@60,-90+0|JIMi17=0@0,300+482"
     },
     {
       "input": "مر یا",
-      "expectation": "ALIFf1=4+213|ddb=3@-142,-298+0|BEi3=3@-42,62+264|space.urdu=2+150|REf3=1+320|MIMi14=0@-113,205+343"
+      "expectation": "ALIFf1=4+222|ddb=3@-169,-315+0|BEi3=3@-49,135+245|space.urdu=2+150|REf3=1+469|MIMi19=0@-111,358+119"
     },
     {
       "input": "وپھی",
@@ -192,44 +193,43 @@
     },
     {
       "input": "عرب مرکب",
-      "expectation": "sdb=7@290,-350+0|BEf1=7+898|KAFi12=6@-16,197+96|REf3=5+609|MIMi19=4@-111,260+99|space.urdu=3+150|sdb=2@350,-350+0|BEu1=2+669|REf2=1+407|AINi17=0@-9,261+391"
+      "expectation": "sdb=7@290,-350+0|BEf1=7+898|KAFi12=6@-16,279+96|REf3=5+469|MIMi19=4@-111,358+99|space.urdu=3+150|sdb=2@350,-350+0|BEu1=2+809|REf2=1+267|AINi17=0@-9,300+391"
     },
     {
       "input": "چنا",
-      "expectation": "ALIFf1=2+222|sda=1@-74,420+0|BEm3=1@-54,0+142|tdb=0@-13,-305+0|JIMi2=0@-33,125+496"
+      "expectation": "ALIFf1=2+222|sda=1@-74,415+0|BEm3=1@-54,135+142|tdb=0@-13,-311+0|JIMi2=0@-33,229+496"
     },
     {
       "input": "یی پی",
-      "expectation": "CH_YEf1=4+441|tdb.yb=3@310,-200+0|BEi11=3@-20,349+606|space.urdu=2+150|CH_YEf1=1+441|ddb.yb=0@310,-200+0|BEi11=0@-20,349+186"
+      "expectation": "CH_YEf1=4+409|tdb.yb=3@110,-180+0|BEi13=3@0,267+299|space.urdu=2+150|CH_YEf1=1+409|ddb.yb=0@110,-180+0|BEi13=0@0,267+219"
     },
     {
       "input": "ورپہر",
-      "expectation": "REf3=4+609|haydb=3@-200,13+0|HAYCm16=3@-120,83+-15|tdb.one=2@80,-547+0|BEi6=2@0,83+16|REu1=1+314|VAOu1=0+368"
+      "expectation": "REf3=4+469|haydb=3@-200,8+0|HAYCm16=3@-120,358+-15|tdb.one=2@80,-399+0|BEi6=2@0,91+16|REu1=1+314|VAOu1=0+368"
     },
     {
       "input": "رچہر",
-      "expectation": "REf3=3+609|haydb=2@-200,13+0|HAYCm16=2@-120,83+-15|tdb.one=1@20,-457+0|JIMi6=1@0,83+48|REu1=0+394"
+      "expectation": "REf3=3+469|haydb=2@-200,8+0|HAYCm16=2@-120,358+-15|tdb.one=1@110,-469+0|JIMi6=1@0,91+48|REu1=0+394"
     },
     {
       "input": "جھر پو",
-      "expectation": "VAOf1=5+328|tdb=4@-90,-75+0|BEi12=4@-20,235+317|space.urdu=3+150|REf2=2+340|HAYAm14=1@-42,232+358|sdb=0@148,274+0|JIMi5=0@-52,514+432"
+      "expectation": "VAOf1=5+288|tdb=4@-60,-214+0|BEi15=4@0,306+307|space.urdu=3+150|REf2=2+267|HAYAm16=1@-5,300+275|sdb=0@157,147+0|JIMi5=0@-3,477+484"
     },
     {
       "input": "ھر توپھر",
-      "expectation": "REf2=7+340|HAYAm14=6@-42,232+358|tdb.two=5@1,-363+0|BEi5=5@-49,547+-9|VAOf1=4+328|dda=3@-100,615+0|TEi12=3@-20,235+217|space.urdu=2+150|REf2=1+340|HAYAi14=0@-42,232+514",
-      "note": "This isn't great layout but unfortunateyl we just have to take the hit."
+      "expectation": "REf2=7+267|HAYAm16=6@-5,300+275|tdb.two=5@70,-503+0|BEi5=5@0,477+111|VAOf1=4+288|dda=3@-60,766+0|TEi15=3@0,306+7|space.urdu=2+150|REf2=1+267|HAYAi16=0@-5,300+489"
     },
     {
       "input": "فکر",
-      "expectation": "REf1=2+539|KAFm16=1@-141,293+142|sda=0@-69,983+0|FEi3=0@-49,293+216"
+      "expectation": "REf1=2+539|KAFm16=1@-141,433+142|sda=0@-69,1258+0|FEi3=0@-49,428+216"
     },
     {
       "input": "متجرپھ",
-      "expectation": "HAYAf1=5+445|tdb.two=4@70,-700+0|BEi5=4@0,270+61|REf2=3+407|sdb=2@-33,-152+0|JIMm17=2@-103,148+-8|dda=1@43,903+0|TEm7=1@-7,433+324|MIMi2=0@-29,626+411"
+      "expectation": "HAYAf1=5+445|tdb.two=4@70,-702+0|BEi5=4@0,278+161|REf2=3+267|sdb=2@-33,-150+0|JIMm17=2@-103,300+-8|dda=1@43,903+0|TEm7=1@-7,433+324|MIMi2=0@-29,729+411"
     },
     {
       "input": "طریقو",
-      "expectation": "VAOf1=4+288|dda=3@50,742+0|FEm15=3@0,222+223|ddb=2@-48,-51+0|BEi4=2@-78,289+197|REf3=1+609|TOEi17=0@-64,258+356"
+      "expectation": "VAOf1=4+288|dda=3@50,746+0|FEm15=3@0,306+223|ddb=2@-446,-56+0|BEi4=2@-78,374+237|REf3=1+469|TOEi17=0@-64,358+356"
     },
     {
       "input": "پورجھر پورچہر",
@@ -348,7 +348,7 @@
     },
     {
       "input": "ایک",
-      "expectation": "KAFf1=2+886|ddb=1@-142,-288+0|BEi3=1@-42,72+164|ALIFu1=0+228"
+      "expectation": "KAFf1=2+905|ddb=1@-169,-315+0|BEi3=1@-49,135+125|ALIFu1=0+235"
     },
     {
       "input": "وپید",
@@ -384,7 +384,7 @@
     },
     {
       "input": "رنیست",
-      "expectation": "dda|TEf1|SINm1|ddb.one|BEmsd1|sda|BEi3|REu1"
+      "expectation": "dda|TEf1|SINm1|ddb.one|BEmsd2|sda|BEi3|REu1"
     },
     {
       "input": "اچھا"
@@ -451,11 +451,11 @@
     },
     {
       "input": "آئین",
-      "expectation": "sdi=3@270,150+0|NUNf1=3+766|ddb=2@-44,-7+0|BEmsd1=2@-54,333+263|HAMZA_ABOVE=1@-62,447+0|BEi3=1@-42,327+324|MADDA=0@-40,500+0|ALIFu1=0+228"
+      "expectation": "sdi=3@270,150+0|NUNf1=3+707|ddb=2@-24,-35+0|BEm14=2@-4,475+260|HAMZA_ABOVE=1@-99,524+0|BEi3=1@-49,534+245|MADDA=0@-80,790+0|ALIFu1=0+235"
     },
     {
       "input": "رہیں",
-      "expectation": "NUNf1=3+766|ddb.one=2@-44,-227+0|BEmsd1=2@-54,333+263|haydb=1@-12,282+0|HAYCi3=1@-42,332+113|REu1=0+394"
+      "expectation": "NUNf1=3+707|ddb.one=2@-24,-275+0|BEm14=2@-4,475+260|haydb=1@-119,344+0|HAYCi3=1@-49,534+104|REu1=0+394"
     },
     {
       "input": "عمل پو",
@@ -504,20 +504,20 @@
     },
     {
       "input": "جب بو",
-      "expectation": "VAOf1=4+328|sdb=3@-20,-95+0|BEi12=3@-20,235+47|space.urdu=2+150|sdb=1@330,-330+0|BEf1=1+975|sdb=0@25,-191+0|JIMi1=0@-55,79+439",
+      "expectation": "VAOf1=4+288|sdb=3@10,-134+0|BEi15=3@0,306+317|space.urdu=2+150|sdb=1@290,-350+0|BEf1=1+898|sdb=0@124,-161+0|JIMi12=0@-16,279+515",
       "note": "#27"
     },
     {
       "input": "قوتو",
-      "expectation": "VAOf1=3+328|dda=2@-150,615+0|TEi12=2@-20,235+87|VAOf1=1+328|dda=0@-130,635+0|FEi12=0@-40,235+221"
+      "expectation": "VAOf1=3+288|dda=2@-110,766+0|TEi15=2@0,306+137|VAOf1=1+288|dda=0@-90,766+0|FEi15=0@0,306+246"
     },
     {
       "input": "کو جستی",
-      "expectation": "CH_YEf1=6+441|dda=5@-30,496+0|TEm11=5@-40,286+300|SINm1=4@-54,409+498|sdb=3@-75,268+0|JIMi1=3@-55,538+9|space.urdu=2+150|VAOf1=1+328|KAFi14=0@-63,297+271"
+      "expectation": "CH_YEf1=6+409|dda=5@-40,687+0|TEm13=5@0,267+262|SINm2=4@-32,495+486|sdb=3@7,229+0|JIMi24=3@-33,689+38|space.urdu=2+150|VAOf1=1+288|KAFi16=0@0,306+242"
     },
     {
       "input": "جنگ جنگ",
-      "expectation": "GAFf1=6+886|sda=5@-2,317+0|BEm3=5@-42,77+212|sdb=4@25,-125+0|JIMi1=4@-55,145+329|space.urdu=3+150|GAFf1=2+886|sda=1@-2,317+0|BEm3=1@-42,77+212|sdb=0@25,-125+0|JIMi1=0@-55,145+439"
+      "expectation": "GAFf1=6+905|sda=5@-74,415+0|BEm3=5@-54,135+142|sdb=4@7,-231+0|JIMi2=4@-33,229+596|space.urdu=3+150|GAFf1=2+905|sda=1@-74,415+0|BEm3=1@-54,135+142|sdb=0@7,-231+0|JIMi2=0@-33,229+446"
     },
     {
       "input": "چہزین"
@@ -560,14 +560,14 @@
     },
     {
       "input": "پھر پیا",
-      "expectation": "ALIFf1=6+213|ddb.two=5@-82,-663+0|BEm3=5@-42,67+212|tdb=4@-124,-184+0|BEisd1=4@-54,156+302|space.urdu=3+150|REf2=2+340|HAYAm14=1@-42,232+358|tdb=0@51,297+0|BEi5=0@-49,547+351"
+      "expectation": "ALIFf1=6+222|ddb.one=5@-114,-525+0|BEm3=5@-54,135+142|tdb=4@-88,-331+0|BEisd1=4@-48,229+355|space.urdu=3+150|REf2=2+267|HAYAm16=1@-5,300+275|tdb=0@130,-43+0|BEi5=0@0,477+381"
     },
     {
       "input": "رہمیشہ"
     },
     {
       "input": "پژمر",
-      "expectation": "REf3=3+320|MIMi14=2@-113,205+363|tda=1@-50,340+0|REf1=1+357|tdb=0@-89,-38+0|BEi13=0@-29,272+197"
+      "expectation": "REf3=3+469|MIMi19=2@-111,358+-61|tda=1@110,520+0|REf1=1+539|tdb=0@-240,-147+0|BEi16=0@-100,433+60"
     },
     {
       "input": "ہزت"
@@ -619,6 +619,9 @@
     },
     {
       "input": "مہزا"
+    },
+    {
+      "input": "بلوچی"
     }
   ]
 }
