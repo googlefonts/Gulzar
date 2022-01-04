@@ -31,11 +31,11 @@ Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
 
-    Position ( [ddb.yb tdb.yb] <0 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [REf2 REf3] @inits ( sdb.yb <80 -120 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( sdb.yb <80 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb$/ <50 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <80 -120 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;

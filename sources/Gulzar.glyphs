@@ -1,8 +1,8 @@
 {
 .appVersion = "3106";
 DisplayStrings = (
-"/BEisd2/BEm1",
-"/BEi8/KAFm3/ALIFf1"
+"/ddb.yb/BARI_YEf1",
+"/tdb.yb.collides"
 );
 classes = (
 {
@@ -30244,7 +30244,7 @@ layers = (
 anchors = (
 {
 name = _bottom.yb;
-position = "{0, -43}";
+position = "{0, -153}";
 }
 );
 components = (
@@ -31629,17 +31629,17 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{219, -56}";
+position = "{9, -526}";
 }
 );
 components = (
 {
 name = ddb;
-transform = "{1, 0, 0, 1, 0, -300}";
+transform = "{1, 0, 0, 1, -210, -300}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 436;
+width = 0;
 }
 );
 note = ddb;
@@ -31655,7 +31655,7 @@ layers = (
 anchors = (
 {
 name = _comma;
-position = "{152, 95}";
+position = "{140, 95}";
 },
 {
 name = bottom;
@@ -31665,7 +31665,7 @@ position = "{120, -409}";
 components = (
 {
 name = haydb.yb;
-transform = "{1, 0, 0, 1, -1, 0}";
+transform = "{1, 0, 0, 1, 110, 0}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31714,7 +31714,7 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{120, -461}";
+position = "{0, -461}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31722,33 +31722,33 @@ paths = (
 {
 closed = 1;
 nodes = (
-"161 -309 OFFCURVE",
-"190 -256 OFFCURVE",
-"190 -222 CURVE SMOOTH",
-"190 -196 OFFCURVE",
-"178 -180 OFFCURVE",
-"157 -174 CURVE",
-"142 -183 OFFCURVE",
-"132 -202 OFFCURVE",
-"126 -235 CURVE",
-"150 -214 LINE",
-"115 -216 OFFCURVE",
-"100 -201 OFFCURVE",
-"100 -178 CURVE SMOOTH",
-"100 -145 OFFCURVE",
-"128 -95 OFFCURVE",
-"169 -46 CURVE",
-"151 -33 LINE",
-"93 -99 OFFCURVE",
-"50 -168 OFFCURVE",
-"50 -234 CURVE SMOOTH",
-"50 -281 OFFCURVE",
-"75 -309 OFFCURVE",
-"110 -309 CURVE SMOOTH"
+"41 -309 OFFCURVE",
+"70 -256 OFFCURVE",
+"70 -222 CURVE SMOOTH",
+"70 -196 OFFCURVE",
+"58 -180 OFFCURVE",
+"37 -174 CURVE",
+"22 -183 OFFCURVE",
+"12 -202 OFFCURVE",
+"6 -235 CURVE",
+"30 -214 LINE",
+"-5 -216 OFFCURVE",
+"-20 -201 OFFCURVE",
+"-20 -178 CURVE SMOOTH",
+"-20 -145 OFFCURVE",
+"8 -95 OFFCURVE",
+"49 -46 CURVE",
+"31 -33 LINE",
+"-27 -99 OFFCURVE",
+"-70 -168 OFFCURVE",
+"-70 -234 CURVE SMOOTH",
+"-70 -281 OFFCURVE",
+"-45 -309 OFFCURVE",
+"-10 -309 CURVE SMOOTH"
 );
 }
 );
-width = 240;
+width = 0;
 }
 );
 note = haydb;
@@ -31961,23 +31961,23 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{134, 0}";
+position = "{14, -500}";
 }
 );
 components = (
 {
 alignment = -1;
 name = sda;
-transform = "{1, 0, 0, 1, 0, -300}";
+transform = "{1, 0, 0, 1, -120, -300}";
 }
 );
 guideLines = (
 {
-position = "{151, -174}";
+position = "{31, -174}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 288;
+width = 0;
 }
 );
 note = sdb;
@@ -32303,23 +32303,23 @@ layers = (
 anchors = (
 {
 name = bottom.yb;
-position = "{239, 0}";
+position = "{19, -560}";
 }
 );
 components = (
 {
 alignment = -1;
 name = tdb;
-transform = "{1, 0, 0, 1, 0, -400}";
+transform = "{1, 0, 0, 1, -220, -400}";
 }
 );
 guideLines = (
 {
-position = "{122, -174}";
+position = "{-98, -174}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 436;
+width = 0;
 }
 );
 note = tdb;
@@ -61496,7 +61496,7 @@ position = "{1, 0}";
 },
 {
 name = top;
-position = "{121, 221}";
+position = "{94, 221}";
 }
 );
 components = (

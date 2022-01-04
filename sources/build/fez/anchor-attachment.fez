@@ -156,6 +156,7 @@ Routine AtHeight500sub {
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
     Chain ([@dal_like @vao_like] BEi5 @dots ^DoNothing); #ندبجن
     Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); #ندبجن
+    Chain ([@dal_like @vao_like] BEi24 @dots ^DoNothing); #ریس
     Chain (@dal_like BEi10 @dots ^DropTwo); # تقریظیں
     Chain ([@dal_like @vao_like] BEi1 @dots ^DoNothing); # ریعقُو
     Chain ([@dal_like @vao_like] @BEi @dots ^DropOne); # یریں
@@ -193,6 +194,7 @@ Routine AtHeight200pos {
     Chain (@bigbowlfina BEisd1 ^OpenSmallSpaceBeforeKern [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
     Chain (@bigbowlfina @BEi ^OpenTinySpaceBeforeKern [tdb ddb]); # ن پٹ
+    Chain ([@dal_like @vao_like] BEi9 ^OpenMediumSpaceBeforeKern tdb); # ر پم
     Chain ([@dal_like @vao_like] BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
     Chain ([@dal_like @vao_like] BEi5 ^OpenBigSpaceBeforeKern @dots); # ر یھ
     Chain ([@dal_like @vao_like] JIMi9 @dots_one ^DropATinyBitMore); # رجم
@@ -285,7 +287,7 @@ Feature rlig {
     Substitute /FEi/ dda /FEm/ (sda) -> sda.two;
   };
   Routine OtherFixes2 {
-    Chain ([REf1 REf2 REf3] @all_above_marks @isols ^OpenTinySpaceBeforeKern);
+    Chain (@long_re ^ClearUpperDots);
   };
 };
 
