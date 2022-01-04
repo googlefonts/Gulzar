@@ -225,8 +225,17 @@ class TestSelf:
         sequence = ["REu1", "BEi3", "ALIFf1"]
         self.assert_height(sequence, 60, 70)
         distance, debuginfo = path_distance(self.font, sequence[1], sequence[0], 62, 264)
-        assert distance == pytest.approx(198, 5)
+        assert distance == pytest.approx(198, 1)
         self.assert_kern_within(sequence, 100, -120, -90, height=100)
+
+    def test_re_be_re(self):
+        import pytest
+        logger.setLevel(logging.DEBUG)
+        sequence = ["REf2", "BEi16", "REf1"]
+        self.assert_height(sequence, 420, 450)
+        distance, debuginfo = path_distance(self.font, sequence[1], sequence[0], 62, 264)
+        assert distance == pytest.approx(198, 1)
+        self.assert_kern_within(sequence, 100, -120, -90, height=420)
 
 if __name__ == '__main__':
     import pytest
