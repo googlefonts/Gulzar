@@ -270,7 +270,7 @@ class DetectAndSwap(FEZVerb):
         return glyphs
 
     def get_contexts(self):
-        rules = load_rules("rules.csv", self.parser.font.exportedGlyphs(), full=True)
+        rules = load_rules("sources/build/rules.csv", self.parser.font.exportedGlyphs(), full=True)
         # possible = set([])
         self.rasm_glyphs = set([])
         possible_contexts = {}

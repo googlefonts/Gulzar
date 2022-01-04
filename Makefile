@@ -41,7 +41,7 @@ clean:
 specimen: specimen/specimen.pdf
 
 sources/build/rules.csv: $(GLYPHS_FILE)
-	python3 scripts/dump-glyphs-rules.py $(GLYPHS_FILE) > sources/build/rules.csv
+	python3 scripts/dump-glyphs-rules.py $(GLYPHS_FILE)
 
 test: $(FINAL_FONT)
 	. venv/bin/activate; fontbakery check-googlefonts -l WARN --html fontbakery-report.html --ghmarkdown fontbakery-report.md $(FINAL_FONT)

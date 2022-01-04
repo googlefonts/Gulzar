@@ -61,7 +61,7 @@ class NastaliqKerning(FEZVerb):
         self.maxtuck = args[1].resolve_as_integer() / 100.0
         self.shelve = shelve.open("kerncache.db")
         from qalamTools.NastaliqConnections import load_rules
-        rules = load_rules("rules.csv", self.parser.font.exportedGlyphs(), full=True)
+        rules = load_rules("sources/build/rules.csv", self.parser.font.exportedGlyphs(), full=True)
 
         self.inits = self.parser.fontfeatures.namedClasses["inits"]
         medis = self.parser.fontfeatures.namedClasses["medis"]

@@ -217,7 +217,7 @@ class DetectAndSwapYB(FEZVerb):
     def get_contexts(self):
         from qalamTools.NastaliqConnections import load_rules
 
-        rules = load_rules("rules.csv", self.parser.font.exportedGlyphs(), full=True)
+        rules = load_rules("sources/build/rules.csv", self.parser.font.exportedGlyphs(), full=True)
         # possible = set([])
         self.rasm_glyphs = set([])
         possible_contexts = {}
