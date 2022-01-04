@@ -154,6 +154,7 @@ Routine AtHeight400sub {
 
 Routine AtHeight500sub {
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
+    Chain ([@dal_like @vao_like] BEi5 @dots ^DoNothing); #ندبجن
     Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); #ندبجن
     Chain (@dal_like BEi10 @dots ^DropTwo); # تقریظیں
     Chain ([@dal_like @vao_like] BEi1 @dots ^DoNothing); # ریعقُو
@@ -248,6 +249,9 @@ Routine AtHeight400pos {
 Routine AtHeight500pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
     Chain (@dal_like BEi10 ^DoNothingPos); # تقریظیں
+    Chain ([@dal_like @vao_like] BEi5 @dots ^TopRight); #ندبجن
+    Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # ومچھا
+    Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # ومچھا
     Chain ([@isols @finas] @DOTi ^OpenSpaceBeforeKern ); # ومچھا
     Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern ); # ومچھا
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one];
@@ -259,7 +263,8 @@ Routine AtHeight600pos {
     Chain (@alif_like @inits ^OpenSmallSpaceBeforeKern); # چلائيں
     Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
     Chain ([@isols @finas] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
-    Chain ([@isols @finas] @dots MIMi7 ^OpenSpaceBeforeKern ); # جومُجھ
+    Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # جومُجھ
+    Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # جومُجھ
     Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern ); # اچھّی
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one toeda HAMZA_ABOVE];
 
