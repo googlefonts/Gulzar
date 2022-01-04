@@ -72,6 +72,7 @@ Routine OpenBigSpaceBeforeKern {
 
 Routine OpenSmallSpaceBeforeKern {
   Position (/JIMi/ <xAdvance=+250>) /tdb/;
+  Position ([@inits @isols] <xAdvance=+160>) @all_above_marks;
   Position ([@inits @isols] <xAdvance=+160>) /db|da|[mf](sd)?\d+/;
   Position DAMMA ([@inits @isols] <xAdvance=+250>);
   Position @all_above_marks ([@inits @isols] <xAdvance=+160>);
@@ -253,6 +254,9 @@ Routine AtHeight500pos {
 
 Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
+    Chain (@alif_like @DOTi ^OpenBigSpaceBeforeKern [ddb tdb]); # اچھّی
+    Chain (@alif_like @DOTi ^OpenSpaceBeforeKern sdb); # اچھّی
+    Chain (@alif_like @inits ^OpenSmallSpaceBeforeKern); # چلائيں
     Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
     Chain ([@isols @finas] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
     Chain ([@isols @finas] @dots MIMi7 ^OpenSpaceBeforeKern ); # جومُجھ
