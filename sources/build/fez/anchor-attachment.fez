@@ -153,6 +153,7 @@ Routine AtHeight400sub {
 
 Routine AtHeight500sub {
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
+    Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); #ندبجن
     Chain (@dal_like BEi10 @dots ^DropTwo); # تقریظیں
     Chain ([@dal_like @vao_like] BEi1 @dots ^DoNothing); # ریعقُو
     Chain ([@dal_like @vao_like] @BEi @dots ^DropOne); # یریں
@@ -163,9 +164,9 @@ DefineClass @narrow_inits = @inits & (width < 300);
 Routine AtHeight600sub {
     Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); # ندبجن
     Chain ([@dal_like @vao_like] BEi3 @DOTm @dots ^DropOne); # وئیں
-    Chain ([@dal_like @vao_like] BEi3 @dots ^DropTwo); # ریین
+    Chain ([@dal_like @vao_like] BEi3 @dots ^DoNothing); # ریین
 
-    Chain ([@dal_like @vao_like] @narrow_inits @DOTm @dots ^DropOne); # بدلیں / رفین
+    Chain ([@dal_like @vao_like] [@narrow_inits LAMi7] @DOTm @dots ^DropOne); # بدلیں / رفین
 
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
 } UseMarkFilteringSet [@dots];
@@ -252,9 +253,11 @@ Routine AtHeight500pos {
 
 Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
+    Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
     Chain ([@isols @finas] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
+    Chain ([@isols @finas] @dots MIMi7 ^OpenSpaceBeforeKern ); # جومُجھ
     Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern ); # اچھّی
-} IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one];
+} IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one toeda HAMZA_ABOVE];
 
 ## End of avoidance rules
 Feature rlig {
@@ -262,8 +265,8 @@ Feature rlig {
   AtHeight 100-199 AtHeight100sub;
   AtHeight 200-399 AtHeight200sub;
   AtHeight 400-499 AtHeight400sub;
-  AtHeight 500-599 AtHeight500sub;
-  AtHeight 600-800 AtHeight600sub;
+  AtHeight 500-649 AtHeight500sub;
+  AtHeight 650-900 AtHeight600sub;
   DetectAndSwap top reverse;
   DetectAndSwap bottom;
   DetectAndSwap top;
@@ -282,7 +285,7 @@ Feature kern {
   AtHeight 200-399 AtHeight200pos;
   AtHeight 400-499 AtHeight400pos;
   AtHeight 500-599 AtHeight500pos;
-  AtHeight 600-800 AtHeight600pos;
+  AtHeight 600-900 AtHeight600pos;
 };
 
 DefineClass @jim_medis = /m7/;

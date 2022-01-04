@@ -1,5 +1,9 @@
 {
-.appVersion = "1352";
+.appVersion = "3106";
+DisplayStrings = (
+"/BEisd2/BEm1",
+"/BEi7/LAM_ALIFf1"
+);
 classes = (
 {
 automatic = 1;
@@ -14844,7 +14848,7 @@ position = "{70, 77}";
 },
 {
 name = top;
-position = "{152, 710}";
+position = "{152, 660}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14888,7 +14892,7 @@ name = ALIFu1;
 },
 {
 name = HAMZA_ABOVE;
-transform = "{1, 0, 0, 1, -28, 620}";
+transform = "{1, 0, 0, 1, -28, 570}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14928,7 +14932,7 @@ name = ALIFu1;
 },
 {
 name = MADDA;
-transform = "{1, 0, 0, 1, -79, 789}";
+transform = "{1, 0, 0, 1, -79, 739}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14948,7 +14952,7 @@ name = ALIFu1;
 },
 {
 name = HAMZA_WASL;
-transform = "{1, 0, 0, 1, -44, 830}";
+transform = "{1, 0, 0, 1, -44, 780}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -15186,7 +15190,7 @@ position = "{178, -8}";
 },
 {
 name = top;
-position = "{169, 417}";
+position = "{199, 417}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -15293,7 +15297,7 @@ name = DALu1;
 },
 {
 name = sda;
-transform = "{1, 0, 0, 1, 24, 567}";
+transform = "{1, 0, 0, 1, 54, 567}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -15313,7 +15317,7 @@ name = DALu1;
 },
 {
 name = toeda;
-transform = "{1, 0, 0, 1, 37, 460}";
+transform = "{1, 0, 0, 1, 67, 460}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -31071,7 +31075,7 @@ layers = (
 anchors = (
 {
 name = _top;
-position = "{182, 110}";
+position = "{182, 90}";
 },
 {
 name = top;
@@ -31139,7 +31143,7 @@ layers = (
 anchors = (
 {
 name = _bottom;
-position = "{129, -141}";
+position = "{129, -21}";
 }
 );
 components = (
@@ -35863,7 +35867,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{118, -135}";
+position = "{118, -165}";
 },
 {
 name = exit;
@@ -35969,7 +35973,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{285, 176}";
+position = "{305, 16}";
 },
 {
 name = exit;
@@ -36055,7 +36059,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{459, 154}";
+position = "{459, 284}";
 },
 {
 name = exit;
@@ -36114,7 +36118,7 @@ position = "{6, 0}";
 },
 {
 name = top;
-position = "{357, 446}";
+position = "{487, 339}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -36163,7 +36167,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{211, 177}";
+position = "{251, -23}";
 },
 {
 name = exit;
@@ -36211,19 +36215,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{259, -76}";
+position = "{123, -116}";
 },
 {
 name = entry;
-position = "{267, 113}";
+position = "{231, 113}";
 },
 {
 name = exit;
-position = "{36, -1}";
+position = "{0, -1}";
 },
 {
 name = top;
-position = "{192, 127}";
+position = "{156, 127}";
 }
 );
 hints = (
@@ -36252,27 +36256,27 @@ paths = (
 {
 closed = 1;
 nodes = (
-"160 -103 OFFCURVE",
-"238 1 OFFCURVE",
-"267 45 CURVE",
-"267 113 LINE",
-"252 113 LINE",
-"218 61 OFFCURVE",
-"157 -24 OFFCURVE",
-"87 -24 CURVE SMOOTH",
-"68 -24 OFFCURVE",
-"50 -17 OFFCURVE",
-"36 -1 CURVE",
-"22 -16 OFFCURVE",
-"6 -47 OFFCURVE",
-"0 -63 CURVE",
-"19 -86 OFFCURVE",
-"45 -103 OFFCURVE",
-"77 -103 CURVE SMOOTH"
+"124 -102 OFFCURVE",
+"202 2 OFFCURVE",
+"231 46 CURVE",
+"231 114 LINE",
+"216 114 LINE",
+"182 62 OFFCURVE",
+"121 -23 OFFCURVE",
+"51 -23 CURVE SMOOTH",
+"32 -23 OFFCURVE",
+"14 -16 OFFCURVE",
+"0 0 CURVE",
+"-14 -15 OFFCURVE",
+"-30 -46 OFFCURVE",
+"-36 -62 CURVE",
+"-17 -85 OFFCURVE",
+"9 -102 OFFCURVE",
+"41 -102 CURVE SMOOTH"
 );
 }
 );
-width = 267;
+width = 231;
 }
 );
 note = BEm1;
@@ -36643,7 +36647,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{335, 69}";
+position = "{325, -31}";
 },
 {
 name = entry;
@@ -37729,7 +37733,7 @@ position = "{49, 0}";
 },
 {
 name = top;
-position = "{129, 305}";
+position = "{129, 275}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -40602,7 +40606,7 @@ position = "{112, 0}";
 },
 {
 name = top;
-position = "{341, 649}";
+position = "{261, 489}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -40611,7 +40615,7 @@ paths = (
 closed = 1;
 nodes = (
 "279 534 OFFCURVE",
-"297 555 OFFCURVE",
+"296 556 OFFCURVE",
 "312 569 CURVE SMOOTH",
 "391 636 LINE SMOOTH",
 "405 648 OFFCURVE",
@@ -40620,7 +40624,7 @@ nodes = (
 "430 705 LINE",
 "419 711 LINE",
 "297 605 LINE SMOOTH",
-"273 583 OFFCURVE",
+"272 584 OFFCURVE",
 "255 532 OFFCURVE",
 "255 519 CURVE",
 "269 514 LINE"
@@ -41413,7 +41417,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{112, -201}";
+position = "{112, -120}";
 },
 {
 name = entry;
@@ -44550,15 +44554,15 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{279, -65}";
+position = "{246, -65}";
 },
 {
 name = comma;
-position = "{278, -39}";
+position = "{215, 11}";
 },
 {
 name = exit;
-position = "{32, 0}";
+position = "{0, 0}";
 },
 {
 name = top;
@@ -44572,11 +44576,11 @@ name = BEm2;
 {
 alignment = -1;
 name = _Hayc.head;
-transform = "{1, 0, 0, 1, 203, -38}";
+transform = "{1, 0, 0, 1, 170, -38}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 420;
+width = 380;
 }
 );
 note = HAYCi1;
@@ -47094,7 +47098,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{279, -92}";
+position = "{269, -52}";
 },
 {
 name = exit;
@@ -47899,7 +47903,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{380, 416}";
+position = "{500, 346}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -48738,7 +48742,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{348, 101}";
+position = "{348, 91}";
 },
 {
 name = entry;
@@ -48930,7 +48934,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{263, 143}";
+position = "{343, 32}";
 },
 {
 name = entry;
@@ -53567,7 +53571,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{127, -147}";
+position = "{127, -167}";
 },
 {
 name = entry;
@@ -56763,6 +56767,7 @@ transform = "{1, 0, 0, 1, 170, 97}";
 },
 {
 name = BEm2;
+transform = "{1, 0, 0, 1, 32, 0}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -58489,7 +58494,7 @@ position = "{16, 0}";
 },
 {
 name = top;
-position = "{403, 152}";
+position = "{393, 152}";
 }
 );
 components = (
@@ -60977,7 +60982,7 @@ position = "{6, 0}";
 },
 {
 name = top;
-position = "{357, 446}";
+position = "{477, 326}";
 }
 );
 components = (
@@ -61048,7 +61053,7 @@ name = BEm1;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 267;
+width = 231;
 }
 );
 },
@@ -61354,7 +61359,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{144, 111}";
+position = "{141, 111}";
 }
 );
 hints = (
@@ -61491,7 +61496,7 @@ position = "{1, 0}";
 },
 {
 name = top;
-position = "{151, 251}";
+position = "{121, 221}";
 }
 );
 components = (
@@ -61590,7 +61595,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{361, 307}";
+position = "{401, 207}";
 }
 );
 components = (
@@ -66248,7 +66253,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{238, 160}";
+position = "{288, 50}";
 },
 {
 name = entry;
@@ -66449,7 +66454,7 @@ position = "{1, 0}";
 },
 {
 name = top;
-position = "{181, 578}";
+position = "{181, 668}";
 }
 );
 hints = (
@@ -66940,7 +66945,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{174, -126}";
+position = "{180, -116}";
 },
 {
 name = exit;
@@ -68201,7 +68206,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{214, 100}";
+position = "{304, 70}";
 },
 {
 name = exit;
@@ -68475,7 +68480,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{331, 307}";
+position = "{396, 210}";
 }
 );
 hints = (
@@ -69261,7 +69266,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{270, 282}";
+position = "{250, 182}";
 }
 );
 hints = (
@@ -69766,7 +69771,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{345, 437}";
+position = "{295, 387}";
 }
 );
 hints = (
@@ -72134,7 +72139,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{165, -129}";
+position = "{175, -139}";
 },
 {
 name = exit;
@@ -73378,19 +73383,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{230, -82}";
+position = "{198, -82}";
 },
 {
 name = entry;
-position = "{240, 97}";
+position = "{208, 97}";
 },
 {
 name = exit;
-position = "{32, 0}";
+position = "{0, 0}";
 },
 {
 name = top;
-position = "{179, 111}";
+position = "{147, 111}";
 }
 );
 hints = (
@@ -73419,29 +73424,29 @@ paths = (
 {
 closed = 1;
 nodes = (
-"36 -112 OFFCURVE",
-"58 -112 CURVE SMOOTH",
-"121 -112 OFFCURVE",
-"196 -41 OFFCURVE",
-"229 14 CURVE",
-"238 31 OFFCURVE",
-"240 65 OFFCURVE",
-"240 97 CURVE",
-"225 97 LINE",
-"201 66 OFFCURVE",
-"138 -25 OFFCURVE",
-"80 -25 CURVE SMOOTH",
-"63 -25 OFFCURVE",
-"47 -17 OFFCURVE",
-"32 0 CURVE",
-"26 -7 OFFCURVE",
-"8 -44 OFFCURVE",
-"0 -83 CURVE",
-"16 -104 OFFCURVE"
+"4 -112 OFFCURVE",
+"26 -112 CURVE SMOOTH",
+"89 -112 OFFCURVE",
+"164 -41 OFFCURVE",
+"197 14 CURVE",
+"206 31 OFFCURVE",
+"208 65 OFFCURVE",
+"208 97 CURVE",
+"193 97 LINE",
+"169 66 OFFCURVE",
+"106 -25 OFFCURVE",
+"48 -25 CURVE SMOOTH",
+"31 -25 OFFCURVE",
+"15 -17 OFFCURVE",
+"0 0 CURVE",
+"-6 -7 OFFCURVE",
+"-24 -44 OFFCURVE",
+"-32 -83 CURVE",
+"-16 -104 OFFCURVE"
 );
 }
 );
-width = 240;
+width = 208;
 }
 );
 note = BEm1;
@@ -82898,6 +82903,38 @@ KAFm = "4";
 LAMi = "4";
 LAMm = "4";
 "Left Glyph" = FEm16;
+MIMi = "4";
+MIMm = "4";
+SADi = "4";
+SADm = "4";
+SINi = "4";
+SINm = "4";
+TEi = "4";
+TEm = "4";
+TOEi = "4";
+TOEm = "4";
+},
+{
+AINi = "4";
+AINm = "4";
+BEi = "4";
+BEm = "4";
+FEi = "4";
+FEm = "4";
+GAFi = "4";
+GAFm = "4";
+HAYAi = "4";
+HAYAm = "4";
+HAYCi = "4";
+HAYCm = "4";
+Hei = "4";
+JIMi = "4";
+JIMm = "4";
+KAFi = "4";
+KAFm = "4";
+LAMi = "4";
+LAMm = "4";
+"Left Glyph" = FEm17;
 MIMi = "4";
 MIMm = "4";
 SADi = "4";
