@@ -10,7 +10,7 @@ Routine FinaJimTopRight {
   Position ([sdb.two ddb.two tdb.two] <yPlacement=-700>);
   Position ([sdb.one ddb.one tdb.one] <yPlacement=-600>);
   Position ([haydb.one haydb.two] <yPlacement=-300>);
-  Position ([sdb ddb tdb] <xPlacement=+120 yPlacement=+120>);
+  Position ([sdb ddb tdb] <xPlacement=+80 yPlacement=+80>);
   Position ([haydb] <xPlacement=+80 yPlacement=+80>);
 };
 
@@ -18,9 +18,9 @@ Routine FinaJimDownABit {
   Position (/sdi|tdi/ <yPlacement=-80>);
 };
 
-Routine FinaQafDownABit {
-  Position ([tdb] <yPlacement=-180>);
-  Position ([sdb ddb] <yPlacement=-120>);
+Routine FinaQafDownRight {
+  Position ([tdb] <yPlacement=-280 xPlacement=40>);
+  Position ([sdb ddb] <yPlacement=-280 xPlacement=40>);
 };
 
 Routine FinaQafUpLeft {
@@ -31,8 +31,9 @@ Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
 
-    Position ( [ddb.yb tdb.yb] <200 -200 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( [ddb.yb tdb.yb] <0 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position [REf2 REf3] @inits ( sdb.yb <80 -120 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( sdb.yb <80 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <20 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <80 -120 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
@@ -72,9 +73,9 @@ Feature kern {
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight AINf1);
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight AINf1);
     
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaQafDownABit QAFf1);
+    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaQafDownRight QAFf1);
 
-    Chain /(JIM|BE)[mi]/ (/tdb/ ^FinaQafUpLeft AINf1);
+    # Chain /(JIM|BE)[mi]/ (/tdb/ ^FinaQafUpLeft AINf1);
 
 
   } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
@@ -120,39 +121,35 @@ Feature kern {
     Position (haydb <yPlacement=+50>) ALIFf1;
 
     #  پڑتا
-    Position REf1 toeda ([@inits @isols] <xAdvance=+200>);
-    Position REf1 sda ([@inits @isols] <xAdvance=+75>);
+    #Position REf1 toeda ([@inits @isols] <xAdvance=+200>);
+    #Position REf1 sda ([@inits @isols] <xAdvance=+75>);
 
     Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like @BEi] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
     Position @alif_like (/TEi/ <xAdvance=+75>);
+
   };
+
+  Routine ClashesToRight {
+    Position LAMi4 FEm11 (dda <xPlacement=-30>);
+    Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
+    Position FEm2 TEm11 (dda <xPlacement=-50>);
+    Position FEm2 dda TEm11 (dda <xPlacement=-50>);
+    Position /(KAF|GAF|LAM)i/ /TEm/ (dda <xPlacement=-50>);
+  } UseMarkFilteringSet [ dda SHADDA];
 
   Routine DotsUnderGaf {
     Position (/\.one$/ <yPlacement=-220>) @NarrowMedials @all_above_marks /KAF|GAF/;
     Position /\.one$/ @NarrowMedials (@all_above_marks <yPlacement=-40>) /KAF|GAF/;
     Position (/\.one$/ <yPlacement=-220>) @all_above_marks /KAF|GAF/;
 
-    Position /LAM/ (/DAMMA/ <yPlacement=+150>) /KAF|GAF/;
-    Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials /KAF|GAF/;
-    Position /LAM/ (/DAMMA/ <yPlacement=+135>) @NarrowMedials @all_above_marks /KAF|GAF/;
-
-    Position TEi8 (dda <yPlacement=+100>) /[GK]AFm[37]/; # تکل
-    Position TEm8 (dda <yPlacement=-100>) /[GK]AFm[37]/; # تکل
-    Position (/toeda|tda/ <yPlacement=-50> DAMMA <yPlacement=+200>) /[GK]AF/; # شُک
-    Position (/toeda|tda|DAMMA/ <yPlacement=-135>) /[GK]AFm[37]/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowMedials /KAF|GAF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowMedials @all_above_marks /KAF|GAF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) @NarrowInits @all_above_marks /KAF|GAF/;
-    Position (/toeda|tda|DAMMA/ <yPlacement=-100>) /[KG]AF/;
-
-    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials /KAF|GAF/;
-    Position (/sda|dda/ <yPlacement=-50>) @NarrowMedials @all_above_marks /KAF|GAF/;
-
-    Position /sda|dda/ @NarrowMedials (@all_above_marks <yPlacement=-20>) /KAF|GAF/;
+    Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
+    Position ([sda dda tda] <yPlacement=-50>) @BEm [sda dda tda] /[KG]AF[mf]/;
+    Position ([sda dda tda] <yPlacement=-50>) @BEm  /[KG]AF[mf]/;
     # Let's clear it
-    Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m13/;
+    Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m1[36]/;
+    Position BEi8 (/DAMMA/ <yPlacement=+50>) /(KAF|GAF)m3/;
     Position MADDA (/KAF|GAF/ <xAdvance=+70>);
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
 
@@ -169,8 +166,8 @@ Feature kern {
   } UseMarkFilteringSet [tdb.yb];
 
   Routine FeTeFinesse {
-    Position /FEi/ /TEm/ ( dda <yPlacement=+50> ) ;
-    Position /FEi/ dda /TEm/ ( dda <yPlacement=+50> ) ;
+    Position /FEi/ /TEm/ ( dda <xPlacement=-50 yPlacement=+50> ) ;
+    Position /FEi/ dda /TEm/ ( dda <xPlacement=-50  yPlacement=+50> ) ;
     # قوتو
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
   } UseMarkFilteringSet [dda];
