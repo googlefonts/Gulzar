@@ -52,7 +52,7 @@ Routine DropTwo {
 Routine OpenSpaceBeforeKern {
   Position (@inits <xAdvance=+300>) /tdb|haydb/;
   Position (@inits <xAdvance=+200>) /sdb|ddb/;
-  Position (@inits <xAdvance=+200>) @medis;
+  Position (@inits <xAdvance=+200>) [@medis @finas];
   Position toeda (@inits <xAdvance=+200>);
 } IgnoreLigatures UseMarkFilteringSet /db|toeda/;
 
@@ -104,7 +104,7 @@ Routine DropALotMore {
 };
 
 Routine ClearUpperDots {
-  Chain ([@isols @finas] [tda sda toeda] @inits ^OpenSmallSpaceBeforeKern);
+  Chain ([@isols @finas] [tda sda toeda HAMZA_ABOVE] @inits ^OpenSmallSpaceBeforeKern);
 } IgnoreLigatures;
 
 DefineClass @dots = [sdb ddb tdb haydb];
@@ -145,6 +145,7 @@ Routine AtHeight400sub {
     Chain (@vao_like BEi5 @dots ^DropTwo); # وپھر
     Chain ([@dal_like @vao_like] BEi9 @dots ^DropTwo); # ریمو
     Chain ([@dal_like @vao_like] [@BEi @JIMi] @dots ^DropOne); # دںبل دببل دیبل دپبل دمبل
+    Chain ([@dal_like @vao_like] MIMi2 @DOTm [ddb tdb] ^DropOne); # رمیٹ
 
     Chain (@long_re BEi4 @dots ^DropOne); # طریقو
     Chain (@long_re @BEi @dots ^DropTwo @DOTm @dots); # جرببل جربپل
@@ -180,6 +181,7 @@ Routine AtHeight0pos {
     Chain (@dal_like BEi3 ^TightenSlightly @dots ^DropATinyBitMore); # دبہ دیہ دپہ
     Chain (@dal_like BEi3 ^TightenSlightly); # دںہ
     Chain (@dal_like toeda /KAFi/ ^OpenSpaceBeforeKern); # ڈکا
+    Chain (@alif_like KAFi3 ^OpenSpaceBeforeKern); # اکا
     Chain (@alif_like /HAYCi/ ^TightenSlightly); # ا ہہ
     Chain (@alif_like BEi3 ^DoNothingPos); # ایگ
     Chain (@long_re [@BEi @JIMi] ^OpenSmallSpaceBeforeKern @dots); # جر یہ / سر جہا / سر چہا
@@ -220,7 +222,7 @@ Routine AtHeight200pos {
 
     Chain (@dal_like @JIMi @dots_one ^DropATinyBitMore); # دجم
     Chain (@vao_like @JIMi @dots_one ^DropATinyBitMore); # وجم
-    Chain (@long_re [BEi5 JIMi24] ^TightenSlightly @dots_one ^DropATinyBitMore); # متجرپھ / مرجسا
+    Chain (@long_re [BEi3 BEi15 BEi5 JIMi24] ^TightenSlightly @dots_one ^DropATinyBitMore); # متجرپھ / مرجسا
     Chain (@long_re @JIMi @dots_one ^DropATinyBitMore); # جرجم
     Chain (@long_re @JIMi @dots ^DoNothingPos); # مر جسا 
 
@@ -244,11 +246,11 @@ Routine AtHeight400pos {
 
     Chain (@vao_like BEi5 ^OpenTinySpaceBeforeKern @dots_two ^DropATinyBitMore); # وپھر
 
-    Chain ([@dal_like @vao_like] @JIMi @dots_one ^DropATinyBitMore); # وچھیا
-    Chain ([@dal_like @vao_like] @JIMi ^OpenTinySpaceBeforeKern @dots); # و چھیا
+    Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi @dots_one ^DropATinyBitMore); # وچھیا
+    Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi ^OpenTinySpaceBeforeKern @dots); # و چھیا
     Chain (@alif_like @JIMi @dots ^DoNothingPos); # دجبل
 
-    Chain ([@dal_like @vao_like] /HAYCi/ ^OpenTinySpaceBeforeKern @dots); # وہبل
+    Chain ([@dal_like @vao_like] ^ClearUpperDots /HAYCi/ ^OpenTinySpaceBeforeKern @dots); # وہبل
     Chain (@alif_like /HAYCi/ ^DoNothingPos); # اہبل
 
     Chain ([@isols @finas] @DOTi ^OpenSpaceBeforeKern @dots); # مینو پھر
@@ -257,15 +259,15 @@ Routine AtHeight400pos {
 
 Routine AtHeight500pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
-    Chain (@dal_like BEi10 ^DoNothingPos); # تقریظیں
-    Chain (@dal_like BEi7 ^DoNothingPos); # ندبجن
-    Chain (@dal_like BEi14 @dots_one ^DropATinyBitMore); # یریں
+    Chain (@dal_like ^ClearUpperDots BEi10 ^DoNothingPos); # تقریظیں
+    Chain (@dal_like ^ClearUpperDots BEi7 ^DoNothingPos); # ندبجن
+    Chain (@dal_like ^ClearUpperDots BEi14 @dots_one ^DropATinyBitMore); # یریں
     Chain ([@dal_like @vao_like] BEi5 ^OpenSmallSpaceBeforeKern tdb ^BottomLeft); # وپھی, #27
-    Chain ([@dal_like @vao_like] BEi5 @dots ^BottomLeft); # وپھی, #27
+    Chain ([@dal_like @vao_like] ^ClearUpperDots BEi5 @dots ^BottomLeft); # وپھی, #27
     Chain (@long_re @DOTi ^Tighten @dots_two ^DoNothingPos); # سربر
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # ومچھا
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # ومچھا
-    Chain ([@isols @finas] @DOTi ^OpenSpaceBeforeKern ); # ومچھا
+    Chain ([@isols @finas] ^ClearUpperDots @DOTi ^OpenSpaceBeforeKern ); # ومچھا
     Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern ); # ومچھا
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one @dots_two];
 
@@ -307,7 +309,7 @@ Feature rlig {
     Substitute /FEi/ dda /FEm/ (sda) -> sda.two;
   };
   Routine OtherFixes2 {
-    Chain (@long_re ^ClearUpperDots);
+    Chain ([REf1 REf2 REf3] ^ClearUpperDots);
   };
 };
 
@@ -316,7 +318,7 @@ Feature kern {
   AtHeight 200-399 AtHeight200pos;
   AtHeight 400-499 AtHeight400pos;
   AtHeight 500-599 AtHeight500pos;
-  AtHeight 600-900 AtHeight600pos;
+  AtHeight 600-999 AtHeight600pos;
 };
 
 DefineClass @jim_medis = /m7/;

@@ -1,7 +1,7 @@
 {
 .appVersion = "3106";
 DisplayStrings = (
-"/KAFi15/TEm16",
+"/FEi3/BEmsd1",
 "/tdb.yb.collides"
 );
 classes = (
@@ -57044,11 +57044,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{337, -151}";
+position = "{301, -150}";
 },
 {
 name = entry;
-position = "{339, -58}";
+position = "{303, -57}";
 },
 {
 name = exit;
@@ -57056,7 +57056,7 @@ position = "{36, 0}";
 },
 {
 name = top;
-position = "{547, 318}";
+position = "{511, 319}";
 }
 );
 components = (
@@ -57067,11 +57067,11 @@ name = BEm1;
 {
 alignment = -1;
 name = _Sad.head;
-transform = "{1, 0, 0, 1, 197, 113}";
+transform = "{1, 0, 0, 1, 161, 114}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 674;
+width = 654;
 }
 );
 note = SADi2;
@@ -65501,7 +65501,7 @@ position = "{29, 0}";
 },
 {
 name = top;
-position = "{161, 194}";
+position = "{169, 194}";
 }
 );
 background = {
@@ -73504,7 +73504,7 @@ position = "{356, 0}";
 },
 {
 name = top;
-position = "{320, 30}";
+position = "{270, 40}";
 }
 );
 components = (

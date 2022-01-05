@@ -97,7 +97,7 @@ Feature kern {
     # Heh Alif
     Position HAYCi3 (haydb <yPlacement=+159>) ALIFf1;
     # Clear Alif Nun KL
-    Position /ALIF[uf]1/ (BEi8 <xAdvance=+50>) /sda|dda/ KAFm3;
+    Position /ALIF[uf]1/ (BEi8 <xAdvance=+100>) /sda|dda/;
 
     # Lam Khah
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
@@ -120,6 +120,7 @@ Feature kern {
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
     Position @alif_like (/TEi/ <xAdvance=+75>);
+
 
   };
 
@@ -158,7 +159,7 @@ Feature kern {
   } UseMarkFilteringSet [tdb.yb];
 
   Routine FeTeFinesse {
-    Position /FEi/ /TEm/ ( dda <xPlacement=-50 yPlacement=+50> ) ;
+    # Position /FEi/ /TEm/ ( dda <xPlacement=-50 yPlacement=+50> ) ;
     Position /FEi/ dda /TEm/ ( dda <xPlacement=-50  yPlacement=+50> ) ;
     # قوتو
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
