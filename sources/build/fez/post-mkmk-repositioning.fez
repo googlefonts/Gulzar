@@ -15,7 +15,7 @@ Routine FinaJimTopRight {
 };
 
 Routine FinaJimDownABit {
-  Position (/sdi|tdi/ <yPlacement=-80>);
+  Position (/sdi|tdi/ <yPlacement=-80 xPlacement=-50>);
 };
 
 Routine FinaQafDownRight {
@@ -64,7 +64,7 @@ Feature kern {
     Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
     Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
 
-    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    #Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials JIMf1 /tdi|sdi/ ^FinaJimDownABit);
     Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
     Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
 
@@ -72,12 +72,7 @@ Feature kern {
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials AINf1);
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight AINf1);
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight AINf1);
-    
     Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaQafDownRight QAFf1);
-
-    # Chain /(JIM|BE)[mi]/ (/tdb/ ^FinaQafUpLeft AINf1);
-
-
   } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
 
   Routine Various2 {
@@ -93,10 +88,10 @@ Feature kern {
     Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
 
     # Clear Alif Madda
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) HAMZA_ABOVE;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) [dda tda];
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) @all_above_marks;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) @below_dots @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) HAMZA_ABOVE;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) [dda tda];
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @below_dots @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> );
 
     # Heh Alif
@@ -113,9 +108,6 @@ Feature kern {
     # چنا 
     Position JIMi1 @nuktas /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
     Position JIMi1 /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
-
-    # عزت 
-    Position REf2 (sda <yPlacement=+200>) /[BT]E[iu]/;
 
     # ہا
     Position (haydb <yPlacement=+50>) ALIFf1;

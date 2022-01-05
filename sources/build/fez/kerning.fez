@@ -41,7 +41,6 @@ Feature kern {
 		Position @vao_like (space.urdu <xAdvance=50>) /AINi/;
 		Position @bigbowlfina (space.urdu <xAdvance=150>) /JIMi/ /[sdt]db/;
 		Position @bigbowlfina (space.urdu <xAdvance=100>) /AINi/;
-		Position [REf2 REf3] (space.urdu <xAdvance=150>) /JIMi/;
 		Position /NUN[uf]/ (space.urdu <xAdvance=100>) /HAYCi/;
 		Position [REf2 REf3] (ALIFu1 <xAdvance=200>) [BEi11 TEi11];
 	} UseMarkFilteringSet /[sdt]db/;
