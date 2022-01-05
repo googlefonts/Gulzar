@@ -2,7 +2,8 @@
 .appVersion = "3106";
 DisplayStrings = (
 "/FEi3/BEmsd1",
-"/tdb.yb.collides"
+"/tdb.yb.collides",
+"/BEmsd1"
 );
 classes = (
 {
@@ -65501,7 +65502,7 @@ position = "{29, 0}";
 },
 {
 name = top;
-position = "{169, 194}";
+position = "{169, 178}";
 }
 );
 background = {

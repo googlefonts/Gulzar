@@ -2,7 +2,7 @@ Include "shared.fez";
 
 LoadPlugin BariYe;
 
-DefineClass @bariye = [BARI_YEf1 JIMf1 AINf1 CH_YEf1];
+DefineClass @bariye = [BARI_YEf1 JIMf1 CH_YEf1];
 
 Feature kern {
   # This plugin deals with the "short bari ye" problem where a short sequence

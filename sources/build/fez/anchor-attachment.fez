@@ -158,6 +158,7 @@ Routine AtHeight400sub {
 Routine AtHeight500sub {
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
     Chain ([@dal_like @vao_like] BEi5 @dots ^DoNothing); #ندبجن
+    Chain ([@dal_like @vao_like] BEi3 @dots ^DropOne); #ندبجن
     Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); #ندبجن
     Chain ([@dal_like @vao_like] BEi24 @dots ^DoNothing); #ریس
     Chain (@dal_like BEi10 @dots ^DropTwo); # تقریظیں
@@ -188,7 +189,7 @@ Routine AtHeight0pos {
     Chain ([@bigbowlfina @dal_like @vao_like @alif_like] @JIMi ^TightenSlightly @dots); # ں جا
 
     Chain ([@isols @finas] @DOTi ^OpenSpaceBeforeKern @dots); # تقریظ
-    Chain ([@isols @finas] [@dots toeda] @DOTi ^OpenSpaceBeforeKern @dots); # بیظ
+    Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern @dots); # بیظ
 
 } IgnoreLigatures UseMarkFilteringSet [@dots toeda];
 
@@ -273,6 +274,7 @@ Routine AtHeight500pos {
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # ومچھا
     Chain ([@isols @finas] ^ClearUpperDots @DOTi ^OpenSpaceBeforeKern ); # ومچھا
     Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern ); # ومچھا
+    Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one @dots_two];
 
 Routine AtHeight600pos {
@@ -294,6 +296,7 @@ Routine AtHeight600pos {
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # جومُجھ
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # جومُجھ
     Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern ); # اچھّی
+    Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one toeda HAMZA_ABOVE];
 
 ## End of avoidance rules
