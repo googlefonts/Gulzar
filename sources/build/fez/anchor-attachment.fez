@@ -172,8 +172,6 @@ Routine AtHeight600sub {
     Chain ([@dal_like @vao_like] BEi3 @DOTm @dots ^DropOne); # وئیں
     Chain ([@dal_like @vao_like] BEi3 @dots ^DoNothing); # ریین
 
-    Chain ([@dal_like @vao_like] [@narrow_inits LAMi7] @DOTm @dots ^DropOne); # بدلیں / رفین
-
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
 } UseMarkFilteringSet [@dots];
 
@@ -194,12 +192,14 @@ Routine AtHeight0pos {
 
 Routine AtHeight200pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
-    Chain (@bigbowlfina BEisd1 ^OpenSmallSpaceBeforeKern [tdb ddb]); # میل پتہ
+    Chain (@bigbowlfina BEisd1 ^OpenMediumSpaceBeforeKern [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
     Chain (@bigbowlfina @BEi ^OpenTinySpaceBeforeKern [tdb ddb]); # ن پٹ
     Chain ([@dal_like @vao_like] [@BEi @JIMi HAYCi2 HAYCi13] @dots ^DropATinyBitMore @DOTm @dots_two); # وپید
+    Chain ([@dal_like @vao_like] [HAYCi2 HAYCi13] @dots_one ^DropATinyBitMore); # وہی
+    Chain ([@dal_like @vao_like] [HAYCi2 HAYCi13] ^OpenMediumSpaceBeforeKern @dots); # ر ہی
 
-    Chain ([@dal_like @vao_like] BEi9 ^OpenMediumSpaceBeforeKern tdb); # ر پم
+    Chain ([@dal_like @vao_like] [BEi9 BEi15] ^OpenMediumSpaceBeforeKern tdb); # ر پم / ر پو
     Chain ([@dal_like @vao_like] BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
     Chain ([@dal_like @vao_like] BEi5 ^OpenBigSpaceBeforeKern @dots); # ر یھ
     Chain ([@dal_like @vao_like] JIMi9 @dots_one ^DropATinyBitMore); # رجم
@@ -280,6 +280,7 @@ Routine AtHeight600pos {
     Chain ([@dal_like @vao_like] BEi6 ^OpenMediumSpaceBeforeKern @dots); # رچینی
     Chain ([@dal_like @vao_like] @DOTi ^OpenSmallSpaceBeforeKern @dots); # کو پہنچ
     Chain ([@dal_like @vao_like] @DOTi ^OpenTinySpaceBeforeKern @dots_one ^DropATinyBitMore); # دیتی
+    Chain ([@dal_like @vao_like] [LAMi7 @narrow_inits] ^OpenSpaceBeforeKern /JIMm/ @dots); # دیتی
     Chain (@long_re @DOTi ^DoNothingPos @dots); # میر پشیمل
 
     Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی

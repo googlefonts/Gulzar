@@ -142,7 +142,6 @@ Feature kern {
     Position TEm7 ([sda dda tda] <yPlacement=-70>) /JIMm/ /[KG]AF[mf]/; # مستحکم
     # Let's clear it
     Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m1[36]/;
-    Position BEi8 (/DAMMA/ <yPlacement=+50>) /(KAF|GAF)m3/;
     Position MADDA (/KAF|GAF/ <xAdvance=+70>);
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
 

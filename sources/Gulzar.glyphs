@@ -1,7 +1,7 @@
 {
 .appVersion = "3106";
 DisplayStrings = (
-"/ddb.yb/BARI_YEf1",
+"/KAFi15/TEm16",
 "/tdb.yb.collides"
 );
 classes = (
@@ -37733,7 +37733,7 @@ position = "{49, 0}";
 },
 {
 name = top;
-position = "{129, 275}";
+position = "{139, 275}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -59571,19 +59571,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{334, -44}";
+position = "{302, -44}";
 },
 {
 name = entry;
-position = "{518, 195}";
+position = "{486, 195}";
 },
 {
 name = exit;
-position = "{32, 0}";
+position = "{0, 0}";
 },
 {
 name = top;
-position = "{376, 148}";
+position = "{344, 148}";
 }
 );
 components = (
@@ -59593,7 +59593,7 @@ name = BEm2;
 {
 alignment = -1;
 name = _Sinm.teeth;
-transform = "{1, 0, 0, 1, 182, -15}";
+transform = "{1, 0, 0, 1, 150, -15}";
 }
 );
 hints = (
@@ -59642,7 +59642,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 518;
+width = 486;
 }
 );
 note = SINm2;
@@ -73496,7 +73496,7 @@ position = "{326, -177}";
 },
 {
 name = entry;
-position = "{423, 15}";
+position = "{421, 15}";
 },
 {
 name = exit;
@@ -73504,7 +73504,7 @@ position = "{356, 0}";
 },
 {
 name = top;
-position = "{327, 30}";
+position = "{320, 30}";
 }
 );
 components = (
