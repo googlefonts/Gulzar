@@ -248,13 +248,17 @@ Routine AtHeight400pos {
 
     Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi @dots_one ^DropATinyBitMore); # وچھیا
     Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi ^OpenTinySpaceBeforeKern @dots); # و چھیا
+    Chain ([@dal_like @vao_like] ^ClearUpperDots @BEi ^OpenSmallSpaceBeforeKern @DOTm  @dots); # اور نیو
+
     Chain (@alif_like @JIMi @dots ^DoNothingPos); # دجبل
 
     Chain ([@dal_like @vao_like] ^ClearUpperDots /HAYCi/ ^OpenTinySpaceBeforeKern @dots); # وہبل
     Chain (@alif_like /HAYCi/ ^DoNothingPos); # اہبل
 
-    Chain ([@isols @finas] @DOTi ^OpenSpaceBeforeKern @dots); # مینو پھر
-    Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern @dots); # پ پہلو
+    Chain ([@isols @finas] ^ClearUpperDots @DOTi ^OpenSpaceBeforeKern @dots); # مینو پھر
+    Chain ([@isols @finas] ^ClearUpperDots @dots @DOTi ^OpenSpaceBeforeKern @dots); # پ پہلو
+    Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
+
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one @dots_two];
 
 Routine AtHeight500pos {
