@@ -1,14 +1,28 @@
+# Bari ye handling - we want dots on letters "covered" by a bari ye
+# sequence (e.g. the BE nukta of بکتے) to be placed underneath the
+# "tail". We do this by replacing the dots with alternate glyphs
+# which have no anchors, meaning they will not be subject to mark-to-base
+# positioning and so will stay where they are positioned in the
+# design file - underneath the baseline, and hence underneath the
+# bari ye tail.
 Include "shared.fez";
-LoadPlugin qalamTools.YBFix;
-LoadPlugin qalamTools.QuantizeAnchors;
-LoadAnchors;
+LoadPlugin BariYe;
 
 Feature rlig {
-  # This command evaluates all sequences of @behs followed by a @bariye and
-  # replaces dots under the tail with "dropped" versions (alternate glyphs
-  # with no anchor positioning).
-  LoadPlugin BariYe;
+  # This command enumerates all sequences of glyphs followed by a @bariye,
+  # and replaces dots under the tail with the `.yb` versions.
+  #
+  # It does this by determining the length of the bari ye "tail", grouping
+  # glyphs into classes based on their "run" (exit-anchor to entry-anchor
+  # distance), and then enumerating all combinations of classes which
+  # have a total run less than the bari ye tail.
+  #
+  # The generated substitutions will have a MarkFilteringSet flag which
+  # only causes them to substitute the marks given in the list.
+  # Each command matches a set of bases with either zero or one marks
+  # following each base. First we drop the nukta.
   BYMoveDots AlwaysDrop [@below_nuktas haydb haydb.yb];
-  # Now do it again but this time drop kasras
+  # ..and then we do it again but this time drop kasras. We handle it
+  # separately in case we have a sequence like بِے with both nukta and kasra.
   BYMoveDots AlwaysDrop [KASRA KASRA.yb];
 };

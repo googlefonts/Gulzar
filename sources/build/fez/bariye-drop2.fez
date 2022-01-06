@@ -3,68 +3,154 @@ LoadPlugin qalamTools.YBFix;
 LoadPlugin qalamTools.QuantizeAnchors;
 LoadAnchors;
 
+# First, we continue to substitute dots under "bari-ye" with `.yb` forms.
+#
+# I say "bari-ye" in quotes because there are some situations which are
+# "bari-ye-like", in that the final glyph sweeps back to interfere with
+# the space underneath the glyph to its right - in particular, final
+# choti ye sequences like پی.
+#
+# Final jim and ain also have this property, and we handle those in `bariye-drop.fez`
+# as they are part of the `@bari_ye` glyph class. Choti ye is actually
+# a simpler case, so rather than go through the `BariYe` plugin and
+# enumerate all potential sequences, we just manually handle the few cases
+# which require `.yb` substitutions:
 Feature rlig {
   Routine ManualDrop1 {
+    # peh, ye, beh, jim, cheh immediately preceding final choti ye.
     Substitute /(JIM)[mi]|(BE)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
 
+    # peh and ye, a narrow consonant and choti ye.
     Substitute (tdb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> tdb.yb;
     Substitute (ddb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> ddb.yb;
   } UseMarkFilteringSet [sdb tdb ddb];
+
   Routine ManualDrop2 {
+    # And similarly, we handle the kasra separately.
     Substitute /(JIM|BE)[mi]/ (KASRA) /CH_YEf/ -> KASRA.yb;
   } UseMarkFilteringSet KASRA;
 };
 
+# The next task is to avoid collisions between `.yb` dots we have
+# just substituted. In the main rasm, we perform dot collision
+# by adjusting the vertical position of the glyphs. But in the
+# manuscript tradition, it seems like the usual way to handle
+# multiple dots under bari ye is to spread them out horizontally.
+#
+# So, we're going to do that. We will spread out everything that
+# ends in `.yb`. However, we might have a sequence like this:
+#     بِپے : `BEi sdb.yb KASRA.yb BEm tdb.yb BARI_YEf1`.
+#
+# In that case, the three marks should not be spread out independently.
+# The `KASRA` needs to stay under the `sdb`. To denote KASRA glyphs
+# which move together with the preceding mark, we will add `.attached`
+# to their name.
+#
 DefineClass @base_ybs = /\.yb$/;
-DefineClass @unattached_ybs = /\.yb(.collides)?$/;
-DefineClass @colliding_ybs = /\.yb.collides$/;
 
 Feature rlig {
   Routine RenameAttachedKasras {
     Substitute @base_ybs (KASRA.yb) -> KASRA.yb.attached;
   } UseMarkFilteringSet @base_ybs;
 
-  # This will mark the dots which collide. Next we'll resolve them.
+  # This plugin (implemented in `qalamTools/YBFix.py`) enumerates
+  # all sequences of glyphs and marks underneath the bari ye tail,
+  # and checks if any of the marks will collide when placed in
+  # their normal positions underneath the base. If there is a collision,
+  # the rightmost mark is substituted with a glyph with `.collides`
+  # at the end; e.g. in
+  #   چپے - `JIMi2 tdb.yb BEm11 tdb.yb BARI_YEf1`
+  # the cheh dots collide with the pe dots, and so this substitutes
+  # them for
+  #   چپے - `JIMi2 tdb.yb.collides BEm11 tdb.yb BARI_YEf1`
   DetectAndSwapYB;
 
-  # I don't know why this collision isn't automatically detected.
+  # Some collisons seem not to be automatically detected. I am not
+  # sure why not. Detect them manually.
   Routine ManualFixupBBY {
     Substitute BEisd1 sdb.yb BEm7 (sdb.yb) -> sdb.yb.collides;
     Substitute HAYCm7 haydb.yb JIMm7 (sdb.yb) -> sdb.yb.collides;
   } UseMarkFilteringSet @base_ybs;
 
+  # When we spread out the `.yb` glyphs to avoid collisions, we
+  # will be using an IgnoreBases flag to make the substitutions much
+  # simpler. The problem with an IgnoreBases rule is that you need
+  # to know where it ends - otherwise the shaping engine might end up
+  # "seeing" sequences of marks like پےپے and dealing with the marks
+  # as though they were part of the same sequence! So we add a utility
+  # mark glyph `endOfBariYe` just before the bari ye so we can match
+  # on that to find the end of our bari ye sequence.
   Routine MarkEndOfBY {
     Substitute BARI_YEf1 -> endOfBariYe $1;
     };
 };
 
-# But first let's place them under their base glyphs
+# We substituted the YB marks with *unattached* marks, which gets them
+# in the right position *vertically* (underneath the baseline), but
+# puts them in the wrong position *horizontally*. (It would be very
+# helpful if we could have mark-to-base rules which only applied in
+# one dimension; but we can't.)
+#
+# Really, we want them to appear under their "normal" positions - i.e.
+# with their X position determined by the `bottom` anchor of their base
+# glyphs. Another FEZ plugin, then: `FixYBPositions` looks for `.yb`
+# glyphs and moves them to the correct position based on the anchors of
+# their base glyphs. (Note that `DetectAndSwapYB` already takes the
+# anchors into account when it detects collisions; in effect, it does
+# this same positioning, then checks for collisions, but it does not
+# produce the positioning rules to move the mark glyphs around. This
+# plugin does produce the positioning rules.)
 QuantizeAnchors 10;
- 
+
 Feature mark {
   Routine FixYBPositions {
     FixYBPositions;
   };
 };
 
+# Finally, we deal with the collisions. We look at all situations of
+# up to four YB marks, at least one of which collides, and we spread
+# then out so that (hopefully) they no longer collide. The positioning
+# rules below are based on trial and error (a test file was prepared
+# with every combination of dotted and undotted BE/JIM) and give the
+# best result I can find. You may need to adjust these rules for
+# your own font.
+#
+# We use the `endOfBariYe` glyph we substituted earlier to count the
+# number of marks we need to rearrange, and then dispatch to one of
+# the three positioning routines. (One to handle four dots, one to handle
+# three dots, and one to handle two dots. Obviously if there are less
+# than two dots, there can be no collisions...)
+#
+# We ignore any attached KASRAs because they will be moved around by
+# the dot that they are attached to; we just look at `.yb` and
+# `.yb.collides` glyphs.
+DefineClass @unattached_ybs = /\.yb(.collides)?$/;
+DefineClass @colliding_ybs = /\.yb.collides$/;
+
 Routine FixFourYBs {
+  # Second dot (and potentially others) collides.
   Position (@unattached_ybs <xPlacement=100> @colliding_ybs <xPlacement=-50>  @colliding_ybs <xPlacement=-200> @colliding_ybs <xPlacement=-300>);
   Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-110>  @colliding_ybs <xPlacement=-185> @unattached_ybs <xPlacement=-275>);
   Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-75>  @unattached_ybs <xPlacement=-155> @colliding_ybs <xPlacement=-275>);
   Position (@unattached_ybs <xPlacement=50> @colliding_ybs <xPlacement=-50>  @unattached_ybs <xPlacement=-125> @unattached_ybs <xPlacement=-250>);
 
-
+  # Second dot does not collides, third dot (and fourth) collides.
   Position (@unattached_ybs <xPlacement=0> @unattached_ybs <xPlacement=-12>  @colliding_ybs <xPlacement=-125> @colliding_ybs <xPlacement=-250>);
   Position (@unattached_ybs <xPlacement=0> @unattached_ybs <xPlacement=-12>  @colliding_ybs <xPlacement=-125> @unattached_ybs <xPlacement=-150>);
 
+  # First three dots do not collides, fourth does.
   Position (@unattached_ybs <xPlacement=0> @unattached_ybs <xPlacement=-12>  @unattached_ybs <xPlacement=-25> @colliding_ybs <xPlacement=-125>);
 } IgnoreBases UseMarkFilteringSet @unattached_ybs;
 
 
 Routine FixThreeYBs {
+  # Second dot (and potentially third) collides.
   Position (@unattached_ybs <xPlacement=60> @colliding_ybs <xPlacement=-150>  @colliding_ybs <xPlacement=-355>);
   Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  sdb.yb <xPlacement=-265>);
   Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  @unattached_ybs <xPlacement=-355>);
+
+  # Second dot does not collide, third dot collides.
   Position (@unattached_ybs <xPlacement=30> @unattached_ybs <xPlacement=15>  @colliding_ybs <xPlacement=-170>);
 } IgnoreBases UseMarkFilteringSet @unattached_ybs;
 
@@ -76,7 +162,6 @@ Feature mark {
   Routine CountYBMarksAndDispatch {
     Chain (@unattached_ybs ^FixFourYBs @unattached_ybs @unattached_ybs @unattached_ybs endOfBariYe);
     Chain (@unattached_ybs ^FixThreeYBs @unattached_ybs @unattached_ybs endOfBariYe);
-    Chain (@unattached_ybs ^FixTwoYBs @unattached_ybs endOfBariYe);
     Chain (@unattached_ybs ^FixTwoYBs @unattached_ybs endOfBariYe);
   } IgnoreBases UseMarkFilteringSet [@unattached_ybs endOfBariYe];
 };

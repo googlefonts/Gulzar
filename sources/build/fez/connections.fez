@@ -1,7 +1,13 @@
+# We are continuing to get the glyphs into the right forms; this time
+# the focus is on the Nastaliq glyph selection - i.e. finding the right
+# form for a glyph based on the glyph to its left.
+
 Feature rlig {
-  Routine LamAlef {
+  # Standard ligatures
+  Routine StandardLigatures {
     Substitute LAMi1 ALIFf1 -> LAM_ALIFu1;
     Substitute LAMm1 ALIFf1 -> LAM_ALIFf1;
+    Substitute ALIFu1 (LAMi1 LAMm1 HAYCf1) -> ALLAH;
   } IgnoreMarks;
 
   # Override with other final forms
@@ -11,7 +17,6 @@ Feature rlig {
     # medial form to in their initial form.
     Substitute [BEm1 TEm1] ( REf1 ) -> REf3;
     Substitute HAYCm1 ( REf1 ) -> REf3;
-    #Substitute GAFm1 ( REf1 ) -> REf4;
     Substitute AINi1 ( REf1 ) -> REf3;
     Substitute JIMi1 ( REf1 ) -> REf1;
     Substitute JIMm1 ( REf1 ) -> REf2;
@@ -19,23 +24,17 @@ Feature rlig {
     Substitute [BEi1 TEi1] ( TEf1 ) -> BEf2;
   } IgnoreMarks;
 
-  Routine DivineName {
-    Substitute ALIFu1 (LAMi1 LAMm1 HAYCf1) -> ALLAH;
-  } IgnoreMarks;
-
   # The Glyphs file will contain a set of information about selecting
   # connecting glyphs (what the Qalmi patent calls the Generic Selection
   # Table). Code in the Makefile will extract this information from the
   # Glyphs file and into a CSV file (rules.csv). The custom NastaliqConnections
   # plugin reads this CSV file and creates a set of reverse chaining
-  # single substitution rules. It also defines the glyph class
-  # @reachable_glyphs, which contains all the glyphs which are actually
-  # *used* by the rules. (So if you create a JIMm12 but no connection
-  # rule ever substitutes it in, we don't need to care about it.)
+  # single substitution rules.
   LoadPlugin qalamTools.NastaliqConnections;
   NastaliqConnections "sources/build/rules.csv";
 };
 
+# Swash glyphs
 Feature swsh {
   LoadPlugin qalamTools.SuffixingSubstitute;
   Routine Swash {

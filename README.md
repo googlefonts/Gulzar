@@ -2,6 +2,10 @@
 
 Gulzar is a Nastaliq font for Urdu text with a typographic, rather than calligraphic feel.
 
+## Note to other font designers
+
+We hope that Gulzar will serve as a reference and model for other Nastaliq font designs, in particular in terms of its engineering and shaping rules. If you are looking to design a Nastaliq font, you will find some documentation on the Gulzar system and how it works in [engineering.md](engineering.md).
+
 ## Set up instructions
 
 Only needs to be done once:

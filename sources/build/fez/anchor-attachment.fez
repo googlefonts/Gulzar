@@ -1,54 +1,125 @@
-LoadAnchors;
+# Okay. This is going to be the trickiest part of the exercise:
+# mainly dot collision avoidance. We have put collision avoidance
+# in a file together with mark/mkmk positioning (even though it's
+# not ideal) because when the FEZ plugin is looking for collisions,
+# it needs to use the mark positioning rules to determine where
+# the dots in each sequence start off.
+
+# So we have a few preliminary things to do related to attachment
+# positioning, and then we'll get into the dot collision avoidance code.
+
+# First, load all the FEZ plugins we will use. They are all found in
+# `qalamTools/`.
 LoadPlugin qalamTools.CopyAnchors;
+LoadPlugin qalamTools.QuantizeAnchors;
+LoadPlugin qalamTools.DotAvoidance;
+LoadPlugin qalamTools.NastaliqKerning;
+
+# This one copies the anchors into ligature marks.
+LoadAnchors;
 CopyAnchors SHADDA SHADDA_DAMMA;
 CopyAnchors SHADDA SHADDA_KASRA;
 CopyAnchors SHADDA SHADDA_FATHA;
 CopyAnchors SHADDA SHADDA_LONG_A;
 
-LoadPlugin qalamTools.QuantizeAnchors;
-LoadPlugin qalamTools.DotAvoidance;
-LoadPlugin qalamTools.NastaliqKerning;
-
+# To avoid collisions, we move dots up and down to alternate positions.
+# e.g. `sdb` might move to `sdb.one` (one "position" lower) or `sdb.two`
+# (two positions lower). Here we generate new anchors for the
+# `sdb.one`, `sdb.two` etc. glyphs: `sdb.one` will be 220 units below
+# `sdb`, `dda.two` will be 440 units above `dda`, etc.
+# The correct value is best found with trial and error, but will be
+# slightly more than a nukta height; obviously it should be as small
+# as possible to stop the positions being too spaced out, but large
+# enough to actually avoid collisions.
 AddSpacedAnchors 220;
 
 Include "shared.fez";
 
-
+# Standard cursive attachment rule.
 Feature curs {
   Routine CursiveAttachment { Attach &entry &exit cursive; } IgnoreMarks RightToLeft;
 };
 
+# Now we will do mark attachment, but first we will quantize the anchors
+# so that the positions can be shared.
 QuantizeAnchors 10;
 
 Feature mark {
   Routine DoMarkBase {
     Attach &top &_top bases;
-    Attach &top.one &_top.one bases;
-    Attach &top.two &_top.two bases;
     Attach &inside &_inside bases;
     Attach &bottom &_bottom bases;
+    Attach &comma &_comma bases;
+
+    # These anchors are not in the Glyphs source but were
+    #created by the `AddSpacedAnchors` rule above.
+    Attach &top.one &_top.one bases;
+    Attach &top.two &_top.two bases;
     Attach &bottom.one &_bottom.one bases;
     Attach &bottom.two &_bottom.two bases;
-    Attach &comma &_comma bases;
     Attach &comma.one &_comma.one bases;
   };
+  # Long re glyphs have their own toeda anchor, so put it there.
   Routine ReattachToeda {
     Attach &toeda &_toeda [REf2 REf3];
   };
 };
 
+# This part of the shaping rules deals with the relationship between
+# initial characters (and particularly their dots) and the final
+# characters of the previous "word" (note that "word" here means
+# both separate words separated by a space character, and also runs of
+# connected glyphs - e.g. "تاریک" is three "words": تا, ر, یک).
+#
+# The operations in this section will encompass both kerning
+# (adjusting the amount of space between the end of one word and the
+# start of the next) and dot avoidance (preventing dots from hitting
+# bases).
+#
+# For example, in the word "ترین", the automatic kerning will
+# have brought the RE and BE glyphs close together into a nice tight
+# word shape, but the automatic kerning code ignores dots. Because the
+# RE and BE are close together, the `ddb` dots in their natural placement
+# would clash into the RE. The code below explains how best to either
+# reposition the dots or re-kern the word image to avoid this clash.
+# In this case, we want to drop the dots of the ی below the ر to keep
+# the word image tight.
+#
+# Naturally, the rules for avoiding clashes are dependent not just on
+# the two characters (the final consonant of one "word" and the initial
+# consonant of the next "word") but also on two more factors: whether
+# there is a space between the end of the "word" and the start of the
+# next "word", and the *height* of the initial consonant.
+# (The height of the final consonant will always be zero, because Urdu
+# "words" have their left-most glyph placed on the baseline.) For
+# example, in the case of "ترین" we needed to drop the BE dots to avoid
+# the clash. But in a word like "تقریظ", the BE is closer to the baseline, the
+# kerning is less and the RE does not end up "under" the BE, so the
+# dots do not need to be moved. So what we are going to do is
+# determine the height of a sequence, and then dispatch to a set of
+# rules which handle the adjustments at that height. You will see this
+# later. Each of these rules has a GSUB and a GPOS counterpart:
+# substitutions will drop dots by moving them to the `.one` and
+# `.two` forms; positioning rules will move them more arbitrarily, and
+# also respace the word.
 
+# First, though, we define a set of utility routines that we can
+# call to move dots around and respace text.
+
+# Drop dots one position, or replace `.yb` dots with `.one` dots.
 Routine DropOne {
   Substitute [sdb ddb tdb haydb] -> $1.one;
   Substitute [sdb.yb ddb.yb tdb.yb haydb.yb] -> $1~yb.one;
 };
 
+# Drop dots two positions. (There is no haydb.two, because it looks silly.)
 Routine DropTwo {
   Substitute [sdb ddb tdb] -> $1.two;
-  # Substitute [sdb.yb ddb.yb tdb.yb ] -> $1~yb.two;
 };
 
-# Positioning rules happen *after* dot avoidance, so need to match .one and .two forms
+# Now some repositioning rules. This increases the advance width
+# of the initial consonant "quite a bit", increasing the space between
+# the start of one word and the end of the previous one.
 Routine OpenSpaceBeforeKern {
   Position (@inits <xAdvance=+300>) /tdb|haydb/;
   Position (@inits <xAdvance=+200>) /sdb|ddb/;
@@ -56,6 +127,7 @@ Routine OpenSpaceBeforeKern {
   Position toeda (@inits <xAdvance=+200>);
 } IgnoreLigatures UseMarkFilteringSet /db|toeda/;
 
+# The following routines similarly adjust the spacing to various degrees.
 Routine OpenMediumSpaceBeforeKern {
   Position (@inits <xAdvance=+280>) /tdb|haydb/;
   Position (@inits <xAdvance=+280>) @medis;
@@ -83,15 +155,27 @@ Routine OpenTinySpaceBeforeKern {
   Position (@inits <xAdvance=+100>) /db|[mf](sd)?\d+/;
 }  UseMarkFilteringSet /db/;
 
-Routine DoNothing    {Substitute JIMi1 -> JIMi1; };
-Routine DoNothingPos {Position (haydb.yb <xPlacement=0>); };
+# Sometimes the kerning isn't as dramatic as it should be, and you
+# want to tighten it a bit more to ensure you have a good word image.
 Routine Tighten  { Position (@inits <xAdvance=-150>); };
 Routine TightenSlightly  { Position (@inits <xAdvance=-75>); };
+
+# And sometimes the positioning is fine, but you need to fire a rule
+# to stop more general rules from firing. Here are a couple of
+# "do nothing" routines you can call (one in the GSUB part of
+# the rule and one in the GPOS part) to terminate the selection early.
+Routine DoNothing    {Substitute JIMi1 -> JIMi1; };
+Routine DoNothingPos {Position (haydb.yb <xPlacement=0>); };
+
+# These are a bit more "fancy" rules to adjust dots in very particular
+# situations.
 Routine Raise    { Position ([sdb tdb ddb] <yPlacement=+100>); };
 Routine TopRight {Position ([sdb tdb ddb] <yPlacement=+250 xPlacement=+150>); };
 Routine BottomLeft {Position ([sdb tdb ddb] <yPlacement=-220 xPlacement=-250>); };
-Routine LeftABit {Position ([sdb tdb ddb] <xPlacement=-100>); };
 
+# If you don't want to move a dot a whole position, but you need to
+# move it out of the way - or you've got to `tdb.two` and you *still*
+# need to move the dots - you can call one of these routines.
 Routine DropATinyBitMore {
   Position ([tdb ddb sdb] <yPlacement=-75>);
   Position ([sdb.one tdb.one ddb.one tdb.yb sdb.yb ddb.yb haydb.one] <yPlacement=-150>);
@@ -103,19 +187,55 @@ Routine DropALotMore {
   Position ([tdb.two sdb.two] <yPlacement=-270>);
 };
 
+# Finally, we have to handle the fact that the right-hand glyph itself
+# might have a mark *above* it! We tuck the ر underneath the BE in رپر
+# and it looks lovely, but then along comes ڑپر. When we are evaluating
+# the main final-to-initial rules, we need to ignore above marks (otherwise)
+# any toeda etc. on the initial glyph will stop the rule from matching,
+# and we would have to duplicate every rule to match with/without the
+# toeda!) so we can't handle ڑ in there.
+#
+# Instead, we have a separate lookup with different mark filtering rules
+# and use that to add more space when the final glyph has an above mark.
 Routine ClearUpperDots {
   Chain ([@isols @finas] [tda sda toeda HAMZA_ABOVE] @inits ^OpenSmallSpaceBeforeKern);
 } IgnoreLigatures;
 
+# This just saves a lot of typing... But be careful to remember that
+# @dots just means the dots in their "natural" position.
 DefineClass @dots = [sdb ddb tdb haydb];
 DefineClass @dots_one = [sdb.one ddb.one tdb.one haydb.one];
 DefineClass @dots_two = [sdb.two ddb.two tdb.two];
 
-# The real stuff starts now.
+# OK, here we go with the avoidance/spacing rules. To make the problem
+# more tractable, we split the final glyphs into a few classes: dal-like
+# glyphs (dal, isolated RE and "short" final RE), vao-like glyphs,
+# kaf-like glyphs, mim-like glyphs, alif-like glyphs, long RE glyphs,
+# and "big bowl" finals (LAM, JIM, NUN, etc). The definitions can be
+# found in shared.fez.
 
-Routine AtHeight0sub {
-    Substitute JIMi1 -> JIMi1;
-} UseMarkFilteringSet [@dots];
+# First, the substitution rules, which are responsible for dropping
+# the dots of the initial glyph by substitution. In this case, we want
+# to distinguish between words separated by a space glyph and separate
+# portions of the same word image. To aid readability, dots following
+# a space glyph should never be dropped. For example, in the sequence
+# "کو برمجہ", the dot of the BE should stay in its normal position to
+# help the reader know that the BE is the start of a word; but in
+# "اکتوبر", the sequence "وبر" also appears at the same height but dot
+# should drop to accommodate the VAO more tightly. However, in the
+# positioning rules, it turns out that we want to ignore spaces and just
+# consider the end of word / start of word glyphs. We do this by adding
+# the `IgnoreLigatures` flag to positioning rules - relying on the fact
+# that we have defined `space.urdu` as a "ligature" for this very purpose.
+
+# Anyway, let's go with substitution rules. These are the most
+# font-specific part of the code. I recommend you start by ripping out
+# all of these rules, and then testing a systematic set of words for
+# each of the final groups to see what adjustments are needed. e.g. begin
+# with دبہ, ربہ, ابہ, جمبہ, دبہ, ربہ, ابہ, جمبہ, دجہ, رجہ, اجہ, جمجہ,
+# and so on. And then add exceptions for specific glyph combinations
+# as needed. It's also very useful to add a comment with a sequence
+# which shows why the rule is needed.
 
 Routine AtHeight100sub {
     # @dal_like -> pos
@@ -123,7 +243,6 @@ Routine AtHeight100sub {
     # @alif_like -> nothing
     # @mim_like -> nothing
     Chain (@long_re @DOTi @dots ^DropOne); # بغیریہ / جرجا
-
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight200sub {
@@ -137,7 +256,6 @@ Routine AtHeight200sub {
     Chain (@long_re @DOTi @DOTm @dots ^DropOne); # پھرتیر
     Chain (@long_re [BEi5 JIMi24] @dots ^DropOne); # متجرپھ / مرجسا
     Chain (@long_re [@BEi @JIMi] @dots ^DropOne); # جھرپو
-
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight400sub {
@@ -150,9 +268,6 @@ Routine AtHeight400sub {
     Chain (@long_re BEi4 @dots ^DropOne); # طریقو
     Chain (@long_re @BEi @dots ^DropTwo @DOTm @dots); # جرببل جربپل
     Chain (@long_re @BEi @DOTm @dots ^DropOne); # جرںبل
-
-
-
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight500sub {
@@ -167,8 +282,6 @@ Routine AtHeight500sub {
     Chain (@long_re BEi16 @dots ^DropTwo); # سربر
 } UseMarkFilteringSet [@dots];
 
-DefineClass @narrow_inits = @inits & (width < 300);
-
 Routine AtHeight600sub {
     Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); # ندبجن
     Chain ([@dal_like @vao_like] BEi3 @DOTm @dots ^DropOne); # وئیں
@@ -177,6 +290,9 @@ Routine AtHeight600sub {
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
 } UseMarkFilteringSet [@dots];
 
+# And now the positioning rules, again remembering that we need to
+# IgnoreLigatures to avoid having to fiddle with the space glyph between
+# final and initial.
 Routine AtHeight0pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
     Chain (@dal_like BEi3 ^TightenSlightly @dots ^DropATinyBitMore); # دبہ دیہ دپہ
@@ -277,6 +393,8 @@ Routine AtHeight500pos {
     Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one @dots_two];
 
+DefineClass @narrow_inits = @inits & (width < 300);
+
 Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
     Chain (@alif_like @DOTi ^OpenBigSpaceBeforeKern [ddb tdb]); # اچھّی
@@ -299,27 +417,61 @@ Routine AtHeight600pos {
     Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one toeda HAMZA_ABOVE];
 
-## End of avoidance rules
+# OK, phew. That was it!
+
+# Now we need to actually call those rules for sequences of the given
+# height.
 Feature rlig {
-  AtHeight 0-99 AtHeight0sub;
+  # AtHeight 0-99 AtHeight0sub;
   AtHeight 100-199 AtHeight100sub;
   AtHeight 200-399 AtHeight200sub;
   AtHeight 400-499 AtHeight400sub;
   AtHeight 500-649 AtHeight500sub;
   AtHeight 650-900 AtHeight600sub;
+};
+
+# Believe it or not, the following three lines handle all the rest
+# of the dot avoidance problems. In particular, they deal with the
+# situation of consecutive dots in a sequence (e.g. تقر).
+#
+# The DotAvoidance plugin, which we loaded right at the top,
+# enumerates every single sequence of repeated dotted glyphs, and
+# works out whether or not they collide, substituting them if they
+# do. There is a slight wrinkle here: which dot do you substitute?
+# For dots below (پپر) the situation is simple: the left-most dot
+# should be dropped, so that dots rise up from left to right.
+# For dots above, the dots should also rise up from left to right,
+# meaning that the *rightmost* glyph should be *raised*. The best
+# way to do this is with a reverse chaining contextual substitution
+# (GSUB8) because this works from right to left across the glyph
+# sequence. However, the way GSUB8 lookups are stored is very
+# inefficient, and if you try putting all the dot avoidance rules
+# into a GSUB8 lookup the font won't build. So we have to put as
+# many as we can into GSUB8, and the ones which don't fit are
+# placed into a GSUB6 substitution which unfortunately raises the
+# *leftmost* dot.
+Feature rlig {
   DetectAndSwap top reverse;
   DetectAndSwap bottom;
   DetectAndSwap top;
+};
+
+Feature rlig {
+  # This deals with some obnoxious situations like فققق
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
     Substitute /FEi/ dda /FEm/ (sda) -> sda.two;
   };
+  # And another round of making sure that ڑ doesn't bang into what
+  # follows.
   Routine OtherFixes2 {
     Chain ([REf1 REf2 REf3] ^ClearUpperDots);
   };
 };
 
+# Now we dispatch the height-specific positioning rules, just like
+# we dispatched the substitution rules above.
 Feature kern {
   AtHeight 0-199 AtHeight0pos;
   AtHeight 200-399 AtHeight200pos;
@@ -328,26 +480,7 @@ Feature kern {
   AtHeight 600-999 AtHeight600pos;
 };
 
-DefineClass @jim_medis = /m7/;
-DefineClass @ain_medis = /m2/;
-
-Feature mkmk {
-  Routine LiftJimYBDotsMore {
-    Position  /.yb$/ @jim_medis ( /.yb$/ <300 +650 0 0> ) [JIMf1];
-    Position ( /.yb$/ <300 +650 0 0> ) /.yb$/ [JIMf1];
-    Position ( /.yb$/ <300 +650 0 0> ) [JIMf1];
-    Position  /.yb$/ @ain_medis ( /.yb$/ <40 +450 0 0> ) [AINf1];
-    Position ( /.yb$/ <40 +450 0 0> ) /.yb$/ [AINf1];
-    Position ( /.yb$/ <40 +450 0 0> ) [AINf1];
-  } UseMarkFilteringSet /b.yb$/;
-
-  Routine DropJimYBYBDots {
-    Position  ( sdb.yb <yPlacement=-80> ) @jim_medis /.yb$/ [JIMf1];
-    Position  ( /db.yb$/ <yPlacement=-180> ) @jim_medis /.yb$/ [JIMf1];
-  } UseMarkFilteringSet /b.yb$/;
-
-};
-
+# And finally, we do the mark-to-mark attachment rules
 Feature mkmk {
   Routine DoMarkAttachment {
     Attach &top &_top marks;
