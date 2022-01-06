@@ -3,7 +3,7 @@
 DisplayStrings = (
 "/FEi3/BEmsd1",
 "/tdb.yb.collides",
-"/BEmsd1"
+"/SINi16"
 );
 classes = (
 {
@@ -58754,7 +58754,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{359, -36}";
+position = "{327, -36}";
 },
 {
 name = exit;
@@ -58762,14 +58762,14 @@ position = "{32, 0}";
 },
 {
 name = top;
-position = "{376, 151}";
+position = "{344, 151}";
 }
 );
 components = (
 {
 alignment = -1;
 name = _Sin.teeth;
-transform = "{1, 0, 0, 1, 182, -15}";
+transform = "{1, 0, 0, 1, 150, -15}";
 },
 {
 name = BEm2;

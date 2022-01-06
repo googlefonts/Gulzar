@@ -1,14 +1,21 @@
 LoadPlugin qalamTools.NastaliqKerning;
 Include "shared.fez";
 
-DefineClass @bariye = /BARI_YE/;
-
+# We change the space.urdu category to "ligature", so that we can
+# kern across spaces by using the IgnoreLigatures flag.
 LoadPlugin FontEngineering;
 SetCategory space.urdu ligature;
 
-
 Feature kern {
+	# This runs the autokerner, and brings together initial glyphs
+	# and final glyphs to within either 100 units of one another or
+	# to a maximum of 70% of the final glyph's width "under" the
+	# final glyph, whichever is the smallest.
+	# We don't kern bari-yes, and we have to include BARI_YEu1 in that.
+	DefineClass @bariye = /BARI_YE/;
 	NastaliqKerning 100 70%;
+
+	# The autokerner produces a number of positions at 
 
 	Routine FixShortKern {
 		Position [REf2 REf3] ([BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+400>); # مربی / عربی
@@ -23,13 +30,6 @@ Feature kern {
 
 
 	} IgnoreLigatures IgnoreMarks;
-
-	# Routine FixShortKern2 {
-	# 	Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+100>) /CH_YEf|JIM[fm]|AINf|MIMf/;
-	# 	Position /ALIF/ (/BEi1$|BEisd1$/ <xAdvance=+120>) /[sdt]db/;
-	# 	# Position /ALIF/ (/[KG]AFi|LAMi|TEi|BEi|FEi|MIMi/ <xAdvance=+60>);
-	# 	Position /(DAL|RE|VAO|ALIF)[uf]/ (/[KG]AFi|LAMi/ <xAdvance=+300>) /(JIM|BE)m/ /[sdt]db/;
-	# } IgnoreLigatures UseMarkFilteringSet /[sdt]db/;
 
 	Routine FixShortKern3 {
 		Position /ALIF/ (/HAYCi/ <xAdvance=+100>) /haydb/;

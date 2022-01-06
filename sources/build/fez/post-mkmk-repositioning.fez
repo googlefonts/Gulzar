@@ -1,11 +1,14 @@
 Include "shared.fez";
 LoadPlugin qalamTools.SeparateConsecutive;
 
-# And now we do some more positioning. We put this in mkmk because we want
-# this to be processed at the end, after anchor positioning is done.
+# These are a more ad-hoc collection of positioning rules.
+# We put them in mkmk because we want them to be processed
+# at the end, after anchor positioning is done.
 
 DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
 
+# Routines to move final jim dots around, to help fit sequences like
+# ہپچ
 Routine FinaJimTopRight {
   Position ([sdb.two ddb.two tdb.two] <yPlacement=-700>);
   Position ([sdb.one ddb.one tdb.one] <yPlacement=-600>);
@@ -28,18 +31,21 @@ Routine FinaQafUpLeft {
 };
 
 Feature kern {
+  # Sequences like پی have problems - where is the right place to
+  # put the dots? We tuck them down out of the way.
   Routine GiveChYeDotsMoreSpace {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
 
     Position ( [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [REf2 REf3] @inits ( sdb.yb <80 -120 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position [sdb.one tdb.one ddb.one] @DOTm ( [ddb.yb sdb.yb] <10 -220  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <50 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <80 -120 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
-  } UseMarkFilteringSet /haydb|sdb.yb|tdb|ddb|haydb/;
+  } UseMarkFilteringSet /haydb|sdb.(one|yb)|tdb|ddb|haydb/;
 
   DefineClass @WideFinals = @finas & (xMin < 50);
 
@@ -130,7 +136,9 @@ Feature kern {
     Position FEm2 TEm11 (dda <xPlacement=-50>);
     Position FEm2 dda TEm11 (dda <xPlacement=-50>);
     Position /(KAF|GAF|LAM)i/ /TEm/ (dda <xPlacement=-50>);
-  } UseMarkFilteringSet [ dda SHADDA];
+    Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
+    Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
+  } UseMarkFilteringSet [ dda SHADDA HAMZA_ABOVE];
 
   Routine DotsUnderGaf {
     Position (/\.one$/ <yPlacement=-220>) @NarrowMedials @all_above_marks /KAF|GAF/;

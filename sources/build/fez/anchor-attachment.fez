@@ -385,6 +385,10 @@ Routine AtHeight500pos {
     Chain (@dal_like ^ClearUpperDots BEi14 @dots_one ^DropATinyBitMore); # یریں
     Chain ([@dal_like @vao_like] BEi5 ^OpenSmallSpaceBeforeKern tdb ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] ^ClearUpperDots BEi5 @dots ^BottomLeft); # وپھی, #27
+    Chain ([@dal_like @vao_like] ^ClearUpperDots @BEi ^DoNothingPos @dots_one ^DropATinyBitMore); # ھوین
+    Chain (@alif_like BEi16 ^OpenTinySpaceBeforeKern [ddb tdb]); # اپر
+    Chain (@alif_like BEi16 ^DoNothingPos); # اپر
+    Chain ([@dal_like @vao_like] ^ClearUpperDots BEi16 ^DoNothingPos); # رپر
     Chain (@long_re @DOTi ^Tighten @dots_two ^DoNothingPos); # سربر
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # ومچھا
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # ومچھا
@@ -398,8 +402,10 @@ DefineClass @narrow_inits = @inits & (width < 300);
 Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
     Chain (@alif_like @DOTi ^OpenBigSpaceBeforeKern [ddb tdb]); # اچھّی
+    Chain (@alif_like BEi3 ^DoNothingPos @medis); # بانین
     Chain (@alif_like @DOTi ^OpenSpaceBeforeKern sdb); # اچھّی
     Chain (@alif_like @inits ^OpenSmallSpaceBeforeKern); # چلائيں
+    Chain TEi15 ([@dal_like @vao_like] TEisd1 ^OpenTinySpaceBeforeKern); # توثیق
     Chain ([@dal_like @vao_like] JIMi5 ^OpenSpaceBeforeKern @dots); # پوچھیں
     Chain ([@dal_like @vao_like] BEi5 ^OpenSmallSpaceBeforeKern tdb ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] BEi5 @dots ^BottomLeft); # وپھی, #27
