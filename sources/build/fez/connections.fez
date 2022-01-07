@@ -15,11 +15,27 @@ Feature rlig {
   Routine MoreFinaSelection {
     # These are for REf-group things which go to different final REs in their
     # medial form to in their initial form.
+    Substitute AINm1 ( REf1 ) -> REf2;
     Substitute [BEm1 TEm1] ( REf1 ) -> REf3;
+    Substitute FEm1 ( REf1 ) -> REf2;
+    Substitute HAYAm1 ( REf1 ) -> REf2;
     Substitute HAYCm1 ( REf1 ) -> REf3;
-    Substitute AINi1 ( REf1 ) -> REf3;
-    Substitute JIMi1 ( REf1 ) -> REf1;
     Substitute JIMm1 ( REf1 ) -> REf2;
+    Substitute MIMm1 ( REf1 ) -> REf3;
+    Substitute SADm1 ( REf1 ) -> REf3;
+    Substitute SINm1 ( REf1 ) -> REf2;
+    Substitute TOEm1 ( REf1 ) -> REf2;
+
+    Substitute AINi1 ( REf1 ) -> REf2;
+    Substitute HAYAi1 ( REf1 ) -> REf2;
+    Substitute HAYCi1 ( REf1 ) -> REf3;
+    Substitute Hei1 ( REf1 ) -> REf3;
+    Substitute JIMi1 ( REf1 ) -> REf1;
+    Substitute MIMi1 ( REf1 ) -> REf2;
+    Substitute SADi1 ( REf1 ) -> REf3;
+    Substitute SINi1 ( REf1 ) -> REf2;
+    Substitute TOEi1 ( REf1 ) -> REf2;
+
     Substitute [BEi1 TEi1] ( BEf1 ) -> BEf2;
     Substitute [BEi1 TEi1] ( TEf1 ) -> BEf2;
   } IgnoreMarks;

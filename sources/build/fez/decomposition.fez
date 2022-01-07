@@ -55,12 +55,6 @@ Feature fina {
       Substitute yeh-ar -> CH_YEu1 ddb;
   };
 
-  Routine FinaSelection {
-    Substitute [AINu1 HAYAu1 JIMu1 tcheh-ar khah-ar] ( REu1 )    -> REf2;
-    Substitute [HAYCu1 MIMu1 SADu1 SINu1 TOEu1] ( REu1 )    -> REf3;
-    # We need the ignoremarks flag here because, after ccmp is done, there
-    # may be some dots between e.g. HAYA and RE.
-  } IgnoreMarks;
 
   # Now we fix up the JIM-likes.
   Routine FinaJimlike {
