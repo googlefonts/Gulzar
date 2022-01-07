@@ -1,9 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/HAYAf1/haya",
-"/HAYAu1/HAYAf1/haya"
-);
 classes = (
 {
 automatic = 1;
@@ -15338,7 +15334,7 @@ position = "{188, -24}";
 },
 {
 name = top;
-position = "{316, 357}";
+position = "{327, 357}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -15348,17 +15344,15 @@ closed = 1;
 nodes = (
 "192 -2 LINE SMOOTH",
 "215 0 OFFCURVE",
-"228 4 OFFCURVE",
+"227 5 OFFCURVE",
 "245 21 CURVE SMOOTH",
-"283 57 OFFCURVE",
-"304 101 OFFCURVE",
-"317 153 CURVE SMOOTH",
-"331 210 OFFCURVE",
-"336 276 OFFCURVE",
-"344 354 CURVE",
-"316 357 LINE",
+"275 48 OFFCURVE",
+"304 97 OFFCURVE",
+"329 218 CURVE SMOOTH",
+"356 351 LINE",
+"327 357 LINE",
 "303 269 LINE SMOOTH",
-"291 187 OFFCURVE",
+"280 185 OFFCURVE",
 "269 137 OFFCURVE",
 "114 48 CURVE SMOOTH",
 "50 11 LINE",
@@ -15366,7 +15360,7 @@ nodes = (
 );
 }
 );
-width = 394;
+width = 406;
 }
 );
 note = REu1;
@@ -15383,11 +15377,11 @@ name = REu1;
 },
 {
 name = sda;
-transform = "{1, 0, 0, 1, 171, 507}";
+transform = "{1, 0, 0, 1, 182, 507}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 394;
+width = 406;
 }
 );
 unicode = 0632;
@@ -15403,11 +15397,11 @@ name = REu1;
 },
 {
 name = toeda;
-transform = "{1, 0, 0, 1, 184, 400}";
+transform = "{1, 0, 0, 1, 195, 400}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 394;
+width = 406;
 }
 );
 unicode = 0691;
@@ -15423,11 +15417,11 @@ name = REu1;
 },
 {
 name = tda;
-transform = "{1, 0, 0, 1, 97, 507}";
+transform = "{1, 0, 0, 1, 108, 507}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 394;
+width = 406;
 }
 );
 unicode = 0698;
