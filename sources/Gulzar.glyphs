@@ -41928,15 +41928,15 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{338, -12}";
+position = "{328, -12}";
 },
 {
 name = entry;
-position = "{445, 278}";
+position = "{376, 228}";
 },
 {
 name = top;
-position = "{386, 379}";
+position = "{318, 325}";
 }
 );
 components = (
