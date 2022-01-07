@@ -107,7 +107,7 @@ Feature init {
   Substitute QAFu1 -> FEi1;
   Substitute JIMu1    -> JIMi1 sdb;
   Substitute HAYCu1    -> HAYCi1 haydb;
-  Substitute heh-ar -> HAYCi1;
+  Substitute heh-ar -> Hei1;
   Substitute hah-ar -> JIMi1;
   Substitute tcheh-ar -> JIMi1 tdb;
   Substitute khah-ar -> JIMi1 sda;
