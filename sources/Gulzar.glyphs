@@ -36214,7 +36214,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{193, -79}";
+position = "{187, -79}";
 },
 {
 name = entry;
@@ -55876,7 +55876,7 @@ position = "{539, 433}";
 },
 {
 name = top;
-position = "{323, 375}";
+position = "{313, 462}";
 }
 );
 hints = (
@@ -60520,7 +60520,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{209, 261}";
+position = "{200, 261}";
 }
 );
 components = (
@@ -60747,7 +60747,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{167, 111}";
+position = "{150, 111}";
 }
 );
 hints = (
@@ -60884,7 +60884,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{151, 251}";
+position = "{121, 251}";
 }
 );
 components = (
@@ -60983,7 +60983,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{349, 304}";
+position = "{368, 205}";
 }
 );
 components = (
@@ -64889,7 +64889,7 @@ position = "{38, 0}";
 },
 {
 name = top;
-position = "{169, 204}";
+position = "{169, 174}";
 }
 );
 background = {
@@ -68493,7 +68493,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{269, 272}";
+position = "{189, 272}";
 }
 );
 hints = (
