@@ -30,6 +30,8 @@ Feature ccmp {
     Substitute kaf-ar -> KAFu1;
     Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
     Substitute alefMadda-ar -> ALIFu1 MADDA;
+    Substitute alefHamzaabove-ar -> ALIFu1 HAMZA_ABOVE;
+    Substitute alefHamzabelow-ar -> ALIFu1 HAMZA_BELOW;
     };
 
   Routine MarkLigatures {
@@ -151,5 +153,6 @@ Feature isol {
     Substitute tehMarbutagoal-ar -> HAYCu1 dda;
     Substitute hah-ar -> JIMu1;
     Substitute noon-ar -> NUNu1 sdi;
+    Substitute JIMu1 -> JIMu1 sdi;
   };
 };
