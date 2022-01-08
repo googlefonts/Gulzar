@@ -127,7 +127,8 @@ Feature kern {
 
     Position @alif_like (/TEi/ <xAdvance=+75>);
 
-
+    # لتا
+    Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <yPlacement=+250>) [@alif_like /(KAF|GAF|LAM)[mf]/);
   };
 
   Routine ClashesToRight {
@@ -138,6 +139,7 @@ Feature kern {
     Position /(KAF|GAF|LAM)i/ /TEm/ (dda <xPlacement=-50>);
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
+
   } UseMarkFilteringSet [ dda SHADDA HAMZA_ABOVE];
 
   Routine DotsUnderGaf {
