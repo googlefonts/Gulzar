@@ -72,7 +72,7 @@ class NastaliqKerning(FEZVerb):
         # self.isols = ["ALIFu1"]
         # finas = ["ALIFf1"]
         # self.inits = ["BEi3"]
-        blockers = ["AINf1", "JIMf1"]
+        blockers = ["AINf1", "JIMf1", "CH_YEf1"]
         self.isols_finas = self.isols + finas
 
 

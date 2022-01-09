@@ -272,6 +272,7 @@ Routine AtHeight400sub {
 
 Routine AtHeight500sub {
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
+    Chain ([@dal_like @vao_like] /[KG]AFi/ @BEm @dots ^DropOne); # پر کیلنڈ
     Chain ([@dal_like @vao_like] BEi5 @dots ^DoNothing); #ندبجن
     Chain ([@dal_like @vao_like] BEi3 @dots ^DropOne); #ندبجن
     Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); #ندبجن

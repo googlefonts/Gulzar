@@ -36,9 +36,9 @@ Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
 
-    Position ( [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position [REf2 REf3] @inits ( sdb.yb <180 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position [sdb.one tdb.one ddb.one] @DOTm ( [ddb.yb sdb.yb] <10 -220  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( [@inits @medis] <xAdvance=+60> [ddb.yb tdb.yb] <200 -180 0 0> [CH_YEf1 CH_YEf2 NUNf1]);
+    Position [REf2 REf3] (@inits <xAdvance=+60> sdb.yb <180 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position [sdb.one tdb.one ddb.one] (@DOTm <xAdvance=+60> [ddb.yb sdb.yb] <10 -220  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <50 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
@@ -95,7 +95,7 @@ Feature kern {
 
     # Clear Alif Madda
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) HAMZA_ABOVE;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) [dda tda];
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) [dda tda toeda];
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @below_dots @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> );
@@ -109,7 +109,7 @@ Feature kern {
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
 
     # Just fiddling now
-    Position  [parenright.latin parenright.urdu] (/[BT]Ei/ <xAdvance=+70>) [dda tdb];
+    Position  [parenright.latin parenright.urdu] (/[BT]Ei/ <xAdvance=+70>) [ddb tdb];
 
     # چنا 
     Position JIMi1 @nuktas /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
@@ -137,10 +137,10 @@ Feature kern {
     Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
     Position FEm2 TEm11 (dda <xPlacement=-50>);
     Position FEm2 dda TEm11 (dda <xPlacement=-50>);
-    Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
-    Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
+    Position @alif_like (BEisd1 <xAdvance=+75>) HAMZA_ABOVE;
+    Position JIMi2 BEm3 (toeda <xPlacement=-25>);
 
-  } UseMarkFilteringSet [ dda SHADDA HAMZA_ABOVE];
+  } UseMarkFilteringSet [ dda SHADDA HAMZA_ABOVE toeda];
 
   Routine DotsUnderGaf {
     Position (/\.one$/ <yPlacement=-220>) @NarrowMedials @all_above_marks /KAF|GAF/;
