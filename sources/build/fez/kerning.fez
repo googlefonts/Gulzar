@@ -18,7 +18,7 @@ Feature kern {
 	# The autokerner produces a number of positions at 
 
 	Routine FixShortKern {
-		Position [REf2 REf3] ([BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+400>); # مربی / عربی
+		Position [REf2 REf3] ([BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # مربی / عربی
 		Position @alif_like ([BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+50>); # ابی
 		
 		Position [REu1 REf1] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
