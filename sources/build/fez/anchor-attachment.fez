@@ -316,7 +316,7 @@ Routine AtHeight200pos {
     Chain (@bigbowlfina @BEi ^OpenTinySpaceBeforeKern [tdb ddb]); # ن پٹ
     Chain ([@dal_like @vao_like] [@BEi @JIMi HAYCi2 HAYCi13] @dots ^DropATinyBitMore @DOTm @dots_two); # وپید
     Chain ([@dal_like @vao_like] [HAYCi2 HAYCi13] @dots_one ^DropATinyBitMore); # وہی
-    Chain ([@dal_like @vao_like] [HAYCi2 HAYCi13] ^OpenMediumSpaceBeforeKern @dots); # ر ہی
+    Chain ([@dal_like @vao_like] [HAYCi5 HAYCi2 HAYCi13] ^OpenMediumSpaceBeforeKern @dots); # ر ہی
 
     Chain ([@dal_like @vao_like] [BEi9 BEi15] ^OpenMediumSpaceBeforeKern tdb); # ر پم / ر پو
     Chain ([@dal_like @vao_like] BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
@@ -364,7 +364,7 @@ Routine AtHeight400pos {
     Chain (@vao_like BEi5 ^OpenTinySpaceBeforeKern @dots_two ^DropATinyBitMore); # وپھر
 
     Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi @dots_one ^DropATinyBitMore); # وچھیا
-    Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi ^OpenTinySpaceBeforeKern @dots); # و چھیا
+    Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi ^OpenSmallSpaceBeforeKern @dots); # و چھیا
     Chain ([@dal_like @vao_like] ^ClearUpperDots @BEi ^OpenSmallSpaceBeforeKern @DOTm  @dots); # اور نیو
 
     Chain (@alif_like @JIMi @dots ^DoNothingPos); # دجبل
@@ -383,6 +383,7 @@ Routine AtHeight500pos {
     Chain (@dal_like ^ClearUpperDots BEi10 ^DoNothingPos); # تقریظیں
     Chain (@dal_like ^ClearUpperDots BEi7 ^DoNothingPos); # ندبجن
     Chain (@dal_like ^ClearUpperDots BEi14 @dots_one ^DropATinyBitMore); # یریں
+    Chain ([@dal_like @vao_like] BEi16 ^OpenTinySpaceBeforeKern @dots); #  ہ یر
     Chain ([@dal_like @vao_like] BEi5 ^OpenSmallSpaceBeforeKern tdb ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] ^ClearUpperDots BEi5 @dots ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] ^ClearUpperDots @BEi ^DoNothingPos @dots_one ^DropATinyBitMore); # ھوین

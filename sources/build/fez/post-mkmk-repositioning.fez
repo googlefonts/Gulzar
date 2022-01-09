@@ -129,6 +129,7 @@ Feature kern {
 
     # لتا
     Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <yPlacement=+250>) [@alif_like /(KAF|GAF|LAM)[mf]/];
+    Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <xPlacement=-50>);
   };
 
   Routine ClashesToRight {
@@ -136,7 +137,6 @@ Feature kern {
     Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
     Position FEm2 TEm11 (dda <xPlacement=-50>);
     Position FEm2 dda TEm11 (dda <xPlacement=-50>);
-    Position /(KAF|GAF|LAM)i/ /TEm/ (dda <xPlacement=-50>);
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
 

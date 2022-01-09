@@ -1,5 +1,8 @@
 {
-.appVersion = "1352";
+.appVersion = "3109";
+DisplayStrings = (
+"/JIMi2/TEmsd1"
+);
 classes = (
 {
 automatic = 1;
@@ -35869,7 +35872,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{517, 294}";
+position = "{509, 237}";
 },
 {
 name = exit;
@@ -36172,7 +36175,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{187, -79}";
+position = "{177, -69}";
 },
 {
 name = entry;
@@ -60867,7 +60870,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{200, 261}";
+position = "{180, 261}";
 }
 );
 components = (
@@ -61094,7 +61097,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{150, 111}";
+position = "{144, 131}";
 }
 );
 hints = (
@@ -61231,7 +61234,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{121, 251}";
+position = "{101, 281}";
 }
 );
 components = (
@@ -61363,7 +61366,7 @@ position = "{38, 0}";
 },
 {
 name = top;
-position = "{170, 194}";
+position = "{150, 194}";
 }
 );
 components = (
@@ -65160,7 +65163,7 @@ position = "{11, 0}";
 },
 {
 name = top;
-position = "{168, 139}";
+position = "{138, 119}";
 }
 );
 hints = (
@@ -65236,7 +65239,7 @@ position = "{38, 0}";
 },
 {
 name = top;
-position = "{169, 174}";
+position = "{169, 151}";
 }
 );
 background = {
@@ -65603,7 +65606,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{182, 277}";
+position = "{112, 297}";
 }
 );
 components = (
@@ -68008,7 +68011,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{349, 304}";
+position = "{359, 244}";
 }
 );
 hints = (
@@ -69345,7 +69348,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{345, 427}";
+position = "{305, 427}";
 }
 );
 background = {
@@ -73122,7 +73125,7 @@ position = "{356, 0}";
 },
 {
 name = top;
-position = "{327, 30}";
+position = "{237, 40}";
 }
 );
 components = (
