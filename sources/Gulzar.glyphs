@@ -35680,7 +35680,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{118, -165}";
+position = "{118, -105}";
 },
 {
 name = exit;
@@ -36187,7 +36187,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{134, 111}";
+position = "{134, 61}";
 }
 );
 hints = (
@@ -45307,7 +45307,7 @@ position = "{374, 117}";
 },
 {
 name = comma;
-position = "{369, 161}";
+position = "{409, 121}";
 },
 {
 name = exit;
@@ -65639,7 +65639,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{419, 366}";
+position = "{389, 376}";
 }
 );
 components = (
