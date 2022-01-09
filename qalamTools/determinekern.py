@@ -112,7 +112,7 @@ def determine_kern(
     full_width = max(metrics1["run"] - min(0, metrics1["rsb"]), min_bubble)
     logger.debug("Full width of %s is %i" % (left_glyph, full_width))
     if maxtuck:
-        maximum_width = full_width * maxtuck + metrics1["rsb"]
+        maximum_width = full_width * maxtuck # + metrics1["rsb"]
         left_edge = min(-metrics2["lsb"], 0)
         logger.debug("Maximum distance into %s is %i" % (left_glyph, maximum_width))
         logger.debug("Left edge of %s is %i" % (right_glyph, left_edge))
