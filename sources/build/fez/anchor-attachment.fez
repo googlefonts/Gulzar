@@ -314,16 +314,17 @@ Routine AtHeight200pos {
     Chain (@bigbowlfina BEisd1 ^OpenMediumSpaceBeforeKern [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
     Chain (@bigbowlfina @BEi ^OpenTinySpaceBeforeKern [tdb ddb]); # ن پٹ
+
     Chain ([@dal_like @vao_like] [@BEi @JIMi HAYCi2 HAYCi13] @dots ^DropATinyBitMore @DOTm @dots_two); # وپید
     Chain ([@dal_like @vao_like] [HAYCi2 HAYCi13] @dots_one ^DropATinyBitMore); # وہی
     Chain ([@dal_like @vao_like] [HAYCi5 HAYCi2 HAYCi13] ^OpenMediumSpaceBeforeKern @dots); # ر ہی
-
     Chain ([@dal_like @vao_like] [BEi9 BEi15] ^OpenMediumSpaceBeforeKern tdb); # ر پم / ر پو
     Chain ([@dal_like @vao_like] BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
     Chain ([@dal_like @vao_like] BEi5 ^OpenBigSpaceBeforeKern @dots); # ر یھ
     Chain ([@dal_like @vao_like] JIMi9 @dots_one ^DropATinyBitMore); # رجم
     Chain ([@dal_like @vao_like] BEisd1 @dots ^DropATinyBitMore @DOTm @dots_one ^DropATinyBitMore); # دپت
     Chain ([@dal_like @vao_like] BEisd1 @dots ^DropATinyBitMore); # دپت
+
     Chain (@dal_like @BEi ^OpenTinySpaceBeforeKern @dots); # دپت
     Chain (@vao_like @BEi ^OpenTinySpaceBeforeKern [@dots @dots_one]); # و پت
 
@@ -361,7 +362,9 @@ Routine AtHeight400pos {
     Chain (@long_re @BEi ^OpenSpaceBeforeKern @dots_two @DOTm tdb); # جرپپل
     Chain (@long_re @BEi @DOTm @dots_one ^DropATinyBitMore); # جرںپل
 
-    Chain (@vao_like BEi5 ^OpenTinySpaceBeforeKern @dots_two ^DropATinyBitMore); # وپھر
+    Chain ([@dal_like @vao_like] BEi3 @dots_one ^DropATinyBitMore); # دیکھا
+
+    Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi @dots_one ^DropATinyBitMore); # وچھیا
 
     Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi @dots_one ^DropATinyBitMore); # وچھیا
     Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi ^OpenSmallSpaceBeforeKern @dots); # و چھیا
@@ -473,7 +476,8 @@ Feature rlig {
   # And another round of making sure that ڑ doesn't bang into what
   # follows.
   Routine OtherFixes2 {
-    Chain ([REf1 REf2 REf3] ^ClearUpperDots);
+    Chain ([REf1 REf2 REf3 DALu1 REu1] ^ClearUpperDots);
+    Chain (@alif_like BEi13 ^OpenMediumSpaceBeforeKern /.yb$/); # یابی
   };
 };
 
