@@ -9,29 +9,28 @@ SetCategory space.urdu ligature;
 Feature kern {
 	# This runs the autokerner, and brings together initial glyphs
 	# and final glyphs to within either 100 units of one another or
-	# to a maximum of 60% of the final glyph's width "under" the
+	# to a maximum of 73% of the final glyph's width "under" the
 	# final glyph, whichever is the smallest.
 	# We don't kern bari-yes, and we have to include BARI_YEu1 in that.
 	DefineClass @bariye = /BARI_YE/;
-	NastaliqKerning 100 60%;
+	NastaliqKerning 100 73%;
 
-	# The autokerner produces a number of positions at 
-
+	# The autokerner only considers the space underneath two glyphs:
+	# the final/isolate of one "word" and the initial of the next. But
+	# if the initial is followed by another letter which "curls back"
+	# into the space beneath the initial (for example, a JIM), then
+	# the final can actually collide with the medial. We don't expect
+	# the autokerner to detect this, and deal with it manually.
+	# (Note that we *do* expect the autokerner to deal with final
+	# glyphs which "curl back" into the space - such as BARI_YE, AIN,
+	# JIM - and in the autokerner's code, we "block" kerning of
+	# initial/final sequences ending in these kinds of glyphs.)
 	Routine FixShortKern {
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+300>) /JIMm|BEm14/;
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /BEm9/;
-	# 	Position [REf2 REf3] ([BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # مربی / عربی
-	# 	Position @alif_like ([BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+50>); # ابی
-		
-	# 	Position [REu1 REf1] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
-	# 	Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # دبی
-	# 	Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # وبی
-	# 	Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+100>); # م بی
-
-	# 	Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
-
-
 	} IgnoreLigatures IgnoreMarks;
+
+	# And finally some ad-hoc fixes...
 
 	Routine FixShortKern3 {
 		Position /ALIF/ (/HAYCi/ <xAdvance=+100>) /haydb/;

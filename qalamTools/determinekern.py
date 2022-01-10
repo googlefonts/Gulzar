@@ -1,7 +1,9 @@
-from glyphtools import get_beziers, get_glyph_metrics
+from glyphtools import get_glyph_metrics
 from glyphtools.babelfont import get_glyph
 from beziers.point import Point
 from beziers.line import Line
+from itertools import product
+from kurbopy import BezPath, TranslateScale, Point, Vec2, Line
 from itertools import product
 import logging
 
@@ -12,10 +14,10 @@ bezier_cache = {}
 metrics_cache = {}
 min_bubble = 0
 
-from kurbopy import BezPath, TranslateScale, Point, Vec2, Line
-from itertools import product
 glyphcache = {}
 
+# We use the Rust-based "kurbopy" module to get the beziers because
+# it's very fast.
 def get_beziers_new(font, glyph):
     if glyph in glyphcache:
         return glyphcache[glyph]
@@ -25,7 +27,13 @@ def get_beziers_new(font, glyph):
     glyphcache[glyph] = rv
     return rv
 
+# kurbopy also has a built-in function for finding the minimum distance
+# between two Bezier paths, which is *super helpful* for what we want.
+def circular_distance(p1, p2):
+    return p1.min_distance(p2), None
 
+# Testing different approaches. This finds the minimum horizontal distance
+# between two Bezier paths. (we don't use this one.)
 def horizontal_distance(p1, p2):
     min_dist = None
     lowest = None
@@ -48,22 +56,27 @@ def horizontal_distance(p1, p2):
     return min_dist, lowest
 
 
-def circular_distance(p1, p2):
-    return p1.min_distance(p2), None
-
-
+# Determine the distance between two glyphs, with the right glyph
+# offset (kerned) by a certain amount and risen on the Y axis by
+# a certain amount
 def path_distance(font, left_glyph, right_glyph, x_offset, y_offset, algorithm="circular"):
-    # Compute min distance
-    # Note that this is *not* in logical order
+    # Note that "left" and "right" is *not* in logical order but
+    # in visual order.
     left_paths = get_beziers_new(font, left_glyph)
     right_paths = get_beziers_new(font, right_glyph)
     metrics1 = get_glyph_metrics(font, left_glyph)
     metrics2 = get_glyph_metrics(font, right_glyph)
 
+    # Create some transformation matrices to raise the left
+    # glyph and kern the right glyph
     offset1 = TranslateScale.translate(Vec2(0, y_offset))
     offset2 = TranslateScale.translate(Vec2(metrics1["width"] + x_offset, 0))
+
+    # We find the minimum distance between each pair of (transformed)
+    # paths
     min_distance = None
     outdebuginfo = None
+
     for p1 in left_paths:
         moved_p1 = offset1 * p1
         logger.debug("Unmoved P1 bounding box: %i,%i -- %i,%i" % (p1.bounding_box().min_x(),p1.bounding_box().min_y(),p1.bounding_box().max_x(),p1.bounding_box().max_y()))
@@ -106,20 +119,26 @@ def determine_kern(
     height -= lexit[0]
     logger.debug("Height without rise is %i" % (height))
 
-    kern = 0
-    last_best = None
+    # Work out the minimum (tightest) possible kern value.
     minimum_possible = -1000
     full_width = max(metrics1["run"] - min(0, metrics1["rsb"]), min_bubble)
     logger.debug("Full width of %s is %i" % (left_glyph, full_width))
     if maxtuck:
-        maximum_width = full_width * maxtuck # + metrics1["rsb"]
+        maximum_width = (full_width + metrics1["rsb"]) * maxtuck
         left_edge = min(-metrics2["lsb"], 0)
         logger.debug("Maximum distance into %s is %i" % (left_glyph, maximum_width))
         logger.debug("Left edge of %s is %i" % (right_glyph, left_edge))
         minimum_possible = left_edge - maximum_width
         logger.debug("Biggest kern is %i" % minimum_possible)
 
+    # Now this is just dumb. If the glyphs are 250 units apart, and
+    # we want them to be 100 units apart, we move them by -150 units
+    # and try again. Normally that gives you the right answer the first
+    # time, but it may be that the shape of the glyphs means that when
+    # you move them, a different part of the glyph now becomes the
+    # closest point, so it's worth checking again.
     iterations = 0
+    kern = 0
     min_distance = -9999
     while iterations < 10 and abs(kern - targetdistance) > 5:
         min_distance, debuginfo = path_distance(font, left_glyph, right_glyph, kern, height)
@@ -129,18 +148,13 @@ def determine_kern(
         if kern < minimum_possible:
             return minimum_possible
         iterations = iterations + 1
-    #     kern = kern -  metrics1["rsb"]
-    # if maxtuck:
-    #     kern = max(kern, -(metrics1["xMax"] * (1 + maxtuck)) + metrics1["rsb"])
-    # else:
-    #     kern = max(kern, -(metrics1["xMax"]) + metrics1["rsb"])
-    # if metrics1["rsb"] < 0:
-    #     kern = kern - metrics1["rsb"]
     logger.debug("%s/%s/%i = %i" % (left_glyph, right_glyph, height, kern))
     if kern > 0:
         return 0
-    return kern  # int(kern)
+    return kern
 
+
+# End of main code, everything below is for testing
 
 def height_of_init(font, sequence):
     # Sequence should be in input order, and begin with init (which is
