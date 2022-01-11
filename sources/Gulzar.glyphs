@@ -57574,7 +57574,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{319, 62}";
+position = "{390, 139}";
 },
 {
 name = exit;
@@ -57582,21 +57582,38 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{350, 323}";
+position = "{400, 333}";
 }
 );
 components = (
 {
 alignment = -1;
 name = _Sin.teeth;
-transform = "{1, 0, 0, 1, 156, 156}";
-},
-{
-name = _Mim.connection;
+transform = "{1, 0, 0, 1, 206, 166}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 542;
+paths = (
+{
+closed = 1;
+nodes = (
+"41 -9 OFFCURVE",
+"87 31 OFFCURVE",
+"88 56 CURVE",
+"72 63 OFFCURVE",
+"64 75 OFFCURVE",
+"64 90 CURVE SMOOTH",
+"64 127 OFFCURVE",
+"114 181 OFFCURVE",
+"231 191 CURVE",
+"264 278 LINE",
+"122 275 OFFCURVE",
+"0 142 OFFCURVE",
+"0 0 CURVE"
+);
+}
+);
+width = 592;
 }
 );
 note = SINi9;
