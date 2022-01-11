@@ -43814,11 +43814,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{246, -65}";
+position = "{280, -59}";
 },
 {
 name = comma;
-position = "{245, -38}";
+position = "{276, -38}";
 },
 {
 name = exit;
@@ -43826,7 +43826,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{291, 149}";
+position = "{288, 131}";
 }
 );
 components = (
@@ -43836,11 +43836,11 @@ name = BEm2;
 {
 alignment = -1;
 name = _Hayc.head;
-transform = "{1, 0, 0, 1, 170, -38}";
+transform = "{1, 0, 0, 1, 201, -38}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 387;
+width = 418;
 }
 );
 note = HAYCi1;
@@ -55156,7 +55156,7 @@ position = "{312, -74}";
 },
 {
 name = exit;
-position = "{32, 0}";
+position = "{2, 0}";
 },
 {
 name = top;
@@ -56234,7 +56234,7 @@ position = "{312, -74}";
 },
 {
 name = exit;
-position = "{32, 0}";
+position = "{2, 0}";
 },
 {
 name = top;
@@ -57145,7 +57145,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{327, -36}";
+position = "{382, -8}";
 },
 {
 name = exit;
@@ -57153,14 +57153,14 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{344, 151}";
+position = "{374, 152}";
 }
 );
 components = (
 {
 alignment = -1;
 name = _Sin.teeth;
-transform = "{1, 0, 0, 1, 150, -15}";
+transform = "{1, 0, 0, 1, 180, -15}";
 },
 {
 name = BEm2;
@@ -57188,7 +57188,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 536;
+width = 566;
 }
 );
 note = SINi2;
@@ -57963,11 +57963,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{302, -44}";
+position = "{380, 0}";
 },
 {
 name = entry;
-position = "{486, 195}";
+position = "{516, 195}";
 },
 {
 name = exit;
@@ -57975,7 +57975,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{344, 148}";
+position = "{374, 148}";
 }
 );
 components = (
@@ -57985,7 +57985,7 @@ name = BEm2;
 {
 alignment = -1;
 name = _Sinm.teeth;
-transform = "{1, 0, 0, 1, 150, -15}";
+transform = "{1, 0, 0, 1, 180, -15}";
 }
 );
 hints = (
@@ -58034,7 +58034,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 486;
+width = 516;
 }
 );
 note = SINm2;
@@ -59666,7 +59666,7 @@ position = "{245, -96}";
 },
 {
 name = entry;
-position = "{260, 97}";
+position = "{280, 97}";
 },
 {
 name = exit;
@@ -59674,7 +59674,7 @@ position = "{32, 0}";
 },
 {
 name = top;
-position = "{217, 113}";
+position = "{225, 113}";
 }
 );
 hints = (
@@ -59718,15 +59718,15 @@ paths = (
 closed = 1;
 nodes = (
 "128 -112 OFFCURVE",
-"212 -41 OFFCURVE",
-"249 14 CURVE",
-"258 31 OFFCURVE",
-"260 65 OFFCURVE",
-"260 97 CURVE",
-"245 97 LINE",
-"212 37 OFFCURVE",
+"220 -50 OFFCURVE",
+"269 24 CURVE",
+"278 34 OFFCURVE",
+"280 65 OFFCURVE",
+"280 97 CURVE",
+"265 97 LINE",
+"217 19 OFFCURVE",
 "146 -25 OFFCURVE",
-"80 -25 CURVE SMOOTH",
+"90 -25 CURVE SMOOTH",
 "63 -25 OFFCURVE",
 "47 -17 OFFCURVE",
 "32 0 CURVE",
@@ -59735,11 +59735,11 @@ nodes = (
 "0 -83 CURVE",
 "16 -104 OFFCURVE",
 "36 -112 OFFCURVE",
-"58 -112 CURVE SMOOTH"
+"64 -112 CURVE SMOOTH"
 );
 }
 );
-width = 260;
+width = 280;
 }
 );
 },
