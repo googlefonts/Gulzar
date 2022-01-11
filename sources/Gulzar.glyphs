@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/MIMi9/MIMf1"
+);
 classes = (
 {
 automatic = 1;
@@ -52665,7 +52668,7 @@ position = "{354, -62}";
 },
 {
 name = entry;
-position = "{364, 367}";
+position = "{344, 362}";
 },
 {
 name = top;
