@@ -55171,7 +55171,7 @@ transform = "{1, 0, 0, 1, 170, 97}";
 },
 {
 name = BEm2;
-transform = "{1, 0, 0, 1, 32, 0}";
+transform = "{1, 0, 0, 1, 2, 0}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -65361,7 +65361,7 @@ position = "{48, 0}";
 },
 {
 name = top;
-position = "{173, 71}";
+position = "{173, 56}";
 }
 );
 hints = (
@@ -65380,22 +65380,19 @@ paths = (
 {
 closed = 1;
 nodes = (
-"117 -106 OFFCURVE",
-"177 -30 OFFCURVE",
-"193 69 CURVE",
-"173 71 LINE",
-"150 7 OFFCURVE",
-"114 -19 OFFCURVE",
-"82 -19 CURVE SMOOTH",
-"62 -19 OFFCURVE",
-"56 -11 OFFCURVE",
+"138 -96 OFFCURVE",
+"191 -23 OFFCURVE",
+"193 49 CURVE",
+"173 51 LINE",
+"150 -6 OFFCURVE",
+"93 -22 OFFCURVE",
 "48 0 CURVE",
 "22 -49 OFFCURVE",
 "16 -58 OFFCURVE",
 "0 -83 CURVE",
-"22 -103 OFFCURVE",
-"42 -106 OFFCURVE",
-"55 -106 CURVE SMOOTH"
+"20 -92 OFFCURVE",
+"39 -96 OFFCURVE",
+"57 -96 CURVE SMOOTH"
 );
 }
 );
@@ -65479,7 +65476,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{172, -138}";
+position = "{203, -137}";
 },
 {
 name = exit;
@@ -65487,7 +65484,7 @@ position = "{48, 0}";
 },
 {
 name = top;
-position = "{173, 71}";
+position = "{173, 56}";
 }
 );
 components = (
@@ -71415,7 +71412,7 @@ position = "{198, -82}";
 },
 {
 name = entry;
-position = "{208, 97}";
+position = "{238, 97}";
 },
 {
 name = exit;
@@ -71423,7 +71420,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{170, 111}";
+position = "{200, 123}";
 }
 );
 hints = (
@@ -71453,13 +71450,13 @@ paths = (
 closed = 1;
 nodes = (
 "89 -112 OFFCURVE",
-"164 -41 OFFCURVE",
-"197 14 CURVE",
-"206 31 OFFCURVE",
-"208 65 OFFCURVE",
-"208 97 CURVE",
-"193 97 LINE",
-"169 66 OFFCURVE",
+"173 -61 OFFCURVE",
+"227 24 CURVE",
+"236 31 OFFCURVE",
+"238 65 OFFCURVE",
+"238 97 CURVE",
+"223 97 LINE",
+"171 18 OFFCURVE",
 "106 -25 OFFCURVE",
 "48 -25 CURVE SMOOTH",
 "31 -25 OFFCURVE",
@@ -71474,7 +71471,7 @@ nodes = (
 );
 }
 );
-width = 208;
+width = 238;
 }
 );
 note = BEm1;
