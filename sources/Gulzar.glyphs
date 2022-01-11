@@ -15765,17 +15765,17 @@ nodes = (
 "274 253 OFFCURVE",
 "285 309 OFFCURVE",
 "286 413 CURVE SMOOTH",
-"287 546 LINE SMOOTH",
-"287 602 OFFCURVE",
-"292 648 OFFCURVE",
-"300 683 CURVE",
-"284 688 LINE",
-"265 657 OFFCURVE",
-"249 632 OFFCURVE",
-"236 606 CURVE SMOOTH",
-"219 570 OFFCURVE",
-"209 533 OFFCURVE",
-"211 479 CURVE SMOOTH",
+"287 576 LINE SMOOTH",
+"287 632 OFFCURVE",
+"292 678 OFFCURVE",
+"300 713 CURVE",
+"284 718 LINE",
+"265 687 OFFCURVE",
+"249 662 OFFCURVE",
+"236 636 CURVE SMOOTH",
+"219 600 OFFCURVE",
+"209 563 OFFCURVE",
+"211 509 CURVE SMOOTH",
 "219 198 LINE SMOOTH",
 "219 190 OFFCURVE",
 "219 181 OFFCURVE",
@@ -59573,7 +59573,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{257, -25}";
+position = "{245, 0}";
 },
 {
 name = entry;
@@ -59585,7 +59585,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{180, 261}";
+position = "{221, 261}";
 }
 );
 components = (
@@ -60156,7 +60156,7 @@ position = "{272, -133}";
 },
 {
 name = entry;
-position = "{252, 13}";
+position = "{232, 23}";
 },
 {
 name = top;
