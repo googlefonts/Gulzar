@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/BEm1/BEf2/space/BEm12/BEf1"
+);
 classes = (
 {
 automatic = 1;
@@ -34542,60 +34545,13 @@ position = "{452, 0}";
 },
 {
 name = entry;
-position = "{929, 270}";
+position = "{886, 309}";
 },
 {
 name = top;
-position = "{452, 294}";
+position = "{467, 252}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"392 0 OFFCURVE",
-"547 8 OFFCURVE",
-"673 51 CURVE SMOOTH",
-"777 87 OFFCURVE",
-"829 138 OFFCURVE",
-"855 215 CURVE",
-"847 217 LINE",
-"864 192 OFFCURVE",
-"904 168 OFFCURVE",
-"938 168 CURVE",
-"946 220 OFFCURVE",
-"944 251 OFFCURVE",
-"929 270 CURVE",
-"917 293 OFFCURVE",
-"911 309 OFFCURVE",
-"894 309 CURVE SMOOTH",
-"867 309 OFFCURVE",
-"856 278 OFFCURVE",
-"820 248 CURVE SMOOTH",
-"783 218 OFFCURVE",
-"749 207 OFFCURVE",
-"676 188 CURVE SMOOTH",
-"587 167 OFFCURVE",
-"476 152 OFFCURVE",
-"327 152 CURVE SMOOTH",
-"214 152 OFFCURVE",
-"146 175 OFFCURVE",
-"118 215 CURVE SMOOTH",
-"99 243 OFFCURVE",
-"93 268 OFFCURVE",
-"100 324 CURVE",
-"69 324 LINE",
-"62 271 OFFCURVE",
-"50 206 OFFCURVE",
-"50 165 CURVE SMOOTH",
-"50 24 OFFCURVE",
-"168 0 OFFCURVE",
-"303 0 CURVE SMOOTH"
-);
-}
-);
-};
 hints = (
 {
 horizontal = 1;
@@ -34623,15 +34579,8 @@ nodes = (
 "777 87 OFFCURVE",
 "833 138 OFFCURVE",
 "862 236 CURVE",
-"847 224 LINE",
-"860 194 OFFCURVE",
-"911 170 OFFCURVE",
-"938 168 CURVE",
-"953 219 OFFCURVE",
-"944 251 OFFCURVE",
-"929 270 CURVE",
-"911 282 OFFCURVE",
-"903 309 OFFCURVE",
+"882 268 OFFCURVE",
+"901 309 OFFCURVE",
 "886 309 CURVE SMOOTH",
 "859 309 OFFCURVE",
 "856 278 OFFCURVE",
@@ -34658,7 +34607,7 @@ nodes = (
 );
 }
 );
-width = 946;
+width = 891;
 }
 );
 note = BEf2;
@@ -59080,7 +59029,7 @@ name = BEf2;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 946;
+width = 891;
 }
 );
 },
@@ -71427,32 +71376,6 @@ name = top;
 position = "{235, 108}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"112 -93 OFFCURVE",
-"188 -49 OFFCURVE",
-"235 13 CURVE",
-"254 26 OFFCURVE",
-"269 71 OFFCURVE",
-"267 96 CURVE",
-"252 96 LINE",
-"203 45 OFFCURVE",
-"141 -7 OFFCURVE",
-"75 -7 CURVE SMOOTH",
-"56 -7 OFFCURVE",
-"36 -5 OFFCURVE",
-"16 0 CURVE",
-"0 -34 LINE",
-"26 -70 OFFCURVE",
-"44 -93 OFFCURVE",
-"75 -93 CURVE SMOOTH"
-);
-}
-);
-};
 hints = (
 {
 horizontal = 1;
