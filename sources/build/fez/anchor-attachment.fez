@@ -272,7 +272,6 @@ Routine AtHeight400sub {
 
 Routine AtHeight500sub {
     Chain ([@dal_like @vao_like] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
-    Chain ([@dal_like @vao_like] /[KG]AFi/ @BEm @dots ^DropOne); # پر کیلنڈ
     Chain ([@dal_like @vao_like] BEi5 @dots ^DoNothing); #ندبجن
     Chain ([@dal_like @vao_like] BEi3 @dots ^DropOne); #ندبجن
     Chain ([@dal_like @vao_like] BEi7 @dots ^DoNothing); #ندبجن
@@ -383,17 +382,18 @@ Routine AtHeight400pos {
 
 Routine AtHeight500pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
-    Chain (@dal_like ^ClearUpperDots BEi10 ^DoNothingPos); # تقریظیں
-    Chain (@dal_like ^ClearUpperDots BEi7 ^DoNothingPos); # ندبجن
-    Chain (@dal_like ^ClearUpperDots BEi14 @dots_one ^DropATinyBitMore); # یریں
+    Chain (@dal_like BEi10 ^DoNothingPos); # تقریظیں
+    Chain (@dal_like BEi7 ^DoNothingPos); # ندبجن
+    Chain (@dal_like BEi14 @dots_one ^DropATinyBitMore); # یریں
     Chain ([@dal_like @vao_like] /[KG]AFi/ ^OpenSmallSpaceBeforeKern @BEm @dots); # پرکیلنڈ
     Chain ([@dal_like @vao_like] BEi16 ^OpenTinySpaceBeforeKern @dots); #  ہ یر
     Chain ([@dal_like @vao_like] BEi5 ^OpenSmallSpaceBeforeKern tdb ^BottomLeft); # وپھی, #27
-    Chain ([@dal_like @vao_like] ^ClearUpperDots BEi5 @dots ^BottomLeft); # وپھی, #27
-    Chain ([@dal_like @vao_like] ^ClearUpperDots @BEi ^DoNothingPos @dots_one ^DropATinyBitMore); # ھوین
+    Chain ([@dal_like @vao_like] BEi5 @dots ^BottomLeft); # وپھی, #27
+    Chain ([@dal_like @vao_like] @BEi ^DoNothingPos @dots_one ^DropATinyBitMore); # ھوین
     Chain (@alif_like BEi16 ^OpenTinySpaceBeforeKern [ddb tdb]); # اپر
     Chain (@alif_like BEi16 ^DoNothingPos); # اپر
-    Chain ([@dal_like @vao_like] ^ClearUpperDots BEi16 ^DoNothingPos); # رپر
+    Chain ([@dal_like @vao_like] BEi16 ^DoNothingPos); # رپر
+    Chain ([@dal_like @vao_like] BEi16 ^DoNothingPos); # رپر
     Chain (@long_re @DOTi ^Tighten @dots_two ^DoNothingPos); # سربر
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # ومچھا
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # ومچھا

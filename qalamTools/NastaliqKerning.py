@@ -123,7 +123,7 @@ class NastaliqKerning(FEZVerb):
         # These glyphs are special cased. We should probably read
         # `blockers` from a glyph class, really, instead of hard
         # coding it.
-        blockers = ["AINf1", "JIMf1", "CH_YEf1"]
+        blockers = ["AINf1", "JIMf1"]
 
         # Now we cluster the medials and finals based on their
         # rise.
