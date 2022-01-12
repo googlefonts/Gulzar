@@ -38,7 +38,7 @@ Feature kern {
 
     Position ( [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [REf2 REf3] @inits ( sdb.yb <180 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position [sdb.one tdb.one ddb.one] @DOTm ( [ddb.yb sdb.yb] <10 -220  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position [sdb.one tdb.one ddb.one] @DOTm ( [ddb.yb sdb.yb] <0 -250 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <50 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
@@ -95,10 +95,10 @@ Feature kern {
 
     # Clear Alif Madda
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) HAMZA_ABOVE;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) [dda tda];
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @all_above_marks;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> ) @below_dots @all_above_marks;
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+50> );
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+100> ) [dda tda toeda];
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> ) @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> ) @below_dots @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> );
 
     # Heh Alif
     Position HAYCi3 (haydb <yPlacement=+159>) ALIFf1;
@@ -126,6 +126,7 @@ Feature kern {
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
     Position @alif_like (/TEi/ <xAdvance=+75>);
+    Position @alif_like (/BEi/ <xAdvance=+75>) HAMZA_ABOVE;
 
     # لتا
     Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <yPlacement=+250>) [@alif_like /(KAF|GAF|LAM)[mf]/];
@@ -135,12 +136,18 @@ Feature kern {
   Routine ClashesToRight {
     Position LAMi4 FEm11 (dda <xPlacement=-30>);
     Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
-    Position FEm2 TEm11 (dda <xPlacement=-50>);
-    Position FEm2 dda TEm11 (dda <xPlacement=-50>);
+
+    # فت
+    Position [FEi2 FEm2] [TEm3 TEm11] (dda <xPlacement=-20>) ALIFf1;
+    Position [FEi2 FEm2] [sda ddb] [TEm3 TEm11] (dda <xPlacement=-20>) ALIFf1;
+    Position [FEi2 FEm2] [TEm3 TEm11] (dda <xPlacement=0>) /[GK]AF[mf]/;
+    Position [FEi2 FEm2] [sda dda] [TEm3 TEm11] (dda <xPlacement=0>) /[GK]AF[mf]/;
+    Position [FEi2 FEm2] [TEm3 TEm11] (dda <xPlacement=-50>);
+    Position [FEi2 FEm2] [sda dda] [TEm11 TEm3] (dda <xPlacement=-50>);
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
 
-  } UseMarkFilteringSet [ dda SHADDA HAMZA_ABOVE];
+  } UseMarkFilteringSet [ sda dda SHADDA HAMZA_ABOVE];
 
   Routine DotsUnderGaf {
     Position (/\.one$/ <yPlacement=-220>) @NarrowMedials @all_above_marks /KAF|GAF/;
