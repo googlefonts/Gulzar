@@ -101,7 +101,7 @@ Feature kern {
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> );
 
     # Heh Alif
-    Position HAYCi3 (haydb <yPlacement=+159>) ALIFf1;
+    Position HAYCi3 (haydb <yPlacement=+180>) ALIFf1;
     # Clear Alif Nun KL
     Position /ALIF[uf]1/ (BEi8 <xAdvance=+100>) /sda|dda/;
 
@@ -114,9 +114,6 @@ Feature kern {
     # چنا 
     Position JIMi1 @nuktas /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
     Position JIMi1 /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
-
-    # ہا
-    Position (haydb <yPlacement=+70>) ALIFf1;
 
     #  پڑتا
     #Position REf1 toeda ([@inits @isols] <xAdvance=+200>);

@@ -30,6 +30,7 @@ Feature kern {
 		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # وبی
 		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+100>); # م بی
 		Position @alif_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # الی
+		Position [@isols @finas] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # الی
 
 		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
 
