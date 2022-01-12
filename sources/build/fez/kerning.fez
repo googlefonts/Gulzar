@@ -9,11 +9,11 @@ SetCategory space.urdu ligature;
 Feature kern {
 	# This runs the autokerner, and brings together initial glyphs
 	# and final glyphs to within either 100 units of one another or
-	# to a maximum of 73% of the final glyph's width "under" the
+	# to a maximum of 50% of the final glyph's width "under" the
 	# final glyph, whichever is the smallest.
 	# We don't kern bari-yes, and we have to include BARI_YEu1 in that.
 	DefineClass @bariye = /BARI_YE/;
-	NastaliqKerning 100 73%;
+	NastaliqKerning 100 50%;
 
 	# The autokerner only considers the space underneath two glyphs:
 	# the final/isolate of one "word" and the initial of the next. But

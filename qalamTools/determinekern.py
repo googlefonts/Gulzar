@@ -124,7 +124,7 @@ def determine_kern(
     full_width = max(metrics1["run"] - min(0, metrics1["rsb"]), min_bubble)
     logger.debug("Full width of %s is %i" % (left_glyph, full_width))
     if maxtuck:
-        maximum_width = (full_width) * maxtuck
+        maximum_width = metrics1["width"] * maxtuck
         left_edge = min(-metrics2["lsb"], 0)
         logger.debug("Maximum distance into %s is %i" % (left_glyph, maximum_width))
         logger.debug("Left edge of %s is %i" % (right_glyph, left_edge))
@@ -140,7 +140,7 @@ def determine_kern(
     iterations = 0
     kern = 0
     min_distance = -9999
-    while iterations < 10 and abs(kern - targetdistance) > 5:
+    while iterations < 10 and abs(targetdistance - min_distance) > 10:
         min_distance, debuginfo = path_distance(font, left_glyph, right_glyph, kern, height)
         if min_distance is None:
             return minimum_possible

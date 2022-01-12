@@ -1,7 +1,7 @@
 {
-.appVersion = "3109";
+.appVersion = "3072";
 DisplayStrings = (
-"/BEmsd1/BEi15/VAOf1/toeda/toeda/GAFm15"
+"/space.urdu/LAMf1"
 );
 classes = (
 {
@@ -15450,9 +15450,11 @@ layers = (
 {
 components = (
 {
+alignment = -1;
 name = REu1;
 },
 {
+alignment = -1;
 name = toeda;
 transform = "{1, 0, 0, 1, 165, 390}";
 }
@@ -16996,7 +16998,7 @@ position = "{343, 7}";
 },
 {
 name = top;
-position = "{395, 408}";
+position = "{180, 269}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -24347,7 +24349,7 @@ glyphname = space.urdu;
 layers = (
 {
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 150;
+width = 200;
 }
 );
 },
@@ -34282,7 +34284,7 @@ position = "{129, 187}";
 },
 {
 name = top;
-position = "{420, 199}";
+position = "{180, 269}";
 }
 );
 hints = (
@@ -37030,7 +37032,7 @@ position = "{49, 0}";
 },
 {
 name = top;
-position = "{139, 275}";
+position = "{188, 210}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -37351,7 +37353,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{362, 473}";
+position = "{492, 343}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -37830,7 +37832,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{242, 432}";
+position = "{163, 416}";
 }
 );
 hints = (
@@ -38142,7 +38144,7 @@ position = "{47, 0}";
 },
 {
 name = top;
-position = "{227, 276}";
+position = "{177, 276}";
 }
 );
 hints = (
@@ -38391,7 +38393,7 @@ position = "{56, 0}";
 },
 {
 name = top;
-position = "{246, 282}";
+position = "{199, 282}";
 }
 );
 hints = (
@@ -43569,7 +43571,7 @@ position = "{348, 165}";
 },
 {
 name = top;
-position = "{249, 192}";
+position = "{153, 171}";
 }
 );
 hints = (
@@ -43963,7 +43965,7 @@ position = "{85, -189}";
 },
 {
 name = comma;
-position = "{85, -100}";
+position = "{111, -84}";
 },
 {
 name = exit;
@@ -45696,7 +45698,7 @@ position = "{410, 119}";
 },
 {
 name = top;
-position = "{306, 744}";
+position = "{154, 720}";
 }
 );
 hints = (
@@ -47028,7 +47030,7 @@ position = "{95, -10}";
 },
 {
 name = top;
-position = "{282, 316}";
+position = "{202, 316}";
 }
 );
 hints = (
@@ -48675,7 +48677,7 @@ position = "{112, 0}";
 },
 {
 name = top;
-position = "{167, 459}";
+position = "{206, 439}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -54998,7 +55000,7 @@ position = "{407, 300}";
 },
 {
 name = toeda;
-position = "{382, 384}";
+position = "{367, 388}";
 },
 {
 name = top;
@@ -57495,7 +57497,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{550, 342}";
+position = "{550, 212}";
 }
 );
 components = (
@@ -58517,7 +58519,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{550, 338}";
+position = "{520, 208}";
 }
 );
 components = (
@@ -59501,7 +59503,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{156, 127}";
+position = "{149, 127}";
 }
 );
 components = (
@@ -59534,7 +59536,7 @@ position = "{16, 0}";
 },
 {
 name = top;
-position = "{235, 108}";
+position = "{215, 128}";
 }
 );
 components = (
@@ -59663,7 +59665,7 @@ position = "{11, 0}";
 },
 {
 name = top;
-position = "{168, 139}";
+position = "{80, 169}";
 }
 );
 components = (
@@ -59816,7 +59818,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{151, 136}";
+position = "{131, 152}";
 }
 );
 hints = (
@@ -59986,7 +59988,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{215, 364}";
+position = "{185, 384}";
 }
 );
 components = (
@@ -60019,7 +60021,7 @@ position = "{7, 0}";
 },
 {
 name = top;
-position = "{267, 319}";
+position = "{237, 329}";
 }
 );
 components = (
@@ -62015,7 +62017,7 @@ position = "{288, 306}";
 },
 {
 name = top;
-position = "{227, 427}";
+position = "{180, 387}";
 }
 );
 components = (
@@ -65105,7 +65107,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{350, 319}";
+position = "{350, 219}";
 }
 );
 components = (
@@ -65708,7 +65710,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{143, -14}";
+position = "{204, 86}";
 },
 {
 name = exit;
@@ -66700,6 +66702,10 @@ position = "{414, 287}";
 {
 name = exit;
 position = "{0, 0}";
+},
+{
+name = toeda;
+position = "{354, 229}";
 },
 {
 name = top;
@@ -71620,7 +71626,7 @@ position = "{16, 0}";
 },
 {
 name = top;
-position = "{300, 321}";
+position = "{228, 298}";
 }
 );
 hints = (

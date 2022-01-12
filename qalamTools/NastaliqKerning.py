@@ -118,7 +118,7 @@ class NastaliqKerning(FEZVerb):
         bariye = self.parser.fontfeatures.namedClasses["bariye"]
         self.isols = [x for x in self.parser.fontfeatures.namedClasses["isols"] if x not in bariye]
         finas = [x for x in self.parser.fontfeatures.namedClasses["finas"] if x not in bariye]
-        self.isols_finas = self.isols + finas
+        self.isols_finas = list(set(self.isols + finas) | set(bariye))
 
         # These glyphs are special cased. We should probably read
         # `blockers` from a glyph class, really, instead of hard

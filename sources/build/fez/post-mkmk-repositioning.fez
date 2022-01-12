@@ -131,6 +131,7 @@ Feature kern {
     # لتا
     Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <yPlacement=+250>) [@alif_like /(KAF|GAF|LAM)[mf]/];
     Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <xPlacement=-50>);
+    Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
   };
 
   Routine ClashesToRight {
@@ -138,12 +139,6 @@ Feature kern {
     Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
 
     # فت
-    Position [FEi2 FEm2] [TEm3 TEm11] (dda <xPlacement=-20>) ALIFf1;
-    Position [FEi2 FEm2] [sda ddb] [TEm3 TEm11] (dda <xPlacement=-20>) ALIFf1;
-    Position [FEi2 FEm2] [TEm3 TEm11] (dda <xPlacement=0>) /[GK]AF[mf]/;
-    Position [FEi2 FEm2] [sda dda] [TEm3 TEm11] (dda <xPlacement=0>) /[GK]AF[mf]/;
-    Position [FEi2 FEm2] [TEm3 TEm11] (dda <xPlacement=-50>);
-    Position [FEi2 FEm2] [sda dda] [TEm11 TEm3] (dda <xPlacement=-50>);
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
 
@@ -156,10 +151,11 @@ Feature kern {
 
     Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
     Position ([sda dda tda] <yPlacement=-50>) @BEm [sda dda tda] /[KG]AF[mf]/;
-    Position ([sda dda tda] <yPlacement=-50>) @BEm  /[KG]AF[mf]/;
     Position TEm7 ([sda dda tda] <yPlacement=-70>) /JIMm/ /[KG]AF[mf]/; # مستحکم
     # Let's clear it
     Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m1[36]/;
+    Position ([sda dda tda] <yPlacement=-50>) [@BEm /FEm/]  /[KG]AF[mf]/;
+    Position ([sda dda tda] <yPlacement=-50>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
     Position MADDA (/KAF|GAF/ <xAdvance=+70>);
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
 
@@ -175,12 +171,6 @@ Feature kern {
     Position (tdb.yb <xPlacement=-30>) AINf1;
   } UseMarkFilteringSet [tdb.yb];
 
-  Routine FeTeFinesse {
-    # Position /FEi/ /TEm/ ( dda <xPlacement=-50 yPlacement=+50> ) ;
-    Position /FEi/ dda /TEm/ ( dda <xPlacement=-50  yPlacement=+50> ) ;
-    # قوتو
-    Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
-  } UseMarkFilteringSet [dda];
 
   Routine AddIsolDammaSpace {
     Position [@isols @finas] DAMMA ( @inits <xAdvance=+100> );

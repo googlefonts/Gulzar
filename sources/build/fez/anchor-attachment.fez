@@ -61,7 +61,7 @@ Feature mark {
   };
   # Long re glyphs have their own toeda anchor, so put it there.
   Routine ReattachToeda {
-    Attach &toeda &_toeda [REf2 REf3];
+    Attach &toeda &_toeda bases;
   };
 };
 
@@ -387,7 +387,7 @@ Routine AtHeight500pos {
     Chain (@dal_like BEi7 ^DoNothingPos); # ندبجن
     Chain (@dal_like BEi14 @dots_one ^DropATinyBitMore); # یریں
     Chain ([@dal_like @vao_like] /[KG]AFi/ ^OpenSmallSpaceBeforeKern @BEm @dots); # پرکیلنڈ
-    Chain ([@dal_like @vao_like] BEi16 ^OpenTinySpaceBeforeKern @dots); #  ہ یر
+    Chain ([@dal_like @vao_like] BEi16 ^OpenSmallSpaceBeforeKern @dots); #  ہ یر
     Chain ([@dal_like @vao_like] BEi5 ^OpenSmallSpaceBeforeKern tdb ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] BEi5 @dots ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] @BEi ^DoNothingPos @dots_one ^DropATinyBitMore); # ھوین
