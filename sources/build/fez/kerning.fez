@@ -10,11 +10,11 @@ SetCategory comma.urdu ligature;
 Feature kern {
 	# This runs the autokerner, and brings together initial glyphs
 	# and final glyphs to within either 100 units of one another or
-	# to a maximum of 50% of the final glyph's width "under" the
+	# to a maximum of 65% of the final glyph's width "under" the
 	# final glyph, whichever is the smallest.
 	# We don't kern bari-yes, and we have to include BARI_YEu1 in that.
 	DefineClass @bariye = /BARI_YE/;
-	NastaliqKerning 100 50%;
+	NastaliqKerning 100 65%;
 
 	# The autokerner only considers the space underneath two glyphs:
 	# the final/isolate of one "word" and the initial of the next. But
@@ -23,23 +23,24 @@ Feature kern {
 	# the final can actually collide with the medial. We don't expect
 	# the autokerner to detect this, and deal with it manually.
 	Routine FixShortKern {
-		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+350>) /JIMm|BEm14/;
+		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /JIMm|BEm14/;
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /BEm9/;
-		Position [REu1 REf1 REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
-		Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # دبی
-		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # وبی
-		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+100>); # م بی
-		Position @alif_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # الی
-		Position [@isols @finas] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # الی
+		Position [REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+350>) @finas; # دبی
+		Position [REu1 REf1] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+300>) @finas; # دبی
+		Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+150>) @finas; # دبی
+		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+150>) @finas; # وبی
+		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+100>) @finas; # م بی
+		Position @alif_like ([BEi13 TEi13 LAMi13] <xAdvance=+120>) @finas;
+		Position @alif_like ([FEi13 GAFi13 KAFi13 LAMi2 LAMi9] <xAdvance=+90>) @finas; #  
+		Position [@isols @finas] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # الی
 
-		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
+		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
 
 	} IgnoreLigatures IgnoreMarks;
 
 	# And finally some ad-hoc fixes...
 
 	Routine FixShortKern3 {
-		Position /ALIF/ (/HAYCi/ <xAdvance=+100>) /haydb/;
 		Position /REf3/ (/TEi/ <xAdvance=+100>);
 	} IgnoreLigatures UseMarkFilteringSet /dda|sdb|haydb/;
 

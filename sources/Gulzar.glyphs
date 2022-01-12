@@ -1,7 +1,7 @@
 {
 .appVersion = "3072";
 DisplayStrings = (
-"/space.urdu/LAMf1"
+"/FEi3/LAMf1"
 );
 classes = (
 {
@@ -35252,7 +35252,7 @@ position = "{49, 0}";
 },
 {
 name = top;
-position = "{134, 87}";
+position = "{114, 107}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -37032,7 +37032,7 @@ position = "{49, 0}";
 },
 {
 name = top;
-position = "{188, 210}";
+position = "{168, 257}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -37044,7 +37044,7 @@ nodes = (
 "215 -4 OFFCURVE",
 "215 145 CURVE SMOOTH",
 "215 202 OFFCURVE",
-"191 305 OFFCURVE",
+"190 305 OFFCURVE",
 "129 305 CURVE SMOOTH",
 "91 305 OFFCURVE",
 "80 279 OFFCURVE",
@@ -46745,7 +46745,7 @@ position = "{11, 0}";
 },
 {
 name = top;
-position = "{512, 481}";
+position = "{412, 481}";
 }
 );
 hints = (
@@ -54992,19 +54992,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{430, -41}";
+position = "{330, -41}";
 },
 {
 name = entry;
-position = "{407, 300}";
+position = "{307, 300}";
 },
 {
 name = toeda;
-position = "{367, 388}";
+position = "{267, 388}";
 },
 {
 name = top;
-position = "{363, 383}";
+position = "{263, 383}";
 }
 );
 hints = (
@@ -55023,26 +55023,26 @@ paths = (
 {
 closed = 1;
 nodes = (
-"142 -189 OFFCURVE",
-"226 -73 OFFCURVE",
-"261 -17 CURVE SMOOTH",
-"349 125 OFFCURVE",
-"381 206 OFFCURVE",
-"466 261 CURVE",
-"454 279 OFFCURVE",
-"427 306 OFFCURVE",
-"407 300 CURVE",
-"342 242 OFFCURVE",
-"266 69 OFFCURVE",
-"191 -24 CURVE SMOOTH",
-"173 -47 OFFCURVE",
-"97 -142 OFFCURVE",
-"0 -190 CURVE",
-"3 -206 LINE"
+"42 -189 OFFCURVE",
+"126 -73 OFFCURVE",
+"161 -17 CURVE SMOOTH",
+"249 125 OFFCURVE",
+"281 206 OFFCURVE",
+"366 261 CURVE",
+"354 279 OFFCURVE",
+"327 306 OFFCURVE",
+"307 300 CURVE",
+"242 242 OFFCURVE",
+"166 69 OFFCURVE",
+"91 -24 CURVE SMOOTH",
+"73 -47 OFFCURVE",
+"-3 -142 OFFCURVE",
+"-100 -190 CURVE",
+"-97 -206 LINE"
 );
 }
 );
-width = 466;
+width = 900;
 }
 );
 note = REf2;
@@ -55055,19 +55055,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{320, -116}";
+position = "{220, -116}";
 },
 {
 name = entry;
-position = "{609, 358}";
+position = "{509, 358}";
 },
 {
 name = toeda;
-position = "{467, 456}";
+position = "{367, 456}";
 },
 {
 name = top;
-position = "{488, 465}";
+position = "{388, 465}";
 }
 );
 hints = (
@@ -55086,35 +55086,35 @@ paths = (
 {
 closed = 1;
 nodes = (
-"78 -199 OFFCURVE",
-"154 -143 OFFCURVE",
-"182 -115 CURVE SMOOTH",
-"289 -8 OFFCURVE",
-"326 106 OFFCURVE",
-"395 180 CURVE SMOOTH",
-"423 210 OFFCURVE",
-"474 264 OFFCURVE",
-"545 260 CURVE",
-"575 283 OFFCURVE",
-"595 314 OFFCURVE",
-"609 358 CURVE",
-"591 364 OFFCURVE",
-"573 367 OFFCURVE",
-"556 367 CURVE SMOOTH",
-"487 367 OFFCURVE",
-"430 319 OFFCURVE",
-"389 267 CURVE SMOOTH",
-"326 188 OFFCURVE",
-"271 79 OFFCURVE",
-"184 -32 CURVE SMOOTH",
-"133 -96 OFFCURVE",
-"67 -155 OFFCURVE",
-"0 -189 CURVE",
-"3 -205 LINE"
+"-22 -199 OFFCURVE",
+"54 -143 OFFCURVE",
+"82 -115 CURVE SMOOTH",
+"189 -8 OFFCURVE",
+"226 106 OFFCURVE",
+"295 180 CURVE SMOOTH",
+"323 210 OFFCURVE",
+"374 264 OFFCURVE",
+"445 260 CURVE",
+"475 283 OFFCURVE",
+"495 314 OFFCURVE",
+"509 358 CURVE",
+"491 364 OFFCURVE",
+"473 367 OFFCURVE",
+"456 367 CURVE SMOOTH",
+"387 367 OFFCURVE",
+"330 319 OFFCURVE",
+"289 267 CURVE SMOOTH",
+"226 188 OFFCURVE",
+"171 79 OFFCURVE",
+"84 -32 CURVE SMOOTH",
+"33 -96 OFFCURVE",
+"-33 -155 OFFCURVE",
+"-100 -189 CURVE",
+"-97 -205 LINE"
 );
 }
 );
-width = 609;
+width = 509;
 }
 );
 note = REf3;
@@ -57589,7 +57589,7 @@ position = "{0, 1}";
 },
 {
 name = top;
-position = "{367, 166}";
+position = "{367, 196}";
 }
 );
 components = (
@@ -59818,7 +59818,7 @@ position = "{54, 0}";
 },
 {
 name = top;
-position = "{131, 152}";
+position = "{161, 152}";
 }
 );
 hints = (

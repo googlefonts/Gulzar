@@ -122,24 +122,27 @@ Feature kern {
     Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like @BEi] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
-    Position @alif_like (/TEi/ <xAdvance=+75>);
     Position @alif_like (/BEi/ <xAdvance=+75>) HAMZA_ABOVE;
 
     # لتا
-    Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <yPlacement=+250>) [@alif_like /(KAF|GAF|LAM)[mf]/];
+    Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <yPlacement=+300>) [@alif_like /(KAF|GAF|LAM)[mf]/];
     Position /(KAF|GAF|LAM)[im]/ /TEm/ (dda <xPlacement=-50>);
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
+
+    # چنا
+    Position JIMi2 [tdb sdb sda] BEm3 (@all_above_marks <yPlacement=+100>);
+    Position TEi3 ([dda tda] <xPlacement=+50>) ALIFf1;
   };
 
   Routine ClashesToRight {
     Position LAMi4 FEm11 (dda <xPlacement=-30>);
     Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
-
+    Position KAFi2 TEm3 (tda <xPlacement=-50>);
     # فت
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
     Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
 
-  } UseMarkFilteringSet [ sda dda SHADDA HAMZA_ABOVE];
+  } UseMarkFilteringSet [ sda dda tda SHADDA HAMZA_ABOVE];
 
   Routine DotsUnderGaf {
     Position (/\.one$/ <yPlacement=-220>) @NarrowMedials @all_above_marks /KAF|GAF/;
@@ -153,7 +156,7 @@ Feature kern {
     Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m1[36]/;
     Position ([sda dda tda] <yPlacement=-50>) [@BEm /FEm/]  /[KG]AF[mf]/;
     Position ([sda dda tda] <yPlacement=-50>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
-    Position MADDA (/KAF|GAF/ <xAdvance=+70>);
+    Position MADDA (/KAF|GAF/ <xAdvance=+200>);
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;

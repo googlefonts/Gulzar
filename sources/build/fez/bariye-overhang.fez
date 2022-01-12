@@ -2,7 +2,7 @@ Include "shared.fez";
 
 LoadPlugin BariYe;
 
-DefineClass @bariye = [BARI_YEf1 JIMf1 CH_YEf1];
+DefineClass @bariye = [BARI_YEf1 CH_YEf1];
 
 Feature kern {
   # This plugin deals with the "short bari ye" problem where a short sequence
@@ -12,7 +12,7 @@ Feature kern {
   # and adds a kern to the initial glyph to separate it from the end of the
   # preceding word.
   Routine BYFix {
-    BYFixOverhang -10 @bariye;
+    BYFixOverhang -100 @bariye;
   } IgnoreMarks;
   #Position tdb <0 0 0 0>;
 };
