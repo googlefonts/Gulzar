@@ -5,6 +5,7 @@ Include "shared.fez";
 # kern across spaces by using the IgnoreLigatures flag.
 LoadPlugin FontEngineering;
 SetCategory space.urdu ligature;
+SetCategory comma.urdu ligature;
 
 Feature kern {
 	# This runs the autokerner, and brings together initial glyphs
@@ -24,10 +25,11 @@ Feature kern {
 	Routine FixShortKern {
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+350>) /JIMm|BEm14/;
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /BEm9/;
-		Position [REu1 REf1] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
+		Position [REu1 REf1 REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
 		Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # دبی
 		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # وبی
 		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+100>); # م بی
+		Position @alif_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # الی
 
 		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi7 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
 
@@ -44,8 +46,7 @@ Feature kern {
 		Position @bigbowlfina space.urdu (/([KG]AF|LAM)i/ <xAdvance=+50>) /JIMm|BEm/ [ddb tdb];
 		Position REf3 (/[KG]AFi/ <xAdvance=-120>);
 		Position @vao_like (space.urdu <xAdvance=50>) /AINi/;
-		Position @bigbowlfina (space.urdu <xAdvance=150>) /JIMi/ /[sdt]db/;
-		Position @bigbowlfina (space.urdu <xAdvance=100>) /AINi/;
+		Position @bigbowlfina (space.urdu <xAdvance=150>) /JIMi/;
 		Position /NUN[uf]/ (space.urdu <xAdvance=100>) /HAYCi/;
 		Position [REf2 REf3] (ALIFu1 <xAdvance=200>) [BEi11 TEi11];
 	} UseMarkFilteringSet /[sdt]db/;

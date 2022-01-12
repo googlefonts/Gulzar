@@ -198,6 +198,7 @@ Routine DropALotMore {
 # Instead, we have a separate lookup with different mark filtering rules
 # and use that to add more space when the final glyph has an above mark.
 Routine ClearUpperDots {
+  Chain (FEu1 ^DoNothingPos);
   Chain ([@isols @finas] [tda sda toeda HAMZA_ABOVE] @inits ^OpenSmallSpaceBeforeKern);
 } IgnoreLigatures;
 
@@ -395,6 +396,7 @@ Routine AtHeight500pos {
     Chain (@alif_like BEi16 ^DoNothingPos); # اپر
     Chain ([@dal_like @vao_like] BEi16 ^DoNothingPos); # رپر
     Chain (@long_re @DOTi ^Tighten @dots_two ^DoNothingPos); # سربر
+    Chain (@kaf_like ^DoNothingPos); # ف تہجی
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # ومچھا
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # ومچھا
     Chain ([@isols @finas] ^ClearUpperDots @DOTi ^OpenSpaceBeforeKern ); # ومچھا
@@ -419,6 +421,8 @@ Routine AtHeight600pos {
     Chain ([@dal_like @vao_like] @DOTi ^OpenTinySpaceBeforeKern @dots_one ^DropATinyBitMore); # دیتی
     Chain ([@dal_like @vao_like] [LAMi7 @narrow_inits] ^OpenSpaceBeforeKern /JIMm/ @dots); # دیتی
     Chain (@long_re @DOTi ^DoNothingPos @dots); # میر پشیمل
+
+    Chain (@kaf_like ^DoNothingPos); # ف تہجی
 
     Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
     Chain ([@isols @finas] @DOTi ^OpenBigSpaceBeforeKern @dots); # اچھّی
