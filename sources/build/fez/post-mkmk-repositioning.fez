@@ -116,7 +116,7 @@ Feature kern {
     Position JIMi1 /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
 
     # ہا
-    Position (haydb <yPlacement=+50>) ALIFf1;
+    Position (haydb <yPlacement=+70>) ALIFf1;
 
     #  پڑتا
     #Position REf1 toeda ([@inits @isols] <xAdvance=+200>);

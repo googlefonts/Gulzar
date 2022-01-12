@@ -299,6 +299,7 @@ Routine AtHeight0pos {
     Chain (@dal_like BEi3 ^TightenSlightly @dots ^DropATinyBitMore); # دبہ دیہ دپہ
     Chain (@dal_like BEi3 ^TightenSlightly); # دںہ
     Chain (@dal_like toeda /KAFi/ ^OpenSpaceBeforeKern); # ڈکا
+    Chain ([@vao_like @dal_like] /HAYCi/ ^DoNothingPos); # وہا
     Chain (@alif_like KAFi3 ^OpenSpaceBeforeKern); # اکا
     Chain (@alif_like /HAYCi/ ^TightenSlightly); # ا ہہ
     Chain (@alif_like BEi3 ^DoNothingPos); # ایگ
@@ -481,7 +482,7 @@ Feature rlig {
   # And another round of making sure that ڑ doesn't bang into what
   # follows.
   Routine OtherFixes2 {
-    Chain ([REf1 REf2 REf3] ^ClearUpperDots);
+    Chain ([REf1 REf2] ^ClearUpperDots);
     Chain (@alif_like BEi13 ^OpenMediumSpaceBeforeKern /.yb$/); # یابی
   };
 };
