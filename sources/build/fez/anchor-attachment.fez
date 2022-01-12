@@ -393,7 +393,6 @@ Routine AtHeight500pos {
     Chain (@alif_like BEi16 ^OpenTinySpaceBeforeKern [ddb tdb]); # اپر
     Chain (@alif_like BEi16 ^DoNothingPos); # اپر
     Chain ([@dal_like @vao_like] BEi16 ^DoNothingPos); # رپر
-    Chain ([@dal_like @vao_like] BEi16 ^DoNothingPos); # رپر
     Chain (@long_re @DOTi ^Tighten @dots_two ^DoNothingPos); # سربر
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots); # ومچھا
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpaceBeforeKern @DOTm @dots ); # ومچھا
@@ -477,7 +476,7 @@ Feature rlig {
   # And another round of making sure that ڑ doesn't bang into what
   # follows.
   Routine OtherFixes2 {
-    Chain ([REf1 REf2 REf3 DALu1 REu1] ^ClearUpperDots);
+    Chain ([REf1 REf2 REf3] ^ClearUpperDots);
     Chain (@alif_like BEi13 ^OpenMediumSpaceBeforeKern /.yb$/); # یابی
   };
 };

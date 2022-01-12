@@ -22,6 +22,8 @@ Feature kern {
 	# the final can actually collide with the medial. We don't expect
 	# the autokerner to detect this, and deal with it manually.
 	Routine FixShortKern {
+		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+300>) /JIMm|BEm14/;
+		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /BEm9/;
 		Position [REu1 REf1] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+200>); # دبی
 		Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # دبی
 		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi7 LAMi2 LAMi9] <xAdvance=+150>); # وبی
