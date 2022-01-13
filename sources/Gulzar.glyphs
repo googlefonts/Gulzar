@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/BEm8/TEm8"
+);
 classes = (
 {
 automatic = 1;
@@ -60065,7 +60068,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{368, 205}";
+position = "{229, 650}";
 }
 );
 components = (
@@ -64091,7 +64094,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{235, 9}";
+position = "{148, -204}";
 },
 {
 name = entry;
@@ -64319,7 +64322,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{235, 9}";
+position = "{148, -204}";
 },
 {
 name = entry;
@@ -66720,11 +66723,11 @@ position = "{0, 0}";
 },
 {
 name = toeda;
-position = "{354, 268}";
+position = "{284, 685}";
 },
 {
 name = top;
-position = "{359, 244}";
+position = "{229, 650}";
 }
 );
 hints = (
