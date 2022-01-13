@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/REf1/REf2/REf3"
+);
 classes = (
 {
 automatic = 1;
@@ -55011,11 +55014,11 @@ position = "{307, 300}";
 },
 {
 name = toeda;
-position = "{267, 388}";
+position = "{247, 388}";
 },
 {
 name = top;
-position = "{263, 383}";
+position = "{243, 383}";
 }
 );
 hints = (
@@ -55053,7 +55056,7 @@ nodes = (
 );
 }
 );
-width = 900;
+width = 366;
 }
 );
 note = REf2;
@@ -55074,11 +55077,11 @@ position = "{509, 358}";
 },
 {
 name = toeda;
-position = "{367, 456}";
+position = "{347, 456}";
 },
 {
 name = top;
-position = "{388, 465}";
+position = "{368, 465}";
 }
 );
 hints = (
