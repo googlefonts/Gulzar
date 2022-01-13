@@ -60,6 +60,7 @@ from glyphtools import (
     categorize_glyph,
     get_glyph_metrics,
     bin_glyphs_by_metric,
+    bin_dictionary,
     get_rise,
     get_run
 )
@@ -104,13 +105,13 @@ def dropnone(a):
 
 
 # Accuracy of width detector
-accuracy1 = 5  # This creates O[(n • n+1)/2] lookups
+accuracy1 = 7  # This creates O[(n • n+1)/2] lookups
 # Accuracy of rise detector
-accuracy2 = 5
+accuracy2 = 7
 
-failsafe_max_length = 5
+failsafe_max_length = 6
 failsafe_min_run = 100
-failsafe_min_rise = 50
+failsafe_min_rise = 10
 
 
 class BYMoveDots(FEZVerb):
@@ -151,18 +152,7 @@ class BYMoveDots(FEZVerb):
                 -get_glyph_metrics(parser.font, bariye)["rsb"],
                 get_glyph_metrics(parser.font, bariye)["xMax"] - entry_anchor[0],
             )
-            # bariye_tail += max(get_glyph_metrics(parser.font, dot)["width"] for dot in below_dots) / 2
-            # # Increase tail by half the width of the widest nukta
-            # bariye_tail += (
-            #     max(
-            #         [
-            #             get_glyph_metrics(parser.font, g)["xMax"]
-            #             - get_glyph_metrics(parser.font, g)["xMin"]
-            #             for g in below_dots
-            #         ]
-            #     )
-            #     / 2
-            # )
+            bariye_tail -= 150 # Fudge
 
             # Consider two cases.
             # First, the case where the beh is init and full of short medis
@@ -275,9 +265,9 @@ class BYMoveDots(FEZVerb):
 
             if not alwaysDrop:
                 # Check to see if it can fit in the gap, and only move it if it can't
-                medis_by_rise = bin_glyphs_by_metric(
-                    parser.font, medis, "rise", bincount=accuracy2
-                )
+
+                metrics = {g: max(get_glyph_metrics(parser.font, g)["rise"],failsafe_min_rise) for g in medis}
+                medis_by_rise = bin_dictionary(metrics, accuracy2)
 
                 medis_by_rise = [(a,max(b,failsafe_min_rise)) for a,b in medis_by_rise]
 
