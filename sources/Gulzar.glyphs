@@ -1,8 +1,5 @@
 {
-.appVersion = "3072";
-DisplayStrings = (
-"/FEi3/LAMf1"
-);
+.appVersion = "1352";
 classes = (
 {
 automatic = 1;
@@ -16535,6 +16532,16 @@ color = 3;
 glyphname = "heh-ar";
 layers = (
 {
+anchors = (
+{
+name = bottom;
+position = "{131, -1}";
+},
+{
+name = top;
+position = "{172, 385}";
+}
+);
 components = (
 {
 name = HAYCu1;
@@ -35495,7 +35502,7 @@ position = "{6, 0}";
 },
 {
 name = top;
-position = "{463, 355}";
+position = "{215, 630}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -59441,7 +59448,7 @@ position = "{6, 0}";
 },
 {
 name = top;
-position = "{467, 323}";
+position = "{215, 630}";
 }
 );
 components = (
@@ -70762,11 +70769,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{72, -191}";
-},
-{
-name = comma;
-position = "{79, -98}";
+position = "{32, -470}";
 },
 {
 name = exit;
@@ -70780,6 +70783,10 @@ position = "{87, 98}";
 components = (
 {
 name = HAYCi17;
+},
+{
+name = comma.urdu;
+transform = "{1, 0, 0, 1, -121, -471}";
 }
 );
 hints = (
