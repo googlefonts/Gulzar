@@ -6,7 +6,9 @@
 # design file - underneath the baseline, and hence underneath the
 # bari ye tail.
 Include "shared.fez";
-LoadPlugin BariYe;
+LoadPlugin qalamTools.BariYe;
+
+DefineClass @behs = /(JIM|BE|HAYC)[im]/;
 
 Feature rlig {
   # This command enumerates all sequences of glyphs followed by a @bariye,
@@ -21,8 +23,13 @@ Feature rlig {
   # only causes them to substitute the marks given in the list.
   # Each command matches a set of bases with either zero or one marks
   # following each base. First we drop the nukta.
-  BYMoveDots AlwaysDrop [@below_nuktas haydb haydb.yb];
+  BYMoveDots TryToFit [ddb tdb sdb ddb.yb tdb.yb sdb.yb haydb haydb.yb];
   # ..and then we do it again but this time drop kasras. We handle it
   # separately in case we have a sequence like بِے with both nukta and kasra.
   BYMoveDots AlwaysDrop [KASRA KASRA.yb];
+};
+
+Feature ss01 {
+  # This is called "showing off"
+  BYMoveDots AlwaysDrop [ddb tdb sdb ddb.yb tdb.yb sdb.yb haydb haydb.yb];
 };
