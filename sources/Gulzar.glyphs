@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/BEm8/TEm8"
-);
 classes = (
 {
 automatic = 1;
@@ -57511,7 +57508,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{550, 212}";
+position = "{684, 412}";
 }
 );
 components = (
@@ -58533,7 +58530,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{520, 208}";
+position = "{681, 417}";
 }
 );
 components = (
