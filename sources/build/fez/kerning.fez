@@ -28,10 +28,10 @@ Feature kern {
 		Position [REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+350>) @finas; # دبی
 		Position [REu1 REf1] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+300>) @finas; # دبی
 		Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+220>) @finas; # دبی
-		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+180>) @finas; # وبی
+		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+220>) @finas; # وبی
 		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+100>) @finas; # م بی
-		Position @alif_like ([BEi13 TEi13 LAMi13] <xAdvance=+120>) @finas;
-		Position @alif_like ([FEi13 GAFi13 KAFi13 LAMi2 LAMi9] <xAdvance=+90>) @finas; #  
+		Position @alif_like ([BEi13 TEi13 LAMi13] <xAdvance=+160>) @finas;
+		Position @alif_like ([FEi13 GAFi13 KAFi13 LAMi2 LAMi9] <xAdvance=+120>) @finas; #  
 		Position [@isols @finas] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # الی
 
 		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi2 LAMi9] <xAdvance=+300>); # یی پی

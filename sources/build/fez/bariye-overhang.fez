@@ -12,7 +12,7 @@ Feature kern {
   # and adds a kern to the initial glyph to separate it from the end of the
   # preceding word.
   Routine BYFix {
-    BYFixOverhang -100 @bariye;
-  } IgnoreMarks;
+    BYFixOverhang 0 @bariye;
+  } IgnoreMarks IgnoreLigatures;
   #Position tdb <0 0 0 0>;
 };

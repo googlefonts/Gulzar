@@ -322,7 +322,7 @@ Routine AtHeight0pos {
 } IgnoreLigatures UseMarkFilteringSet [@dots toeda];
 
 Routine AtHeight200pos {
-    Chain ([BARI_YEu1 BARI_YEf1] @JIMi ^OpenSmallSpaceBeforeKern);
+    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpaceBeforeKern);
 
     Chain (@bigbowlfina BEisd1 ^OpenMediumSpaceBeforeKern [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
@@ -373,6 +373,8 @@ Routine AtHeight200pos {
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one sdb.two ddb.two tdb.two];
 
 Routine AtHeight400pos {
+    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenMediumSpaceBeforeKern [ddb tdb]); # ےپیل
+    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenTinySpaceBeforeKern); # ےپیل
     Chain ([TOEf1 TOEu1] BEisd1 ^OpenTinySpaceBeforeKern); # ط پیٹرن
     Chain (@alif_like BEisd1 ^TightenSlightly sdb); # اببل
     Chain (@alif_like @BEi ^DoNothingPos @dots); # اںبل ایبل  اپبل امبل
@@ -394,7 +396,6 @@ Routine AtHeight400pos {
     Chain ([@dal_like @vao_like] ^ClearUpperDots /HAYCi/ ^OpenTinySpaceBeforeKern @dots); # وہبل
     Chain (@alif_like /HAYCi/ ^DoNothingPos); # اہبل
 
-    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenTinySpaceBeforeKern); # ےپیل
 
     Chain ([@isols @finas] ^ClearUpperDots @DOTi ^OpenSpaceBeforeKern @dots); # مینو پھر
     Chain ([@isols @finas] ^ClearUpperDots @dots @DOTi ^OpenSpaceBeforeKern @dots); # پ پہلو
@@ -403,6 +404,7 @@ Routine AtHeight400pos {
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one @dots_two];
 
 Routine AtHeight500pos {
+    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenTinySpaceBeforeKern); # ےپیل
     Chain (@dal_like BEi10 ^DoNothingPos); # تقریظیں
     Chain (@dal_like BEi7 ^DoNothingPos); # ندبجن
     Chain (@dal_like BEi14 @dots_one ^DropATinyBitMore); # یریں
