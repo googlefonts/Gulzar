@@ -60,7 +60,6 @@ from glyphtools import (
     categorize_glyph,
     get_glyph_metrics,
     bin_glyphs_by_metric,
-    bin_dictionary,
     get_rise,
     get_run
 )
@@ -105,13 +104,12 @@ def dropnone(a):
 
 
 # Accuracy of width detector
-accuracy1 = 7  # This creates O[(n • n+1)/2] lookups
+accuracy1 = 5  # This creates O[(n • n+1)/2] lookups
 # Accuracy of rise detector
-accuracy2 = 7
+accuracy2 = 5
 
-failsafe_max_length = 6
+failsafe_max_length = 4
 failsafe_min_run = 100
-failsafe_min_rise = 10
 
 
 class BYMoveDots(FEZVerb):
@@ -130,7 +128,6 @@ class BYMoveDots(FEZVerb):
         medis = parser.fontfeatures.namedClasses["medis"]
         inits = parser.fontfeatures.namedClasses["inits"]
         behs = parser.fontfeatures.namedClasses["behs"]
-
         below_dots = below_dots.resolve(parser.fontfeatures, parser.font)
         smallest_medi_width = max(failsafe_min_run, min([get_run(parser.font, g) for g in medis]))
         smallest_init_beh_width = min(
@@ -140,9 +137,31 @@ class BYMoveDots(FEZVerb):
             (set(behs) & set(inits)),
             key=lambda g: get_run(parser.font, g),
         )
-
         warnings.warn("Smallest medi width is %i" % smallest_medi_width)
         smallest_medi = min(medis, key=lambda g: get_run(parser.font, g))
+
+
+        # Next, let's create a chain rule for all nukta sequences
+        dropBYsRoutine = fontFeatures.Routine(flags=0x0010)
+        dropBYsRoutine.markFilteringSet = below_dots
+
+        dropADotRoutine = fontFeatures.Routine()
+        # Substitute those not ending .yb with those ending .yb
+        below_dots_non_yb = list(
+            sorted(filter(lambda x: not x.endswith(".yb"), below_dots))
+        )
+        below_dots_yb = list(
+            sorted(filter(lambda x: x.endswith(".yb"), below_dots))
+        )
+        if len(below_dots_non_yb) != len(below_dots_yb):
+            raise ValueError(
+                "Mismatch in @below_dots: %s has .yb suffix, %s does not"
+                % (below_dots_yb, below_dots_non_yb)
+            )
+
+        dropADotRoutine.addRule(
+            fontFeatures.Substitution([below_dots_non_yb], [below_dots_yb])
+        )
 
         routines = []
         for bariye in parser.fontfeatures.namedClasses["bariye"]:
@@ -152,7 +171,18 @@ class BYMoveDots(FEZVerb):
                 -get_glyph_metrics(parser.font, bariye)["rsb"],
                 get_glyph_metrics(parser.font, bariye)["xMax"] - entry_anchor[0],
             )
-            bariye_tail -= 150 # Fudge
+            # bariye_tail += max(get_glyph_metrics(parser.font, dot)["width"] for dot in below_dots) / 2
+            # # Increase tail by half the width of the widest nukta
+            # bariye_tail += (
+            #     max(
+            #         [
+            #             get_glyph_metrics(parser.font, g)["xMax"]
+            #             - get_glyph_metrics(parser.font, g)["xMin"]
+            #             for g in below_dots
+            #         ]
+            #     )
+            #     / 2
+            # )
 
             # Consider two cases.
             # First, the case where the beh is init and full of short medis
@@ -183,34 +213,10 @@ class BYMoveDots(FEZVerb):
             maximum_sequence_length = min(failsafe_max_length, max(
                 maximum_sequence_length_1, maximum_sequence_length_2
             ))
-
             warnings.warn("Max sequence width is %i" % maximum_sequence_length)
 
-            # Next, let's create a chain rule for all nukta sequences
-
-            dropBYsRoutine = fontFeatures.Routine(flags=0x08)
-            # dropBYsRoutine.markFilteringSet = below_dots
-
-            dropADotRoutine = fontFeatures.Routine()
-            # Substitute those not ending .yb with those ending .yb
-            below_dots_non_yb = list(
-                sorted(filter(lambda x: not x.endswith(".yb"), below_dots))
-            )
-            below_dots_yb = list(
-                sorted(filter(lambda x: x.endswith(".yb"), below_dots))
-            )
-            if len(below_dots_non_yb) != len(below_dots_yb):
-                raise ValueError(
-                    "Mismatch in @below_dots: %s has .yb suffix, %s does not"
-                    % (below_dots_yb, below_dots_non_yb)
-                )
-
-            dropADotRoutine.addRule(
-                fontFeatures.Substitution([below_dots_non_yb], [below_dots_yb])
-            )
-
-
-            maybeDropDotRoutine = fontFeatures.Routine(flags=0x008)
+            maybeDropDotRoutine = fontFeatures.Routine(flags=0x0010)
+            maybeDropDotRoutine.markFilteringSet = below_dots
 
             binned_medis = bin_glyphs_by_metric(
                 parser.font, medis, "run", bincount=accuracy1
@@ -219,17 +225,8 @@ class BYMoveDots(FEZVerb):
                 parser.font, inits, "run", bincount=accuracy1
             )
 
-            behCarrierToDrop = fontFeatures.Routine(flags=0x0010)
-            behCarrierToDrop.markFilteringSet = below_dots
-            behCarrierToDropLookups = [None, [dropADotRoutine]]
-            behCarrierToDrop.rules.append(
-                fontFeatures.Chaining(
-                    [behs, below_dots], lookups=behCarrierToDropLookups
-                )
-            )
-
-
             queue = [[[[bariye]]]]
+            bin2mk = {"0": None, "1": below_dots}
             while len(queue) > 0:
                 consideration = queue.pop(0)
                 # import code; code.interact(local=locals())
@@ -243,37 +240,33 @@ class BYMoveDots(FEZVerb):
 
                 lu = [None] * len(sequence)
                 if alwaysDrop:
-                    lu[0] = [behCarrierToDrop]
+                    lu[0] = [self.parser.fontfeatures.referenceRoutine(dropADotRoutine)]
                 else:
-                    lu[0] = [maybeDropDotRoutine]
-
-                # for j in range(0, 2 ** (len(sequence) - 1)):
-                #     binary = "{0:0%ib}" % (len(sequence) - 1)
-                #     marksequence = [bin2mk[x] for x in list(binary.format(j))]
-                #     # import code; code.interact(local=locals())
-                #     newsequence = dropnone(interleave(sequence, marksequence))
-                chainrule = fontFeatures.Chaining(
-                    [behs], postcontext=sequence, lookups=lu
-                )
-                # We don't combine the bins here precisely because they're
-                # disjoint sets and that means they can be expressed as a
-                # format 2 class-based rule! Wonderful!
-                dropBYsRoutine.addRule(chainrule)
+                    lu[0] = [self.parser.fontfeatures.referenceRoutine(maybeDropDotRoutine)]
+                for j in range(0, 2 ** (len(sequence) - 1)):
+                    binary = "{0:0%ib}" % (len(sequence) - 1)
+                    marksequence = [bin2mk[x] for x in list(binary.format(j))]
+                    # import code; code.interact(local=locals())
+                    newsequence = dropnone(interleave(sequence, marksequence))
+                    chainrule = fontFeatures.Chaining(
+                        [below_dots], postcontext=newsequence, lookups=lu
+                    )
+                    # We don't combine the bins here precisely because they're
+                    # disjoint sets and that means they can be expressed as a
+                    # format 2 class-based rule! Wonderful!
+                    dropBYsRoutine.addRule(chainrule)
 
                 for m in binned_medis:
                     queue.append([list(m)] + consideration)
 
             if not alwaysDrop:
                 # Check to see if it can fit in the gap, and only move it if it can't
-
-                metrics = {g: max(get_glyph_metrics(parser.font, g)["rise"],failsafe_min_rise) for g in medis}
-                medis_by_rise = bin_dictionary(metrics, accuracy2)
-
-                medis_by_rise = [(a,max(b,failsafe_min_rise)) for a,b in medis_by_rise]
-
+                medis_by_rise = bin_glyphs_by_metric(
+                    parser.font, medis, "rise", bincount=accuracy2
+                )
                 queue = [[[[bariye], get_glyph_metrics(parser.font, bariye)["rise"]]]]
                 ybClearance = self.get_yb_clearance(parser, bariye)
-                gapRequired = 500 # self.compute_threshold(parser, below_dots) - ybClearance
+                gapRequired = self.compute_threshold(parser, below_dots) - ybClearance
                 warnings.warn(
                     "%i units of rise are required to fit a nukta in the gap"
                     % gapRequired
@@ -282,19 +275,19 @@ class BYMoveDots(FEZVerb):
                     consideration = queue.pop(0)
                     total_rise = sum([s[1] for s in consideration])
                     repsequence = [(s[0][0], s[1]) for s in consideration]
-                    warnings.warn("Sequence %s total rise %i required %i" % (repsequence, total_rise, gapRequired))
+                    # warnings.warn("Sequence %s total rise %i required %i" % (repsequence, total_rise, gapRequired))
                     if (
                         total_rise > gapRequired
-                        or len(consideration) > failsafe_max_length
+                        or len(consideration) > maximum_sequence_length
                     ):
-                        warnings.warn("Does not drop")
+                        # warnings.warn("Does not drop")
                         continue
 
                     sequence = [s[0] for s in consideration]
                     lu = [None] * len(sequence)
-                    lu[0] = [behCarrierToDrop]
+                    lu[0] = [dropADotRoutine]
                     chainrule = fontFeatures.Chaining(
-                        [behs], postcontext=sequence, lookups=lu
+                        [below_dots], postcontext=sequence, lookups=lu
                     )
                     maybeDropDotRoutine.addRule(chainrule)
                     # print("Drops %s"  % chainrule.asFea())
@@ -302,11 +295,7 @@ class BYMoveDots(FEZVerb):
                         if total_rise + m[1] < gapRequired:
                             queue.append([list(m)] + consideration)
 
-            # Add all the routines to the parser
-            parser.fontfeatures.routines.append(dropADotRoutine)
-            if not alwaysDrop:
-                parser.fontfeatures.routines.append(maybeDropDotRoutine)
-            routines.append(dropBYsRoutine)
+        routines.append(dropBYsRoutine)
         return routines
 
     def get_yb_clearance(self, parser, bariye):
@@ -338,7 +327,7 @@ class BYMoveDots(FEZVerb):
         font = parser.font
         behforms = list(
             filter(
-                lambda g: g.startswith("HAYC"),
+                lambda g: g.startswith("BEm") or g.startswith("BEi"),
                 parser.font.exportedGlyphs(),
             )
         )
@@ -349,17 +338,17 @@ class BYMoveDots(FEZVerb):
         if hasattr(parser.fontfeatures, "anchors"):
             anchor1_y = statistics.mean(
                 [
-                    parser.fontfeatures.anchors[x]["_comma"][1]
+                    parser.fontfeatures.anchors[x]["_bottom"][1]
                     for x in below_dots
-                    if x in parser.fontfeatures.anchors and "_comma" in parser.fontfeatures.anchors[x]
+                    if x in parser.fontfeatures.anchors and "_bottom" in parser.fontfeatures.anchors[x]
                 ]
             )
             anchor2_y = statistics.mean(
                 [
-                    parser.fontfeatures.anchors[x]["comma"][1]
+                    parser.fontfeatures.anchors[x]["bottom"][1]
                     for x in behforms
                     if x in parser.fontfeatures.anchors
-                    and "comma" in parser.fontfeatures.anchors[x]
+                    and "bottom" in parser.fontfeatures.anchors[x]
                 ]
             )
         else:
@@ -387,13 +376,16 @@ class BYMoveDots(FEZVerb):
 class BYFixOverhang(FEZVerb):
     def action(self, args):
         overhang_padding, glyphs = args
+        overhang_padding = overhang_padding.resolve_as_integer()
         parser = self.parser
-        for c in ["inits", "medis"]:
+        for c in ["inits", "medis", "finas", "isols"]:
             if c not in parser.fontfeatures.namedClasses:
                 raise ValueError("Please define @%s class before calling")
 
         medis = parser.fontfeatures.namedClasses["medis"]
         inits = parser.fontfeatures.namedClasses["inits"]
+        finas = parser.fontfeatures.namedClasses["finas"]
+        isols = parser.fontfeatures.namedClasses["isols"]
         overhangers = glyphs.resolve(parser.fontfeatures, parser.font)
 
         binned_medis = bin_glyphs_by_metric(parser.font, medis, "run", bincount=8)
@@ -427,8 +419,18 @@ class BYFixOverhang(FEZVerb):
                         [input_[0]],
                         [fontFeatures.ValueRecord(xAdvance=int(adjustment))],
                         postcontext=postcontext,
+                        precontext=[finas+isols]
                     )
                 )
+                if adjustment > 200:
+                    rules.append(
+                        fontFeatures.Positioning(
+                            [input_[0]],
+                            [fontFeatures.ValueRecord(xAdvance=int(adjustment)-100)],
+                            postcontext=postcontext,
+                            precontext=[["space.urdu"]]
+                        )
+                    )
                 for medi in binned_medis:
                     workqueue.append([medi] + string)
         warnings.warn(

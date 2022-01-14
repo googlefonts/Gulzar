@@ -121,32 +121,32 @@ Routine DropTwo {
 # of the initial consonant "quite a bit", increasing the space between
 # the start of one word and the end of the previous one.
 Routine OpenSpaceBeforeKern {
-  Position (@inits <xAdvance=+250>) /tdb|haydb/;
-  Position (@inits <xAdvance=+180>) /sdb|ddb/;
-  Position (@inits <xAdvance=+180>) [@medis @finas];
-  Position toeda (@inits <xAdvance=+180>);
+  Position (@inits <xAdvance=+280>) /tdb|haydb/;
+  Position (@inits <xAdvance=+200>) /sdb|ddb/;
+  Position (@inits <xAdvance=+200>) [@medis @finas];
+  Position toeda (@inits <xAdvance=+200>);
 } IgnoreLigatures UseMarkFilteringSet /db|toeda/;
 
 # The following routines similarly adjust the spacing to various degrees.
 Routine OpenMediumSpaceBeforeKern {
-  Position (@inits <xAdvance=+280>) /tdb|haydb/;
-  Position (@inits <xAdvance=+280>) @medis;
-  Position (@inits <xAdvance=+180>) /sdb|ddb/;
+  Position (@inits <xAdvance=+330>) /tdb|haydb/;
+  Position (@inits <xAdvance=+250>) @medis;
+  Position (@inits <xAdvance=+250>) /sdb|ddb/;
   Position toeda (@inits <xAdvance=+180>);
 } IgnoreLigatures UseMarkFilteringSet /db|toeda/;
 
 Routine OpenBigSpaceBeforeKern {
-  Position (@inits <xAdvance=+400>) /tdb|haydb/;
+  Position (@inits <xAdvance=+380>) /tdb|haydb/;
   Position (@inits <xAdvance=+300>) /sdb|ddb/;
   Position (@inits <xAdvance=+300>) @medis;
   Position toeda (@inits <xAdvance=+300>);
 } IgnoreLigatures;
 
 Routine OpenSmallSpaceBeforeKern {
-  Position (/JIMi/ <xAdvance=+250>) /tdb/;
-  Position ([@inits @isols] <xAdvance=+160>) @all_above_marks;
-  Position ([@inits @isols] <xAdvance=+160>) /db|da|[mf](sd)?\d+/;
-  Position DAMMA ([@inits @isols] <xAdvance=+250>);
+  Position (/JIMi/ <xAdvance=+200>) /tdb/;
+  Position ([@inits @isols] <xAdvance=+150>) @all_above_marks;
+  Position ([@inits @isols] <xAdvance=+150>) /db|da|[mf](sd)?\d+/;
+  Position DAMMA ([@inits @isols] <xAdvance=+200>);
   Position @all_above_marks ([@inits @isols] <xAdvance=+160>);
 } IgnoreLigatures UseMarkFilteringSet @all_above_marks;
 
@@ -312,13 +312,9 @@ Routine AtHeight0pos {
     Chain (@alif_like BEi3 ^DoNothingPos); # ایگ
     Chain (@alif_like /TEi/ ^OpenTinySpaceBeforeKern); # جاتا
     Chain (@long_re [@BEi @JIMi] ^OpenSmallSpaceBeforeKern @dots); # جر یہ / سر جہا / سر چہا
-    Chain ([@bigbowlfina @dal_like @vao_like @alif_like] @JIMi ^TightenSlightly @dots); # ں جا
-
+    Chain (CH_YEu1 @DOTi ^DoNothingPos); # ی جا
+    Chain (@bigbowlfina @DOTi ^OpenSmallSpaceBeforeKern); # کی جا
     Chain (@kaf_like @JIMi ^OpenSmallSpaceBeforeKern); # یہ خت
-
-    Chain ([@isols @finas] @DOTi ^OpenSpaceBeforeKern @dots); # تقریظ
-    Chain ([@isols @finas] @dots @DOTi ^OpenSpaceBeforeKern @dots); # بیظ
-
 } IgnoreLigatures UseMarkFilteringSet [@dots toeda];
 
 Routine AtHeight200pos {
@@ -326,7 +322,8 @@ Routine AtHeight200pos {
 
     Chain (@bigbowlfina BEisd1 ^OpenMediumSpaceBeforeKern [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
-    Chain (@bigbowlfina @BEi ^OpenTinySpaceBeforeKern [sdb tdb ddb]); # ن پٹ
+    Chain (@bigbowlfina /HAYCi/ ^OpenTinySpaceBeforeKern haydb); # س ہی
+    Chain (@bigbowlfina @DOTi ^OpenTinySpaceBeforeKern [sdb tdb ddb]); # ن پٹ
 
     Chain ([@dal_like @vao_like] [@BEi @JIMi HAYCi2 HAYCi13] @dots ^DropATinyBitMore @DOTm @dots_two); # وپید
     Chain ([@dal_like @vao_like] [HAYCi2 HAYCi13] @dots_one ^DropATinyBitMore); # وہی
@@ -344,11 +341,16 @@ Routine AtHeight200pos {
     Chain (@vao_like @BEi ^OpenTinySpaceBeforeKern [@dots @dots_one]); # و پت
 
     Chain (@alif_like @BEi ^OpenTinySpaceBeforeKern @dots); # و پت
+
     Chain (@mim_like @BEi ^OpenSmallSpaceBeforeKern @dots); # جم پت
+    Chain (@mim_like @DOTi ^OpenTinySpaceBeforeKern);
+
+    Chain (@kaf_like BEi1 ^DoNothingPos); # یک پعا
     Chain (@kaf_like @DOTi ^OpenSmallSpaceBeforeKern @dots); # جب یہُو
     Chain (@kaf_like @dots @DOTi ^OpenSmallSpaceBeforeKern @dots); # اب چہر
     Chain (@alif_like @JIMi @dots ^DoNothingPos); # اجم
 
+    Chain ([@dal_like @vao_like] HAYCi17 ^DoNothingPos); # دہر 
     Chain (@dal_like /HAYCi/ ^OpenSmallSpaceBeforeKern @dots); # رہم
     Chain (@vao_like /HAYCi/ ^OpenTinySpaceBeforeKern @dots); # وہم
     Chain (@alif_like /HAYCi/ ^DoNothingPos); # اہم
@@ -374,7 +376,7 @@ Routine AtHeight200pos {
 
 Routine AtHeight400pos {
     Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenMediumSpaceBeforeKern [ddb tdb]); # ےپیل
-    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenTinySpaceBeforeKern); # ےپیل
+    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpaceBeforeKern); # ےپیل
     Chain ([TOEf1 TOEu1] BEisd1 ^OpenTinySpaceBeforeKern); # ط پیٹرن
     Chain (@alif_like BEisd1 ^TightenSlightly sdb); # اببل
     Chain (@alif_like @BEi ^DoNothingPos @dots); # اںبل ایبل  اپبل امبل
@@ -404,7 +406,7 @@ Routine AtHeight400pos {
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one @dots_two];
 
 Routine AtHeight500pos {
-    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenTinySpaceBeforeKern); # ےپیل
+    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpaceBeforeKern); # پر سے
     Chain (@dal_like BEi10 ^DoNothingPos); # تقریظیں
     Chain (@dal_like BEi7 ^DoNothingPos); # ندبجن
     Chain (@dal_like BEi14 @dots_one ^DropATinyBitMore); # یریں
@@ -424,8 +426,7 @@ Routine AtHeight500pos {
     Chain (@mim_like @DOTi ^OpenTinySpaceBeforeKern tdb); #قلم پر
     Chain (@kaf_like @DOTi ^OpenTinySpaceBeforeKern tdb); # قہ پھیلا
     Chain (@kaf_like ^DoNothingPos); # ف تہجی
-    Chain (@bigbowlfina @DOTi ^DoNothingPos ^OpenTinySpaceBeforeKern tdb); # میں پر
-    Chain (@bigbowlfina @DOTi ^DoNothingPos); # عربی جرو
+    Chain (@bigbowlfina @DOTi ^OpenSmallSpaceBeforeKern @dots); # دی برم
 
     Chain ([@dal_like @vao_like] BEi16 ^DoNothingPos); # رپر
     Chain ([@dal_like @vao_like] BEi24 ^OpenSmallSpaceBeforeKern @dots); # ویس
@@ -440,7 +441,7 @@ Routine AtHeight500pos {
 DefineClass @narrow_inits = @inits & (width < 300);
 
 Routine AtHeight600pos {
-    Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^DoNothingPos);
+    Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^OpenSmallSpaceBeforeKern);
     Chain (@alif_like @DOTi ^OpenBigSpaceBeforeKern [ddb tdb]); # اچھّی
     Chain (@alif_like BEi3 ^DoNothingPos @medis); # بانین
     Chain (@alif_like BEi3 ^OpenTinySpaceBeforeKern [ddb.one tdb.one ddb tdb]); # ایپس

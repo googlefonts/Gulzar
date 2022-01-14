@@ -26,10 +26,11 @@ Feature kern {
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /JIMm|BEm14/;
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /BEm9/;
 		Position [REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+350>) @finas; # دبی
-		Position [REu1 REf1] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+300>) @finas; # دبی
+		Position REu1 ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+300>) @finas; # دبی
+		Position REf1 ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # دبی
 		Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+220>) @finas; # دبی
 		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+220>) @finas; # وبی
-		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+100>) @finas; # م بی
+		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+160>) @finas; # م بی
 		Position @alif_like ([BEi13 TEi13 LAMi13] <xAdvance=+160>) @finas;
 		Position @alif_like ([FEi13 GAFi13 KAFi13 LAMi2 LAMi9] <xAdvance=+120>) @finas; #  
 		Position [@isols @finas] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # الی
@@ -48,7 +49,6 @@ Feature kern {
 		Position @bigbowlfina space.urdu (/([KG]AF|LAM)i/ <xAdvance=+50>) /JIMm|BEm/ [ddb tdb];
 		Position REf3 (/[KG]AFi/ <xAdvance=-120>);
 		Position @vao_like (space.urdu <xAdvance=50>) /AINi/;
-		Position @bigbowlfina (space.urdu <xAdvance=150>) /JIMi/;
 		Position /NUN[uf]/ (space.urdu <xAdvance=100>) /HAYCi/;
 		Position [REf2 REf3] (ALIFu1 <xAdvance=200>) [BEi11 TEi11];
 	} UseMarkFilteringSet /[sdt]db/;
