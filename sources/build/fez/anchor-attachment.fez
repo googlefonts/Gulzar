@@ -450,6 +450,7 @@ Routine AtHeight600pos {
     Chain TEi15 ([@dal_like @vao_like] TEisd1 ^OpenTinySpaceBeforeKern); # توثیق
     Chain ([@dal_like @vao_like] JIMi5 ^OpenSpaceBeforeKern @dots); # پوچھیں
     Chain ([@dal_like @vao_like] BEi5 ^OpenSmallSpaceBeforeKern tdb ^BottomLeft); # وپھی, #27
+    Chain (@bigbowlfina BEi5 ^OpenSmallSpaceBeforeKern @dots ^BottomLeft); # تین پھو
     Chain ([@isols @finas] BEi5 @dots ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] BEi6 ^OpenMediumSpaceBeforeKern @dots); # رچینی
     Chain ([@dal_like @vao_like] @DOTi ^OpenSmallSpaceBeforeKern @dots); # کو پہنچ
