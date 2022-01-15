@@ -422,6 +422,7 @@ Routine AtHeight500pos {
 
     Chain (@alif_like [BEi7 BEi16] ^OpenTinySpaceBeforeKern [ddb tdb]); # اپر
     Chain (@alif_like BEi16 ^DoNothingPos); # اپر
+    Chain (@long_re BEi16 ^Tighten @dots_two); # تحریر
     Chain (@long_re @DOTi ^OpenSmallSpaceBeforeKern); # تقریظیں
     Chain (@mim_like @DOTi ^OpenTinySpaceBeforeKern tdb); #قلم پر
     Chain (@kaf_like @DOTi ^OpenTinySpaceBeforeKern tdb); # قہ پھیلا
