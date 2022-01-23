@@ -1,7 +1,8 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"\012\012/SADm13/CH_YEf1/SADi13/CH_YEf1/MIMm13/CH_YEf1/LAMm13/CH_YEf1/LAMm13/CH_YEf1/LAMi13/CH_YEf1/KAFm13/CH_YEf1/KAFi13/CH_YEf1 \012/JIMm13/CH_YEf1/JIMi13/CH_YEf1/AINi13/CH_YEf1/FEi13/CH_YEf1/BEm13/CH_YEf1/TEm13/CH_YEf1/BEi13/CH_YEf1/TEi13/CH_YEf1/Hei13/CH_YEf1 \012/SINi13/CH_YEf1/SINm13/CH_YEf1/TOEi13/CH_YEf1/TOEm13/CH_YEf1/AINm13/CH_YEf1/MIMi13/CH_YEf1/HAYAi13/CH_YEf1 \012/HAYAm13/CH_YEf1/HAYCi13/CH_YEf1/HAYCm13/CH_YEf1/GAFi13/CH_YEf1/GAFm13/CH_YEf1/FEm13/CH_YEf1/CH_YEf1"
+"\012\012/SADm13/CH_YEf1/SADi13/CH_YEf1/MIMm13/CH_YEf1/LAMm13/CH_YEf1/LAMm13/CH_YEf1/LAMi13/CH_YEf1/KAFm13/CH_YEf1/KAFi13/CH_YEf1 \012/JIMm13/CH_YEf1/JIMi13/CH_YEf1/AINi13/CH_YEf1/FEi13/CH_YEf1/BEm13/CH_YEf1/TEm13/CH_YEf1/BEi13/CH_YEf1/TEi13/CH_YEf1/Hei13/CH_YEf1 \012/SINi13/CH_YEf1/SINm13/CH_YEf1/TOEi13/CH_YEf1/TOEm13/CH_YEf1/AINm13/CH_YEf1/MIMi13/CH_YEf1/HAYAi13/CH_YEf1 \012/HAYAm13/CH_YEf1/HAYCi13/CH_YEf1/HAYCm13/CH_YEf1/GAFi13/CH_YEf1/GAFm13/CH_YEf1/FEm13/CH_YEf1/CH_YEf1",
+"/TEisd1/BEisd1/BEisd1/BEm13/CH_YEf1/TEm13/CH_YEf1"
 );
 classes = (
 {
@@ -65410,7 +65411,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{173, -167}";
+position = "{169, -139}";
 },
 {
 name = exit;
@@ -65418,7 +65419,7 @@ position = "{48, 0}";
 },
 {
 name = top;
-position = "{173, 86}";
+position = "{173, 51}";
 }
 );
 hints = (
@@ -65437,19 +65438,22 @@ paths = (
 {
 closed = 1;
 nodes = (
-"138 -96 OFFCURVE",
-"191 -23 OFFCURVE",
-"193 49 CURVE",
+"119 -111 OFFCURVE",
+"181 -38 OFFCURVE",
+"193 46 CURVE",
 "173 51 LINE",
-"150 -6 OFFCURVE",
-"93 -22 OFFCURVE",
+"154 3 OFFCURVE",
+"119 -19 OFFCURVE",
+"90 -19 CURVE SMOOTH",
+"73 -19 OFFCURVE",
+"58 -12 OFFCURVE",
 "48 0 CURVE",
-"22 -49 OFFCURVE",
-"16 -58 OFFCURVE",
-"0 -83 CURVE",
-"20 -92 OFFCURVE",
-"39 -96 OFFCURVE",
-"57 -96 CURVE SMOOTH"
+"22 -29 OFFCURVE",
+"9 -61 OFFCURVE",
+"0 -93 CURVE",
+"18 -106 OFFCURVE",
+"36 -111 OFFCURVE",
+"54 -111 CURVE SMOOTH"
 );
 }
 );
@@ -65533,7 +65537,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{203, -137}";
+position = "{169, -139}";
 },
 {
 name = exit;
@@ -65541,7 +65545,7 @@ position = "{48, 0}";
 },
 {
 name = top;
-position = "{173, 86}";
+position = "{173, 51}";
 }
 );
 components = (
