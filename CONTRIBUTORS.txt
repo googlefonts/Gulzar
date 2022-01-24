@@ -8,4 +8,5 @@
 #
 # Names should be added to this file as:
 Fiona Ross <frosstype@gmail.com>
+Martin Dodds <doc.martindodds@virginmedia.com>
 Amir Mahdi Moslehi <amirmahdi.moslehi@gmail.com>
