@@ -11,6 +11,7 @@
 Feature ccmp {
   Routine ccmp1 {
     Substitute BEu1 -> BEu1 sdb;
+    Substitute lamTahabove-ar -> LAMu1 toeda;
     Substitute teh-ar -> TEu1 dda;
     Substitute theh-ar -> TEu1 tda;
     Substitute dad-ar -> SADu1 sda;
@@ -32,6 +33,7 @@ Feature ccmp {
     Substitute alefMadda-ar -> ALIFu1 MADDA;
     Substitute alefHamzaabove-ar -> ALIFu1 HAMZA_ABOVE;
     Substitute alefHamzabelow-ar -> ALIFu1 HAMZA_BELOW;
+    Substitute hehgoalHamzaabove-ar -> HAYCu1 HAMZA_ABOVE;
     };
 
   Routine MarkLigatures {
@@ -66,6 +68,7 @@ Feature fina {
     Substitute JIMu1 -> JIMf1 sdi;
 
     Substitute noon-ar -> NUNf1 sdi;
+    Substitute noonTahabove-ar -> BEf1 sda toeda;
 
     # Yeh hamza is different, because it can take CH_YE form but no dots.
     Substitute yehHamzaabove-ar -> CH_YEf1 HAMZA_ABOVE;
@@ -73,6 +76,7 @@ Feature fina {
     # Teh Marbuta Goal
     Substitute heh-ar -> HAYCf1;
     Substitute tehMarbutagoal-ar -> HAYCf1 dda;
+    Substitute tehMarbuta-ar -> HAYCf1 dda;
   };
 
   # Because I'm lazy, SuffixingSubstitute is a custom plugin which creates
@@ -97,6 +101,7 @@ Feature fina {
 Feature init {
   Routine init1 {
   Substitute noon-ar -> BEi1 sda;
+  Substitute noonTahabove-ar -> BEi1 sda toeda;
   Substitute NUNu1 -> BEi1; # Noon ghunna has no dots
   Substitute CH_YEu1 -> BEi1 ddb;
   Substitute yeh-ar -> BEi1 ddb;
@@ -109,6 +114,7 @@ Feature init {
   Substitute khah-ar -> JIMi1 sda;
   Substitute yehHamzaabove-ar -> BEi1 HAMZA_ABOVE;
   Substitute tehMarbutagoal-ar -> HAYCu1 tda;
+  Substitute tehMarbuta-ar -> HAYCu1 dda;
 
   SuffixingSubstitute [
     AINu1 BEu1 FEu1 GAFu1 HAYAu1 KAFu1 LAMu1 MIMu1 SADu1 SINu1 TOEu1 TEu1
@@ -133,6 +139,7 @@ Feature medi {
 
     Substitute QAFu1    -> FEm1;
     Substitute noon-ar  -> BEm1 sda;
+    Substitute noonTahabove-ar -> BEm1 sda toeda;
     Substitute NUNu1    -> BEm1; # Noon ghunna
     Substitute JIMu1    -> JIMm1 sdb;
     Substitute tcheh-ar -> JIMm1 tdb;
@@ -143,6 +150,7 @@ Feature medi {
     Substitute HAYCu1   -> HAYCm1 haydb;
     Substitute heh-ar -> HAYCm1;
     Substitute tehMarbutagoal-ar -> HAYCf1 dda;
+    Substitute tehMarbuta-ar -> HAYCf1 dda;
     Substitute yehHamzaabove-ar -> BEm1 HAMZA_ABOVE;
   };
 };
@@ -151,8 +159,10 @@ Feature isol {
   Routine isol1 {
     Substitute yehHamzaabove-ar -> CH_YEu1 HAMZA_ABOVE;
     Substitute tehMarbutagoal-ar -> HAYCu1 dda;
+    Substitute tehMarbuta-ar -> HAYCu1 dda;
     Substitute hah-ar -> JIMu1;
     Substitute noon-ar -> NUNu1 sdi;
+    Substitute noonTahabove-ar -> BEu1 sda toeda;
     Substitute JIMu1 -> JIMu1 sdi;
   };
 };
