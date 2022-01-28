@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/REf1/REf2/REf3"
+);
 classes = (
 {
 automatic = 1;
@@ -31145,7 +31148,7 @@ layers = (
 anchors = (
 {
 name = _bottom.yb;
-position = "{0, -233}";
+position = "{0, 28}";
 }
 );
 components = (
@@ -63641,15 +63644,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{197, -19}";
+position = "{338, 44}";
 },
 {
 name = entry;
 position = "{539, 433}";
 },
 {
+name = toeda;
+position = "{309, 415}";
+},
+{
 name = top;
-position = "{313, 462}";
+position = "{313, 398}";
 }
 );
 hints = (
@@ -63700,7 +63707,7 @@ nodes = (
 "251 152 OFFCURVE",
 "213 121 CURVE SMOOTH",
 "176 91 OFFCURVE",
-"133 68 OFFCURVE",
+"133 67 OFFCURVE",
 "94 45 CURVE SMOOTH",
 "50 20 LINE",
 "58 -6 LINE"
@@ -63720,7 +63727,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{330, -41}";
+position = "{223, -87}";
 },
 {
 name = entry;
@@ -63728,11 +63735,11 @@ position = "{307, 300}";
 },
 {
 name = toeda;
-position = "{247, 388}";
+position = "{247, 339}";
 },
 {
 name = top;
-position = "{243, 383}";
+position = "{243, 334}";
 }
 );
 hints = (
@@ -63783,7 +63790,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{220, -116}";
+position = "{263, -96}";
 },
 {
 name = entry;
@@ -63791,11 +63798,11 @@ position = "{509, 358}";
 },
 {
 name = toeda;
-position = "{347, 456}";
+position = "{347, 426}";
 },
 {
 name = top;
-position = "{368, 465}";
+position = "{368, 443}";
 }
 );
 hints = (
