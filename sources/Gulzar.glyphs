@@ -4,7 +4,8 @@ DisplayStrings = (
 "\012\012/SADm13/CH_YEf1/SADi13/CH_YEf1/MIMm13/CH_YEf1/LAMm13/CH_YEf1/LAMm13/CH_YEf1/LAMi13/CH_YEf1/KAFm13/CH_YEf1/KAFi13/CH_YEf1 \012/JIMm13/CH_YEf1/JIMi13/CH_YEf1/AINi13/CH_YEf1/FEi13/CH_YEf1/BEm13/CH_YEf1/TEm13/CH_YEf1/BEi13/CH_YEf1/TEi13/CH_YEf1/Hei13/CH_YEf1 \012/SINi13/CH_YEf1/SINm13/CH_YEf1/TOEi13/CH_YEf1/TOEm13/CH_YEf1/AINm13/CH_YEf1/MIMi13/CH_YEf1/HAYAi13/CH_YEf1 \012/HAYAm13/CH_YEf1/HAYCi13/CH_YEf1/HAYCm13/CH_YEf1/GAFi13/CH_YEf1/GAFm13/CH_YEf1/FEm13/CH_YEf1/CH_YEf1",
 "/TEisd1/BEisd1/BEisd1/BEm13/CH_YEf1/TEm13/CH_YEf1",
 "/_Sin.teeth/_Sinm.teeth",
-"/TEm3/AINi3/ALIFf1/TEm3/AINi3/ALIFf1/AINi3/dal-ar.fina/DALf1/ALIFf1/BEm3/ALIFf1"
+"/TEm3/AINi3/ALIFf1/TEm3/AINi3/ALIFf1/AINi3/dal-ar.fina/DALf1/ALIFf1/BEm3/ALIFf1",
+"/LAMf1"
 );
 classes = (
 {
@@ -16317,6 +16318,10 @@ anchors = (
 {
 name = bottom;
 position = "{281, -341}";
+},
+{
+name = toeda;
+position = "{691, 1036}";
 },
 {
 name = top;
