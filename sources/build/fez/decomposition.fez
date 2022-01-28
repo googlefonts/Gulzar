@@ -68,7 +68,7 @@ Feature fina {
     Substitute JIMu1 -> JIMf1 sdi;
 
     Substitute noon-ar -> NUNf1 sdi;
-    Substitute noonTahabove-ar -> BEf1 sda toeda;
+    Substitute noonTahabove-ar -> NUNf1 sda toeda;
 
     # Yeh hamza is different, because it can take CH_YE form but no dots.
     Substitute yehHamzaabove-ar -> CH_YEf1 HAMZA_ABOVE;
@@ -162,7 +162,7 @@ Feature isol {
     Substitute tehMarbuta-ar -> HAYCu1 dda;
     Substitute hah-ar -> JIMu1;
     Substitute noon-ar -> NUNu1 sdi;
-    Substitute noonTahabove-ar -> BEu1 sda toeda;
+    Substitute noonTahabove-ar -> NUNu1 sda toeda;
     Substitute JIMu1 -> JIMu1 sdi;
   };
 };
