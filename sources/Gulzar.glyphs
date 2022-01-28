@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/REf1/REf2/REf3"
-);
 classes = (
 {
 automatic = 1;
@@ -15383,11 +15380,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{188, -24}";
+position = "{188, -16}";
 },
 {
 name = top;
-position = "{327, 357}";
+position = "{327, 365}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -15395,24 +15392,24 @@ paths = (
 {
 closed = 1;
 nodes = (
-"192 -2 LINE SMOOTH",
-"215 0 OFFCURVE",
-"227 5 OFFCURVE",
-"245 21 CURVE SMOOTH",
-"275 48 OFFCURVE",
-"304 97 OFFCURVE",
-"329 218 CURVE SMOOTH",
-"356 351 LINE",
-"327 357 LINE",
-"303 269 LINE SMOOTH",
-"289 218 OFFCURVE",
-"279 180 OFFCURVE",
-"238 137 CURVE SMOOTH",
-"212 111 OFFCURVE",
-"174 82 OFFCURVE",
-"114 48 CURVE SMOOTH",
-"50 11 LINE",
-"58 -15 LINE"
+"192 6 LINE SMOOTH",
+"215 8 OFFCURVE",
+"227 13 OFFCURVE",
+"245 29 CURVE SMOOTH",
+"275 56 OFFCURVE",
+"304 105 OFFCURVE",
+"329 226 CURVE SMOOTH",
+"356 359 LINE",
+"327 365 LINE",
+"303 277 LINE SMOOTH",
+"289 226 OFFCURVE",
+"279 188 OFFCURVE",
+"238 145 CURVE SMOOTH",
+"212 119 OFFCURVE",
+"174 90 OFFCURVE",
+"114 56 CURVE SMOOTH",
+"50 19 LINE",
+"58 -7 LINE"
 );
 }
 );
@@ -15433,7 +15430,7 @@ name = REu1;
 },
 {
 name = sda;
-transform = "{1, 0, 0, 1, 182, 507}";
+transform = "{1, 0, 0, 1, 182, 515}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -15475,7 +15472,7 @@ name = REu1;
 },
 {
 name = tda;
-transform = "{1, 0, 0, 1, 108, 507}";
+transform = "{1, 0, 0, 1, 108, 515}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
