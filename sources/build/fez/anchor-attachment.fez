@@ -10,17 +10,9 @@
 
 # First, load all the FEZ plugins we will use. They are all found in
 # `qalamTools/`.
-LoadPlugin qalamTools.CopyAnchors;
 LoadPlugin qalamTools.QuantizeAnchors;
 LoadPlugin qalamTools.DotAvoidance;
 LoadPlugin qalamTools.NastaliqKerning;
-
-# This one copies the anchors into ligature marks.
-LoadAnchors;
-CopyAnchors SHADDA SHADDA_DAMMA;
-CopyAnchors SHADDA SHADDA_KASRA;
-CopyAnchors SHADDA SHADDA_FATHA;
-CopyAnchors SHADDA SHADDA_LONG_A;
 
 # To avoid collisions, we move dots up and down to alternate positions.
 # e.g. `sdb` might move to `sdb.one` (one "position" lower) or `sdb.two`

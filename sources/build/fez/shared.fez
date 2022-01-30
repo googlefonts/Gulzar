@@ -1,11 +1,5 @@
 LoadAnchors;
 
-LoadPlugin qalamTools.CopyAnchors;
-CopyAnchors SHADDA SHADDA_DAMMA;
-CopyAnchors SHADDA SHADDA_KASRA;
-CopyAnchors SHADDA SHADDA_FATHA;
-CopyAnchors SHADDA SHADDA_LONG_A;
-
 # Define some classes we're going to need
 DefineClass @below_nuktas = /^[sdt]db(\.yb)?$/;
 DefineClass @above_nuktas = /^[sdt]da$/;
