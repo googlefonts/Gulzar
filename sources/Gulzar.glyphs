@@ -17279,6 +17279,99 @@ color = 3;
 glyphname = Mhmd;
 layers = (
 {
+background = {
+paths = (
+{
+closed = 1;
+nodes = (
+"123 -22 OFFCURVE",
+"213 -13 OFFCURVE",
+"246 15 CURVE SMOOTH",
+"272 38 OFFCURVE",
+"290 73 OFFCURVE",
+"299 98 CURVE",
+"292 100 LINE",
+"305 42 OFFCURVE",
+"352 -11 OFFCURVE",
+"432 -11 CURVE SMOOTH",
+"506 -11 OFFCURVE",
+"576 63 OFFCURVE",
+"576 107 CURVE SMOOTH",
+"576 132 OFFCURVE",
+"546 138 OFFCURVE",
+"518 150 CURVE SMOOTH",
+"493 160 OFFCURVE",
+"469 172 OFFCURVE",
+"469 197 CURVE SMOOTH",
+"469 209 OFFCURVE",
+"478 222 OFFCURVE",
+"496 230 CURVE SMOOTH",
+"584 268 OFFCURVE",
+"627 275 OFFCURVE",
+"673 310 CURVE SMOOTH",
+"701 331 OFFCURVE",
+"747 405 OFFCURVE",
+"755 432 CURVE SMOOTH",
+"767 471 OFFCURVE",
+"735 474 OFFCURVE",
+"687 474 CURVE SMOOTH",
+"640 474 OFFCURVE",
+"561 468 OFFCURVE",
+"518 454 CURVE",
+"497 411 LINE",
+"515 393 LINE",
+"579 413 OFFCURVE",
+"693 406 OFFCURVE",
+"711 390 CURVE",
+"701 411 LINE",
+"682 348 OFFCURVE",
+"572 330 OFFCURVE",
+"515 300 CURVE SMOOTH",
+"461 271 OFFCURVE",
+"418 206 OFFCURVE",
+"411 120 CURVE",
+"424 130 LINE",
+"352 144 OFFCURVE",
+"344 219 OFFCURVE",
+"377 324 CURVE",
+"353 333 LINE",
+"291 166 OFFCURVE",
+"259 138 OFFCURVE",
+"226 99 CURVE SMOOTH",
+"198 66 OFFCURVE",
+"143 31 OFFCURVE",
+"100 6 CURVE",
+"109 -26 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"598 537 OFFCURVE",
+"665 558 OFFCURVE",
+"787 586 CURVE SMOOTH",
+"821 594 OFFCURVE",
+"862 604 OFFCURVE",
+"888 661 CURVE SMOOTH",
+"912 714 LINE SMOOTH",
+"922 737 OFFCURVE",
+"909 757 OFFCURVE",
+"886 766 CURVE SMOOTH",
+"831 787 LINE SMOOTH",
+"790 803 OFFCURVE",
+"763 800 OFFCURVE",
+"745 748 CURVE SMOOTH",
+"717 667 LINE",
+"767 640 LINE",
+"780 662 LINE",
+"650 615 OFFCURVE",
+"582 571 OFFCURVE",
+"518 454 CURVE",
+"543 440 LINE"
+);
+}
+);
+};
 hints = (
 {
 horizontal = 1;
@@ -17319,6 +17412,15 @@ type = Stem;
 },
 {
 place = "{-61, 478}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-38, 357}";
+type = Stem;
+},
+{
+place = "{-47, 478}";
 type = Stem;
 }
 );
@@ -17913,6 +18015,7 @@ note = uniFDFA;
 unicode = FDFA;
 },
 {
+color = 3;
 glyphname = "allahlong-ar.Farsi";
 layers = (
 {
@@ -27193,6 +27296,46 @@ transform = "{1, 0, 0, 1, 1096, -100}";
 {
 name = LAMi16;
 transform = "{1, 0, 0, 1, 1479, 334}";
+},
+{
+name = SHADDA_FATHA;
+transform = "{1, 0, 0, 1, 1248, 206}";
+},
+{
+name = SHADDA_FATHA;
+transform = "{1, 0, 0, 1, 2526, 92}";
+},
+{
+name = LONG_A;
+transform = "{1, 0, 0, 1, 2038, -458}";
+},
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 1951, 391}";
+},
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 2490, -1126}";
+},
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 254, -1232}";
+},
+{
+name = "sukun-ar";
+transform = "{1, 0, 0, 1, 2235, 249}";
+},
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 1473, -1515}";
+},
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 3946, -1133}";
+},
+{
+name = FATHA;
+transform = "{1, 0, 0, 1, 914, -1064}";
 }
 );
 hints = (
@@ -30982,15 +31125,15 @@ transform = "{1, 0, 0, 1, 498, -854}";
 },
 {
 name = MIMf1;
-transform = "{1, 0, 0, 1, 80, -761}";
+transform = "{1, 0, 0, 1, 80, -781}";
 },
 {
 name = SINi3;
-transform = "{1, 0, 0, 1, 649, -167}";
+transform = "{1, 0, 0, 1, 649, -187}";
 },
 {
 name = LAMm9;
-transform = "{1, 0, 0, 1, 424, -399}";
+transform = "{1, 0, 0, 1, 424, -419}";
 },
 {
 name = _Sad.head;
@@ -31014,7 +31157,7 @@ transform = "{1, 0, 0, 1, 179, -456}";
 },
 {
 name = FATHA;
-transform = "{1, 0, 0, 1, 703, -186}";
+transform = "{1, 0, 0, 1, 703, -195}";
 },
 {
 name = SHADDA;
