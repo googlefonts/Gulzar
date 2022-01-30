@@ -1,8 +1,5 @@
 {
 .appVersion = "3109";
-DisplayStrings = (
-"/LONG_A"
-);
 classes = (
 {
 automatic = 1;
@@ -28186,12 +28183,12 @@ layers = (
 {
 anchors = (
 {
-name = bottom;
-position = "{1, -185}";
+name = _bottom;
+position = "{2, 98}";
 },
 {
-name = top;
-position = "{2, 13}";
+name = bottom;
+position = "{1, -245}";
 }
 );
 components = (
@@ -28207,6 +28204,8 @@ width = 266;
 );
 note = YE_VOWEL;
 unicode = 0656;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
