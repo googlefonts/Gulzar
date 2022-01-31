@@ -309,7 +309,7 @@ Routine AtHeight0pos {
 } IgnoreLigatures UseMarkFilteringSet [@dots toeda];
 
 Routine AtHeight200pos {
-    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpaceBeforeKern);
+    #Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpaceBeforeKern);
 
     Chain (@bigbowlfina BEisd1 ^OpenMediumSpaceBeforeKern [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina BEi9 ^OpenSmallSpaceBeforeKern @dots); # ر یم
@@ -411,8 +411,10 @@ Routine AtHeight500pos {
     Chain ([@dal_like @vao_like] @JIMi ^OpenSmallSpaceBeforeKern); # وجس
     Chain ([@dal_like @vao_like] /HAYCi/ ^OpenSmallSpaceBeforeKern); # وجس
 
-    Chain (@alif_like [BEi7 BEi16] ^OpenTinySpaceBeforeKern [ddb tdb]); # اپر
+    Chain (@alif_like [BEi6 TEi6] ^OpenSmallSpaceBeforeKern); # اپر
     Chain (@alif_like BEi16 ^DoNothingPos); # اپر
+    Chain (@alif_like @BEi ^OpenTinySpaceBeforeKern @dots); # ابلین
+
     Chain (@long_re BEi16 ^Tighten @dots_two); # تحریر
     Chain (@long_re @DOTi ^OpenSmallSpaceBeforeKern); # تقریظیں
     Chain (@mim_like @DOTi ^OpenTinySpaceBeforeKern tdb); #قلم پر
