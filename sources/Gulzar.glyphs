@@ -77067,6 +77067,125 @@ width = 416;
 }
 );
 note = TOEi3;
+},
+{
+color = 3;
+glyphname = TOEi19;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{188, -135}";
+},
+{
+name = entry;
+position = "{255, 11}";
+},
+{
+name = exit;
+position = "{50, 0}";
+},
+{
+name = top;
+position = "{291, 301}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"67 -135 OFFCURVE",
+"154 -109 OFFCURVE",
+"272 19 CURVE SMOOTH",
+"341 94 OFFCURVE",
+"366 161 OFFCURVE",
+"366 218 CURVE SMOOTH",
+"366 272 OFFCURVE",
+"327 301 OFFCURVE",
+"291 301 CURVE SMOOTH",
+"221 301 OFFCURVE",
+"146 227 OFFCURVE",
+"108 150 CURVE",
+"91 131 LINE",
+"81 114 LINE",
+"20 -17 LINE",
+"46 -20 LINE",
+"116 142 OFFCURVE",
+"199 205 OFFCURVE",
+"255 205 CURVE SMOOTH",
+"280 205 OFFCURVE",
+"320 196 OFFCURVE",
+"324 140 CURVE",
+"281 84 OFFCURVE",
+"147 0 OFFCURVE",
+"50 0 CURVE",
+"3 -36 OFFCURVE",
+"-4 -99 OFFCURVE",
+"1 -135 CURVE"
+);
+},
+{
+closed = 1;
+nodes = (
+"95 88 LINE",
+"118 136 OFFCURVE",
+"141 222 OFFCURVE",
+"142 305 CURVE SMOOTH",
+"144 329 LINE SMOOTH",
+"145 385 OFFCURVE",
+"146 431 OFFCURVE",
+"148 466 CURVE",
+"132 471 LINE",
+"85 375 OFFCURVE",
+"77 352 OFFCURVE",
+"77 262 CURVE SMOOTH",
+"77 224 LINE SMOOTH",
+"77 172 OFFCURVE",
+"77 126 OFFCURVE",
+"74 88 CURVE"
+);
+}
+);
+width = 416;
+}
+);
+note = TOEi3;
+},
+{
+color = 3;
+glyphname = TOEm19;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{188, -135}";
+},
+{
+name = entry;
+position = "{255, 11}";
+},
+{
+name = exit;
+position = "{50, 0}";
+},
+{
+name = top;
+position = "{291, 301}";
+}
+);
+components = (
+{
+name = TOEi19;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 416;
+}
+);
+note = TOEi3;
 }
 );
 instances = (
@@ -80086,7 +80205,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80118,7 +80237,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80214,7 +80333,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80246,7 +80365,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80310,7 +80429,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80342,7 +80461,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80374,7 +80493,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80406,7 +80525,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80438,7 +80557,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -80470,7 +80589,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -83222,7 +83341,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "19";
 TOEm = "3";
 },
 {
@@ -83254,7 +83373,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "19";
 TOEm = "3";
 },
 {
@@ -84246,7 +84365,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84278,7 +84397,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84310,7 +84429,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84342,7 +84461,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84374,7 +84493,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84406,7 +84525,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84438,7 +84557,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84470,7 +84589,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84502,7 +84621,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84534,7 +84653,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84566,7 +84685,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84598,7 +84717,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84630,7 +84749,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84662,7 +84781,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84694,7 +84813,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84726,7 +84845,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -84758,7 +84877,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -86970,6 +87089,38 @@ TOEi = "10";
 TOEm = "10";
 },
 {
+AINi = 1;
+AINm = 1;
+BEi = 1;
+BEm = 1;
+FEi = 1;
+FEm = 1;
+GAFi = 1;
+GAFm = 1;
+HAYAi = 1;
+HAYAm = 1;
+HAYCi = 1;
+HAYCm = 1;
+Hei = 1;
+JIMi = 1;
+JIMm = 1;
+KAFi = 1;
+KAFm = 1;
+LAMi = 1;
+LAMm = 1;
+"Left Glyph" = TOEm18;
+MIMi = 1;
+MIMm = 1;
+SADi = 1;
+SADm = 1;
+SINi = 1;
+SINm = 1;
+TEi = 1;
+TEm = 1;
+TOEi = 1;
+TOEm = 1;
+},
+{
 AINi = "10";
 AINm = "10";
 BEi = "10";
@@ -87062,7 +87213,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -87382,7 +87533,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -87478,7 +87629,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -87510,7 +87661,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -87542,7 +87693,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
@@ -87670,7 +87821,7 @@ SINi = "3";
 SINm = "3";
 TEi = 3;
 TEm = "3";
-TOEi = 3;
+TOEi = "18";
 TOEm = 3;
 },
 {
@@ -87702,7 +87853,7 @@ SINi = "3";
 SINm = "3";
 TEi = "3";
 TEm = "3";
-TOEi = "3";
+TOEi = "18";
 TOEm = "3";
 },
 {
