@@ -56,10 +56,10 @@ class DetectAndSwapYB(FEZVerb):
         medis_inits = [
             x for x in glyphs if re.search(r"[A-Z]+[mi].*\d", x) and x in self.contexts
         ]
-        self.dot_carriers = [x for x in medis_inits if "JIM" in x or "BE" in x]
+        self.dot_carriers = [x for x in medis_inits if "JIM" in x or "BE" in x or "TE" in x]
         self.haydb_carriers = [x for x in medis_inits if "HAYC" in x]
         self.kasra_carriers = [
-            x for x in medis_inits if not ("JIM" in x or "BE" in x or "HAYC" in x)
+            x for x in medis_inits if not ("JIM" in x or "TE" in x or "BE" in x or "HAYC" in x)
         ]
         binned_glyphs = (
             bin_glyphs_by_metric(self.parser.font, self.dot_carriers, "run", 50)

@@ -21,9 +21,9 @@ Feature ccmp {
     Substitute ghain-ar -> AINu1 sda;
     Substitute feh-ar -> FEu1 sda;
     Substitute qaf-ar -> QAFu1 dda;
-    Substitute peh-ar -> BEu1 tdb;
+    Substitute peh-ar -> TEu1 tdb;
     Substitute rreh-ar -> REu1 toeda;
-    Substitute tteh-ar -> BEu1 toeda;
+    Substitute tteh-ar -> TEu1 toeda;
     Substitute zah-ar -> TOEu1 sda;
     Substitute ddal-ar -> DALu1 toeda;
     Substitute jim-ar -> JIMu1;
@@ -103,8 +103,8 @@ Feature init {
   Substitute noon-ar -> BEi1 sda;
   Substitute noonTahabove-ar -> BEi1 sda toeda;
   Substitute NUNu1 -> BEi1; # Noon ghunna has no dots
-  Substitute CH_YEu1 -> BEi1 ddb;
-  Substitute yeh-ar -> BEi1 ddb;
+  Substitute CH_YEu1 -> TEi1 ddb;
+  Substitute yeh-ar -> TEi1 ddb;
   Substitute QAFu1 -> FEi1;
   Substitute JIMu1    -> JIMi1 sdb;
   Substitute HAYCu1    -> HAYCi1 haydb;
@@ -112,7 +112,7 @@ Feature init {
   Substitute hah-ar -> JIMi1;
   Substitute tcheh-ar -> JIMi1 tdb;
   Substitute khah-ar -> JIMi1 sda;
-  Substitute yehHamzaabove-ar -> BEi1 HAMZA_ABOVE;
+  Substitute yehHamzaabove-ar -> TEi1 HAMZA_ABOVE;
   Substitute tehMarbutagoal-ar -> HAYCu1 tda;
   Substitute tehMarbuta-ar -> HAYCu1 dda;
 
@@ -144,14 +144,14 @@ Feature medi {
     Substitute JIMu1    -> JIMm1 sdb;
     Substitute tcheh-ar -> JIMm1 tdb;
     Substitute khah-ar  -> JIMm1 sda;
-    Substitute CH_YEu1  -> BEm1 ddb;
-    Substitute yeh-ar -> BEm1 ddb;
+    Substitute CH_YEu1  -> TEm1 ddb;
+    Substitute yeh-ar -> TEm1 ddb;
     Substitute hah-ar -> JIMm1;
     Substitute HAYCu1   -> HAYCm1 haydb;
     Substitute heh-ar -> HAYCm1;
     Substitute tehMarbutagoal-ar -> HAYCf1 dda;
     Substitute tehMarbuta-ar -> HAYCf1 dda;
-    Substitute yehHamzaabove-ar -> BEm1 HAMZA_ABOVE;
+    Substitute yehHamzaabove-ar -> TEm1 HAMZA_ABOVE;
   };
 };
 

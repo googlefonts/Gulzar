@@ -55,7 +55,7 @@ Feature kern {
 
   Routine Various1 {
     # Finesse Beh Haya
-    Position /BE(sd)?i/ ([ddb tdb] <xPlacement=50>) /HAYAm/;
+    Position /TE(sd)?i/ ([ddb tdb] <xPlacement=50>) /HAYAm/;
 
     # Finesse Beh JIM
     Position ( /ddb|tdb/ <xPlacement=+20> ) /JIMm/;
@@ -70,9 +70,9 @@ Feature kern {
   DefineClass @NarrowInits = /i(sd)?\d+$/ & (run < 400);
 
   Routine FinaJimFixes {
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
 
     #Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials JIMf1 /tdi|sdi/ ^FinaJimDownABit);
     Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
@@ -82,7 +82,7 @@ Feature kern {
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials AINf1);
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight AINf1);
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight AINf1);
-    Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaQafDownRight QAFf1);
+    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaQafDownRight QAFf1);
   } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
 
   Routine Various2 {
@@ -110,7 +110,7 @@ Feature kern {
     # Heh Alif
     Position HAYCi3 (haydb <yPlacement=+180>) ALIFf1;
     # Clear Alif Nun KL
-    Position /ALIF[uf]1/ (BEi8 <xAdvance=+100>) /sda|dda/;
+    Position /ALIF[uf]1/ ([BEi8 TEi8] <xAdvance=+100>) /sda|dda/;
 
     # Lam Khah
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
@@ -129,12 +129,12 @@ Feature kern {
     Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like @BEi] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
-    Position @alif_like (/BEi/ <xAdvance=+75>) HAMZA_ABOVE;
+    Position @alif_like (/[BT]Ei/ <xAdvance=+75>) HAMZA_ABOVE;
 
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
 
     # چنا
-    Position JIMi2 [tdb sdb sda] BEm3 (@all_above_marks <yPlacement=+100>);
+    Position JIMi2 [tdb sdb sda] [BEm3 TEm3] (@all_above_marks <yPlacement=+100>);
     Position TEi3 ([dda tda] <xPlacement=+50>) ALIFf1;
 
     Position (BEi13 <xAdvance=+70>) [ddb.yb tdb.yb];
@@ -144,7 +144,7 @@ Feature kern {
   Routine ClashesToRight {
     Position LAMi4 /FEm/ (dda <xPlacement=-30>);
     Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
-    Position /[KG]AF/ TEm3 (tda <yPlacement=-150>) /[KG]AF/;
+    Position /[KG]AF/ [BEm3 TEm3] (tda <yPlacement=-150>) /[KG]AF/;
     Position /[KG]AF/ [BEm3 TEm3] ([tda] <yPlacement=-150> @all_above_marks <yPlacement=+350>) /[KG]AF/;
     Position /[KG]AF/ [BEm3 TEm3] ([sda dda] <yPlacement=-50> @all_above_marks <yPlacement=+350>) /[KG]AF/;
     Position /KAFi/ TEm3 (tda <yPlacement=+250>) @alif_like;
@@ -153,8 +153,8 @@ Feature kern {
     Position /JIMi/ [sda dda tda] /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
     Position /JIMi/ /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
     # فت
-    Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
-    Position @alif_like (BEisd1 <xAdvance=+50>) HAMZA_ABOVE;
+    Position @alif_like ([BEisd1 TEisd1] <xAdvance=+50>) HAMZA_ABOVE;
+    Position @alif_like ([BEisd1 TEisd1] <xAdvance=+50>) HAMZA_ABOVE;
 
     Position @long_re [sda] (/[BT]Ei|JIMi/ <xAdvance=+50>) [sda tda dda] ;
 

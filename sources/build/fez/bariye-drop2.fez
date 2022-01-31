@@ -18,7 +18,7 @@ LoadAnchors;
 Feature rlig {
   Routine ManualDrop1 {
     # peh, ye, beh, jim, cheh immediately preceding final choti ye.
-    Substitute /(JIM)[mi]|(BE)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
+    Substitute /(JIM)[mi]|([BT]E)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
 
     # peh and ye, a narrow consonant and choti ye.
     Substitute (tdb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> tdb.yb;
@@ -27,7 +27,7 @@ Feature rlig {
 
   Routine ManualDrop2 {
     # And similarly, we handle the kasra separately.
-    Substitute /(JIM|BE)[mi]/ (KASRA) /CH_YEf/ -> KASRA.yb;
+    Substitute /(JIM|[BT]E)[mi]/ (KASRA) /CH_YEf/ -> KASRA.yb;
   } UseMarkFilteringSet KASRA;
 };
 
@@ -68,7 +68,7 @@ Feature rlig {
   # Some collisons seem not to be automatically detected. I am not
   # sure why not. Detect them manually.
   Routine ManualFixupBBY {
-    Substitute BEisd1 sdb.yb BEm7 (sdb.yb) -> sdb.yb.collides;
+    Substitute BEisd1 sdb.yb [BEm7 TEm7] (sdb.yb) -> sdb.yb.collides;
     Substitute HAYCm7 haydb.yb JIMm7 (sdb.yb) -> sdb.yb.collides;
   } UseMarkFilteringSet @base_ybs;
 
