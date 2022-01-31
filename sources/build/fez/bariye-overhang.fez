@@ -3,7 +3,9 @@ Include "shared.fez";
 LoadPlugin qalamTools.BariYe;
 
 DefineClass @bariye = [BARI_YEf1];
-
+# All the Latin, punctuation, etc are considered isolates for the
+# purpose of stopping bariye banging into them
+DefineClass @isols = [/[A-Z]+u\w*\d+$/ /^[a-zA-Z_\.]+$/];
 Feature kern {
   # This plugin deals with the "short bari ye" problem where a short sequence
   # ending in a bari ye is not long enough to clear the negative RSB of the
@@ -12,7 +14,7 @@ Feature kern {
   # and adds a kern to the initial glyph to separate it from the end of the
   # preceding word.
   Routine BYFix {
-    BYFixOverhang 0 @bariye;
+    BYFixOverhang -30 @bariye;
   } IgnoreMarks;
   #Position tdb <0 0 0 0>;
 };
