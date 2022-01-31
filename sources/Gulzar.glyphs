@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/dammainverted-ar"
+);
 classes = (
 {
 automatic = 1;
@@ -24447,6 +24450,44 @@ width = 545;
 );
 },
 {
+color = 3;
+glyphname = uniFDFC;
+layers = (
+{
+components = (
+{
+alignment = -1;
+name = REu1;
+transform = "{1, 0, 0, 1, 934, -184}";
+},
+{
+alignment = -1;
+name = BEi3;
+transform = "{1, 0, 0, 1, 939, 54}";
+},
+{
+alignment = -1;
+name = ALIFf1;
+transform = "{1, 0, 0, 1, 766, -81}";
+},
+{
+name = LAMu1;
+transform = "{1, 0, 0, 1, 20, -131}";
+},
+{
+alignment = -1;
+name = ddb;
+transform = "{1, 0, 0, 1, 737, -463}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 1348;
+}
+);
+note = uniFDFC;
+unicode = FDFC;
+},
+{
 glyphname = cent;
 layers = (
 {
@@ -27432,44 +27473,6 @@ note = DEGREE;
 },
 {
 color = 3;
-glyphname = uniFDFC;
-layers = (
-{
-components = (
-{
-alignment = -1;
-name = REu1;
-transform = "{1, 0, 0, 1, 934, -184}";
-},
-{
-alignment = -1;
-name = BEi3;
-transform = "{1, 0, 0, 1, 939, 54}";
-},
-{
-alignment = -1;
-name = ALIFf1;
-transform = "{1, 0, 0, 1, 766, -81}";
-},
-{
-name = LAMu1;
-transform = "{1, 0, 0, 1, 20, -131}";
-},
-{
-alignment = -1;
-name = ddb;
-transform = "{1, 0, 0, 1, 737, -463}";
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 1348;
-}
-);
-note = uniFDFC;
-unicode = FDFC;
-},
-{
-color = 3;
 glyphname = uniFDFD;
 layers = (
 {
@@ -30371,6 +30374,33 @@ unicode = 0653;
 script = arabic;
 category = Mark;
 subCategory = Nonspacing;
+},
+{
+color = 3;
+glyphname = "dammainverted-ar";
+layers = (
+{
+anchors = (
+{
+name = _top;
+position = "{171, 110}";
+},
+{
+name = top;
+position = "{171, 449}";
+}
+);
+components = (
+{
+name = DAMMA.one;
+transform = "{-1, 0, 0, -1, 296, 631}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 342;
+}
+);
+unicode = 0657;
 },
 {
 color = 3;
@@ -45099,7 +45129,7 @@ transform = "{1, 0, 0, 1, 18, 108}";
 },
 {
 name = KASRA.yb.attached;
-transform = "{1, 0, 0, 1, 195, 557}";
+transform = "{1, 0, 0, 1, 207, 581}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -45126,7 +45156,7 @@ position = "{50, 0}";
 components = (
 {
 name = hamzada;
-transform = "{1, 0, 0, 1, 28, -305}";
+transform = "{1, 0, 0, 1, -8, -305}";
 },
 {
 name = KASRA.yb.attached;
@@ -69164,79 +69194,26 @@ layers = (
 {
 anchors = (
 {
-name = bottom;
-position = "{35, 0}";
+name = _top;
+position = "{172, 142}";
 },
 {
 name = top;
-position = "{35, 0}";
+position = "{186, 700}";
+}
+);
+components = (
+{
+name = HAMZA_ABOVE;
+transform = "{1, 0, 0, 1, -8, 88}";
+},
+{
+alignment = -1;
+name = "sukun-ar";
+transform = "{1, 0, 0, 1, 33, 284}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"169 289 OFFCURVE",
-"183 390 OFFCURVE",
-"235 390 CURVE SMOOTH",
-"254 390 OFFCURVE",
-"263 377 OFFCURVE",
-"267 366 CURVE",
-"288 366 LINE",
-"302 377 OFFCURVE",
-"316 398 OFFCURVE",
-"316 422 CURVE SMOOTH",
-"316 448 OFFCURVE",
-"299 469 OFFCURVE",
-"268 469 CURVE SMOOTH",
-"201 469 OFFCURVE",
-"189 367 OFFCURVE",
-"104 367 CURVE SMOOTH",
-"83 367 OFFCURVE",
-"64 373 OFFCURVE",
-"53 381 CURVE",
-"37 354 LINE",
-"48 313 OFFCURVE",
-"72 289 OFFCURVE",
-"104 289 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"182 456 OFFCURVE",
-"222 515 OFFCURVE",
-"222 573 CURVE SMOOTH",
-"222 621 OFFCURVE",
-"200 651 OFFCURVE",
-"164 651 CURVE SMOOTH",
-"120 651 OFFCURVE",
-"82 592 OFFCURVE",
-"82 528 CURVE SMOOTH",
-"82 484 OFFCURVE",
-"103 456 OFFCURVE",
-"136 456 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"125 518 OFFCURVE",
-"108 531 OFFCURVE",
-"104 550 CURVE",
-"109 572 OFFCURVE",
-"127 590 OFFCURVE",
-"151 590 CURVE SMOOTH",
-"174 590 OFFCURVE",
-"191 575 OFFCURVE",
-"198 553 CURVE",
-"192 534 OFFCURVE",
-"170 518 OFFCURVE",
-"147 518 CURVE"
-);
-}
-);
 width = 343;
 }
 );
