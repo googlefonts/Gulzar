@@ -140,6 +140,9 @@ Feature kern {
   Routine ClashesToRight {
     Position LAMi4 /FEm/ (dda <xPlacement=-30>);
     Position HAYCi7 JIMm11 (SHADDA <yPlacement=+50>);
+    Position /[KG]AF/ TEm3 (tda <yPlacement=-150>) /[KG]AF/;
+    Position /[KG]AF/ [BEm3 TEm3] ([tda] <yPlacement=-150> @all_above_marks <yPlacement=+350>) /[KG]AF/;
+    Position /[KG]AF/ [BEm3 TEm3] ([sda dda] <yPlacement=-50> @all_above_marks <yPlacement=+350>) /[KG]AF/;
     Position /KAFi/ TEm3 (tda <yPlacement=+250>) @alif_like;
     Position KAFi2 TEm3 (tda <xPlacement=-50>);
     Position TEm3 (tda <yPlacement=-120>) @alif_like MADDA;
@@ -151,7 +154,7 @@ Feature kern {
 
     Position @long_re [sda] (/[BT]Ei|JIMi/ <xAdvance=+50>) [sda tda dda] ;
 
-  } UseMarkFilteringSet [ sda dda tda SHADDA HAMZA_ABOVE MADDA];
+  } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA];
 
   Routine DotsUnderGaf {
     Position (/\.two$/ <yPlacement=-250 xPlacement=+20>) @NarrowMedials @all_above_marks /KAF|GAF/;
