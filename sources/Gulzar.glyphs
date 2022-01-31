@@ -1,5 +1,10 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/yehbarreeHamzaabove-ar.isol",
+"/wawHamzaabove-ar/BARI_YEu1/yehbarreeHamzaabove-ar",
+"/yehbarreeHamzaabove-ar"
+);
 classes = (
 {
 automatic = 1;
@@ -17085,11 +17090,39 @@ note = BARI_YEu1;
 unicode = 06D2;
 },
 {
+glyphname = "yehbarreeHamzaabove-ar";
+layers = (
+{
+components = (
+{
+name = BARI_YEu1;
+},
+{
+name = HAMZA_ABOVE;
+transform = "{1, 0, 0, 1, 0, 179}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 1103;
+}
+);
+unicode = 06D3;
+},
+{
 glyphname = "yehbarreeHamzaabove-ar.isol";
 layers = (
 {
+components = (
+{
+name = BARI_YEu1;
+},
+{
+name = HAMZA_ABOVE;
+transform = "{1, 0, 0, 1, 0, 179}";
+}
+);
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 600;
+width = 1103;
 }
 );
 unicode = FBB0;
