@@ -1,7 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/SINi8/SINm8"
+"/TEi7/BEi7"
 );
 classes = (
 {
@@ -36686,7 +36686,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{509, 246}";
+position = "{447, 107}";
 },
 {
 name = exit;
@@ -70025,7 +70025,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{424, 146}";
+position = "{420, 77}";
 },
 {
 name = exit;
