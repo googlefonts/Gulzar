@@ -1,10 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/yehbarreeHamzaabove-ar.isol",
-"/wawHamzaabove-ar/BARI_YEu1/yehbarreeHamzaabove-ar",
-"/yehbarreeHamzaabove-ar",
-"/BARI_YEf1/yehbarreeHamzaabove-ar/yehbarreeHamzaabove-ar.isol"
+"/noonghunnaabove-ar"
 );
 classes = (
 {
@@ -30507,6 +30504,7 @@ width = 282;
 }
 );
 unicode = 0658;
+category = Mark;
 },
 {
 color = 3;
