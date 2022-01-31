@@ -1,7 +1,8 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/TEi13/space/BEi13/CH_YEf1/BEi13/CH_YEf1"
+"/MIMi13/CH_YEf1/FEi13/CH_YEf1",
+"/MIMi13"
 );
 classes = (
 {
@@ -32387,6 +32388,16 @@ name = top;
 position = "{176, 417}";
 }
 );
+guideLines = (
+{
+angle = 67.3801;
+position = "{146, 350}";
+},
+{
+angle = 251.565;
+position = "{98, 179}";
+}
+);
 hints = (
 {
 horizontal = 1;
@@ -32403,7 +32414,7 @@ paths = (
 {
 closed = 1;
 nodes = (
-"61 62 OFFCURVE",
+"59 62 OFFCURVE",
 "138 121 OFFCURVE",
 "301 206 CURVE",
 "350 292 LINE",
@@ -32434,7 +32445,7 @@ nodes = (
 "102 128 CURVE",
 "91 139 LINE",
 "59 106 OFFCURVE",
-"27 66 OFFCURVE",
+"27 64 OFFCURVE",
 "0 0 CURVE",
 "8 -11 OFFCURVE",
 "16 -17 OFFCURVE",
@@ -33900,6 +33911,16 @@ name = ainhead;
 transform = "{1, 0, 0, 1, 40, 132}";
 }
 );
+guideLines = (
+{
+angle = 67.3801;
+position = "{146, 350}";
+},
+{
+angle = 251.565;
+position = "{153, 345}";
+}
+);
 hints = (
 {
 horizontal = 1;
@@ -33916,12 +33937,12 @@ paths = (
 {
 closed = 1;
 nodes = (
-"51 44 OFFCURVE",
+"51 39 OFFCURVE",
 "122 115 OFFCURVE",
 "226 132 CURVE",
 "225 206 LINE",
 "158 206 OFFCURVE",
-"61 143 OFFCURVE",
+"61 146 OFFCURVE",
 "0 0 CURVE",
 "7 -13 OFFCURVE",
 "17 -18 OFFCURVE",
@@ -37265,6 +37286,16 @@ name = top;
 position = "{209, 261}";
 }
 );
+guideLines = (
+{
+angle = 67.3801;
+position = "{146, 350}";
+},
+{
+angle = 251.565;
+position = "{153, 345}";
+}
+);
 hints = (
 {
 horizontal = 1;
@@ -37291,7 +37322,7 @@ paths = (
 {
 closed = 1;
 nodes = (
-"41 13 OFFCURVE",
+"42 12 OFFCURVE",
 "66 52 OFFCURVE",
 "101 82 CURVE SMOOTH",
 "136 112 OFFCURVE",
@@ -37310,7 +37341,7 @@ nodes = (
 "171 217 OFFCURVE",
 "147 201 CURVE SMOOTH",
 "85 158 OFFCURVE",
-"31 81 OFFCURVE",
+"34 81 OFFCURVE",
 "0 0 CURVE",
 "7 -13 OFFCURVE",
 "18 -18 OFFCURVE",
@@ -38576,7 +38607,11 @@ position = "{189, 437}";
 guideLines = (
 {
 angle = 67.3801;
-position = "{402, 349}";
+position = "{402, 350}";
+},
+{
+angle = 251.565;
+position = "{440, 345}";
 }
 );
 hints = (
@@ -39314,15 +39349,25 @@ position = "{153, -523}";
 }
 );
 };
+guideLines = (
+{
+angle = 67.3801;
+position = "{146, 350}";
+},
+{
+angle = 251.565;
+position = "{153, 345}";
+}
+);
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
 closed = 1;
 nodes = (
-"48 38 OFFCURVE",
-"86 85 OFFCURVE",
-"129 133 CURVE SMOOTH",
-"165 173 OFFCURVE",
+"51 39 OFFCURVE",
+"80 67 OFFCURVE",
+"129 126 CURVE SMOOTH",
+"163 167 OFFCURVE",
 "176 200 OFFCURVE",
 "176 253 CURVE SMOOTH",
 "176 317 OFFCURVE",
@@ -39341,8 +39386,8 @@ nodes = (
 "96 206 LINE",
 "137 174 LINE",
 "141 206 LINE",
-"84 145 OFFCURVE",
-"26 74 OFFCURVE",
+"71 129 OFFCURVE",
+"31 74 OFFCURVE",
 "0 0 CURVE",
 "7 -13 OFFCURVE",
 "18 -19 OFFCURVE",
@@ -61380,7 +61425,17 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{194, 359}";
+position = "{187, 350}";
+}
+);
+guideLines = (
+{
+angle = 67.3801;
+position = "{146, 350}";
+},
+{
+angle = 251.565;
+position = "{153, 345}";
 }
 );
 hints = (
@@ -61399,31 +61454,31 @@ paths = (
 {
 closed = 1;
 nodes = (
-"56 54 OFFCURVE",
-"124 94 OFFCURVE",
-"193 124 CURVE SMOOTH",
-"223 137 OFFCURVE",
-"261 147 OFFCURVE",
-"285 201 CURVE SMOOTH",
-"309 254 LINE SMOOTH",
-"311 259 OFFCURVE",
-"313 265 OFFCURVE",
-"313 269 CURVE SMOOTH",
-"313 286 OFFCURVE",
-"300 300 OFFCURVE",
-"283 306 CURVE SMOOTH",
-"228 327 LINE SMOOTH",
-"215 332 OFFCURVE",
-"202 336 OFFCURVE",
-"191 336 CURVE SMOOTH",
-"171 336 OFFCURVE",
-"154 324 OFFCURVE",
-"142 288 CURVE SMOOTH",
-"114 207 LINE",
-"164 180 LINE",
-"204 220 LINE",
-"114 159 OFFCURVE",
-"43 98 OFFCURVE",
+"53 45 OFFCURVE",
+"100 81 OFFCURVE",
+"153 104 CURVE SMOOTH",
+"183 117 OFFCURVE",
+"221 127 OFFCURVE",
+"245 181 CURVE SMOOTH",
+"269 234 LINE SMOOTH",
+"271 239 OFFCURVE",
+"273 245 OFFCURVE",
+"273 249 CURVE SMOOTH",
+"273 266 OFFCURVE",
+"260 280 OFFCURVE",
+"243 286 CURVE SMOOTH",
+"188 307 LINE SMOOTH",
+"175 312 OFFCURVE",
+"162 316 OFFCURVE",
+"151 316 CURVE SMOOTH",
+"131 316 OFFCURVE",
+"114 304 OFFCURVE",
+"102 268 CURVE SMOOTH",
+"74 187 LINE",
+"124 160 LINE",
+"164 200 LINE",
+"92 145 OFFCURVE",
+"39 93 OFFCURVE",
 "0 0 CURVE",
 "6 -13 OFFCURVE",
 "21 -19 OFFCURVE",
@@ -61431,7 +61486,7 @@ nodes = (
 );
 }
 );
-width = 363;
+width = 323;
 }
 );
 note = MIMi6;
