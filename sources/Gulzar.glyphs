@@ -1,7 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/BEi3"
+"/SINm1/SINm10/SINm11/SINm12/SINm13/SINm14/SINm15/SINm18/SINm19/SINm2/SINm24/SINm3/SINm4/SINm5/SINm6/SINm7/SINm8/SINm9"
 );
 classes = (
 {
@@ -67534,7 +67534,7 @@ position = "{0, 1}";
 },
 {
 name = top;
-position = "{367, 196}";
+position = "{347, 196}";
 }
 );
 components = (
@@ -67596,7 +67596,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{624, 386}";
+position = "{604, 406}";
 }
 );
 components = (
@@ -67680,7 +67680,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{480, 321}";
+position = "{460, 341}";
 }
 );
 components = (
@@ -67783,7 +67783,7 @@ position = "{16, 0}";
 },
 {
 name = top;
-position = "{403, 148}";
+position = "{383, 168}";
 }
 );
 components = (
@@ -67845,7 +67845,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{398, 279}";
+position = "{378, 299}";
 }
 );
 components = (
@@ -67905,7 +67905,7 @@ position = "{5, 0}";
 },
 {
 name = top;
-position = "{356, 167}";
+position = "{336, 187}";
 }
 );
 components = (
@@ -68053,7 +68053,7 @@ position = "{11, 0}";
 },
 {
 name = top;
-position = "{329, 177}";
+position = "{309, 197}";
 }
 );
 components = (
@@ -68162,7 +68162,7 @@ position = "{134, 0}";
 },
 {
 name = top;
-position = "{388, 136}";
+position = "{368, 156}";
 }
 );
 hints = (
@@ -68317,7 +68317,7 @@ position = "{318, 0}";
 },
 {
 name = top;
-position = "{388, 86}";
+position = "{368, 106}";
 }
 );
 hints = (
@@ -68456,7 +68456,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{374, 148}";
+position = "{354, 168}";
 }
 );
 components = (
@@ -68540,7 +68540,7 @@ position = "{33, 0}";
 },
 {
 name = top;
-position = "{376, 164}";
+position = "{356, 184}";
 }
 );
 components = (
@@ -68624,7 +68624,7 @@ position = "{55, 0}";
 },
 {
 name = top;
-position = "{332, 145}";
+position = "{312, 165}";
 }
 );
 components = (
@@ -68699,7 +68699,7 @@ position = "{71, 0}";
 },
 {
 name = top;
-position = "{485, 219}";
+position = "{465, 239}";
 }
 );
 components = (
@@ -68759,7 +68759,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{347, 280}";
+position = "{327, 300}";
 }
 );
 components = (
@@ -68888,7 +68888,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{424, 394}";
+position = "{404, 414}";
 }
 );
 components = (
@@ -68950,7 +68950,7 @@ position = "{7, 0}";
 },
 {
 name = top;
-position = "{451, 351}";
+position = "{431, 371}";
 }
 );
 components = (
@@ -69113,7 +69113,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{350, 219}";
+position = "{330, 339}";
 }
 );
 components = (
