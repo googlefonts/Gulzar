@@ -169,7 +169,7 @@ class NastaliqKerning(FEZVerb):
                 # summing the second element of each group, we get
                 # the height of this sequence.
                 word_tail_rise = quantize(
-                    sum([x[1] for x in postcontext_plus_rise]), rise_quantization
+                    sum([x[1] for x in postcontext_plus_rise[1:]]), rise_quantization
                 )
                 if word_tail_rise < 0:
                     continue
