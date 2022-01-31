@@ -22797,6 +22797,7 @@ width = 300;
 }
 );
 note = SEMI_COLON;
+unicode = 061B;
 },
 {
 color = 3;
