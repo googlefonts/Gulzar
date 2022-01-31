@@ -1,7 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/misraComma-ar/misraComma-ar"
+"/misraComma-ar"
 );
 classes = (
 {
