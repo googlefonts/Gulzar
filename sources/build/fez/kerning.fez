@@ -35,6 +35,8 @@ Feature kern {
 		Position @alif_like ([FEi13 GAFi13 KAFi13 LAMi2 LAMi9] <xAdvance=+120>) @finas; #  
 		Position [@isols @finas] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # الی
 
+		Position [@isols @finas] ([BEi1 TEi1] <xAdvance=+200>) AINf1; # سابع
+
 		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
 
 	} IgnoreLigatures IgnoreMarks;
