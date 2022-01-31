@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/BEi3"
-);
 classes = (
 {
 automatic = 1;
@@ -15496,7 +15493,7 @@ position = "{281, -341}";
 },
 {
 name = top;
-position = "{841, 552}";
+position = "{821, 552}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -15587,7 +15584,7 @@ name = SINu1;
 },
 {
 name = tda;
-transform = "{1, 0, 0, 1, 622, 702}";
+transform = "{1, 0, 0, 1, 602, 702}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -66536,7 +66533,7 @@ position = "{983, 599}";
 },
 {
 name = top;
-position = "{841, 552}";
+position = "{821, 572}";
 }
 );
 hints = (
