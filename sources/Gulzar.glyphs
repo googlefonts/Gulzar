@@ -30420,6 +30420,48 @@ subCategory = Nonspacing;
 },
 {
 color = 3;
+glyphname = "noonghunnaabove-ar";
+layers = (
+{
+anchors = (
+{
+name = _top;
+position = "{142, 176}";
+},
+{
+name = top;
+position = "{142, 449}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"179 296 OFFCURVE",
+"222 363 OFFCURVE",
+"232 462 CURVE",
+"218 465 LINE",
+"196 397 OFFCURVE",
+"166 375 OFFCURVE",
+"132 375 CURVE SMOOTH",
+"88 375 OFFCURVE",
+"71 411 OFFCURVE",
+"79 454 CURVE",
+"63 451 LINE",
+"35 388 OFFCURVE",
+"52 296 OFFCURVE",
+"121 296 CURVE SMOOTH"
+);
+}
+);
+width = 282;
+}
+);
+unicode = 0658;
+},
+{
+color = 3;
 glyphname = "dammainverted-ar";
 layers = (
 {
