@@ -11,10 +11,15 @@ Feature ccmp {
    Routine urdu {
         Substitute space -> space.urdu <<arab/dflt arab/URD>>;
         Substitute @latinpunct -> @urdupunct <<arab/dflt arab/URD>>;
-        Substitute [zero-ar two-ar three-ar four-ar five-ar] -> [ZERO.urdu TWO.urdu THREE.urdu FOUR.urdu FIVE.urdu] <<arab/URD>>;
    };
    Routine latin {
         Substitute space -> space.latin <<latn/dflt>>;
+   };
+   Routine numbers {
+        Substitute four-ar -> four-ar <<arab/ARA arab/SND arab/FAR>>;
+        Substitute ABR_FOUR -> FOUR.urdu <<arab/URD arab/dflt>>;
+        Substitute six-persian -> SIX <<arab/URD arab/SND arab/dflt>>;
+        Substitute seven-persian -> SEVEN <<arab/URD arab/SND arab/dflt>>;
    };
 } ccmp;
 
