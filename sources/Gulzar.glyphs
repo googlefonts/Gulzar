@@ -60443,7 +60443,7 @@ position = "{278, 27}";
 },
 {
 name = exit;
-position = "{47, 0}";
+position = "{27, 0}";
 },
 {
 name = top;
@@ -60475,11 +60475,12 @@ paths = (
 {
 closed = 1;
 nodes = (
-"61 -135 OFFCURVE",
-"97 -59 OFFCURVE",
-"117 25 CURVE",
-"135 -61 OFFCURVE",
-"179 -108 OFFCURVE",
+"66 -135 OFFCURVE",
+"125 -33 OFFCURVE",
+"131 39 CURVE",
+"114 42 LINE",
+"129 -55 OFFCURVE",
+"176 -108 OFFCURVE",
 "231 -108 CURVE",
 "263 -83 OFFCURVE",
 "285 -13 OFFCURVE",
@@ -60495,13 +60496,13 @@ nodes = (
 "127 419 OFFCURVE",
 "111 373 OFFCURVE",
 "111 311 CURVE SMOOTH",
-"112 127 LINE SMOOTH",
-"112 71 OFFCURVE",
-"89 0 OFFCURVE",
-"47 0 CURVE",
-"22 -11 OFFCURVE",
-"0 -88 OFFCURVE",
-"0 -135 CURVE"
+"112 149 LINE SMOOTH",
+"113 64 OFFCURVE",
+"84 0 OFFCURVE",
+"27 0 CURVE",
+"2 -11 OFFCURVE",
+"-20 -88 OFFCURVE",
+"-20 -135 CURVE"
 );
 }
 );
