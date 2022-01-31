@@ -86,7 +86,6 @@ class DetectAndSwapYB(FEZVerb):
         collides = 0
         failed = []
         import tqdm
-
         for seq in tqdm.tqdm(sequences):
             if not self.any_possible_sequence(seq):
                 pruned += 1
@@ -150,7 +149,7 @@ class DetectAndSwapYB(FEZVerb):
             return False
         if re.search(r"^[sdt]db", rdot) and ("JIM" not in right and "BE" not in right and "TE" not in right):
             return False
-        if re.search(r"^[sdt]db", ldot) and ("JIM" not in left and "BE" not in left  and "TE" not in right):
+        if re.search(r"^[sdt]db", ldot) and ("JIM" not in left and "BE" not in left  and "TE" not in left):
             return False
         return True
 
