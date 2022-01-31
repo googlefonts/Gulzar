@@ -100,7 +100,7 @@ Feature kern {
     Position KASRA ( @inits <xAdvance=+200> ) /.yb/;
 
     # Clear Alif Madda
-    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+150> ) HAMZA_ABOVE;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+200> ) HAMZA_ABOVE;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+120> ) [dda tda toeda];
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> ) @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> ) @below_dots @all_above_marks;
@@ -134,11 +134,15 @@ Feature kern {
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
 
     # چنا
-    Position JIMi2 [tdb sdb sda] [BEm3 TEm3] (@all_above_marks <yPlacement=+100>);
+    Position JIMi2 [tdb sdb sda] [BEm3 TEm3] ([sda dda tda] <yPlacement=+100>);
     Position TEi3 ([dda tda] <xPlacement=+50>) ALIFf1;
 
     Position (BEi13 <xAdvance=+70>) [ddb.yb tdb.yb];
     Position @long_re (/^FE/ <xAdvance=+70>);
+
+    # Short BE/TEs
+    Position ([TEi3 BEi3] <xAdvance=+130>) [dda tda];
+
   };
 
   Routine ClashesToRight {
@@ -169,7 +173,7 @@ Feature kern {
     Position /\.one$/ @NarrowMedials (@all_above_marks <yPlacement=-40>) /KAF|GAF/;
     Position (/\.one$/ <yPlacement=-140 xPlacement=+5>) @all_above_marks /KAF|GAF/;
 
-    Position (toeda <yPlacement=-40>) /[KG]AF[mf]/;
+    Position (toeda <yPlacement=-60>) /[KG]AF[mf]/;
     Position /FE[mi]/ ([sda dda tda] <yPlacement=-40 xPlacement=+40>) /[KG]AF[mf]/;
 
     Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
