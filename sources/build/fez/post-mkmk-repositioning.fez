@@ -170,7 +170,7 @@ Feature kern {
     Position (/\.one$/ <yPlacement=-140 xPlacement=+5>) @all_above_marks /KAF|GAF/;
 
     Position (toeda <yPlacement=-40>) /[KG]AF[mf]/;
-    Position /FE[mi]/ ([sda dda tda] <yPlacement=-20 xPlacement=+20>) /[KG]AF[mf]/;
+    Position /FE[mi]/ ([sda dda tda] <yPlacement=-40 xPlacement=+40>) /[KG]AF[mf]/;
 
     Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
     Position ([sda dda tda] <yPlacement=-50>) @BEm [sda dda tda] /[KG]AF[mf]/;
