@@ -148,9 +148,9 @@ class DetectAndSwapYB(FEZVerb):
             return False
         if "haydb" in ldot and "HAYC" not in left:
             return False
-        if re.search(r"^[sdt]db", rdot) and ("JIM" not in right and "BE" not in right):
+        if re.search(r"^[sdt]db", rdot) and ("JIM" not in right and "BE" not in right and "TE" not in right):
             return False
-        if re.search(r"^[sdt]db", ldot) and ("JIM" not in left and "BE" not in left):
+        if re.search(r"^[sdt]db", ldot) and ("JIM" not in left and "BE" not in left  and "TE" not in right):
             return False
         return True
 
