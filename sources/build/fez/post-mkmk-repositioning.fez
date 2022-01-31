@@ -40,10 +40,14 @@ Feature kern {
     Position [REf2 REf3] @inits ( sdb.yb <180 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [sdb.one tdb.one ddb.one] @DOTm ( [ddb.yb sdb.yb] <0 -250 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /HAYCi/ <xAdvance=+50> /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1]; # سیاہی
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb$/ <50 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /HAYCi/ <xAdvance=+50> /haydb/ <80 -120 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <80 -120 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /HAYCi/ <xAdvance=+50> /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
+    Position ( /HAYCi/ <xAdvance=+50> /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
   } UseMarkFilteringSet /haydb|sdb.(one|yb)|tdb|ddb|haydb/;
 
