@@ -1,7 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/SINm1/SINm10/SINm11/SINm12/SINm13/SINm14/SINm15/SINm18/SINm19/SINm2/SINm24/SINm3/SINm4/SINm5/SINm6/SINm7/SINm8/SINm9"
+"/BEi3"
 );
 classes = (
 {
@@ -36504,7 +36504,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{118, -105}";
+position = "{78, -105}";
 },
 {
 name = exit;
