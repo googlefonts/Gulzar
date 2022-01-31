@@ -168,9 +168,14 @@ class NastaliqKerning(FEZVerb):
                 # the group and the median rise for each group. By
                 # summing the second element of each group, we get
                 # the height of this sequence.
-                word_tail_rise = quantize(
-                    sum([x[1] for x in postcontext_plus_rise[1:]]), rise_quantization
-                )
+
+                # This is a bit of a hack :-(
+                if len(postcontext_plus_rise) > 1:
+                    word_tail_rise = quantize(
+                        sum([x[1] for x in postcontext_plus_rise]), rise_quantization
+                    )
+                else:
+                    word_tail_rise = 0
                 if word_tail_rise < 0:
                     continue
 

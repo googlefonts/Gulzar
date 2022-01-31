@@ -305,7 +305,6 @@ Routine AtHeight0pos {
     Chain (@alif_like /TEi/ ^OpenTinySpaceBeforeKern); # جاتا
     Chain (@long_re [@BEi @JIMi] ^OpenSmallSpaceBeforeKern @dots); # جر یہ / سر جہا / سر چہا
     Chain (CH_YEu1 @DOTi ^DoNothingPos); # ی جا
-    Chain (@bigbowlfina @DOTi ^OpenSmallSpaceBeforeKern); # کی جا
     Chain (@kaf_like @JIMi ^OpenSmallSpaceBeforeKern); # یہ خت
 } IgnoreLigatures UseMarkFilteringSet [@dots toeda];
 
