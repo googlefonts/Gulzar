@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/dammainverted-ar/VAOf1"
-);
 classes = (
 {
 automatic = 1;
@@ -29187,7 +29184,7 @@ position = "{162, 27}";
 },
 {
 name = top;
-position = "{158, 464}";
+position = "{153, 424}";
 }
 );
 components = (
@@ -29215,7 +29212,7 @@ position = "{162, 20}";
 },
 {
 name = top;
-position = "{158, 464}";
+position = "{153, 424}";
 }
 );
 components = (
@@ -29773,7 +29770,7 @@ position = "{1, 99}";
 },
 {
 name = top;
-position = "{-1, 564}";
+position = "{6, 444}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -29814,7 +29811,7 @@ position = "{2, 98}";
 },
 {
 name = bottom;
-position = "{1, -245}";
+position = "{1, -185}";
 }
 );
 components = (
