@@ -3,7 +3,8 @@
 DisplayStrings = (
 "/yehbarreeHamzaabove-ar.isol",
 "/wawHamzaabove-ar/BARI_YEu1/yehbarreeHamzaabove-ar",
-"/yehbarreeHamzaabove-ar"
+"/yehbarreeHamzaabove-ar",
+"/BARI_YEf1/yehbarreeHamzaabove-ar/yehbarreeHamzaabove-ar.isol"
 );
 classes = (
 {
@@ -17093,13 +17094,27 @@ unicode = 06D2;
 glyphname = "yehbarreeHamzaabove-ar";
 layers = (
 {
-components = (
+anchors = (
 {
-name = BARI_YEu1;
+name = bottom;
+position = "{391, -91}";
 },
 {
+name = entry;
+position = "{129, 187}";
+},
+{
+name = top;
+position = "{138, 560}";
+}
+);
+components = (
+{
 name = HAMZA_ABOVE;
-transform = "{1, 0, 0, 1, 0, 179}";
+transform = "{1, 0, 0, 1, -36, 189}";
+},
+{
+name = BARI_YEf1;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
