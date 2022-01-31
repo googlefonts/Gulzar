@@ -100,6 +100,7 @@ Feature kern {
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+120> ) [dda tda toeda];
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> ) @all_above_marks;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> ) @below_dots @all_above_marks;
+    Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+0> ) endOfBariYe;
     Position ALIFu1 MADDA ( /[ui](sd)?\d/ <xAdvance=+75> );
 
     # Heh Alif
@@ -133,6 +134,7 @@ Feature kern {
     Position TEi3 ([dda tda] <xPlacement=+50>) ALIFf1;
 
     Position (BEi13 <xAdvance=+70>) [ddb.yb tdb.yb];
+    Position @long_re (/^FE/ <xAdvance=+70>);
   };
 
   Routine ClashesToRight {
@@ -170,6 +172,7 @@ Feature kern {
     Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m1[36]/;
     Position ([sda dda tda] <yPlacement=-60>) [@BEm /FEm/]  /[KG]AF[mf]/;
     Position ([sda dda tda] <yPlacement=-60>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
+    Position MADDA (/KAF|GAF/ <xAdvance=+0>) BARI_YEf1;
     Position MADDA (/KAF|GAF/ <xAdvance=+200>);
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
 
