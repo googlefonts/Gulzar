@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/TEi7/space/BEi7/JIMf1/BEi7/JIMf1"
+);
 classes = (
 {
 automatic = 1;
@@ -36508,7 +36511,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{447, 107}";
+position = "{461, 93}";
 },
 {
 name = exit;
@@ -36516,7 +36519,7 @@ position = "{7, 0}";
 },
 {
 name = top;
-position = "{431, 354}";
+position = "{384, 456}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -36524,21 +36527,22 @@ paths = (
 {
 closed = 1;
 nodes = (
-"21 63 OFFCURVE",
-"130 142 OFFCURVE",
-"289 213 CURVE SMOOTH",
-"363 246 OFFCURVE",
-"447 277 OFFCURVE",
-"538 304 CURVE",
-"551 322 OFFCURVE",
-"575 364 OFFCURVE",
-"584 396 CURVE",
-"573 404 LINE",
-"469 369 OFFCURVE",
-"360 325 OFFCURVE",
-"265 276 CURVE SMOOTH",
-"114 198 OFFCURVE",
-"0 107 OFFCURVE",
+"35 34 LINE",
+"47 68 OFFCURVE",
+"69 114 OFFCURVE",
+"124 156 CURVE SMOOTH",
+"188 205 OFFCURVE",
+"303 257 OFFCURVE",
+"382 294 CURVE SMOOTH",
+"418 311 OFFCURVE",
+"488 393 OFFCURVE",
+"517 450 CURVE",
+"506 458 LINE",
+"437 415 OFFCURVE",
+"407 399 OFFCURVE",
+"252 320 CURVE SMOOTH",
+"126 256 OFFCURVE",
+"0 138 OFFCURVE",
 "0 17 CURVE SMOOTH",
 "0 8 OFFCURVE",
 "2 4 OFFCURVE",
@@ -36546,7 +36550,7 @@ nodes = (
 );
 }
 );
-width = 634;
+width = 567;
 }
 );
 note = BEi7;
@@ -64509,7 +64513,7 @@ position = "{281, -381}";
 },
 {
 name = entry;
-position = "{774, 315}";
+position = "{814, 325}";
 },
 {
 name = top;
@@ -69841,7 +69845,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{420, 77}";
+position = "{461, 93}";
 },
 {
 name = exit;
@@ -69849,7 +69853,7 @@ position = "{7, 0}";
 },
 {
 name = top;
-position = "{390, 354}";
+position = "{384, 456}";
 }
 );
 components = (
@@ -69858,7 +69862,7 @@ name = BEi7;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 634;
+width = 567;
 }
 );
 },
