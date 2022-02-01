@@ -40,6 +40,11 @@ Feature rlig {
     Substitute [BEi1 TEi1] ( TEf1 ) -> BEf2;
   } IgnoreMarks;
 
+  Routine Use3 {
+    Substitute [SINm1 SINi1] (BEm1) [AINm1 AINf1] -> BEmsd3;
+    Substitute [SINm1 SINi1] (TEm1) [AINm1 AINf1] -> TEmsd3;
+  } IgnoreMarks;
+
   # The Glyphs file will contain a set of information about selecting
   # connecting glyphs (what the Qalmi patent calls the Generic Selection
   # Table). Code in the Makefile will extract this information from the
