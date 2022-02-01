@@ -69724,7 +69724,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{129, -73}";
+position = "{150, -88}";
 },
 {
 name = exit;
