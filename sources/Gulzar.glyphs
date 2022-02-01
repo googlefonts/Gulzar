@@ -14839,11 +14839,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{75, 81}";
+position = "{91, 81}";
 },
 {
 name = top;
-position = "{149, 699}";
+position = "{124, 704}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14851,26 +14851,23 @@ paths = (
 {
 closed = 1;
 nodes = (
-"96 81 LINE",
-"119 129 OFFCURVE",
-"142 213 OFFCURVE",
-"143 298 CURVE SMOOTH",
-"145 562 LINE SMOOTH",
-"145 618 OFFCURVE",
-"147 664 OFFCURVE",
-"149 699 CURVE",
-"133 704 LINE",
-"86 628 OFFCURVE",
-"67 585 OFFCURVE",
-"70 495 CURVE SMOOTH",
-"78 217 LINE SMOOTH",
-"79 165 OFFCURVE",
-"78 119 OFFCURVE",
-"75 81 CURVE"
+"91 81 LINE",
+"114 129 OFFCURVE",
+"140 208 OFFCURVE",
+"140 298 CURVE SMOOTH",
+"140 699 LINE",
+"124 704 LINE",
+"77 608 OFFCURVE",
+"72 585 OFFCURVE",
+"72 495 CURVE SMOOTH",
+"72 217 LINE SMOOTH",
+"72 164 OFFCURVE",
+"73 119 OFFCURVE",
+"70 81 CURVE"
 );
 }
 );
-width = 219;
+width = 210;
 }
 );
 note = ALIFu1;
@@ -14887,11 +14884,11 @@ name = ALIFu1;
 },
 {
 name = HAMZA_ABOVE;
-transform = "{1, 0, 0, 1, -31, 609}";
+transform = "{1, 0, 0, 1, -56, 614}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 219;
+width = 210;
 }
 );
 unicode = 0623;
@@ -14907,11 +14904,11 @@ name = ALIFu1;
 },
 {
 name = HAMZA_BELOW;
-transform = "{1, 0, 0, 1, 76, -6}";
+transform = "{1, 0, 0, 1, 92, -6}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 219;
+width = 210;
 }
 );
 unicode = 0625;
@@ -14927,11 +14924,11 @@ name = ALIFu1;
 },
 {
 name = MADDA;
-transform = "{1, 0, 0, 1, -102, 828}";
+transform = "{1, 0, 0, 1, -127, 833}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 219;
+width = 210;
 }
 );
 unicode = 0622;
@@ -14947,11 +14944,11 @@ name = ALIFu1;
 },
 {
 name = HAMZA_WASL;
-transform = "{1, 0, 0, 1, -47, 819}";
+transform = "{1, 0, 0, 1, -72, 824}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 219;
+width = 210;
 }
 );
 unicode = 0671;
@@ -73957,11 +73954,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{96, 21}";
+position = "{91, 21}";
 },
 {
 name = top;
-position = "{133, 574}";
+position = "{124, 574}";
 }
 );
 hints = (
@@ -73984,26 +73981,23 @@ paths = (
 {
 closed = 1;
 nodes = (
-"96 21 LINE",
-"119 69 OFFCURVE",
-"142 153 OFFCURVE",
-"143 238 CURVE SMOOTH",
-"145 432 LINE SMOOTH",
-"146 488 OFFCURVE",
-"147 534 OFFCURVE",
-"149 569 CURVE",
-"133 574 LINE",
-"86 498 OFFCURVE",
-"67 455 OFFCURVE",
-"70 365 CURVE SMOOTH",
-"77 157 LINE SMOOTH",
-"79 105 OFFCURVE",
-"78 59 OFFCURVE",
-"75 21 CURVE"
+"91 21 LINE",
+"114 69 OFFCURVE",
+"140 148 OFFCURVE",
+"140 238 CURVE SMOOTH",
+"140 569 LINE",
+"124 574 LINE",
+"77 478 OFFCURVE",
+"72 455 OFFCURVE",
+"72 365 CURVE SMOOTH",
+"72 157 LINE SMOOTH",
+"72 104 OFFCURVE",
+"73 59 OFFCURVE",
+"70 21 CURVE"
 );
 }
 );
-width = 219;
+width = 210;
 }
 );
 note = ALIFu2;
