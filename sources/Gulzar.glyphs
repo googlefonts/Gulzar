@@ -5,7 +5,7 @@ DisplayStrings = (
 "/space/space/MIMi9/MIMi9/space.001/MIMi6/MIMi6/MIMi5/MIMi13/CH_YEf1/MIMi13/CH_YEf1/MIMi11/space/MIMi7/JIMm12/space/MIMi7/JIMf1/space/MIMi7/JIMf1/MIMi18/REf2/MIMi18/REf2",
 "/FEm10/TOEm16/REf2/TOEi16/REf2/space/SADi16/REf3/SADi16/REf3",
 "/HAYCf1",
-"/AINi3/AINi16/HAYCf1/AINi16/HAYCf1/HAYCf2"
+"/AINi3/AINi16/HAYCf1/AINi16/HAYCf1"
 );
 classes = (
 {
@@ -74354,72 +74354,6 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{262, -47}";
-},
-{
-name = entry;
-position = "{358, 165}";
-},
-{
-name = top;
-position = "{239, 182}";
-}
-);
-hints = (
-{
-horizontal = 1;
-place = "{2, 21}";
-target = up;
-type = BottomGhost;
-},
-{
-horizontal = 1;
-place = "{38, 137}";
-type = Stem;
-},
-{
-place = "{-7, 393}";
-type = Stem;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"117 49 OFFCURVE",
-"159 49 OFFCURVE",
-"179 49 CURVE SMOOTH",
-"212 49 OFFCURVE",
-"266 40 OFFCURVE",
-"311 30 CURVE",
-"340 44 OFFCURVE",
-"367 121 OFFCURVE",
-"358 165 CURVE",
-"327 172 OFFCURVE",
-"272 182 OFFCURVE",
-"239 182 CURVE SMOOTH",
-"192 182 OFFCURVE",
-"111 161 OFFCURVE",
-"50 -37 CURVE",
-"70 -45 LINE"
-);
-}
-);
-width = 360;
-}
-);
-note = HAYCf2;
-},
-{
-color = 3;
-export = 0;
-glyphname = HAYCf3;
-layers = (
-{
-anchors = (
-{
-name = bottom;
 position = "{268, -53}";
 },
 {
@@ -87801,7 +87735,7 @@ TOEi = "18";
 TOEm = "18";
 },
 {
-AINi = "3";
+AINi = "16";
 AINm = "3";
 BEi = 3;
 BEm = "3";
