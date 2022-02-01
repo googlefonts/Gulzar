@@ -32,8 +32,9 @@ Feature rlig {
 };
 
 Feature ss03 {
-  # Allow user to drop manually
+  # Allow user to drop/undrop manually
   Routine CVManualDrop {
+    Substitute [sdb tdb ddb KASRA].yb -> $1~yb;
     Substitute [sdb tdb ddb KASRA] -> $1.yb;
     Substitute [sdb tdb ddb KASRA].one -> $1~one.yb;
     Substitute [sdb tdb ddb KASRA].two -> $1~two.yb;

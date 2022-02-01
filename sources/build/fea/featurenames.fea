@@ -10,7 +10,7 @@ feature ss02 {
 } ss02;
 feature ss03 {
     featureNames {
-        name "Drop nukta to bari ye position";
+        name "Toggle nukta bari ye positioning";
     };
 } ss03;
 feature ss04 {
