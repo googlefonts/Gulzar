@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/ALIFu1/ALIFu2"
-);
 classes = (
 {
 automatic = 1;
@@ -76677,7 +76674,7 @@ position = "{188, -135}";
 },
 {
 name = entry;
-position = "{255, 11}";
+position = "{89, -65}";
 },
 {
 name = exit;
@@ -76796,7 +76793,7 @@ position = "{188, -135}";
 },
 {
 name = entry;
-position = "{255, 11}";
+position = "{89, -65}";
 },
 {
 name = exit;
@@ -87137,68 +87134,68 @@ TOEi = "10";
 TOEm = "10";
 },
 {
-AINi = 1;
-AINm = 1;
-BEi = 1;
-BEm = 1;
-FEi = 1;
-FEm = 1;
-GAFi = 1;
-GAFm = 1;
-HAYAi = 1;
-HAYAm = 1;
-HAYCi = 1;
-HAYCm = 1;
-Hei = 1;
-JIMi = 1;
-JIMm = 1;
-KAFi = 1;
-KAFm = 1;
-LAMi = 1;
-LAMm = 1;
+AINi = "10";
+AINm = "10";
+BEi = "10";
+BEm = "10";
+FEi = "10";
+FEm = "10";
+GAFi = "10";
+GAFm = "10";
+HAYAi = "10";
+HAYAm = "10";
+HAYCi = "10";
+HAYCm = "10";
+Hei = "10";
+JIMi = "10";
+JIMm = "10";
+KAFi = "10";
+KAFm = "10";
+LAMi = "10";
+LAMm = "10";
 "Left Glyph" = TOEm18;
-MIMi = 1;
-MIMm = 1;
-SADi = 1;
-SADm = 1;
-SINi = 1;
-SINm = 1;
-TEi = 1;
-TEm = 1;
-TOEi = 1;
-TOEm = 1;
+MIMi = "10";
+MIMm = "10";
+SADi = "10";
+SADm = "10";
+SINi = "10";
+SINm = "10";
+TEi = "10";
+TEm = "10";
+TOEi = "10";
+TOEm = "10";
 },
 {
-AINi = 1;
-AINm = 1;
-BEi = 1;
-BEm = 1;
-FEi = 1;
-FEm = 1;
-GAFi = 1;
-GAFm = 1;
-HAYAi = 1;
-HAYAm = 1;
-HAYCi = 1;
-HAYCm = 1;
-Hei = 1;
-JIMi = 1;
-JIMm = 1;
-KAFi = 1;
-KAFm = 1;
-LAMi = 1;
-LAMm = 1;
+AINi = "10";
+AINm = "10";
+BEi = "10";
+BEm = "10";
+FEi = "10";
+FEm = "10";
+GAFi = "10";
+GAFm = "10";
+HAYAi = "10";
+HAYAm = "10";
+HAYCi = "10";
+HAYCm = "10";
+Hei = "10";
+JIMi = "10";
+JIMm = "10";
+KAFi = "10";
+KAFm = "10";
+LAMi = "10";
+LAMm = "10";
 "Left Glyph" = TOEm19;
-MIMi = 1;
-MIMm = 1;
-SADi = 1;
-SADm = 1;
-SINi = 1;
-SINm = 1;
-TEi = 1;
-TEm = 1;
-TOEi = 1;
-TOEm = 1;
+MIMi = "10";
+MIMm = "10";
+SADi = "10";
+SADm = "10";
+SINi = "10";
+SINm = "10";
+TEi = "10";
+TEm = "10";
+TOEi = "10";
+TOEm = "10";
 },
 {
 AINi = "10";
