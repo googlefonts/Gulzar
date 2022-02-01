@@ -328,6 +328,7 @@ Routine AtHeight200pos {
     Chain ([@dal_like @vao_like] [BEi24 TEi24] ^DoNothingPos); # پریسا
     Chain ([@dal_like @vao_like] [BEi9 TEi9] @dots_one ^DropALotMore); # قدیم
     Chain ([@dal_like @vao_like] @DOTi @dots_one ^DropATinyBitMore); # قدیم / رجم
+    Chain ([@dal_like @vao_like] [BEi7 TEi7] ^OpenTinySpace @dots); # ہ بحا
     Chain ([@dal_like @vao_like] [BEi9 TEi9] ^OpenSmallSpace @dots); # ر یم
     Chain ([@dal_like @vao_like] [BEi5 TEi5] ^OpenBigSpace @dots); # ر یھ
     Chain ([@dal_like @vao_like] [BEisd1 TEisd1] @dots ^DropATinyBitMore @DOTm @dots_one ^DropATinyBitMore); # دپت

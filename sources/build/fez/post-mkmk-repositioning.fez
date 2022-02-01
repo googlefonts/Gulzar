@@ -139,11 +139,12 @@ Feature kern {
 
     Position (BEi13 <xAdvance=+70>) [ddb.yb tdb.yb];
     Position @long_re (/^FE/ <xAdvance=+70>);
-
-    # Short BE/TEs
-    Position ([TEi3 BEi3] <xAdvance=+130>) [dda tda];
-
   };
+  Routine ShortBes {
+    # Short BE/TEs
+    Position @alif_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+130>) [dda tda];
+    Position @vao_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+60>) [dda tda];
+  } IgnoreLigatures UseMarkFilteringSet [dda tda];
 
   Routine ClashesToRight {
     Position LAMi4 /FEm/ (dda <xPlacement=-30>);
