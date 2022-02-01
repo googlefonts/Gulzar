@@ -53,23 +53,12 @@ Feature rlig {
     Substitute @base_ybs (KASRA.yb) -> KASRA.yb.attached;
   } UseMarkFilteringSet @base_ybs;
 
-  # This plugin (implemented in `qalamTools/YBFix.py`) enumerates
-  # all sequences of glyphs and marks underneath the bari ye tail,
-  # and checks if any of the marks will collide when placed in
-  # their normal positions underneath the base. If there is a collision,
-  # the rightmost mark is substituted with a glyph with `.collides`
-  # at the end; e.g. in
-  #   چپے - `JIMi2 tdb.yb BEm11 tdb.yb BARI_YEf1`
-  # the cheh dots collide with the pe dots, and so this substitutes
-  # them for
-  #   چپے - `JIMi2 tdb.yb.collides BEm11 tdb.yb BARI_YEf1`
-  DetectAndSwapYB;
-
-  # Some collisons seem not to be automatically detected. I am not
-  # sure why not. Detect them manually.
-  Routine ManualFixupBBY {
-    Substitute BEisd1 sdb.yb [BEm7 TEm7] (sdb.yb) -> sdb.yb.collides;
-    Substitute HAYCm7 haydb.yb JIMm7 (sdb.yb) -> sdb.yb.collides;
+  Routine MarkConsecutiveYBs {
+    # We had very complicated code here to check whether two
+    # consecutive YBs clashed, but I'm just going to assume
+    # that they do. There's no harm in it, and it's an awful
+    # lot simpler.
+    Substitute [@medis @inits] @base_ybs @medis (@base_ybs) -> @base_ybs.collides;
   } UseMarkFilteringSet @base_ybs;
 
   # When we spread out the `.yb` glyphs to avoid collisions, we
