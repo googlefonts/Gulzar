@@ -1,6 +1,6 @@
 GLYPHS_FILE=sources/Gulzar.glyphs
 FINAL_FONT=fonts/ttf/Gulzar-Regular.ttf
-FEA_FILES=sources/build/fea/languagesystem.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/bariye-drop2.fea  sources/build/fea/kerning.fea sources/build/fea/anchor-attachment.fea sources/build/fea/latin-kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
+FEA_FILES=sources/build/fea/languagesystem.fea sources/build/fea/featurenames.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/bariye-drop2.fea  sources/build/fea/kerning.fea sources/build/fea/anchor-attachment.fea sources/build/fea/latin-kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
 RELEASE_ARG=
 PYTHON=python3
 

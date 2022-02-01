@@ -31,6 +31,15 @@ Feature rlig {
   } UseMarkFilteringSet KASRA;
 };
 
+Feature ss03 {
+  # Allow user to drop manually
+  Routine CVManualDrop {
+    Substitute [sdb tdb ddb KASRA] -> $1.yb;
+    Substitute [sdb tdb ddb KASRA].one -> $1~one.yb;
+    Substitute [sdb tdb ddb KASRA].two -> $1~two.yb;
+  };
+};
+
 # The next task is to avoid collisions between `.yb` dots we have
 # just substituted. In the main rasm, we perform dot collision
 # by adjusting the vertical position of the glyphs. But in the
@@ -72,6 +81,13 @@ Feature rlig {
   Routine MarkEndOfBY {
     Substitute BARI_YEf1 -> endOfBariYe $1;
     };
+};
+
+Feature ss04 {
+  # Allow user to separate manually
+  Routine CVManualSeparate {
+    Substitute @base_ybs -> $1.collides;
+  };
 };
 
 # We substituted the YB marks with *unattached* marks, which gets them

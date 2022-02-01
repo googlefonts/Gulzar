@@ -1,0 +1,20 @@
+feature ss01 {
+    featureNames {
+        name "Drop nukta one position";
+    };
+} ss01;
+feature ss02 {
+    featureNames {
+        name "Drop nukta two positions";
+    };
+} ss02;
+feature ss03 {
+    featureNames {
+        name "Drop nukta to bari ye position";
+    };
+} ss03;
+feature ss04 {
+    featureNames {
+        name "Space out bari ye marks";
+    };
+} ss04;

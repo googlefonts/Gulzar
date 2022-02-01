@@ -358,7 +358,9 @@ Routine AtHeight200pos {
     Chain (@dal_like @JIMi @dots_one ^DropATinyBitMore); # دجم
     Chain (@vao_like @JIMi @dots_one ^DropATinyBitMore); # وجم
     Chain (@long_re [BEi3 TEi3 BEi15 TEi15 BEi5 TEi5 JIMi24] ^TightenSlightly @dots_one ^DropATinyBitMore); # متجرپھ / مرجسا
+    Chain (@long_re [BEisd1 TEisd1] ^OpenSmallSpace @dots); # کنکشنز بنا
     Chain (@long_re [@BEi @JIMi] ^OpenTinySpace [ddb tdb]); # جھر پو
+    Chain (@long_re [@BEi @JIMi] @dots_one ^DropATinyBitMore); # ئبریٹ
     Chain (@long_re [@BEi @JIMi] ^OpenTinySpace @DOTm @dots_one ^DropATinyBitMore); # پھرتیر
     Chain (@long_re @JIMi @dots_one ^DropATinyBitMore); # جرجم
 
@@ -440,9 +442,10 @@ DefineClass @narrow_inits = @inits & (width < 300);
 
 Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^OpenSmallSpace);
-    Chain (@alif_like @DOTi ^OpenMediumSpace [ddb tdb]); # اچھّی
+    Chain (@alif_like [BEi7 TEi7] ^OpenMediumSpace @dots ^Raise); # ایحجتخد
     Chain (@alif_like [BEi3 TEi3] ^DoNothingPos @medis); # بانین
     Chain (@alif_like [BEi3 TEi3] ^OpenTinySpace [ddb.one tdb.one ddb tdb]); # ایپس
+    Chain (@alif_like @DOTi ^OpenMediumSpace [ddb tdb]); # اچھّی
     Chain (@alif_like @DOTi ^OpenSpace sdb); # اچھّی
     Chain TEi15 ([@dal_like @vao_like] TEisd1 ^OpenTinySpace); # توثیق
     Chain ([@dal_like @vao_like] JIMi5 ^OpenSpace @dots); # پوچھیں
@@ -506,6 +509,22 @@ Feature rlig {
   DetectAndSwap top reverse;
   DetectAndSwap bottom;
   DetectAndSwap top;
+};
+
+# Allow users to manually modify dot positions
+Feature ss01 {
+  Routine ManualCycleOne {
+    Substitute @dots -> @dots_one;
+    Substitute [sdb.one ddb.one tdb.one] -> @dots_two;
+    Substitute @dots_two -> [sdb ddb tdb];
+  };
+};
+Feature ss02 {
+  Routine ManualCycleTwo {
+    Substitute [sdb ddb tdb] -> @dots_two;
+    Substitute @dots_two -> [sdb.one ddb.one tdb.one];
+    Substitute @dots_one -> @dots;
+  };
 };
 
 Feature rlig {
