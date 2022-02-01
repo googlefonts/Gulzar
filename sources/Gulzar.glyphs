@@ -2,7 +2,8 @@
 .appVersion = "1352";
 DisplayStrings = (
 "/FEm16/REf2/FEm16/REf2/space/AINm16/REf2/AINm16/REf2",
-"/HAYCi17/Hei16/REf3/space/HAYAi16/REf2/space/HAYAm16"
+"/HAYCi17/Hei16/REf3/space/HAYAi16/REf2/space/HAYAm16",
+"/HAYCu1/HAYCu1"
 );
 classes = (
 {
@@ -16602,7 +16603,7 @@ name = HAYCu1;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 309;
+width = 320;
 }
 );
 unicode = 0647;
@@ -16619,7 +16620,7 @@ position = "{120, -1}";
 },
 {
 name = top;
-position = "{146, 383}";
+position = "{172, 385}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -16627,42 +16628,43 @@ paths = (
 {
 closed = 1;
 nodes = (
-"229 -1 OFFCURVE",
-"259 157 OFFCURVE",
-"259 238 CURVE SMOOTH",
-"259 335 OFFCURVE",
-"211 383 OFFCURVE",
-"146 383 CURVE SMOOTH",
-"120 383 OFFCURVE",
-"89 376 OFFCURVE",
-"55 351 CURVE",
-"50 95 LINE SMOOTH",
-"49 25 OFFCURVE",
-"81 -1 OFFCURVE",
-"118 -1 CURVE SMOOTH"
-);
-},
-{
-closed = 1;
-nodes = (
-"98 91 OFFCURVE",
-"81 110 OFFCURVE",
-"82 157 CURVE SMOOTH",
-"83 229 LINE",
-"74 213 LINE",
-"94 222 OFFCURVE",
-"115 227 OFFCURVE",
-"135 227 CURVE SMOOTH",
-"176 227 OFFCURVE",
-"209 206 OFFCURVE",
-"209 167 CURVE SMOOTH",
-"209 120 OFFCURVE",
-"166 91 OFFCURVE",
-"131 91 CURVE SMOOTH"
+"227 -1 OFFCURVE",
+"270 155 OFFCURVE",
+"270 243 CURVE SMOOTH",
+"270 366 OFFCURVE",
+"198 385 OFFCURVE",
+"172 385 CURVE SMOOTH",
+"144 385 OFFCURVE",
+"125 379 OFFCURVE",
+"100 366 CURVE",
+"70 226 LINE",
+"86 213 LINE",
+"111 219 OFFCURVE",
+"131 223 OFFCURVE",
+"148 223 CURVE SMOOTH",
+"198 223 OFFCURVE",
+"220 189 OFFCURVE",
+"220 166 CURVE SMOOTH",
+"220 120 OFFCURVE",
+"174 91 OFFCURVE",
+"139 91 CURVE SMOOTH",
+"102 91 OFFCURVE",
+"87 113 OFFCURVE",
+"87 138 CURVE SMOOTH",
+"87 164 OFFCURVE",
+"98 196 OFFCURVE",
+"116 234 CURVE",
+"91 235 LINE",
+"70 187 OFFCURVE",
+"50 130 OFFCURVE",
+"50 82 CURVE SMOOTH",
+"50 34 OFFCURVE",
+"76 -1 OFFCURVE",
+"121 -1 CURVE SMOOTH"
 );
 }
 );
-width = 309;
+width = 320;
 }
 );
 note = HAYCu1;
@@ -16776,11 +16778,11 @@ name = HAYCu1;
 },
 {
 name = dda;
-transform = "{1, 0, 0, 1, -72, 513}";
+transform = "{1, 0, 0, 1, -46, 515}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 309;
+width = 320;
 }
 );
 unicode = 0629;
@@ -16796,7 +16798,7 @@ name = "tehMarbuta-ar";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 309;
+width = 320;
 }
 );
 unicode = 06C3;
