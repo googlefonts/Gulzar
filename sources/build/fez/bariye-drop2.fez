@@ -63,12 +63,15 @@ Feature rlig {
     Substitute @base_ybs (KASRA.yb) -> KASRA.yb.attached;
   } UseMarkFilteringSet @base_ybs;
 
+  DefineClass @narrow_medis = /.*m\d+$/  & (run < 300);
+
   Routine MarkConsecutiveYBs {
     # We had very complicated code here to check whether two
     # consecutive YBs clashed, but I'm just going to assume
     # that they do. There's no harm in it, and it's an awful
     # lot simpler.
     Substitute [@medis @inits] @base_ybs @medis (@base_ybs) -> @base_ybs.collides;
+    Substitute [@medis @inits] @base_ybs @narrow_medis @medis (@base_ybs) -> @base_ybs.collides;
   } UseMarkFilteringSet @base_ybs;
 
   # When we spread out the `.yb` glyphs to avoid collisions, we
