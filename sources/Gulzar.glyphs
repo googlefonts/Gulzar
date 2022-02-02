@@ -2,7 +2,7 @@
 .appVersion = "1352";
 DisplayStrings = (
 "/SINu1/sheen-ar/SADu1/dad-ar/AINu1/ghain-ar/QAFu1/qaf-ar/LAMu1/noon-ar/NUNu1/alefMaksura-ar/yeh-ar/CH_YEf1/LAMf1/NUNf1/QAFf1/SADf1/SINf1/SINus1",
-"/AINi16/HAYCf1/AINi3/HAYCf1/AINi16/dal-ar.fina/AINi3/dal-ar.fina/AINi16/ALIFf2/AINi16/ALIFf2/AINi3/ALIFf2/AINi3/ALIFf2",
+"/AINi16/HAYCf1/AINi3/HAYCf1/AINi16/dal-ar.fina/AINi3/dal-ar.fina/AINi16/ALIFf2/AINi16/ALIFf2/AINi3/ALIFf2/AINi3/ALIFf2/ALIFu1/ALIFu2",
 "/AINi3",
 "/AINi16"
 );
@@ -14857,16 +14857,16 @@ paths = (
 {
 closed = 1;
 nodes = (
-"89 81 LINE",
-"110 139 OFFCURVE",
+"99 81 LINE",
+"115 139 OFFCURVE",
 "134 207 OFFCURVE",
 "134 298 CURVE SMOOTH",
 "134 679 LINE",
 "118 684 LINE",
 "75 588 OFFCURVE",
-"70 565 OFFCURVE",
+"68 565 OFFCURVE",
 "70 475 CURVE SMOOTH",
-"70 81 LINE"
+"80 81 LINE"
 );
 }
 );
@@ -74000,16 +74000,16 @@ paths = (
 {
 closed = 1;
 nodes = (
-"89 21 LINE",
-"110 79 OFFCURVE",
+"99 21 LINE",
+"115 79 OFFCURVE",
 "134 148 OFFCURVE",
 "134 238 CURVE SMOOTH",
 "134 569 LINE",
 "118 574 LINE",
 "75 478 OFFCURVE",
-"70 455 OFFCURVE",
+"67 455 OFFCURVE",
 "70 365 CURVE SMOOTH",
-"70 21 LINE"
+"80 21 LINE"
 );
 }
 );
