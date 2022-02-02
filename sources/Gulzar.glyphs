@@ -6,7 +6,8 @@ DisplayStrings = (
 "/SINf1",
 "/SINu1",
 "/LAMu1",
-"/CH_YEf1/CH_YEu1/alefMaksura-ar"
+"/CH_YEf1/CH_YEu1/alefMaksura-ar",
+"/BEi24/SINm3/BEmsd3/AINm2/BEm3/LAMm2/BEmsd3/TEmsd3"
 );
 classes = (
 {
@@ -68719,7 +68720,7 @@ position = "{474, 192}";
 },
 {
 name = exit;
-position = "{55, 0}";
+position = "{53, 0}";
 },
 {
 name = top;
@@ -76553,19 +76554,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{290, -66}";
+position = "{260, -66}";
 },
 {
 name = entry;
-position = "{372, 109}";
+position = "{342, 109}";
 },
 {
 name = exit;
-position = "{36, 20}";
+position = "{26, 20}";
 },
 {
 name = top;
-position = "{253, 230}";
+position = "{223, 230}";
 }
 );
 hints = (
@@ -76593,47 +76594,47 @@ paths = (
 {
 closed = 1;
 nodes = (
-"160 -82 OFFCURVE",
-"244 -8 OFFCURVE",
-"283 36 CURVE",
-"263 84 LINE",
-"233 43 OFFCURVE",
-"156 -3 OFFCURVE",
-"93 -3 CURVE SMOOTH",
-"67 -3 OFFCURVE",
-"50 4 OFFCURVE",
+"147 -82 OFFCURVE",
+"218 -19 OFFCURVE",
+"253 74 CURVE",
+"227 105 LINE",
+"192 38 OFFCURVE",
+"138 -3 OFFCURVE",
+"83 -3 CURVE SMOOTH",
+"62 -3 OFFCURVE",
+"48 4 OFFCURVE",
 "36 20 CURVE",
 "22 5 OFFCURVE",
 "6 -26 OFFCURVE",
 "0 -42 CURVE",
 "19 -65 OFFCURVE",
 "45 -82 OFFCURVE",
-"77 -82 CURVE SMOOTH"
+"85 -82 CURVE SMOOTH"
 );
 },
 {
 closed = 1;
 nodes = (
-"348 -14 OFFCURVE",
-"382 51 OFFCURVE",
-"372 109 CURVE",
-"345 109 OFFCURVE",
-"323 120 OFFCURVE",
-"310 141 CURVE SMOOTH",
-"297 161 OFFCURVE",
-"292 191 OFFCURVE",
-"298 227 CURVE",
-"283 230 LINE",
-"253 183 OFFCURVE",
-"236 128 OFFCURVE",
-"236 80 CURVE SMOOTH",
-"236 21 OFFCURVE",
-"263 -26 OFFCURVE",
-"323 -26 CURVE"
+"318 -14 OFFCURVE",
+"352 51 OFFCURVE",
+"342 109 CURVE",
+"315 109 OFFCURVE",
+"293 120 OFFCURVE",
+"280 141 CURVE SMOOTH",
+"267 161 OFFCURVE",
+"262 191 OFFCURVE",
+"268 227 CURVE",
+"253 230 LINE",
+"223 183 OFFCURVE",
+"206 128 OFFCURVE",
+"206 80 CURVE SMOOTH",
+"206 21 OFFCURVE",
+"234 -26 OFFCURVE",
+"295 -26 CURVE"
 );
 }
 );
-width = 374;
+width = 344;
 }
 );
 note = BEmsd1;
@@ -76646,19 +76647,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{290, -66}";
+position = "{260, -66}";
 },
 {
 name = entry;
-position = "{372, 109}";
+position = "{342, 109}";
 },
 {
 name = exit;
-position = "{36, 20}";
+position = "{26, 20}";
 },
 {
 name = top;
-position = "{253, 230}";
+position = "{223, 230}";
 }
 );
 components = (
@@ -76687,7 +76688,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 374;
+width = 344;
 }
 );
 },
