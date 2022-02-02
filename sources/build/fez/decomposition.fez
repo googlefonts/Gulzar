@@ -29,10 +29,13 @@ Feature ccmp {
     Substitute jim-ar -> JIMu1;
     Substitute jeh-ar -> REu1 tda;
     Substitute kaf-ar -> KAFu1;
+    Substitute kafswash-ar -> KAFu1;
+    Substitute alefMaksura-ar -> CH_YEu1;
     Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
     Substitute alefMadda-ar -> ALIFu1 MADDA;
     Substitute alefHamzaabove-ar -> ALIFu1 HAMZA_ABOVE;
     Substitute alefHamzabelow-ar -> ALIFu1 HAMZA_BELOW;
+    Substitute alefWasla-ar -> ALIFu1 HAMZA_WASL;
     Substitute hehgoalHamzaabove-ar -> HAYCu1 HAMZA_ABOVE;
     };
 
