@@ -1,9 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"\012/BEi24/SINm3/TEmsd15/VAOf1 \012/BEi24/SINm3/BEmsd4/FEf1 \012/BEi24/SINm3/BEmsd10/TOEf1 \012/BEi24/SINm3/BEmsd10/SADf1 \012/BEi24/SINm3/TEmsd12/BEf1 \012/BEi24/SINm3/SINf1 \012/space/BEi24/SINm3/TEmsd15/TEmsd12/space/space/SINf1 \012/BEmsd12/space/SINm3/TEmsd12/BEf1/space/TEmsd4/space/SINm3/BEmsd4/FEf1/space/space/BEmsd4/space/SINm3/BEmsd10/TOEm1/SINm3/TEmsd10/SADf1",
-"/BEf1/BEf2",
-"/BEmsd2/space/space"
+"\012/BEi24/SINm3/TEmsd15/VAOf1 \012/BEi24/SINm3/BEmsd4/FEf1 \012/BEi24/SINm3/BEmsd10/TOEf1 \012/BEi24/SINm3/BEmsd10/SADf1 \012/BEi24/SINm3/TEmsd12/BEf1 \012/BEi24/SINm3/SINf1 \012/space/BEi24/SINm3/TEmsd15/TEmsd12/space/space/SINf1 \012/BEmsd12/space/SINm3/TEmsd12/BEf1/space/TEmsd4/space/SINm3/BEmsd4/FEf1/space/space/BEmsd4/space/SINm3/BEmsd10/TOEm1/SINm3/TEmsd10/SADf1"
 );
 classes = (
 {
