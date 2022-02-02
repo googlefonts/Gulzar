@@ -1,7 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/BEmsd3/space/space/BEmsd15/space/BEi24/SINm3/TEmsd15/VAOf1/space/BEi24/SINm3/TEmsd15/QAFf1"
+"\012/space/BEmsd3/space/space/BEmsd15/space/BEi24/SINm3/TEmsd15/VAOf1/space/BEi24/SINm3/TEmsd15/QAFf1 \012"
 );
 classes = (
 {
@@ -77419,11 +77419,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{170, -66}";
+position = "{190, -66}";
 },
 {
 name = entry;
-position = "{252, 109}";
+position = "{272, 109}";
 },
 {
 name = exit;
@@ -77431,7 +77431,7 @@ position = "{11, 0}";
 },
 {
 name = top;
-position = "{133, 230}";
+position = "{153, 230}";
 }
 );
 hints = (
@@ -77459,22 +77459,22 @@ paths = (
 {
 closed = 1;
 nodes = (
-"228 -14 OFFCURVE",
-"262 51 OFFCURVE",
-"252 109 CURVE",
-"225 109 OFFCURVE",
-"203 120 OFFCURVE",
-"190 141 CURVE SMOOTH",
-"177 161 OFFCURVE",
-"172 191 OFFCURVE",
-"178 227 CURVE",
-"163 230 LINE",
-"133 183 OFFCURVE",
-"116 128 OFFCURVE",
-"116 80 CURVE SMOOTH",
-"116 21 OFFCURVE",
-"144 -26 OFFCURVE",
-"205 -26 CURVE"
+"248 -14 OFFCURVE",
+"282 51 OFFCURVE",
+"272 109 CURVE",
+"245 109 OFFCURVE",
+"223 120 OFFCURVE",
+"210 141 CURVE SMOOTH",
+"197 161 OFFCURVE",
+"192 191 OFFCURVE",
+"198 227 CURVE",
+"183 230 LINE",
+"153 183 OFFCURVE",
+"136 128 OFFCURVE",
+"136 80 CURVE SMOOTH",
+"136 21 OFFCURVE",
+"164 -26 OFFCURVE",
+"225 -26 CURVE"
 );
 },
 {
@@ -77499,7 +77499,7 @@ nodes = (
 );
 }
 );
-width = 254;
+width = 274;
 }
 );
 note = BEmsd1;
