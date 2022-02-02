@@ -4,7 +4,10 @@ DisplayStrings = (
 "/SINu1/sheen-ar/SADu1/dad-ar/AINu1/ghain-ar/QAFu1/qaf-ar/LAMu1/noon-ar/NUNu1/alefMaksura-ar/yeh-ar/CH_YEf1/LAMf1/NUNf1/QAFf1/SADf1/SINf1/SINus1",
 "/AINi16/HAYCf1/AINi3/HAYCf1/AINi16/dal-ar.fina/AINi3/dal-ar.fina/AINi16/ALIFf2/AINi16/ALIFf2/AINi3/ALIFf2/AINi3/ALIFf2/ALIFu1/ALIFu2",
 "/AINi3",
-"/AINi16"
+"/AINi16",
+"/KAFf1/_Gaf.sarkash/GAFf1",
+"/GAFm3",
+"/_Gaf.sarkash/GAFi4"
 );
 classes = (
 {
@@ -16295,7 +16298,7 @@ name = KAFu1;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 876, 675}";
+transform = "{1, 0, 0, 1, 816, 675}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -42889,7 +42892,7 @@ name = KAFf1;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 1033, 559}";
+transform = "{1, 0, 0, 1, 973, 559}";
 }
 );
 hints = (
@@ -42938,7 +42941,7 @@ name = KAFfs1;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 2118, 559}";
+transform = "{1, 0, 0, 1, 2058, 559}";
 }
 );
 hints = (
@@ -42991,7 +42994,7 @@ name = KAFi1;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 319, 286}";
+transform = "{1, 0, 0, 1, 259, 286}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43026,7 +43029,7 @@ name = KAFi10;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 477, 423}";
+transform = "{1, 0, 0, 1, 417, 423}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43061,7 +43064,7 @@ name = KAFi11;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 428, 418}";
+transform = "{1, 0, 0, 1, 368, 418}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43096,7 +43099,7 @@ name = KAFi12;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 328, 296}";
+transform = "{1, 0, 0, 1, 268, 296}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43131,7 +43134,7 @@ name = KAFi13;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 161, 363}";
+transform = "{1, 0, 0, 1, 101, 363}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43166,7 +43169,7 @@ name = KAFi14;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 263, 280}";
+transform = "{1, 0, 0, 1, 203, 280}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43201,7 +43204,7 @@ name = KAFi15;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 254, 258}";
+transform = "{1, 0, 0, 1, 194, 258}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43236,7 +43239,7 @@ name = KAFi16;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 218, 291}";
+transform = "{1, 0, 0, 1, 158, 291}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43271,7 +43274,7 @@ name = KAFi17;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 254, 236}";
+transform = "{1, 0, 0, 1, 194, 236}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43306,7 +43309,7 @@ name = KAFi18;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 159, 9}";
+transform = "{1, 0, 0, 1, 99, 9}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43341,7 +43344,7 @@ name = KAFi19;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 159, 9}";
+transform = "{1, 0, 0, 1, 99, 9}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43376,7 +43379,7 @@ name = KAFi2;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 286, 290}";
+transform = "{1, 0, 0, 1, 226, 290}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43411,7 +43414,7 @@ name = KAFi24;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 266, 289}";
+transform = "{1, 0, 0, 1, 206, 289}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43444,12 +43447,7 @@ name = top;
 position = "{330, 820}";
 }
 );
-components = (
-{
-name = KAFi3;
-}
-);
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+background = {
 paths = (
 {
 closed = 1;
@@ -43468,6 +43466,34 @@ nodes = (
 "136 557 OFFCURVE",
 "132 515 OFFCURVE",
 "133 484 CURVE"
+);
+}
+);
+};
+components = (
+{
+name = KAFi3;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"112 429 LINE",
+"117 453 OFFCURVE",
+"125 464 OFFCURVE",
+"141 486 CURVE SMOOTH",
+"317 730 LINE SMOOTH",
+"332 751 OFFCURVE",
+"337 764 OFFCURVE",
+"342 789 CURVE SMOOTH",
+"349 821 LINE",
+"333 828 LINE",
+"131 550 LINE SMOOTH",
+"96 502 OFFCURVE",
+"92 460 OFFCURVE",
+"93 429 CURVE"
 );
 }
 );
@@ -43502,7 +43528,7 @@ name = KAFi4;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 389, 295}";
+transform = "{1, 0, 0, 1, 329, 295}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43537,7 +43563,7 @@ name = KAFi5;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 177, 387}";
+transform = "{1, 0, 0, 1, 117, 387}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43572,7 +43598,7 @@ name = KAFi6;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 261, 470}";
+transform = "{1, 0, 0, 1, 201, 470}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43607,7 +43633,7 @@ name = KAFi7;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 367, 460}";
+transform = "{1, 0, 0, 1, 307, 460}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43642,7 +43668,7 @@ name = KAFi8;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 437, 373}";
+transform = "{1, 0, 0, 1, 377, 373}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43677,7 +43703,7 @@ name = KAFi9;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 181, 396}";
+transform = "{1, 0, 0, 1, 121, 396}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -43716,7 +43742,7 @@ name = KAFm1;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 483, 386}";
+transform = "{1, 0, 0, 1, 423, 386}";
 }
 );
 hints = (
@@ -43765,7 +43791,7 @@ name = KAFm10;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 642, 559}";
+transform = "{1, 0, 0, 1, 582, 559}";
 }
 );
 hints = (
@@ -43814,7 +43840,7 @@ name = KAFm11;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 569, 518}";
+transform = "{1, 0, 0, 1, 509, 518}";
 }
 );
 hints = (
@@ -43873,7 +43899,7 @@ name = KAFm12;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 482, 416}";
+transform = "{1, 0, 0, 1, 422, 416}";
 }
 );
 hints = (
@@ -43922,7 +43948,7 @@ name = KAFm13;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 364, 504}";
+transform = "{1, 0, 0, 1, 304, 504}";
 }
 );
 hints = (
@@ -43971,7 +43997,7 @@ name = KAFm14;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 454, 427}";
+transform = "{1, 0, 0, 1, 394, 427}";
 }
 );
 hints = (
@@ -44020,7 +44046,7 @@ name = KAFm15;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 409, 409}";
+transform = "{1, 0, 0, 1, 349, 409}";
 }
 );
 hints = (
@@ -44069,7 +44095,7 @@ name = KAFm16;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 402, 338}";
+transform = "{1, 0, 0, 1, 342, 338}";
 }
 );
 hints = (
@@ -44127,7 +44153,7 @@ name = KAFm17;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 415, 355}";
+transform = "{1, 0, 0, 1, 355, 355}";
 }
 );
 hints = (
@@ -44176,7 +44202,7 @@ name = KAFm18;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 333, 339}";
+transform = "{1, 0, 0, 1, 273, 339}";
 }
 );
 hints = (
@@ -44225,7 +44251,7 @@ name = KAFm2;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 437, 388}";
+transform = "{1, 0, 0, 1, 377, 388}";
 }
 );
 hints = (
@@ -44292,7 +44318,7 @@ name = KAFm20;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 73, 81}";
+transform = "{1, 0, 0, 1, 13, 81}";
 }
 );
 hints = (
@@ -44341,7 +44367,7 @@ name = KAFm21;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 87, 255}";
+transform = "{1, 0, 0, 1, 27, 255}";
 }
 );
 hints = (
@@ -44390,7 +44416,7 @@ name = KAFm22;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 2, -108}";
+transform = "{1, 0, 0, 1, -58, -108}";
 }
 );
 hints = (
@@ -44439,7 +44465,7 @@ name = KAFm23;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 101, -7}";
+transform = "{1, 0, 0, 1, 41, -7}";
 }
 );
 hints = (
@@ -44488,7 +44514,7 @@ name = KAFm24;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 416, 388}";
+transform = "{1, 0, 0, 1, 356, 388}";
 }
 );
 hints = (
@@ -44618,7 +44644,7 @@ name = KAFm4;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 521, 391}";
+transform = "{1, 0, 0, 1, 461, 391}";
 }
 );
 hints = (
@@ -44677,7 +44703,7 @@ name = KAFm5;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 394, 537}";
+transform = "{1, 0, 0, 1, 334, 537}";
 }
 );
 hints = (
@@ -44735,7 +44761,7 @@ name = KAFm6;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 441, 628}";
+transform = "{1, 0, 0, 1, 381, 628}";
 }
 );
 hints = (
@@ -44785,7 +44811,7 @@ name = KAFm7;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 585, 643}";
+transform = "{1, 0, 0, 1, 525, 643}";
 }
 );
 hints = (
@@ -44839,7 +44865,7 @@ name = KAFm8;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 581, 434}";
+transform = "{1, 0, 0, 1, 521, 434}";
 }
 );
 hints = (
@@ -44894,7 +44920,7 @@ name = KAFm9;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 391, 575}";
+transform = "{1, 0, 0, 1, 331, 575}";
 }
 );
 hints = (
@@ -44940,7 +44966,7 @@ name = KAFus1;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 2113, 782}";
+transform = "{1, 0, 0, 1, 2053, 782}";
 }
 );
 hints = (
@@ -75839,7 +75865,7 @@ layers = (
 anchors = (
 {
 name = _top;
-position = "{128, 510}";
+position = "{188, 510}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -75847,24 +75873,24 @@ paths = (
 {
 closed = 1;
 nodes = (
-"31 472 OFFCURVE",
-"43 479 OFFCURVE",
-"65 494 CURVE SMOOTH",
-"257 625 LINE SMOOTH",
-"278 640 OFFCURVE",
-"289 651 OFFCURVE",
-"301 672 CURVE SMOOTH",
-"319 703 LINE",
-"305 712 LINE",
-"78 558 LINE SMOOTH",
-"28 524 OFFCURVE",
-"9 487 OFFCURVE",
-"0 457 CURVE",
-"18 450 LINE"
+"32 424 OFFCURVE",
+"45 431 OFFCURVE",
+"66 446 CURVE SMOOTH",
+"318 623 LINE SMOOTH",
+"339 638 OFFCURVE",
+"350 649 OFFCURVE",
+"362 670 CURVE SMOOTH",
+"378 698 LINE",
+"365 712 LINE",
+"78 514 LINE SMOOTH",
+"28 480 OFFCURVE",
+"9 441 OFFCURVE",
+"0 411 CURVE",
+"19 402 LINE"
 );
 }
 );
-width = 319;
+width = 378;
 }
 );
 },
