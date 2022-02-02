@@ -126,10 +126,6 @@ Feature init {
 # BE between SIN and final BE should be an exception, (2) Right-joiners take
 # final forms in medial position.
 Feature medi {
-  Routine Exception1 {
-    Substitute [SINu1 SINi1 SINm1] ( BEu1 ) BEf1 -> BEm4;
-  } IgnoreMarks;
-
   Routine medi1 {
     SuffixingSubstitute [
       AINu1 BEu1 FEu1 GAFu1 HAYAu1 KAFu1 LAMu1 MIMu1 SADu1 SINu1 TOEu1

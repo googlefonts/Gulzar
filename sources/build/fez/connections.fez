@@ -40,9 +40,17 @@ Feature rlig {
     Substitute [BEi1 TEi1] ( TEf1 ) -> BEf2;
   } IgnoreMarks;
 
-  Routine Use3 {
+  Routine RaisedTooth {
     Substitute [SINm1 SINi1] (BEm1) [AINm1 AINf1] -> BEmsd3;
     Substitute [SINm1 SINi1] (TEm1) [AINm1 AINf1] -> TEmsd3;
+    Substitute [SINm1 SINi1] (BEm1) BEf1 -> BEmsd12;
+    Substitute [SINm1 SINi1] (TEm1) BEf1 -> TEmsd12;
+    Substitute [SINm1 SINi1] (BEm1) [SADm1 SADf1 TOEm1 TOEf1] -> BEmsd10;
+    Substitute [SINm1 SINi1] (TEm1) [SADm1 SADf1 TOEm1 TOEf1] -> TEmsd10;
+    Substitute [SINm1 SINi1] (BEm1) [FEm1 FEf1] -> BEmsd4;
+    Substitute [SINm1 SINi1] (TEm1) [FEm1 FEf1] -> TEmsd4;
+    Substitute [SINm1 SINi1] (BEm1) [QAFm1 QAFf1] -> BEmsd15;
+    Substitute [SINm1 SINi1] (TEm1) [QAFm1 QAFf1] -> TEmsd15;
   } IgnoreMarks;
 
   # The Glyphs file will contain a set of information about selecting
