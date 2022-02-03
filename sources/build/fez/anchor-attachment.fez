@@ -265,6 +265,8 @@ Routine AtHeight400sub {
     Chain (@long_re [BEi4 TEi4] @dots ^DropOne); # طریقو
     Chain (@long_re @BEi @dots ^DropTwo @DOTm @dots); # جرببل جربپل
     Chain (@long_re @BEi @DOTm @dots ^DropOne); # جرںبل
+
+    Chain (@alif_like [TEisd1 BEisd1] @dots ^DropOne); # ایتی
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight500sub {
@@ -385,6 +387,7 @@ Routine AtHeight400pos {
     Chain (@long_re @BEi @DOTm @dots_one ^DropATinyBitMore); # جرںپل
 
     Chain ([@dal_like @vao_like] [BEi3 TEi3] @dots_one ^DropATinyBitMore); # دیکھا
+    Chain ([@dal_like @vao_like] [BEisd1 TEisd1] @dots_one ^DropATinyBitMore); # ایتی
 
     Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi @dots_one ^DropATinyBitMore); # وچھیا
     Chain ([@dal_like @vao_like] ^ClearUpperDots @JIMi ^OpenMediumSpace tdb); # و چھیا
