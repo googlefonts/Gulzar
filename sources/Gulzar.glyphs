@@ -3,7 +3,8 @@
 DisplayStrings = (
 "\012/BEi24/SINm3/TEmsd15/VAOf1 \012/BEi24/SINm3/BEmsd4/FEf1 \012/BEi24/SINm3/BEmsd10/TOEf1 \012/BEi24/SINm3/BEmsd10/SADf1 \012/BEi24/SINm3/TEmsd12/BEf1 \012/BEi24/SINm3/SINf1 \012/space/BEi24/SINm3/TEmsd15/TEmsd12/space/space/SINf1 \012/BEmsd12/space/SINm3/TEmsd12/BEf1/space/TEmsd4/space/SINm3/BEmsd4/FEf1/space/space/BEmsd4/space/SINm3/BEmsd10/TOEm1/SINm3/TEmsd10/SADf1",
 "/u1EE24/u1EE24",
-"/Hei12"
+"/Hei12",
+"/HAYAu1"
 );
 classes = (
 {
@@ -31632,9 +31633,7 @@ layers = (
 {
 components = (
 {
-alignment = -1;
-name = _Hei.head;
-transform = "{1, 0, 0, 1, 158, 46}";
+name = HAYAu1;
 }
 );
 hints = (
@@ -31663,25 +31662,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"87 -14 OFFCURVE",
-"133 -26 OFFCURVE",
-"174 -26 CURVE SMOOTH",
-"259 -26 OFFCURVE",
-"312 62 OFFCURVE",
-"338 92 CURVE",
-"313 105 LINE",
-"253 62 OFFCURVE",
-"160 42 OFFCURVE",
-"50 22 CURVE",
-"50 1 LINE"
-);
-}
-);
-width = 547;
+width = 590;
 }
 );
 unicode = 1EE24;
