@@ -139,53 +139,25 @@ class DetectAndSwap(FEZVerb):
                         ))
                     else:
                         result.append(fontFeatures.Chaining(
-                            [[orig_dot]],
-                            lookups=[[self.parser.fontfeatures.referenceRoutine(goto)]],
-                            precontext=[[x] for x in sequence[:dot_position]],
+                            [[sequence[dot_position-1]],[orig_dot]],
+                            lookups=[None, [self.parser.fontfeatures.referenceRoutine(goto)]],
+                            precontext=[[x] for x in sequence[:dot_position-1]],
                             postcontext=[[x] for x in sequence[dot_position+1:]]
                         ))
                 # else:
                 #     warnings.warn("Nothing helped %s" % sequence)
         self.parser.fontfeatures.namedClasses = nc
-
-        # OK, we have a set of rules, which is nice. But they're massive and
-        # overflow. What we need to do is split them into a set of routines,
-        # one per target
-
-        # XXX No we don't. The problem is that if we split them into one per
-        # target, the rules don't "cascade"; each target gets one pass over
-        # the glyphstream in order. So a target in a later substitution won't
-        # cause another substitution if that happens to be "earlier".
-
-        # So we need a dispatch routine.
         self.shelve.close()
 
         if self.reverse:
-            return [fontFeatures.Routine(
-                name="DotAvoidance_reverse_"+self.anchor,
-                rules = result
-            )]
-        results = { }
+            name="DotAvoidance_reverse_"+self.anchor
+        else:
+            name="DotAvoidance_"+self.anchor
 
-        for rule in result:
-            target = rule.input[0][0]
-            results.setdefault(target, fontFeatures.Routine(
-                name="DotAvoidance_"+target,
-                flags=0x10,
-                markFilteringSet=self.dots
-            )).rules.append(rule)
-
-
-        dispatch = fontFeatures.Routine(
-                name="DotAvoidance_dispatch_"+self.anchor
-        )
-        for k,v in results.items():
-            dispatch.rules.append(fontFeatures.Chaining(
-                [[k]],
-                lookups=[[v]]
-            ))
-
-        return [dispatch]
+        return [fontFeatures.Routine(
+            name = name,
+            rules = result
+        )]
 
     def collides(self, glyphs):
         key = "/".join(glyphs)
@@ -300,7 +272,7 @@ class DetectAndSwap(FEZVerb):
             tdb = ["tdb", "tdb.one", "tdb.two"]
 
         dot_combinations = {
-            "HAYC": ([], ["haydb"]),
+            "HAYC": (["dda"], ["haydb"]),
             "HAYA": (["HAMZA_ABOVE"],[]),
             "SIN": (tda, []),
             "TE": (dda+tda+["toeda", "HAMZA_ABOVE"], ddb+tdb),
@@ -353,7 +325,11 @@ class DetectAndSwap(FEZVerb):
 #                            sequences.append([left, left_dot, mid, right, right_dot ])
             for right in list(set(self.contexts.get(left,[])) & set(self.rasm_glyphs)):
                 for left_dot in dotsfor(left):
+                    if left_dot == "dda" and left.startswith("HAYC") and left != "HAYCf1":
+                        continue
                     for right_dot in dotsfor(right):
+                        if right_dot == "dda" and right.startswith("HAYC") and right != "HAYCf1":
+                            continue
                         sequences.append([left, left_dot, right, right_dot ])
         return sequences
 
