@@ -42115,50 +42115,6 @@ name = top;
 position = "{177, 276}";
 }
 );
-background = {
-paths = (
-{
-closed = 1;
-nodes = (
-"161 -30 OFFCURVE",
-"224 13 OFFCURVE",
-"260 77 CURVE SMOOTH",
-"282 116 OFFCURVE",
-"294 161 OFFCURVE",
-"294 197 CURVE SMOOTH",
-"294 241 OFFCURVE",
-"275 276 OFFCURVE",
-"227 276 CURVE SMOOTH",
-"180 276 OFFCURVE",
-"136 241 OFFCURVE",
-"106 196 CURVE SMOOTH",
-"78 154 OFFCURVE",
-"60 104 OFFCURVE",
-"60 61 CURVE SMOOTH",
-"60 16 OFFCURVE",
-"73 -16 OFFCURVE",
-"120 -30 CURVE"
-);
-},
-{
-closed = 1;
-nodes = (
-"132 48 OFFCURVE",
-"99 74 OFFCURVE",
-"90 107 CURVE",
-"106 148 OFFCURVE",
-"146 170 OFFCURVE",
-"178 170 CURVE SMOOTH",
-"216 170 OFFCURVE",
-"241 140 OFFCURVE",
-"239 100 CURVE",
-"228 78 OFFCURVE",
-"198 56 OFFCURVE",
-"166 43 CURVE"
-);
-}
-);
-};
 hints = (
 {
 horizontal = 1;
@@ -43645,7 +43601,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{252, 475}";
+position = "{211, 475}";
 }
 );
 hints = (
