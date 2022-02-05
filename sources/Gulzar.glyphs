@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/hehgoal_alef-ar"
+);
 classes = (
 {
 automatic = 1;
@@ -17267,6 +17270,97 @@ width = 471;
 }
 );
 unicode = FEFC;
+},
+{
+glyphname = "hehgoal_alef-ar";
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{176, -32}";
+},
+{
+name = top;
+position = "{121, 710}";
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-10, 704}";
+type = Stem;
+},
+{
+place = "{61, 56}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{84, 586}";
+type = Stem;
+},
+{
+place = "{78, 69}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"233 -8 OFFCURVE",
+"273 75 OFFCURVE",
+"273 130 CURVE SMOOTH",
+"273 165 OFFCURVE",
+"263 181 OFFCURVE",
+"243 181 CURVE SMOOTH",
+"236 181 OFFCURVE",
+"228 179 OFFCURVE",
+"219 174 CURVE",
+"204 119 LINE",
+"198 117 OFFCURVE",
+"193 116 OFFCURVE",
+"189 116 CURVE SMOOTH",
+"167 116 OFFCURVE",
+"157 136 OFFCURVE",
+"157 156 CURVE SMOOTH",
+"157 192 OFFCURVE",
+"188 241 OFFCURVE",
+"219 292 CURVE SMOOTH",
+"248 340 OFFCURVE",
+"264 387 OFFCURVE",
+"271 444 CURVE",
+"251 448 LINE",
+"235 405 OFFCURVE",
+"212 381 OFFCURVE",
+"186 381 CURVE SMOOTH",
+"146 381 OFFCURVE",
+"123 407 OFFCURVE",
+"128 506 CURVE SMOOTH",
+"138 707 LINE",
+"121 710 LINE",
+"87 595 LINE SMOOTH",
+"75 554 OFFCURVE",
+"70 528 OFFCURVE",
+"70 430 CURVE SMOOTH",
+"70 302 OFFCURVE",
+"101 261 OFFCURVE",
+"170 266 CURVE",
+"169 278 LINE",
+"129 213 OFFCURVE",
+"102 137 OFFCURVE",
+"102 91 CURVE SMOOTH",
+"102 31 OFFCURVE",
+"127 -8 OFFCURVE",
+"172 -8 CURVE SMOOTH"
+);
+}
+);
+width = 323;
+}
+);
 },
 {
 color = 3;
