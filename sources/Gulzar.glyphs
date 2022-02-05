@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/BEm16/space/TEm16/REf3/space/REf2/space"
-);
 classes = (
 {
 automatic = 1;
@@ -59745,7 +59742,7 @@ position = "{33, 0}";
 },
 {
 name = top;
-position = "{212, 528}";
+position = "{192, 528}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -59753,21 +59750,21 @@ paths = (
 {
 closed = 1;
 nodes = (
-"95 -103 OFFCURVE",
-"151 -74 OFFCURVE",
-"181 -5 CURVE SMOOTH",
-"205 50 OFFCURVE",
-"221 150 OFFCURVE",
-"223 217 CURVE SMOOTH",
-"233 525 LINE",
-"212 528 LINE",
-"179 429 LINE SMOOTH",
-"162 378 OFFCURVE",
-"159 325 OFFCURVE",
-"160 240 CURVE SMOOTH",
-"161 183 LINE SMOOTH",
-"163 50 OFFCURVE",
-"137 -17 OFFCURVE",
+"88 -103 OFFCURVE",
+"132 -72 OFFCURVE",
+"161 -5 CURVE SMOOTH",
+"185 50 OFFCURVE",
+"200 128 OFFCURVE",
+"203 217 CURVE SMOOTH",
+"213 525 LINE",
+"192 528 LINE",
+"159 429 LINE SMOOTH",
+"142 378 OFFCURVE",
+"138 325 OFFCURVE",
+"140 240 CURVE SMOOTH",
+"142 138 LINE SMOOTH",
+"144 33 OFFCURVE",
+"122 -17 OFFCURVE",
 "69 -17 CURVE SMOOTH",
 "56 -17 OFFCURVE",
 "40 -12 OFFCURVE",
@@ -59781,7 +59778,7 @@ nodes = (
 );
 }
 );
-width = 303;
+width = 283;
 }
 );
 note = LAMi1;
