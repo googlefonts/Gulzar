@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/LAMi3"
+);
 classes = (
 {
 automatic = 1;
@@ -59856,7 +59859,7 @@ position = "{47, 0}";
 },
 {
 name = top;
-position = "{159, 515}";
+position = "{159, 535}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -59871,11 +59874,11 @@ nodes = (
 "143 0 OFFCURVE",
 "167 69 OFFCURVE",
 "170 177 CURVE SMOOTH",
-"180 512 LINE",
-"159 515 LINE",
-"118 399 OFFCURVE",
-"105 363 OFFCURVE",
-"107 244 CURVE SMOOTH",
+"180 532 LINE",
+"159 535 LINE",
+"118 419 OFFCURVE",
+"106 383 OFFCURVE",
+"107 264 CURVE SMOOTH",
 "109 101 LINE SMOOTH",
 "110 41 OFFCURVE",
 "94 0 OFFCURVE",
