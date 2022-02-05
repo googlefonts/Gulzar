@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/hehgoal_alef-ar"
-);
 classes = (
 {
 automatic = 1;
@@ -24065,24 +24062,24 @@ paths = (
 {
 closed = 1;
 nodes = (
-"372 0 OFFCURVE",
-"454 3 OFFCURVE",
-"506 122 CURVE",
-"498 134 LINE",
-"413 120 OFFCURVE",
-"332 117 OFFCURVE",
-"252 117 CURVE SMOOTH",
-"207 117 OFFCURVE",
-"150 117 OFFCURVE",
-"96 118 CURVE",
-"70 73 LINE",
-"130 41 OFFCURVE",
-"253 0 OFFCURVE",
-"315 0 CURVE SMOOTH"
+"361 0 OFFCURVE",
+"415 0 OFFCURVE",
+"470 122 CURVE",
+"462 134 LINE",
+"408 121 OFFCURVE",
+"345 111 OFFCURVE",
+"254 111 CURVE SMOOTH",
+"213 111 OFFCURVE",
+"165 113 OFFCURVE",
+"110 118 CURVE",
+"100 89 LINE",
+"166 41 OFFCURVE",
+"257 0 OFFCURVE",
+"319 0 CURVE SMOOTH"
 );
 }
 );
-width = 576;
+width = 540;
 }
 );
 note = FULLPOINT;
