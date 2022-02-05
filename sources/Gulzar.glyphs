@@ -18027,11 +18027,11 @@ transform = "{1, 0, 0, 1, 50, -482}";
 },
 {
 name = LAM_ALIFu1;
-transform = "{1, 0, 0, 1, 769, -63}";
+transform = "{1, 0, 0, 1, 778, -64}";
 },
 {
 name = LAMi3;
-transform = "{1, 0, 0, 1, 442, -266}";
+transform = "{1, 0, 0, 1, 441, -296}";
 },
 {
 name = HAYCf1;
@@ -31696,7 +31696,7 @@ transform = "{1, 0, 0, 1, 1432, -442}";
 },
 {
 name = LAMi3;
-transform = "{1, 0, 0, 1, 1113, -477}";
+transform = "{1, 0, 0, 1, 1112, -507}";
 },
 {
 name = HAYCf1;
@@ -31708,7 +31708,7 @@ transform = "{1, 0, 0, 1, 498, -854}";
 },
 {
 name = MIMf1;
-transform = "{1, 0, 0, 1, 80, -781}";
+transform = "{1, 0, 0, 1, 74, -850}";
 },
 {
 name = SINi3;
@@ -31716,7 +31716,7 @@ transform = "{1, 0, 0, 1, 649, -187}";
 },
 {
 name = LAMm9;
-transform = "{1, 0, 0, 1, 424, -419}";
+transform = "{1, 0, 0, 1, 418, -419}";
 },
 {
 name = _Sad.head;
@@ -48966,14 +48966,22 @@ nodes = (
 "131 12 OFFCURVE",
 "200 29 OFFCURVE",
 "220 29 CURVE SMOOTH",
-"258 29 OFFCURVE",
-"274 0 OFFCURVE",
-"298 0 CURVE",
+"241 29 OFFCURVE",
+"255 20 OFFCURVE",
+"267 12 CURVE SMOOTH",
+"277 6 OFFCURVE",
+"286 0 OFFCURVE",
+"296 0 CURVE SMOOTH",
+"298 0 LINE",
 "323 26 OFFCURVE",
 "345 85 OFFCURVE",
 "345 135 CURVE",
-"323 135 OFFCURVE",
-"312 162 OFFCURVE",
+"343 135 LINE SMOOTH",
+"333 135 OFFCURVE",
+"325 141 OFFCURVE",
+"317 147 CURVE SMOOTH",
+"307 154 OFFCURVE",
+"297 162 OFFCURVE",
 "280 162 CURVE SMOOTH",
 "233 162 OFFCURVE",
 "121 100 OFFCURVE",
@@ -76290,13 +76298,15 @@ nodes = (
 "182 83 OFFCURVE",
 "213 95 CURVE",
 "191 104 LINE",
-"236 52 OFFCURVE",
-"297 20 OFFCURVE",
-"354 20 CURVE",
+"235 53 OFFCURVE",
+"295 20 OFFCURVE",
+"352 20 CURVE SMOOTH",
+"354 20 LINE",
 "384 39 OFFCURVE",
 "407 110 OFFCURVE",
 "401 155 CURVE",
-"354 155 OFFCURVE",
+"399 155 LINE SMOOTH",
+"353 155 OFFCURVE",
 "306 176 OFFCURVE",
 "275 209 CURVE",
 "260 209 LINE",
