@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/BEi3/dal-ar.fina/DALf1/space/TEi3/BEi3/ALIFf1/BEi3/ALIFf2"
-);
 classes = (
 {
 automatic = 1;
@@ -14924,7 +14921,7 @@ name = ALIFu1;
 },
 {
 name = MADDA;
-transform = "{1, 0, 0, 1, -133, 813}";
+transform = "{1, 0, 0, 1, -123, 813}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -30370,11 +30367,11 @@ layers = (
 anchors = (
 {
 name = _top;
-position = "{251, -129}";
+position = "{241, -129}";
 },
 {
 name = top;
-position = "{267, 139}";
+position = "{257, 139}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -30382,30 +30379,30 @@ paths = (
 {
 closed = 1;
 nodes = (
-"86 -2 OFFCURVE",
-"115 16 OFFCURVE",
-"147 16 CURVE",
-"196 6 OFFCURVE",
-"238 0 OFFCURVE",
-"276 0 CURVE SMOOTH",
-"399 0 OFFCURVE",
-"471 57 OFFCURVE",
-"535 186 CURVE",
-"519 196 LINE",
-"471 134 OFFCURVE",
-"412 110 OFFCURVE",
-"332 110 CURVE SMOOTH",
-"296 110 OFFCURVE",
-"256 115 OFFCURVE",
-"211 123 CURVE",
-"144 123 OFFCURVE",
-"90 61 OFFCURVE",
-"40 -25 CURVE",
-"54 -34 LINE"
+"76 -2 OFFCURVE",
+"105 16 OFFCURVE",
+"140 18 CURVE",
+"187 2 OFFCURVE",
+"218 -5 OFFCURVE",
+"264 -5 CURVE SMOOTH",
+"372 -5 OFFCURVE",
+"461 57 OFFCURVE",
+"525 186 CURVE",
+"509 196 LINE",
+"461 134 OFFCURVE",
+"376 105 OFFCURVE",
+"303 105 CURVE SMOOTH",
+"264 105 OFFCURVE",
+"238 113 OFFCURVE",
+"201 123 CURVE",
+"134 123 OFFCURVE",
+"80 61 OFFCURVE",
+"30 -25 CURVE",
+"44 -34 LINE"
 );
 }
 );
-width = 565;
+width = 555;
 }
 );
 note = MADDA;
