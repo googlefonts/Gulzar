@@ -36280,7 +36280,7 @@ position = "{150, -88}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{0, 10}";
 },
 {
 name = top;
@@ -70684,7 +70684,7 @@ position = "{150, -88}";
 },
 {
 name = exit;
-position = "{0, 0}";
+position = "{0, 10}";
 },
 {
 name = top;
