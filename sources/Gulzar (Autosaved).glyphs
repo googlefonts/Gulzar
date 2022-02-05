@@ -59781,11 +59781,11 @@ nodes = (
 );
 }
 );
-width = 303;
+width = 283;
 }
 );
 note = LAMi1;
-changeCount = 10;
+changeCount = 11;
 },
 {
 color = 3;
