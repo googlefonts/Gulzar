@@ -16947,6 +16947,16 @@ name = top;
 position = "{148, 364}";
 }
 );
+background = {
+paths = (
+{
+closed = 0;
+nodes = (
+"692 606 LINE SMOOTH"
+);
+}
+);
+};
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 paths = (
 {
@@ -16970,15 +16980,16 @@ nodes = (
 "444 377 OFFCURVE",
 "533 483 OFFCURVE",
 "610 483 CURVE SMOOTH",
-"619 483 OFFCURVE",
+"617 483 OFFCURVE",
 "621 479 OFFCURVE",
 "634 465 CURVE",
 "644 465 LINE",
-"671 514 OFFCURVE",
-"691 569 OFFCURVE",
-"691 602 CURVE SMOOTH",
-"691 623 OFFCURVE",
-"678 630 OFFCURVE",
+"682 567 LINE SMOOTH",
+"688 583 OFFCURVE",
+"692 595 OFFCURVE",
+"692 606 CURVE SMOOTH",
+"692 618 OFFCURVE",
+"684 630 OFFCURVE",
 "661 630 CURVE SMOOTH",
 "525 630 OFFCURVE",
 "394 370 OFFCURVE",
@@ -23364,42 +23375,19 @@ components = (
 {
 alignment = -1;
 name = BEm3;
-transform = "{1, 0, 0, 1, 345, 117}";
+transform = "{1, 0, 0, 1, 348, 117}";
 },
 {
 name = HAYCf1;
-transform = "{1, 0, 0, 1, 50, -48}";
+transform = "{1, 0, 0, 1, 50, -18}";
+},
+{
+name = SINi16;
+transform = "{1, 0, 0, 1, 490, 211}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-paths = (
-{
-closed = 1;
-nodes = (
-"976 37 OFFCURVE",
-"1187 201 OFFCURVE",
-"1333 331 CURVE SMOOTH",
-"1417 406 OFFCURVE",
-"1452 419 OFFCURVE",
-"1482 419 CURVE",
-"1510 509 LINE",
-"1472 528 OFFCURVE",
-"1418 507 OFFCURVE",
-"1339 436 CURVE SMOOTH",
-"1141 259 OFFCURVE",
-"986 169 OFFCURVE",
-"739 169 CURVE SMOOTH",
-"600 169 OFFCURVE",
-"558 202 OFFCURVE",
-"540 211 CURVE",
-"465 104 LINE",
-"526 64 OFFCURVE",
-"598 37 OFFCURVE",
-"709 37 CURVE SMOOTH"
-);
-}
-);
-width = 1610;
+width = 1607;
 }
 );
 unicode = 0601;
