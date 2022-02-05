@@ -1,7 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/LAMi3"
+"/BEm16/space/TEm16/REf3/space/REf2/space"
 );
 classes = (
 {
@@ -37520,7 +37520,7 @@ position = "{326, -177}";
 },
 {
 name = entry;
-position = "{423, 15}";
+position = "{393, 15}";
 },
 {
 name = exit;
@@ -37563,16 +37563,16 @@ nodes = (
 "110 -218 CURVE SMOOTH",
 "166 -133 OFFCURVE",
 "227 -110 OFFCURVE",
-"290 -110 CURVE SMOOTH",
-"335 -110 OFFCURVE",
-"365 -120 OFFCURVE",
-"376 -120 CURVE",
-"398 -108 OFFCURVE",
-"430 -46 OFFCURVE",
-"423 15 CURVE",
-"412 15 OFFCURVE",
-"365 30 OFFCURVE",
-"327 30 CURVE SMOOTH",
+"281 -110 CURVE SMOOTH",
+"313 -110 OFFCURVE",
+"339 -120 OFFCURVE",
+"346 -120 CURVE",
+"368 -108 OFFCURVE",
+"400 -46 OFFCURVE",
+"393 15 CURVE",
+"382 15 OFFCURVE",
+"353 30 OFFCURVE",
+"317 30 CURVE SMOOTH",
 "264 30 OFFCURVE",
 "198 12 OFFCURVE",
 "104 -133 CURVE SMOOTH",
@@ -37582,7 +37582,7 @@ nodes = (
 );
 }
 );
-width = 424;
+width = 394;
 }
 );
 note = BEm7;
@@ -71498,7 +71498,7 @@ position = "{326, -177}";
 },
 {
 name = entry;
-position = "{423, 15}";
+position = "{393, 15}";
 },
 {
 name = exit;
@@ -71545,7 +71545,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 424;
+width = 394;
 }
 );
 note = BEm7;
