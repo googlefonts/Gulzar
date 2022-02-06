@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/KAFi20/HAYAm1/KAFi20/HAYAm1"
-);
 classes = (
 {
 automatic = 1;
@@ -80746,7 +80743,7 @@ position = "{5, 0}";
 },
 {
 name = top;
-position = "{112, 58}";
+position = "{112, 38}";
 }
 );
 hints = (
@@ -80803,7 +80800,7 @@ position = "{5, 0}";
 },
 {
 name = top;
-position = "{112, 58}";
+position = "{112, 38}";
 }
 );
 components = (
