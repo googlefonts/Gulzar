@@ -24307,7 +24307,7 @@ components = (
 {
 alignment = -1;
 name = _Sad.head;
-transform = "{1, 0, 0, 1, 678, 171}";
+transform = "{1, 0, 0, 1, 678, 201}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -24318,13 +24318,13 @@ nodes = (
 "252 -15 OFFCURVE",
 "345 -15 CURVE SMOOTH",
 "435 -15 OFFCURVE",
-"549 20 OFFCURVE",
-"684 85 CURVE",
-"715 110 OFFCURVE",
-"737 138 OFFCURVE",
-"748 171 CURVE",
-"738 174 LINE",
-"577 123 OFFCURVE",
+"560 12 OFFCURVE",
+"698 115 CURVE",
+"715 140 OFFCURVE",
+"737 168 OFFCURVE",
+"748 201 CURVE",
+"738 204 LINE",
+"568 119 OFFCURVE",
 "421 94 OFFCURVE",
 "286 94 CURVE SMOOTH",
 "222 94 OFFCURVE",
@@ -24401,6 +24401,7 @@ paths = (
 {
 closed = 1;
 nodes = (
+"659 -105 OFFCURVE",
 "533 -187 OFFCURVE",
 "416 -187 CURVE SMOOTH",
 "243 -187 OFFCURVE",
@@ -24445,20 +24446,19 @@ nodes = (
 "565 -341 OFFCURVE",
 "752 -146 OFFCURVE",
 "752 42 CURVE SMOOTH",
-"752 163 OFFCURVE",
-"659 216 OFFCURVE",
-"589 216 CURVE SMOOTH",
-"416 216 OFFCURVE",
+"752 154 OFFCURVE",
+"690 196 OFFCURVE",
+"620 196 CURVE SMOOTH",
+"464 196 OFFCURVE",
 "258 29 OFFCURVE",
 "100 -302 CURVE",
 "130 -317 LINE",
-"270 -52 OFFCURVE",
-"400 87 OFFCURVE",
-"563 87 CURVE SMOOTH",
-"646 87 OFFCURVE",
-"691 50 OFFCURVE",
-"691 1 CURVE SMOOTH",
-"691 -105 OFFCURVE"
+"275 -36 OFFCURVE",
+"472 67 OFFCURVE",
+"590 67 CURVE SMOOTH",
+"666 67 OFFCURVE",
+"699 22 OFFCURVE",
+"706 -15 CURVE"
 );
 }
 );
@@ -78256,7 +78256,6 @@ note = ZERO;
 },
 {
 color = 3;
-export = 0;
 glyphname = ALIFf2;
 layers = (
 {
@@ -78353,7 +78352,6 @@ note = ALIFf2;
 },
 {
 color = 3;
-export = 0;
 glyphname = ALIFu2;
 layers = (
 {
@@ -78407,7 +78405,6 @@ note = ALIFu2;
 },
 {
 color = 3;
-export = 0;
 glyphname = BARI_YEf2;
 layers = (
 {
@@ -78487,7 +78484,6 @@ note = BARI_YEf2;
 },
 {
 color = 3;
-export = 0;
 glyphname = BARI_YEf3;
 layers = (
 {
@@ -78558,7 +78554,6 @@ note = BARI_YEf3;
 },
 {
 color = 3;
-export = 0;
 glyphname = BEfs2;
 layers = (
 {
@@ -78625,7 +78620,6 @@ note = BEfs2;
 },
 {
 color = 3;
-export = 0;
 glyphname = HAYCf2;
 layers = (
 {
@@ -79126,7 +79120,6 @@ note = LEADER_DOT;
 },
 {
 color = 3;
-export = 0;
 glyphname = SINi16;
 layers = (
 {
@@ -79181,7 +79174,6 @@ note = SINi7;
 },
 {
 color = 3;
-export = 0;
 glyphname = SINi17;
 layers = (
 {
@@ -79328,7 +79320,6 @@ width = 572;
 },
 {
 color = 3;
-export = 0;
 glyphname = TEf2;
 layers = (
 {
@@ -79358,7 +79349,6 @@ width = 891;
 },
 {
 color = 3;
-export = 0;
 glyphname = TEfs2;
 layers = (
 {
