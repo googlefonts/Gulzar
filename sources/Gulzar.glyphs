@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/LAMi5/LAMi6"
-);
 classes = (
 {
 automatic = 1;
@@ -83702,6 +83699,1076 @@ width = 424;
 }
 );
 note = KAFi6;
+},
+{
+color = 3;
+glyphname = HAYCmsd1;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{336, -104}";
+},
+{
+name = entry;
+position = "{430, 162}";
+},
+{
+name = exit;
+position = "{36, 0}";
+},
+{
+name = top;
+position = "{372, 259}";
+}
+);
+components = (
+{
+name = HAYAi1;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-7, 51}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{168, 75}";
+type = Stem;
+},
+{
+place = "{249, 24}";
+type = Stem;
+},
+{
+place = "{388, 66}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{232, 79}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 644;
+}
+);
+note = HAYAm1;
+},
+{
+color = 3;
+glyphname = HAYCmsd10;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{513, 69}";
+},
+{
+name = entry;
+position = "{585, 311}";
+},
+{
+name = exit;
+position = "{10, 0}";
+},
+{
+name = top;
+position = "{527, 408}";
+}
+);
+components = (
+{
+name = HAYAi10;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{30, 30}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{172, 66}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{255, 69}";
+type = Stem;
+},
+{
+place = "{258, 60}";
+type = Stem;
+},
+{
+place = "{370, 66}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 799;
+}
+);
+note = HAYAm10;
+},
+{
+color = 3;
+glyphname = HAYCmsd11;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{415, 76}";
+},
+{
+name = entry;
+position = "{509, 342}";
+},
+{
+name = exit;
+position = "{71, 0}";
+},
+{
+name = top;
+position = "{451, 439}";
+}
+);
+components = (
+{
+name = HAYAi11;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-23, 31}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{118, 67}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{197, 68}";
+type = Stem;
+},
+{
+place = "{256, 58}";
+type = Stem;
+},
+{
+place = "{368, 67}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 723;
+}
+);
+note = HAYAm9;
+},
+{
+color = 3;
+glyphname = HAYCmsd12;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{317, -56}";
+},
+{
+name = entry;
+position = "{411, 210}";
+},
+{
+name = exit;
+position = "{16, 0}";
+},
+{
+name = top;
+position = "{353, 307}";
+}
+);
+components = (
+{
+name = HAYAi12;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 625;
+}
+);
+note = HAYAi2;
+},
+{
+color = 3;
+glyphname = HAYCmsd13;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{276, 52}";
+},
+{
+name = entry;
+position = "{370, 318}";
+},
+{
+name = exit;
+position = "{0, 0}";
+},
+{
+name = top;
+position = "{312, 415}";
+}
+);
+components = (
+{
+name = HAYAi13;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 584;
+}
+);
+note = HAYAi2;
+},
+{
+color = 3;
+glyphname = HAYCmsd14;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{233, -56}";
+},
+{
+name = entry;
+position = "{347, 174}";
+},
+{
+name = exit;
+position = "{4, 0}";
+},
+{
+name = top;
+position = "{289, 271}";
+}
+);
+components = (
+{
+name = HAYAi14;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{8, 71}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{0, 21}";
+target = up;
+type = BottomGhost;
+},
+{
+horizontal = 1;
+place = "{284, 84}";
+type = Stem;
+},
+{
+place = "{314, 59}";
+type = Stem;
+},
+{
+place = "{485, 62}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{212, 84}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 562;
+}
+);
+note = HAYAi4;
+},
+{
+color = 3;
+glyphname = HAYCmsd15;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{275, -59}";
+},
+{
+name = entry;
+position = "{369, 207}";
+},
+{
+name = exit;
+position = "{0, 0}";
+},
+{
+name = top;
+position = "{311, 304}";
+}
+);
+components = (
+{
+name = HAYAi15;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{8, 71}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{0, 21}";
+target = up;
+type = BottomGhost;
+},
+{
+horizontal = 1;
+place = "{284, 84}";
+type = Stem;
+},
+{
+place = "{314, 59}";
+type = Stem;
+},
+{
+place = "{485, 62}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{212, 84}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 583;
+}
+);
+note = HAYAi4;
+},
+{
+color = 3;
+glyphname = HAYCmsd16;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{283, -89}";
+},
+{
+name = entry;
+position = "{377, 177}";
+},
+{
+name = exit;
+position = "{102, 0}";
+},
+{
+name = top;
+position = "{319, 274}";
+}
+);
+components = (
+{
+name = HAYAi16;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-23, 31}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{118, 67}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{197, 68}";
+type = Stem;
+},
+{
+place = "{256, 58}";
+type = Stem;
+},
+{
+place = "{368, 67}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 591;
+}
+);
+note = HAYAm9;
+},
+{
+color = 3;
+glyphname = HAYCmsd17;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{181, -88}";
+},
+{
+name = entry;
+position = "{275, 178}";
+},
+{
+name = exit;
+position = "{90, 0}";
+},
+{
+name = top;
+position = "{217, 275}";
+}
+);
+components = (
+{
+name = HAYAi17;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-23, 31}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{118, 67}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{197, 68}";
+type = Stem;
+},
+{
+place = "{256, 58}";
+type = Stem;
+},
+{
+place = "{368, 67}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 490;
+}
+);
+note = HAYAm9;
+},
+{
+color = 3;
+glyphname = HAYCmsd2;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{266, -92}";
+},
+{
+name = entry;
+position = "{390, 165}";
+},
+{
+name = exit;
+position = "{34, 0}";
+},
+{
+name = top;
+position = "{332, 262}";
+}
+);
+components = (
+{
+name = HAYAi2;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-4, 43}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{167, 77}";
+type = Stem;
+},
+{
+place = "{394, 64}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{232, 79}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 603;
+}
+);
+note = HAYAm2;
+},
+{
+color = 3;
+glyphname = HAYCmsd24;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{255, -91}";
+},
+{
+name = entry;
+position = "{379, 166}";
+},
+{
+name = exit;
+position = "{33, 0}";
+},
+{
+name = top;
+position = "{321, 263}";
+}
+);
+components = (
+{
+name = HAYAi24;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-4, 43}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{167, 77}";
+type = Stem;
+},
+{
+place = "{394, 64}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{232, 79}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 593;
+}
+);
+note = HAYAm2;
+},
+{
+color = 3;
+glyphname = HAYCmsd3;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{233, -88}";
+},
+{
+name = entry;
+position = "{327, 178}";
+},
+{
+name = exit;
+position = "{52, 0}";
+},
+{
+name = top;
+position = "{269, 275}";
+}
+);
+components = (
+{
+name = HAYAi3;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-76, 140}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{224, 80}";
+type = Stem;
+},
+{
+place = "{278, 26}";
+type = Stem;
+},
+{
+place = "{424, 55}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-19, 50}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{158, 76}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 541;
+}
+);
+note = HAYAm3;
+},
+{
+color = 3;
+glyphname = HAYCmsd4;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{371, -97}";
+},
+{
+name = entry;
+position = "{465, 169}";
+},
+{
+name = exit;
+position = "{90, 0}";
+},
+{
+name = top;
+position = "{407, 266}";
+}
+);
+components = (
+{
+name = HAYAi4;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{230, 68}";
+type = Stem;
+},
+{
+place = "{262, 19}";
+type = Stem;
+},
+{
+place = "{397, 68}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{293, 86}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 679;
+}
+);
+note = HAYAm4;
+},
+{
+color = 3;
+glyphname = HAYCmsd5;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{291, 78}";
+},
+{
+name = entry;
+position = "{385, 344}";
+},
+{
+name = exit;
+position = "{0, 0}";
+},
+{
+name = top;
+position = "{327, 441}";
+}
+);
+components = (
+{
+name = HAYAi5;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-39, 56}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{137, 69}";
+type = Stem;
+},
+{
+place = "{203, 24}";
+type = Stem;
+},
+{
+place = "{270, 72}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{203, 83}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 599;
+}
+);
+note = HAYAm5;
+},
+{
+color = 3;
+glyphname = HAYCmsd6;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{340, 252}";
+},
+{
+name = entry;
+position = "{417, 527}";
+},
+{
+name = exit;
+position = "{0, 0}";
+},
+{
+name = top;
+position = "{359, 624}";
+}
+);
+components = (
+{
+name = HAYAi6;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-80, 144}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{148, 76}";
+type = Stem;
+},
+{
+place = "{366, 64}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-23, 45}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{216, 78}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 631;
+}
+);
+note = HAYAm6;
+},
+{
+color = 3;
+glyphname = HAYCmsd7;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{357, 156}";
+},
+{
+name = entry;
+position = "{451, 422}";
+},
+{
+name = exit;
+position = "{7, 0}";
+},
+{
+name = top;
+position = "{393, 519}";
+}
+);
+components = (
+{
+name = HAYAi7;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-22, 28}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{120, 69}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{199, 69}";
+type = Stem;
+},
+{
+place = "{219, 12}";
+type = Stem;
+},
+{
+place = "{334, 66}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 665;
+}
+);
+note = HAYAm7;
+},
+{
+color = 3;
+glyphname = HAYCmsd8;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{428, 26}";
+},
+{
+name = entry;
+position = "{500, 281}";
+},
+{
+name = exit;
+position = "{4, 0}";
+},
+{
+name = top;
+position = "{442, 378}";
+}
+);
+components = (
+{
+name = HAYAi8;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-21, 33}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{119, 66}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{197, 71}";
+type = Stem;
+},
+{
+place = "{227, 56}";
+type = Stem;
+},
+{
+place = "{339, 66}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{-4, 43}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{167, 77}";
+type = Stem;
+},
+{
+place = "{394, 64}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{232, 79}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 714;
+}
+);
+note = HAYAm8;
+},
+{
+color = 3;
+glyphname = HAYCmsd9;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{276, 118}";
+},
+{
+name = entry;
+position = "{370, 384}";
+},
+{
+name = exit;
+position = "{0, 0}";
+},
+{
+name = top;
+position = "{312, 481}";
+}
+);
+components = (
+{
+name = HAYAi9;
+}
+);
+hints = (
+{
+horizontal = 1;
+place = "{-23, 31}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{118, 67}";
+type = Stem;
+},
+{
+horizontal = 1;
+place = "{197, 68}";
+type = Stem;
+},
+{
+place = "{256, 58}";
+type = Stem;
+},
+{
+place = "{368, 67}";
+type = Stem;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 584;
+}
+);
+note = HAYAm9;
+},
+{
+color = 3;
+glyphname = HAYCmsd23;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{236, -92}";
+},
+{
+name = entry;
+position = "{360, 185}";
+},
+{
+name = exit;
+position = "{4, 0}";
+},
+{
+name = top;
+position = "{302, 282}";
+}
+);
+components = (
+{
+name = HAYAi23;
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 574;
+}
+);
+note = HAYAi1;
 }
 );
 instances = (
@@ -88720,7 +89787,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88752,7 +89819,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88784,7 +89851,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88816,7 +89883,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88848,7 +89915,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88880,7 +89947,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88912,7 +89979,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88944,7 +90011,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -88976,7 +90043,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89008,7 +90075,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89040,7 +90107,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89072,7 +90139,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89104,7 +90171,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89136,7 +90203,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89168,7 +90235,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89200,7 +90267,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89232,7 +90299,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89264,7 +90331,7 @@ GAFm = "21";
 HAYAi = "6";
 HAYAm = "6";
 HAYCi = "6";
-HAYCm = "6";
+HAYCm = sd6;
 Hei = "6";
 JIMi = "6";
 JIMm = "6";
@@ -89283,6 +90350,614 @@ TEi = "6";
 TEm = "6";
 TOEi = "6";
 TOEm = "6";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd1;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd2;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd3;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd4;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd5;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd6;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd7;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd8;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd9;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd10;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd11;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd12;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd13;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd14;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd15;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd16;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd17;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd23;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
+},
+{
+AINi = "5";
+AINm = "5";
+BEi = "5";
+BEm = "5";
+FEi = "5";
+FEm = "5";
+GAFi = "20";
+GAFm = "20";
+HAYAi = "5";
+HAYAm = "5";
+HAYCi = "5";
+HAYCm = "5";
+Hei = "5";
+JIMi = "5";
+JIMm = "5";
+KAFi = "20";
+KAFm = "20";
+LAMi = "5";
+LAMm = "5";
+"Left Glyph" = HAYCmsd24;
+MIMi = "5";
+MIMm = "5";
+SADi = "5";
+SADm = "5";
+SINi = "5";
+SINm = "5";
+TEi = "5";
+TEm = "5";
+TOEi = "5";
+TOEm = "5";
 },
 {
 AINi = "7";
