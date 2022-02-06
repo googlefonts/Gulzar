@@ -1,21 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/GAFm25/space/KAFm25/KAFm20/space/space/KAFm25/KAFm26/space/KAFm25/KAFm21/space/KAFm25/KAFm22/space/GAFm22/space/KAFm25/KAFm23 \012/GAFi23/space/KAFi23/KAFm20/space/space/KAFi23/KAFm26/space/KAFi23/KAFm21/space/KAFi23/KAFm22/space/KAFi23/KAFm23",
-"/GAFm20/space/GAFm21/space/GAFm22/space/GAFm23",
-"/KAFi9/KAFi13",
-"/KAFi11",
-"/KAFi7",
-"/LAMi7/LAMi7/JIMm1",
-"/GAFi18/space/KAFi18/space/KAFi19/space/KAFi20/space/GAFi20",
-"/KAFi19/KAFi25",
-"/KAFi9",
-"/KAFi25/GAFi25/MIMf1/KAFi25/MIMf1",
-"/KAFi18",
-"/KAFi18/KAFi19/KAFi20",
-"/KAFi18/KAFi26/GAFi26/QAFf1/KAFi26/KAFi27/GAFi27/KAFi27/FEf1/VAOf1/KAFi19/space/KAFi19/GAFi19/space/LAMi6/HAYCm1/LAMi6/HAYCm1/KAFi20/KAFi25",
-"/KAFi25",
-"/KAFfs1"
+"/LAMi5/LAMi6"
 );
 classes = (
 {
@@ -62482,7 +62468,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{140, 699}";
+position = "{140, 739}";
 }
 );
 hints = (
@@ -62514,14 +62500,14 @@ nodes = (
 "51 122 OFFCURVE",
 "74 169 CURVE SMOOTH",
 "125 273 OFFCURVE",
-"150 314 OFFCURVE",
-"154 445 CURVE SMOOTH",
-"161 696 LINE",
-"140 699 LINE",
-"113 600 LINE SMOOTH",
-"100 551 OFFCURVE",
-"95 523 OFFCURVE",
-"95 447 CURVE SMOOTH",
+"153 314 OFFCURVE",
+"155 432 CURVE SMOOTH",
+"161 736 LINE",
+"140 739 LINE",
+"111 652 LINE SMOOTH",
+"95 604 OFFCURVE",
+"95 583 OFFCURVE",
+"95 487 CURVE SMOOTH",
 "95 419 LINE SMOOTH",
 "95 285 OFFCURVE",
 "75 258 OFFCURVE",
