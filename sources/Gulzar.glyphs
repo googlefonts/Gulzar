@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/KAFi20/HAYAm1/KAFi20/HAYAm1"
+);
 classes = (
 {
 automatic = 1;
@@ -80660,9 +80663,9 @@ paths = (
 closed = 1;
 nodes = (
 "133 40 OFFCURVE",
-"186 140 OFFCURVE",
-"186 230 CURVE SMOOTH",
-"186 301 OFFCURVE",
+"196 138 OFFCURVE",
+"196 221 CURVE SMOOTH",
+"196 299 OFFCURVE",
 "144 337 OFFCURVE",
 "64 346 CURVE",
 "370 558 LINE SMOOTH",
@@ -80673,14 +80676,14 @@ nodes = (
 "492 736 LINE",
 "193 527 LINE SMOOTH",
 "132 484 OFFCURVE",
-"71 445 OFFCURVE",
+"68 446 OFFCURVE",
 "42 385 CURVE SMOOTH",
-"0 297 LINE",
-"12 260 LINE",
-"83 252 OFFCURVE",
-"140 224 OFFCURVE",
-"140 170 CURVE SMOOTH",
-"140 127 OFFCURVE",
+"0 287 LINE",
+"12 250 LINE",
+"93 242 OFFCURVE",
+"140 211 OFFCURVE",
+"140 152 CURVE SMOOTH",
+"140 117 OFFCURVE",
 "106 51 OFFCURVE",
 "75 0 CURVE",
 "92 -10 LINE"
@@ -94451,8 +94454,8 @@ BEi = "5";
 BEm = "5";
 FEi = "5";
 FEm = "5";
-GAFi = "5";
-GAFm = "5";
+GAFi = "20";
+GAFm = "20";
 HAYAi = "5";
 HAYAm = "5";
 HAYCi = "5";
@@ -94460,8 +94463,8 @@ HAYCm = "5";
 Hei = "5";
 JIMi = "5";
 JIMm = "5";
-KAFi = "5";
-KAFm = "5";
+KAFi = "20";
+KAFm = "20";
 LAMi = "5";
 LAMm = "5";
 "Left Glyph" = HAYAf1;
