@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/KAFi15"
+);
 classes = (
 {
 automatic = 1;
@@ -84015,6 +84018,106 @@ width = 298;
 }
 );
 note = KAFm6;
+},
+{
+color = 3;
+glyphname = KAFisd15;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{140, -194}";
+},
+{
+name = exit;
+position = "{48, 0}";
+},
+{
+name = top;
+position = "{382, 770}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"3 -135 LINE SMOOTH",
+"50 -135 OFFCURVE",
+"100 -89 OFFCURVE",
+"135 -34 CURVE SMOOTH",
+"182 41 OFFCURVE",
+"190 128 OFFCURVE",
+"190 256 CURVE SMOOTH",
+"190 502 LINE",
+"175 474 LINE",
+"512 706 LINE SMOOTH",
+"565 743 OFFCURVE",
+"593 767 OFFCURVE",
+"616 812 CURVE SMOOTH",
+"648 874 LINE",
+"634 884 LINE",
+"335 675 LINE SMOOTH",
+"275 633 OFFCURVE",
+"215 593 OFFCURVE",
+"184 533 CURVE SMOOTH",
+"143 454 LINE SMOOTH",
+"126 421 OFFCURVE",
+"126 380 OFFCURVE",
+"126 313 CURVE SMOOTH",
+"126 87 LINE SMOOTH",
+"126 51 OFFCURVE",
+"120 27 OFFCURVE",
+"100 13 CURVE SMOOTH",
+"87 4 OFFCURVE",
+"71 0 OFFCURVE",
+"50 0 CURVE SMOOTH",
+"48 0 LINE",
+"33 -17 OFFCURVE",
+"7 -85 OFFCURVE",
+"1 -135 CURVE"
+);
+}
+);
+width = 278;
+}
+);
+note = KAFi1;
+},
+{
+color = 3;
+glyphname = GAFisd15;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{140, -194}";
+},
+{
+name = exit;
+position = "{48, 0}";
+},
+{
+name = top;
+position = "{382, 884}";
+}
+);
+components = (
+{
+name = KAFisd15;
+},
+{
+name = _Gaf.sarkash;
+transform = "{1, 0, 0, 1, 194, 260}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 278;
+}
+);
+note = KAFi1;
 }
 );
 instances = (
@@ -87044,7 +87147,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87053,7 +87156,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87076,7 +87179,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87085,7 +87188,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87364,7 +87467,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87373,7 +87476,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87396,7 +87499,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87405,7 +87508,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87428,7 +87531,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87437,7 +87540,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87460,7 +87563,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87469,7 +87572,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87492,7 +87595,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87501,7 +87604,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87524,7 +87627,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87533,7 +87636,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87556,7 +87659,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87565,7 +87668,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87588,7 +87691,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87597,7 +87700,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87620,7 +87723,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87629,7 +87732,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87652,7 +87755,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87661,7 +87764,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87684,7 +87787,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87693,7 +87796,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87716,7 +87819,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87725,7 +87828,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87748,7 +87851,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87757,7 +87860,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -87780,7 +87883,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -87789,7 +87892,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -95332,7 +95435,7 @@ BEi = 3;
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -95341,7 +95444,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -95428,7 +95531,7 @@ BEi = "3";
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
@@ -95437,7 +95540,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "18";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -95460,16 +95563,16 @@ BEi = 3;
 BEm = "3";
 FEi = "3";
 FEm = "3";
-GAFi = "15";
+GAFi = sd15;
 GAFm = "17";
 HAYAi = "3";
 HAYAm = "3";
 HAYCi = "16";
 HAYCm = "3";
 Hei = "3";
-JIMi = "3";
+JIMi = "18";
 JIMm = "3";
-KAFi = "15";
+KAFi = sd15;
 KAFm = "17";
 LAMi = "3";
 LAMm = "3";
@@ -95716,7 +95819,7 @@ BEi = "15";
 BEm = "15";
 FEi = "15";
 FEm = "15";
-GAFi = "26";
+GAFi = "16";
 GAFm = "15";
 HAYAi = "15";
 HAYAm = "15";
@@ -95725,7 +95828,7 @@ HAYCm = "15";
 Hei = "15";
 JIMi = "15";
 JIMm = "15";
-KAFi = "26";
+KAFi = "16";
 KAFm = "15";
 LAMi = "15";
 LAMm = "15";
