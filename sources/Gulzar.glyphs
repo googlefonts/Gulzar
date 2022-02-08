@@ -1,9 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/BEmsd1/space/BEmsd10/space/space/space/SINi3/BEm14/NUNf1/TEm14/BEm14/NUNf1/space/BEmsd12/space/BEmsd15/space/BEmsd2/space/BEmsd3/space/BEmsd4/space/TEmsd10/space/TEmsd12/space/TEmsd15/space/TEmsd4",
-"",
-"/BEm14"
+"/KAFm17/KAFi15/KAFi28/GAFisd15/KAFisd15/dal-ar.fina/KAFisd15/dal-ar.fina"
 );
 classes = (
 {
@@ -84287,15 +84285,15 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{140, -194}";
+position = "{159, -194}";
 },
 {
 name = exit;
-position = "{48, 0}";
+position = "{47, 0}";
 },
 {
 name = top;
-position = "{382, 770}";
+position = "{401, 820}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -84303,44 +84301,41 @@ paths = (
 {
 closed = 1;
 nodes = (
-"3 -135 LINE SMOOTH",
-"50 -135 OFFCURVE",
-"100 -89 OFFCURVE",
-"135 -34 CURVE SMOOTH",
-"182 41 OFFCURVE",
-"190 128 OFFCURVE",
-"190 256 CURVE SMOOTH",
-"190 502 LINE",
-"175 474 LINE",
-"512 706 LINE SMOOTH",
-"565 743 OFFCURVE",
-"593 767 OFFCURVE",
-"616 812 CURVE SMOOTH",
-"648 874 LINE",
-"634 884 LINE",
-"335 675 LINE SMOOTH",
-"275 633 OFFCURVE",
-"215 593 OFFCURVE",
-"184 533 CURVE SMOOTH",
-"143 454 LINE SMOOTH",
-"126 421 OFFCURVE",
-"126 380 OFFCURVE",
-"126 313 CURVE SMOOTH",
-"126 87 LINE SMOOTH",
-"126 51 OFFCURVE",
-"120 27 OFFCURVE",
-"100 13 CURVE SMOOTH",
-"87 4 OFFCURVE",
-"71 0 OFFCURVE",
-"50 0 CURVE SMOOTH",
-"48 0 LINE",
-"33 -17 OFFCURVE",
-"7 -85 OFFCURVE",
-"1 -135 CURVE"
+"2 -135 LINE SMOOTH",
+"69 -135 OFFCURVE",
+"114 -84 OFFCURVE",
+"145 -26 CURVE SMOOTH",
+"177 34 OFFCURVE",
+"209 128 OFFCURVE",
+"209 256 CURVE SMOOTH",
+"209 552 LINE",
+"194 524 LINE",
+"531 756 LINE SMOOTH",
+"584 793 OFFCURVE",
+"612 817 OFFCURVE",
+"635 862 CURVE SMOOTH",
+"667 924 LINE",
+"653 934 LINE",
+"354 725 LINE SMOOTH",
+"294 683 OFFCURVE",
+"234 643 OFFCURVE",
+"203 583 CURVE SMOOTH",
+"162 504 LINE SMOOTH",
+"145 471 OFFCURVE",
+"145 430 OFFCURVE",
+"145 363 CURVE SMOOTH",
+"145 173 LINE SMOOTH",
+"145 67 OFFCURVE",
+"108 0 OFFCURVE",
+"49 0 CURVE SMOOTH",
+"47 0 LINE",
+"32 -17 OFFCURVE",
+"6 -85 OFFCURVE",
+"0 -135 CURVE"
 );
 }
 );
-width = 278;
+width = 297;
 }
 );
 note = KAFi1;
@@ -84357,7 +84352,7 @@ position = "{140, -194}";
 },
 {
 name = exit;
-position = "{48, 0}";
+position = "{47, 0}";
 },
 {
 name = top;
@@ -84370,11 +84365,11 @@ name = KAFisd15;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 194, 260}";
+transform = "{1, 0, 0, 1, 213, 310}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 278;
+width = 297;
 }
 );
 note = KAFi1;
