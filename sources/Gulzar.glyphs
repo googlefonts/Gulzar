@@ -1,7 +1,7 @@
 {
 .appVersion = "1352";
 DisplayStrings = (
-"/KAFi12/BEf1/LAMi12/LAMi12/BEf1/LAMi12/BEf1"
+"/JIMm3/KAFm7/GAFm7/space/KAFm7/JIMm3/ALIFf1/KAFm7"
 );
 classes = (
 {
@@ -48005,15 +48005,15 @@ position = "{269, 137}";
 },
 {
 name = entry;
-position = "{466, 300}";
+position = "{449, 260}";
 },
 {
 name = exit;
-position = "{14, 0}";
+position = "{7, 0}";
 },
 {
 name = top;
-position = "{713, 1237}";
+position = "{654, 1124}";
 }
 );
 components = (
@@ -48022,7 +48022,7 @@ name = KAFm7;
 },
 {
 name = _Gaf.sarkash;
-transform = "{1, 0, 0, 1, 525, 643}";
+transform = "{1, 0, 0, 1, 508, 563}";
 }
 );
 hints = (
@@ -48042,7 +48042,7 @@ type = Stem;
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 467;
+width = 450;
 }
 );
 note = GAFm7;
@@ -57557,22 +57557,25 @@ paths = (
 closed = 1;
 nodes = (
 "2 -135 LINE SMOOTH",
-"105 -135 OFFCURVE",
-"233 -44 OFFCURVE",
-"343 167 CURVE",
-"337 181 LINE",
-"230 185 OFFCURVE",
+"59 -135 OFFCURVE",
+"136 -112 OFFCURVE",
+"209 -20 CURVE SMOOTH",
+"247 27 OFFCURVE",
+"290 95 OFFCURVE",
+"323 167 CURVE",
+"317 181 LINE",
+"210 185 OFFCURVE",
 "140 183 OFFCURVE",
 "96 175 CURVE",
 "56 164 OFFCURVE",
 "59 119 OFFCURVE",
 "65 99 CURVE",
 "117 108 OFFCURVE",
-"188 111 OFFCURVE",
-"276 108 CURVE",
-"276 139 LINE",
-"227 68 OFFCURVE",
-"121 0 OFFCURVE",
+"168 111 OFFCURVE",
+"256 108 CURVE",
+"256 139 LINE",
+"200 50 OFFCURVE",
+"110 0 OFFCURVE",
 "49 0 CURVE SMOOTH",
 "47 0 LINE",
 "29 -22 OFFCURVE",
@@ -57581,7 +57584,7 @@ nodes = (
 );
 }
 );
-width = 343;
+width = 323;
 }
 );
 note = JIMm3;
@@ -61363,19 +61366,19 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{269, 137}";
+position = "{262, 137}";
 },
 {
 name = entry;
-position = "{466, 300}";
+position = "{449, 260}";
 },
 {
 name = exit;
-position = "{14, 0}";
+position = "{7, 0}";
 },
 {
 name = top;
-position = "{713, 1153}";
+position = "{696, 1073}";
 }
 );
 hints = (
@@ -61404,52 +61407,52 @@ paths = (
 {
 closed = 1;
 nodes = (
-"65 91 OFFCURVE",
-"133 140 OFFCURVE",
-"218 194 CURVE SMOOTH",
-"267 225 OFFCURVE",
-"304 245 OFFCURVE",
-"327 271 CURVE",
-"318 279 LINE",
-"326 213 OFFCURVE",
-"364 165 OFFCURVE",
-"417 165 CURVE SMOOTH",
-"419 165 LINE",
-"455 188 OFFCURVE",
-"471 262 OFFCURVE",
-"466 300 CURVE",
-"464 300 LINE SMOOTH",
-"368 300 OFFCURVE",
-"362 401 OFFCURVE",
-"368 513 CURVE SMOOTH",
-"381 768 LINE",
-"843 1089 LINE SMOOTH",
-"896 1126 OFFCURVE",
-"924 1151 OFFCURVE",
-"947 1195 CURVE SMOOTH",
-"979 1257 LINE",
-"965 1267 LINE",
-"513 951 LINE SMOOTH",
-"451 908 OFFCURVE",
-"391 856 OFFCURVE",
-"357 796 CURVE SMOOTH",
-"341 767 OFFCURVE",
-"322 709 OFFCURVE",
-"319 621 CURVE SMOOTH",
-"311 418 LINE SMOOTH",
-"307 324 OFFCURVE",
-"298 314 OFFCURVE",
-"210 260 CURVE SMOOTH",
-"95 189 OFFCURVE",
-"7 91 OFFCURVE",
-"7 16 CURVE SMOOTH",
-"7 5 OFFCURVE",
-"11 2 OFFCURVE",
-"14 0 CURVE"
+"54 81 OFFCURVE",
+"142 136 OFFCURVE",
+"191 181 CURVE SMOOTH",
+"232 218 OFFCURVE",
+"297 272 OFFCURVE",
+"314 357 CURVE",
+"297 332 LINE",
+"301 168 OFFCURVE",
+"356 125 OFFCURVE",
+"400 125 CURVE SMOOTH",
+"402 125 LINE",
+"438 148 OFFCURVE",
+"454 222 OFFCURVE",
+"449 260 CURVE",
+"447 260 LINE SMOOTH",
+"351 260 OFFCURVE",
+"344 361 OFFCURVE",
+"351 473 CURVE SMOOTH",
+"364 688 LINE",
+"826 1009 LINE SMOOTH",
+"879 1046 OFFCURVE",
+"907 1071 OFFCURVE",
+"930 1115 CURVE SMOOTH",
+"962 1177 LINE",
+"948 1187 LINE",
+"496 871 LINE SMOOTH",
+"434 828 OFFCURVE",
+"374 776 OFFCURVE",
+"340 716 CURVE SMOOTH",
+"324 687 OFFCURVE",
+"308 629 OFFCURVE",
+"301 541 CURVE SMOOTH",
+"296 478 LINE SMOOTH",
+"288 372 OFFCURVE",
+"257 309 OFFCURVE",
+"167 232 CURVE SMOOTH",
+"89 165 OFFCURVE",
+"0 91 OFFCURVE",
+"0 16 CURVE SMOOTH",
+"0 5 OFFCURVE",
+"4 2 OFFCURVE",
+"7 0 CURVE"
 );
 }
 );
-width = 467;
+width = 450;
 }
 );
 note = KAFm7;
