@@ -1,5 +1,8 @@
 {
 .appVersion = "1352";
+DisplayStrings = (
+"/sda.one/sda.two/sdb/sdb.one/sdb.two/sdb.yb/sdi"
+);
 classes = (
 {
 automatic = 1;
@@ -32682,10 +32685,11 @@ components = (
 {
 alignment = 1;
 name = sda;
+transform = "{1.07214, 0, 0, 1.07214, 0, 0}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
-width = 288;
+width = 309;
 }
 );
 note = sdb;
