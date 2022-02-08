@@ -10,6 +10,10 @@ Feature rlig {
     Substitute ALIFu1 (LAMi1 LAMm1 HAYCf1) -> ALLAH;
   } IgnoreMarks;
 
+  Routine HaycAlif {
+    Substitute HAYCi1 haydb ALIFf1 -> HAYC_ALIFu1;
+  };
+
   # Override with other final forms
 
   Routine MoreFinaSelection {
