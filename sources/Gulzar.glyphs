@@ -2,7 +2,8 @@
 .appVersion = "1352";
 DisplayStrings = (
 "/sda.one/sda.two/sdb/sdb.one/sdb.two/sdb.yb/sdi",
-"/SINi18"
+"/SINi18",
+"/sda/sda.one/sda.two/sdb/sdb.one/sdb.two/sdb.yb/sdi"
 );
 classes = (
 {
@@ -32682,14 +32683,38 @@ name = _inside;
 position = "{144, 95}";
 }
 );
-components = (
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
 {
-alignment = 1;
-name = sda;
-transform = "{1.07214, 0, 0, 1.07214, 0, 0}";
+closed = 1;
+nodes = (
+"174 4 OFFCURVE",
+"179 6 OFFCURVE",
+"187 17 CURVE SMOOTH",
+"240 95 LINE SMOOTH",
+"246 103 OFFCURVE",
+"249 109 OFFCURVE",
+"249 115 CURVE SMOOTH",
+"249 123 OFFCURVE",
+"242 129 OFFCURVE",
+"229 131 CURVE SMOOTH",
+"182 140 OFFCURVE",
+"154 163 OFFCURVE",
+"133 200 CURVE",
+"128 200 LINE",
+"88 149 LINE SMOOTH",
+"77 136 OFFCURVE",
+"60 115 OFFCURVE",
+"60 89 CURVE SMOOTH",
+"60 59 OFFCURVE",
+"88 21 OFFCURVE",
+"145 6 CURVE SMOOTH",
+"152 5 OFFCURVE",
+"159 4 OFFCURVE",
+"164 4 CURVE SMOOTH"
+);
 }
 );
-layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 width = 309;
 }
 );
