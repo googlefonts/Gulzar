@@ -162,7 +162,8 @@ Feature kern {
     Position @alif_like ([BEisd1 TEisd1] <xAdvance=+50>) HAMZA_ABOVE;
 
     Position @long_re [sda] (/[BT]Ei|JIMi/ <xAdvance=+50>) [sda tda dda] ;
-
+    Position /JIM[mi]/ REf1 ([sda toeda] <yPlacement=+75>);
+    Position /MIMi/ /JIMm/ (sda <xPlacement=-20 yPlacement=+20>);
   } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA];
 
   Routine DotsUnderGaf {
