@@ -1,8 +1,5 @@
 {
 .appVersion = "1352";
-DisplayStrings = (
-"/LAMm4/FEm14/NUNf1/LAMm4/FEm14/NUNf1"
-);
 classes = (
 {
 automatic = 1;
@@ -14836,7 +14833,7 @@ position = "{89, 81}";
 },
 {
 name = top;
-position = "{118, 684}";
+position = "{118, 664}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14848,11 +14845,11 @@ nodes = (
 "112 151 OFFCURVE",
 "128 232 OFFCURVE",
 "129 325 CURVE SMOOTH",
-"134 679 LINE",
-"118 684 LINE",
-"75 588 OFFCURVE",
-"70 565 OFFCURVE",
-"70 475 CURVE SMOOTH",
+"134 659 LINE",
+"118 664 LINE",
+"75 568 OFFCURVE",
+"70 545 OFFCURVE",
+"70 455 CURVE SMOOTH",
 "70 81 LINE"
 );
 }
@@ -14874,7 +14871,7 @@ name = ALIFu1;
 },
 {
 name = HAMZA_ABOVE;
-transform = "{1, 0, 0, 1, -62, 594}";
+transform = "{1, 0, 0, 1, -62, 574}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14914,7 +14911,7 @@ name = ALIFu1;
 },
 {
 name = MADDA;
-transform = "{1, 0, 0, 1, -123, 813}";
+transform = "{1, 0, 0, 1, -123, 793}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -14934,7 +14931,7 @@ name = ALIFu1;
 },
 {
 name = HAMZA_WASL;
-transform = "{1, 0, 0, 1, -78, 804}";
+transform = "{1, 0, 0, 1, -78, 784}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -78601,7 +78598,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{89, 21}";
+position = "{89, 51}";
 },
 {
 name = top;
@@ -78628,16 +78625,16 @@ paths = (
 {
 closed = 1;
 nodes = (
-"89 21 LINE",
-"108 79 OFFCURVE",
-"126 158 OFFCURVE",
-"128 246 CURVE SMOOTH",
+"89 51 LINE",
+"108 109 OFFCURVE",
+"126 188 OFFCURVE",
+"128 276 CURVE SMOOTH",
 "134 569 LINE",
 "118 574 LINE",
 "75 478 OFFCURVE",
 "70 455 OFFCURVE",
 "70 365 CURVE SMOOTH",
-"70 21 LINE"
+"70 51 LINE"
 );
 }
 );
