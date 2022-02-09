@@ -109,8 +109,6 @@ Feature kern {
 
     # Heh Alif
     Position HAYCi3 (haydb <yPlacement=+180>) ALIFf1;
-    # Clear Alif Nun KL
-    Position /ALIF[uf]1/ ([BEi8 TEi8] <xAdvance=+100>) /sda|dda/;
 
     # Lam Khah
     Position /LAM[im]/ /JIM[mf]/ ([sda sda.one] <xPlacement=-50>);
@@ -144,7 +142,10 @@ Feature kern {
     # Short BE/TEs
     Position @alif_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+130>) [dda tda];
     Position @vao_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+60>) [dda tda];
-  } IgnoreLigatures UseMarkFilteringSet [dda tda];
+
+    # Clear Alif Nun KL
+    Position /ALIF[uf]1/ ([BEi8 TEi8] <xAdvance=+100>) /sda|dda/;
+  } IgnoreLigatures UseMarkFilteringSet [sda dda tda];
 
   Routine ClashesToRight {
     Position LAMi4 /FEm/ (dda <xPlacement=-30>);
