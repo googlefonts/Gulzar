@@ -154,7 +154,7 @@ Feature kern {
     Position /[KG]AF/ [BEm3 TEm3] ([sda dda] <yPlacement=-50> @all_above_marks <yPlacement=+350>) /[KG]AF/;
     Position /KAFi/ TEm3 (tda <yPlacement=+250>) @alif_like;
     Position KAFi2 TEm3 (tda <xPlacement=-50>);
-    Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-20>) ALIFf1;
+    Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-20>) [@alif_like LAMf1];
     Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-50>);
     Position FEi15 [sda dda] QAFf1 ([sda dda tda] <xPlacement=-50>);
     Position TEm3 (tda <yPlacement=-120>) @alif_like MADDA;
