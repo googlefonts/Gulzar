@@ -86,11 +86,35 @@ capHeight = 700;
 customParameters = (
 {
 name = winAscent;
-value = 1424;
+value = 1494;
 },
 {
 name = winDescent;
-value = 1333;
+value = -900;
+},
+{
+name = typoLineGap;
+value = 0;
+},
+{
+name = hheaLineGap;
+value = 0;
+},
+{
+name = hheaAscender;
+value = 1500;
+},
+{
+name = typoAscender;
+value = 1500;
+},
+{
+name = hheaDescender;
+value = -1200;
+},
+{
+name = typoDescender;
+value = -1200;
 }
 );
 descender = -800;
@@ -85864,6 +85888,10 @@ instances = (
 customParameters = (
 {
 name = "Don't use Production Names";
+value = 1;
+},
+{
+name = "Use Typo Metrics";
 value = 1;
 }
 );
