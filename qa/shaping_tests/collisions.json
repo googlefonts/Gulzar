@@ -26,6 +26,12 @@
             "input_type": "pattern",
             "input": "Isols MaybeSpace DotsBelow Consonants"
         },
+        {
+            "input": "وقع وبع"
+        },
+        {
+            "input": "وقج وبج"
+        },
         { "input": "ئِیں" },
         { "input": "سبے" },
         { "input": "منمشتعلعشقعلیمچکنم" },
