@@ -156,7 +156,9 @@ class DetectAndSwap(FEZVerb):
 
         return [fontFeatures.Routine(
             name = name,
-            rules = result
+            rules = result,
+            flags = 0x10,
+            markFilteringSet = self.dots
         )]
 
     def collides(self, glyphs):
