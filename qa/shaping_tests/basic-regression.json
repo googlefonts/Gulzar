@@ -23,7 +23,7 @@
   "tests": [
     {
       "input": "بیر",
-      "expectation": "REf3|ddb.one|BEm16|sdb|BEi3",
+      "expectation": "REf3|ddb.one|TEm16|sdb|BEi3",
       "note": "https://github.com/simoncozens/Gulzar/issues/12"
     },
     {
@@ -32,13 +32,12 @@
     },
     {
       "input": "یر",
-      "expectation": "REf1|ddb|BEi16",
+      "expectation": "REf1|ddb|TEi16",
       "note": "https://github.com/simoncozens/Gulzar/issues/12"
     },
     {
       "input": "ہا",
-      "expectation": "ALIFf1=1+222|haydb=0@-109,104+0|HAYCi3=0@-49,135+154",
-      "note": "Don't break heh-alif when fixing short initial be-likes"
+      "expectation": "HAYC_ALIFu1=0+323"
     },
     {
       "input": "رچھ",
@@ -50,8 +49,8 @@
     },
     {
       "input": "فدیم",
-      "note": "Height: 500",
-      "expectation": "MIMf1|ddb.one|BEi9|DALf1|sda|FEi3"
+      "note": "Height: 400",
+      "expectation": "MIMf1=3+344|ddb=2@40,92+0|TEi9=2@0,432+232|DALf1=1+449|sda=0@-87,605+0|FEi3=0@-47,135+224"
     },
     {
       "input": "رباں",
@@ -60,11 +59,11 @@
     },
     {
       "input": "ریر",
-      "expectation": "REf1|ddb.one|BEi16|REu1"
+      "expectation": "REf1=2+539|ddb.one=1@-220,-247+0|TEi16=1@-100,433+-60|REu1=0+406"
     },
     {
       "input": "میر پشیمل",
-      "expectation": "LAMf1|MIMm3|ddb|BEm9|tda|SINm2|tdb|BEi24|space.urdu|REf3|ddb|BEm16|MIMi15",
+      "expectation": "LAMf1|MIMm3|ddb|TEm9|tda|SINm2|tdb|TEi24|space.urdu|REf3|ddb|TEm16|MIMi15",
       "note": "No need to drop tdb"
     },
     {
@@ -73,7 +72,7 @@
     },
     {
       "input": "سرپہ",
-      "expectation": "HAYCf1|tdb.one|BEi3|REf3|SINi19"
+      "expectation": "HAYCf1|tdb.one|TEi3|REf2|SINi18"
     },
     {
       "input": "ندبجن",

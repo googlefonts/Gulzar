@@ -14,7 +14,7 @@ Feature kern {
 	# final glyph, whichever is the smallest.
 	# We don't kern bari-yes, and we have to include BARI_YEu1 in that.
 	DefineClass @bariye = /BARI_YE/;
-	NastaliqKerning 100 65%;
+	NastaliqKerning 100 50%;
 
 	# The autokerner only considers the space underneath two glyphs:
 	# the final/isolate of one "word" and the initial of the next. But
@@ -42,10 +42,6 @@ Feature kern {
 	} IgnoreLigatures IgnoreMarks;
 
 	# And finally some ad-hoc fixes...
-
-	Routine FixShortKern3 {
-		Position /REf3/ (/TEi/ <xAdvance=+100>);
-	} IgnoreLigatures UseMarkFilteringSet /dda|sdb|haydb/;
 
 	Routine OtherKerningFixes {
 		Position @bigbowlfina space.urdu (/([KG]AF|LAM)i/ <xAdvance=+50>) /JIMm|BEm/ [ddb tdb];

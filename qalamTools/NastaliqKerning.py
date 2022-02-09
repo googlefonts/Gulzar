@@ -170,12 +170,12 @@ class NastaliqKerning(FEZVerb):
                 # the height of this sequence.
 
                 # This is a bit of a hack :-(
-                if len(postcontext_plus_rise) > 1:
-                    word_tail_rise = quantize(
-                        sum([x[1] for x in postcontext_plus_rise]), rise_quantization
-                    )
-                else:
-                    word_tail_rise = 0
+                # if len(postcontext_plus_rise) > 1:
+                word_tail_rise = quantize(
+                    sum([x[1] for x in postcontext_plus_rise]), rise_quantization
+                )
+                # else:
+                    # word_tail_rise = 0
                 if word_tail_rise < 0:
                     continue
 

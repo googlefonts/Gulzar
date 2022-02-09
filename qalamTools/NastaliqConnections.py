@@ -44,6 +44,19 @@ def load_rules(trypath, glyphlist, full=False):
                 #    left_glyph2 = "G" + left_glyph[1:]
                 #    rules[old][replacement].append(left_glyph2)
 
+    if full:
+        # Raised tooth manual rules
+        rules["BEm1"]["BEmsd3"] = ["AINm1", "AINf1"]+ [x for x in glyphlist if "AINm" in x]
+        rules["TEm1"]["TEmsd3"] = ["AINm1", "AINf1"]
+        rules["BEm1"]["BEmsd12"] = ["BEf1", "TEf1"] + [x for x in glyphlist if "BEm" in x or "TEm" in x]
+        rules["TEm1"]["TEmsd12"] = ["BEf1", "TEf1"] + [x for x in glyphlist if "BEm" in x or "TEm" in x]
+        rules["BEm1"]["BEmsd10"] = ["SADf1", "TOEf1"] + [x for x in glyphlist if "SADm" in x or "TOEm" in x]
+        rules["TEm1"]["TEmsd10"] = ["SADf1", "TOEf1"] + [x for x in glyphlist if "SADm" in x or "TOEm" in x]
+        rules["BEm1"]["BEmsd4"] = ["FEf1"] + [x for x in glyphlist if "FEm" in x]
+        rules["TEm1"]["TEmsd4"] = ["FEf1"] + [x for x in glyphlist if "FEm" in x]
+        rules["BEm1"]["BEmsd15"] = ["QAFf1", "VAOf1"]
+        rules["TEm1"]["TEmsd15"] = ["QAFf1", "VAOf1"]
+
     return rules
 
 
