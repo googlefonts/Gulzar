@@ -154,6 +154,9 @@ Feature kern {
     Position /[KG]AF/ [BEm3 TEm3] ([sda dda] <yPlacement=-50> @all_above_marks <yPlacement=+350>) /[KG]AF/;
     Position /KAFi/ TEm3 (tda <yPlacement=+250>) @alif_like;
     Position KAFi2 TEm3 (tda <xPlacement=-50>);
+    Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-20>) ALIFf1;
+    Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-50>);
+    Position FEi15 [sda dda] QAFf1 ([sda dda tda] <xPlacement=-50>);
     Position TEm3 (tda <yPlacement=-120>) @alif_like MADDA;
     Position /JIMi/ [sda dda tda] /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
     Position /JIMi/ /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
@@ -167,24 +170,24 @@ Feature kern {
   } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA];
 
   Routine DotsUnderGaf {
-    Position (/\.two$/ <yPlacement=-250 xPlacement=+20>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position (/\.two$/ <yPlacement=-220 xPlacement=+40>) @NarrowMedials @all_above_marks /KAF|GAF/;
     Position /\.two$/ @NarrowMedials (@all_above_marks <yPlacement=-50>) /KAF|GAF/;
-    Position (/\.two$/ <yPlacement=-250 xPlacement=+20>) @all_above_marks /KAF|GAF/;
+    Position (/\.two$/ <yPlacement=-220 xPlacement=+40>) @all_above_marks /KAF|GAF/;
 
-    Position (/\.one$/ <yPlacement=-140 xPlacement=+5>) @NarrowMedials @all_above_marks /KAF|GAF/;
+    Position (/\.one$/ <yPlacement=-120 xPlacement=+45>) @NarrowMedials @all_above_marks /KAF|GAF/;
     Position /\.one$/ @NarrowMedials (@all_above_marks <yPlacement=-40>) /KAF|GAF/;
-    Position (/\.one$/ <yPlacement=-140 xPlacement=+5>) @all_above_marks /KAF|GAF/;
+    Position (/\.one$/ <yPlacement=-120 xPlacement=+45>) @all_above_marks /KAF|GAF/;
 
     Position (toeda <yPlacement=-60>) /[KG]AF[mf]/;
-    Position /FE[mi]/ ([sda dda tda] <yPlacement=-40 xPlacement=+40>) /[KG]AF[mf]/;
+    Position /FE[mi]/ ([sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AF[mf]/;
 
     Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
-    Position ([sda dda tda] <yPlacement=-50>) @BEm [sda dda tda] /[KG]AF[mf]/;
+    Position ([sda dda tda] <yPlacement=-50 xPlacement=+70>) @BEm [sda dda tda] /[KG]AF[mf]/;
     Position TEm7 ([sda dda tda] <yPlacement=-100>) /JIMm/ /[KG]AF[mf]/; # مستحکم
     # Let's clear it
     Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m1[36]/;
-    Position ([sda dda tda] <yPlacement=-60>) [@BEm /FEm/]  /[KG]AF[mf]/;
-    Position ([sda dda tda] <yPlacement=-60>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
+    Position ([sda dda tda] <yPlacement=-70 xPlacement=+90>) [@BEm /FEm/]  /[KG]AF[mf]/;
+    Position ([sda dda tda] <yPlacement=-60  xPlacement=+90>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
     Position MADDA (/KAF|GAF/ <xAdvance=+0>) BARI_YEf1;
     Position MADDA (/KAF|GAF/ <xAdvance=+200>);
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
