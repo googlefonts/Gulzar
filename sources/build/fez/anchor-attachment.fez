@@ -180,7 +180,7 @@ Routine DropATinyBitMore {
 };
 
 Routine DropALotMore {
-  Position ([tdb ddb sdb] <yPlacement=-200>);
+  Position ([tdb ddb sdb] <yPlacement=-220>);
   Position ([tdb.one ddb.one sdb.one tdb.yb sdb.yb ddb.yb] <yPlacement=-200>);
   Position ([tdb.two sdb.two] <yPlacement=-270>);
 };
@@ -257,6 +257,7 @@ Routine AtHeight200sub {
     Chain (@long_re [BEi10 TEi10] @dots ^DoNothing); # تقریظیں
     Chain (@long_re [@BEi @JIMi] @dots ^DropOne); # متجرپھ / مرجسا / جھرپو
     Chain (@long_re @BEi @BEm @dots ^DropOne); # مرتبہ
+    Chain (@long_re /[KG]AFi/ @BEm @dots ^DropOne); # لتركية / مرگبا
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight400sub {
@@ -271,6 +272,8 @@ Routine AtHeight400sub {
 
     Chain (@dal_like [BEi9 TEi9] @dots ^DoNothing); # فدیم
     Chain (@vao_like [BEi9 TEi9] @dots ^DropTwo); # ویمو
+
+    Chain ([@dal_like @vao_like] /MIMi/ @DOTm @dots ^DropOne); # المستخدمين
 
     Chain ([@dal_like @vao_like] [BEisd1 TEisd1] @dots ^DoNothing); # ڈیبٹ # Handle in Pos instead
     Chain ([@dal_like @vao_like] [@BEi] @dots ^DropOne); # دںبل دببل دیبل دپبل دمبل یریں
@@ -315,6 +318,7 @@ Routine AtHeight200pos {
 
     Chain (@bigbowlfina [BEisd1 TEisd1] ^OpenMediumSpace [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina /HAYCi/ ^OpenTinySpace haydb); # س ہی
+    Chain (@bigbowlfina @BEi ^OpenSmallSpace sdb); # بخش‌بند
     Chain (@bigbowlfina [@BEi @JIMi /SINi/ /MIMi/] ^OpenTinySpace); # بین بو / نخستین خصو / عشق شکل / مطمئن می
 
     Chain ([@dal_like] [BEi5 TEi5] ^OpenSmallSpace [sdb ddb] ^TopRight); # ربھ / پربھا / ریھ / پریھا
@@ -346,6 +350,7 @@ Routine AtHeight200pos {
     Chain ([@vao_like @dal_like] SINisd24 ^OpenTinySpace); # مؤسسه
 
     Chain (@long_re [BEi3 TEi3 BEi15 TEi15 BEi5 TEi5 JIMi24] ^TightenSlightly @dots_one ^DropATinyBitMore); # متجرپھ / مرجسا
+    Chain (@long_re [BEisd1 TEisd1] ^OpenSmallSpace @dots_one @BEm @dots); # العَرَبِيّة
     Chain (@long_re [BEisd1 TEisd1] ^OpenSmallSpace @dots); # کنکشنز بنا
     Chain (@long_re JIMi7 ^OpenTinySpace); # خبر خجا
     Chain (@long_re [@BEi @JIMi] ^OpenTinySpace [ddb tdb]); # جھر پو
@@ -395,6 +400,8 @@ Routine AtHeight400pos {
     Chain (@long_re @BEi @DOTm @dots_one ^DropATinyBitMore); # جرںپل
     Chain (@long_re /SADi/ ^OpenTinySpace); # اصغر صقر
 
+    Chain ([@dal_like @vao_like] [TEisd1 BEisd1] ^OpenTinySpace @dots [BEm13 TEm13]); # دیتی
+
     Chain (@dal_like [BEi9 TEi9 JIMi9] ^OpenMediumSpace tdb); # رپم
     Chain (@dal_like [BEi9 TEi9 JIMi9] ^OpenTinySpace @dots); # فدیم
     Chain (@vao_like [BEi9 TEi9 JIMi9] ^OpenMediumSpace [ddb tdb]); # ہ پم
@@ -418,6 +425,7 @@ Routine AtHeight400pos {
     Chain (@vao_like        /FEi/ ^OpenTinySpace); # توقفگا
 
     Chain (@vao_like        /SADi/ ^OpenTinySpace); # و صحنه
+    Chain (@vao_like        /SINi/ ^OpenTinySpace); # لوسطى
     Chain (@kaf_like        /SADi/ ^OpenTinySpace); # یت صحنه
 
     Chain (@kaf_like        @DOTi ^OpenTinySpace tdb); # ک پہلو

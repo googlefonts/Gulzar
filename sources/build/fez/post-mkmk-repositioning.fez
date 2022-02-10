@@ -86,7 +86,7 @@ Feature kern {
   } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
 
   Routine Various2 {
-    Position ([sdb.one ddb.one tdb.one] <yPlacement=+100>) AINf1;
+    Position ([sdb.one ddb.one tdb.one] <yPlacement=+200>) AINf1;
 
     # GrossKasraAvoidanceThing
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-200> ) AINf1;
@@ -133,7 +133,9 @@ Feature kern {
     Position @alif_like ([TEi3 BEi3] <xAdvance=+110>) [dda tda];
     Position @alif_like ([TEi16 BEi16] <xAdvance=+90>) [dda tda];
     Position @alif_like ([TEi15 BEi15] <xAdvance=+20>) [dda tda];
-    Position @alif_like HAMZA_ABOVE ([TEisd1 BEisd1] <xAdvance=+20>);
+    Position @alif_like HAMZA_ABOVE ([TEisd1 BEisd1] <xAdvance=+25>);
+    Position @alif_like HAMZA_ABOVE (/SADi/ <xAdvance=+90>);
+    Position @alif_like HAMZA_ABOVE ([TEi3] <xAdvance=+80>) [dda tda];
     Position @vao_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+60>) [dda tda];
 
     # Clear Alif Nun KL
@@ -157,8 +159,8 @@ Feature kern {
     Position FEi15 [sda dda] QAFf1 ([sda dda tda] <xPlacement=-50>);
     Position TEm3 (tda <yPlacement=-120>) @alif_like MADDA;
 
-    Position /FEi/ [sda dda] [@finas @medis] ([HAMZA_ABOVE] <xPlacement=-50>);
-    Position /FEi/ [@finas @medis] ([HAMZA_ABOVE] <xPlacement=-50>);
+    Position /FEi/ [sda dda] [@finas @medis] ([dda HAMZA_ABOVE] <xPlacement=-50>);
+    Position /FEi/ [@finas @medis] ([dda HAMZA_ABOVE] <xPlacement=-50>);
 
     Position /JIMi/ [sda dda tda] REf1 ([sda toeda] <xPlacement=-70>);
     Position /JIMi/ REf1 ([sda toeda] <xPlacement=-70>);
@@ -182,7 +184,8 @@ Feature kern {
     Position /AIN[mi]/ sda @long_re ([sda toeda] <yPlacement=+75 xPlacement=-30>);
     Position /MIMi/ /JIMm/ (sda <xPlacement=-70 yPlacement=+70>);
     Position /AINm/ /SINm|[BT]Em/ ([sda dda tda] <yPlacement=+50 xPlacement=-30>);
-  } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA];
+    Position [@vao_like @dal_like] ALIFu1 (HAMZA_BELOW <yPlacement=-100>);
+  } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA HAMZA_BELOW];
 
   Routine DotsUnderGaf {
     Position (/\.two$/ <yPlacement=-220 xPlacement=+40>) @NarrowMedials @all_above_marks /KAF|GAF/;
@@ -206,6 +209,9 @@ Feature kern {
     Position ([sda dda tda] <yPlacement=-60  xPlacement=+90>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
     Position MADDA (/KAF|GAF/ <xAdvance=+0>) BARI_YEf1;
     Position MADDA (/KAF|GAF/ <xAdvance=+200>);
+
+    # Deeply unfortunate sequence
+    Position SINm9 (tda <yPlacement=-170 xPlacement=0>) MIMm3 /[KG]AF[mf]/;
 
     Position (HAMZA_ABOVE <yPlacement=+200>) /[KG]AFi2/;
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA|HAMZA_ABOVE/;
