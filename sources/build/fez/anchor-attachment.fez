@@ -260,6 +260,7 @@ Routine AtHeight200sub {
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight400sub {
+    Chain (@long_re [TEi15] @dots ^DropTwo); # طریق
     Chain ([@isols @finas] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
 
     Chain (@vao_like [BEi24 TEi24] @dots ^DropTwo); # ریس
@@ -276,12 +277,13 @@ Routine AtHeight400sub {
 
     Chain (@long_re [BEi4 TEi4] @dots ^DropOne); # طریقو
     Chain (@long_re [BEi5 TEi5] @dots ^DoNothing); # سرپھر
+    Chain (@long_re [BEi24 TEi24] @dots ^DoNothing); # محیطزیست
     Chain (@long_re @BEi @dots ^DropTwo); # مرببل
-    Chain (@long_re @BEi @DOTm tda ^DropOne); # مرںپل
 
     Chain (@kaf_like /MIMi/ @DOTm @dots ^DropOne); # ءمیں
 
     Chain (@alif_like [TEisd1 BEisd1 TEi16] @dots ^DropOne); # ایتی
+    Chain (@alif_like [BEi14 TEi14] @dots ^DropOne); # این
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight500sub {
@@ -297,15 +299,23 @@ Routine AtHeight500sub {
 Routine AtHeight0pos {
     Chain (@alif_like KAFi3 ^OpenSmallSpace); # اکا
     Chain (@alif_like /HAYCi/ ^TightenSlightly); # ا ہہ
-    Chain (@long_re [@BEi @JIMi] ^OpenSmallSpace @dots); # مر یہ / سر جہا / سر چہا
+    Chain (@dal_like @JIMi ^OpenTinySpace); # ر خطدا
+    Chain (@dal_like BEi8 ^OpenTinySpace); # رنگآ
+    Chain (@kaf_like @JIMi ^OpenTinySpace); # لعه خطآ
+    Chain (@kaf_like /AINi/ ^OpenTinySpace); # غشته غصه
+    Chain (@long_re @JIMi ^OpenSmallSpace); # خضر خط
+    Chain (@long_re @BEi ^OpenSmallSpace @dots); # مر یہ / سر جہا / سر چہا
     Chain ([@vao_like @dal_like @kaf_like] TEi10 @dots ^DropATinyBitMore); # وپط
-} IgnoreLigatures UseMarkFilteringSet [dda tda @dots @dots_one toeda];
+    Chain (@bigbowlfina @BEi ^OpenTinySpace); # ین یہ
+    Chain (@vao_like /TOEi|LAMi/ ^OpenTinySpace); # مؤظف
+} IgnoreLigatures UseMarkFilteringSet [@dots @dots_one toeda sda dda];
 
 Routine AtHeight200pos {
     Chain ([BARI_YEu1 BARI_YEf1] [@BEi @JIMi] ^OpenSmallSpace [tdb ddb]); # پنے چہر
 
     Chain (@bigbowlfina [BEisd1 TEisd1] ^OpenMediumSpace [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina /HAYCi/ ^OpenTinySpace haydb); # س ہی
+    Chain (@bigbowlfina [@BEi @JIMi /SINi/ /MIMi/] ^OpenTinySpace); # بین بو / نخستین خصو / عشق شکل / مطمئن می
 
     Chain ([@dal_like] [BEi5 TEi5] ^OpenSmallSpace [sdb ddb] ^TopRight); # ربھ / پربھا / ریھ / پریھا
 
@@ -321,41 +331,48 @@ Routine AtHeight200pos {
 
     Chain (@vao_like [BEi10 TEi10] ^OpenSmallSpace [@dots @dots_one]); # کچھ بصر
     Chain (@vao_like @BEi ^OpenTinySpace [@dots @dots_one]); # و پت
-
+    Chain (@vao_like HAMZA_ABOVE @BEi ^OpenTinySpace);
     # XXX Audited up to here
 
     Chain ([@dal_like @vao_like] [TEi6 BEi6] @dots ^DoNothingPos); # کر یہُو
 
     Chain ([@dal_like @vao_like] [@BEi @JIMi HAYCi2 HAYCi13] @dots ^DropATinyBitMore); # دپت دیت دبت دںت وپید
-
-    Chain (@alif_like @BEi ^OpenTinySpace); # جانب
-
-    Chain (@mim_like @BEi ^OpenSmallSpace @dots); # جم پت
-    Chain (@mim_like @DOTi ^OpenTinySpace); # جم ںت
-
-    Chain (@kaf_like [BEi1 TEi1] ^DoNothingPos); # یک پعا
-    Chain (@kaf_like @DOTi ^OpenSmallSpace @dots); # جب یہُو
-    Chain (@kaf_like @dots @DOTi ^OpenSmallSpace @dots); # اب چہر
-    Chain (@alif_like @JIMi ^OpenTinySpace @dots); # اجم
-
     Chain ([@dal_like @vao_like] HAYCi17 ^DoNothingPos); # دہر 
     Chain (@dal_like /HAYCi/ ^OpenSmallSpace @dots); # رہم
 
     Chain (@dal_like @JIMi @dots_one ^DropATinyBitMore); # دجم
     Chain (@vao_like @JIMi @dots_one ^DropATinyBitMore); # وجم
+    Chain ([@vao_like @dal_like] SINi13 ^OpenSmallSpace); # رسی
+    Chain ([@vao_like @dal_like] SINisd24 ^OpenTinySpace); # مؤسسه
 
     Chain (@long_re [BEi3 TEi3 BEi15 TEi15 BEi5 TEi5 JIMi24] ^TightenSlightly @dots_one ^DropATinyBitMore); # متجرپھ / مرجسا
     Chain (@long_re [BEisd1 TEisd1] ^OpenSmallSpace @dots); # کنکشنز بنا
+    Chain (@long_re JIMi7 ^OpenTinySpace); # خبر خجا
     Chain (@long_re [@BEi @JIMi] ^OpenTinySpace [ddb tdb]); # جھر پو
     Chain (@long_re [@BEi @JIMi] [@dots_one @dots_two] ^DropATinyBitMore); # ئبریٹ تقریظیں
     Chain (@long_re [@BEi @JIMi] ^OpenTinySpace @DOTm @dots_one ^DropATinyBitMore); # پھرتیر
     Chain (@long_re @JIMi @dots_one ^DropATinyBitMore); # جرجم
-    Chain ([@vao_like @dal_like] SINi13 ^OpenSmallSpace); # رسی
 
     Chain (@long_re [TEisd1 BEisd1] ^TightenSlightly @medis); # مرتبہ
     Chain (@long_re [BEi5 TEi5] ^OpenTinySpace [sdb.two ddb.two tdb.two] ^DropATinyBitMore); # متجرپھ
 
-} IgnoreLigatures UseMarkFilteringSet [@dots @dots_one sdb.two ddb.two tdb.two];
+
+    Chain (@mim_like @BEi ^OpenTinySpace [tdb ddb]); # جم پت
+    Chain (@mim_like /AINi/ ^OpenTinySpace); # ضخیم عو
+    Chain (@mim_like /SADi/ ^OpenTinySpace); # عظیم ضعف
+
+    Chain (@kaf_like [BEi1 TEi1] ^DoNothingPos); # یک پعا
+    Chain (@kaf_like /TOEi/ ^Tighten); # صفحه طر
+    Chain (@kaf_like @DOTi ^OpenSmallSpace @dots); # جب یہُو
+    Chain (@kaf_like /SINi|SADi/ ^OpenTinySpace); # سه سیا / نهضت ضجه
+    Chain (@kaf_like @dots @DOTi ^OpenSmallSpace @dots); # اب چہر
+
+    Chain (@alif_like [BEi13 TEi13] ^DoNothingPos); # بجایی
+    Chain (@alif_like TEi7 ^OpenTinySpace @dots); # ایجا
+    Chain (@alif_like @BEi ^OpenTinySpace tdb); # اپھ
+
+
+} IgnoreLigatures UseMarkFilteringSet [@dots @dots_one sdb.two ddb.two tdb.two HAMZA_ABOVE];
 
 Routine AtHeight400pos {
     Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenMediumSpace [ddb tdb]); # ےپیل
@@ -376,6 +393,7 @@ Routine AtHeight400pos {
     Chain (@long_re @BEi ^OpenTinySpace @DOTm @dots ); # مرںپل
     Chain (@long_re [BEisd1 TEisd1] ^OpenTinySpace @dots); # بغیر پیغا
     Chain (@long_re @BEi @DOTm @dots_one ^DropATinyBitMore); # جرںپل
+    Chain (@long_re /SADi/ ^OpenTinySpace); # اصغر صقر
 
     Chain (@dal_like [BEi9 TEi9 JIMi9] ^OpenMediumSpace tdb); # رپم
     Chain (@dal_like [BEi9 TEi9 JIMi9] ^OpenTinySpace @dots); # فدیم
@@ -386,21 +404,34 @@ Routine AtHeight400pos {
     Chain ([@dal_like @vao_like] [BEi5 TEi5] ^OpenTinySpace @dots ^TopRight); # ریھر رپھر
 
     Chain ([@dal_like @vao_like] [BEi3 TEi3] ^OpenTinySpace @dots_one ^DropATinyBitMore @BEm @dots); # ریین
+    Chain (REf1 [BEisd1 TEisd1] ^OpenTinySpace @dots ^Raise); # فرینی 
     Chain ([@dal_like @vao_like] [BEisd1 TEisd1] @dots ^DropALotMore @DOTm [@dots @dots_one] ^DropALotMore); # ڈیبٹ
-    Chain ([@dal_like @vao_like] [BEisd1 TEisd1] @dots ^DropALotMore); # ڈیبٹ
+    Chain ([@dal_like @vao_like] [BEisd1 TEisd1] @dots ^DropALotMore);
 
     Chain ([@dal_like @vao_like] [@BEi @JIMi] @dots_one ^DropATinyBitMore); # وچھیا / دیتی
-    Chain ([@dal_like @vao_like] @JIMi ^OpenMediumSpace tdb); # و چھیا
+    Chain ([@dal_like @vao_like] @JIMi ^OpenTinySpace tdb); # و چھیا
     Chain ([@dal_like @vao_like] @JIMi ^OpenSmallSpace @dots); # و جھیا
     Chain ([@dal_like @vao_like] @BEi ^OpenSmallSpace @DOTm  @dots); # اور نیو
 
     Chain ([@dal_like @vao_like] ^ClearUpperDots /HAYCi/ ^OpenTinySpace @dots); # وہبل
 
+    Chain (@vao_like        /FEi/ ^OpenTinySpace); # توقفگا
+
+    Chain (@vao_like        /SADi/ ^OpenTinySpace); # و صحنه
+    Chain (@kaf_like        /SADi/ ^OpenTinySpace); # یت صحنه
+
     Chain (@kaf_like        @DOTi ^OpenTinySpace tdb); # ک پہلو
     Chain (@kaf_like @dots  @DOTi ^OpenTinySpace tdb); # پ پہلو
+    Chain (@kaf_like        /SADi/ ^OpenTinySpace); # یت صحنه
+    Chain (@kaf_like @dots  /SADi/ ^OpenTinySpace); # یت صحنه
+    Chain (@kaf_like        JIMi9 ^OpenTinySpace); # لیت جمعآ
+    Chain (@kaf_like @dots  JIMi9 ^OpenTinySpace); # لیت جمعآ
 
     Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
 
+    Chain (@bigbowlfina @BEi ^OpenTinySpace); # ی بز
+    Chain (@bigbowlfina /FEi/ ^OpenTinySpace); # ی قطع
+    Chain (HAMZAu1 @BEi ^OpenTinySpace); # ءنیت
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one @dots_two];
 
 Routine AtHeight500pos {
@@ -409,6 +440,7 @@ Routine AtHeight500pos {
     Chain (@dal_like [BEi7 TEi7] ^DoNothingPos); # ندبجن
     Chain (@dal_like [BEi14 TEi14] @dots_one ^DropATinyBitMore); # یریں
     Chain (@vao_like [BEi7 TEi7] ^OpenBigSpace @dots); # ویجیٹ
+    Chain (@vao_like /FEi/ ^OpenTinySpace); # موفقیتآ
     Chain ([@dal_like @vao_like] [BEi7 TEi7] @dots_two ^DropATinyBitMore); # ویجیٹ
 
     Chain ([@dal_like @vao_like] /[KG]AFi/ ^OpenSmallSpace @BEm @dots); # پرکیلنڈ
@@ -421,16 +453,22 @@ Routine AtHeight500pos {
     Chain (@dal_like @JIMi ^OpenTinySpace); # رچینی
     Chain (@vao_like @JIMi ^OpenSmallSpace); # وجس
     Chain ([@dal_like @vao_like] /HAYCi/ ^OpenSmallSpace); # وجس
+    Chain (@vao_like /SADi/ ^OpenTinySpace); # وضعیت
 
     Chain (@alif_like [BEi6 TEi6] ^OpenSmallSpace); # اپر
     Chain (@alif_like [BEi16 TEi16] ^DoNothingPos); # اپر
     Chain (@alif_like @BEi ^OpenTinySpace @dots); # ابلین
+    Chain (@alif_like /TOEi/ ^OpenTinySpace); # اطمینا
 
     Chain (@long_re [BEi16 TEi16] ^Tighten @dots_two); # تحریر
     Chain (@long_re @DOTi ^OpenSmallSpace); # تقریظیں
     Chain (@long_re ^ClearUpperDots [BEi5 TEi5] @dots ^TopRight); # سرپھر
 
     Chain (@mim_like @DOTi ^OpenTinySpace tdb); #قلم پر
+    Chain (@mim_like /SADi/ ^OpenTinySpace); # تصمیم صنعت
+
+    Chain (@kaf_like [BEi1 TEi1] ^OpenTinySpace); # ثبت بعثت
+    Chain (@kaf_like /MIMi/ ^OpenTinySpace); # موظف منظقه
     Chain (@kaf_like @DOTi ^OpenTinySpace tdb); # قہ پھیلا
     Chain (@kaf_like ^DoNothingPos); # ف تہجی
     Chain (@bigbowlfina @DOTi ^OpenSmallSpace @dots); # دی برم
@@ -451,7 +489,7 @@ Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^OpenSmallSpace);
     Chain (@alif_like MADDA [BEi3 TEi3] ^OpenMediumSpace); # آنکھو
     Chain (@alif_like @DOTi ^OpenMediumSpace [ddb tdb]); # اچھّی
-    Chain (@alif_like @DOTi ^OpenSpace sdb); # ابھّی
+    Chain (@alif_like [BEi5 TEi5] ^OpenSpace @dots); # ابھّی
     Chain TEi15 ([@dal_like @vao_like] TEisd1 ^OpenTinySpace); # توثیق
     Chain ([@dal_like @vao_like] JIMi5 ^OpenSpace @dots); # پوچھیں
     Chain (@dal_like [BEi7 TEi7] ^OpenSmallSpace @dots); # ندبجن
@@ -461,18 +499,20 @@ Routine AtHeight600pos {
     Chain ([@dal_like @vao_like] [BEi6 TEi6] ^OpenMediumSpace @dots); # رچینی
     Chain ([@dal_like @vao_like] @DOTi ^OpenSmallSpace @dots); # کو پہنچ
     Chain ([@dal_like @vao_like] @DOTi ^OpenTinySpace @dots_one ^DropATinyBitMore); # دیتی
-    Chain (@long_re @DOTi ^OpenMediumSpace @dots); # میر پشیمل
+    Chain (@long_re @DOTi ^OpenMediumSpace tdb); # میر پشیمل
 
     Chain (@kaf_like @inits ^OpenTinySpace tdb); # ک چھو
     Chain (@kaf_like @inits ^OpenTinySpace @DOTm @dots); # یت میں
+    Chain (@kaf_like /SINi/ ^OpenTinySpace); # طت سطح
     Chain (@kaf_like ^DoNothingPos); # ف تہجی
     Chain (@bigbowlfina @DOTi ^OpenSmallSpace @dots); # تی ہین
+    Chain (@bigbowlfina /SADi/ ^OpenTinySpace); # ن صبح
+
+    Chain /TOE|LAM/ ([JIMf1 CH_YEf1] @JIMi ^OpenSmallSpace); # سطح خطخطی
 
     Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpace @dots); # اچھّی
-    Chain ([@isols @finas] @DOTi ^OpenBigSpace @dots); # اچھّی
-    Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenSpace @DOTm @dots); # جومُجھ
-    Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpace @DOTm @dots ); # جومُجھ
-    Chain ([@isols @finas] @dots @DOTi ^OpenSpace ); # اچھّی
+    Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenTinySpace @DOTm @dots); # جومُجھ
+    Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenTinySpace @DOTm @dots ); # جومُجھ
     Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
 } IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one toeda HAMZA_ABOVE MADDA];
 
@@ -541,7 +581,6 @@ Feature rlig {
   # And another round of making sure that ڑ doesn't bang into what
   # follows.
   Routine OtherFixes2 {
-    Chain ([REf2 REf1] ^ClearUpperDots);
     Chain (@alif_like BEi13 ^OpenMediumSpace /.yb$/); # یابی
   };
 };

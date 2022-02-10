@@ -116,15 +116,6 @@ Feature kern {
     # Just fiddling now
     Position  [parenright.latin parenright.urdu] (/[BT]Ei/ <xAdvance=+120>) [dda ddb tdb];
 
-    # چنا 
-    Position JIMi1 @nuktas /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
-    Position JIMi1 /BEm3|TEm3/ ([sda dda tda] <yPlacement=+100>);
-
-    #  پڑتا
-    #Position REf1 toeda ([@inits @isols] <xAdvance=+200>);
-    #Position REf1 sda ([@inits @isols] <xAdvance=+75>);
-
-    Position [@dal_like @vao_like] [toeda sda dda tda HAMZA_ABOVE] ([@dal_like @vao_like @BEi] <xAdvance=+100> [sda dda tda HAMZA_ABOVE toeda]);
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
     Position @alif_like (/[BT]Ei/ <xAdvance=+75>) HAMZA_ABOVE;
@@ -132,7 +123,6 @@ Feature kern {
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
 
     # چنا
-    Position JIMi2 [tdb sdb sda] [BEm3 TEm3] ([sda dda tda] <yPlacement=+100>);
     Position TEi3 ([dda tda] <xPlacement=+50>) ALIFf1;
 
     Position (BEi13 <xAdvance=+70>) [ddb.yb tdb.yb];
@@ -140,12 +130,15 @@ Feature kern {
   };
   Routine ShortBes {
     # Short BE/TEs
-    Position @alif_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+130>) [dda tda];
+    Position @alif_like ([TEi3 BEi3] <xAdvance=+110>) [dda tda];
+    Position @alif_like ([TEi16 BEi16] <xAdvance=+90>) [dda tda];
+    Position @alif_like ([TEi15 BEi15] <xAdvance=+20>) [dda tda];
+    Position @alif_like HAMZA_ABOVE ([TEisd1 BEisd1] <xAdvance=+20>);
     Position @vao_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+60>) [dda tda];
 
     # Clear Alif Nun KL
     Position /ALIF[uf]1/ ([BEi8 TEi8] <xAdvance=+100>) /sda|dda/;
-  } IgnoreLigatures UseMarkFilteringSet [sda dda tda];
+  } IgnoreLigatures UseMarkFilteringSet [sda dda tda HAMZA_ABOVE];
 
   Routine ClashesToRight {
     Position LAMi4 /FEm/ (dda <xPlacement=-30>);
@@ -156,18 +149,39 @@ Feature kern {
     Position /KAFi/ TEm3 (tda <yPlacement=+250>) @alif_like;
     Position KAFi2 TEm3 (tda <xPlacement=-50>);
     Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-20>) [@alif_like LAMf1];
-    Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-50>);
+    Position FEi2 [sda dda] /TEm/ ([sda dda tda HAMZA_ABOVE] <xPlacement=-70>);
+
+    Position FEi7 [sda dda] /JIMm/ ([sda dda tda] <xPlacement=-100>);
+    Position FEi7 /JIMm/ ([sda dda tda] <xPlacement=-100>);
+
     Position FEi15 [sda dda] QAFf1 ([sda dda tda] <xPlacement=-50>);
     Position TEm3 (tda <yPlacement=-120>) @alif_like MADDA;
+
+    Position /FEi/ [sda dda] [@finas @medis] ([HAMZA_ABOVE] <xPlacement=-50>);
+    Position /FEi/ [@finas @medis] ([HAMZA_ABOVE] <xPlacement=-50>);
+
+    Position /JIMi/ [sda dda tda] REf1 ([sda toeda] <xPlacement=-70>);
+    Position /JIMi/ REf1 ([sda toeda] <xPlacement=-70>);
+
     Position /JIMi/ [sda dda tda] /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
     Position /JIMi/ /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
+
+    Position /JIMi/ [sda dda tda] /JIMm/ (sda <xPlacement=-20 yPlacement=+30>);
+    Position /JIMi/ /JIMm/ (sda <xPlacement=-20 yPlacement=+30>);
+
+    Position /AIN[mi]/ /JIMm/ ([sda] <yPlacement=+175 xPlacement=-30>);
+    Position /AIN[mi]/ sda /JIMm/ ([sda] <yPlacement=+175 xPlacement=-90>);
+
     # فت
     Position @alif_like ([BEisd1 TEisd1] <xAdvance=+50>) HAMZA_ABOVE;
     Position @alif_like ([BEisd1 TEisd1] <xAdvance=+50>) HAMZA_ABOVE;
 
     Position @long_re [sda] (/[BT]Ei|JIMi/ <xAdvance=+50>) [sda tda dda] ;
     Position /JIM[mi]/ REf1 ([sda toeda] <yPlacement=+75>);
-    Position /MIMi/ /JIMm/ (sda <xPlacement=-20 yPlacement=+20>);
+    Position /AIN[mi]/ @long_re ([sda toeda] <yPlacement=+75 xPlacement=-30>);
+    Position /AIN[mi]/ sda @long_re ([sda toeda] <yPlacement=+75 xPlacement=-30>);
+    Position /MIMi/ /JIMm/ (sda <xPlacement=-70 yPlacement=+70>);
+    Position /AINm/ /SINm|[BT]Em/ ([sda dda tda] <yPlacement=+50 xPlacement=-30>);
   } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA];
 
   Routine DotsUnderGaf {
@@ -180,6 +194,7 @@ Feature kern {
     Position (/\.one$/ <yPlacement=-120 xPlacement=+45>) @all_above_marks /KAF|GAF/;
 
     Position (toeda <yPlacement=-60>) /[KG]AF[mf]/;
+    Position @alif_like (/FE[mi]/ <xAdvance=+70> [sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AF[mf]/;
     Position /FE[mi]/ ([sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AF[mf]/;
 
     Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
@@ -191,7 +206,9 @@ Feature kern {
     Position ([sda dda tda] <yPlacement=-60  xPlacement=+90>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
     Position MADDA (/KAF|GAF/ <xAdvance=+0>) BARI_YEf1;
     Position MADDA (/KAF|GAF/ <xAdvance=+200>);
-    } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA/;
+
+    Position (HAMZA_ABOVE <yPlacement=+200>) /[KG]AFi2/;
+    } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA|HAMZA_ABOVE/;
 
   DefineClass @TallAndStraight = /LAM[im]|[KG]AF[im]|JIM[im]/;
   DefineClass @LowNotTeh = /^(?!TE|LAM|[KG]AF|ALIF)\w+[mf]\d+/;
@@ -213,6 +230,8 @@ Feature kern {
   Routine MoreKerningFixes {
     Position REf2 (TEi12 <xAdvance=+100>); # Particular nasty case: 
     Position /ALIF/ (MIMi7 <xAdvance=+150>);
+    Position @long_re sda (ALIFu1 <xAdvance=+100>); # غز آ
+    Position @long_re (ALIFu1 <xAdvance=+100>);
   } IgnoreLigatures UseMarkFilteringSet /\.yb/;
 
   Routine Various3 {

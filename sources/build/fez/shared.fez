@@ -24,9 +24,9 @@ DefineClass @DOTm = /[BT]Em|JIMm|HAYCm/;
 # Exposes a pointy left corner pointing down
 DefineClass @dal_like = [REu1 DALf1 REf1];
 # Exposes a "blocky" left corner
-DefineClass @vao_like = [VAOf1 VAOu1 HAYCu1 HAYAf1 DALu1 BARI_YEf1 BARI_YEu1];
+DefineClass @vao_like = [VAOf1 VAOu1 HAYCu1 HAYAf1 DALu1 BARI_YEf1 BARI_YEu1 HAMZAu1];
 # Exposes a pointy left corner rising up
-DefineClass @kaf_like = /(KAF|GAF)[uf]|BEu|BEf|TEu|TEf|FEu|HAYCf|HAMZAu1/;
+DefineClass @kaf_like = /(KAF|GAF)[uf]|BEu|BEf|TEu|TEf|FEu|FEf|HAYCf/;
 DefineClass @mim_like = /MIM[uf]/;
 # Exposes a pointy left corner rising up a long way
 DefineClass @alif_like = /ALIF[fu]|TOE[fu]/;

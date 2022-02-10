@@ -1,10 +1,11 @@
 {
-.appVersion = "1352";
+.appVersion = "3109";
 DisplayStrings = (
 "/sda.one/sda.two/sdb/sdb.one/sdb.two/sdb.yb/sdi",
 "/SINi18",
 "/sda/sda.one/sda.two/sdb/sdb.one/sdb.two/sdb.yb/sdi",
-"/KAFm17/KAFmsd15/GAFmsd15"
+"/KAFm17/KAFmsd15/GAFmsd15",
+"/BEm8"
 );
 classes = (
 {
@@ -24149,10 +24150,12 @@ name = BEm3;
 transform = "{1, 0, 0, 1, 348, 117}";
 },
 {
+alignment = -1;
 name = HAYCf1;
 transform = "{1, 0, 0, 1, 50, -18}";
 },
 {
+alignment = -1;
 name = SINi16;
 transform = "{1, 0, 0, 1, 490, 211}";
 }
@@ -35615,7 +35618,7 @@ position = "{47, 0}";
 },
 {
 name = top;
-position = "{150, 274}";
+position = "{170, 229}";
 }
 );
 background = {
@@ -40692,7 +40695,7 @@ position = "{402, 267}";
 },
 {
 name = top;
-position = "{399, 287}";
+position = "{399, 257}";
 }
 );
 hints = (
@@ -42798,7 +42801,7 @@ position = "{47, 0}";
 },
 {
 name = top;
-position = "{105, 322}";
+position = "{165, 342}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -56987,7 +56990,7 @@ position = "{22, 0}";
 },
 {
 name = top;
-position = "{108, 299}";
+position = "{108, 339}";
 }
 );
 guideLines = (
@@ -57584,7 +57587,7 @@ position = "{47, 0}";
 },
 {
 name = top;
-position = "{188, 283}";
+position = "{188, 263}";
 }
 );
 hints = (
@@ -85150,7 +85153,7 @@ position = "{0, 0}";
 },
 {
 name = top;
-position = "{268, 557}";
+position = "{288, 557}";
 }
 );
 background = {
@@ -97531,7 +97534,7 @@ HAYCm = "3";
 Hei = "3";
 JIMi = "3";
 JIMm = "3";
-KAFi = sd8;
+KAFi = sd15;
 KAFm = sd15;
 LAMi = "3";
 LAMm = "3";
