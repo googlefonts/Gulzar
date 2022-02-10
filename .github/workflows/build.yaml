@@ -31,8 +31,8 @@ jobs:
     - name: Build font
       run: |
         make
-    - name: Build specimen
-      run: make specimen
+    - name: Build specimen & proof
+      run: make specimen proof
     - name: Rename font
       run: mv fonts/ttf/Gulzar-Regular.ttf .
     - name: Archive artifacts
@@ -42,3 +42,4 @@ jobs:
         path: |
           Gulzar-Regular.ttf
           specimen/specimen.pdf
+          qa/proof.pdf

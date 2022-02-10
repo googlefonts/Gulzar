@@ -49,11 +49,8 @@ test: $(FINAL_FONT)
 test-shaping: $(FINAL_FONT)
 	. venv/bin/activate; fontbakery check-profile --html report.html --config fontbakery.yml --ghmarkdown report.md fontbakery.profiles.shaping $(FINAL_FONT)
 
-testproof: $(FINAL_FONT) regressions.txt
-	gnipahs $(FINAL_FONT) regressions.txt
-
-proof: $(FINAL_FONT) qa/urdu-john.sil
-	sile qa/urdu-john.sil
+proof: $(FINAL_FONT) qa/proof.sil
+	sile qa/proof.sil
 
 specimen/specimen.pdf: $(FINAL_FONT) specimen/specimen.sil
 	cd specimen ; sile specimen.sil
