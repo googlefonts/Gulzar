@@ -236,8 +236,6 @@ Feature kern {
   Routine MoreKerningFixes {
     Position REf2 (TEi12 <xAdvance=+100>); # Particular nasty case: 
     Position /ALIF/ (MIMi7 <xAdvance=+150>);
-    Position @long_re sda (ALIFu1 <xAdvance=+100>); # غز آ
-    Position @long_re (ALIFu1 <xAdvance=+100>);
   } IgnoreLigatures UseMarkFilteringSet /\.yb/;
 
   Routine Various3 {
