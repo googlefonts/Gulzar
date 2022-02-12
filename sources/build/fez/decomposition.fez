@@ -13,6 +13,7 @@ Feature ccmp {
     Substitute BEu1 -> BEu1 sdb;
     Substitute lamTahabove-ar -> LAMu1 toeda;
     Substitute teh-ar -> TEu1 dda;
+    Substitute heh-ar -> HAYCu1;
     Substitute theh-ar -> TEu1 tda;
     Substitute dad-ar -> SADu1 sda;
     Substitute thal-ar -> DALu1 sda;
