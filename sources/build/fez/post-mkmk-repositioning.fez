@@ -185,6 +185,15 @@ Feature kern {
     Position /MIMi/ /JIMm/ (sda <xPlacement=-70 yPlacement=+70>);
     Position /AINm/ /SINm|[BT]Em/ ([sda dda tda] <yPlacement=+50 xPlacement=-30>);
     Position [@vao_like @dal_like] ALIFu1 (HAMZA_BELOW <yPlacement=-100>);
+
+    # طنز
+    Position BEm16 @long_re ([sda toeda] <xPlacement=-200>);
+    Position BEm16 [sda] @long_re ([sda toeda] <xPlacement=-200>);
+    Position TEm16 [dda tda] @long_re ([sda toeda] <xPlacement=-200>);
+
+    # ربطة
+    Position /(TOE|LAM)[mi]/ HAYCf1 (dda <xPlacement=-50>);
+
   } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA HAMZA_BELOW];
 
   Routine DotsUnderGaf {
