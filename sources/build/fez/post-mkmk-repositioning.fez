@@ -162,11 +162,11 @@ Feature kern {
     Position /FEi/ [sda dda] [@finas @medis] ([dda HAMZA_ABOVE] <xPlacement=-50>);
     Position /FEi/ [@finas @medis] ([dda HAMZA_ABOVE] <xPlacement=-50>);
 
-    Position /JIMi/ [sda dda tda] REf1 ([sda toeda] <xPlacement=-70>);
-    Position /JIMi/ REf1 ([sda toeda] <xPlacement=-70>);
+    Position /JIMi/ [sda dda tda] REf1 ([sda toeda] <xPlacement=-120>);
+    Position /JIMi/ REf1 ([sda toeda] <xPlacement=-120>);
 
-    Position /JIMi/ [sda dda tda] /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
-    Position /JIMi/ /TEm/ (dda <xPlacement=-10 yPlacement=+10>);
+    Position /JIMi/ [sda dda tda] /[TB]Em|HAYCf/ ([sda dda] <xPlacement=-80 yPlacement=+0>);
+    Position /JIMi/ /[TB]Em|HAYCf/ ([sda dda tda] <xPlacement=-80>);
 
     Position /JIMi/ [sda dda tda] /JIMm/ (sda <xPlacement=-20 yPlacement=+30>);
     Position /JIMi/ /JIMm/ (sda <xPlacement=-20 yPlacement=+30>);

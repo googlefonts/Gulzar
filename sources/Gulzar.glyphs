@@ -40108,7 +40108,7 @@ position = "{356, 0}";
 },
 {
 name = top;
-position = "{327, 30}";
+position = "{197, 60}";
 }
 );
 guideLines = (
@@ -74246,7 +74246,7 @@ position = "{356, 0}";
 },
 {
 name = top;
-position = "{237, 40}";
+position = "{197, 60}";
 }
 );
 components = (
