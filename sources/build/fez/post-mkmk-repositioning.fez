@@ -194,6 +194,9 @@ Feature kern {
     # ربطة
     Position /(TOE|LAM)[mi]/ HAYCf1 (dda <xPlacement=-50>);
 
+    # زش
+    Position REu1 ([sda toeda] <xPlacement=+75>) /SIN[ui]/ [sda dda tda];
+
   } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA HAMZA_BELOW];
 
   Routine DotsUnderGaf {
@@ -220,7 +223,7 @@ Feature kern {
     Position MADDA (/KAF|GAF/ <xAdvance=+200>);
 
     # Deeply unfortunate sequence
-    Position SINm9 (tda <yPlacement=-170 xPlacement=0>) MIMm3 /[KG]AF[mf]/;
+    Position SINm9 (tda <yPlacement=-150 xPlacement=0>) MIMm3 /[KG]AF[mf]/;
 
     Position (HAMZA_ABOVE <yPlacement=+200>) /[KG]AFi2/;
     } UseMarkFilteringSet /toeda|tda|DAMMA|sda|dda|MADDA|HAMZA_ABOVE/;

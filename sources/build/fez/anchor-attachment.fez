@@ -505,8 +505,8 @@ DefineClass @narrow_inits = @inits & (width < 300);
 Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^OpenSmallSpace);
     Chain (@alif_like MADDA [BEi3 TEi3] ^OpenMediumSpace); # آنکھو
+    Chain (@alif_like [BEi5 TEi5] ^OpenTinySpace @dots  ^BottomLeft); # ابھی
     Chain (@alif_like @DOTi ^OpenMediumSpace [ddb tdb]); # اچھّی
-    Chain (@alif_like [BEi5 TEi5] ^OpenSpace @dots); # ابھّی
     Chain TEi15 ([@dal_like @vao_like] TEisd1 ^OpenTinySpace); # توثیق
     Chain ([@dal_like @vao_like] JIMi5 ^OpenSpace @dots); # پوچھیں
     Chain (@dal_like [BEi7 TEi7] ^OpenSmallSpace @dots); # ندبجن
