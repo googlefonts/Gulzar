@@ -63,7 +63,7 @@
     },
     {
       "input": "فدیم",
-      "expectation": "MIMf1=3+344|ddb=2@40,92+0|TEi9=2@0,432+212|DALf1=1+449|sda=0@-87,605+0|FEi3=0@-47,135+224"
+      "expectation": "MIMf1=3+344|ddb.two=2@40,-328+0|TEi9=2@0,432+37|DALf1=1+449|sda=0@-27,625+0|FEi3=0@-47,135+224"
     },
     {
       "input": "ویمو",
@@ -71,11 +71,11 @@
     },
     {
       "input": "دببل",
-      "expectation": "LAMf1=3+813|sdb.one=2@-17,-489+0|BEm3=2@-47,331+142|sdb=1@-28,-265+0|BEisd1=1@-48,425+75|DALu1=0+373"
+      "expectation": "LAMf1=3+813|sdb.one=2@-17,-489+0|BEm3=2@-47,331+142|sdb=1@-28,-285+0|BEisd1=1@-48,425+75|DALu1=0+373"
     },
     {
       "input": "وببل",
-      "expectation": "LAMf1=3+813|sdb.one=2@-17,-489+0|BEm3=2@-47,331+142|sdb=1@-28,-265+0|BEisd1=1@-48,425+55|VAOu1=0+368"
+      "expectation": "LAMf1=3+813|sdb.one=2@-17,-489+0|BEm3=2@-47,331+142|sdb=1@-28,-285+0|BEisd1=1@-48,425+55|VAOu1=0+368"
     },
     {
       "input": "طریقو",
@@ -184,7 +184,7 @@
     },
     {
       "input": "ر پم",
-      "expectation": "MIMf1=3+344|tdb=2@40,-28+0|TEi9=2@0,432+212|space.urdu=1+200|REu1=0+406"
+      "expectation": "MIMf1=3+344|tdb=2@40,-28+0|TEi9=2@0,432+442|space.urdu=1+200|REu1=0+406"
     },
     {
       "input": "ر پو",

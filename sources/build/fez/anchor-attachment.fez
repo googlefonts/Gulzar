@@ -267,8 +267,12 @@ Routine AtHeight400sub {
     Chain (@vao_like [BEi24 TEi24] @dots ^DropTwo); # ریس
     Chain (@dal_like [BEi24 TEi24] @dots ^DropTwo); # ریس
 
+    Chain (@dal_like @DOTi @DOTm @dots ^DropOne); # الرئیسة
+
     Chain (@vao_like [BEi5 TEi5] @dots ^DropTwo); # وپھر
     Chain (@dal_like [BEi5 TEi5] @dots ^DoNothing); # رپھر
+
+    Chain ([@dal_like @vao_like @alif_like] [BEi9 TEi9] @dots ^DropTwo MIMf1); #  ملایم قدیم 
 
     Chain (@dal_like [BEi9 TEi9] @dots ^DoNothing); # فدیم
     Chain (@vao_like [BEi9 TEi9] @dots ^DropTwo); # ویمو
@@ -384,6 +388,9 @@ Routine AtHeight400pos {
     Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpace); # ےپیل
     Chain ([TOEf1 TOEu1] [BEisd1 TEisd1] ^OpenTinySpace); # ط پیٹرن
 
+    Chain (@dal_like [BEi9 TEi9] ^TightenSlightly @dots_two MIMf1); #  فدیم
+    Chain ([@vao_like @alif_like] [BEi9 TEi9] ^DoNothingPos @dots_two MIMf1); #  ملایم قدیم 
+
     Chain (@alif_like [BEisd1 TEisd1] ^TightenSlightly sdb); # اببل
     Chain (@alif_like [@BEi @JIMi] @dots_one ^DropATinyBitMore); # نلایتی
     Chain (@alif_like /HAYCi/ ^DoNothingPos); # اہبل
@@ -399,6 +406,8 @@ Routine AtHeight400pos {
     Chain (@long_re [BEisd1 TEisd1] ^OpenTinySpace @dots); # بغیر پیغا
     Chain (@long_re @BEi @DOTm @dots_one ^DropATinyBitMore); # جرںپل
     Chain (@long_re /SADi/ ^OpenTinySpace); # اصغر صقر
+
+    Chain (@dal_like @DOTi ^TightenSlightly @DOTm @dots_one); # الرئیسة
 
     Chain ([@dal_like @vao_like] [TEisd1 BEisd1] ^OpenTinySpace @dots [BEm13 TEm13]); # دیتی
 
