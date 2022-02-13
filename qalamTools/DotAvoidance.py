@@ -77,7 +77,7 @@ class DetectAndSwap(FEZVerb):
 
 
         self.shelve = shelve.open("collisioncache.db")
-        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.24)
+        self.c = Collidoscope("Gulzar", { "marks": True, "bases": False, "faraway": True}, ttFont=self.parser.font, scale_factor = 1.22)
         self.contexts = self.get_contexts()
         seq = self.generate_glyph_sequence(max_sequence_length)
         drop_one = fontFeatures.Routine(
