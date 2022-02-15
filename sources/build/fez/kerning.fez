@@ -54,5 +54,6 @@ Feature kern {
 		Position @vao_like (space.urdu <xAdvance=50>) /AINi/;
 		Position /NUN[uf]/ (space.urdu <xAdvance=100>) /HAYCi/;
 		Position [REf2 REf3] (ALIFu1 <xAdvance=200>) [BEi11 TEi11];
+		Position [REf2 REf3] (SADu1 <xAdvance=200>); # عرض
 	} UseMarkFilteringSet /[sdt]db/;
 };

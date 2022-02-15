@@ -185,6 +185,10 @@ Routine DropALotMore {
   Position ([tdb.two sdb.two] <yPlacement=-270>);
 };
 
+Routine OpenTinyIfUpperDots {
+  Chain (@DOTi ^OpenTinySpace [sda dda tda]);
+} UseMarkFilteringSet [sda dda tda];
+
 # Finally, we have to handle the fact that the right-hand glyph itself
 # might have a mark *above* it! We tuck the ر underneath the BE in رپر
 # and it looks lovely, but then along comes ڑپر. When we are evaluating
@@ -200,6 +204,9 @@ Routine ClearUpperDots {
   Chain (REf1 [tda sda toeda HAMZA_ABOVE] @inits ^OpenTinySpace);
   Chain (@long_re [tda sda toeda HAMZA_ABOVE] @inits ^OpenTinySpace);
   Chain ([@isols @finas] [tda sda toeda HAMZA_ABOVE] @inits ^OpenSmallSpace);
+  # Sneaking in another rule here to handle overhanging marks
+  Chain ([@isols @finas] [BEi8 TEi8] ^OpenSmallSpace [tda]);
+  Chain ([@isols @finas] [BEi8 TEi8] ^OpenTinySpace [dda HAMZA_ABOVE]);
 } IgnoreLigatures;
 
 # This just saves a lot of typing... But be careful to remember that
@@ -305,14 +312,15 @@ Routine AtHeight500sub {
 # final and initial.
 Routine AtHeight0pos {
     Chain (@alif_like KAFi3 ^OpenSmallSpace); # اکا
-    Chain (@alif_like /HAYCi/ ^TightenSlightly); # ا ہہ
+    Chain (@alif_like ^ClearUpperDots [BEi8 TEi8]); # ئکا ایکا اپکا انکا اتکا اثکا
     Chain (@dal_like @JIMi ^OpenTinySpace); # ر خطدا
-    Chain (@dal_like BEi8 ^OpenTinySpace); # رنگآ
+    Chain (@dal_like [BEi8 TEi8] ^OpenTinySpace); # رنگآ / رئکا ریکا رپکا 
     Chain (@kaf_like @JIMi ^OpenTinySpace); # لعه خطآ
     Chain (@kaf_like /AINi/ ^OpenTinySpace); # غشته غصه
     Chain (@long_re @JIMi ^OpenSmallSpace); # خضر خط
     Chain (@long_re @BEi ^OpenSmallSpace @dots); # مر یہ / سر جہا / سر چہا
-    Chain ([@vao_like @dal_like @kaf_like] TEi10 @dots ^DropATinyBitMore); # وپط
+    Chain (@vao_like SINi10 ^OpenTinySpace); # متوسط
+    Chain ([@vao_like @dal_like @kaf_like] TEi10 ^OpenTinySpace @dots ^DropATinyBitMore); # وپط
     Chain (@bigbowlfina @BEi ^OpenTinySpace); # ین یہ
     Chain (@vao_like /TOEi|LAMi/ ^OpenTinySpace); # مؤظف
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one toeda sda dda];
@@ -340,7 +348,6 @@ Routine AtHeight200pos {
     Chain (@vao_like [BEi10 TEi10] ^OpenSmallSpace [@dots @dots_one]); # کچھ بصر
     Chain (@vao_like @BEi ^OpenTinySpace [@dots @dots_one]); # و پت
     Chain (@vao_like HAMZA_ABOVE @BEi ^OpenTinySpace);
-    # XXX Audited up to here
 
     Chain ([@dal_like @vao_like] [TEi6 BEi6] @dots ^DoNothingPos); # کر یہُو
 
@@ -377,6 +384,7 @@ Routine AtHeight200pos {
     Chain (@kaf_like @dots @DOTi ^OpenSmallSpace @dots); # اب چہر
 
     Chain (@alif_like [BEi13 TEi13] ^DoNothingPos); # بجایی
+    Chain (@alif_like TEisd1 ^OpenTinyIfUpperDots); # إثبات
     Chain (@alif_like TEi7 ^OpenTinySpace @dots); # ایجا
     Chain (@alif_like @BEi ^OpenTinySpace tdb); # اپھ
 
@@ -390,6 +398,8 @@ Routine AtHeight400pos {
 
     Chain (@dal_like [BEi9 TEi9] ^TightenSlightly @dots_two MIMf1); #  فدیم
     Chain ([@vao_like @alif_like] [BEi9 TEi9] ^DoNothingPos @dots_two MIMf1); #  ملایم قدیم 
+
+    Chain ([@dal_like @vao_like] LAMi2 ^OpenTinySpace); # دلیل
 
     Chain (@alif_like [BEisd1 TEisd1] ^TightenSlightly sdb); # اببل
     Chain (@alif_like [@BEi @JIMi] @dots_one ^DropATinyBitMore); # نلایتی
@@ -504,6 +514,7 @@ DefineClass @narrow_inits = @inits & (width < 300);
 
 Routine AtHeight600pos {
     Chain ([BARI_YEu1 BARI_YEf1] @DOTi ^OpenSmallSpace);
+    Chain (@alif_like [BEi7 TEi7 LAMi7] ^OpenSmallSpace); # انجن / الحق
     Chain (@alif_like MADDA [BEi3 TEi3] ^OpenMediumSpace); # آنکھو
     Chain (@alif_like [BEi5 TEi5] ^OpenTinySpace @dots  ^BottomLeft); # ابھی
     Chain (@alif_like @DOTi ^OpenMediumSpace [ddb tdb]); # اچھّی
