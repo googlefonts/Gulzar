@@ -205,6 +205,7 @@ Feature kern {
 
     # زش
     Position [REu1 REf1] ([sda toeda] <xPlacement=+75>) /SIN[ui]/ [sda dda tda];
+    Position [REu1 REf1] [sda toeda] (/TE[ui]/ <xAdvance=+40>) [sda dda tda] @finas;
 
   } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA HAMZA_BELOW];
 
@@ -218,7 +219,7 @@ Feature kern {
     Position (/\.one$/ <yPlacement=-120 xPlacement=+45>) @all_above_marks /KAF|GAF/;
 
     Position (toeda <yPlacement=-60>) /[KG]AF[mf]/;
-    Position @alif_like (/FE[mi]/ <xAdvance=+70> [sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AF[mf]/;
+    Position @alif_like (/FE[mi]/ <xAdvance=+70> [sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AFf/;
     Position /FE[mi]/ ([sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AF[mf]/;
 
     Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
