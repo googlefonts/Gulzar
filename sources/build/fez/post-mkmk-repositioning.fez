@@ -151,13 +151,14 @@ Feature kern {
     Position /[KG]AF/ [BEm3 TEm3] ([sda dda] <yPlacement=-50> @all_above_marks <yPlacement=+350>) /[KG]AF/;
     Position /KAFi/ TEm3 (tda <yPlacement=+250>) @alif_like;
     Position KAFi2 /TEm/ (tda <xPlacement=-50>);
-    Position FEi2 [sda dda] /TEm/ ([sda dda tda] <xPlacement=-20>) [@alif_like LAMf1];
-    Position FEi2 [sda dda] /TEm/ ([sda dda tda HAMZA_ABOVE] <xPlacement=-70>);
+    Position /FEi/ [sda dda] /[TB]Em/ ([dda tda] <xPlacement=-20 yPlacement=+70>) [@alif_like LAMf1];
+    Position /FEi/ [sda dda] /[TB]Em/ ([dda tda HAMZA_ABOVE] <xPlacement=-120>);
+    Position /FEi/ [sda dda] /[TB]Em/ (sda <xPlacement=-70>);
 
     Position FEi7 [sda dda] /JIMm/ ([sda dda tda] <xPlacement=-100>);
     Position FEi7 /JIMm/ ([sda dda tda] <xPlacement=-100>);
 
-    Position FEi15 [sda dda] QAFf1 ([sda dda tda] <xPlacement=-50>);
+    Position FEi15 [sda dda] QAFf1 ([sda dda tda] <xPlacement=-100>);
 
     Position FEi16 REf1 ([sda toeda] <xPlacement=-75>);
     Position FEi16 [sda dda] REf1 ([sda toeda] <xPlacement=-75>);
