@@ -265,6 +265,7 @@ Routine AtHeight200sub {
     Chain (@long_re [@BEi @JIMi] @dots ^DropOne); # متجرپھ / مرجسا / جھرپو
     Chain (@long_re @BEi @BEm @dots ^DropOne); # مرتبہ
     Chain (@long_re /[KG]AFi/ @BEm @dots ^DropOne); # لتركية / مرگبا
+
 } UseMarkFilteringSet [@dots];
 
 Routine AtHeight400sub {
@@ -281,7 +282,7 @@ Routine AtHeight400sub {
 
     Chain ([@dal_like @vao_like @alif_like] [BEi9 TEi9] @dots ^DropTwo MIMf1); #  ملایم قدیم 
 
-    Chain (@dal_like [BEi9 TEi9] @dots ^DoNothing); # فدیم
+    Chain (@dal_like [BEi9 TEi9] @dots ^DropTwo); # قدیمی
     Chain (@vao_like [BEi9 TEi9] @dots ^DropTwo); # ویمو
 
     Chain ([@dal_like @vao_like] /MIMi/ @DOTm @dots ^DropOne); # المستخدمين
@@ -320,6 +321,7 @@ Routine AtHeight0pos {
     Chain (@long_re @BEi ^OpenSmallSpace @dots); # مر یہ / سر جہا / سر چہا
     Chain (@vao_like SINi10 ^OpenTinySpace); # متوسط
     Chain ([@vao_like @dal_like @kaf_like] TEi10 ^OpenTinySpace @dots ^DropATinyBitMore); # وپط
+    Chain ([@vao_like @dal_like @kaf_like] TEi4  @dots ^DropATinyBitMore); # ردیف
     Chain (@bigbowlfina @BEi ^OpenTinySpace); # ین یہ
     Chain (@vao_like /TOEi/ ^OpenTinySpace); # مؤظف
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one toeda sda dda];
@@ -385,6 +387,8 @@ Routine AtHeight200pos {
     Chain (@alif_like TEi7 ^OpenTinySpace @dots); # ایجا
     Chain (@alif_like LAMi7 ^Tighten); # الجد
     Chain (@alif_like @BEi ^OpenTinySpace tdb); # اپھ
+
+    Chain (@alif_like TEi15 @dots ^DropATinyBitMore); # ایو
 
 
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one sdb.two ddb.two tdb.two HAMZA_ABOVE];
