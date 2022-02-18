@@ -168,6 +168,7 @@ Routine TopRight {
   Position (tdb <yPlacement=+200 xPlacement=+50>);
 };
 Routine BottomLeft {Position ([sdb tdb ddb] <yPlacement=-220 xPlacement=-250>); };
+Routine PushLeft {Position ([sdb tdb ddb] <xPlacement=-75>); };
 
 # If you don't want to move a dot a whole position, but you need to
 # move it out of the way - or you've got to `tdb.two` and you *still*
@@ -315,6 +316,7 @@ Routine AtHeight0pos {
     Chain (@alif_like KAFi3 ^OpenSmallSpace); # اکا
     Chain (@alif_like ^ClearUpperDots [BEi8 TEi8]); # ئکا ایکا اپکا انکا اتکا اثکا
     Chain (@dal_like [BEi8 TEi8] ^OpenTinySpace); # رنگآ / رئکا ریکا رپکا 
+    Chain (@dal_like [BEi3 TEi3] ^TightenSlightly); # جدید 
     Chain (@kaf_like @JIMi ^OpenTinySpace); # لعه خطآ
     Chain (@kaf_like /AINi/ ^OpenTinySpace); # غشته غصه
     Chain (@long_re @JIMi ^OpenSmallSpace); # خضر خط
@@ -406,7 +408,7 @@ Routine AtHeight400pos {
     Chain (@alif_like [BEisd1 TEisd1] ^TightenSlightly sdb); # اببل
     Chain (@alif_like [@BEi @JIMi] @dots_one ^DropATinyBitMore); # نلایتی
     Chain (@alif_like /HAYCi/ ^DoNothingPos); # اہبل
-    Chain (@alif_like TEi24 ^OpenTinySpace [ddb tdb]); # ایس
+    Chain (@alif_like TEi24 [ddb tdb] ^PushLeft); # ایس
     Chain (@alif_like [BEi9 TEi9 JIMi9] ^OpenMediumSpace [ddb tdb]); # اپم
 
     Chain (@long_re [BEi4 TEi4] @dots_one ^DropATinyBitMore); # طریقو
