@@ -620,6 +620,7 @@ Feature rlig {
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
+    Substitute TEisd1 [tdb ddb] TEm3 (ddb.two) -> ddb.one; # پیدا
   };
   # And another round of making sure that ڑ doesn't bang into what
   # follows.

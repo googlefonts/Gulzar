@@ -130,6 +130,9 @@ Feature kern {
     Position TEi3 ([dda tda] <xPlacement=+50>) ALIFf1;
 
     Position (BEi13 <xAdvance=+70>) [ddb.yb tdb.yb];
+
+    Position TEisd1 [tdb ddb] TEm3 (ddb.one <yPlacement=-200>); # پیدا
+
   };
   Routine ShortBes {
     # Short BE/TEs
@@ -233,6 +236,7 @@ Feature kern {
     Position ([sda dda tda] <yPlacement=-70 xPlacement=+90>) [@BEm /FEm/]  /[KG]AF[mf]/;
     Position ([sda dda tda] <yPlacement=-60  xPlacement=+90>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
     Position MADDA (/KAF|GAF/ <xAdvance=+0>) BARI_YEf1;
+    Position MADDA (/KAF|GAF/ <xAdvance=+0>) @medis @medis;
     Position MADDA (/KAF|GAF/ <xAdvance=+200>);
 
     # Deeply unfortunate sequence
