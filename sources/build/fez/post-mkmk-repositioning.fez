@@ -124,16 +124,12 @@ Feature kern {
 
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
-    Position @alif_like (/[BT]Ei7/ <xAdvance=+0>) HAMZA_ABOVE;
-    Position @alif_like (/[BT]Ei/ <xAdvance=+75>) HAMZA_ABOVE;
-
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
 
     # چنا
     Position TEi3 ([dda tda] <xPlacement=+50>) ALIFf1;
 
     Position (BEi13 <xAdvance=+70>) [ddb.yb tdb.yb];
-    Position @long_re (/^FE/ <xAdvance=+70>);
   };
   Routine ShortBes {
     # Short BE/TEs

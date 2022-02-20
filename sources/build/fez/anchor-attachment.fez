@@ -360,6 +360,7 @@ Routine AtHeight200pos {
     Chain (@dal_like /HAYCi/ ^OpenSmallSpace @dots); # رہم
 
     Chain (@dal_like @JIMi @dots_one ^DropATinyBitMore); # دجم
+    Chain (@dal_like ^ClearUpperDots); # فزیکل
     Chain (@vao_like @JIMi @dots_one ^DropATinyBitMore); # وجم
     Chain ([@vao_like @dal_like] SINisd24 ^OpenTinySpace); # مؤسسه
 
@@ -455,6 +456,7 @@ Routine AtHeight400pos {
 
     Chain (@vao_like        FEi4 ^OpenTinySpace); # توقفگا
 
+    Chain (@vao_like        /SADi/ ^Tighten [AINf1 JIMf1]); # وضع
     Chain (@vao_like        /SADi/ ^OpenTinySpace); # و صحنه
     Chain (@vao_like        /SINi10/ ^OpenTinySpace); # لوسطى
     Chain (@kaf_like        /SADi/ ^OpenTinySpace); # یت صحنه
@@ -539,6 +541,7 @@ Routine AtHeight600pos {
     Chain ([@dal_like @vao_like] @DOTi ^OpenSmallSpace @dots); # کو پہنچ
     Chain ([@dal_like @vao_like] @DOTi ^OpenTinySpace @dots_one ^DropATinyBitMore); # دیتی
     Chain (@dal_like /FEi/ ^TightenSlightly); # الرقیق
+    Chain (@dal_like @DOTi ^DoNothingPos @medis AINf1); # ارتفع
     Chain (@dal_like @DOTi ^TightenSlightly); # رئیس
     Chain (@long_re @DOTi ^OpenMediumSpace tdb); # میر پشیمل
 

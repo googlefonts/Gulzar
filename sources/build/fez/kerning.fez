@@ -7,6 +7,8 @@ LoadPlugin FontEngineering;
 SetCategory space.urdu ligature;
 SetCategory comma.urdu ligature;
 
+DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
+
 Feature kern {
 	# This runs the autokerner, and brings together initial glyphs
 	# and final glyphs to within either 100 units of one another or
@@ -26,21 +28,26 @@ Feature kern {
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /JIMm|BEm14/;
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /BEm9/;
 		Position [REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+270>) @finas; # دبی
-		Position REu1 ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+300>) @finas; # دبی
+		Position REu1 ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+250>) @finas; # دبی
 		Position REf1 ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # دبی
 		Position @dal_like ([JIMi13 MIMi13] <xAdvance=+100>) @finas; # دبی
 		Position @vao_like ([MIMi13] <xAdvance=+100>) @finas; # عمومی
+		Position [@vao_like @dal_like] ([JIMi13] <xAdvance=+50>) @finas; # فوجی
 		Position @dal_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+220>) @finas; # دبی
 		Position @vao_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+220>) @finas; # وبی
 		Position @mim_like ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+160>) @finas; # م بی
-		Position @alif_like ([BEi13 TEi13 LAMi13] <xAdvance=+120>) @finas;
+		Position @alif_like ([BEi13 TEi13 LAMi13] <xAdvance=+150>) @finas;
 		Position @alif_like ([FEi13 GAFi13 KAFi13 LAMi2 LAMi9] <xAdvance=+120>) @finas; #  
+		Position @alif_like ([GAFi17 KAFi17] <xAdvance=+150>) @finas; # کجاکخ
 		Position @alif_like ([LAMi9] <xAdvance=+100>) /MIMm/; # المللی
 		Position [@isols @finas] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # الی
 
-		Position [@isols @finas] ([BEi1 TEi1 FEi1 FEi7] <xAdvance=+200>) @finas; # سابع
+		Position [@isols @finas] ([BEi1 TEi1 FEi1 FEi7] <xAdvance=+170>) @finas; # سابع
 		Position [@isols @finas] ([JIMi7] <xAdvance=+100>) @finas; # أحج
+		Position [@isols @finas] ([LAMi7] <xAdvance=+250>) JIMf1; # صالح
+		Position [@isols @finas] (@inits <xAdvance=+100>) @narrowmedi AINf1; # صالح
 
+		Position ([BEisd1 TEisd1]  <xAdvance=+100>) TEm7 JIMf1;
 		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
 
 		Position ([BEi7 TEi7] <xAdvance=+100>) JIMf1;
