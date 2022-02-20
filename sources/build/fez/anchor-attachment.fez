@@ -276,7 +276,7 @@ Routine AtHeight400sub {
     Chain (@vao_like [BEi24 TEi24] @dots ^DropTwo); # ریس
     Chain (@dal_like [BEi24 TEi24] @dots ^DropTwo); # ریس
 
-    Chain (@dal_like @DOTi @DOTm @dots ^DropOne); # الرئیسة
+    Chain (@dal_like [@DOTi /FEi/] @DOTm @dots ^DropOne); # الرئیسة / رفین
 
     Chain (@vao_like [BEi5 TEi5] @dots ^DropTwo); # وپھر
     Chain (@dal_like [BEi5 TEi5] @dots ^DoNothing); # رپھر
@@ -319,9 +319,10 @@ Routine AtHeight0pos {
     Chain (@dal_like [BEi3 TEi3] ^TightenSlightly); # جدید 
     Chain (@kaf_like @JIMi ^OpenTinySpace); # لعه خطآ
     Chain (@kaf_like /AINi/ ^OpenTinySpace); # غشته غصه
-    Chain (@long_re @JIMi ^OpenSmallSpace); # خضر خط
+    Chain (@long_re @JIMi ^OpenSmallSpace @dots); # خضر خط
     Chain (@long_re @BEi ^OpenSmallSpace @dots); # مر یہ / سر جہا / سر چہا
     Chain (@vao_like SINi10 ^OpenTinySpace); # متوسط
+    Chain (@vao_like @JIMi ^TightenSlightly); # کوچک
     Chain ([@vao_like @dal_like @kaf_like] TEi10 ^OpenTinySpace @dots ^DropATinyBitMore); # وپط
     Chain ([@vao_like @dal_like @kaf_like] TEi4  @dots ^DropATinyBitMore); # ردیف
     Chain (@bigbowlfina @BEi ^OpenTinySpace); # ین یہ
@@ -337,6 +338,7 @@ Routine AtHeight200pos {
     Chain (@bigbowlfina [@BEi @JIMi /SINi/ /MIMi/] ^OpenTinySpace); # بین بو / نخستین خصو / عشق شکل / مطمئن می
 
     Chain ([@dal_like] [BEi5 TEi5] ^OpenSmallSpace [sdb ddb] ^TopRight); # ربھ / پربھا / ریھ / پریھا
+    Chain ([@dal_like] /[KG]AFi/ ^TightenSlightly); # مذکو
 
     Chain ([@dal_like @vao_like] [HAYCi2 HAYCi13] @dots_one ^DropATinyBitMore); # وہی
     Chain ([@dal_like @vao_like] [TEi6 BEi6] @dots_one ^DropATinyBitMore); # وپہر
@@ -365,10 +367,10 @@ Routine AtHeight200pos {
     Chain (@long_re [BEisd1 TEisd1] ^OpenSmallSpace @dots_one @BEm @dots); # العَرَبِيّة
     Chain (@long_re [BEisd1 TEisd1] ^OpenSmallSpace @dots); # کنکشنز بنا
     Chain (@long_re JIMi7 ^OpenTinySpace); # خبر خجا
+    Chain (@long_re ^ClearUpperDots @JIMi ^TightenSlightly @dots_one ^DropATinyBitMore); # جرجم / هرچند
     Chain (@long_re [@BEi @JIMi] ^OpenTinySpace [ddb tdb]); # جھر پو
     Chain (@long_re [@BEi @JIMi] [@dots_one @dots_two] ^DropATinyBitMore); # ئبریٹ تقریظیں
     Chain (@long_re [@BEi @JIMi] ^OpenTinySpace @DOTm @dots_one ^DropATinyBitMore); # پھرتیر
-    Chain (@long_re @JIMi @dots_one ^DropATinyBitMore); # جرجم
 
     Chain (@long_re [TEisd1 BEisd1] ^TightenSlightly @medis); # مرتبہ
     Chain (@long_re [BEi5 TEi5] ^OpenTinySpace [sdb.two ddb.two tdb.two] ^DropATinyBitMore); # متجرپھ
@@ -413,6 +415,8 @@ Routine AtHeight400pos {
 
     Chain (@long_re [BEi4 TEi4] @dots_one ^DropATinyBitMore); # طریقو
     Chain (@long_re [BEi5 TEi5] @dots ^TopRight); # سرپھر
+    Chain (@long_re [BEi16 TEi16] ^TightenSlightly @dots_two ); # لجزیر
+    Chain (@long_re ^ClearUpperDots /[KG]AFi/ ^TightenSlightly ); # مرکز مزکز
     Chain (@long_re @BEi ^OpenSmallSpace @dots_two @DOTm [ddb haydb]); # جرپیل
     Chain (@long_re @BEi ^OpenSpace @dots_two @DOTm tdb); # جرپپل
     Chain (@long_re @BEi ^OpenTinySpace @DOTm @dots ); # مرںپل
@@ -424,6 +428,8 @@ Routine AtHeight400pos {
     Chain (@dal_like @DOTi ^TightenSlightly @DOTm @dots_one); # الرئیسة
 
     Chain ([@dal_like @vao_like] [TEisd1 BEisd1] ^OpenTinySpace @dots [BEm13 TEm13]); # دیتی
+
+    Chain (@dal_like /FEi/ ^TightenSlightly); # رقم / گرفتن
 
     Chain (@dal_like [BEi9 TEi9 JIMi9] ^OpenMediumSpace tdb); # رپم
     Chain (@dal_like [BEi9 TEi9 JIMi9] ^OpenTinySpace @dots); # فدیم
@@ -532,6 +538,8 @@ Routine AtHeight600pos {
     Chain ([@dal_like @vao_like] [BEi6 TEi6] ^OpenMediumSpace @dots); # رچینی
     Chain ([@dal_like @vao_like] @DOTi ^OpenSmallSpace @dots); # کو پہنچ
     Chain ([@dal_like @vao_like] @DOTi ^OpenTinySpace @dots_one ^DropATinyBitMore); # دیتی
+    Chain (@dal_like /FEi/ ^TightenSlightly); # الرقیق
+    Chain (@dal_like @DOTi ^TightenSlightly); # رئیس
     Chain (@long_re @DOTi ^OpenMediumSpace tdb); # میر پشیمل
 
     Chain (@kaf_like @inits ^OpenTinySpace tdb); # ک چھو

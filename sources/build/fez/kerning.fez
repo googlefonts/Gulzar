@@ -25,7 +25,7 @@ Feature kern {
 	Routine FixShortKern {
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /JIMm|BEm14/;
 		Position [@isols @finas] (/([KG]AF|LAM)i/ <xAdvance=+100>) /BEm9/;
-		Position [REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+300>) @finas; # دبی
+		Position [REf2 REf3] ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+270>) @finas; # دبی
 		Position REu1 ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+300>) @finas; # دبی
 		Position REf1 ([FEi13 GAFi13 KAFi13 BEi13 TEi13 LAMi13 LAMi2 LAMi9] <xAdvance=+200>) @finas; # دبی
 		Position @dal_like ([JIMi13 MIMi13] <xAdvance=+100>) @finas; # دبی
@@ -55,5 +55,6 @@ Feature kern {
 		Position /NUN[uf]/ (space.urdu <xAdvance=100>) /HAYCi/;
 		Position [REf2 REf3] (ALIFu1 <xAdvance=200>) [BEi11 TEi11];
 		Position [REf2 REf3] (SADu1 <xAdvance=200>); # عرض
+		Position @dal_like (ALIFu1 <xAdvance=-50>); # جدا
 	} UseMarkFilteringSet /[sdt]db/;
 };

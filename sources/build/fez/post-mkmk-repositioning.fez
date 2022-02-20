@@ -36,20 +36,23 @@ Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
 
+
     Position ( [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [REf2 REf3] @inits ( sdb.yb <180 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [sdb.one tdb.one ddb.one] @DOTm ( [ddb.yb sdb.yb] <0 -250 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /HAYCi/ <xAdvance=+50> /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1]; # سیاہی
     Position ( /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
-    Position ( /.yb|tdb|ddb$/ <50 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb|sdb/ <150 0 0 0> ) /LAMm|JIMm13/ [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb|sdb/ <50 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /HAYCi/ <xAdvance=+50> /haydb/ <80 -120 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /haydb/ <80 -120 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /HAYCi/ <xAdvance=+50> /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) @medis JIMf1;
     Position ( /HAYCi/ <xAdvance=+50> /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
-  } UseMarkFilteringSet /haydb|sdb.(one|yb)|tdb|ddb|haydb/;
+
+  } UseMarkFilteringSet /haydb|sdb|tdb|ddb|haydb/;
 
   DefineClass @WideFinals = @finas & (xMin < 50);
 
@@ -86,7 +89,10 @@ Feature kern {
   } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
 
   Routine Various2 {
-    Position ([sdb.one ddb.one tdb.one] <yPlacement=+200>) AINf1;
+    Position [@inits @narrowmedi] @below_dots @BEm ([sdb.one ddb.one] <yPlacement=+100 xPlacement=-75>) AINf1;
+    Position ([sdb.one ddb.one tdb.one] <yPlacement=+200 xPlacement=-75>) AINf1;
+    Position (haydb <yPlacement=+40 xPlacement=-105>) AINf1;
+    Position [sdb ddb tdb] @medis (sdb.yb <xPlacement=50>) AINf1; # مبلغ
 
     # GrossKasraAvoidanceThing
     Position [sdb.yb ddb.yb tdb.yb] ( KASRA.yb <yPlacement=-200> ) AINf1;
@@ -118,6 +124,7 @@ Feature kern {
 
     Position DAMMA ([@dal_like @vao_like @inits] <xAdvance=+100> [dda tda HAMZA_ABOVE]);
 
+    Position @alif_like (/[BT]Ei7/ <xAdvance=+0>) HAMZA_ABOVE;
     Position @alif_like (/[BT]Ei/ <xAdvance=+75>) HAMZA_ABOVE;
 
     Position dda ([VAOf1 REf1 DALf1] /TEi/ <xAdvance=+50> dda <xPlacement=-50>);
@@ -134,7 +141,7 @@ Feature kern {
     Position @alif_like ([TEi16 BEi16] <xAdvance=+90>) [dda tda];
     Position @alif_like ([TEi15 BEi15] <xAdvance=+20>) [dda tda];
     Position @alif_like HAMZA_ABOVE ([TEisd1 BEisd1] <xAdvance=+25>);
-    Position @alif_like HAMZA_ABOVE (/SADi/ <xAdvance=+90>);
+    Position [ALIFf1 ALIFu12] HAMZA_ABOVE (/SADi/ <xAdvance=+90>);
     Position @alif_like HAMZA_ABOVE ([TEi3] <xAdvance=+80>) [dda tda];
     Position @vao_like ([TEi3 BEi3 TEi16 BEi16] <xAdvance=+60>) [dda tda];
 
