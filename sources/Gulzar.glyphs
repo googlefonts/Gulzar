@@ -77683,11 +77683,11 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{268, -53}";
+position = "{238, -53}";
 },
 {
 name = entry;
-position = "{401, 155}";
+position = "{371, 155}";
 },
 {
 name = top;
@@ -77715,16 +77715,16 @@ nodes = (
 "182 83 OFFCURVE",
 "213 95 CURVE",
 "191 104 LINE",
-"235 53 OFFCURVE",
-"295 20 OFFCURVE",
-"352 20 CURVE SMOOTH",
-"354 20 LINE",
-"384 39 OFFCURVE",
-"407 110 OFFCURVE",
-"401 155 CURVE",
-"399 155 LINE SMOOTH",
-"353 155 OFFCURVE",
-"306 176 OFFCURVE",
+"227 53 OFFCURVE",
+"276 20 OFFCURVE",
+"322 20 CURVE SMOOTH",
+"324 20 LINE",
+"354 39 OFFCURVE",
+"377 110 OFFCURVE",
+"371 155 CURVE",
+"369 155 LINE SMOOTH",
+"334 155 OFFCURVE",
+"299 176 OFFCURVE",
 "275 209 CURVE",
 "260 209 LINE",
 "190 165 OFFCURVE",
@@ -77737,7 +77737,7 @@ nodes = (
 );
 }
 );
-width = 402;
+width = 372;
 }
 );
 note = HAYCf3;
