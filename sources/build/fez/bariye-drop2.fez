@@ -57,6 +57,7 @@ Feature ss03 {
 # to their name.
 #
 DefineClass @base_ybs = /\.yb$/;
+DefineClass @base_ybs_no_haydb = /\.yb$/ - [haydb.yb];
 
 Feature rlig {
   Routine RenameAttachedKasras {
@@ -70,8 +71,8 @@ Feature rlig {
     # consecutive YBs clashed, but I'm just going to assume
     # that they do. There's no harm in it, and it's an awful
     # lot simpler.
-    Substitute [@medis @inits] @base_ybs @medis (@base_ybs) -> @base_ybs.collides;
-    Substitute [@medis @inits] @base_ybs @narrow_medis @medis (@base_ybs) -> @base_ybs.collides;
+    Substitute [@medis @inits] @base_ybs_no_haydb @medis (@base_ybs_no_haydb) -> @base_ybs_no_haydb.collides;
+    Substitute [@medis @inits] @base_ybs_no_haydb @narrow_medis @medis (@base_ybs_no_haydb) -> @base_ybs_no_haydb.collides;
   } UseMarkFilteringSet @base_ybs;
 
   # When we spread out the `.yb` glyphs to avoid collisions, we
