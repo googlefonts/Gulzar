@@ -6,7 +6,7 @@
 \end{pagetemplate}
 \script[src=packages/linespacing]
 \set[parameter=linespacing.method,value=fixed]
-\set[parameter=linespacing.fixed.baselinedistance,value=29pt]
+\set[parameter=linespacing.fixed.baselinedistance,value=25pt]
 \font[filename=../fonts/ttf/Gulzar-Regular.ttf,size=14pt]
 \begin{center}
 \font[size=90pt]{گُلزار}
@@ -20,7 +20,7 @@
 
 
 \neverindent
-
+\font[size=14pt]
 \set[parameter=shaper.spacestretchfactor,value=50]
 \set[parameter=shaper.spaceshrinkfactor,value=50]
 \set[parameter=typesetter.parfillskip,value=0pt]
@@ -48,9 +48,11 @@
 
 \vfill
 \hbox{}\par
+\set[parameter=linespacing.fixed.baselinedistance,value=50pt]
 
 \script[src=packages/frametricks]
 \script[src=packages/linespacing]
+\font[size=14pt]
 \makecolumns[columns=2]
 \begin{center}
 دیکھے گا جو تجھ رو کو سو حیران رہے گا\par
@@ -71,27 +73,28 @@
 \eject
 \begin{center}
 \par
-\thisframeLTR
 \set[parameter=shaper.variablespaces,value=true]
 \set[parameter=shaper.spaceenlargementfactor,value=1]
 \set[parameter=shaper.spaceshrinkfactor,value=1]
-Whoever has gazed at your face even once will live in perpetual wonder,\par
-Whoever has become attached to your long hair will remain distracted, deranged, forever.\par
-\medskip
-True, I did make her a promise to return with the first breath of morning-\par
-well, if breath remains in my body too until that time.
-\medskip
+\font[size=7pt]
+ \par
+Whoever has gazed at your face even once will live in perpetual wonder\par
+Whoever has become attached to your long hair will remain distracted, deranged, forever\par
+True, I did make her a promise to return with the first breath of morning\par
+Well, if breath remains in my body too until that time\par
 The rich man made a house on the foundation of tyranny\par
-but like a guest he won't stay there longer than a night or two.
-\medskip
-Executioner, please! Deliver just one blow and release me from all distress and pain.\par
-I will humbly acknowledge my debt to you until doomsday.
-\medskip
-Head and sword will cling to each other always in the vast arena of love.\par
-This battlefield won’t ever by empty until the crack of doom.
-\medskip
-The tumult raised by my poetry will never abate.\par
-My divan of poetry will abide in the world until the day of reckoning.
+But like a guest he won't stay there longer than a night or two
+\par
+Executioner, please! Deliver just one blow and release me from all distress and pain\par
+I will humbly acknowledge my debt to you until doomsday
+\par
+Head and sword will cling to each other always in the vast arena of love\par
+This battlefield won’t ever by empty until the crack of doom
+\par
+The tumult raised by my poetry will never abate\par
+My divan of poetry will abide in the world until the day of reckoning\par
+It wasn’t something negligible, the act of giving away his heart, that Mir committed\par
+He will reproach himself for it so long as he lives
 \end{center}
 \vfill
 
@@ -102,7 +105,7 @@ My divan of poetry will abide in the world until the day of reckoning.
 \set[parameter=typesetter.parfillskip,reset=true]
 \hbox{}\par
 
-\thisframeRTL
+\set[parameter=linespacing.fixed.baselinedistance,value=28pt]
 
 \skip[height=150pt]
 
@@ -136,16 +139,25 @@ My divan of poetry will abide in the world until the day of reckoning.
 \eject
 \hbox{}\par
 
+\begin{center}
+ \par
+
+%\script[src=packages/colorwords]
+
+\font[size=18pt]{مرزا غالب}
+\end{center}
+
 نجم الدولہ، دبیر الملک، مرزا نوشہ اسد اللہ خان غالب بہادر نظام جنگMirza Asadullah Baig Khan  اردو زبان کے سب سے بڑے شاعروں میں ایک سمجھے جاتے ہیں۔ یہ تسلیم شدہ بات ہے کہ 19 ویں صدی غالب کی صدی ہے۔ جبکہ 18 ویں میر تقی میر کی تھی اور 20 ویں علامہ اقبال کی۔ غالب کی عظمت کا راز صرف ان کی شاعری کے حسن اور بیان کی خوبی ہی میں نہیں ہے۔ ان کا اصل کمال یہ ہے کہ وہ زندگی کے حقائق اور انسانی نفسیات کو گہرائی میں جا کر سمجھتے تھے اور بڑی سادگی سے عام لوگوں کے لیے بیان کر دیتے تھے۔  First Indian War of Independenceغالب جس پر آشوب دور میں پیدا ہوئے اس میں انہوں نے مسلمانوں کی ایک عظیم سلطنت کو برباد ہوتے ہوئے اور باہر سے آئی ہوئی انگریز قوم کو ملک کے اقتدار پر چھاتے ہوئے دیکھا۔ غالباً یہی وہ پس منظر ہے جس نے ان کی نظر میں گہرائی اور فکر میں وسعت پیدا کی۔ مشہور قول کے مطابق غالب 27 دسمبر 1797ء کو کالا محل، آگرہ میں پیدا ہوئے۔ مشہور پاکستانی ماہر فلکیات سید صمد حسین رضوی (متوفی 2009ء) کی تحقیق کے مطابق غالب 8 جنوری 1797ء کو پیدا ہوئے تھے۔
 مرزا کے آباء و اجداد میں مرزا کے دادا  Nizam of Hyderabad, Deccanمرزا قُوقان بیگ سمرقند سے ہجرت کرکے مغل شہنشاہ احمد شاہ بہادر کے عہدِ حکومت میں غالباً 1748ء یا 1750ء میں مغلیہ سلطنت میں آ کر آباد ہوئے۔ اُن کا [مغل شہنشاہ] محمد شاہ کے دربار سے وابستہ ہونے کا ثبوت ملتا ہے، جس سے اندازہ لگایا جا سکتا ہے کہ وہ 1748ء سے قبل ہی ہندوستان میں وارد ہو چکے تھے۔ یہ خاندان حسب و نسب کے اعتبار سے ترک مغل تھا اور تورانی النسل ہونے کے ساتھ ساتھ سمرقند میں آباد ہونے سے اِنہیں سمرقندی ترک بھی سمجھا جاتا تھا۔  Abul Fazl's Ai’n-e Akbariغالب کے دادا مرزا قُوقان بیگ ہندوستان آمد کے بعد چند دن لاہور میں مقیم رہے اور پھر دہلی میں شاہی ملازمت اِختیار کر لی۔ کچھ عرصے بعد یہاں سے مستعفی ہو کر مہاراجا جے پور کے پاس نوکری قبول کر لی اور آگرہ میں سکونت اِختیار کی۔ 1795ء یا 1796ء میں غالب کے والد مرزا عبد اللہ بیگ خان کا عقد آگرہ کے ایک فوجی افسر خواجہ غلام حسین خان کی بیٹی عزت النساء بیگم سے ہوا۔ آگرہ میں ہی اِن دونوں سے غالب پیدا ہوئے۔ DEVANAGARI HINDI SCRIPT آگرہ میں 1799ء میں غالب کے چھوٹے بھائی مرزا یوسف علی بیگ خان پیدا ہوئے جو 1857ء کی جنگ آزادی کے دوران 18 اکتوبر 1857ء کو قتل ہو گئے تھے۔غالب کے والد مرزا عبد اللہ بیگ خان ریاست الور میں ملازم تھے اور وہاں 1802ء میں راج گڑھ کے مقام پر ایک جھڑپ میں قتل ہوئے جبکہ غالب کی والدہ کے متعلق آثار و قرائن سے معلوم ہوتا ہے کہ وہ جنوری 1840ء تک بقیدِ حیات تھیں۔ Greenery is growing from walls and doors Ghalib I am in a desert and my house blooms as its springمیں والد کی وفات کے بعد غالب کے چچا مرزا نصر اللہ بیگ خان اُن کے سرپرست بنائے گئے جو مرہٹوں کی جانب سے آگرہ کے قلعہ دار تھے۔ 18 اکتوبر 1803ء کو جب آگرہ پر انگریزی افواج نے حملہ کیا تو مرزا نصر اللہ بیگ خان نے قلعہ آگرہ لارڈ لیک کے حوالے کر دیا جس پر انگریزی افواج آگرہ میں داخل ہوگئیں اور مرہٹوں کا اثر ختم ہو گیا۔ لارڈ لیک نے مرزا نصر اللہ بیگ خان کو 1700 روپئے مشاہدے کے ساتھ چار سو گھڑسواروں کا رِسالدار مقرر کر دیا۔ اپریل 1806ء میں مرزا نصر اللہ بیگ خان ہاتھی سے گر کر زخمی ہوئے اور انتقال کرگئے۔ Pakistan zur Allgemeinbildung اُن کے پسماندگان میں غالب اور اُن کے چھوٹے بھائی مرزا یوسف علی بیگ خان بھی شامل تھے۔ 4 مئی 1806ء کو نواب احمد بخش خان‘ نواب ریاست فیروزپور جِھرکا نے انگریزوں سے سفارش کرکے پسماندگان کا وظیفہ دس ہزار روپئے مقرر کروا دیا جس میں غالب کی دادی‘ تین پھوپھیاں اور چھوٹا بھائی بھی شامل تھا۔ 7 جون 1806ء کو وظیفہ کی یہ رقم دس ہزار سے کم کرکے پانچ ہزار کردی گئی۔
 
 \eject
 
 \hbox{}\par
-\thisframeRTL\bidi-on
+\thisframeRTL
 \set[parameter=shaper.spaceenlargementfactor,value=1]
 \set[parameter=shaper.spaceshrinkfactor,value=0.1]
 \set[parameter=shaper.spacestretchfactor,value=0.1]
+\language[main=und]
 
 
 Mirza Asadullah Baig Khan (Urdu: مرزا اسد اللہ بیگ خان‎; 27 December 1797 – 15 February 1869),[1] also known by the pen names of Ghalib (Urdu: غالب‎, romanized: Ġālib, lit. 'dominant') and Asad (Urdu: اسد‎, romanized: Asad, lit. 'lion'), was an Indian poet.[2] His honorific was Dabir-ul-Mulk, Najm-ud-Daula. During his lifetime, the already declining Mughal empire was eclipsed and displaced by the Colonial British Raj and finally deposed following the defeat of the First Indian War of Independence (Sepoy Mutiny) of 1857; these are described through his work.
