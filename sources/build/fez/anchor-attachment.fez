@@ -122,7 +122,7 @@ Routine OpenSpace {
 # The following routines similarly adjust the spacing to various degrees.
 Routine OpenMediumSpace {
   Position (@inits <xAdvance=+330>) /tdb|haydb/;
-  Position (@inits <xAdvance=+250>) @medis;
+  Position (@inits <xAdvance=+250>) [@medis @finas];
   Position (@inits <xAdvance=+250>) /sdb|ddb/;
   Position toeda (@inits <xAdvance=+180>);
 } IgnoreLigatures UseMarkFilteringSet /db|toeda/;
@@ -130,9 +130,9 @@ Routine OpenMediumSpace {
 Routine OpenBigSpace {
   Position (@inits <xAdvance=+380>) /tdb|haydb/;
   Position (@inits <xAdvance=+300>) /sdb|ddb/;
-  Position (@inits <xAdvance=+300>) @medis;
+  Position (@inits <xAdvance=+300>) [@medis @finas];
   Position toeda (@inits <xAdvance=+300>);
-} IgnoreLigatures;
+};
 
 Routine OpenSmallSpace {
   Position (/JIMi/ <xAdvance=+200>) /tdb/;
@@ -330,7 +330,7 @@ Routine AtHeight0pos {
 } IgnoreLigatures UseMarkFilteringSet [@dots @dots_one toeda sda dda];
 
 Routine AtHeight200pos {
-    Chain ([BARI_YEu1 BARI_YEf1] [@BEi @JIMi] ^OpenSmallSpace [tdb ddb]); # پنے چہر
+    Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpace); # کےحقا
 
     Chain (@bigbowlfina [BEisd1 TEisd1] ^OpenMediumSpace [tdb ddb]); # میل پتہ
     Chain (@bigbowlfina /HAYCi/ ^OpenTinySpace haydb); # س ہی
