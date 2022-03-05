@@ -1,4 +1,4 @@
-fonttools>=4.28.2
+git+https://github.com/simoncozens/fonttools@disable-chaining#egg=fonttools
 glyphsLib
 kurbopy
 fontmake
