@@ -52,15 +52,22 @@
 				transform: rotate(1deg);
 				background-image: url(images/texture.png);
 			}
+			.bg-secondary {
+				background-color: #ccc !important;
+			}
 			#content {
-				border: 1px dashed #555;
 				padding: 20px;
+				background-color: #d0d0d0 !important;
 			}
 			button {
 				display: inline-block;
 			}
 			.hidden {
 				display: none;
+			}
+
+			.fill {
+				font-size: 4vw;
 			}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -85,10 +92,10 @@
 	<body>
 		<div class="container-fluid" id="get">
 			<div class="row">
-				<div class="col-2 col-lg-1 m-0 bg-dark"></div>
+				<div class="col-2 col-lg-1 m-0 bg-secondary"></div>
 				<div class="col m-0 p-0">
-					<nav class="navbar m-0 navbar-dark bg-dark">
-						<div class="navbar-text m-1 text-white mx-auto text-center">
+					<nav class="navbar m-0 navbar-dark bg-secondary">
+						<div class="text-black m-1 mx-auto text-center">
 							<h1 class="huge">گُلزار</h1>
 							<h1>نستعلیق اُردو فونٹ</h1>
 						</div>
@@ -96,7 +103,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-2 col-lg-1 bg-dark text-secondary sticky-top">
+				<div class="col-2 col-lg-1 bg-secondary sticky-top">
 					<div class="p-sm-4 align-items-center sticky-top">
 						<h5>
 							<a href="#get" class="text-reset text-decoration-none">Get</a>
@@ -110,8 +117,8 @@
 					</div>
 				</div>
 				<div class="col p-0">
-					<div class="pt-5 p-3 mx-5 text-center">
-						<h3>Get</h3>
+					<div class="pt-5 p-3 mx-5">
+						<h3 class="fill">Download Gulzar</h3>
 						<p class="small">
 							Gulzar is a libre (free of charge, and freely redistributable)
 							font, licensed under the
@@ -137,26 +144,23 @@
 							<h1 class="large text-center">مرزا غالب</h1>
 							<p dir="rtl">
 								نجم الدولہ، دبیر الملک، مرزا نوشہ اسد اللہ خان غالب بہادر نظام
-								جنگMirza Asadullah Baig Khan اردو زبان کے سب سے بڑے شاعروں میں
-								ایک سمجھے جاتے ہیں۔ یہ تسلیم شدہ بات ہے کہ 19 ویں صدی غالب کی
-								صدی ہے۔ جبکہ 18 ویں میر تقی میر کی تھی اور 20 ویں علامہ اقبال
-								کی۔ غالب کی عظمت کا راز صرف ان کی شاعری کے حسن اور بیان کی خوبی
-								ہی میں نہیں ہے۔ ان کا اصل کمال یہ ہے کہ وہ زندگی کے حقائق اور
-								انسانی نفسیات کو گہرائی میں جا کر سمجھتے تھے اور بڑی سادگی سے
-								عام لوگوں کے لیے بیان کر دیتے تھے۔ First Indian War of
-								Independence غالب جس پر آشوب دور میں پیدا ہوئے اس میں انہوں نے
-								مسلمانوں کی ایک عظیم سلطنت کو برباد ہوتے ہوئے اور باہر سے آئی
+								جنگ (1797ء- 1869ء) اردو زبان کے سب سے بڑے شاعروں میں ایک سمجھے
+								جاتے ہیں۔ یہ تسلیم شدہ بات ہے کہ 19 ویں صدی غالب کی صدی ہے۔ جبکہ
+								18 ویں میر تقی میر کی تھی اور 20 ویں علامہ اقبال کی۔ غالب کی
+								عظمت کا راز صرف ان کی شاعری کے حسن اور بیان کی خوبی ہی میں نہیں
+								ہے۔ ان کا اصل کمال یہ ہے کہ وہ زندگی کے حقائق اور انسانی نفسیات
+								کو گہرائی میں جا کر سمجھتے تھے اور بڑی سادگی سے عام لوگوں کے لیے
+								بیان کر دیتے تھے۔ غالب جس پر آشوب دور میں پیدا ہوئے اس میں انہوں
+								نے مسلمانوں کی ایک عظیم سلطنت کو برباد ہوتے ہوئے اور باہر سے آئی
 								ہوئی انگریز قوم کو ملک کے اقتدار پر چھاتے ہوئے دیکھا۔ غالباً یہی
 								وہ پس منظر ہے جس نے ان کی نظر میں گہرائی اور فکر میں وسعت پیدا
-								کی۔ مشہور قول کے مطابق غالب 27 دسمبر 1797ء کو کالا محل، آگرہ میں
-								پیدا ہوئے۔ مشہور پاکستانی ماہر فلکیات سید صمد حسین رضوی (متوفی
-								2009ء) کی تحقیق کے مطابق غالب 8 جنوری 1797ء کو پیدا ہوئے تھے۔
+								کی۔
 							</p>
 						</div>
 					</div>
-					<div class="py-3 bg-dark text-white" id="try">
+					<div class="py-3 bg-secondary" id="try">
 						<div class="mx-5">
-							<h2 class="text-center m-3">Type Tester</h2>
+							<h2 class="my-3 fill">Type Tester</h2>
 							<p
 								contenteditable="true"
 								id="content"
@@ -173,7 +177,7 @@
 						</div>
 					</div>
 					<div class="py-3 mx-5" id="learn">
-						<h2 class="text-center m-3">
+						<h2 class="my-3 fill">
 							Gulzar: a contemporary Urdu Nasta’liq typeface
 						</h2>
 						<h5>Borna Izadpanah</h5>
@@ -234,10 +238,7 @@
 							achieve an accurate representation of the Urdu flavour of the
 							Nasta’liq style (Fig 2).
 						</p>
-						<figure
-							class="figure mx-auto"
-							style="max-width: 400px; display: block"
-						>
+						<figure class="figure mx-auto">
 							<img
 								src="images/persian-urdu.jpg"
 								class="figure-img img-fluid rounded"
@@ -255,10 +256,7 @@
 							treatment of terminals which were designed to look clear and
 							consistent on different platforms and in different sizes (Fig 3).
 						</p>
-						<figure
-							class="figure mx-auto"
-							style="max-width: 600px; display: block"
-						>
+						<figure class="figure mx-auto">
 							<img
 								src="images/terminals.jpeg"
 								class="figure-img img-fluid rounded"
@@ -269,7 +267,7 @@
 						</figure>
 						<p>
 							After collecting the most suitable models for the letterforms,
-							Amir Mehdi Moslehi, an Iranian designer and calligrapher, was
+							Amir Mahdi Moslehi, an Iranian designer and calligrapher, was
 							asked to produce initial calligraphic patterns which would ensure
 							the consistency of the stroke modulation that is crucial to
 							Nasta’liq. In this style, calligraphers use different sections of
@@ -359,10 +357,7 @@
 							reduced the number of glyphs which needed to be designed, but also
 							ensured smooth and seamless connections.
 						</p>
-						<figure
-							class="figure mx-auto"
-							style="max-width: 700px; display: block"
-						>
+						<figure class="figure mx-auto">
 							<img
 								src="images/entry-exit.jpeg"
 								class="figure-img img-fluid rounded"
@@ -414,10 +409,7 @@
 							designed. It covers all the required transliterations characters
 							to transcribe Arabic, Persian and Urdu languages.
 						</p>
-						<figure
-							class="figure mx-auto"
-							style="max-width: 700px; display: block"
-						>
+						<figure class="figure mx-auto">
 							<img
 								src="images/latin.jpeg"
 								class="figure-img img-fluid rounded"
@@ -435,10 +427,7 @@
 							elongation (<i>kashida</i> or <i>tatweel</i>) is not supported,
 							but it can be incorporated in future releases.
 						</p>
-						<figure
-							class="figure mx-auto"
-							style="max-width: 700px; display: block"
-						>
+						<figure class="figure mx-auto">
 							<img
 								src="images/contextuals.jpeg"
 								class="figure-img img-fluid rounded"
@@ -570,10 +559,7 @@
 							of a sequence and the initial character of the next, with
 							reference to the “height” of the following sequence.
 						</p>
-						<figure
-							class="figure mx-auto"
-							style="max-width: 600px; display: block"
-						>
+						<figure class="figure mx-auto">
 							<img
 								src="images/kerning.png"
 								class="figure-img img-fluid rounded"
@@ -594,10 +580,7 @@
 							rightward strokes that only affect a single previous glyph,
 							contextual positioning rules achieved the same objective.
 						</p>
-						<figure
-							class="figure mx-auto"
-							style="max-width: 700px; display: block"
-						>
+						<figure class="figure mx-auto">
 							<img
 								src="images/bariye.png"
 								class="figure-img img-fluid rounded"
@@ -666,6 +649,11 @@
 							<li>Amir Mahdi Moslehi (Calligraphic adviser, Gulzar Urdu)</li>
 							<li>Martin Dodds (Consultant, Gulzar Urdu)</li>
 						</ul>
+						<img
+							src="images/googlefonts.png"
+							class="img-fluid mb-4"
+							style="max-width: 300px"
+						/>
 						<h3>Thanks</h3>
 						<p>
 							Our team would like to thank Dave Crossland and Chris Simpkins for
