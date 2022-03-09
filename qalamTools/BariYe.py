@@ -428,7 +428,6 @@ class BYFixOverhang(FEZVerb):
                             [input_[0]],
                             [fontFeatures.ValueRecord(xAdvance=int(adjustment)-100)],
                             postcontext=postcontext,
-                            precontext=[["space.urdu"]]
                         )
                     )
                 for medi in binned_medis:
