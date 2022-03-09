@@ -98,6 +98,12 @@ Feature mark {
 # First, though, we define a set of utility routines that we can
 # call to move dots around and respace text.
 
+# This just saves a lot of typing... But be careful to remember that
+# @dots just means the dots in their "natural" position.
+DefineClass @dots = [sdb ddb tdb haydb];
+DefineClass @dots_one = [sdb.one ddb.one tdb.one haydb.one];
+DefineClass @dots_two = [sdb.two ddb.two tdb.two];
+
 # Drop dots one position, or replace `.yb` dots with `.one` dots.
 Routine DropOne {
   Substitute [sdb ddb tdb haydb] -> $1.one;
@@ -169,6 +175,7 @@ Routine TopRight {
 };
 Routine BottomLeft {Position ([sdb tdb ddb] <yPlacement=-220 xPlacement=-250>); };
 Routine PushLeft {Position ([sdb tdb ddb] <xPlacement=-75>); };
+Routine PushLeftALot {Position ([@dots @dots_one] <xPlacement=-200>); };
 
 # If you don't want to move a dot a whole position, but you need to
 # move it out of the way - or you've got to `tdb.two` and you *still*
@@ -210,11 +217,6 @@ Routine ClearUpperDots {
   Chain ([@isols @finas] [BEi8 TEi8] ^OpenTinySpace [dda HAMZA_ABOVE]);
 } IgnoreLigatures;
 
-# This just saves a lot of typing... But be careful to remember that
-# @dots just means the dots in their "natural" position.
-DefineClass @dots = [sdb ddb tdb haydb];
-DefineClass @dots_one = [sdb.one ddb.one tdb.one haydb.one];
-DefineClass @dots_two = [sdb.two ddb.two tdb.two];
 
 # OK, here we go with the avoidance/spacing rules. To make the problem
 # more tractable, we split the final glyphs into a few classes: dal-like
@@ -620,12 +622,13 @@ Feature rlig {
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
-    Substitute TEisd1 [tdb ddb] TEm3 (ddb.two) -> ddb.one; # پیدا
+    Substitute TEisd1 [tdb ddb] TEm3 ([sdb.two ddb.two tdb.two]) [ALIFf1 ALIFf2 DALf1 HAYCf1 HAYCf2 GAFf1 KAFf1 LAM_ALIFf1] -> [sdb ddb tdb]; # پیدا
+    Substitute TEisd1 [tdb ddb] TEm3 ([sdb.two ddb.two tdb.two]) -> [sdb.one ddb.one tdb.one]; # پیدا
   };
-  # And another round of making sure that ڑ doesn't bang into what
-  # follows.
+
   Routine OtherFixes2 {
     Chain (@alif_like BEi13 ^OpenMediumSpace /.yb$/); # یابی
+    Chain TEisd1 [tdb ddb] TEm3 ([sdb ddb tdb] ^PushLeftALot) [ALIFf1 ALIFf2 DALf1 HAYCf1 HAYCf2 GAFf1 KAFf1 LAM_ALIFf1];
   };
 };
 
