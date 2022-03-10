@@ -7,7 +7,7 @@ Feature rlig {
   Routine StandardLigatures {
     Substitute LAMi1 ALIFf1 -> LAM_ALIFu1;
     Substitute LAMm1 ALIFf1 -> LAM_ALIFf1;
-    Substitute ALIFu1 (LAMi1 LAMm1 HAYCf1) -> ALLAH;
+    Substitute ALIFu1 (LAMi1 LAMm1 HAYCf1) -> ALLAHu1;
   } IgnoreMarks;
 
   Routine HaycAlif {
