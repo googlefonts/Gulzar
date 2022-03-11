@@ -622,13 +622,13 @@ Feature rlig {
   Routine OtherFixes {
     Substitute FEi3 (dda) ALIFf1 -> dda.one;
     Substitute /FEi/ sda /FEm/ (dda.one) -> dda.two;
-    Substitute TEisd1 [tdb ddb] TEm3 ([sdb.two ddb.two tdb.two]) [ALIFf1 ALIFf2 DALf1 HAYCf1 HAYCf2 GAFf1 KAFf1 LAM_ALIFf1] -> [sdb ddb tdb]; # پیدا
-    Substitute TEisd1 [tdb ddb] TEm3 ([sdb.two ddb.two tdb.two]) -> [sdb.one ddb.one tdb.one]; # پیدا
+    Substitute [BEisd1 TEisd1] [sdb tdb ddb] TEm3 ([sdb.two ddb.two tdb.two]) [ALIFf1 ALIFf2 DALf1 HAYCf1 HAYCf2 GAFf1 KAFf1 LAM_ALIFf1] -> [sdb ddb tdb]; # پیدا
+    Substitute [BEisd1 TEisd1] [sdb tdb ddb] TEm3 ([sdb.two ddb.two tdb.two]) -> [sdb.one ddb.one tdb.one]; # پیدا
   };
 
   Routine OtherFixes2 {
     Chain (@alif_like BEi13 ^OpenMediumSpace /.yb$/); # یابی
-    Chain TEisd1 [tdb ddb] TEm3 ([sdb ddb tdb] ^PushLeftALot) [ALIFf1 ALIFf2 DALf1 HAYCf1 HAYCf2 GAFf1 KAFf1 LAM_ALIFf1];
+    Chain [BEisd1 TEisd1] [sdb tdb ddb] TEm3 ([sdb ddb tdb] ^PushLeftALot) [ALIFf1 ALIFf2 DALf1 HAYCf1 HAYCf2 GAFf1 KAFf1 LAM_ALIFf1];
   };
 };
 
