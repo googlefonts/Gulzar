@@ -71,8 +71,8 @@ Feature rlig {
     # consecutive YBs clashed, but I'm just going to assume
     # that they do. There's no harm in it, and it's an awful
     # lot simpler.
-    Substitute [@medis @inits] @base_ybs_no_haydb @medis (@base_ybs_no_haydb) -> @base_ybs_no_haydb.collides;
-    Substitute [@medis @inits] @base_ybs_no_haydb @narrow_medis @medis (@base_ybs_no_haydb) -> @base_ybs_no_haydb.collides;
+    Substitute [@medis @inits] @base_ybs @medis (@base_ybs) -> @base_ybs.collides;
+    Substitute [@medis @inits] @base_ybs @narrow_medis @medis (@base_ybs) -> @base_ybs.collides;
   } UseMarkFilteringSet @base_ybs;
 
   # When we spread out the `.yb` glyphs to avoid collisions, we
@@ -156,16 +156,16 @@ Routine FixFourYBs {
 
 Routine FixThreeYBs {
   # Second dot (and potentially third) collides.
-  Position (@unattached_ybs <xPlacement=60> @colliding_ybs <xPlacement=-150>  @colliding_ybs <xPlacement=-355>);
-  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  sdb.yb <xPlacement=-265>);
-  Position (@unattached_ybs <xPlacement=40> @colliding_ybs <xPlacement=-140>  @unattached_ybs <xPlacement=-355>);
+  Position (@unattached_ybs <xPlacement=80> @colliding_ybs <xPlacement=-80>  @colliding_ybs <xPlacement=-240>);
+  Position (@unattached_ybs <xPlacement=60> @colliding_ybs <xPlacement=-80>  sdb.yb <xPlacement=-240>);
+  Position (@unattached_ybs <xPlacement=60> @colliding_ybs <xPlacement=-80>  @unattached_ybs <xPlacement=-240>);
 
   # Second dot does not collide, third dot collides.
   Position (@unattached_ybs <xPlacement=30> @unattached_ybs <xPlacement=15>  @colliding_ybs <xPlacement=-170>);
 } IgnoreBases UseMarkFilteringSet @unattached_ybs;
 
 Routine FixTwoYBs {
-  Position (@unattached_ybs <xPlacement=70> @colliding_ybs <xPlacement=-180>);
+  Position (@unattached_ybs <xPlacement=0> @colliding_ybs <xPlacement=-200>);
 } IgnoreBases UseMarkFilteringSet @unattached_ybs;
 
 Feature mark {
