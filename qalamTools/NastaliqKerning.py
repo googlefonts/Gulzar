@@ -351,12 +351,12 @@ class NastaliqKerning(FEZVerb):
 
         # This kern routine is going to dispatch differently depending on
         # a) height and b) whether or not there is a space.
-        # if the height is >= 400, then everyone gets this kind of kerning,
+        # if the height is > 400, then everyone gets this kind of kerning,
         # space or not
         # But if the height is less than 400, we branch into two separate
         # kern tables: the "ink-to-ink" table if there is a space, or the
         # table we just made otherwise.
-        if r >= 400:
+        if r > 400:
             self.kern_at_rise[r] = kernroutine
             return kernroutine
         dispatch = fontFeatures.Routine(name="dispatch_%i" % r, flags=0x8)

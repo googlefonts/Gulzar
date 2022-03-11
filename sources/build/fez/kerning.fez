@@ -51,7 +51,7 @@ Feature kern {
 		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
 
 		Position ([BEi7 TEi7] <xAdvance=+100>) JIMf1;
-	} IgnoreLigatures IgnoreMarks;
+	} IgnoreMarks;
 
 	# And finally some ad-hoc fixes...
 
