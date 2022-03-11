@@ -362,7 +362,7 @@ Routine AtHeight200pos {
     Chain (@dal_like /HAYCi/ ^OpenSmallSpace @dots); # رہم
 
     Chain (@dal_like @JIMi @dots_one ^DropATinyBitMore); # دجم
-    Chain (@dal_like ^ClearUpperDots); # فزیکل
+    Chain (@dal_like ^ClearUpperDots [BEi8 TEi8]); # فزیکل
     Chain (@vao_like @JIMi @dots_one ^DropATinyBitMore); # وجم
     Chain ([@vao_like @dal_like] SINisd24 ^OpenTinySpace); # مؤسسه
 
