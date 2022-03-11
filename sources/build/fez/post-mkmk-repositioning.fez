@@ -56,18 +56,6 @@ Feature kern {
 
   DefineClass @WideFinals = @finas & (xMin < 50);
 
-  Routine Various1 {
-    # Finesse Beh Haya
-    Position /TE(sd)?i/ ([ddb tdb] <xPlacement=50>) /HAYAm/;
-
-    # Finesse Beh JIM
-    Position ( /ddb|tdb/ <xPlacement=+20> ) /JIMm/;
-  } UseMarkFilteringSet /tdb|ddb$/;
-
-  Routine KernBeHaya {
-    Position (space <xAdvance=-100> ) /[BT]Ei/ /HAYA/;
-  } IgnoreMarks;
-
   DefineClass @NotTooHighStuff = (@finas|@isols) & (yMax < 600);
   DefineClass @NarrowMedials = /[mf](sd)?\d+$/ & (run < 400);
   DefineClass @NarrowInits = /i(sd)?\d+$/ & (run < 400);
