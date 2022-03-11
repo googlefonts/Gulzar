@@ -14,7 +14,7 @@ Feature kern {
   # and adds a kern to the initial glyph to separate it from the end of the
   # preceding word.
   Routine BYFix {
-    BYFixOverhang -30 @bariye;
+    BYFixOverhang 0 @bariye;
   } IgnoreMarks;
   #Position tdb <0 0 0 0>;
 };

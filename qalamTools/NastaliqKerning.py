@@ -137,6 +137,7 @@ class NastaliqKerning(FEZVerb):
         # This will hold kern tables for each rise value.
         self.kern_at_rise = {}
         routines = []
+        self.generate_ink_to_ink(self.parser.font)
 
         # The main entry to our kerning routine. We ignore marks
         # and ligatures (spaces)
@@ -265,6 +266,27 @@ class NastaliqKerning(FEZVerb):
         return result
 
 
+    def generate_ink_to_ink(self, font):
+        ink_to_ink = fontFeatures.Routine("ink_to_ink", flags=0x8|0x4)
+        for right in self.isols_finas:
+            for left in self.inits + self.isols:
+                right_of_left = max(font.glyphs[left].layers[0].rsb, 0)
+                left_of_right = max(font.glyphs[right].layers[0].lsb, 0)
+                dist = int(self.distance_at_closest - (right_of_left + left_of_right))
+                if dist == 0:
+                    continue
+                ink_to_ink.rules.append(
+                    fontFeatures.Positioning(
+                        [ [right], [left] ],
+                        [
+                            fontFeatures.ValueRecord(),
+                            fontFeatures.ValueRecord(xAdvance=dist),
+                        ],
+                    )
+                )
+        self.ink_to_ink = self.parser.fontfeatures.referenceRoutine(ink_to_ink)
+
+
     def generate_kern_table_for_rise(self, r):
         if r in self.kern_at_rise:
             return self.kern_at_rise[r]
@@ -326,9 +348,32 @@ class NastaliqKerning(FEZVerb):
                 )
         kernroutine = self.parser.fontfeatures.referenceRoutine(kernroutine)
         kernroutine._table = kerntable
-        self.kern_at_rise[r] = kernroutine
-        return kernroutine
 
+        # This kern routine is going to dispatch differently depending on
+        # a) height and b) whether or not there is a space.
+        # if the height is >= 400, then everyone gets this kind of kerning,
+        # space or not
+        # But if the height is less than 400, we branch into two separate
+        # kern tables: the "ink-to-ink" table if there is a space, or the
+        # table we just made otherwise.
+        if r >= 400:
+            self.kern_at_rise[r] = kernroutine
+            return kernroutine
+        dispatch = fontFeatures.Routine(name="dispatch_%i" % r, flags=0x8)
+        dispatch.rules.append(
+            fontFeatures.Chaining(
+                [self.isols_finas, ["space.urdu"], ends],
+                lookups=[[self.ink_to_ink],[],[]]
+            )
+        )
+        dispatch.rules.append(
+            fontFeatures.Chaining(
+                [self.isols_finas, ends],
+                lookups=[[kernroutine],[],[]]
+            )
+        )
+        self.kern_at_rise[r] = dispatch
+        return dispatch
 
 # This is just a generic version of the above.
 class AtHeight(FEZVerb):
@@ -375,3 +420,7 @@ class AtHeight(FEZVerb):
                     )
                 )
         return [routine]
+
+
+
+

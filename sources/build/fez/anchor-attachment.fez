@@ -123,7 +123,7 @@ Routine OpenSpace {
   Position (@inits <xAdvance=+200>) /sdb|ddb/;
   Position (@inits <xAdvance=+200>) [@medis @finas];
   Position toeda (@inits <xAdvance=+200>);
-} IgnoreLigatures UseMarkFilteringSet /db|toeda/;
+}  UseMarkFilteringSet /db|toeda/;
 
 # The following routines similarly adjust the spacing to various degrees.
 Routine OpenMediumSpace {
@@ -131,7 +131,7 @@ Routine OpenMediumSpace {
   Position (@inits <xAdvance=+250>) [@medis @finas];
   Position (@inits <xAdvance=+250>) /sdb|ddb/;
   Position toeda (@inits <xAdvance=+180>);
-} IgnoreLigatures UseMarkFilteringSet /db|toeda/;
+}  UseMarkFilteringSet /db|toeda/;
 
 Routine OpenBigSpace {
   Position (@inits <xAdvance=+380>) /tdb|haydb/;
@@ -146,12 +146,12 @@ Routine OpenSmallSpace {
   Position ([@inits @isols] <xAdvance=+150>) /db|da|[mf](sd)?\d+/;
   Position DAMMA ([@inits @isols] <xAdvance=+200>);
   Position @all_above_marks ([@inits @isols] <xAdvance=+160>);
-} IgnoreLigatures UseMarkFilteringSet [tdb @all_above_marks];
+}  UseMarkFilteringSet [tdb @all_above_marks];
 
 Routine OpenTinySpace {
   Position (/JIMi/ <xAdvance=+150>) /tdb/;
   Position (@inits <xAdvance=+100>) /db|[mf](sd)?\d+/;
-}  IgnoreLigatures UseMarkFilteringSet /db/;
+}   UseMarkFilteringSet /db/;
 
 # Sometimes the kerning isn't as dramatic as it should be, and you
 # want to tighten it a bit more to ensure you have a good word image.
@@ -215,7 +215,7 @@ Routine ClearUpperDots {
   # Sneaking in another rule here to handle overhanging marks
   Chain ([@isols @finas] [BEi8 TEi8] ^OpenSmallSpace [tda]);
   Chain ([@isols @finas] [BEi8 TEi8] ^OpenTinySpace [dda HAMZA_ABOVE]);
-} IgnoreLigatures;
+} ;
 
 
 # OK, here we go with the avoidance/spacing rules. To make the problem
@@ -236,7 +236,7 @@ Routine ClearUpperDots {
 # should drop to accommodate the VAO more tightly. However, in the
 # positioning rules, it turns out that we want to ignore spaces and just
 # consider the end of word / start of word glyphs. We do this by adding
-# the `IgnoreLigatures` flag to positioning rules - relying on the fact
+# the `` flag to positioning rules - relying on the fact
 # that we have defined `space.urdu` as a "ligature" for this very purpose.
 
 # Anyway, let's go with substitution rules. These are the most
@@ -312,7 +312,7 @@ Routine AtHeight500sub {
 
 
 # And now the positioning rules, again remembering that we need to
-# IgnoreLigatures to avoid having to fiddle with the space glyph between
+#  to avoid having to fiddle with the space glyph between
 # final and initial.
 Routine AtHeight0pos {
     Chain (@alif_like KAFi3 ^OpenSmallSpace); # اکا
@@ -329,7 +329,7 @@ Routine AtHeight0pos {
     Chain ([@vao_like @dal_like @kaf_like] TEi4  @dots ^DropATinyBitMore); # ردیف
     Chain (@bigbowlfina @BEi ^OpenTinySpace); # ین یہ
     Chain (@vao_like /TOEi/ ^OpenTinySpace); # مؤظف
-} IgnoreLigatures UseMarkFilteringSet [@dots @dots_one toeda sda dda];
+}  UseMarkFilteringSet [@dots @dots_one toeda sda dda];
 
 Routine AtHeight200pos {
     Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpace); # کےحقا
@@ -398,7 +398,7 @@ Routine AtHeight200pos {
     Chain (@alif_like TEi15 @dots ^DropATinyBitMore); # ایو
 
 
-} IgnoreLigatures UseMarkFilteringSet [@dots @dots_one sdb.two ddb.two tdb.two HAMZA_ABOVE];
+}  UseMarkFilteringSet [@dots @dots_one sdb.two ddb.two tdb.two HAMZA_ABOVE];
 
 Routine AtHeight400pos {
     Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenMediumSpace [ddb tdb]); # ےپیل
@@ -473,7 +473,7 @@ Routine AtHeight400pos {
     Chain (@bigbowlfina @BEi ^OpenTinySpace); # ی بز
     Chain (@bigbowlfina /FEi/ ^OpenTinySpace); # ی قطع
     Chain (HAMZAu1 @BEi ^OpenTinySpace); # ءنیت
-} IgnoreLigatures UseMarkFilteringSet [@dots @dots_one @dots_two];
+}  UseMarkFilteringSet [@dots @dots_one @dots_two];
 
 Routine AtHeight500pos {
     Chain ([BARI_YEu1 BARI_YEf1] @inits ^OpenSmallSpace); # پر سے
@@ -522,7 +522,7 @@ Routine AtHeight500pos {
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenSpace @DOTm @dots ); # ومچھا
     Chain ([@isols @finas] @dots @DOTi ^OpenSpace ); # ومچھا
     Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
-} IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one @dots_two];
+}  UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one @dots_two];
 
 DefineClass @narrow_inits = @inits & (width < 300);
 
@@ -560,7 +560,7 @@ Routine AtHeight600pos {
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenTinySpace @DOTm @dots); # جومُجھ
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenTinySpace @DOTm @dots ); # جومُجھ
     Chain ([@dal_like @vao_like] ^ClearUpperDots); # ڈیمو
-} IgnoreLigatures UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one toeda HAMZA_ABOVE MADDA];
+}  UseMarkFilteringSet [@dots sdb.one ddb.one tdb.one toeda HAMZA_ABOVE MADDA];
 
 # OK, phew. That was it!
 
