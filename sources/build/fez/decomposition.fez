@@ -10,7 +10,7 @@
 # up in the relevant position-shaping feature.
 Feature ccmp {
   Routine ccmp1 {
-    Substitute BEu1 -> BEu1 sdb;
+    Substitute beh-ar -> BEu1 sdb;
     Substitute lamTahabove-ar -> LAMu1 toeda;
     Substitute teh-ar -> TEu1 dda;
     Substitute theh-ar -> TEu1 tda;

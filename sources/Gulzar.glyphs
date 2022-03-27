@@ -1,5 +1,5 @@
 {
-.appVersion = "1352";
+.appVersion = "3109";
 classes = (
 {
 automatic = 1;
@@ -15025,6 +15025,16 @@ width = 979;
 }
 );
 note = BEu1;
+unicode = 066E;
+},
+{
+glyphname = "beh-ar";
+layers = (
+{
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 600;
+}
+);
 unicode = 0628;
 },
 {
