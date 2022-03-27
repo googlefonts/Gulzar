@@ -204,6 +204,9 @@ Feature kern {
     Position [REu1 REf1] ([sda toeda] <xPlacement=+75>) /SIN[ui]/ [sda dda tda];
     Position [REu1 REf1] [sda toeda] (/TE[ui]/ <xAdvance=+40>) [sda dda tda] @finas;
 
+    # لتركية
+    Position [tda dda] @long_re (/[KG]AFi/ <xAdvance=+80>);
+
   } UseMarkFilteringSet [ sda dda tda toeda SHADDA HAMZA_ABOVE MADDA HAMZA_BELOW];
 
   Routine DotsUnderGaf {
@@ -214,6 +217,7 @@ Feature kern {
     Position (/\.one$/ <yPlacement=-120 xPlacement=+45>) @NarrowMedials @all_above_marks /KAF|GAF/;
     Position /\.one$/ @NarrowMedials (@all_above_marks <yPlacement=-40>) /KAF|GAF/;
     Position (/\.one$/ <yPlacement=-120 xPlacement=+45>) @all_above_marks /KAF|GAF/;
+    Position (/\.one$/ <yPlacement=-20>) /KAF|GAF/;
 
     Position (toeda <yPlacement=-60>) /[KG]AF[mf]/;
     Position @alif_like (/FE[mi]/ <xAdvance=+70> [sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AFf/;
@@ -229,6 +233,8 @@ Feature kern {
     Position MADDA (/KAF|GAF/ <xAdvance=+0>) BARI_YEf1;
     Position MADDA (/KAF|GAF/ <xAdvance=+0>) @medis @medis;
     Position MADDA (/KAF|GAF/ <xAdvance=+200>);
+
+    Position (toeda <yPlacement=-50>) @finas /[KG]AF[iu]/;
 
     # Deeply unfortunate sequence
     Position SINm9 (tda <yPlacement=-150 xPlacement=0>) MIMm3 /[KG]AF[mf]/;
