@@ -465,6 +465,8 @@ Routine AtHeight400pos {
     Chain ([@dal_like @vao_like] @JIMi ^OpenMediumSpaceUnlessSpace tdb); # و چھیا
     Chain ([@dal_like @vao_like] @JIMi ^OpenSmallSpace @dots); # و جھیا
 
+    Chain ([@dal_like @vao_like] @DOTi ^OpenSmallSpace [ddb tdb]); # ر پر
+
     Chain (@vao_like /HAYCi/ ^OpenTinySpace @dots); # وہبل
     Chain (@dal_like /HAYCi/ ^OpenMediumSpace @dots); # رہق
 
@@ -477,7 +479,7 @@ Routine AtHeight400pos {
     Chain (@vao_like        /SINi10/ ^OpenTinySpace); # لوسطى
     Chain (@kaf_like        /SADi/ ^OpenTinySpace); # یت صحنه
 
-    Chain (@kaf_like        @DOTi ^OpenTinySpace tdb); # ک پہلو
+    Chain (@kaf_like        @DOTi ^OpenSmallSpace tdb); # نہ پڑ
     Chain (@kaf_like @dots  @DOTi ^OpenTinySpace tdb); # پ پہلو
     Chain (@kaf_like        /SADi/ ^OpenTinySpace); # یت صحنه
     Chain (@kaf_like @dots  /SADi/ ^OpenTinySpace); # یت صحنه
