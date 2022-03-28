@@ -37,7 +37,8 @@ Feature kern {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
 
 
-    Position ( [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position (@bigbowlfina @inits <xAdvance=+100> [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
+    Position ([ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [REf2 REf3] @inits ( sdb.yb <180 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position [sdb.one tdb.one ddb.one] @DOTm ( [ddb.yb sdb.yb] <0 -250 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ( sdb.yb <205 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
@@ -52,7 +53,7 @@ Feature kern {
     Position ( /HAYCi/ <xAdvance=+50> /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
     Position ( /haydb/ <xPlacement=50 yPlacement=-25> ) JIMf1;
 
-  } UseMarkFilteringSet /haydb|sdb|tdb|ddb|haydb/;
+  } UseMarkFilteringSet /haydb|sdb|tdb|ddb|haydb/ IgnoreLigatures;
 
   DefineClass @WideFinals = @finas & (xMin < 50);
 

@@ -107,6 +107,7 @@ class NastaliqKerning(FEZVerb):
         # Read the parameters
         self.distance_at_closest = args[0].resolve_as_integer()
         self.maxtuck = args[1].resolve_as_integer() / 100.0
+        self.ink_to_ink_routines = {}
 
         # Computing kern values takes a long time, so we cache
         # the computed values in this file.
@@ -137,7 +138,6 @@ class NastaliqKerning(FEZVerb):
         # This will hold kern tables for each rise value.
         self.kern_at_rise = {}
         routines = []
-        self.generate_ink_to_ink(self.parser.font)
 
         # The main entry to our kerning routine. We ignore marks
         # and ligatures (spaces)
@@ -266,13 +266,26 @@ class NastaliqKerning(FEZVerb):
         return result
 
 
-    def generate_ink_to_ink(self, font):
-        ink_to_ink = fontFeatures.Routine("ink_to_ink", flags=0x8|0x4)
+    def ink_to_ink_at(self, r):
+        if r in self.ink_to_ink_routines:
+            return self.ink_to_ink_routines[r]
+
+        # Taper distance based on height to make it visually equal!
+        r_distance = self.distance_at_closest
+        if r == 100:
+            r_distance *= 0.5
+        if r == 200:
+            r_distance *= 0.2
+        if r == 300:
+            r_distance *= 0.2
+
+        ink_to_ink = fontFeatures.Routine("ink_to_ink_%i" % r, flags=0x8|0x4)
+        font = self.parser.font
         for right in self.isols_finas:
             for left in self.inits + self.isols:
                 right_of_left = max(font.glyphs[left].layers[0].rsb, 0)
                 left_of_right = max(font.glyphs[right].layers[0].lsb, 0)
-                dist = int(self.distance_at_closest - (right_of_left + left_of_right))
+                dist = int(r_distance - (right_of_left + left_of_right))
                 if dist == 0:
                     continue
                 ink_to_ink.rules.append(
@@ -284,7 +297,8 @@ class NastaliqKerning(FEZVerb):
                         ],
                     )
                 )
-        self.ink_to_ink = self.parser.fontfeatures.referenceRoutine(ink_to_ink)
+        self.ink_to_ink_routines[r] = self.parser.fontfeatures.referenceRoutine(ink_to_ink)
+        return self.ink_to_ink_routines[r]
 
 
     def generate_kern_table_for_rise(self, r):
@@ -363,7 +377,7 @@ class NastaliqKerning(FEZVerb):
         dispatch.rules.append(
             fontFeatures.Chaining(
                 [self.isols_finas, ["space.urdu"], ends],
-                lookups=[[self.ink_to_ink],[],[]]
+                lookups=[[self.ink_to_ink_at(r)],[],[]]
             )
         )
         dispatch.rules.append(
