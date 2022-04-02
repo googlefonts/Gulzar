@@ -274,8 +274,9 @@ class DetectAndSwap(FEZVerb):
             tdb = ["tdb", "tdb.one", "tdb.two"]
 
         dot_combinations = {
-            "HAYC": (["dda"], ["haydb"]),
+            "HAYC": (["dda", "HAMZA_ABOVE"], ["haydb"]),
             "HAYA": (["HAMZA_ABOVE"],[]),
+            "VAO": (["HAMZA_ABOVE"],[]),
             "SIN": (tda, []),
             "TE": (dda+tda+["toeda", "HAMZA_ABOVE"], ddb+tdb),
             "SAD": (sda, []),
