@@ -1,7 +1,8 @@
 {
-.appVersion = "3109";
+.appVersion = "1359";
 DisplayStrings = (
-"/REf2"
+"/FATHA_TANWIN/DAMMA_TANWIN/KASRA_TANWIN/SHA_DAMMA_TAN/SHA_FATHA_TAN/SHA_KASRA_TAN",
+"/FATHA_TANWIN"
 );
 classes = (
 {
@@ -30368,6 +30369,14 @@ anchors = (
 {
 name = _top;
 position = "{140, 50}";
+},
+{
+name = bottom;
+position = "{0, 0}";
+},
+{
+name = top;
+position = "{128, 337}";
 }
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
@@ -30422,6 +30431,10 @@ anchors = (
 {
 name = _top;
 position = "{187, 60}";
+},
+{
+name = bottom;
+position = "{0, 0}";
 }
 );
 components = (
