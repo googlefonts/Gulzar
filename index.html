@@ -31,6 +31,11 @@
 			.sample {
 				font-family: "Gulzar";
 			}
+			p[lang=ur] { font-family: "Gulzar"; font-size: 20px; line-height: 2.5em; }
+			h2[lang=ur] { font-family: "Gulzar"; margin-top: 12px; }
+			h3[lang=ur] { font-family: "Gulzar"; font-size: 40px; line-height: 2.5em; }
+			h4[lang=ur] { font-family: "Gulzar"; font-size: 35px; line-height: 2.5em; }
+			h5[lang=ur] { font-family: "Gulzar"; font-size: 30px; line-height: 2.5em; }
 			.huge {
 				font-size: 12vw;
 				margin-top: 12vw;
@@ -68,6 +73,17 @@
 
 			.fill {
 				font-size: min(4vw, 48px);
+			}
+			.lang-switch{
+				font-family: sans-serif;
+				margin-left: 30px;
+			}
+			.form-switch {
+				display:  inline-block;
+			}
+			.lang-en,.lang-ur {
+				border: 1px solid #ccc;
+				padding: 3px;
 			}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -184,10 +200,24 @@
 						</div>
 					</div>
 					<div class="py-3 mx-5" id="learn">
-						<h2 class="my-3 fill">
+						<h5 class="lang-switch float-end">
+							<span class="lang-en">EN</span>
+						<span class="form-check form-switch">
+							<input id="lang-switch" class="form-check-input" type="checkbox" role="switch">
+							</span>
+							 <span class="lang-ur">ار</span>
+						</h5>
+
+						<h2 class="my-3 fill" lang="en">
 							Gulzar: a contemporary Urdu Nasta’liq typeface
 						</h2>
-						<h5>Borna Izadpanah</h5>
+						<h2 class="my-3 fill" lang="ur" dir="rtl">
+							گلزار۔ جدید نستعلیق  فونٹ
+						</h2>
+
+						<h5 lang="en">Borna Izadpanah</h5>
+						<h5 lang="ur" dir="rtl">بورنا ایزدپنہ</h5>
+
 						<p lang="en">
 							This project began at the end of 2019 when I was commissioned by
 							Google to design an original Urdu Nasta’liq typeface. Since it was
@@ -197,6 +227,7 @@
 							designed by Alice Savoie as a harmonious counterpart to the
 							Nasta'liq. The background and design process is described below.
 						</p>
+						<p lang="ur" dir="rtl">اس مہم کا آغاز 2019 کے آخر میں تھا جب گوُگل نے مجھے ایک اصل اردو ٹائپ فیس ڈیزائن کرنے کا کام دیا تھا۔ کونکہ میرے لیے اکیلا یہ کامٍ مکمل کرنا نا ممکن تھا، اس لیے کام کو آگے برھانے کے لیے تو میں نے اپنی رفیقِ کار فیونا راس کو بطور کنسلٹنٹ اور سائمن کزنز کوبطور فونٹ انجنیر اس پراجیکٹ میں شرکت کرنے کی دعوت دی۔ الس سیوئی نےانگریزی فونٹ کو نستعلیق جیسا بنانے کے لئے ڈیزائن کیا ۔</p>
 						<figure class="figure">
 							<img
 								src="images/samples.jpg"
@@ -207,8 +238,9 @@
 								specimens
 							</figcaption>
 						</figure>
-						<h3>Background</h3>
-						<p>
+						<h3 lang="en">Background</h3>
+						<h3 lang="ur" dir="rtl">پس منظر</h3>
+						<p lang="en">
 							The first phase of this project involved conducting research into
 							the history of Urdu digital typefaces from the early 1980s. This
 							built on research already conducted for an MA dissertation at the
@@ -228,7 +260,11 @@
 							and largely remained limited to particular technological
 							environments.
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							  شامل تھا۔ یہ یونیورسٹی آف ریڈنگ میں ایم اے مقالہ کے لیے پہلے ہی کی جانے والی تحقیق پر مبنی ہے،  نستعلیق طرز کی ٹائپنگ ارتقا، بورنا ایزدپنہ (2015) کی طرف سے ہوا۔
+اس کام میں احمد مرزا جمیل اور مونوٹائپ کارپوریشن کے مونوٹائپ کے نوری نستعلیق (1981) سمیت کچھ ابتدائی اور قابل ذکر اردو نستعلیق ڈیجیٹل ٹائپ فیس پروجیکٹوں کا تجزیہ بھی شامل تھا؛ مائیک فیلوز، ٹم ہولووے اور فیونا راس کی طرف سے لینوٹائپ کی شیراز <span dir="ltr">(1986-7)</span> اور قلمی (1994)؛ ڈیکو ٹائپ نستعلیق (2010) اور نستعلیق پریس (2013)،  تھامس میلو اور میرجم سومرز۔ ان میں سے ہر نئے آنے والے  ٹائپ فیس نے اردو نستعلیق کے ساتھ ٹائپ سیٹنگ کے لئے حل پیش کیا تاہم، چونکہ ان ٹائپ فیسوں میں سے کوئی بھی اصل میں اوپن ٹائپ فونٹ کے طور پر تیار نہیں کیا گیا تھا، ان کی ایپلی کیشن کے لئے خاص طور پر ڈیزائن کردہ سافٹ ویئر کے استعمال کی ضرورت تھی، اور بڑی حد تک مخصوص تکنیکی ماحول تک محدود رہی۔
+						</p>
+						<p lang="en">
 							More recently a number of OpenType Nasta’liq typefaces have been
 							designed in Iran, Pakistan and Europe which have made valuable
 							advances in Nasta’liq typography. Some of the notable examples
@@ -238,12 +274,20 @@
 							Muhammad Zeeshan Nasar following the calligraphy of Nasrullah Mehr
 							(2017).
 						</p>
-						<h3>The design</h3>
-						<p>
+						<p lang="ur" dir="rtl">
+							حال ہی میں ایران، پاکستان اور یورپ میں اوپن ٹائپ نستعلیق ٹائپ فیس کے متعدد ڈیزائن کیے گئے ہیں جنہوں نے نستعلیق ٹائپوگرافی میں قیمتی پیش رفت کی ہے۔ چند قابل ذکر مثالوں میں امیر احمد فلسفی (2008) کی خطاطی کے بعد حسین زاہدی کے ڈیزائن کردہ ایران نستعلیق شامل ہیں؛ نوٹو نستعلیق اردو از پیٹرک جیاسن اور کمال منصور (2014)؛ نصراللہ مہر (2017) کی خطاطی کی بنیاد پرمحمد ذیشان نصر نے مہر نستعلیق ویب ڈیزائن کی۔
+						</p>
+						</p>
+						<h3 lang="en">The design</h3>
+						<h3 lang="ur" dir="rtl">ڈیزائن</h3>
+						<p lang="en">
 							The design of Gulzar was inspired by carefully collected specimens
 							of Urdu calligraphy and lettering which were closely studied to
 							achieve an accurate representation of the Urdu flavour of the
 							Nasta’liq style (Fig 2).
+						</p>
+						<p lang="ur" dir="rtl">
+							گلزار کا ڈیزائن اردو خطاطی اور حروف تہجی کے جمع کردہ نمونوں سے متاثر تھا جن کا قریب سے مطالعہ کیا گیا تاکہ نستعلیق طرز (تصویر 2) کے اردو انداز کی درست نمائندگی حاصل کی جا سکے۔
 						</p>
 						<figure class="figure mx-auto">
 							<img
@@ -255,13 +299,16 @@
 								and Urdu (bottom) flavours of the Nasta’liq style.
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							The models however were not merely traced and digitised, but they
 							were used as an inspiration to design a typeface with a
 							contemporary feel. Thus Gulzar was designed typographically rather
 							than calligraphically. This is particularly evident in the
 							treatment of terminals which were designed to look clear and
 							consistent on different platforms and in different sizes (Fig 3).
+						</p>
+						<p lang="ur" dir="rtl">
+							تاہم ماڈلز کا صرف سراغ نہیں لگایا گیا اور انہیں ڈیجیٹلائز کیا گیا بلکہ انہیں تقاظی احساس کے ساتھ ٹائپ فیس ڈیزائن کرنے کے لئے ایک تحریک کے طور پر استعمال کیا گیا۔ اس طرح گلزار کو خطوط نگاری کی بجائے ٹائپنگ کے لحاظ سے ڈیزائن کیا گیا تھا۔ یہ خاص طور پر "ٹرمینلز" کے استعمال میں واضح ہے جو مختلف پلیٹ فارموں اور مختلف سائز (تصویر 3) میں واضح اور مستقل نظر آنے کے لئے ڈیزائن کیا گیا تھا۔
 						</p>
 						<figure class="figure mx-auto">
 							<img
@@ -272,7 +319,7 @@
 								Fig 3. Note the sharply cut terminals.
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							After collecting the most suitable models for the letterforms,
 							Amir Mahdi Moslehi, an Iranian designer and calligrapher, was
 							asked to produce initial calligraphic patterns which would ensure
@@ -282,6 +329,9 @@
 							Nasta’liq letterforms (Fig 4). This is carefully controlled to
 							produce the balance of the letterforms and the distribution of the
 							thick and thin strokes.
+						</p>
+						<p lang="ur" dir="rtl">
+							مختلف شکلوں کے فونٹ کے لئے موزوں ترین ماڈل جمع کرنے کے بعد ایرانی ڈیزائنر اور خطاط عامر مہدی مصلحی سے کہا گیا کہ وہ ابتدائی خطاطی کے نمونے تیار کریں جو نستعلیق کے لئے انتہائی اہم شکلوں کی یکسانیت کو یقینی بنائیں گے۔ اس طرز میں خطاط قلم کی نب کے مختلف حصوں کا استعمال کرتے ہیں اور بار بار قلم کو   گھماتے ہوئے نستعلیق حروف (تصویر 4) کی شکل بناتے ہیں۔ حروف کا توازن اور موٹی اور پتلی شکلوں کا فرق ظاہر کرنے کے لئے اس کو احتیاط سے کنٹرول کیا جاتا ہے۔
 						</p>
 						<figure class="figure mx-auto">
 							<img
@@ -293,7 +343,7 @@
 								writing different parts of each letterform.
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							The first sketches that Amir provided were not satisfactory since
 							they clearly showed the Persian calligraphic sensibilities which
 							were not in accordance with the collected Urdu models. The
@@ -309,6 +359,9 @@
 							extensively tested and reviewed to ensure the quality of the
 							design.
 						</p>
+						<p lang="ur" dir="rtl">
+							عامر نے جو خاکے  پہلے فراہم کیے وہ اطمینان بخش نہیں تھے کیونکہ انہوں نے فارسی خطاطی کو واضح طور پر دکھایا جو اردو نمونوں کے مطابق نہیں تھے۔ اردو نمونوں کی اہم اور امتیازی خصوصیات  کے بارے میں عامر کو بتایا گیا۔ اور اس کی بنیاد پر انہوں نے ایسے نمونے تیار کیے جو فراہم کردہ نمونوں سے بہت مطابقت رکھتےتھے۔ تاہم یہ بات واضح ہو گئی کہ اردو نستعلیق کی اب بھی چند اہم خصوصیات  پر صحیح طور پر عمل درآمد نہیں کیا گیا اور اس طرح ان میں سے چند نئے نمونے ہی اختیار کیے گئے جن میں کچھ تبدیلی کی گئی ہے۔لہذا ڈیزائن کے عمل کے لئے گلزار میں تقریباً ہر شکل کے لیے کئی بار  ڈرائنگ  کی گئی ، یہاں تک کہ یہ ڈیجیٹل شکل میں مطلوبہ معیار تک پہنچ گیا۔ اس عمل میں ڈیزائن کے معیار کو یقینی بنانے کے لیے ہر انداز کی بڑے پیمانے پر جانچ کی گئی اور اس کا جائزہ لیا گیا۔
+</p>
 						<figure class="figure mx-auto">
 							<img src="images/ain.jpeg" class="figure-img img-fluid rounded" />
 							<figcaption class="figure-caption">
@@ -317,7 +370,7 @@
 								(from left to right).
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							One of the most challenging aspects in the design process of
 							Gulzar was to devise the character set (glyphset) required to
 							produce a fully functioning Nastaliq typeface. Initially this was
@@ -340,6 +393,9 @@
 							typesetting, which often uses foreign words and names that the
 							font should be able to render.
 						</p>
+						<p lang="ur" dir="rtl">
+							گلزار کے ڈیزائن کے عمل میں سب سے زیادہ پیچیدہ  پہلوؤں میں سے ایک یہ تھا کہ مکمل طور پر کام کرنے والے نستعلیق ٹائپ فیس تیار کرنے کے لئے درکار کریکٹر سیٹ بنا کیا جائے۔ ابتدائی طور پر یہ اس نقطہ نظر سے متاثر تھا جس کا تصور مائیک فیلوز، ٹم ہولووے اور فیونا راس نے لینوٹائپ شیراز اور قلمی ٹائپ فیس کا تصوّر پیش کیا تھا۔ یہ پہلے نستعلیق فونٹ تھے جنہوں نے ایک طریقہ فراہم کیا جس میں حروف کو ان کی انفرادی شکلوں میں جمع کیا گیا تھا اور ان کی صحیح پوزیشنوں میں نقطوں اور اعراب کے ساتھ خطاطی کے ساتھ ترتیب دیا گیا تھا۔ اس نظام میں حروف کو نسبتاً معمولی تعداد میں شکلوں یا حروف میں تقسیم کیا گیا تھا جو سافٹ ویئر میں پروگرام کردہ خطاطی کے قواعد کے تحت چلائے جاتے تھے۔ اس لیے مونوٹائپ کی نوری نستعلیق کے برعکس جو اردو زبان میں موجود حروف کے گروہوں تک محدود تھی، تقریباً کوئی بھی حروف اس طریقے  سے حاصل کیے جا سکتے تھے۔ مزید برآں، حروف کے ہر پہلو کو نامزد کرکے، نقطے اوراعراب  مخصوص سافٹ ویئر تکنیک کے ذریعے تقرائو سے بچنے  کے لیےاپنی پوزیشن تبدیل کرسکتے ہیں۔ یہ خاص طور پر "بڑی یے" کے لیے اہم تھا جو اردو متن میں کثرت سے استعمال ہوتا ہے۔ یہ صلاحیت اخباروں کے ٹائپ سیٹنگ کے لیے ضروری تھی، جس میں اکثر غیر ملکی الفاظ اور نام استعمال کیے جاتے ہیں جو فونٹ کو پیش کرنے کے قابل ہونا چاہئے۔
+</p>
 						<figure class="figure mx-auto">
 							<img
 								src="images/qalmi.jpeg"
@@ -350,7 +406,7 @@
 								in Sheeraz and Qalmi typefaces.
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							In Sheeraz and Qalmi, each undotted letter (called rasm in Arabic)
 							consisted of a group of initial, medial, final and unconnected
 							variants and alternatives. Most of the connecting forms, such as
@@ -364,6 +420,9 @@
 							reduced the number of glyphs which needed to be designed, but also
 							ensured smooth and seamless connections.
 						</p>
+						<p lang="ur" dir="rtl">
+							شیراز اور قلمی میں ہر غیر نقطہ دار حرف (جسے عربی میں رسم کہا جاتا ہے) ابتدائی، ثالثی، حتمی اور غیر مربوط متغیرات اور متبادلات کے ایک گروپ پر مشتمل تھا۔ زیادہ تر جڑنے والی شکلیں، جیسے کہ تصویر 6 میں آویزاں کی گئی شکلیں، داخلے اور خروج کے لاٗنوں کے ساتھ ڈیزائن کی گئی تھیں جو "کرسیو کنکشن"  بنانے کے لئے ایک دوسرے کے مطابق ہوں گی۔ گلزار میں اس میں مزید ترمیم کی گئی۔ انٹری اور ایگزٹ اسٹروکس دونوں شامل کرنے کے بجائے، ہر حرف میں ایک ایگزٹ اسٹروک ہوتا ہے، خاص طور پر اس کے بعد کے حرف سے ہم آہنگ ہونے کے لئے ڈیزائن کیا گیا ہے (تصویر7)۔ اس نقطہ نظر کی بدولت حروف گروپوں کی ابتدائی شکلوں کو بھی ثالثی پوزیشن میں اجزاء کے طور پر دوبارہ استعمال کیا جاسکتا ہے۔ اس سے نہ صرف "گلیف" کی تعداد میں کمی آئی جسے ڈیزائن کرنے کی ضرورت تھی بلکہ غلطیوں کے بغیر کنکشن کو بھی یقینی بنایا گیا۔
+						</p>
 						<figure class="figure mx-auto">
 							<img
 								src="images/entry-exit.jpeg"
@@ -374,7 +433,7 @@
 								typefaces (left) and in Gulzar (right).
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							In Nasta’liq style, depending on the size and application,
 							calligraphers make various modifications in the proportions and
 							stroke thicknesses to achieve the best optical rendition of the
@@ -387,8 +446,13 @@
 							suitable for sustained reading. Therefore, loops and apertures are
 							designed more open to ensure clarity in small sizes.
 						</p>
-						<h3>Latin counterpart</h3>
-						<p>
+						<p lang="ur" dir="rtl">
+							نستعلیق میں، سائز اور ایپلی کیشن پر منحصر، خطاط  حروف کی بہترین بصری پیشکش حاصل کرنے کے لئے تناسب اور لاٗنوں کی موٹائی میں مختلف تبدیلیاں کرتے ہیں۔ ایک ڈیجیٹل ٹائپ فیس میں، جو مختلف سائز اور مختلف پرنٹ یا ڈیجیٹل پلیٹ فارمز پر کام کرنے والا ہے، اس معیار کو نافذ کرنا بہت مشکل ہے۔ مثال کے  طور پر ایک فونٹ میں متعدد بصری حدود شامل ہوں گی جو مختلف سائز میں بہترین ترسیل کو یقینی بنانے کے لئے ڈیزائن کی گئی ہیں۔ گلزار میں اس کا مقصد ایک ٹائپ فیس تیار کرنا ہے جو ٹیکسٹ سائز میں قابل فہم ہو اور مستقل پڑھنے کے لیے موزوں ہو۔ لہذا، "لوپس" اور "اپرچر" چھوٹے سائز میں وضاحت کو یقینی بنانے کے لئے زیادہ کھلے ڈیزائن کیے گئے ہیں۔
+						</p>
+
+						<h3 lang="en">Latin counterpart</h3>
+						<h3 lang="ur" dir="rtl">لاطینی ہم منصب</h3>
+						<p lang="en">
 							The Latin counterpart was conceived in coherence with Gulzar’s
 							underlying principles, i.e. a typeface that is rooted in a
 							traditional calligraphic structure but expresses a contemporary
@@ -403,19 +467,29 @@
 							contrast present in the Nasta’liq, while remaining embedded in
 							their classical typographic proportions.
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							لاطینی ہم منصب کا تصّور گلزار کے بنیادی اصولوں یعنی ایک ٹائپ فیس کے ساتھ ہم آہنگی کے ساتھ کیا گیا تھا جو روایتی خطاطی ڈھانچے میں جڑا ہوا ہے لیکن تفصیلات کی  پیش کش  کے ساتھ ایک عصری احساس کا اظہار کرتا ہے؛ اور ایک ٹائپ فیس جو مستقل مطالعہ کے لئے متن سائز پر کارکردگی کا مظاہرہ کر سکتا ہے۔ جب  نستعلیق ڈیزائن مضبوطی سے قائم ہو گیا تو لاطینی ہم منصب کے لیے ایک تجویز پیش کی گئی جس نے دو ممتاز انسانی حوالوں سے تحریک لی: رابرٹ گرینجون کی ٹائپ فیسوں کالچکدار اورمضبوط تناسب، ہینڈرک وان ڈین کیر کے کام کے مخصوص احساس کے ساتھ۔ اس طرح لاطینی حروف میں ان کی خطاطی جڑوں کے کچھ لطیف حوالے دکھائے گئے ہیں اور نستعلیق میں موجود تضاد کی بازگشت سنائی دیتی ہے جبکہ وہ اپنے کلاسیکی خطاطی تناسب میں شامل رہتے ہیں۔
+						</p>
+						<p lang="en">
 							Particular attention has been given to the proportions, weight and
 							contrast of the Latin so that it sets harmoniously with the
 							Nasta’liq. Defining the most appropriate vertical proportions, in
 							particular, was a crucial aspect of pairing both scripts and
 							making sure that they belonged together.
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							لاطینی کے تناسب، حجم اور تضاد پر خاص توجہ دی گئی ہے تاکہ یہ نستعلیق کے ساتھ ہم آہنگی ہو۔ خاص طور پر سب سے مناسب عمودی تناسب کی وضاحت کرنا دونوں فونٹ کو جوڑنے اور اس بات کو یقینی بنانے کا ایک اہم پہلو تھا کہ وہ ایک ساتھ رہیں۔
+						</p>
+						<p lang="en">
 							Gulzar is not the first OpenType Nasta’liq typeface, but it is the
 							first Nasta’liq type for which an original Latin counterpart was
 							designed. It covers all the required transliterations characters
 							to transcribe Arabic, Persian and Urdu languages.
 						</p>
+						<p lang="ur" dir="rtl">
+							گلزار پہلا اوپن ٹائپ نستعلیق ٹائپ فیس نہیں ہے، لیکن یہ پہلی نستعلیق قسم  کا فونٹ ہے جس کے لیے لاطینی زبان کا اصل ہم منصب ڈیزائن کیا گیا تھا۔ اس میں عربی، فارسی اور اردو زبانوں کو لکھنےکے لئے تمام مطلوبہ حروف  مشتمل ہیں۔
+						</p>
+
 						<figure class="figure mx-auto">
 							<img
 								src="images/latin.jpeg"
@@ -425,8 +499,9 @@
 								Fig 8. Transliteration of an Urdu phrase.
 							</figcaption>
 						</figure>
-						<h3>Next Steps</h3>
-						<p>
+						<h3 lang="en">Next Steps</h3>
+						<h3 lang="ur" dir="rtl">اگلے مراحل</h3>
+						<p lang="en">
 							Some contextual alternates are already implemented in the font and
 							can be manually implemented by the users. Examples are <i>kaf</i>,
 							<i>gaf</i>, <i>be</i>, <i>te</i>, <i>fe</i> and <i>sin</i>, and
@@ -436,6 +511,10 @@
 							<a href="https://github.com/simoncozens/Gulzar/issues/45"
 								>tracking issue</a
 							>.)
+						</p>
+						<p lang="ur" dir="rtl">
+							 ہیں۔ اس کی مثالیں ک، گ، ہ، ت، ف اور س  ہیں اور کچھ لمبی شکلیں بھی فراہم کی جاتی ہیں۔ تاہم، اس مرحلے پر لمبائی (کشیدہ یاطتویل) کی حمایت نہیں کی جاتی ہے، لیکن اسے مستقبل میں جاری ہونے والی شمارے میں شامل کیا جاسکتا ہے۔ (<a href="https://github.com/simoncozens/Gulzar/issues/45"
+								>ٹریکنگ کے مسائل</a>  دیکھیں)
 						</p>
 						<figure class="figure mx-auto">
 							<img
@@ -447,14 +526,17 @@
 								Gulzar.
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							Other potential expansions of the project will include an optical
 							size axis and a bold style to provide a better text hierarchy
 							where required. Currently, Gulzar fully supports Arabic, Persian
 							and Urdu languages and, hopefully, future updates will include
 							wider support for other languages which use the Arabic script.
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							وجیکٹ کی دیگر ممکنہ توسیعوں میں ایک بصری سائز محور اور ایک "بولڈ" طرز شامل ہوگا تاکہ جہاں ضرورت ہو ایک بہتر متن کی درجہ بندی فراہم کی جاسکے۔ فی الحال گلزار عربی، فارسی اور اردو زبانوں کی مکمل حمایت کرتا ہے اور امید ہے کہ مستقبل کی "اپ ڈیٹس" میں دیگر زبانوں کی وسیع تر حمایت شامل ہوگی جو عربی رسم الخط استعمال کرتی ہیں۔
+ 						</p>
+						<p lang="en">
 							This project's aim is to contribute to a better representation of
 							Arabic-script writing styles across different platforms. It is not
 							only a new typeface but offers a novel approach in designing
@@ -467,6 +549,9 @@
 							typefaces which are not limited by Latin-script-oriented
 							typesetting technologies, but which promote a more inclusive and
 							diverse approach in typeface design.
+						</p>
+						<p lang="ur" dir="rtl">
+اس پروجیکٹ کا مقصد مختلف پلیٹ فارموں پر عربی رسم الخط لکھنے کے انداز کی بہتر نمائندگی میں حصہ ڈالنا ہے۔ یہ نہ صرف ایک نیا ٹائپ فیس ہے بلکہ ٹائپ فیس ڈیزائن کرنے میں ایک نیا نقطہ نظر پیش کرتا ہے جو اسکرپٹ قوانین کی درست نمائندگی کرنے اور موجودہ ٹیکسٹ رینڈرنگ ٹیکنالوجیز کی حدود کو آگے بڑھانے کے لئے ڈیزائن کیا گیا ہے۔ چونکہ یہ ایک اوپن سورس پروجیکٹ ہے، ہم دیگر ڈیزائنرز اور فونٹ بنانے والوں کی حوصلہ افزائی کرتے ہیں کہ وہ اپنے پسندیدہ طرزی اظہار کی بنیاد پر مزید ٹائپ فیس بنانے کے لئے یہ طریقہ اپنائیں۔ ہمیں امید ہے کہ یہ عربی اسکرپٹ ٹائپ فیس ڈیزائن کرنے میں ایک اہم موڑ ہوگا جو لاطینی اسکرپٹ پر مبنی ٹائپ سیٹنگ ٹیکنالوجیز کے ذریعہ محدود نہیں ہیں، لیکن جو ٹائپ فیس ڈیزائن میں زیادہ جامع اور متنوع نقطہ نظر کو فروغ دیتے ہیں۔
 						</p>
 						<h3>Engineering of Gulzar</h3>
 						<p>
@@ -610,46 +695,71 @@
 							>
 							containing the layout rules.
 						</p>
-						<h3>Credits</h3>
-						<p>
+						<h3 lang="en">Credits</h3>
+						<h3 lang="ur" dir="rtl">کریڈٹز</h3>
+						<p lang="en">
 							Gulzar is funded by Google and released under the SIL Open Font
 							Licence.
 						</p>
-						<ul>
-							<li>
+						<p lang="ur" dir="rtl">
+							گلزار کو گوگل کی طرف سے مالی اعانت فراہم کی جاتی ہے اور   اسے     SIL  اوپن فونٹ لائسنس کے تحت جاری کیا جاتا ہے ۔
+						</p>
+						<ul dir="auto">
+							<li lang="en">
 								<a class="text-secondary" href="mailto:borna.izad@gmail.com"
 									>Borna Izadpanah</a
 								>
 								(Principal Designer and Project Leader)
 							</li>
-							<li>
+							<li lang="ur">
+								<a class="text-secondary" href="mailto:borna.izad@gmail.com">بورنا ایزدپنہ</a>: پرنسپل ڈیزائنر اور پروجیکٹ لیڈر
+							</li>
+							<li lang="en">
 								<a class="text-secondary" href="mailto:simon@simon-cozens.org"
 									>Simon Cozens</a
 								>
 								(Font Engineering)
 							</li>
-							<li>
+							<li lang="ur">
+								<a class="text-secondary" href="mailto:simon@simon-cozens.org"
+									>سائمن کزنز</a
+								>: فونٹ انجینئرنگ
+							</li>
+							<li lang="en">
 								<a class="text-secondary" href="mailto:savoiealice@gmail.com"
 									>Alice Savoie</a
 								>
 								(Designer, Gulzar Latin)
 							</li>
-							<li>
+							<li lang="ur">
+								<a class="text-secondary" href="mailto:savoiealice@gmail.com"
+									>ایلس سیوئی</a
+								>: ڈیزائنر، گلزار لاطینی
+							</li>
+							<li lang="en">
 								<a class="text-secondary" href="mailto:frosstype@gmail.com"
 									>Fiona Ross</a
 								>
 								(Consultant, Gulzar Urdu)
 							</li>
-							<li>Amir Mahdi Moslehi (Calligraphic adviser, Gulzar Urdu)</li>
-							<li>Martin Dodds (Consultant, Gulzar Urdu)</li>
+							<li lang="ur">
+								<a class="text-secondary" href="mailto:frosstype@gmail.com"
+									>فیونا راس</a
+								>: کنسلٹنٹ، گلزار اردو
+							</li>
+							<li lang="en">Amir Mahdi Moslehi (Calligraphic adviser, Gulzar Urdu)</li>
+							<li lang="ur">امیر مہدی مصلحی: خطاطی کے مشیر، گلزار اردو</li>
+							<li lang="en">Martin Dodds (Consultant, Gulzar Urdu)</li>
+							<li lang="ur">مارٹن ڈوڈز: کنسلٹنٹ، گلزار اردو</li>
 						</ul>
 						<img
 							src="images/googlefonts.png"
 							class="img-fluid mb-4"
 							style="max-width: 300px"
 						/>
-						<h3>Thanks</h3>
-						<p>
+						<h3 lang="en">Thanks</h3>
+						<h3 lang="ur" dir="rtl">شکریہ</h3>
+						<p lang="en">
 							Our team would like to thank Dave Crossland and Chris Simpkins for
 							making this project possible. We are also grateful to those who
 							generously helped us by testing various versions of Gulzar and
@@ -659,8 +769,12 @@
 							who are still reviewing the design and look forward to receiving
 							their feedback.
 						</p>
-						<h3 id="issues">Reporting issues</h3>
-						<p>
+						<p lang="ur" dir="rtl">
+							ہماری ٹیم اس پروجیکٹ کو ممکن بنانے کے لئے ڈیو کراس لینڈ اور کرس سمپکنز کا شکریہ ادا کرنا چاہے گی۔ ہم ان لوگوں کے بھی شکر گزار ہیں جنہوں نے گلزار کے مختلف ورژن کو جانچ کر ہماری دل کھول کر مدد کی اور ہمیں انتہائی مفید رائے دی۔ خاص طور پر اویس اتھر، بہمن اسلمی، عبیرا کامران، پاشا ایم خان، دمون خانجنزادہ، سعادت متین اور عادل سومرو۔ ہم ان لوگوں کا شکریہ ادا کرتے ہیں جو اب بھی ڈیزائن کا جائزہ لے رہے ہیں اور ان کی رائے حاصل کرنے کے منتظر ہیں۔
+						</p>
+						<h3 id="issues" lang="en">Reporting issues</h3>
+						<h3 id="issues" lang="ur" dir="rtl">مسائل کی اطلاع دینا</h3>
+						<p lang="en">
 							Although a substantial amount of work has gone into producing the
 							best possible result when typesetting with Gulzar and avoiding
 							clashes, at this point in time it is extremely difficult to
@@ -679,7 +793,10 @@
 								>tracking issue</a
 							>.)
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							اگرچہ گلزار کے ساتھ ٹائپ سیٹنگ اور جھڑپوں سے بچنے کے بہترین ممکنہ نتیجہ پیدا کرنے میں کافی کام ہوا ہے، لیکن اس وقت اوپن ٹائپ نستعلیق ٹائپ فیس تیار کرنا انتہائی مشکل ہے جو ہر ممکنہ حرف کے امتزاج کا خود بخود اندازہ لگا سکتا ہے اور انہیں صحیح طریقے سے پیش کر سکتا ہے۔ لہذا، ایسی مثالیں ہوسکتی ہیں جہاں کچھ ترتیبات صحیح طور پر نہیں دکھائی جاتی ہیں۔
+					</p>
+						<p lang="en">
 							To report an issue or to make a request for enhancements, please
 							visit the
 							<a href="https://github.com/simoncozens/Gulzar/issues"
@@ -689,10 +806,22 @@
 							account and log in. You will then be able to use the green button
 							on the right ("New issue") to file an issue.
 						</p>
+						<p lang="ur" dir="rtl">
+							اس معاملے میں، ہم صارفین کو دعوت دیتے ہیں کہ وہ ایسے مسائل یا کسی اور مسئلے کی اطلاع جو انہیں  پیش       آ سکتے ہیں <a href="https://github.com/simoncozens/Gulzar/issues">GitHub</a> کو دیں اور ہم ان سے نمٹنے کی پوری کوشش کریں گے۔ ہم ایڈوبی اِن ڈیزائن اور السٹریٹر جیسے پلیٹ فارموں پر گلزار جیسے ٹائپ فیسوں کے لئے مناسب حمایت کی کمی سے واقف ہیں۔ تاہم فوٹو شاپ کا تازہ ترین ورژن ("ہرف بز" کے نفاذ کی بدولت) گلزار کو صحیح طور پر دکھاتا ہے اور ہمیں یقین ہے کہ دیگر ایڈوبی ایپلی کیشنز جلد ہی اس کی پیروی کریں گی۔ (ٹریکنگ کا مسئلہ دیکھیں.)
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<script src="typetester.js"></script>
+		<script>
+$(function() {
+	$("[lang=ur]").hide();
+	$("[lang=en]").show();
+	$("#lang-switch").click(function() {
+		$("[lang=ur],[lang=en]").toggle();
+	})
+})
+</script>
 	</body>
 </html>
