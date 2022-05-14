@@ -1,5 +1,5 @@
 {
-.appVersion = "1359";
+.appVersion = "3072";
 DisplayStrings = (
 "/FATHA_TANWIN/DAMMA_TANWIN/KASRA_TANWIN/SHA_DAMMA_TAN/SHA_FATHA_TAN/SHA_KASRA_TAN",
 "/FATHA_TANWIN"
@@ -46,7 +46,7 @@ value = "https://scripts.sil.org/OFL";
 }
 );
 date = "2022-02-02 17:24:20 +0000";
-designer = "Borna Izadpanah, Alice Savoie, Simon Cozens, Fiona Ros";
+designer = "Borna Izadpanah, Alice Savoie, Simon Cozens, Fiona Ross";
 familyName = Gulzar;
 features = (
 {
