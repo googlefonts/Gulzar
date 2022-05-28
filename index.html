@@ -665,8 +665,9 @@
 							ٹائپ‌سیٹنگ ٹیکنالوجیز کی لاطینی حدود سے باہر قدم نکالیں گے، اور جو ٹائپ فیس ڈیزائن میں ایک جامع اور متنوع نقطۂ نظر 
 							کو فروغ دیں گے۔
 						</p>
-						<h3>Engineering of Gulzar</h3>
-						<p>
+						<h3 lang="en">Engineering of Gulzar</h3>
+						<h3 lang="ur" dir="rtl">گلزار کی انجینئرنگ</h3>
+						<p lang="en">
 							Engineering a Nastal’iq font with OpenType technology was a huge
 							challenge. The first stages involved understanding the scope of
 							the problem and examining existing approaches, notably that of
@@ -677,7 +678,13 @@
 							into <i>rasm</i> and <i>nukte</i> - ultimately we needed to
 							develop many of our own techniques.
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							اوپن ٹائپ ٹیکنالوجی میں نستعلیق فونٹ کو تیار کرنا ایک عظیم چیلنج تھا۔ ابتدائی مراحل میں ہم نے مسئلے کے سکوپ کا اندازہ
+							لگایا اور موجودہ پروجیکٹس کا جائزہ لیا، جن میں خاص طور پر نوٹو نستعلیق اردو، اور لائنو‌ٹائپ قلمی کی ٹیکنالوجی کے پیٹنٹ
+							کا مطالعہ کیا۔ ہم نے ان دونوں پروجیکٹس کے کچھ پہلوؤں کو اپنایا بھی — قلمی کے سیاقی متبادلات کا نظام، اور نوٹو میں حروف
+							کو رسم اور نقطوں میں جدا کرنے کا طریقہ — لیکن بالآخر ہمیں اپنے طور پر ہی ٹیکنالوجیز کو تیار کرنے کی ضرورت پیش آئی۔
+						</p>
+						<p lang="en">
 							Indeed, the Gulzar project birthed a number of new technologies,
 							without which it would not have been possible to achieve the
 							result we wanted: first, the
@@ -709,7 +716,31 @@
 							based on test-driven design was developed to ensure that
 							development did not cause regressions to desired behaviour.
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							درحقیقیت، گلزار پروجیکٹ نے متعدد نئی ٹیکنالوجیز کو جنم دیا، جن کے بغیر ہمارے مطلوبہ نتائج کا حصول ممکن نہ تھا: اول،
+							<a
+								class="text-secondary"
+								href="https://fez.readthedocs.io/en/latest/">
+								FEZ زبان</a>
+								، جو اڈوب کی فیچر زبان کا مزید لچکدار اور پروگرامنگ کے لیے زیادہ موزوں متبادل ہے؛
+								<a
+								class="text-secondary"
+								href="http://corvelsoftware.co.uk/crowbar/"
+								>Crowbar</a>
+								اوپن ٹائپ ڈی‌بگر، جو لے‌آؤٹ کے اصولوں کی جانچ پڑتال کے لیے انمول ثابت ہوا؛ ٹکراؤ کی نشاندہی کرنے کے لیے 
+								ایک نئی لائبریری،
+								<a
+								class="text-secondary"
+								href="https://github.com/googlefonts/collidoscope"
+								>Collidoscope</a>
+								، جس نے نقطوں کی جگہ متعین کرنے والے الگورتھم کو لکھنے میں معاونت کی؛اور<a
+								class="text-secondary"
+								href="https://googlefonts.github.io/tdd-for-otl/"
+								> فونٹ کے معیار کو پرکھنے کے لیے</a>
+								ٹسٹس پر مبنی ڈیزائن (test-driven design)، تاکہ اس بات کو یقینی بنایا جا سکے کہ نئی تبدیلیوں کی وجہ
+								سے فونٹ میں درست کی جانے والی پرانی غلطیاں دوبارہ نمودار نہ ہوں۔
+						</p>
+						<p lang="en">
 							With contextual glyph substitution and decomposition in place, the
 							major engineering requirements of a Nastal’iq design are the
 							correct placement of dots; achieving tight but even fitting; and
@@ -717,7 +748,13 @@
 							to their right (particular <i>baṛī ye</i>, but also final
 							<i>jim</i>, <i>ain</i>, and <i>choti ye</i>).
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							گلفس کی سیاقی تبدیلی اور حروف کو ان کے عناصر میں جدا کر لینے کے بعد نستعلیق کی اگلی اہم ضروریات یہ ہیں:
+							نقطوں کی درست تعیناتی؛ حروف یا الفاظ کے درمیان چست لیکن متوازن فاصلہ، یا فِٹنگ (fitting)؛ اور کچھ ایسے
+							حروف کا خصوصی برتاؤ جو اپنی دائیں جانب موجود متن پر اثر انداز ہوتے ہیں (خصوصاً بڑی ے، لیکن آخر میں آنے 
+							والے ج، ع، اور چھوٹی ی بھی)۔
+						</p>
+						<p lang="en">
 							In Gulzar, <i>dot placement</i> and fitting are intertwined; dots
 							are first placed using mark positioning as normal, but special
 							consideration is given to the interaction between the final
@@ -729,6 +766,15 @@
 							would collide, and in these situations the dots are moved to
 							second or third alternate anchor positions. (See green arrow.)
 						</p>
+						<p lang="ur" dir="rtl">
+							گلزار میں نقطوں کی جگہ کے تعین اور فِٹنگ کا ایک دوسرے سے گہرا تعلق ہے؛ پہلے قدم پر نقطوں کو عمومی
+							مارک پوزیشننگ (mark positioning) کے ذریعے بٹھایا جاتا ہے، لیکن پیوستہ حروف کے ہر سلسلے کے
+							آخری کیریکٹر اور اگلے سلسلے کے پہلے کیریکٹر کے باہمی تعلق کو بھی خاص طور پر اہمیت دی جاتی ہے،
+							اور ایسی جگہوں پر سیاقی اصولوں کے ذریعے نقطوں کی درست جگہ کا تعین کیا جاتا ہے۔ (تصویر 10 میں سرخ
+							تِیروں کو دیکھیے۔) آخر میں، ایک مفصل تلاش کے ذریعے ایسی صورتوں کا پتہ چلایا جاتا ہے جہاں نقطے اپنی قدرتی
+							جگہوں پر بھی دوسری اشکال کے ساتھ ٹکرا رہے ہوں، اور ایسے نقطوں کو ان کی دوسری یا تیسری متبادل جگہ پر
+							منتقل کیا جاتا ہے۔ (ہرے تِیر کو دیکھیے۔)
+						</p>
 						<figure class="figure mx-auto">
 							<img
 								src="images/repositioning.png"
@@ -739,7 +785,7 @@
 								as collision avoidance.
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							<i>Tight fitting</i> is achieved through an
 							<a
 								class="text-secondary"
@@ -749,6 +795,15 @@
 							which determines the correct spacing between the final character
 							of a sequence and the initial character of the next, with
 							reference to the “height” of the following sequence.
+						</p>
+						<p lang="ur" dir="rtl">
+							چست فِٹنگ کے حصول کے لیے ایک
+							<a
+								class="text-secondary"
+								href="https://googlefonts.github.io/nastaliq-autokerning/"
+								>خودکار نظام</a>
+								استعمال کیا گیا ہے جو پیوستہ حروف کے سلسلوں کے آخری کیریکٹر اور اگلے سلسلے کے پہلے کیریکٹر
+								کے درمیان درست فاصلہ معلوم کرتا ہے، اور جس میں اگلے سلسلے کی ”اونچائی“ کو بھی مدِّ نظر رکھا جاتا ہے۔
 						</p>
 						<figure class="figure mx-auto">
 							<img
@@ -760,7 +815,7 @@
 								correct distances at different heights.
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							<i>Special handling</i> of <i>baṛī ye</i> and other sequences was
 							achieved through a combination of techniques: substituting mark
 							glyphs affected by the <i>baṛī ye</i> swash by unanchored variants
@@ -771,6 +826,13 @@
 							rightward strokes that only affect a single previous glyph,
 							contextual positioning rules achieved the same objective.
 						</p>
+						<p lang="ur" dir="rtl">
+							بڑی ے اور اس کے متعلقہ سلسلوں کے لیے خصوصی طریقے استعمال کیے گئے:ایسے نقطوں یا اعراب کو، جو 
+							بڑی ے کے نچلے سٹروک کی زد میں آتے تھے، متبادل گلفس سے تبدیل کیا گیا تاکہ وہ جگہ متعین کرنے کے عمومی
+							نظام کا حصہ نہ بنیں، اور پھر ان کو بالا میں بیان کیے گئے ٹکراؤ سے بچانے کے الگورتھم سے ملتے جلتے الگورتھم
+							سے گزار کر درست جگہوں پر منتقل کیا گیا (تصویر 12)؛ دیگر گلفس جن کے دائیں جانب مُڑنے والے چھوٹے سٹروکس
+							محض پچھلے حرف پر اثرانداز ہوتے تھے، ان کو سیاقی اصولوں کے ذریعے برتا گیا۔
+						</p>
 						<figure class="figure mx-auto">
 							<img
 								src="images/bariye.png"
@@ -780,7 +842,7 @@
 								Fig 12. Handling the <i>baṛī ye</i> sequence
 							</figcaption>
 						</figure>
-						<p>
+						<p lang="en">
 							Overall, the combination of these techniques provides a tighter
 							fitting and more natural layout than other Nastal’iq OpenType
 							fonts, at the cost of considerable technological complexity - at
@@ -789,7 +851,14 @@
 							we found ways to compact the layout in order to provide both a
 							performant and aesthetically pleasing result.
 						</p>
-						<p>
+						<p lang="ur" dir="rtl">
+							مجموعی طور پر،ان تمام ترکیبوں کے امتزاج سے دیگر نستعلیق اوپن ٹائپ فونٹس کے مقابلے میں بہتر فِٹنگ اور
+							رواں لے‌آؤٹ حاصل ہوتا ہے، لیکن اس کی قیمت قابلِ ذکر تکنیکی پیچیدگیوں کی صورت میں چکانی پڑتی ہے: فونٹ
+							کی تیاری کے دوران کئی مرتبہ ایسا ہوا کہ سیاقی اصولوں کی بھرمار کی وجہ سے فونٹ نے کمپائل ہونے سے ہی
+							انکار کر دیا! چنانچہ ہم نے لے‌آؤٹ کو مختصر کرنے کے طریقے بھی ڈھونڈے تاکہ ایک ایسا نتیجہ حاصل ہو سکے 
+							جس میں تکنیکی کارکردگی اور جمالیاتی نفاست دونوں موجود ہوں۔
+						</p>
+						<p lang="en">
 							As an open source project which we hope will be a basis for others
 							to develop their own fonts, we have made it a priority to document
 							and explain Gulzar’s engineering processes; you can read more of
@@ -806,6 +875,21 @@
 								>annotated source files</a
 							>
 							containing the layout rules.
+						</p>
+						<p lang="ur" dir="rtl">
+							ہم امید کرتے ہیں کہ ایک آزاد مصدر پروجیکٹ کے طور پر گلزار دوسروں کے فونٹس تخلیق کرنے کی بنیاد بھی بنے
+							گا، اور ہم نے اس بات کو ترجیح دی ہے کہ اس کی انجیںئرنگ کے عمل کو تفصیل سے قلمبند کیا جائے؛ آپ اس کی 
+							انجینئرنگ کی مزید تکنیکی تفصیلات
+							<a
+								class="text-secondary"
+								href="https://github.com/googlefonts/Gulzar/blob/main/engineering.md"
+								>اس دستاویز</a>
+								میں اور لے‌آؤٹ اصولوں کی
+								<a
+								class="text-secondary"
+								href="https://github.com/googlefonts/Gulzar/tree/main/sources/build/fez"
+								>سورس فائلز میں (مع تشریح)</a>
+								ملاحظہ کر سکتے ہیں۔
 						</p>
 						<h3 lang="en">Credits</h3>
 						<h3 lang="ur" dir="rtl">کریڈٹس</h3>
