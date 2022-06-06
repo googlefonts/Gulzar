@@ -3,6 +3,7 @@ FINAL_FONT=fonts/ttf/Gulzar-Regular.ttf
 FEA_FILES=sources/build/fea/languagesystem.fea sources/build/featurenames.fea sources/build/fea/decomposition.fea sources/build/fea/connections.fea sources/build/fea/bariye-drop.fea sources/build/fea/bariye-drop2.fea  sources/build/fea/kerning.fea sources/build/fea/anchor-attachment.fea sources/build/fea/latin-kerning.fea sources/build/fea/post-mkmk-repositioning.fea sources/build/fea/bariye-overhang.fea
 RELEASE_ARG=
 PYTHON=python3
+OPTIMIZATION_LEVEL=-O0
 
 export FONTTOOLS_LOOKUP_DEBUGGING=1
 export PYTHONPATH=.
@@ -56,33 +57,33 @@ specimen/specimen.pdf: $(FINAL_FONT) specimen/specimen.sil
 	cd specimen ; sile specimen.sil
 
 sources/build/fea/languagesystem.fea: sources/build/fez/languages.fez venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/decomposition.fea: sources/build/fez/decomposition.fez venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/connections.fea: sources/build/fez/connections.fez sources/build/rules.csv venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/anchor-attachment.fea: sources/build/fez/anchor-attachment.fez venv $(GLYPHS_FILE)
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/kerning.fea: sources/build/fez/kerning.fez sources/build/fez/shared.fez venv qalamTools/NastaliqKerning.py $(GLYPHS_FILE)
-	. venv/bin/activate; fez2fea -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/latin-kerning.fea: sources/build/fez/latin-kerning.fez $(GLYPHS_FILE) venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/post-mkmk-repositioning.fea: sources/build/fez/post-mkmk-repositioning.fez sources/build/fez/shared.fez venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 # Technically these two should depend on the Glyphs file, but since the design
 # and width of glyphs is mostly fixed, I'm removing that dependency for now.
 sources/build/fea/bariye-drop.fea: sources/build/fez/bariye-drop.fez sources/build/fez/shared.fez venv qalamTools/YBFix.py
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/bariye-drop2.fea: sources/build/fez/bariye-drop2.fez sources/build/fez/shared.fez venv qalamTools/YBFix.py
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
 
 sources/build/fea/bariye-overhang.fea: sources/build/fez/bariye-overhang.fez sources/build/fez/shared.fez venv
-	. venv/bin/activate; fez2fea --omit-gdef -O0 $(GLYPHS_FILE) $< > $@
+	. venv/bin/activate; fez2fea --omit-gdef $(OPTIMIZATION_LEVEL) $(GLYPHS_FILE) $< > $@
