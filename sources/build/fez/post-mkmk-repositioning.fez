@@ -176,6 +176,9 @@ Feature kern {
     Position /FEi/ [sda dda] [@finas @medis] ([dda HAMZA_ABOVE] <xPlacement=-50>);
     Position /FEi/ [@finas @medis] ([dda HAMZA_ABOVE] <xPlacement=-50>);
 
+    # حنفی
+    Position BEm4 (sda <yPlacement=+100>) /FEm/ sda;
+
     Position /JIMi/ [sda dda tda] REf1 ([sda toeda] <xPlacement=-120>);
     Position /JIMi/ REf1 ([sda toeda] <xPlacement=-120>);
 
