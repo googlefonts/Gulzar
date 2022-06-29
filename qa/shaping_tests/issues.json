@@ -1,0 +1,31 @@
+{
+  "configuration": {
+    "collidoscope": {
+      "faraway": true,
+      "marks": true,
+      "adjacentmarks": false,
+      "bases": false
+    },
+    "defaults": {
+      "allowedcollisions": [
+        "haydb/HAYCi3",
+        "haydb/HAYCi15",
+        "REf2/BEi2",
+        "REf1/TEi4",
+        "LAMf1/BEm8",
+        "REf2/MIMi2",
+        "LAMf1/TEi8",
+        "LAMf1/BEi8",
+        "LAMf1/JIMi8",
+        "REf1/AINm4"
+      ]
+    }
+  },
+  "tests": [
+    {
+      "input": "ینٹر",
+      "expectation": "REf3=3+509|toeda=2@-316,478+0|TEm16=2@-356,358+37|sda=1@-57,753+0|BEmsd13=1@-47,373+205|ddb=0@-177,32+0|TEi3=0@-47,482+167",
+      "note": "Issue #51"
+    }
+  ]
+}
