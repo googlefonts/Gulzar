@@ -44,6 +44,7 @@ Feature rlig {
 
     Substitute [BEi1 TEi1] ( BEf1 ) -> BEf2;
     Substitute [BEi1 TEi1] ( TEf1 ) -> TEf2;
+    Substitute [BEi1 TEi1] [BEm1 TEm1] [BEm1 TEm1] ( REf1 ) -> REf3;
   } IgnoreMarks;
 
   Routine RaisedTooth {
@@ -57,6 +58,8 @@ Feature rlig {
     Substitute [SINm1 SINi1] (TEm1) [FEm1 FEf1] -> TEmsd4;
     Substitute [SINm1 SINi1] (BEm1) [QAFf1 VAOf1] -> BEmsd15;
     Substitute [SINm1 SINi1] (TEm1) [QAFf1 VAOf1] -> TEmsd15;
+    Substitute [BEi1 TEi1] (BEm1) [BEm1 TEm1] REf3 -> BEmsd13;
+    Substitute [BEi1 TEi1] (TEm1) [BEm1 TEm1] REf3 -> TEmsd13;
   } IgnoreMarks;
 
   # The Glyphs file will contain a set of information about selecting
@@ -67,6 +70,7 @@ Feature rlig {
   # single substitution rules.
   LoadPlugin qalamTools.NastaliqConnections;
   NastaliqConnections "sources/build/rules.csv";
+
 };
 
 # Swash glyphs
