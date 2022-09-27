@@ -39,6 +39,7 @@ QuantizeAnchors 10;
 Feature mark {
   Routine DoMarkBase {
     Attach &top &_top bases;
+    Attach &ngtop &_ngtop bases;
     Attach &inside &_inside bases;
     Attach &bottom &_bottom bases;
     Attach &comma &_comma bases;

@@ -29,6 +29,7 @@ Feature ccmp {
     Substitute jim-ar -> JIMu1;
     Substitute jeh-ar -> REu1 tda;
     Substitute kaf-ar -> KAFu1;
+    Substitute ng-ar -> KAFu1 tda.ng;
     Substitute kafswash-ar -> KAFu1;
     Substitute alefMaksura-ar -> CH_YEu1;
     Substitute wawHamzaabove-ar -> VAOu1 HAMZA_ABOVE;
@@ -37,6 +38,8 @@ Feature ccmp {
     Substitute alefHamzabelow-ar -> ALIFu1 HAMZA_BELOW;
     Substitute alefWasla-ar -> ALIFu1 HAMZA_WASL;
     Substitute hehgoalHamzaabove-ar -> HAYCu1 HAMZA_ABOVE;
+    Substitute u-ar -> VAOu1 DAMMA;
+    Substitute ve-ar -> VAOu1 tda;
     };
 
   Routine MarkLigatures {
@@ -80,6 +83,7 @@ Feature fina {
     Substitute heh-ar -> HAYCf1;
     Substitute tehMarbutagoal-ar -> HAYCf1 dda;
     Substitute tehMarbuta-ar -> HAYCf1 dda;
+    Substitute ae-ar -> HAYCf1;
   };
 
   # Because I'm lazy, SuffixingSubstitute is a custom plugin which creates

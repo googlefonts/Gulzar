@@ -222,7 +222,9 @@ Feature kern {
     # لتركية
     Position [tda dda] @long_re (/[KG]AFi/ <xAdvance=+80>);
 
-  } UseMarkFilteringSet [ sda dda tda toeda HAMZA_ABOVE MADDA HAMZA_BELOW];
+    # ئۇل
+    Position TEi15 HAMZA_ABOVE VAOf1 ([DAMMA tda] <xPlacement=-50>);
+  } UseMarkFilteringSet [ sda dda tda toeda DAMMA HAMZA_ABOVE MADDA HAMZA_BELOW];
 
   Routine ClashesBelow {
     # Final ChYe avoidance
