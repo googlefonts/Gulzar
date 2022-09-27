@@ -1,4 +1,5 @@
 fonttools>=4.33.3
+git+https://github.com/simoncozens/babelfont@nfsf
 glyphsLib
 kurbopy>=0.8.21
 fontmake
