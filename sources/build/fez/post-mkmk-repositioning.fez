@@ -5,7 +5,7 @@ LoadPlugin qalamTools.SeparateConsecutive;
 # We put them in mkmk because we want them to be processed
 # at the end, after anchor positioning is done.
 
-DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
+DefineClass @narrowmedi = /.*m\d+$/  & (run < 300);
 
 # Routines to move final jim dots around, to help fit sequences like
 # ہپچ
@@ -45,6 +45,7 @@ Feature kern {
     Position [BEi7 TEi7] ( /.yb|tdb|ddb|sdb/ <0 0 0 0> ) /TEm|BEm|JIMm/ [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb|sdb/ <150 0 0 0> ) /LAMm|JIMm13/ [CH_YEf1 CH_YEf2 NUNf1];
     Position ( /.yb|tdb|ddb|sdb/ <0 0 0 0> ) BEm13 [CH_YEf1 CH_YEf2 NUNf1];
+    Position ( /.yb|tdb|ddb|sdb/ <0 0 0 0> ) MIMm14 [CH_YEf1 CH_YEf2 NUNf1]; # علیمی
     Position ( /.yb|tdb|ddb|sdb/ <120 0 0 0> ) @narrowmedi [CH_YEf1 CH_YEf2 NUNf1]; # علیمی
 
     Position ( /HAYCi/ <xAdvance=+50> /haydb/ <150 -50  0 0> ) [CH_YEf1 CH_YEf2 NUNf1]; # سیاہی
