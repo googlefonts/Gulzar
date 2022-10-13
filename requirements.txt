@@ -3,7 +3,7 @@ git+https://github.com/simoncozens/babelfont@nfsf
 glyphsLib
 kurbopy>=0.8.21
 fontmake
-fez-language==1.3.0
+fez-language==1.3.4
 youseedee
 bidict
 tqdm

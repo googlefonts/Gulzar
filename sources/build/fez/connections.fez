@@ -1,3 +1,4 @@
+
 # We are continuing to get the glyphs into the right forms; this time
 # the focus is on the Nastaliq glyph selection - i.e. finding the right
 # form for a glyph based on the glyph to its left.
@@ -61,16 +62,6 @@ Feature rlig {
     Substitute [BEi1 TEi1] (BEm1) [BEm1 TEm1] REf3 -> BEmsd13;
     Substitute [BEi1 TEi1] (TEm1) [BEm1 TEm1] REf3 -> TEmsd13;
   } IgnoreMarks;
-
-  # The Glyphs file will contain a set of information about selecting
-  # connecting glyphs (what the Qalmi patent calls the Generic Selection
-  # Table). Code in the Makefile will extract this information from the
-  # Glyphs file and into a CSV file (rules.csv). The custom NastaliqConnections
-  # plugin reads this CSV file and creates a set of reverse chaining
-  # single substitution rules.
-  LoadPlugin qalamTools.NastaliqConnections;
-  NastaliqConnections "sources/build/rules.csv";
-
 };
 
 # Swash glyphs
@@ -81,10 +72,28 @@ Feature swsh {
     SuffixingSubstitute [BEu1 TEu1 GAFu1 KAFu1 FEu1 SINu1] -> us1;
     Substitute HAYCf1 -> HAYCf2;
   };
+
+
+  # The Glyphs file will contain a set of information about selecting
+  # connecting glyphs (what the Qalmi patent calls the Generic Selection
+  # Table). Code in the Makefile will extract this information from the
+  # Glyphs file and into a CSV file (rules.csv). The custom NastaliqConnections
+  # plugin reads this CSV file and creates a set of reverse chaining
+  # single substitution rules.
+  # We have to define it here in swash and re-run it in rlig for complicated
+  # reasons
+  LoadPlugin qalamTools.NastaliqConnections;
+  NastaliqConnections "sources/build/rules.csv";
 };
 Feature jalt {
   Routine SwashJalt {
     SuffixingSubstitute [BEf1 TEf1 GAFf1 KAFf1 FEf1] -> fs1;
     SuffixingSubstitute [BEu1 TEu1 GAFu1 KAFu1 FEu1 SINu1] -> us1;
   };
+  Routine connections;
 };
+
+Feature rlig {
+  Routine connections;
+};
+
