@@ -32,6 +32,12 @@
       "features": { "swsh": true },
       "expectation": "sdb=4@720,-360+0|BEfs1=4+1898|sdb=3@105,-86+0|JIMm23=3@-5,334+77|AINm7=2@-7,431+334|dda=1@-36,973+0|TEm1=1@-36,723+251|MIMi2=0@-29,837+411",
       "note": "Issue #61"
+    },
+    {
+      "input": "بت نپ یب",
+      "features": { "swsh": true },
+      "expectation": "sdb=7@800,-350+0|BEfs2=7+1841|ddb=6@-78,-141+0|TEisd1=6@-58,309+130|space.urdu=5+200|tdb=4@730,-430+0|TEfs2=4+1841|sda=3@-18,509+0|BEisd1=3@-48,309+120|space.urdu=2+200|dda=1@740,410+0|TEfs2=1+1841|sdb=0@-28,-181+0|BEisd1=0@-48,309+195",
+      "note": "Issue #62"
     }
   ]
 }
