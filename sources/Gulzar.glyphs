@@ -11,7 +11,7 @@ DisplayStrings = (
 "/Scaron/Zcaron",
 "/scaron/ccaron",
 "/tdieresis/scaron",
-"/macronbelowcomb/hmacronbelow/tlinebelow"
+"/macronbelowcomb/hmacronbelow/tlinebelow",
 "/BEf1/space/BEm15/BEm23/BEfs1"
 );
 classes = (
