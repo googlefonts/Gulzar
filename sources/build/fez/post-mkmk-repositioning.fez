@@ -13,7 +13,7 @@ Routine FinaJimTopRight {
   Position ([sdb.two ddb.two tdb.two] <yPlacement=-700>);
   Position ([sdb.one ddb.one tdb.one] <yPlacement=-700>);
   Position ([haydb.one haydb.two] <yPlacement=-300>);
-  Position ([sdb ddb tdb] <xPlacement=+80 yPlacement=+80>);
+  Position ([sdb ddb tdb ddvb] <xPlacement=+80 yPlacement=+80>);
   Position ([haydb] <xPlacement=+80 yPlacement=+80>);
 };
 
@@ -66,20 +66,20 @@ Feature kern {
   DefineClass @NarrowInits = /i(sd)?\d+$/ & (run < 400);
 
   Routine FinaJimFixes {
-    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
-    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
-    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddv?b|tdb/ ^FinaJimTopRight @NarrowMedials  JIMf1 /tdi|sdi|ddvi/ ^FinaJimDownABit);
+    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddv?b|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddv|ddb|sdb|tdb|haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi|ddvi/ ^FinaJimDownABit);
+    Chain /(JIM|[BT]E)[mi]/ (/sdb|ddv?b|tdb/ ^FinaJimTopRight JIMf1 /tdi|sdi|ddvi/ ^FinaJimDownABit);
 
     #Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials JIMf1 /tdi|sdi/ ^FinaJimDownABit);
-    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight  JIMf1 /tdi|sdi/ ^FinaJimDownABit);
-    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi/ ^FinaJimDownABit);
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddvi|ddv?b|sdb|tdb|haydb/ ^FinaJimTopRight  JIMf1 /tdi|sdi|ddvi/ ^FinaJimDownABit);
+    Chain /(HAYC)[mi]/ (/haydb/ ^FinaJimTopRight JIMf1 /tdi|sdi|ddvi/ ^FinaJimDownABit);
 
     # Put AIN/QAF here too since it's basically the same
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials AINf1);
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight @NarrowMedials /sdi|tdi|ddb|sdb|tdb|haydb/ ^FinaJimTopRight AINf1);
     #Chain /(JIM|BE)[mi]/ (/sdb|ddb|tdb/ ^FinaJimTopRight AINf1);
     Chain /(JIM|[BT]E)[mi]/ (/sdb|ddb|tdb/ ^FinaQafDownRight QAFf1);
-  } UseMarkFilteringSet /sdi|tdi|ddb|sdb|tdb|haydb/;
+  } UseMarkFilteringSet /sdi|tdi|ddvi|ddv?b|sdb|tdb|haydb/;
 
   Routine Various2 {
     Position [@inits @narrowmedi] @below_dots @BEm ([sdb.one ddb.one] <yPlacement=+100 xPlacement=-75>) AINf1;
@@ -234,7 +234,9 @@ Feature kern {
 
     Position /TEm5/ ([ddb tdb] <yPlacement=-50>) /HAYAm/;
 
-  } UseMarkFilteringSet [ddb tdb];
+    Position [ddb tdb ddvb] BEm12 ([ddvb] <xPlacement=-80>);
+
+  } UseMarkFilteringSet [ddb tdb ddvb];
 
   Routine DotsUnderGaf {
     Position (/\.two$/ <yPlacement=-220 xPlacement=+40>) @NarrowMedials @all_above_marks /KAF|GAF/;

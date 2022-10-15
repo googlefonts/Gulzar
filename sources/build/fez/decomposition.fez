@@ -11,6 +11,7 @@
 Feature ccmp {
   Routine ccmp1 {
     Substitute beh-ar -> BEu1 sdb;
+    Substitute beeh-ar -> BEu1 ddvb;
     Substitute lamTahabove-ar -> LAMu1 toeda;
     Substitute teh-ar -> TEu1 dda;
     Substitute theh-ar -> TEu1 tda;
@@ -40,6 +41,8 @@ Feature ccmp {
     Substitute hehgoalHamzaabove-ar -> HAYCu1 HAMZA_ABOVE;
     Substitute u-ar -> VAOu1 DAMMA;
     Substitute ve-ar -> VAOu1 tda;
+    Substitute dalTwodotsverticalbelowTah-ar -> DALu1 ddvb toeda;
+    Substitute gueh-ar -> GAFu1 ddvb;
     };
 
   Routine MarkLigatures {
@@ -72,6 +75,7 @@ Feature fina {
     Substitute khah-ar -> JIMf1 sda;
     Substitute hah-ar -> JIMf1;
     Substitute JIMu1 -> JIMf1 sdi;
+    Substitute dyeh-ar -> JIMf1 ddvi;
 
     Substitute noon-ar -> NUNf1 sdi;
     Substitute noonTahabove-ar -> NUNf1 sda toeda;
@@ -114,6 +118,7 @@ Feature init {
   Substitute yeh-ar -> TEi1 ddb;
   Substitute QAFu1 -> FEi1;
   Substitute JIMu1    -> JIMi1 sdb;
+  Substitute dyeh-ar -> JIMi1 ddvb;
   Substitute HAYCu1    -> HAYCi1 haydb;
   Substitute heh-ar -> Hei1;
   Substitute hah-ar -> JIMi1;
@@ -145,6 +150,7 @@ Feature medi {
     Substitute noonTahabove-ar -> BEm1 sda toeda;
     Substitute NUNu1    -> BEm1; # Noon ghunna
     Substitute JIMu1    -> JIMm1 sdb;
+    Substitute dyeh-ar  -> JIMm1 ddvb;
     Substitute tcheh-ar -> JIMm1 tdb;
     Substitute khah-ar  -> JIMm1 sda;
     Substitute CH_YEu1  -> TEm1 ddb;

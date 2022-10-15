@@ -1,7 +1,7 @@
 LoadAnchors;
 
 # Define some classes we're going to need
-DefineClass @below_nuktas = /^[sdt]db(\.yb)?$/;
+DefineClass @below_nuktas = /^[sdt]dv?b(\.yb)?$/;
 DefineClass @above_nuktas = /^[sdt]da$/;
 DefineClass @other_above_marks = [toeda DAMMA SHADDA HAMZA_ABOVE FATHA];
 DefineClass @all_above_marks = @above_nuktas | @other_above_marks;
