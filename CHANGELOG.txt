@@ -1,0 +1,11 @@
+# 20XX-XX-XX: Version 1.01
+
+* Fix some dot collisions (#48, #58)
+* Fixed some issues with raised tooth in initial-be sequences (#51)
+* Add characters to support Crimean Tartar (#60) and Saraiki (#63)
+* Fix some issues with swash glyphs (#61, #62)
+* Add additional characters for Latin transliteration
+
+# 2022-04-08: Version 1.00
+
+Initial release
