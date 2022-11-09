@@ -208,7 +208,8 @@ Feature kern {
     Position /AINm/ /SINm|[BT]Em/ ([sda dda tda] <yPlacement=+50 xPlacement=-30>);
     Position [@vao_like @dal_like] ALIFu1 (HAMZA_BELOW <yPlacement=-100>);
 
-    # طنز
+    # طنز / پینڑا
+    Position @long_re ([sda toeda] <xPlacement=0>) ALIFu1;
     Position BEm16 @long_re ([sda toeda] <xPlacement=-250>);
     Position BEm16 [sda] @long_re ([sda toeda] <xPlacement=-200>);
     Position TEm16 [dda tda] @long_re ([sda toeda] <xPlacement=-200>);
