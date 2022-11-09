@@ -71,8 +71,8 @@ Feature swsh {
     SuffixingSubstitute [BEf1 TEf1 GAFf1 KAFf1 FEf1] -> fs1;
     SuffixingSubstitute [BEu1 TEu1 GAFu1 KAFu1 FEu1 SINu1] -> us1;
     Substitute HAYCf1 -> HAYCf2;
-    Substitute BEf2 -> BEfs2;
-    Substitute TEf2 -> TEfs2;
+    Substitute BEf2 -> BEfs1;
+    Substitute TEf2 -> TEfs1;
   };
 
   # The Glyphs file will contain a set of information about selecting
