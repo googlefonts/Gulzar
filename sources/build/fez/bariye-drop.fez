@@ -6,7 +6,7 @@
 # design file - underneath the baseline, and hence underneath the
 # bari ye tail.
 Include "shared.fez";
-LoadPlugin BariYe;
+LoadPlugin karakul.BariYe;
 
 DefineClass @behs = /(JIM|BE|HAYC)[im]/;
 

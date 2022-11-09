@@ -9,10 +9,10 @@
 # positioning, and then we'll get into the dot collision avoidance code.
 
 # First, load all the FEZ plugins we will use. They are all found in
-# `qalamTools/`.
-LoadPlugin qalamTools.QuantizeAnchors;
-LoadPlugin qalamTools.DotAvoidance;
-LoadPlugin qalamTools.NastaliqKerning;
+# the `karakul` library.
+LoadPlugin karakul.QuantizeAnchors;
+LoadPlugin karakul.DotAvoidance;
+LoadPlugin karakul.NastaliqKerning;
 
 # To avoid collisions, we move dots up and down to alternate positions.
 # e.g. `sdb` might move to `sdb.one` (one "position" lower) or `sdb.two`

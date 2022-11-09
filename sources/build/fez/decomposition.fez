@@ -95,7 +95,7 @@ Feature fina {
   # glyph names in a class, and appending the two characters on the
   # right-side of the arrow. # i.e `SuffixingSubstitute [AINu1] -> f1`
   # creates the substitution AINu1 -> AINf1
-  LoadPlugin qalamTools.SuffixingSubstitute;
+  LoadPlugin karakul.SuffixingSubstitute;
 
   Routine SuffixingSubstitutes {
     SuffixingSubstitute [

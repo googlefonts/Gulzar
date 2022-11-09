@@ -1,4 +1,4 @@
-LoadPlugin qalamTools.NastaliqKerning;
+LoadPlugin karakul.NastaliqKerning;
 Include "shared.fez";
 
 # We change the space.urdu category to "ligature", so that we can
@@ -9,6 +9,10 @@ SetCategory comma.urdu ligature;
 
 DefineClass @narrowmedi = /.*m\d+$/  & (run < 350);
 
+Routine NastaliqKerning {
+    NastaliqKerning 120 65%;
+} IgnoreMarks IgnoreLigatures;
+
 Feature kern {
 	# This runs the autokerner, and brings together initial glyphs
 	# and final glyphs to within either 90 units of one another or
@@ -16,7 +20,11 @@ Feature kern {
 	# final glyph, whichever is the smallest.
 	# We don't kern bari-yes, and we have to include BARI_YEu1 in that.
 	DefineClass @bariye = /BARI_YE/;
-	NastaliqKerning 120 65%;
+    Routine RunKerner {
+    		# We should be able to contextualise this more, but it's not
+    		# working and I don't understand why not.
+        Chain ([@isols @finas] ^NastaliqKerning);
+    } IgnoreMarks IgnoreLigatures;
 
 	# The autokerner only considers the space underneath two glyphs:
 	# the final/isolate of one "word" and the initial of the next. But

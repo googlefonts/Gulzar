@@ -1,6 +1,6 @@
 Include "shared.fez";
 
-LoadPlugin qalamTools.BariYe;
+LoadPlugin karakul.BariYe;
 
 DefineClass @bariye = [BARI_YEf1];
 # All the Latin, punctuation, etc are considered isolates for the
@@ -14,7 +14,7 @@ Feature kern {
   # and adds a kern to the initial glyph to separate it from the end of the
   # preceding word.
   Routine BYFix {
-    BYFixOverhang 0 @bariye;
+    BYFixOverhang 0 0 @bariye;
   } IgnoreMarks;
   #Position tdb <0 0 0 0>;
 };

@@ -1,13 +1,10 @@
-fonttools>=4.33.3
-git+https://github.com/simoncozens/babelfont@nfsf
+git+https://github.com/simoncozens/karakul
 glyphsLib
+uharfbuzz>=0.31.0
 kurbopy>=0.8.21
 fontmake
-fez-language==1.3.4
 youseedee
-bidict
 tqdm
 fontbakery
 font-v
-collidoscope>=0.3.0
 gftools

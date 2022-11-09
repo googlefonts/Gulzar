@@ -1,6 +1,6 @@
 Include "shared.fez";
-LoadPlugin qalamTools.YBFix;
-LoadPlugin qalamTools.QuantizeAnchors;
+LoadPlugin karakul.YBFix;
+LoadPlugin karakul.QuantizeAnchors;
 LoadAnchors;
 
 # First, we continue to substitute dots under "bari-ye" with `.yb` forms.

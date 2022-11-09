@@ -1,5 +1,5 @@
 Include "shared.fez";
-LoadPlugin qalamTools.SeparateConsecutive;
+LoadPlugin karakul.SeparateConsecutive;
 
 # These are a more ad-hoc collection of positioning rules.
 # We put them in mkmk because we want them to be processed
