@@ -336,7 +336,7 @@ Routine AtHeight500sub {
     Chain (@vao_like @BEi [ddb tdb] ^DropTwo @DOTm @dots); # ویبگنگ
     Chain (@dal_like @BEi [ddb tdb] ^DropTwo @DOTm @dots); # ڈیبگنگ
     Chain ([@dal_like @vao_like] TEi1 @dots ^DropOne); # ریعقُو
-
+    Chain ([@vao_like @long_re] @BEi /JIM/ @dots ^DropOne); # پونچھ / پونجھ / پونجھݨ
 } UseMarkFilteringSet [@dots];
 
 
@@ -604,6 +604,8 @@ Routine AtHeight600pos {
     Chain (@kaf_like ^DoNothingPos); # ف تہجی
     Chain (@bigbowlfina @DOTi ^OpenSmallSpace @dots); # تی ہین
     Chain (@bigbowlfina /SADi/ ^OpenTinySpace); # ن صبح
+
+    Chain ([@vao_like @long_re] @BEi /JIM/ tdb.one ^DropATinyBitMore); # پونچھ
 
     Chain /TOE|LAM/ ([JIMf1 CH_YEf1] @JIMi ^OpenSmallSpace); # سطح خطخطی
 
