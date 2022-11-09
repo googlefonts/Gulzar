@@ -43,6 +43,7 @@ Feature ccmp {
     Substitute ve-ar -> VAOu1 tda;
     Substitute dalTwodotsverticalbelowTah-ar -> DALu1 ddvb toeda;
     Substitute gueh-ar -> GAFu1 ddvb;
+    Substitute yehbarreeHamzaabove-ar -> BARI_YEu1 HAMZA_ABOVE;
     };
 
   Routine MarkLigatures {
