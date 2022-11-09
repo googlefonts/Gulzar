@@ -1,7 +1,7 @@
 {
 .appVersion = "3109";
 DisplayStrings = (
-"/yehbarreeHamzaabove-ar"
+"/lamDoublebar-ar/LAM_BAR/lamBar-ar/LAM_BAR"
 );
 classes = (
 {
@@ -16776,6 +16776,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{665, 597}";
+},
+{
 name = bottom;
 position = "{271, -361}";
 },
@@ -16834,6 +16838,25 @@ width = 773;
 );
 note = LAMu1;
 unicode = 0644;
+},
+{
+glyphname = "lamDoublebar-ar";
+layers = (
+{
+components = (
+{
+name = "lamBar-ar";
+},
+{
+name = LAM_BAR;
+transform = "{1, 0, 0, 1, 496, 74}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 773;
+}
+);
+unicode = 08A6;
 },
 {
 glyphname = "lamTahabove-ar";
@@ -17817,6 +17840,25 @@ width = 600;
 }
 );
 unicode = 0768;
+},
+{
+glyphname = "lamBar-ar";
+layers = (
+{
+components = (
+{
+name = LAMu1;
+},
+{
+name = LAM_BAR;
+transform = "{1, 0, 0, 1, 504, 156}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+width = 773;
+}
+);
+unicode = 076A;
 },
 {
 color = 3;
@@ -32935,6 +32977,38 @@ width = 405;
 }
 );
 note = HAMZA_WASL;
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+glyphname = LAM_BAR;
+layers = (
+{
+anchors = (
+{
+name = _bar;
+position = "{161, 441}";
+},
+{
+name = bar;
+position = "{166, 370}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"49 420 LINE",
+"256 420 LINE",
+"280 465 LINE",
+"73 465 LINE"
+);
+}
+);
+width = 600;
+}
+);
 category = Mark;
 subCategory = Nonspacing;
 },
@@ -67257,6 +67331,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{665, 597}";
+},
+{
 name = bottom;
 position = "{271, -361}";
 },
@@ -67321,6 +67399,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{243, 339}";
+},
+{
 name = bottom;
 position = "{181, -92}";
 },
@@ -67376,6 +67458,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{383, 488}";
+},
+{
 name = bottom;
 position = "{338, -8}";
 },
@@ -67429,6 +67515,10 @@ glyphname = LAMi11;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{334, 488}";
+},
 {
 name = bottom;
 position = "{246, -99}";
@@ -67484,6 +67574,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{210, 406}";
+},
+{
 name = bottom;
 position = "{197, -82}";
 },
@@ -67537,6 +67631,10 @@ glyphname = LAMi13;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{59, 406}";
+},
 {
 name = bottom;
 position = "{114, -618}";
@@ -67596,6 +67694,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{171, 344}";
+},
+{
 name = bottom;
 position = "{153, -113}";
 },
@@ -67650,6 +67752,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{143, 344}";
+},
+{
 name = bottom;
 position = "{106, -88}";
 },
@@ -67697,6 +67803,10 @@ glyphname = LAMi16;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{171, 292}";
+},
 {
 name = bottom;
 position = "{131, -285}";
@@ -67749,6 +67859,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{133, 253}";
+},
+{
 name = bottom;
 position = "{104, -135}";
 },
@@ -67800,6 +67914,10 @@ glyphname = LAMi2;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{171, 293}";
+},
 {
 name = bottom;
 position = "{136, -102}";
@@ -67858,6 +67976,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{145, 233}";
+},
+{
 name = bottom;
 position = "{136, -102}";
 },
@@ -67912,6 +68034,10 @@ glyphname = LAMi24;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{171, 294}";
+},
 {
 name = bottom;
 position = "{130, -103}";
@@ -67970,6 +68096,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{171, 393}";
+},
+{
 name = bottom;
 position = "{104, -135}";
 },
@@ -68021,6 +68151,10 @@ glyphname = LAMi4;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{291, 313}";
+},
 {
 name = bottom;
 position = "{232, -87}";
@@ -68077,6 +68211,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{74, 393}";
+},
+{
 name = bottom;
 position = "{127, -22}";
 },
@@ -68122,6 +68260,10 @@ glyphname = LAMi6;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{125, 513}";
+},
 {
 name = bottom;
 position = "{250, -3}";
@@ -68195,6 +68337,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{282, 327}";
+},
+{
 name = bottom;
 position = "{255, 67}";
 },
@@ -68253,6 +68399,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{318, 426}";
+},
+{
 name = bottom;
 position = "{335, -8}";
 },
@@ -68307,6 +68457,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{83, 377}";
+},
+{
 name = bottom;
 position = "{110, -52}";
 },
@@ -68357,6 +68511,10 @@ glyphname = LAMisd8;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{315, 362}";
+},
 {
 name = bottom;
 position = "{335, -8}";
@@ -68411,6 +68569,10 @@ glyphname = LAMm1;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{229, 317}";
+},
 {
 name = bottom;
 position = "{204, -123}";
@@ -68519,6 +68681,10 @@ glyphname = LAMm10;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{399, 479}";
+},
 {
 name = bottom;
 position = "{402, 14}";
@@ -68641,6 +68807,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{326, 435}";
+},
+{
 name = bottom;
 position = "{291, -16}";
 },
@@ -68729,6 +68899,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{238, 393}";
+},
+{
 name = bottom;
 position = "{219, -95}";
 },
@@ -68813,6 +68987,10 @@ glyphname = LAMm13;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{102, 435}";
+},
 {
 name = bottom;
 position = "{149, -598}";
@@ -68912,6 +69090,10 @@ glyphname = LAMm14;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{207, 372}";
+},
 {
 name = bottom;
 position = "{170, -77}";
@@ -69018,6 +69200,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{171, 322}";
+},
+{
 name = bottom;
 position = "{132, -115}";
 },
@@ -69092,6 +69278,10 @@ glyphname = LAMm16;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{171, 250}";
+},
 {
 name = bottom;
 position = "{144, -196}";
@@ -69185,6 +69375,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{171, 241}";
+},
+{
 name = bottom;
 position = "{167, -167}";
 },
@@ -69272,6 +69466,10 @@ glyphname = LAMm2;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{182, 355}";
+},
 {
 name = bottom;
 position = "{141, -143}";
@@ -69363,6 +69561,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{171, 225}";
+},
+{
 name = bottom;
 position = "{141, -111}";
 },
@@ -69450,6 +69652,10 @@ glyphname = LAMm24;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{171, 334}";
+},
 {
 name = bottom;
 position = "{151, -144}";
@@ -69540,6 +69746,10 @@ glyphname = LAMm3;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{171, 272}";
+},
 {
 name = bottom;
 position = "{167, -167}";
@@ -69670,6 +69880,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{271, 289}";
+},
+{
 name = bottom;
 position = "{247, -145}";
 },
@@ -69778,6 +69992,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{125, 429}";
+},
+{
 name = bottom;
 position = "{157, -6}";
 },
@@ -69852,6 +70070,10 @@ glyphname = LAMm6;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{138, 549}";
+},
 {
 name = bottom;
 position = "{194, 90}";
@@ -69933,6 +70155,10 @@ glyphname = LAMm7;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{334, 557}";
+},
 {
 name = bottom;
 position = "{291, 100}";
@@ -70037,6 +70263,10 @@ layers = (
 {
 anchors = (
 {
+name = bar;
+position = "{350, 377}";
+},
+{
 name = bottom;
 position = "{323, -20}";
 },
@@ -70122,6 +70352,10 @@ glyphname = LAMm9;
 layers = (
 {
 anchors = (
+{
+name = bar;
+position = "{142, 465}";
+},
 {
 name = bottom;
 position = "{171, 5}";

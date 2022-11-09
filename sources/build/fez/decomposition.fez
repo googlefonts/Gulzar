@@ -44,6 +44,8 @@ Feature ccmp {
     Substitute dalTwodotsverticalbelowTah-ar -> DALu1 ddvb toeda;
     Substitute gueh-ar -> GAFu1 ddvb;
     Substitute yehbarreeHamzaabove-ar -> BARI_YEu1 HAMZA_ABOVE;
+    Substitute lamBar-ar -> LAMu1 LAM_BAR;
+    Substitute lamDoublebar-ar -> LAMu1 LAM_BAR LAM_BAR;
     };
 
   Routine MarkLigatures {

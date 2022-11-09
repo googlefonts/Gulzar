@@ -43,6 +43,7 @@ Feature mark {
     Attach &inside &_inside bases;
     Attach &bottom &_bottom bases;
     Attach &comma &_comma bases;
+    Attach &bar &_bar bases;
 
     # These anchors are not in the Glyphs source but were
     #created by the `AddSpacedAnchors` rule above.
@@ -698,6 +699,7 @@ Feature mkmk {
     Attach &top &_top marks;
     Attach &bottom &_bottom marks;
     Attach &bottom.yb &_bottom.yb marks;
+    Attach &bar &_bar marks;
   };
 };
 
