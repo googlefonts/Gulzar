@@ -296,6 +296,7 @@ Routine AtHeight200sub {
 
 Routine AtHeight400sub {
     Chain (@long_re [TEi15] @dots ^DropTwo); # طریق
+    Chain (@long_re [@JIMi] @dots ^DropTwo); # یسرچر
     Chain ([@isols @finas] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
 
     Chain (@vao_like [BEi24 TEi24] @dots ^DropTwo); # ریس
