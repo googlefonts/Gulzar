@@ -256,6 +256,9 @@ Feature kern {
     Position /FEi8/ ([sda dda tda] <yPlacement=0 xPlacement=0>) /[KG]AF[mf]/;
     Position /FE[mi]/ ([sda dda tda] <yPlacement=-80 xPlacement=+80>) /[KG]AF[mf]/;
 
+    # ٹچکر, #67
+    Position (/[BT]E[mi]/ <xAdvance=+90> [sda dda tda toeda] <xPlacement=+160 yPlacement=-30>) /JIMm/ /[KG]AF[mf]/;
+
     Position [sda dda tda toeda] (DAMMA <yPlacement=+120>) /[KG]AF[mf]/;
     
     Position FEi2 ([sda dda tda] <yPlacement=-50 xPlacement=+70>) @BEm [sda dda tda] /[KG]AF[mf]/;
