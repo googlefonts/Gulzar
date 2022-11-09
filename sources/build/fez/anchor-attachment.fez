@@ -178,13 +178,14 @@ Routine DoNothingPos {Position (haydb.yb <xPlacement=0>); };
 
 # These are a bit more "fancy" rules to adjust dots in very particular
 # situations.
+Routine RaiseSlightly { Position ([sdb tdb ddb] <yPlacement=+50>); };
 Routine Raise    { Position ([sdb tdb ddb] <yPlacement=+100>); };
 Routine RaiseALot { Position ([sdb tdb ddb] <yPlacement=+250>); };
 Routine TopRight {
   Position ([sdb ddb] <yPlacement=+250 xPlacement=+50>);
   Position (tdb <yPlacement=+200 xPlacement=+50>);
 };
-Routine BottomLeft {Position ([sda sdb tdb ddb] <yPlacement=-220 xPlacement=-250>); };
+Routine BottomLeft {Position ([sda sdb tdb ddb] <yPlacement=-200 xPlacement=-220>); };
 # In Nastaliq, left is also down
 Routine PushLeft {Position ([sdb tdb ddb] <xPlacement=-75 yPlacement=-50>); };
 Routine PushLeftALot {Position ([@dots @dots_one] <xPlacement=-200 yPlacement=-100>); };
@@ -320,6 +321,7 @@ Routine AtHeight400sub {
     Chain (@long_re [BEi4 TEi4] @dots ^DropOne); # طریقو
     Chain (@long_re [BEi5 TEi5] @dots ^DoNothing); # سرپھر
     Chain (@long_re [BEi24 TEi24] @dots ^DoNothing); # محیطزیست
+    Chain (@long_re [BEi14 TEi14] @dots ^DoNothing); # پیریں
     Chain (@long_re @BEi @dots ^DropTwo); # مرببل
 
     Chain (@kaf_like /MIMi/ @DOTm @dots ^DropOne); # ءمیں
@@ -456,6 +458,7 @@ Routine AtHeight400pos {
     Chain (@long_re [BEi4 TEi4] @dots_one ^DropATinyBitMore); # طریقو
     Chain (@long_re [BEi5 TEi5] @dots ^TopRight); # سرپھر
     Chain (@long_re [BEi24 TEi24] ^OpenTinySpace @dots); # محیطزیست
+    Chain (@long_re [BEi14 TEi14] ^OpenSmallSpace @dots ^RaiseSlightly); # پیریں
     Chain (@long_re ^TinyClearUpperDots [BEi16 TEi16] ^TightenSlightly @dots_two ); # لجزیر
     Chain (@long_re ^ClearUpperDots /[KG]AFi/ ^TightenSlightly ); # مرکز مزکز
     Chain (@long_re @BEi ^OpenSmallSpace @dots_two @DOTm [ddb haydb]); # جرپیل
