@@ -412,6 +412,8 @@ Routine AtHeight200pos {
     Chain (@long_re ^TinyClearUpperDots [BEi8 TEi8] @dots); # چہزنگل
     Chain (@long_re ^DropUpperDots [BEi8 TEi8]); # چہزنگل
 
+    Chain (@long_re ^ClearUpperDots MIMi13); # زمزمی
+
     Chain (@long_re [TEisd1 BEisd1] ^TightenSlightly @medis); # مرتبہ
     Chain (@long_re [BEi5 TEi5] ^OpenTinySpace [sdb.two ddb.two tdb.two] ^DropATinyBitMore); # متجرپھ
     Chain (@long_re JIMi13 ^OpenBigSpace); # مفرحی
