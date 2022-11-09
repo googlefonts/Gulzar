@@ -267,6 +267,7 @@ Feature kern {
     Position TEm7 ([sda dda tda] <yPlacement=-100>) /JIMm/ /[KG]AF[mf]/; # مستحکم
     # Let's clear it
     Position /FE[im]/ (/sda|dda/ <yPlacement=+380>) /(KAF|GAF)m1[36]/;
+    Position /AINi/ (/sda|dda/ <yPlacement=+120>) @NarrowMedials /(KAF|GAF)[mf]/; # غچک
     Position /FEi/ ([sda dda tda] <yPlacement=-70 xPlacement=+90>) [@BEm /FEm/]  /[KG]AF[mf]/;
     Position ([sda dda tda] <yPlacement=-60  xPlacement=+90>) /FEm/ [sda dda tda] /[KG]AF[mf]/;
     Position MADDA (/KAF|GAF/ <xAdvance=+0>) BARI_YEf1;
