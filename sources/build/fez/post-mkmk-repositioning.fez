@@ -317,7 +317,7 @@ Feature kern {
 
   Routine InitialKaf {
     Position /./ (/[GK]AF[iu]/ <xAdvance=0>);
-    Position (/[GK]AFu/ <xAdvance=511>);
-    Position (/[GK]AFi/ <xAdvance=370>);
+    Position (/[GK]AFu/ <xAdvance=511>) /./;
+    Position (/[GK]AFi/ <xAdvance=370>) /./;
   };
 };
