@@ -56,7 +56,7 @@ Feature kern {
 		Position [@isols @finas] ([LAMi7] <xAdvance=+250>) JIMf1; # صالح
 		Position [@isols @finas] (@inits <xAdvance=+100>) @narrowmedi AINf1; # صالح
 		Position [@isols @finas] ([GAFi5 KAFi5] <xAdvance=+100>) HAYAf1; # رکھ
-		Position @alif_like ([GAFi5 KAFi5] <xAdvance=+100>); # رکھ
+		Position @alif_like ([GAFi5 KAFi5] <xAdvance=+100>); # لاکھوں
 
 		Position ([BEisd1 TEisd1]  <xAdvance=+100>) TEm7 JIMf1;
 		Position /(CH_YE)[uf]/ ([BEi13 TEi13 LAMi11 LAMi2 LAMi9] <xAdvance=+300>); # یی پی
