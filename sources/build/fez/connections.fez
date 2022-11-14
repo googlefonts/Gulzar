@@ -84,7 +84,7 @@ Feature swsh {
   # We have to define it here in swash and re-run it in rlig for complicated
   # reasons
   LoadPlugin karakul.NastaliqConnections;
-  NastaliqConnections "sources/build/rules.csv";
+  NastaliqConnections "sources/build/rules.csv" /[BT]Emsd13/;
 };
 Feature jalt {
   Routine SwashJalt {

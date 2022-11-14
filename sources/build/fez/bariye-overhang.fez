@@ -5,7 +5,7 @@ LoadPlugin karakul.BariYe;
 DefineClass @bariye = [BARI_YEf1];
 # All the Latin, punctuation, etc are considered isolates for the
 # purpose of stopping bariye banging into them
-DefineClass @isols = [/[A-Z]+u\w*\d+$/ /^[a-zA-Z_\.]+$/];
+# DefineClass @isols = [/[A-Z]+u\w*\d+$/ /^[a-zA-Z_\.]+$/];
 Feature kern {
   # This plugin deals with the "short bari ye" problem where a short sequence
   # ending in a bari ye is not long enough to clear the negative RSB of the

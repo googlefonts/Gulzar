@@ -314,10 +314,4 @@ Feature kern {
     Position [REf1] [sda tda toeda] (/SAD[ui]/ <xAdvance=+250>); # فزض
 
   };
-
-  Routine InitialKaf {
-    Position /./ (/[GK]AF[iu]/ <xAdvance=0>);
-    Position (/[GK]AFu/ <xAdvance=511>) /./;
-    Position (/[GK]AFi/ <xAdvance=370>) /./;
-  };
 };

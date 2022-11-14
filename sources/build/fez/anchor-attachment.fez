@@ -136,6 +136,7 @@ Routine OpenMediumSpace {
 }  UseMarkFilteringSet /db|toeda/;
 
 Routine OpenBigSpace {
+  Position toeda (@inits <xAdvance=+350>) /ddb|tdb/;
   Position (@inits <xAdvance=+380>) /tdb|haydb/;
   Position (@inits <xAdvance=+300>) /sdb|ddb/;
   Position (@inits <xAdvance=+300>) [@medis @finas];
@@ -609,7 +610,7 @@ Routine AtHeight600pos {
 
     Chain /TOE|LAM/ ([JIMf1 CH_YEf1] @JIMi ^OpenSmallSpace); # سطح خطخطی
 
-    Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpace @dots); # اچھّی
+    Chain ([@isols @finas] [toeda HAMZA_ABOVE] @DOTi ^OpenBigSpace @dots); # اچھّی / ڈیجیٹل
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenTinySpace @DOTm sdb); # جومُجھ
     Chain ([@isols @finas] [MIMi5 MIMi7] ^OpenMediumSpace @DOTm [ddb tdb]); # ومچھا
     Chain ([@isols @finas] @dots [MIMi5 MIMi7] ^OpenTinySpace @DOTm @dots ); # جومُجھ

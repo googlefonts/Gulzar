@@ -1,5 +1,8 @@
 {
 .appVersion = "3109";
+DisplayStrings = (
+"/KAFu1"
+);
 classes = (
 {
 automatic = 1;
@@ -80596,7 +80599,7 @@ layers = (
 anchors = (
 {
 name = bottom;
-position = "{461, 93}";
+position = "{461, 143}";
 },
 {
 name = exit;
@@ -100073,5 +100076,5 @@ TOEm = "15";
 };
 };
 versionMajor = 1;
-versionMinor = 1;
+versionMinor = 2;
 }
