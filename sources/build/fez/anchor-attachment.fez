@@ -477,7 +477,7 @@ Routine AtHeight400pos {
 
     Chain (@dal_like ^ClearUpperDots @DOTi ^TightenSlightly @DOTm @dots_one); # الرئیسة
 
-    Chain ([@dal_like @vao_like] [TEisd1 BEisd1] ^OpenTinySpace @dots [BEm13 TEm13]); # دیتی
+    Chain ([@dal_like @vao_like] [TEisd1 BEisd1] ^OpenSmallSpace @dots ^RaiseSlightly [BEm13 TEm13]); # دیتی
 
     Chain (@dal_like /FEi/ ^TightenSlightly); # رقم / گرفتن
 
