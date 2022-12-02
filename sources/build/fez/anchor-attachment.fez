@@ -592,6 +592,7 @@ Routine AtHeight600pos {
     Chain (@bigbowlfina [BEi5 TEi5] ^OpenTinySpace @dots ^BottomLeft); # تین پھو
     Chain ([@isols @finas] [BEi5 TEi5] @dots ^BottomLeft); # وپھی, #27
     Chain ([@dal_like @vao_like] [BEi6 TEi6] ^OpenMediumSpace @dots); # رچینی
+    Chain ([@vao_like] [BEi7 TEi7] ^OpenSmallSpace @dots ^RaiseSlightly); # ویجی
     Chain ([@dal_like @vao_like] @DOTi ^OpenSmallSpace @dots); # کو پہنچ
     Chain ([@dal_like @vao_like] @DOTi ^OpenTinySpace @dots_one ^DropATinyBitMore); # دیتی
     Chain (@dal_like /FEi/ ^TightenSlightly); # الرقیق

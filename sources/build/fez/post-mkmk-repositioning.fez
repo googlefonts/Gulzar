@@ -36,6 +36,7 @@ Feature kern {
   Routine GiveChYeDotsMoreSpace {
     Position [sdb ddb tdb] ALIFf1 [BEi11 TEi11 LAMi11 LAMi7 LAMi2 LAMi9] (sdb.yb <yPlacement=-150>) [CH_YEf1 CH_YEf2 NUNf1]; # یابی
 
+    Position ([sdb.one tdb.one ddb.one] <xPlacement=100>) /JIMm/ /\.yb$/ [CH_YEf1 CH_YEf2 NUNf1]; # پیچی
 
     Position (@bigbowlfina @inits <xAdvance=+100> [ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
     Position ([ddb.yb tdb.yb] <200 -180 0 0> ) [CH_YEf1 CH_YEf2 NUNf1];
