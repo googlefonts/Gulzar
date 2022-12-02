@@ -300,6 +300,7 @@ Routine AtHeight200sub {
 Routine AtHeight400sub {
     Chain (@long_re [TEi15] @dots ^DropTwo); # طریق
     Chain (@long_re [@JIMi] @dots ^DropTwo); # یسرچر
+
     Chain ([@isols @finas] @DOTi @dots ^DoNothing [AINf1 JIMf1 QAFf1]); # رپع / ریخ
 
     Chain (@vao_like [BEi24 TEi24] @dots ^DropTwo); # ریس
@@ -460,6 +461,7 @@ Routine AtHeight400pos {
     Chain (@alif_like TEi24 [ddb tdb] ^PushLeft); # ایس
     Chain (@alif_like [BEi9 TEi9 JIMi9] ^OpenMediumSpace [ddb tdb]); # اپم
 
+    Chain (@long_re /[KG]AFi/ ^OpenSmallSpace /JIMm/ [@dots @dots_one]); # سٹرکچر
     Chain (@long_re [BEi4 TEi4] @dots_one ^DropATinyBitMore); # طریقو
     Chain (@long_re [BEi5 TEi5] @dots ^TopRight); # سرپھر
     Chain (@long_re [BEi24 TEi24] ^OpenTinySpace @dots); # محیطزیست
