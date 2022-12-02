@@ -23,7 +23,7 @@ Feature rlig {
   # only causes them to substitute the marks given in the list.
   # Each command matches a set of bases with either zero or one marks
   # following each base. First we drop the nukta.
-  BYMoveDots AlwaysDrop [ddb tdb sdb ddb.yb tdb.yb sdb.yb haydb haydb.yb];
+  BYMoveDots AlwaysDrop [ddb tdb sdb ddb.yb tdb.yb sdb.yb haydb haydb.yb ddvb ddvb.yb];
   # ..and then we do it again but this time drop kasras. We handle it
   # separately in case we have a sequence like بِے with both nukta and kasra.
   BYMoveDots AlwaysDrop [KASRA KASRA.yb];

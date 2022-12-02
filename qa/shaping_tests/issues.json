@@ -38,6 +38,11 @@
       "features": { "swsh": true },
       "expectation": "sdb=7@720,-360+0|BEfs1=7+1898|ddb=6@-145,-126+0|TEi23=6@-5,334+177|space.urdu=5+200|tdb=4@650,-440+0|TEfs1=4+1898|sda=3@-35,514+0|BEi23=3@-5,334+177|space.urdu=2+200|dda=1@710,450+0|TEfs1=1+1898|sdb=0@-75,-166+0|BEi23=0@-5,334+177",
       "note": "Issue #62"
+    },
+    {
+      "input": "ڄݨے",
+      "expectation": "BARI_YEf1=2+129|endOfBariYe=2+0|toeda=1@-121,857+0|sda=1@-111,607+0|BEm11=1@-71,187+273|ddvb.yb=0@190,0+0|JIMi2=0@-39,457+634",
+      "note": "Issue #77"
     }
   ]
 }

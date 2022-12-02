@@ -18,11 +18,12 @@ LoadAnchors;
 Feature rlig {
   Routine ManualDrop1 {
     # peh, ye, beh, jim, cheh immediately preceding final choti ye.
-    Substitute /(JIM)[mi]|([BT]E)[mi]/ ([sdb ddb tdb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb];
+    Substitute /(JIM)[mi]|([BT]E)[mi]/ ([sdb ddb tdb ddvb]) /CH_YEf/ -> [sdb.yb ddb.yb tdb.yb ddvb.yb];
 
     # peh and ye, a narrow consonant and choti ye.
     Substitute (tdb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> tdb.yb;
     Substitute (ddb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> ddb.yb;
+    Substitute (ddvb) /(KAF|GAF|LAM)m/ /CH_YEf/ -> ddvb.yb;
   } UseMarkFilteringSet [sdb tdb ddb];
 
   Routine ManualDrop2 {
@@ -34,8 +35,8 @@ Feature rlig {
 Feature ss03 {
   # Allow user to drop/undrop manually
   Routine CVManualDrop {
-    Substitute [sdb tdb ddb KASRA].yb -> $1~yb;
-    Substitute [sdb tdb ddb KASRA] -> $1.yb;
+    Substitute [sdb tdb ddb ddvb KASRA].yb -> $1~yb;
+    Substitute [sdb tdb ddb ddvb KASRA] -> $1.yb;
     Substitute [sdb tdb ddb KASRA].one -> $1~one.yb;
     Substitute [sdb tdb ddb KASRA].two -> $1~two.yb;
   };

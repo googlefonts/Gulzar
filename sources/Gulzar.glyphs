@@ -1,7 +1,7 @@
 {
 .appVersion = "3109";
 DisplayStrings = (
-"/KAFu1"
+"/ddb.yb/ddb/ddvb/ddvb.yb/ddvb.yb.collides"
 );
 classes = (
 {
@@ -34103,6 +34103,74 @@ category = Mark;
 subCategory = Nonspacing;
 },
 {
+glyphname = ddvb.yb;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{144, -405}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"172 -436 OFFCURVE",
+"177 -434 OFFCURVE",
+"184 -424 CURVE SMOOTH",
+"234 -351 LINE SMOOTH",
+"239 -344 OFFCURVE",
+"242 -338 OFFCURVE",
+"242 -333 CURVE SMOOTH",
+"242 -325 OFFCURVE",
+"236 -320 OFFCURVE",
+"224 -318 CURVE SMOOTH",
+"200 -313 OFFCURVE",
+"182 -305 OFFCURVE",
+"166 -292 CURVE",
+"169 -291 OFFCURVE",
+"171 -288 OFFCURVE",
+"174 -284 CURVE SMOOTH",
+"224 -211 LINE SMOOTH",
+"229 -204 OFFCURVE",
+"232 -198 OFFCURVE",
+"232 -193 CURVE SMOOTH",
+"232 -185 OFFCURVE",
+"226 -180 OFFCURVE",
+"214 -178 CURVE SMOOTH",
+"170 -169 OFFCURVE",
+"144 -148 OFFCURVE",
+"124 -113 CURVE",
+"119 -113 LINE",
+"82 -161 LINE SMOOTH",
+"72 -173 OFFCURVE",
+"56 -193 OFFCURVE",
+"56 -217 CURVE SMOOTH",
+"56 -239 OFFCURVE",
+"72 -266 OFFCURVE",
+"106 -283 CURVE",
+"92 -301 LINE SMOOTH",
+"82 -313 OFFCURVE",
+"66 -333 OFFCURVE",
+"66 -357 CURVE SMOOTH",
+"66 -385 OFFCURVE",
+"92 -420 OFFCURVE",
+"145 -434 CURVE",
+"152 -435 OFFCURVE",
+"158 -436 OFFCURVE",
+"163 -436 CURVE SMOOTH"
+);
+}
+);
+width = 288;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
 color = 3;
 glyphname = toeda.one;
 layers = (
@@ -34207,6 +34275,74 @@ name = ddb.yb;
 );
 layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
 width = 0;
+}
+);
+category = Mark;
+subCategory = Nonspacing;
+},
+{
+glyphname = ddvb.yb.collides;
+layers = (
+{
+anchors = (
+{
+name = bottom;
+position = "{144, -405}";
+}
+);
+layerId = "6E34CE51-C086-4FF0-804E-D019E96D60E0";
+paths = (
+{
+closed = 1;
+nodes = (
+"172 -436 OFFCURVE",
+"177 -434 OFFCURVE",
+"184 -424 CURVE SMOOTH",
+"234 -351 LINE SMOOTH",
+"239 -344 OFFCURVE",
+"242 -338 OFFCURVE",
+"242 -333 CURVE SMOOTH",
+"242 -325 OFFCURVE",
+"236 -320 OFFCURVE",
+"224 -318 CURVE SMOOTH",
+"200 -313 OFFCURVE",
+"182 -305 OFFCURVE",
+"166 -292 CURVE",
+"169 -291 OFFCURVE",
+"171 -288 OFFCURVE",
+"174 -284 CURVE SMOOTH",
+"224 -211 LINE SMOOTH",
+"229 -204 OFFCURVE",
+"232 -198 OFFCURVE",
+"232 -193 CURVE SMOOTH",
+"232 -185 OFFCURVE",
+"226 -180 OFFCURVE",
+"214 -178 CURVE SMOOTH",
+"170 -169 OFFCURVE",
+"144 -148 OFFCURVE",
+"124 -113 CURVE",
+"119 -113 LINE",
+"82 -161 LINE SMOOTH",
+"72 -173 OFFCURVE",
+"56 -193 OFFCURVE",
+"56 -217 CURVE SMOOTH",
+"56 -239 OFFCURVE",
+"72 -266 OFFCURVE",
+"106 -283 CURVE",
+"92 -301 LINE SMOOTH",
+"82 -313 OFFCURVE",
+"66 -333 OFFCURVE",
+"66 -357 CURVE SMOOTH",
+"66 -385 OFFCURVE",
+"92 -420 OFFCURVE",
+"145 -434 CURVE",
+"152 -435 OFFCURVE",
+"158 -436 OFFCURVE",
+"163 -436 CURVE SMOOTH"
+);
+}
+);
+width = 288;
 }
 );
 category = Mark;
