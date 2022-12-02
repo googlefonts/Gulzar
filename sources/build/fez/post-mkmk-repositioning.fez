@@ -241,6 +241,7 @@ Feature kern {
 
   Routine DotsUnderGaf {
     Position [sda tda dda] (@all_above_marks <yPlacement=+300>) /[KG]AF[mf]/; # وݨگی
+    Position /LAM[mi]/ (@all_above_marks <yPlacement=+100>) /[KG]AF[mf]/; # رࣇکے
   
     Position (/\.two$/ <yPlacement=-220 xPlacement=+40>) @NarrowMedials @all_above_marks /KAF|GAF/;
     Position /\.two$/ @NarrowMedials (@all_above_marks <yPlacement=-50>) /KAF|GAF/;
