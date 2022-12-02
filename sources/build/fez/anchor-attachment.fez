@@ -435,6 +435,7 @@ Routine AtHeight200pos {
     Chain (@alif_like TEi7 ^OpenTinySpace @dots); # ایجا
     Chain (@alif_like LAMi7 ^Tighten); # الجد
     Chain (@alif_like @BEi ^OpenTinySpace tdb); # اپھ
+    Chain (@alif_like @BEi ^OpenTinySpace ddb); # ایہناں / ایہنو
 
     Chain (@alif_like TEi15 @dots ^DropATinyBitMore); # ایو
 
@@ -604,7 +605,6 @@ Routine AtHeight600pos {
     Chain (@kaf_like /SINi/ ^OpenTinySpace); # طت سطح
     Chain (@kaf_like ^DoNothingPos); # ف تہجی
     Chain (@bigbowlfina @DOTi ^OpenSmallSpace @dots); # تی ہین
-    Chain (@bigbowlfina /SADi/ ^OpenTinySpace); # ن صبح
 
     Chain ([@vao_like @long_re] @BEi /JIM/ tdb.one ^DropATinyBitMore); # پونچھ
 
