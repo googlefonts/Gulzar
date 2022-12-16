@@ -1,7 +1,8 @@
 {
 .appVersion = "3109";
 DisplayStrings = (
-"/ddb.yb/ddb/ddvb/ddvb.yb/ddvb.yb.collides"
+"/ddb.yb/ddb/ddvb/ddvb.yb/ddvb.yb.collides",
+"/VAOf1"
 );
 classes = (
 {
@@ -31326,6 +31327,8 @@ width = 342;
 }
 );
 unicode = 0657;
+category = Mark;
+subCategory = Nonspacing;
 },
 {
 color = 3;
